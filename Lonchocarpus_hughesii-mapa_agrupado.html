@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_54c972724e35419ca59ed2e8217c7dce {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_54c972724e35419ca59ed2e8217c7dce" ></div>
+        
+</body>
+<script>    
+    
+            var map_54c972724e35419ca59ed2e8217c7dce = L.map(
+                "map_54c972724e35419ca59ed2e8217c7dce",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_54c972724e35419ca59ed2e8217c7dce);
+
+            
+
+        
+    
+            var tile_layer_39f00212b8584deaa77ed1c1e811d8ba = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_54c972724e35419ca59ed2e8217c7dce);
+        
+    
+            var tile_layer_ae38e005b48640109aa32beab6dc9503 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_54c972724e35419ca59ed2e8217c7dce);
+        
+    
+            var marker_cluster_c0fe29af51cc40f9b54138d24b0c8947 = L.markerClusterGroup(
+                {}
+            );
+            map_54c972724e35419ca59ed2e8217c7dce.addLayer(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+            var marker_adc2e448c32544abacdb0270f4563d03 = L.marker(
+                [10.35, -85.34],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_62fcdd5789e34346a4a5aceedf3423b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d0a551f8a704a4c82428054477b8c7f = $(`<div id="html_4d0a551f8a704a4c82428054477b8c7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Palo Verde Valle del Tempisque. Estación Palo Verde. Sendero Guayacán. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-10-04 00:00:00+00:00 <strong>Recolectores:</strong> Chavarría, Ulises <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_62fcdd5789e34346a4a5aceedf3423b0.setContent(html_4d0a551f8a704a4c82428054477b8c7f);
+        
+
+        marker_adc2e448c32544abacdb0270f4563d03.bindPopup(popup_62fcdd5789e34346a4a5aceedf3423b0)
+        ;
+
+        
+    
+    
+            var marker_9c5b3008df4f4f7f9cab330394550a7a = L.marker(
+                [10.83, -85.61],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_ecc01cb2dc584a71ab379bbe17594fdd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_197939c5a06c446088ca9e930168a44c = $(`<div id="html_197939c5a06c446088ca9e930168a44c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Santa Rosa De Bahía Salinas A Santa Cecilia. Área administrativa. Camino a Centro Histórico. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1995-11-30 00:00:00+00:00 <strong>Recolectores:</strong> Espinoza, Roberto <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_ecc01cb2dc584a71ab379bbe17594fdd.setContent(html_197939c5a06c446088ca9e930168a44c);
+        
+
+        marker_9c5b3008df4f4f7f9cab330394550a7a.bindPopup(popup_ecc01cb2dc584a71ab379bbe17594fdd)
+        ;
+
+        
+    
+    
+            var marker_fe21d8c0590f44dfa7ce981a387d2fec = L.marker(
+                [10.8, -85.65],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_81773ee33fc3490db4d66b8e9b508907 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afa2fbc73cbe4e398d5ce6da5bf6e9e9 = $(`<div id="html_afa2fbc73cbe4e398d5ce6da5bf6e9e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Santa Rosa; Península de Santa Elena. Estación Santa Rosa, camino a Playa Naranjo. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1994-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Víctor H. Ramírez|Luis J. Poveda Álvarez|Eduardo Lépiz <strong>Identificadores:</strong> N. Zamora, 1996 (INB)</div>`)[0];
+            popup_81773ee33fc3490db4d66b8e9b508907.setContent(html_afa2fbc73cbe4e398d5ce6da5bf6e9e9);
+        
+
+        marker_fe21d8c0590f44dfa7ce981a387d2fec.bindPopup(popup_81773ee33fc3490db4d66b8e9b508907)
+        ;
+
+        
+    
+    
+            var marker_551206c8758e4b0189e589cf97f49184 = L.marker(
+                [13.133332999999999, -86.616667],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_321f29e6beb14c68bd401b8cfd96ac7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b329eb6f208468ead90262270a06734 = $(`<div id="html_8b329eb6f208468ead90262270a06734" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 5 km SW of San Juan de Limay on way to Achuapa <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1982-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Colin E. Hughes|B. T. Styles <strong>Identificadores:</strong> M. Sousa S.</div>`)[0];
+            popup_321f29e6beb14c68bd401b8cfd96ac7a.setContent(html_8b329eb6f208468ead90262270a06734);
+        
+
+        marker_551206c8758e4b0189e589cf97f49184.bindPopup(popup_321f29e6beb14c68bd401b8cfd96ac7a)
+        ;
+
+        
+    
+    
+            var marker_3a88d3856a794eaf923f9f3224bf227d = L.marker(
+                [10.83, -85.58],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_c1ff2c0dc9a34c98bcd07e3a9806429a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ee1d1ecbe8144859ff919d524203549 = $(`<div id="html_2ee1d1ecbe8144859ff919d524203549" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa National Park, 30 km NW of Liberia, ca 10º50'N, 85º35'W, alt. 0-320 m. <strong>Elevación:</strong> 320.0 m  <strong>Fecha:</strong> 1983-01-17 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> M.Sousa (MEXU)</div>`)[0];
+            popup_c1ff2c0dc9a34c98bcd07e3a9806429a.setContent(html_2ee1d1ecbe8144859ff919d524203549);
+        
+
+        marker_3a88d3856a794eaf923f9f3224bf227d.bindPopup(popup_c1ff2c0dc9a34c98bcd07e3a9806429a)
+        ;
+
+        
+    
+    
+            var marker_b4b589a393ed46969ec557da2f3433e7 = L.marker(
+                [10.345833, -85.344444],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_6f6598dcb956420f8598a9de712dbe2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86d9d175bca5472fb5d049c0ebb5086d = $(`<div id="html_86d9d175bca5472fb5d049c0ebb5086d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Palo Verde. Cuenca del Tempísque. Sector Laguna Palo Verde. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1998-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría|Quírico Jiménez|Luis Acosta <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_6f6598dcb956420f8598a9de712dbe2b.setContent(html_86d9d175bca5472fb5d049c0ebb5086d);
+        
+
+        marker_b4b589a393ed46969ec557da2f3433e7.bindPopup(popup_6f6598dcb956420f8598a9de712dbe2b)
+        ;
+
+        
+    
+    
+            var marker_21b7e23a04c74f42af1f803ae4641691 = L.marker(
+                [10.345833, -85.34444],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_40b11b02688f4a7fbafd518ac1c1c351 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ea1c8e44e3c439694ab4428ca45d385 = $(`<div id="html_8ea1c8e44e3c439694ab4428ca45d385" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Guayacan. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1998-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_40b11b02688f4a7fbafd518ac1c1c351.setContent(html_8ea1c8e44e3c439694ab4428ca45d385);
+        
+
+        marker_21b7e23a04c74f42af1f803ae4641691.bindPopup(popup_40b11b02688f4a7fbafd518ac1c1c351)
+        ;
+
+        
+    
+    
+            var marker_c381b207d82645a98cc85a8fe3cb5339 = L.marker(
+                [10.836111, -85.616667],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_d9d8c418c84646ce8ff24ecebc096a55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_138da81d74ad4be1a6fedb453485f3df = $(`<div id="html_138da81d74ad4be1a6fedb453485f3df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area Administrativa. Camino a Centro Historico. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1995-11-30 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d9d8c418c84646ce8ff24ecebc096a55.setContent(html_138da81d74ad4be1a6fedb453485f3df);
+        
+
+        marker_c381b207d82645a98cc85a8fe3cb5339.bindPopup(popup_d9d8c418c84646ce8ff24ecebc096a55)
+        ;
+
+        
+    
+    
+            var marker_164e9fa3c5f34871aca82e502da950b3 = L.marker(
+                [10.802778, -85.652778],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_0bc2003201024c7ea6b33ef7768371f2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_203432c7077643cfa20dd968601e4a7b = $(`<div id="html_203432c7077643cfa20dd968601e4a7b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Santa Rosa, camino a Playa Naranjo. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1994-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0bc2003201024c7ea6b33ef7768371f2.setContent(html_203432c7077643cfa20dd968601e4a7b);
+        
+
+        marker_164e9fa3c5f34871aca82e502da950b3.bindPopup(popup_0bc2003201024c7ea6b33ef7768371f2)
+        ;
+
+        
+    
+    
+            var marker_4867c76c491c47ef8ab4ebcd103f5b3f = L.marker(
+                [10.351389, -85.348611],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_24b164c90e6b4ca780a30b4b71bd9db5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e5acbd8ef88465f857566c955769d01 = $(`<div id="html_9e5acbd8ef88465f857566c955769d01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Palo Verde. Sendero Guayacan. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-10-04 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_24b164c90e6b4ca780a30b4b71bd9db5.setContent(html_9e5acbd8ef88465f857566c955769d01);
+        
+
+        marker_4867c76c491c47ef8ab4ebcd103f5b3f.bindPopup(popup_24b164c90e6b4ca780a30b4b71bd9db5)
+        ;
+
+        
+    
+    
+            var marker_1af188962a59429082150fbceef320f9 = L.marker(
+                [10.816389, -85.648611],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_37d2beb12fe840c0998028efdaa3aad4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ad64b772f714541b83f3fc2807b6a8d = $(`<div id="html_4ad64b772f714541b83f3fc2807b6a8d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Santa Rosa. Camino a Playa Naranjo. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1994-02-14 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_37d2beb12fe840c0998028efdaa3aad4.setContent(html_4ad64b772f714541b83f3fc2807b6a8d);
+        
+
+        marker_1af188962a59429082150fbceef320f9.bindPopup(popup_37d2beb12fe840c0998028efdaa3aad4)
+        ;
+
+        
+    
+    
+            var marker_44eb1b78e051472b9ff16f23485874c7 = L.marker(
+                [10.345833, -85.344444],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_73bb5d559d0d48e69cf683234f22a26b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0339899fa4c84c4e898cbec0de19249a = $(`<div id="html_0339899fa4c84c4e898cbec0de19249a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Palo Verde. <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1998-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría; Quirico Jiménez ; L. Acosta <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_73bb5d559d0d48e69cf683234f22a26b.setContent(html_0339899fa4c84c4e898cbec0de19249a);
+        
+
+        marker_44eb1b78e051472b9ff16f23485874c7.bindPopup(popup_73bb5d559d0d48e69cf683234f22a26b)
+        ;
+
+        
+    
+    
+            var marker_93e9293cdf964651a3c0ed77a2bec74d = L.marker(
+                [10.345833, -85.344444],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_e62eaa3aafd74b97a8e1711babde19d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e34d2618fc44105b1be033ba9d60724 = $(`<div id="html_5e34d2618fc44105b1be033ba9d60724" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Palo Verde. <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1998-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría; Quirico Jiménez ; L. Acosta <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e62eaa3aafd74b97a8e1711babde19d5.setContent(html_5e34d2618fc44105b1be033ba9d60724);
+        
+
+        marker_93e9293cdf964651a3c0ed77a2bec74d.bindPopup(popup_e62eaa3aafd74b97a8e1711babde19d5)
+        ;
+
+        
+    
+    
+            var marker_d0c5d81ffa1c46f3aa5a9048602a4e02 = L.marker(
+                [10.350937, -85.34915500000001],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_5043d6bf28684ce081493a9b6e99b727 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf0b9e952938480393055d8d182e8a1c = $(`<div id="html_cf0b9e952938480393055d8d182e8a1c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bagaces, Pque Nal Palo Verde, Sector Palo Verde, Send Guayacán <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2000-08-19 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Gerardo Soto ; Geovanny Sancho <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_5043d6bf28684ce081493a9b6e99b727.setContent(html_cf0b9e952938480393055d8d182e8a1c);
+        
+
+        marker_d0c5d81ffa1c46f3aa5a9048602a4e02.bindPopup(popup_5043d6bf28684ce081493a9b6e99b727)
+        ;
+
+        
+    
+    
+            var marker_414d4360f57c4542a6f8315f4d1f94f5 = L.marker(
+                [10.350937, -85.34915500000001],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_686dd35a08a7441db41b4b5f5ca2196a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5975c2f74ab349a7b7e8139466581941 = $(`<div id="html_5975c2f74ab349a7b7e8139466581941" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bagaces, Pque Nal Palo Verde, Sector Palo Verde, Send Guayacán <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2000-08-19 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Gerardo Soto ; Geovanny Sancho <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_686dd35a08a7441db41b4b5f5ca2196a.setContent(html_5975c2f74ab349a7b7e8139466581941);
+        
+
+        marker_414d4360f57c4542a6f8315f4d1f94f5.bindPopup(popup_686dd35a08a7441db41b4b5f5ca2196a)
+        ;
+
+        
+    
+    
+            var marker_f0e258e1034248b48060fb9fd106b733 = L.marker(
+                [10.869444, -85.861111],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_82475ec9111841ffb0bded603ecc9d94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19c57ca245324710a7d0e18a61f2b45b = $(`<div id="html_19c57ca245324710a7d0e18a61f2b45b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda S de Fila Campamento. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2003-08-29 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_82475ec9111841ffb0bded603ecc9d94.setContent(html_19c57ca245324710a7d0e18a61f2b45b);
+        
+
+        marker_f0e258e1034248b48060fb9fd106b733.bindPopup(popup_82475ec9111841ffb0bded603ecc9d94)
+        ;
+
+        
+    
+    
+            var marker_2b45f47dccc749f0a2047fcb0e6face5 = L.marker(
+                [10.869444, -85.861111],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_43ec11e0554d4984b8513b4e89a0a1aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f7dbe0603dd4706933f6c9484a8e68b = $(`<div id="html_7f7dbe0603dd4706933f6c9484a8e68b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda S de Fila Campamento. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2003-08-29 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_43ec11e0554d4984b8513b4e89a0a1aa.setContent(html_7f7dbe0603dd4706933f6c9484a8e68b);
+        
+
+        marker_2b45f47dccc749f0a2047fcb0e6face5.bindPopup(popup_43ec11e0554d4984b8513b4e89a0a1aa)
+        ;
+
+        
+    
+    
+            var marker_34e91578af7f4f6e9764807cc62ae05c = L.marker(
+                [10.911111, -85.897222],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_3029b3c6c0eb4f56b01dc286900ae961 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f95c4bd30334a6b9b4a2662794a2df0 = $(`<div id="html_4f95c4bd30334a6b9b4a2662794a2df0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Playa El Gringo. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2003-08-30 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; Gregorio Dauphin ; Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3029b3c6c0eb4f56b01dc286900ae961.setContent(html_4f95c4bd30334a6b9b4a2662794a2df0);
+        
+
+        marker_34e91578af7f4f6e9764807cc62ae05c.bindPopup(popup_3029b3c6c0eb4f56b01dc286900ae961)
+        ;
+
+        
+    
+    
+            var marker_557a3d6b662046498a18000f5ee4af62 = L.marker(
+                [10.911111, -85.897222],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_613fb38cb162457d81995aa4de06d6c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_685ab5d35f0e4073abb1dbb3909bff5a = $(`<div id="html_685ab5d35f0e4073abb1dbb3909bff5a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Playa El Gringo. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2003-08-30 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; Gregorio Dauphin ; Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_613fb38cb162457d81995aa4de06d6c0.setContent(html_685ab5d35f0e4073abb1dbb3909bff5a);
+        
+
+        marker_557a3d6b662046498a18000f5ee4af62.bindPopup(popup_613fb38cb162457d81995aa4de06d6c0)
+        ;
+
+        
+    
+    
+            var marker_55edd72de7e74cfa8ed2665c2374723a = L.marker(
+                [10.790999999999999, -85.665139],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_61d4061597a149f282c9d93d72caf4cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24f7e30435c34599b4812c327f773f4a = $(`<div id="html_24f7e30435c34599b4812c327f773f4a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> AC Guanacaste, PN Santa Rosa <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2014-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_61d4061597a149f282c9d93d72caf4cb.setContent(html_24f7e30435c34599b4812c327f773f4a);
+        
+
+        marker_55edd72de7e74cfa8ed2665c2374723a.bindPopup(popup_61d4061597a149f282c9d93d72caf4cb)
+        ;
+
+        
+    
+    
+            var marker_affd361f01e74025b514658257bc0111 = L.marker(
+                [10.790999999999999, -85.665139],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_bee9d5f6b78f4377a42c76ce7c60e159 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07b50fa9f58a43cfafbd71b74c156522 = $(`<div id="html_07b50fa9f58a43cfafbd71b74c156522" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> AC Guanacaste, PN Santa Rosa <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2014-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_bee9d5f6b78f4377a42c76ce7c60e159.setContent(html_07b50fa9f58a43cfafbd71b74c156522);
+        
+
+        marker_affd361f01e74025b514658257bc0111.bindPopup(popup_bee9d5f6b78f4377a42c76ce7c60e159)
+        ;
+
+        
+    
+    
+            var marker_74948f11ef7f4334b377973e3e2b16a2 = L.marker(
+                [10.790999999999999, -85.665139],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_367f0370c57c4697827ce52f6dedffae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddf4b407fe7d460996bfedd73ddaba41 = $(`<div id="html_ddf4b407fe7d460996bfedd73ddaba41" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> AC Guanacaste, PN Santa Rosa <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2014-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_367f0370c57c4697827ce52f6dedffae.setContent(html_ddf4b407fe7d460996bfedd73ddaba41);
+        
+
+        marker_74948f11ef7f4334b377973e3e2b16a2.bindPopup(popup_367f0370c57c4697827ce52f6dedffae)
+        ;
+
+        
+    
+    
+            var marker_ca9e3f4698f84bf68cb1740abbf7c9fe = L.marker(
+                [10.81, -85.64],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_224120a7327f469e950a33e0d57d20a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51ec115132194bd3ba30a64a644a1ee9 = $(`<div id="html_51ec115132194bd3ba30a64a644a1ee9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_224120a7327f469e950a33e0d57d20a3.setContent(html_51ec115132194bd3ba30a64a644a1ee9);
+        
+
+        marker_ca9e3f4698f84bf68cb1740abbf7c9fe.bindPopup(popup_224120a7327f469e950a33e0d57d20a3)
+        ;
+
+        
+    
+    
+            var marker_8ccafcd421a54785b539119ae79cdafe = L.marker(
+                [10.81, -85.64],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_a5be51509be34da59b47467f9ddb581e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a53a2b6f23204512b73d789affdbfb7c = $(`<div id="html_a53a2b6f23204512b73d789affdbfb7c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a5be51509be34da59b47467f9ddb581e.setContent(html_a53a2b6f23204512b73d789affdbfb7c);
+        
+
+        marker_8ccafcd421a54785b539119ae79cdafe.bindPopup(popup_a5be51509be34da59b47467f9ddb581e)
+        ;
+
+        
+    
+    
+            var marker_ad682c62cf3f47b39321a2f6aa7f7c8b = L.marker(
+                [10.81, -85.64],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_0993197cc32a48e28855819acd6b3da8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c65b69a9a9d4bcda55fce74342239f3 = $(`<div id="html_2c65b69a9a9d4bcda55fce74342239f3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0993197cc32a48e28855819acd6b3da8.setContent(html_2c65b69a9a9d4bcda55fce74342239f3);
+        
+
+        marker_ad682c62cf3f47b39321a2f6aa7f7c8b.bindPopup(popup_0993197cc32a48e28855819acd6b3da8)
+        ;
+
+        
+    
+    
+            var marker_abd7ca913e1e46d4b7729510739f5614 = L.marker(
+                [10.81, -85.64],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_541d9bf3534e478abf3cf91b523ee4b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4737f8c887af4eda9cdedc3987688f0d = $(`<div id="html_4737f8c887af4eda9cdedc3987688f0d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_541d9bf3534e478abf3cf91b523ee4b6.setContent(html_4737f8c887af4eda9cdedc3987688f0d);
+        
+
+        marker_abd7ca913e1e46d4b7729510739f5614.bindPopup(popup_541d9bf3534e478abf3cf91b523ee4b6)
+        ;
+
+        
+    
+    
+            var marker_95e0ff9e19734492ab2aa6d8c9814409 = L.marker(
+                [10.81, -85.64],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_ea08967586474a4298d2ff16cfcc53ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88e4d43ef04841d4ae76ff735e94e4ac = $(`<div id="html_88e4d43ef04841d4ae76ff735e94e4ac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ea08967586474a4298d2ff16cfcc53ae.setContent(html_88e4d43ef04841d4ae76ff735e94e4ac);
+        
+
+        marker_95e0ff9e19734492ab2aa6d8c9814409.bindPopup(popup_ea08967586474a4298d2ff16cfcc53ae)
+        ;
+
+        
+    
+    
+            var marker_3f04f966cee941ffac6b38a818f2de7d = L.marker(
+                [10.35083, -85.34916],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_b573db14afa24394aed2143fd692500b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_084b45da3ac94de79407a87a19ed32ef = $(`<div id="html_084b45da3ac94de79407a87a19ed32ef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Palo Verde. Cuenca del Tempisque. Alrededores del Ojo de Agua y falda de Cerro Guayacán. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2000-08-19 00:00:00+00:00 <strong>Recolectores:</strong> Luis Acosta|Gerardo Soto|Geovanny Sancho <strong>Identificadores:</strong> A. Rodriguez & Acosta</div>`)[0];
+            popup_b573db14afa24394aed2143fd692500b.setContent(html_084b45da3ac94de79407a87a19ed32ef);
+        
+
+        marker_3f04f966cee941ffac6b38a818f2de7d.bindPopup(popup_b573db14afa24394aed2143fd692500b)
+        ;
+
+        
+    
+    
+            var marker_620837f7a9924340aec6066a02930b49 = L.marker(
+                [10.811, -85.64299999999999],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_013976acf4e94eada8f8e39472413054 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db6de1a59bce4414b63a8162afed0465 = $(`<div id="html_db6de1a59bce4414b63a8162afed0465" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> 267.0 m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_013976acf4e94eada8f8e39472413054.setContent(html_db6de1a59bce4414b63a8162afed0465);
+        
+
+        marker_620837f7a9924340aec6066a02930b49.bindPopup(popup_013976acf4e94eada8f8e39472413054)
+        ;
+
+        
+    
+    
+            var marker_0367610d6fa94c56b7630cc1fef3e8bf = L.marker(
+                [10.811, -85.64299999999999],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_2f24763ac28e4acf8563259128562293 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79c3938d04b04383b8a75fe1638fafa1 = $(`<div id="html_79c3938d04b04383b8a75fe1638fafa1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> 267.0 m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_2f24763ac28e4acf8563259128562293.setContent(html_79c3938d04b04383b8a75fe1638fafa1);
+        
+
+        marker_0367610d6fa94c56b7630cc1fef3e8bf.bindPopup(popup_2f24763ac28e4acf8563259128562293)
+        ;
+
+        
+    
+    
+            var marker_912024e2f17e4644bc6f46f0feca2ab7 = L.marker(
+                [10.811, -85.64299999999999],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_59a676d9a0b24f8c9c9b2beaea031a12 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e9461129b45431ba6346c82373a88b9 = $(`<div id="html_5e9461129b45431ba6346c82373a88b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Santa Rosa, Llano Los Cebollines <strong>Elevación:</strong> 267.0 m  <strong>Fecha:</strong> 2009-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_59a676d9a0b24f8c9c9b2beaea031a12.setContent(html_5e9461129b45431ba6346c82373a88b9);
+        
+
+        marker_912024e2f17e4644bc6f46f0feca2ab7.bindPopup(popup_59a676d9a0b24f8c9c9b2beaea031a12)
+        ;
+
+        
+    
+    
+            var marker_f6c19c4777034b528f420d6f85e6d664 = L.marker(
+                [14.42, -87.65],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_4b3c94ceb12843e0adc4802258ab41b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13c3ed89020947e18973034290d4641b = $(`<div id="html_13c3ed89020947e18973034290d4641b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In heart of Comayagua Valley, about 4 km SW of departmental town of Comayagua on road towards Ajuterique. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1993-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Hughes, C.E. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4b3c94ceb12843e0adc4802258ab41b2.setContent(html_13c3ed89020947e18973034290d4641b);
+        
+
+        marker_f6c19c4777034b528f420d6f85e6d664.bindPopup(popup_4b3c94ceb12843e0adc4802258ab41b2)
+        ;
+
+        
+    
+    
+            var marker_cf5796177d0648e788af0cfd76d59e48 = L.marker(
+                [14.43, -87.68],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_39aaa0b86a264299b777479eca77db5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79723a6d4df446f496fa48de8bfab8c4 = $(`<div id="html_79723a6d4df446f496fa48de8bfab8c4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In heart of upper Comayagua Valley, about 6 km SW of departmental town of Comayagua, on back road towards Lejamani, near small village of Playitas. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1992-03-09 00:00:00+00:00 <strong>Recolectores:</strong> Hughes, C.E.; Atkinson, R.; Harris, S.A. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_39aaa0b86a264299b777479eca77db5c.setContent(html_79723a6d4df446f496fa48de8bfab8c4);
+        
+
+        marker_cf5796177d0648e788af0cfd76d59e48.bindPopup(popup_39aaa0b86a264299b777479eca77db5c)
+        ;
+
+        
+    
+    
+            var marker_4a56f22438374a3186f878198d7e42ac = L.marker(
+                [14.38, -87.67],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_5e5063bb0e7942e7824b06a2d4ebf615 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82d66acf6a90464d82533ad0c5385c70 = $(`<div id="html_82d66acf6a90464d82533ad0c5385c70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In main Comayagua Valley close to old road from Comayagua to La Paz, about 3 km SW of departmental town of Comayagua. <strong>Elevación:</strong> 670.0 m  <strong>Fecha:</strong> 1988-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Hughes, C.E. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5e5063bb0e7942e7824b06a2d4ebf615.setContent(html_82d66acf6a90464d82533ad0c5385c70);
+        
+
+        marker_4a56f22438374a3186f878198d7e42ac.bindPopup(popup_5e5063bb0e7942e7824b06a2d4ebf615)
+        ;
+
+        
+    
+    
+            var marker_8c3e6ed59112443b96e1aabc11626b2f = L.marker(
+                [14.37, -87.65],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_544cf2bbd2c5405983f4b2c900090333 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a067bc8f96146069585cc27a424e343 = $(`<div id="html_2a067bc8f96146069585cc27a424e343" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 5 km SE of departmental town of Comayagua, close to road towards village of Lejamaní on W side of Comayagua valley. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-02-10 00:00:00+00:00 <strong>Recolectores:</strong> Lewis, G.P.; Hughes, C.E. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_544cf2bbd2c5405983f4b2c900090333.setContent(html_2a067bc8f96146069585cc27a424e343);
+        
+
+        marker_8c3e6ed59112443b96e1aabc11626b2f.bindPopup(popup_544cf2bbd2c5405983f4b2c900090333)
+        ;
+
+        
+    
+    
+            var marker_c8e91927403c459189df0f01a6c18e6f = L.marker(
+                [13.6, -87.03],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_1503272f90824a949d403109a7821f15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a572eddf1f241ce8fb63df0460f8418 = $(`<div id="html_8a572eddf1f241ce8fb63df0460f8418" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Close to small settlement of El Comercio which lies in the hills S of Rio Texiguat, on road S from Texiguat towards Orocuina about 5 km S of Texiguat. <strong>Elevación:</strong> 680.0 m  <strong>Fecha:</strong> 1988-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Hughes, C.E. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1503272f90824a949d403109a7821f15.setContent(html_8a572eddf1f241ce8fb63df0460f8418);
+        
+
+        marker_c8e91927403c459189df0f01a6c18e6f.bindPopup(popup_1503272f90824a949d403109a7821f15)
+        ;
+
+        
+    
+    
+            var marker_c371453c8d8e403ca25ce279c198d1d2 = L.marker(
+                [10.84, -85.62],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_bca403cc371e4465a098f863a87ffbf4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d23aae4881ba435ea84fe41ddc637e95 = $(`<div id="html_d23aae4881ba435ea84fe41ddc637e95" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Santa Rosa, Camino a Centro Histórico, Area Administrativa, de Bahia Salinas a Santa Cecilia. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1995-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Espinoza, R. <strong>Identificadores:</strong> Zamora, N.</div>`)[0];
+            popup_bca403cc371e4465a098f863a87ffbf4.setContent(html_d23aae4881ba435ea84fe41ddc637e95);
+        
+
+        marker_c371453c8d8e403ca25ce279c198d1d2.bindPopup(popup_bca403cc371e4465a098f863a87ffbf4)
+        ;
+
+        
+    
+    
+            var marker_17e12a8ccfcd49c293f60088e4aefe81 = L.marker(
+                [13.874722, -87.094167],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_6fd43c07c4604498a6580aada8dbd997 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73ddd8df47a64a0595e74e804a246714 = $(`<div id="html_73ddd8df47a64a0595e74e804a246714" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> A 18 km al S de El Zamorano. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 2003-07-20 00:00:00+00:00 <strong>Recolectores:</strong> Martínez S., E. <strong>Identificadores:</strong> J.Linares</div>`)[0];
+            popup_6fd43c07c4604498a6580aada8dbd997.setContent(html_73ddd8df47a64a0595e74e804a246714);
+        
+
+        marker_17e12a8ccfcd49c293f60088e4aefe81.bindPopup(popup_6fd43c07c4604498a6580aada8dbd997)
+        ;
+
+        
+    
+    
+            var marker_b6d7424b17704065853df3f5b7631e64 = L.marker(
+                [10.45, -85.13],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_3b028d4b30b240a5871bbb13f4c6ba85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b10bc8bb285344d6b68e8d2d4242c08b = $(`<div id="html_b10bc8bb285344d6b68e8d2d4242c08b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Pacifica, 4 km NW of Canas. Dry forest. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1972-12-31 00:00:00+00:00 <strong>Recolectores:</strong> Paul A. Opler <strong>Identificadores:</strong> M. Sousa S.</div>`)[0];
+            popup_3b028d4b30b240a5871bbb13f4c6ba85.setContent(html_b10bc8bb285344d6b68e8d2d4242c08b);
+        
+
+        marker_b6d7424b17704065853df3f5b7631e64.bindPopup(popup_3b028d4b30b240a5871bbb13f4c6ba85)
+        ;
+
+        
+    
+    
+            var marker_412ea41eec8c4d92931a77442efdccf7 = L.marker(
+                [10.35, -85.34],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_04a3ac543d3647c2bea07cddff316b69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3c112b0032642709bc25b65537c3b1d = $(`<div id="html_c3c112b0032642709bc25b65537c3b1d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Palo Verde; Valle de Tempisque. Estación Palo Verde. Sendero Guayacán <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-10-04 00:00:00+00:00 <strong>Recolectores:</strong> Ulises Chavarría <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_04a3ac543d3647c2bea07cddff316b69.setContent(html_c3c112b0032642709bc25b65537c3b1d);
+        
+
+        marker_412ea41eec8c4d92931a77442efdccf7.bindPopup(popup_04a3ac543d3647c2bea07cddff316b69)
+        ;
+
+        
+    
+    
+            var marker_a08fd84982e04927b3fc9d5f11e78ace = L.marker(
+                [13.133329999999999, -86.61666],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_f1b0938bf58e47518c9e9d4fc720d17d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9d807d8a2e84cf6afe315a7063716a4 = $(`<div id="html_f9d807d8a2e84cf6afe315a7063716a4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> S from the town of San Juan de Limay towards Achuapa, about 5 km S of Limay <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1982-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Colin E. Hughes <strong>Identificadores:</strong> M. Sousa</div>`)[0];
+            popup_f1b0938bf58e47518c9e9d4fc720d17d.setContent(html_f9d807d8a2e84cf6afe315a7063716a4);
+        
+
+        marker_a08fd84982e04927b3fc9d5f11e78ace.bindPopup(popup_f1b0938bf58e47518c9e9d4fc720d17d)
+        ;
+
+        
+    
+    
+            var marker_83c37d21134349c7bac50355a00221f2 = L.marker(
+                [12.98333, -86.33333],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_6fa3dbab9f8e469d9d97bca564ea9ca0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4cdc510bd3bc49cbb543b720aa3359d8 = $(`<div id="html_4cdc510bd3bc49cbb543b720aa3359d8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> N from the main Telica to Sebaco road towards Cerro Bonete, immediately N of the Sebaco plains <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1982-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Colin E. Hughes <strong>Identificadores:</strong> M. Sousa</div>`)[0];
+            popup_6fa3dbab9f8e469d9d97bca564ea9ca0.setContent(html_4cdc510bd3bc49cbb543b720aa3359d8);
+        
+
+        marker_83c37d21134349c7bac50355a00221f2.bindPopup(popup_6fa3dbab9f8e469d9d97bca564ea9ca0)
+        ;
+
+        
+    
+    
+            var marker_9cdc35c1a1b84d4abae32061e4866de4 = L.marker(
+                [10.83333, -85.61666],
+                {}
+            ).addTo(marker_cluster_c0fe29af51cc40f9b54138d24b0c8947);
+        
+    
+        var popup_48a1d772e76b42f08f4035ecc28671b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9392cafab83499f894ba17f5d712542 = $(`<div id="html_a9392cafab83499f894ba17f5d712542" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa National Park <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1976-11-25 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> M. Sousa</div>`)[0];
+            popup_48a1d772e76b42f08f4035ecc28671b8.setContent(html_a9392cafab83499f894ba17f5d712542);
+        
+
+        marker_9cdc35c1a1b84d4abae32061e4866de4.bindPopup(popup_48a1d772e76b42f08f4035ecc28671b8)
+        ;
+
+        
+    
+    
+            var layer_control_f96a509997404c3582ed12ce9fa3004e = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_39f00212b8584deaa77ed1c1e811d8ba,
+                    "ESRI World Imagery" : tile_layer_ae38e005b48640109aa32beab6dc9503,
+                },
+                overlays :  {
+                    "macro_element_c0fe29af51cc40f9b54138d24b0c8947" : marker_cluster_c0fe29af51cc40f9b54138d24b0c8947,
+                },
+            };
+            L.control.layers(
+                layer_control_f96a509997404c3582ed12ce9fa3004e.base_layers,
+                layer_control_f96a509997404c3582ed12ce9fa3004e.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_54c972724e35419ca59ed2e8217c7dce);
+            tile_layer_ae38e005b48640109aa32beab6dc9503.remove();
+        
+</script>

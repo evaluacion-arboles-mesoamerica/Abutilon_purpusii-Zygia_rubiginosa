@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9389d2635c5a4c98883b03a42c0e2f3e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9389d2635c5a4c98883b03a42c0e2f3e" ></div>
+        
+</body>
+<script>    
+    
+            var map_9389d2635c5a4c98883b03a42c0e2f3e = L.map(
+                "map_9389d2635c5a4c98883b03a42c0e2f3e",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_9389d2635c5a4c98883b03a42c0e2f3e);
+
+            
+
+        
+    
+            var tile_layer_fccdb01d5ba1483e9ef243ae16837d18 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9389d2635c5a4c98883b03a42c0e2f3e);
+        
+    
+            var tile_layer_b5a98e8aa10d46bc92eba6db805bfa9a = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9389d2635c5a4c98883b03a42c0e2f3e);
+        
+    
+            var marker_cluster_6a95913b2ee5461487639dd4a2a294fe = L.markerClusterGroup(
+                {}
+            );
+            map_9389d2635c5a4c98883b03a42c0e2f3e.addLayer(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+            var marker_5b0db246fb2d4a3ea498be533e6c967a = L.marker(
+                [14.967778, -89.544722],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_986cc930f9004d83aca5c14f95a05359 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1425d611a7e5465b9afe1337367f52a8 = $(`<div id="html_1425d611a7e5465b9afe1337367f52a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Zacapa <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1940-10-07 00:00:00+00:00 <strong>Recolectores:</strong> Paul C. Standley <strong>Identificadores:</strong> X. Cornejo</div>`)[0];
+            popup_986cc930f9004d83aca5c14f95a05359.setContent(html_1425d611a7e5465b9afe1337367f52a8);
+        
+
+        marker_5b0db246fb2d4a3ea498be533e6c967a.bindPopup(popup_986cc930f9004d83aca5c14f95a05359)
+        ;
+
+        
+    
+    
+            var marker_45e368bbfd554d9d941a1fd6746de3c8 = L.marker(
+                [14.967778, -89.544722],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_9a8e95c88dd14d9a8bbf04f130581629 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89915cd109304ad1aa4ef1ea258aca32 = $(`<div id="html_89915cd109304ad1aa4ef1ea258aca32" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Zacapa <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1940-10-07 00:00:00+00:00 <strong>Recolectores:</strong> Paul C. Standley <strong>Identificadores:</strong> X. Cornejo</div>`)[0];
+            popup_9a8e95c88dd14d9a8bbf04f130581629.setContent(html_89915cd109304ad1aa4ef1ea258aca32);
+        
+
+        marker_45e368bbfd554d9d941a1fd6746de3c8.bindPopup(popup_9a8e95c88dd14d9a8bbf04f130581629)
+        ;
+
+        
+    
+    
+            var marker_30ab3d3fdee74353bc092ff3d7a86da7 = L.marker(
+                [14.966110999999998, -89.313056],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_74fb600e340d4101add4e2c1c586db0d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f462c3644da44c88b173324172050af9 = $(`<div id="html_f462c3644da44c88b173324172050af9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Between Ramírez and Cumbre de Chiquimula, on road between Chiquimula and Zacapa <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1940-10-15 00:00:00+00:00 <strong>Recolectores:</strong> Paul C. Standley <strong>Identificadores:</strong> X. Cornejo</div>`)[0];
+            popup_74fb600e340d4101add4e2c1c586db0d.setContent(html_f462c3644da44c88b173324172050af9);
+        
+
+        marker_30ab3d3fdee74353bc092ff3d7a86da7.bindPopup(popup_74fb600e340d4101add4e2c1c586db0d)
+        ;
+
+        
+    
+    
+            var marker_5e19617b64c74f238f6a13588bcd69f4 = L.marker(
+                [14.967778, -89.544722],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_2f6a125bcf644fa18a74c0179bdd5e69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_660ba0cecacf48489f67b54c30e2ec6f = $(`<div id="html_660ba0cecacf48489f67b54c30e2ec6f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Zacapa <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1940-10-07 00:00:00+00:00 <strong>Recolectores:</strong> Paul C. Standley <strong>Identificadores:</strong> X. Cornejo</div>`)[0];
+            popup_2f6a125bcf644fa18a74c0179bdd5e69.setContent(html_660ba0cecacf48489f67b54c30e2ec6f);
+        
+
+        marker_5e19617b64c74f238f6a13588bcd69f4.bindPopup(popup_2f6a125bcf644fa18a74c0179bdd5e69)
+        ;
+
+        
+    
+    
+            var marker_114eab5bd0914af49b85d71d6a5c9c11 = L.marker(
+                [10.7, -85.655556],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_bdbdf3e3e1b34fdeb1d2393cc33e3d7e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85aec69ea1cb4dcc8d914b8e460e5460 = $(`<div id="html_85aec69ea1cb4dcc8d914b8e460e5460" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Carbonal. Al sur de Playa Naranjo. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1992-07-17 00:00:00+00:00 <strong>Recolectores:</strong> Alvaro Fernandez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_bdbdf3e3e1b34fdeb1d2393cc33e3d7e.setContent(html_85aec69ea1cb4dcc8d914b8e460e5460);
+        
+
+        marker_114eab5bd0914af49b85d71d6a5c9c11.bindPopup(popup_bdbdf3e3e1b34fdeb1d2393cc33e3d7e)
+        ;
+
+        
+    
+    
+            var marker_4fd39c2107044561b0e460fb9d483c49 = L.marker(
+                [10.833333, -85.616667],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_8b05e8bb2c4f4c97af89a01404f1b69c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afa09822a87c4efbb677b058e35580d4 = $(`<div id="html_afa09822a87c4efbb677b058e35580d4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Santa Rosa, area administrativa Del 3 al 29 de julio. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-07-15 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8b05e8bb2c4f4c97af89a01404f1b69c.setContent(html_afa09822a87c4efbb677b058e35580d4);
+        
+
+        marker_4fd39c2107044561b0e460fb9d483c49.bindPopup(popup_8b05e8bb2c4f4c97af89a01404f1b69c)
+        ;
+
+        
+    
+    
+            var marker_69317b5a3574467795f952cc388a69c8 = L.marker(
+                [9.935226, -84.903265],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_3403c40fe8b24577899fcc4ea0e93e4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27c701a330054d9f908b21c71735dda3 = $(`<div id="html_27c701a330054d9f908b21c71735dda3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Isla San Lucas, Camino a playa Limón, por Hacienda Vieja. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2005-03-20 00:00:00+00:00 <strong>Recolectores:</strong> Frank  Alonso González Brenes; Armando Soto ; Juan Francisco Morales Quirós ; Daniel Santamaría <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3403c40fe8b24577899fcc4ea0e93e4d.setContent(html_27c701a330054d9f908b21c71735dda3);
+        
+
+        marker_69317b5a3574467795f952cc388a69c8.bindPopup(popup_3403c40fe8b24577899fcc4ea0e93e4d)
+        ;
+
+        
+    
+    
+            var marker_b467f1c9853543ef94e84c3833fc481d = L.marker(
+                [9.95, -84.902778],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_826e6adc65b54d4e95b8374b603e90a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_151c57196b9b49e3a00d42267ec0fca5 = $(`<div id="html_151c57196b9b49e3a00d42267ec0fca5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Isla San Lucas. <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 2005-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; Daniel Santamaría <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_826e6adc65b54d4e95b8374b603e90a1.setContent(html_151c57196b9b49e3a00d42267ec0fca5);
+        
+
+        marker_b467f1c9853543ef94e84c3833fc481d.bindPopup(popup_826e6adc65b54d4e95b8374b603e90a1)
+        ;
+
+        
+    
+    
+            var marker_f4f00f1d31fb409fa726b6a64321964c = L.marker(
+                [9.95, -84.902778],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_2bc3588c598d4c5d8d80bdd71100f029 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bc07397dae7413da312163b35a2659c = $(`<div id="html_5bc07397dae7413da312163b35a2659c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Isla San Lucas. <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 2005-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; Daniel Santamaría <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2bc3588c598d4c5d8d80bdd71100f029.setContent(html_5bc07397dae7413da312163b35a2659c);
+        
+
+        marker_f4f00f1d31fb409fa726b6a64321964c.bindPopup(popup_2bc3588c598d4c5d8d80bdd71100f029)
+        ;
+
+        
+    
+    
+            var marker_d9a78da1eaaf473bbd7c1257df084754 = L.marker(
+                [9.935556, -84.926389],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_eaff0a3d2ae64c178d4e459999d4e610 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_446c2d4eceea45738199b7659e2785e0 = $(`<div id="html_446c2d4eceea45738199b7659e2785e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Islas Cocineras. <strong>Elevación:</strong> 0.5 m  <strong>Fecha:</strong> 2005-11-29 00:00:00+00:00 <strong>Recolectores:</strong> Armando Soto; Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_eaff0a3d2ae64c178d4e459999d4e610.setContent(html_446c2d4eceea45738199b7659e2785e0);
+        
+
+        marker_d9a78da1eaaf473bbd7c1257df084754.bindPopup(popup_eaff0a3d2ae64c178d4e459999d4e610)
+        ;
+
+        
+    
+    
+            var marker_bb5b361087e24d5c95dd3058e36ddd5f = L.marker(
+                [9.926389, -84.901944],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_f5610070ec1841648b1485a61979fada = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c961e7774994ecebc093dfcba8af1bf = $(`<div id="html_8c961e7774994ecebc093dfcba8af1bf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Isla Pan de Azucar. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 2005-11-29 00:00:00+00:00 <strong>Recolectores:</strong> Armando Soto; Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f5610070ec1841648b1485a61979fada.setContent(html_8c961e7774994ecebc093dfcba8af1bf);
+        
+
+        marker_bb5b361087e24d5c95dd3058e36ddd5f.bindPopup(popup_f5610070ec1841648b1485a61979fada)
+        ;
+
+        
+    
+    
+            var marker_3e90e5d72137499ca7afc6f09fc9cd03 = L.marker(
+                [10.77525, -85.66197199999999],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_504e636df7d846bf8c6c891c872437d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_630fd8a3785740d89a24564f7b436db0 = $(`<div id="html_630fd8a3785740d89a24564f7b436db0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Naranjo. Laguna Limbo. <strong>Elevación:</strong> 42.0 m  <strong>Fecha:</strong> 2007-01-25 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Diego Castillo <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_504e636df7d846bf8c6c891c872437d4.setContent(html_630fd8a3785740d89a24564f7b436db0);
+        
+
+        marker_3e90e5d72137499ca7afc6f09fc9cd03.bindPopup(popup_504e636df7d846bf8c6c891c872437d4)
+        ;
+
+        
+    
+    
+            var marker_c6b4c9906dfc4753bad4cb7116d8bb33 = L.marker(
+                [12.4, -85.75],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_5c81c3862e16459e9d0b5c63ed2a0f2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d7c3ff8c3854d2aac6ffb7acbe6fe49 = $(`<div id="html_1d7c3ff8c3854d2aac6ffb7acbe6fe49" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Km 70 Carretera al Rama. <strong>Elevación:</strong> 190.0 m  <strong>Fecha:</strong> 1982-06-19 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5c81c3862e16459e9d0b5c63ed2a0f2c.setContent(html_1d7c3ff8c3854d2aac6ffb7acbe6fe49);
+        
+
+        marker_c6b4c9906dfc4753bad4cb7116d8bb33.bindPopup(popup_5c81c3862e16459e9d0b5c63ed2a0f2c)
+        ;
+
+        
+    
+    
+            var marker_4ebc149cb5f04f3f9c45db68aec2cc0e = L.marker(
+                [12.866667, -86.133333],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_89fff32435a3446686cca0826d9db79d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4d73c97183f4472b1451ca026231822 = $(`<div id="html_b4d73c97183f4472b1451ca026231822" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entrada Paso de Carrete, quebrada <strong>Elevación:</strong> 470.0 m  <strong>Fecha:</strong> 1982-06-24 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_89fff32435a3446686cca0826d9db79d.setContent(html_b4d73c97183f4472b1451ca026231822);
+        
+
+        marker_4ebc149cb5f04f3f9c45db68aec2cc0e.bindPopup(popup_89fff32435a3446686cca0826d9db79d)
+        ;
+
+        
+    
+    
+            var marker_84070394f3b24b96a4c81ed5fb9ff025 = L.marker(
+                [10.65, -85.64],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_c1f70034619d49c7a81e404b8b4a6006 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98e8b84efa024d3b84f9d81577801eff = $(`<div id="html_98e8b84efa024d3b84f9d81577801eff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Santa Rosa; Faja Costeña del Golfo de Papagayo. Sendero Carbonal. Al sur de Playa Naranjo. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1992-07-17 00:00:00+00:00 <strong>Recolectores:</strong> Álvaro Fernández <strong>Identificadores:</strong> H. H. Iltis (WIS)</div>`)[0];
+            popup_c1f70034619d49c7a81e404b8b4a6006.setContent(html_98e8b84efa024d3b84f9d81577801eff);
+        
+
+        marker_84070394f3b24b96a4c81ed5fb9ff025.bindPopup(popup_c1f70034619d49c7a81e404b8b4a6006)
+        ;
+
+        
+    
+    
+            var marker_bb89d5dc021b4e21beb7033288543379 = L.marker(
+                [10.816667, -85.65],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_0f854f8cb1444d2baf9b114ab70c826f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93792cb91e1b450a943c4d1389629622 = $(`<div id="html_93792cb91e1b450a943c4d1389629622" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Área de Conservación Guanacaste. Sector Parque Nal. Sta. Rosa, camino a playa Naranjo, sendero Mirador Valle Naranjo. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 2015-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0f854f8cb1444d2baf9b114ab70c826f.setContent(html_93792cb91e1b450a943c4d1389629622);
+        
+
+        marker_bb89d5dc021b4e21beb7033288543379.bindPopup(popup_0f854f8cb1444d2baf9b114ab70c826f)
+        ;
+
+        
+    
+    
+            var marker_c0e4beb8e6564f14976b6c2d43b42c5e = L.marker(
+                [10.816667, -85.65],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_abbd08cf7f3e4e2983f8b7ae111bc7a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5106be46ec4f49de9e491f12da79e886 = $(`<div id="html_5106be46ec4f49de9e491f12da79e886" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Área de Conservación Guanacaste. Sector Parque Nal. Sta. Rosa, camino a playa Naranjo, sendero Mirador Valle Naranjo. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 2015-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_abbd08cf7f3e4e2983f8b7ae111bc7a4.setContent(html_5106be46ec4f49de9e491f12da79e886);
+        
+
+        marker_c0e4beb8e6564f14976b6c2d43b42c5e.bindPopup(popup_abbd08cf7f3e4e2983f8b7ae111bc7a4)
+        ;
+
+        
+    
+    
+            var marker_43fa3e9eabfc4acb8814d2d5f6165e73 = L.marker(
+                [10.816667, -85.65],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_18c17f70814d45bebb6cb08292ca8998 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86420033ce8b4f588aa986790933e717 = $(`<div id="html_86420033ce8b4f588aa986790933e717" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Área de Conservación Guanacaste. Sector Parque Nal. Sta. Rosa, camino a playa Naranjo, sendero Mirador Valle Naranjo. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 2015-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_18c17f70814d45bebb6cb08292ca8998.setContent(html_86420033ce8b4f588aa986790933e717);
+        
+
+        marker_43fa3e9eabfc4acb8814d2d5f6165e73.bindPopup(popup_18c17f70814d45bebb6cb08292ca8998)
+        ;
+
+        
+    
+    
+            var marker_6edee3a21d184e7788c7b41f27165e59 = L.marker(
+                [12.05, -86.3],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_33c244e97c2e4c06b2ddf189958ea8b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2fb457ca115c4c408261366f136f9f2a = $(`<div id="html_2fb457ca115c4c408261366f136f9f2a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Hacienda San Jacinto, NE of Managua; degraded savanna-dry forest <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1991-10-14 00:00:00+00:00 <strong>Recolectores:</strong> Hugh H. Iltis|Bruce F. Benz|Alfredo Grijalva P. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_33c244e97c2e4c06b2ddf189958ea8b5.setContent(html_2fb457ca115c4c408261366f136f9f2a);
+        
+
+        marker_6edee3a21d184e7788c7b41f27165e59.bindPopup(popup_33c244e97c2e4c06b2ddf189958ea8b5)
+        ;
+
+        
+    
+    
+            var marker_c5c7db03a366455680b76a4f89129439 = L.marker(
+                [10.833333, -85.616667],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_a27457379e7b468f8d6bc98fdff3d1cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52c3fb6c9bac4bec99bc2cdc238c5392 = $(`<div id="html_52c3fb6c9bac4bec99bc2cdc238c5392" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Santa Rosa.  De Bahía Salinas a Santa Cecilia.  Estación Santa Rosa, área administrativa.  Del 3 al 29 de julio. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-07-15 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> X. Cornejo (NY) & H. H. Iltis (WIS)</div>`)[0];
+            popup_a27457379e7b468f8d6bc98fdff3d1cd.setContent(html_52c3fb6c9bac4bec99bc2cdc238c5392);
+        
+
+        marker_c5c7db03a366455680b76a4f89129439.bindPopup(popup_a27457379e7b468f8d6bc98fdff3d1cd)
+        ;
+
+        
+    
+    
+            var marker_266219849c144993b1fa4204e5a50ab6 = L.marker(
+                [10.8, -85.63],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_762efa176611457fa0b7e8bb5f73d4e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0752e1a0e224f998cb7210e9760c366 = $(`<div id="html_d0752e1a0e224f998cb7210e9760c366" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa National Park. Slope below Questa and lowland forest at fork in road to Playa Naranjo. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1977-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Ronald L. Liesner|Frank Almeda|Robert L. Wilbur <strong>Identificadores:</strong> X. Cornejo (NY) & H. H. Iltis (WIS)</div>`)[0];
+            popup_762efa176611457fa0b7e8bb5f73d4e4.setContent(html_d0752e1a0e224f998cb7210e9760c366);
+        
+
+        marker_266219849c144993b1fa4204e5a50ab6.bindPopup(popup_762efa176611457fa0b7e8bb5f73d4e4)
+        ;
+
+        
+    
+    
+            var marker_e5b13861396e482682ef71feac4d4590 = L.marker(
+                [10.8, -85.666667],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_c20d208084d9472080c9a72b1515aca2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c68a633aeb9e4842b5ca0a1d54eed951 = $(`<div id="html_c68a633aeb9e4842b5ca0a1d54eed951" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa National Park. Mangrove area and dry, forested hill above Mangrove area across salt flat near Manilkara forest. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1978-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Ronald L. Liesner <strong>Identificadores:</strong> X. Cornejo (NY) & H. H. Iltis (WIS)</div>`)[0];
+            popup_c20d208084d9472080c9a72b1515aca2.setContent(html_c68a633aeb9e4842b5ca0a1d54eed951);
+        
+
+        marker_e5b13861396e482682ef71feac4d4590.bindPopup(popup_c20d208084d9472080c9a72b1515aca2)
+        ;
+
+        
+    
+    
+            var marker_f0ed93552f2c463fab54b8854723f122 = L.marker(
+                [10.8, -85.65],
+                {}
+            ).addTo(marker_cluster_6a95913b2ee5461487639dd4a2a294fe);
+        
+    
+        var popup_2b3684b2d7dc4e50b206324a3766a528 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3de8cb0030624457a25937d5e2099683 = $(`<div id="html_3de8cb0030624457a25937d5e2099683" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa National Park.  Rocky, dry river between Manilkara forest and fork in road to Naranjo Beach.  Río Poza Salada. <strong>Elevación:</strong> 12.5 m  <strong>Fecha:</strong> 1978-01-27 00:00:00+00:00 <strong>Recolectores:</strong> Ronald L. Liesner <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_2b3684b2d7dc4e50b206324a3766a528.setContent(html_3de8cb0030624457a25937d5e2099683);
+        
+
+        marker_f0ed93552f2c463fab54b8854723f122.bindPopup(popup_2b3684b2d7dc4e50b206324a3766a528)
+        ;
+
+        
+    
+    
+            var layer_control_35b0189b4a544799901a9e9eb3a2912b = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_fccdb01d5ba1483e9ef243ae16837d18,
+                    "ESRI World Imagery" : tile_layer_b5a98e8aa10d46bc92eba6db805bfa9a,
+                },
+                overlays :  {
+                    "macro_element_6a95913b2ee5461487639dd4a2a294fe" : marker_cluster_6a95913b2ee5461487639dd4a2a294fe,
+                },
+            };
+            L.control.layers(
+                layer_control_35b0189b4a544799901a9e9eb3a2912b.base_layers,
+                layer_control_35b0189b4a544799901a9e9eb3a2912b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_9389d2635c5a4c98883b03a42c0e2f3e);
+            tile_layer_b5a98e8aa10d46bc92eba6db805bfa9a.remove();
+        
+</script>

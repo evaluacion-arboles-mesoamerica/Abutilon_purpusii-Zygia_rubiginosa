@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c07b8f540a4142758b3845a4f57926ea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c07b8f540a4142758b3845a4f57926ea" ></div>
+        
+</body>
+<script>    
+    
+            var map_c07b8f540a4142758b3845a4f57926ea = L.map(
+                "map_c07b8f540a4142758b3845a4f57926ea",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_c07b8f540a4142758b3845a4f57926ea);
+
+            
+
+        
+    
+            var tile_layer_a8d14339adfc4550a9fb5aa8554d7295 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c07b8f540a4142758b3845a4f57926ea);
+        
+    
+            var tile_layer_ba53fb3bd04e4a98a9f0b77aab858b8c = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c07b8f540a4142758b3845a4f57926ea);
+        
+    
+            var marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965 = L.markerClusterGroup(
+                {}
+            );
+            map_c07b8f540a4142758b3845a4f57926ea.addLayer(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+            var marker_26e3dd531b8241f1b24c8f361319ba44 = L.marker(
+                [10.92, -85.46],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_7f826b07f44a467dadf85122e5eaac61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38acd70accf748a785f8d887ef3b8d77 = $(`<div id="html_38acd70accf748a785f8d887ef3b8d77" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste estación Cacao, sendero Maritza. Cordillera de Guanacaste. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1995-02-09 00:00:00+00:00 <strong>Recolectores:</strong> Angulo, Luis <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_7f826b07f44a467dadf85122e5eaac61.setContent(html_38acd70accf748a785f8d887ef3b8d77);
+        
+
+        marker_26e3dd531b8241f1b24c8f361319ba44.bindPopup(popup_7f826b07f44a467dadf85122e5eaac61)
+        ;
+
+        
+    
+    
+            var marker_f6d9196dd1aa4480951d9ca11478f0b8 = L.marker(
+                [10.67, -84.99],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_87e6a7404d5e4cfdaab768ad09598856 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_822648c4aee34e128641cafa1b2073bc = $(`<div id="html_822648c4aee34e128641cafa1b2073bc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Volcán Tenorio Alto Masis. Colecta en bosque secundario, a orilla de quebrada. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Chaves, Jose Luis <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_87e6a7404d5e4cfdaab768ad09598856.setContent(html_822648c4aee34e128641cafa1b2073bc);
+        
+
+        marker_f6d9196dd1aa4480951d9ca11478f0b8.bindPopup(popup_87e6a7404d5e4cfdaab768ad09598856)
+        ;
+
+        
+    
+    
+            var marker_12be7225523e4e09aad030101c7be6d5 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_23fd7b1c2af74cfc82a225bf128d4262 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9eb0dc492b4e4c9ab44a64708a87c4d6 = $(`<div id="html_9eb0dc492b4e4c9ab44a64708a87c4d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1893-06-01 00:00:00+00:00 <strong>Recolectores:</strong> A. Tonduz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_23fd7b1c2af74cfc82a225bf128d4262.setContent(html_9eb0dc492b4e4c9ab44a64708a87c4d6);
+        
+
+        marker_12be7225523e4e09aad030101c7be6d5.bindPopup(popup_23fd7b1c2af74cfc82a225bf128d4262)
+        ;
+
+        
+    
+    
+            var marker_b62815ef4fc94e0493e30898f07d8525 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_afe616946f974e1f81229620fadf324d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55e0de2c27be4241afa9bf83577469be = $(`<div id="html_55e0de2c27be4241afa9bf83577469be" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1893-06-01 00:00:00+00:00 <strong>Recolectores:</strong> A. Tonduz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_afe616946f974e1f81229620fadf324d.setContent(html_55e0de2c27be4241afa9bf83577469be);
+        
+
+        marker_b62815ef4fc94e0493e30898f07d8525.bindPopup(popup_afe616946f974e1f81229620fadf324d)
+        ;
+
+        
+    
+    
+            var marker_9425f6beb22546be8d4dd0d5472cc322 = L.marker(
+                [9.922222, -84.266667],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_076427140f414c49b37a75fd03282a8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90f434460e9843acbb4b2920b8eb439c = $(`<div id="html_90f434460e9843acbb4b2920b8eb439c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bajo Morales. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1993-05-21 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_076427140f414c49b37a75fd03282a8e.setContent(html_90f434460e9843acbb4b2920b8eb439c);
+        
+
+        marker_9425f6beb22546be8d4dd0d5472cc322.bindPopup(popup_076427140f414c49b37a75fd03282a8e)
+        ;
+
+        
+    
+    
+            var marker_6f8979e4caa548fe9d0cfd9ef82c2973 = L.marker(
+                [10.275833, -84.795834],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_77be9fd938f54070b7d96388971d902a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ff32be4d7b2448eacf536b405308da0 = $(`<div id="html_3ff32be4d7b2448eacf536b405308da0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Luis; Buen Amigo, Trapiche. Monteverde. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-10-11 00:00:00+00:00 <strong>Recolectores:</strong> Zobeida Fuentes <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_77be9fd938f54070b7d96388971d902a.setContent(html_3ff32be4d7b2448eacf536b405308da0);
+        
+
+        marker_6f8979e4caa548fe9d0cfd9ef82c2973.bindPopup(popup_77be9fd938f54070b7d96388971d902a)
+        ;
+
+        
+    
+    
+            var marker_83f800a7f2134a71bf7e6d3e037b722d = L.marker(
+                [10.272222, -84.825001],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_9894b52acdab4beba6ec828c23339081 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_970c8fdb2b004a379964913568cca9d3 = $(`<div id="html_970c8fdb2b004a379964913568cca9d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca Buen Amigo, San Luis. Monteverde. Camino a Veracruz. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-03-29 00:00:00+00:00 <strong>Recolectores:</strong> Zobeida Fuentes <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_9894b52acdab4beba6ec828c23339081.setContent(html_970c8fdb2b004a379964913568cca9d3);
+        
+
+        marker_83f800a7f2134a71bf7e6d3e037b722d.bindPopup(popup_9894b52acdab4beba6ec828c23339081)
+        ;
+
+        
+    
+    
+            var marker_2746c7f100874ec58a2eb2d696b73a94 = L.marker(
+                [10.880556, -85.401389],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_8cdab5f08efd497e8e0676f476e742d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41ad36e437914e599d9f60d9f625044b = $(`<div id="html_41ad36e437914e599d9f60d9f625044b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion San Ramon. Dos Rios. Sendero El Espejo. <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 1993-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_8cdab5f08efd497e8e0676f476e742d6.setContent(html_41ad36e437914e599d9f60d9f625044b);
+        
+
+        marker_2746c7f100874ec58a2eb2d696b73a94.bindPopup(popup_8cdab5f08efd497e8e0676f476e742d6)
+        ;
+
+        
+    
+    
+            var marker_62040ff4f3084386963cd0e1c63c219e = L.marker(
+                [10.304167, -84.811111],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_94c51ec4efb0466893d015cb69b71c17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83c48f997fdd4decbd5b4c66a858f6c5 = $(`<div id="html_83c48f997fdd4decbd5b4c66a858f6c5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde. Joe Stuckey farm, 1 km S of Rio Guacimal bridge. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1994-12-01 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_94c51ec4efb0466893d015cb69b71c17.setContent(html_83c48f997fdd4decbd5b4c66a858f6c5);
+        
+
+        marker_62040ff4f3084386963cd0e1c63c219e.bindPopup(popup_94c51ec4efb0466893d015cb69b71c17)
+        ;
+
+        
+    
+    
+            var marker_20c0d311785e47be914f35f2c27caa3e = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_482c90bd128641c19251d012efef90f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddc96a6b5abc44beaca45bdf6763a9e9 = $(`<div id="html_ddc96a6b5abc44beaca45bdf6763a9e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde, cliff edge on Pacific slope, Bajo Tigre trail. <strong>Elevación:</strong> 1050.0 m  <strong>Fecha:</strong> 1990-10-20 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_482c90bd128641c19251d012efef90f4.setContent(html_ddc96a6b5abc44beaca45bdf6763a9e9);
+        
+
+        marker_20c0d311785e47be914f35f2c27caa3e.bindPopup(popup_482c90bd128641c19251d012efef90f4)
+        ;
+
+        
+    
+    
+            var marker_564279dcba2b44aba7edb608d9b6c9ae = L.marker(
+                [10.276389, -84.795833],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_a021f41cd3374c0dace3596f9c2d79a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_186bda646b3f4aa0a82fb27f15f6e075 = $(`<div id="html_186bda646b3f4aa0a82fb27f15f6e075" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Luis. Camino a Veracruz. Monteverde. <strong>Elevación:</strong> 1050.0 m  <strong>Fecha:</strong> 1992-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Alvaro Fernandez <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_a021f41cd3374c0dace3596f9c2d79a0.setContent(html_186bda646b3f4aa0a82fb27f15f6e075);
+        
+
+        marker_564279dcba2b44aba7edb608d9b6c9ae.bindPopup(popup_a021f41cd3374c0dace3596f9c2d79a0)
+        ;
+
+        
+    
+    
+            var marker_f88627b2c6904dc89e869c0a29a8a56b = L.marker(
+                [10.275833, -84.795834],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_fd8a91caf919425f86aeec2777550b72 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f97f5ac49e1f43628c5a87496b878d67 = $(`<div id="html_f97f5ac49e1f43628c5a87496b878d67" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Luis; Finca Buen Amigo. Monteverde. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-09-14 00:00:00+00:00 <strong>Recolectores:</strong> Zobeida Fuentes <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_fd8a91caf919425f86aeec2777550b72.setContent(html_f97f5ac49e1f43628c5a87496b878d67);
+        
+
+        marker_f88627b2c6904dc89e869c0a29a8a56b.bindPopup(popup_fd8a91caf919425f86aeec2777550b72)
+        ;
+
+        
+    
+    
+            var marker_5593630482284074b0e850822f31f9bd = L.marker(
+                [9.768889, -84.121944],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_e7b2ffd4538341d29bca62d6fc59c04e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e09e0e333c648b98f9849032ee71ffd = $(`<div id="html_5e09e0e333c648b98f9849032ee71ffd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Jocotal, bosques residuales y tacotales en la ribera Sur del Rio Candelaria entre Jocotal y Monterrey. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1998-04-04 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; R. J. Abarca <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_e7b2ffd4538341d29bca62d6fc59c04e.setContent(html_5e09e0e333c648b98f9849032ee71ffd);
+        
+
+        marker_5593630482284074b0e850822f31f9bd.bindPopup(popup_e7b2ffd4538341d29bca62d6fc59c04e)
+        ;
+
+        
+    
+    
+            var marker_b11c478016fe44199a6a2649378e19ea = L.marker(
+                [9.768889, -84.121944],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_3a4be6bc56ef4befa0cb3ec4bd9ab5fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fa800443ab548a581c24e8ec70034ef = $(`<div id="html_4fa800443ab548a581c24e8ec70034ef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Jocotal, bosques residuales y tacotales en la ribera Sur del Rio Candelaria entre Jocotal y Monterrey. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1998-04-04 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; R. J. Abarca <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_3a4be6bc56ef4befa0cb3ec4bd9ab5fd.setContent(html_4fa800443ab548a581c24e8ec70034ef);
+        
+
+        marker_b11c478016fe44199a6a2649378e19ea.bindPopup(popup_3a4be6bc56ef4befa0cb3ec4bd9ab5fd)
+        ;
+
+        
+    
+    
+            var marker_d3bff3befe294714a620cc66849e715c = L.marker(
+                [9.768889, -84.121944],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_063f31b40c514193b6612f8483d959ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d821dbc20e424f2392808f0c7d250935 = $(`<div id="html_d821dbc20e424f2392808f0c7d250935" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Jocotal, bosques residuales y tacotales en la ribera Sur del Rio Candelaria entre Jocotal y Monterrey. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1998-04-04 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; R. J. Abarca <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_063f31b40c514193b6612f8483d959ec.setContent(html_d821dbc20e424f2392808f0c7d250935);
+        
+
+        marker_d3bff3befe294714a620cc66849e715c.bindPopup(popup_063f31b40c514193b6612f8483d959ec)
+        ;
+
+        
+    
+    
+            var marker_5976189bc36b48f881deedc229489086 = L.marker(
+                [9.768889, -84.121944],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_68843171d1fd4bd7859fd0b7b03082ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd0828fed25f44a4b94e595aa1af0086 = $(`<div id="html_fd0828fed25f44a4b94e595aa1af0086" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Jocotal, bosques residuales y tacotales en la ribera Sur del Rio Candelaria entre Jocotal y Monterrey. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1998-04-04 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós; R. J. Abarca <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_68843171d1fd4bd7859fd0b7b03082ec.setContent(html_fd0828fed25f44a4b94e595aa1af0086);
+        
+
+        marker_5976189bc36b48f881deedc229489086.bindPopup(popup_68843171d1fd4bd7859fd0b7b03082ec)
+        ;
+
+        
+    
+    
+            var marker_a55ceb1d05494fec98b5802f4920fbbc = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_8c26f0055fb649498241f176ea816138 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4adb0c5dc0014373a81396eb8d713178 = $(`<div id="html_4adb0c5dc0014373a81396eb8d713178" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_8c26f0055fb649498241f176ea816138.setContent(html_4adb0c5dc0014373a81396eb8d713178);
+        
+
+        marker_a55ceb1d05494fec98b5802f4920fbbc.bindPopup(popup_8c26f0055fb649498241f176ea816138)
+        ;
+
+        
+    
+    
+            var marker_dc38d3e048884875895ec235842d531b = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_9ffef5eff77e49b89c1c07522b24362d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2290ad163724a6eb5034000efc3ceb4 = $(`<div id="html_f2290ad163724a6eb5034000efc3ceb4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_9ffef5eff77e49b89c1c07522b24362d.setContent(html_f2290ad163724a6eb5034000efc3ceb4);
+        
+
+        marker_dc38d3e048884875895ec235842d531b.bindPopup(popup_9ffef5eff77e49b89c1c07522b24362d)
+        ;
+
+        
+    
+    
+            var marker_913c7dfddb2840b1adfb2f52f2daef2e = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_3fb14457fdf545079da1d37a9ab76d4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab98b6938dab4df7834acc79713a29d8 = $(`<div id="html_ab98b6938dab4df7834acc79713a29d8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_3fb14457fdf545079da1d37a9ab76d4d.setContent(html_ab98b6938dab4df7834acc79713a29d8);
+        
+
+        marker_913c7dfddb2840b1adfb2f52f2daef2e.bindPopup(popup_3fb14457fdf545079da1d37a9ab76d4d)
+        ;
+
+        
+    
+    
+            var marker_982f940534904f8bb4da0562323638db = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_5c235ac9eca641d6a7cb2e99cbf8c5bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99fb032a3a1b4d42a14937923353baa2 = $(`<div id="html_99fb032a3a1b4d42a14937923353baa2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_5c235ac9eca641d6a7cb2e99cbf8c5bd.setContent(html_99fb032a3a1b4d42a14937923353baa2);
+        
+
+        marker_982f940534904f8bb4da0562323638db.bindPopup(popup_5c235ac9eca641d6a7cb2e99cbf8c5bd)
+        ;
+
+        
+    
+    
+            var marker_1d23d7ce1d1d404a98fe47a28e6933a6 = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_1ef1f15079fa4aed82ff869b01e453fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97aa281d762840a590e487524cb05d34 = $(`<div id="html_97aa281d762840a590e487524cb05d34" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_1ef1f15079fa4aed82ff869b01e453fe.setContent(html_97aa281d762840a590e487524cb05d34);
+        
+
+        marker_1d23d7ce1d1d404a98fe47a28e6933a6.bindPopup(popup_1ef1f15079fa4aed82ff869b01e453fe)
+        ;
+
+        
+    
+    
+            var marker_f8d61033258e4300be8101f66cd48d71 = L.marker(
+                [10.161111, -84.658333],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_33ff4f7205444a40bf5e283b565390b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e73483bc1de4100a01c82e84b1a80e7 = $(`<div id="html_2e73483bc1de4100a01c82e84b1a80e7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapotal, Rio Barranquilla. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1997-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Victor Mora ; Hugo Perez <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_33ff4f7205444a40bf5e283b565390b1.setContent(html_2e73483bc1de4100a01c82e84b1a80e7);
+        
+
+        marker_f8d61033258e4300be8101f66cd48d71.bindPopup(popup_33ff4f7205444a40bf5e283b565390b1)
+        ;
+
+        
+    
+    
+            var marker_ad699b0acf03475cabd73a23b466a430 = L.marker(
+                [10.990357000000001, -85.427182],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_4cca4e5a1c8140409da8dacba5408a40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9dd0233d8cb24510bd782bac57328590 = $(`<div id="html_9dd0233d8cb24510bd782bac57328590" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz, 9 Km S. de Santa Cecilia, Estación Pitilla. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1997-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Calixto Moraga <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_4cca4e5a1c8140409da8dacba5408a40.setContent(html_9dd0233d8cb24510bd782bac57328590);
+        
+
+        marker_ad699b0acf03475cabd73a23b466a430.bindPopup(popup_4cca4e5a1c8140409da8dacba5408a40)
+        ;
+
+        
+    
+    
+            var marker_b1971ce88baa4eb9aa5f1dfd6b7003bc = L.marker(
+                [10.990357000000001, -85.427182],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_512a4c76447d4f8e9babb457c6763cb5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_abda3e0208934079a41c1c0f169bc2f5 = $(`<div id="html_abda3e0208934079a41c1c0f169bc2f5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz, 9 Km S. de Santa Cecilia, Estación Pitilla. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1997-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Calixto Moraga <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_512a4c76447d4f8e9babb457c6763cb5.setContent(html_abda3e0208934079a41c1c0f169bc2f5);
+        
+
+        marker_b1971ce88baa4eb9aa5f1dfd6b7003bc.bindPopup(popup_512a4c76447d4f8e9babb457c6763cb5)
+        ;
+
+        
+    
+    
+            var marker_d85e69ccb12345d1b4faf1ec3b7be706 = L.marker(
+                [10.990357000000001, -85.427182],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_83230cfe0e444ea79eccac1247769200 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_956b6ef49c4d4b9fa60d2aa0be412b74 = $(`<div id="html_956b6ef49c4d4b9fa60d2aa0be412b74" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz, 9 Km S. de Santa Cecilia, Estación Pitilla. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1997-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Calixto Moraga <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_83230cfe0e444ea79eccac1247769200.setContent(html_956b6ef49c4d4b9fa60d2aa0be412b74);
+        
+
+        marker_d85e69ccb12345d1b4faf1ec3b7be706.bindPopup(popup_83230cfe0e444ea79eccac1247769200)
+        ;
+
+        
+    
+    
+            var marker_be01e1810dd54287b77747bb20a0f849 = L.marker(
+                [10.253889, -84.082778],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_8ee4027fe2624fbc92a4fe1404a6b1b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34992fbbad5a4ff989d5e47c6a986730 = $(`<div id="html_34992fbbad5a4ff989d5e47c6a986730" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Transect trail to left of trail, approx. 45 minute walk above refuge at 1070 m elevation. Mossy wet cloud forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1997-04-08 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; T. Carr ; P. O Hara ; J. Peters <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_8ee4027fe2624fbc92a4fe1404a6b1b1.setContent(html_34992fbbad5a4ff989d5e47c6a986730);
+        
+
+        marker_be01e1810dd54287b77747bb20a0f849.bindPopup(popup_8ee4027fe2624fbc92a4fe1404a6b1b1)
+        ;
+
+        
+    
+    
+            var marker_d0345b3be8e1489faec98b21f4461c95 = L.marker(
+                [10.253889, -84.082778],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_3fc73187bd6c4d98b4a2a8abd46ed428 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28a38211456349fa934c4bf0b8e166d7 = $(`<div id="html_28a38211456349fa934c4bf0b8e166d7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Transect trail to left of trail, approx. 45 minute walk above refuge at 1070 m elevation. Mossy wet cloud forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1997-04-08 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; T. Carr ; P. O Hara ; J. Peters <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_3fc73187bd6c4d98b4a2a8abd46ed428.setContent(html_28a38211456349fa934c4bf0b8e166d7);
+        
+
+        marker_d0345b3be8e1489faec98b21f4461c95.bindPopup(popup_3fc73187bd6c4d98b4a2a8abd46ed428)
+        ;
+
+        
+    
+    
+            var marker_7cf1f07ddb9d43e5b399a3456cc51836 = L.marker(
+                [10.253889, -84.082778],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_95674875fcf54188b8e39494dfb2b59f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a27d39a7a9e4d049edba10746ff5433 = $(`<div id="html_7a27d39a7a9e4d049edba10746ff5433" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Transect trail to left of trail, approx. 45 minute walk above refuge at 1070 m elevation. Mossy wet cloud forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1997-04-08 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; T. Carr ; P. O Hara ; J. Peters <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_95674875fcf54188b8e39494dfb2b59f.setContent(html_7a27d39a7a9e4d049edba10746ff5433);
+        
+
+        marker_7cf1f07ddb9d43e5b399a3456cc51836.bindPopup(popup_95674875fcf54188b8e39494dfb2b59f)
+        ;
+
+        
+    
+    
+            var marker_d88d38199d854b53a925e074e17eb110 = L.marker(
+                [10.253889, -84.082778],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_6e83acfd2b8b4096b1385970e0652a7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f2aedb91f1b45f2b001f3febfa14cec = $(`<div id="html_6f2aedb91f1b45f2b001f3febfa14cec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Transect trail to left of trail, approx. 45 minute walk above refuge at 1070 m elevation. Mossy wet cloud forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1997-04-08 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; T. Carr ; P. O Hara ; J. Peters <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_6e83acfd2b8b4096b1385970e0652a7b.setContent(html_6f2aedb91f1b45f2b001f3febfa14cec);
+        
+
+        marker_d88d38199d854b53a925e074e17eb110.bindPopup(popup_6e83acfd2b8b4096b1385970e0652a7b)
+        ;
+
+        
+    
+    
+            var marker_705a5ee2661943c0a3658e4543d0de1b = L.marker(
+                [10.3, -84.800004],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_93a1b767ad5f4015a04c6b4120cf83a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_096105f0759c4a3b8384540573530c33 = $(`<div id="html_096105f0759c4a3b8384540573530c33" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde. Pacific slope. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 1991-11-22 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_93a1b767ad5f4015a04c6b4120cf83a7.setContent(html_096105f0759c4a3b8384540573530c33);
+        
+
+        marker_705a5ee2661943c0a3658e4543d0de1b.bindPopup(popup_93a1b767ad5f4015a04c6b4120cf83a7)
+        ;
+
+        
+    
+    
+            var marker_ba22b3ead4c74da6903a23426f858569 = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_aec857614e8f4eee92d4721cbbcb7ba4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f93f5bfd7784c8ca9c8a68b93e8e678 = $(`<div id="html_8f93f5bfd7784c8ca9c8a68b93e8e678" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves; Eleomar Muñoz <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_aec857614e8f4eee92d4721cbbcb7ba4.setContent(html_8f93f5bfd7784c8ca9c8a68b93e8e678);
+        
+
+        marker_ba22b3ead4c74da6903a23426f858569.bindPopup(popup_aec857614e8f4eee92d4721cbbcb7ba4)
+        ;
+
+        
+    
+    
+            var marker_e70676e7c3f549f48d3171429f6a76fa = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_f5103194fb554c2e81f20a09a8733a7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d4f8e58e0624f4aa42f7dd112cf4790 = $(`<div id="html_8d4f8e58e0624f4aa42f7dd112cf4790" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves; Eleomar Muñoz <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_f5103194fb554c2e81f20a09a8733a7f.setContent(html_8d4f8e58e0624f4aa42f7dd112cf4790);
+        
+
+        marker_e70676e7c3f549f48d3171429f6a76fa.bindPopup(popup_f5103194fb554c2e81f20a09a8733a7f)
+        ;
+
+        
+    
+    
+            var marker_a9cf6ef2538145ab9b53ed80139bb6d1 = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_52061469ef2f4f6d9d17a2f838656e51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42ba22bc7e7d483ca69fee2fe80581a3 = $(`<div id="html_42ba22bc7e7d483ca69fee2fe80581a3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves; Eleomar Muñoz <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_52061469ef2f4f6d9d17a2f838656e51.setContent(html_42ba22bc7e7d483ca69fee2fe80581a3);
+        
+
+        marker_a9cf6ef2538145ab9b53ed80139bb6d1.bindPopup(popup_52061469ef2f4f6d9d17a2f838656e51)
+        ;
+
+        
+    
+    
+            var marker_b0550ce69305443eb3832d49d824c92d = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_234f1e663b53416196ab71f43f1fcc2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5a121525a86840fea4dba9ce730ee2bb = $(`<div id="html_5a121525a86840fea4dba9ce730ee2bb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves; Eleomar Muñoz <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_234f1e663b53416196ab71f43f1fcc2e.setContent(html_5a121525a86840fea4dba9ce730ee2bb);
+        
+
+        marker_b0550ce69305443eb3832d49d824c92d.bindPopup(popup_234f1e663b53416196ab71f43f1fcc2e)
+        ;
+
+        
+    
+    
+            var marker_0d0b96f788a640c6b9c612a8842a10f9 = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_30f292f794504e8c828b26084be89a6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67b26ab41b7640a8870af757c842f00e = $(`<div id="html_67b26ab41b7640a8870af757c842f00e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2000-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves; Eleomar Muñoz <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_30f292f794504e8c828b26084be89a6b.setContent(html_67b26ab41b7640a8870af757c842f00e);
+        
+
+        marker_0d0b96f788a640c6b9c612a8842a10f9.bindPopup(popup_30f292f794504e8c828b26084be89a6b)
+        ;
+
+        
+    
+    
+            var marker_15d86636f6b645378c87111c43c9a53b = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_c6782001ca4c46c6a464e8731621ee39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f17c54d43c1d4b5da3cadffb0bb00a01 = $(`<div id="html_f17c54d43c1d4b5da3cadffb0bb00a01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde community, Pacific slope. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1996-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_c6782001ca4c46c6a464e8731621ee39.setContent(html_f17c54d43c1d4b5da3cadffb0bb00a01);
+        
+
+        marker_15d86636f6b645378c87111c43c9a53b.bindPopup(popup_c6782001ca4c46c6a464e8731621ee39)
+        ;
+
+        
+    
+    
+            var marker_ddad8b52def84aa5a56e6f321aa2d685 = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_f4fb63989eb54e338aab9090d71a9348 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea040271ff7f4d589c28b013495e997f = $(`<div id="html_ea040271ff7f4d589c28b013495e997f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde community, Pacific slope. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1996-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f4fb63989eb54e338aab9090d71a9348.setContent(html_ea040271ff7f4d589c28b013495e997f);
+        
+
+        marker_ddad8b52def84aa5a56e6f321aa2d685.bindPopup(popup_f4fb63989eb54e338aab9090d71a9348)
+        ;
+
+        
+    
+    
+            var marker_66de5313448b42c881e42427f3398ea3 = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_c39f174f826a41748fd35c66a8bfb173 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3d8113b117d4ea4a4a3832d4a75de7e = $(`<div id="html_b3d8113b117d4ea4a4a3832d4a75de7e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde community, Pacific slope. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1996-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_c39f174f826a41748fd35c66a8bfb173.setContent(html_b3d8113b117d4ea4a4a3832d4a75de7e);
+        
+
+        marker_66de5313448b42c881e42427f3398ea3.bindPopup(popup_c39f174f826a41748fd35c66a8bfb173)
+        ;
+
+        
+    
+    
+            var marker_eeb18a15a0484ce1aaef95909ce7107b = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_f54233ae2c2646a0b9fba7d6de442bae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34d6aa15d5544a1cb610df7007e5254f = $(`<div id="html_34d6aa15d5544a1cb610df7007e5254f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde community, Pacific slope. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1996-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f54233ae2c2646a0b9fba7d6de442bae.setContent(html_34d6aa15d5544a1cb610df7007e5254f);
+        
+
+        marker_eeb18a15a0484ce1aaef95909ce7107b.bindPopup(popup_f54233ae2c2646a0b9fba7d6de442bae)
+        ;
+
+        
+    
+    
+            var marker_5bf3aacb035a47969c1206a57ba9d10f = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_5c57a5d3555e47aa924ec5acc593c219 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2b0aa843f7244819c5f08efc265103a = $(`<div id="html_c2b0aa843f7244819c5f08efc265103a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde community, Pacific slope. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1996-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_5c57a5d3555e47aa924ec5acc593c219.setContent(html_c2b0aa843f7244819c5f08efc265103a);
+        
+
+        marker_5bf3aacb035a47969c1206a57ba9d10f.bindPopup(popup_5c57a5d3555e47aa924ec5acc593c219)
+        ;
+
+        
+    
+    
+            var marker_bb0da4d4d2a0465fa1959bf06b546669 = L.marker(
+                [9.824160000000001, -83.16167],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_05f826885b3344f7841b5d83ed4f8730 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b37bcef18084b699d5baef4a49ce87f = $(`<div id="html_5b37bcef18084b699d5baef4a49ce87f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Matama, SItio Rancho "El Hotel". <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2007-10-19 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_05f826885b3344f7841b5d83ed4f8730.setContent(html_5b37bcef18084b699d5baef4a49ce87f);
+        
+
+        marker_bb0da4d4d2a0465fa1959bf06b546669.bindPopup(popup_05f826885b3344f7841b5d83ed4f8730)
+        ;
+
+        
+    
+    
+            var marker_fd327b4b52d248669fe47d890cfbd83d = L.marker(
+                [9.824160000000001, -83.16167],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_a48edcb9accf436584666ea40896dfd7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c2103f920f74fd59d2faf97d0200639 = $(`<div id="html_0c2103f920f74fd59d2faf97d0200639" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Matama, SItio Rancho "El Hotel". <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2007-10-19 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_a48edcb9accf436584666ea40896dfd7.setContent(html_0c2103f920f74fd59d2faf97d0200639);
+        
+
+        marker_fd327b4b52d248669fe47d890cfbd83d.bindPopup(popup_a48edcb9accf436584666ea40896dfd7)
+        ;
+
+        
+    
+    
+            var marker_a2469a07641a4f01b1fcfa6a5c9e2b4c = L.marker(
+                [9.824160000000001, -83.16167],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_3b1d341e8fae4290a37bfe9619877656 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2405bebf46a1409d9d217d8a72bdd84b = $(`<div id="html_2405bebf46a1409d9d217d8a72bdd84b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Matama, SItio Rancho "El Hotel". <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2007-10-19 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_3b1d341e8fae4290a37bfe9619877656.setContent(html_2405bebf46a1409d9d217d8a72bdd84b);
+        
+
+        marker_a2469a07641a4f01b1fcfa6a5c9e2b4c.bindPopup(popup_3b1d341e8fae4290a37bfe9619877656)
+        ;
+
+        
+    
+    
+            var marker_e802fab151de4e22887553f12bedc62d = L.marker(
+                [9.824160000000001, -83.16167],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_f7893ee199d445e489d19e8469082c42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_955b350e4a724c0e9009d62aad483e9c = $(`<div id="html_955b350e4a724c0e9009d62aad483e9c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Matama, SItio Rancho "El Hotel". <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2007-10-19 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_f7893ee199d445e489d19e8469082c42.setContent(html_955b350e4a724c0e9009d62aad483e9c);
+        
+
+        marker_e802fab151de4e22887553f12bedc62d.bindPopup(popup_f7893ee199d445e489d19e8469082c42)
+        ;
+
+        
+    
+    
+            var marker_4a51d853d3f14a129b924fd0b50da9cf = L.marker(
+                [9.824160000000001, -83.16167],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_05b3088b349a4fb2bd0f8a3fbeaf9fe0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a18afaa7694489b9c4f137e46036c36 = $(`<div id="html_6a18afaa7694489b9c4f137e46036c36" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Matama, SItio Rancho "El Hotel". <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2007-10-19 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_05b3088b349a4fb2bd0f8a3fbeaf9fe0.setContent(html_6a18afaa7694489b9c4f137e46036c36);
+        
+
+        marker_4a51d853d3f14a129b924fd0b50da9cf.bindPopup(popup_05b3088b349a4fb2bd0f8a3fbeaf9fe0)
+        ;
+
+        
+    
+    
+            var marker_846f58352ae9437e88e11507c794da9b = L.marker(
+                [10.0, -84.0],
+                {}
+            ).addTo(marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965);
+        
+    
+        var popup_fc4c294e7cd348e286039f9cd1d18023 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9caea15bb69a4a82a664560d2e0f90f0 = $(`<div id="html_9caea15bb69a4a82a664560d2e0f90f0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> [San José] San Francisco de Guadalupe. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1894-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Tonduz, A. (no. 8944) <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_fc4c294e7cd348e286039f9cd1d18023.setContent(html_9caea15bb69a4a82a664560d2e0f90f0);
+        
+
+        marker_846f58352ae9437e88e11507c794da9b.bindPopup(popup_fc4c294e7cd348e286039f9cd1d18023)
+        ;
+
+        
+    
+    
+            var layer_control_d8e864a1e42847c4bf877a3157c04f03 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a8d14339adfc4550a9fb5aa8554d7295,
+                    "ESRI World Imagery" : tile_layer_ba53fb3bd04e4a98a9f0b77aab858b8c,
+                },
+                overlays :  {
+                    "macro_element_d1d3269a08a544d6bcd4b0becb0c8965" : marker_cluster_d1d3269a08a544d6bcd4b0becb0c8965,
+                },
+            };
+            L.control.layers(
+                layer_control_d8e864a1e42847c4bf877a3157c04f03.base_layers,
+                layer_control_d8e864a1e42847c4bf877a3157c04f03.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c07b8f540a4142758b3845a4f57926ea);
+            tile_layer_ba53fb3bd04e4a98a9f0b77aab858b8c.remove();
+        
+</script>

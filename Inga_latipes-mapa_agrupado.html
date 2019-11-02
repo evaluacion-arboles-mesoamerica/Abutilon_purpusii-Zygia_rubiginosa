@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2c08a2b9c320467698f2f95a0318a35c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_2c08a2b9c320467698f2f95a0318a35c" ></div>
+        
+</body>
+<script>    
+    
+            var map_2c08a2b9c320467698f2f95a0318a35c = L.map(
+                "map_2c08a2b9c320467698f2f95a0318a35c",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_2c08a2b9c320467698f2f95a0318a35c);
+
+            
+
+        
+    
+            var tile_layer_e3249541fa914b3289cb52ac4dae4e1a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c08a2b9c320467698f2f95a0318a35c);
+        
+    
+            var tile_layer_22a4b36b4b4343e3a1f9fcc076e38e6b = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2c08a2b9c320467698f2f95a0318a35c);
+        
+    
+            var marker_cluster_8c3c909fb7a545018f3bc65b817451de = L.markerClusterGroup(
+                {}
+            );
+            map_2c08a2b9c320467698f2f95a0318a35c.addLayer(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+            var marker_1f23f877a1624e00aff34ac5cee516bb = L.marker(
+                [10.033333, -83.55],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_2be4891510214df6913e6a6cfd1bcc65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e65bc75bbb842c389bd83a0bdb03f37 = $(`<div id="html_1e65bc75bbb842c389bd83a0bdb03f37" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Flora of Costa Rica. Cartago, Buena Vista to Siquirres, 8km before Siquirres. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1992-02-22 00:00:00+00:00 <strong>Recolectores:</strong> Pennington TD; Owen PE <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2be4891510214df6913e6a6cfd1bcc65.setContent(html_1e65bc75bbb842c389bd83a0bdb03f37);
+        
+
+        marker_1f23f877a1624e00aff34ac5cee516bb.bindPopup(popup_2be4891510214df6913e6a6cfd1bcc65)
+        ;
+
+        
+    
+    
+            var marker_bb0ded0792d4450592e5160d4abd64e6 = L.marker(
+                [10.33, -84.85],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_1683e1d736a34795bb09eb031195e325 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ffddf997a9046bcb955614579b42c72 = $(`<div id="html_6ffddf997a9046bcb955614579b42c72" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cañitas. Río Cañas, Lado Pacífico. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-08-25 00:00:00+00:00 <strong>Recolectores:</strong> Bello, Erick <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_1683e1d736a34795bb09eb031195e325.setContent(html_6ffddf997a9046bcb955614579b42c72);
+        
+
+        marker_bb0ded0792d4450592e5160d4abd64e6.bindPopup(popup_1683e1d736a34795bb09eb031195e325)
+        ;
+
+        
+    
+    
+            var marker_c5950a9c96d342cf90613d08faf1da2e = L.marker(
+                [9.43, -83.05],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_76c793ba035e4dc9ae99c52f6c053f8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_736f4c6c03ee4d019594cdd4d8fc41e3 = $(`<div id="html_736f4c6c03ee4d019594cdd4d8fc41e3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari. Siguiendo la fila entre Río Dapari y Río Lari, bajando hasta el cauce del mismo. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_76c793ba035e4dc9ae99c52f6c053f8e.setContent(html_736f4c6c03ee4d019594cdd4d8fc41e3);
+        
+
+        marker_c5950a9c96d342cf90613d08faf1da2e.bindPopup(popup_76c793ba035e4dc9ae99c52f6c053f8e)
+        ;
+
+        
+    
+    
+            var marker_1224434ce6944c00acfb777c10d52490 = L.marker(
+                [9.39, -83.08],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_c960963a96984400b19e94ae57b610a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_411cb3eccca44ac492b5a3b924630d7b = $(`<div id="html_411cb3eccca44ac492b5a3b924630d7b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari. Kivut  a fila a Río Lari. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1992-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_c960963a96984400b19e94ae57b610a6.setContent(html_411cb3eccca44ac492b5a3b924630d7b);
+        
+
+        marker_1224434ce6944c00acfb777c10d52490.bindPopup(popup_c960963a96984400b19e94ae57b610a6)
+        ;
+
+        
+    
+    
+            var marker_372f41f2e0a445f297063275c99a73b7 = L.marker(
+                [9.396944, -83.081944],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_237b07c10f89488faa4e1b09e99b74aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f55a285fb4ed48a59aa9548d6b8b56d6 = $(`<div id="html_f55a285fb4ed48a59aa9548d6b8b56d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari. Kivut a fila a Río Lari. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1992-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|Heidi H. Schmidt <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_237b07c10f89488faa4e1b09e99b74aa.setContent(html_f55a285fb4ed48a59aa9548d6b8b56d6);
+        
+
+        marker_372f41f2e0a445f297063275c99a73b7.bindPopup(popup_237b07c10f89488faa4e1b09e99b74aa)
+        ;
+
+        
+    
+    
+            var marker_c525288352754a97b8369a77c246546a = L.marker(
+                [9.430556, -83.05555600000001],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_491c692d89dc4d35a397e3baf05ab0d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bca4e69079e24a01acc483f5355b9bdf = $(`<div id="html_bca4e69079e24a01acc483f5355b9bdf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bratsi. Alto Lari. Siguiendo la fila entre Río Dapari y Río Lari, bajando hasta el cauce del mismo. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|Heidi H. Schmidt <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_491c692d89dc4d35a397e3baf05ab0d5.setContent(html_bca4e69079e24a01acc483f5355b9bdf);
+        
+
+        marker_c525288352754a97b8369a77c246546a.bindPopup(popup_491c692d89dc4d35a397e3baf05ab0d5)
+        ;
+
+        
+    
+    
+            var marker_31849cd0e7e442adae8fc94e0edc251c = L.marker(
+                [9.78611, -83.68],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_60f32d24a5db4931a5af1cddb8867b5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8521cdf954e94d37985bb4a1eecfa213 = $(`<div id="html_8521cdf954e94d37985bb4a1eecfa213" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago - Forêt de Las Vueltas, Tucurrique/Provincia de Cartago <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Tonduz, A. (Coll. De Candolle) <strong>Identificadores:</strong> Pennington, T. D. (1995)</div>`)[0];
+            popup_60f32d24a5db4931a5af1cddb8867b5f.setContent(html_8521cdf954e94d37985bb4a1eecfa213);
+        
+
+        marker_31849cd0e7e442adae8fc94e0edc251c.bindPopup(popup_60f32d24a5db4931a5af1cddb8867b5f)
+        ;
+
+        
+    
+    
+            var marker_c65c3d19ad224afda197591674c2603e = L.marker(
+                [9.78611, -83.68],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_5f05e111d0494c939c3867049886746f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59f0ff4a918a4ce4b72d1350d4a7492f = $(`<div id="html_59f0ff4a918a4ce4b72d1350d4a7492f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago - Forêt de Las Vueltas, Tucurrique/Provincia de Cartago <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Tonduz, A. <strong>Identificadores:</strong> Pennington, T. D. (1995)</div>`)[0];
+            popup_5f05e111d0494c939c3867049886746f.setContent(html_59f0ff4a918a4ce4b72d1350d4a7492f);
+        
+
+        marker_c65c3d19ad224afda197591674c2603e.bindPopup(popup_5f05e111d0494c939c3867049886746f)
+        ;
+
+        
+    
+    
+            var marker_14a68619948847ef9c529b38b6268775 = L.marker(
+                [9.396944, -83.081944],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_03f6c7a81fbb4d688513be488594923f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cdb7e1dec7a4f6393427668be8a5775 = $(`<div id="html_7cdb7e1dec7a4f6393427668be8a5775" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari. Kivut a fila a Rio Lari. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1992-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_03f6c7a81fbb4d688513be488594923f.setContent(html_7cdb7e1dec7a4f6393427668be8a5775);
+        
+
+        marker_14a68619948847ef9c529b38b6268775.bindPopup(popup_03f6c7a81fbb4d688513be488594923f)
+        ;
+
+        
+    
+    
+            var marker_4a5704c175a94c279b471957bb23335a = L.marker(
+                [9.430556, -83.05555600000001],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_1d9c98c2454c43539ef44d3c39160011 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_163e9c8922aa4e80b24f99ed0cef63e9 = $(`<div id="html_163e9c8922aa4e80b24f99ed0cef63e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari, siguiendo fila entre Rios Dapari y Lari, bajando hasta su cauce. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_1d9c98c2454c43539ef44d3c39160011.setContent(html_163e9c8922aa4e80b24f99ed0cef63e9);
+        
+
+        marker_4a5704c175a94c279b471957bb23335a.bindPopup(popup_1d9c98c2454c43539ef44d3c39160011)
+        ;
+
+        
+    
+    
+            var marker_da009685daed4922a35e8a1d11d67a02 = L.marker(
+                [10.333333, -84.85],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_149eebd2bce44e3ea5d6099a8a87f8ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9092d9036e464bc68f57a4ee5ecff0e0 = $(`<div id="html_9092d9036e464bc68f57a4ee5ecff0e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Quebrada Can~ita, Rio Can~as.  3 km NW de Santa Elena <strong>Elevación:</strong> 1225.0 m  <strong>Fecha:</strong> 1989-08-25 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_149eebd2bce44e3ea5d6099a8a87f8ed.setContent(html_9092d9036e464bc68f57a4ee5ecff0e0);
+        
+
+        marker_da009685daed4922a35e8a1d11d67a02.bindPopup(popup_149eebd2bce44e3ea5d6099a8a87f8ed)
+        ;
+
+        
+    
+    
+            var marker_c6bb96a5ee6b4b75aa9fc6eab2c63275 = L.marker(
+                [10.0, -84.0],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_8b53095c87ac43848e95afd5370bd869 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9275838f404d4f04839a7dd7fe7e993c = $(`<div id="html_9275838f404d4f04839a7dd7fe7e993c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Forêts de las Vueltas. Tucurrique. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1899-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Tonduz, A. (no. 13056) <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8b53095c87ac43848e95afd5370bd869.setContent(html_9275838f404d4f04839a7dd7fe7e993c);
+        
+
+        marker_c6bb96a5ee6b4b75aa9fc6eab2c63275.bindPopup(popup_8b53095c87ac43848e95afd5370bd869)
+        ;
+
+        
+    
+    
+            var marker_9121008b53434583823ca497cdc7efb2 = L.marker(
+                [10.03333, -83.55],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_1d553acd3d7c4fc6af76641afef50202 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c7f78f4e3af4825852f0cc15f0bed1f = $(`<div id="html_5c7f78f4e3af4825852f0cc15f0bed1f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Buena Vista to Siquirres, 8 km before Siquirres, roadside <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 1992-01-01 00:00:00+00:00 <strong>Recolectores:</strong> T. D. Pennington|Peter E. Owen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1d553acd3d7c4fc6af76641afef50202.setContent(html_5c7f78f4e3af4825852f0cc15f0bed1f);
+        
+
+        marker_9121008b53434583823ca497cdc7efb2.bindPopup(popup_1d553acd3d7c4fc6af76641afef50202)
+        ;
+
+        
+    
+    
+            var marker_82adf9ffcef144ec8efdbd4fb85d2ade = L.marker(
+                [9.77, -83.9],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_1e5972dbdb2f48d6921cd70a93e25104 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_458c3009d68640e8ba5117d9ca1cca5f = $(`<div id="html_458c3009d68640e8ba5117d9ca1cca5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 2-3 km above and to the southeast of El Muñeco, new logging road departing from vicinity of soccer field, premontane rainforest with Alfaroa costaricensis, Oreomunnea mexicana <strong>Elevación:</strong> 1524.0 m  <strong>Fecha:</strong> 1972-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Donald E. Stone <strong>Identificadores:</strong> M. Sousa</div>`)[0];
+            popup_1e5972dbdb2f48d6921cd70a93e25104.setContent(html_458c3009d68640e8ba5117d9ca1cca5f);
+        
+
+        marker_82adf9ffcef144ec8efdbd4fb85d2ade.bindPopup(popup_1e5972dbdb2f48d6921cd70a93e25104)
+        ;
+
+        
+    
+    
+            var marker_0eb42cefe60f4f7a80ed677e00f893fc = L.marker(
+                [7.112985000000001, -74.75139],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_82c7ed33b2e241aabac631b0d8a6a8d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2468508141934d84a674443ab20f34a7 = $(`<div id="html_2468508141934d84a674443ab20f34a7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sitio La Calera, desviación de la carretera Remedios - Zaragoza hacia Segovia, cerro Cabeza, Oleoducto Central S.A. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1997-12-16 00:00:00+00:00 <strong>Recolectores:</strong> Roldán F. | Marulanda O. | Flórez M. | Osorio L. <strong>Identificadores:</strong> Romero C.</div>`)[0];
+            popup_82c7ed33b2e241aabac631b0d8a6a8d9.setContent(html_2468508141934d84a674443ab20f34a7);
+        
+
+        marker_0eb42cefe60f4f7a80ed677e00f893fc.bindPopup(popup_82c7ed33b2e241aabac631b0d8a6a8d9)
+        ;
+
+        
+    
+    
+            var marker_d0c5cbf4e5024cbcb0c3911f2a2759a9 = L.marker(
+                [9.82, -83.79],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_908c2e64e0ff41619a972ef77f926379 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d47fd366098342feb5ba5b432ec4013d = $(`<div id="html_d47fd366098342feb5ba5b432ec4013d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Beside pasture on hilltop 0.5 km south of Peñas Blancas de Cachí <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1971-09-05 00:00:00+00:00 <strong>Recolectores:</strong> Roy W. Lent <strong>Identificadores:</strong> M. Sousa, 1990 (MEXU)</div>`)[0];
+            popup_908c2e64e0ff41619a972ef77f926379.setContent(html_d47fd366098342feb5ba5b432ec4013d);
+        
+
+        marker_d0c5cbf4e5024cbcb0c3911f2a2759a9.bindPopup(popup_908c2e64e0ff41619a972ef77f926379)
+        ;
+
+        
+    
+    
+            var marker_409eeffaa23a429098f30dfa4b29a0ed = L.marker(
+                [7.1, -74.75],
+                {}
+            ).addTo(marker_cluster_8c3c909fb7a545018f3bc65b817451de);
+        
+    
+        var popup_afbc0ea2092a4f5eb5d2287ab2555355 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f45dfa9bcb549c09c5083d2b094d0c7 = $(`<div id="html_0f45dfa9bcb549c09c5083d2b094d0c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sitio La Calera <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1997-12-16 00:00:00+00:00 <strong>Recolectores:</strong> Francisco J. Roldán|et al. <strong>Identificadores:</strong> Carolina Romero</div>`)[0];
+            popup_afbc0ea2092a4f5eb5d2287ab2555355.setContent(html_0f45dfa9bcb549c09c5083d2b094d0c7);
+        
+
+        marker_409eeffaa23a429098f30dfa4b29a0ed.bindPopup(popup_afbc0ea2092a4f5eb5d2287ab2555355)
+        ;
+
+        
+    
+    
+            var layer_control_b4a1ca7a042f48e3aeca694225141ab4 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e3249541fa914b3289cb52ac4dae4e1a,
+                    "ESRI World Imagery" : tile_layer_22a4b36b4b4343e3a1f9fcc076e38e6b,
+                },
+                overlays :  {
+                    "macro_element_8c3c909fb7a545018f3bc65b817451de" : marker_cluster_8c3c909fb7a545018f3bc65b817451de,
+                },
+            };
+            L.control.layers(
+                layer_control_b4a1ca7a042f48e3aeca694225141ab4.base_layers,
+                layer_control_b4a1ca7a042f48e3aeca694225141ab4.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_2c08a2b9c320467698f2f95a0318a35c);
+            tile_layer_22a4b36b4b4343e3a1f9fcc076e38e6b.remove();
+        
+</script>

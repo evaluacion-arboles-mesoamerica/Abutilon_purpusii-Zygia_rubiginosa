@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fdb57e3aae9e48a7a0b14f86cae2021b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_fdb57e3aae9e48a7a0b14f86cae2021b" ></div>
+        
+</body>
+<script>    
+    
+            var map_fdb57e3aae9e48a7a0b14f86cae2021b = L.map(
+                "map_fdb57e3aae9e48a7a0b14f86cae2021b",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+
+            
+
+        
+    
+            var tile_layer_6a41e24da9ac48d39352b9f88980606e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+            var tile_layer_02bfebbb84c54f709fdac3bcafa8de26 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+            var circle_marker_19c836e994ef4b7895de9e3beac3e71c = L.circleMarker(
+                [8.71, -83.52],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_00c1f79d1ca644a583f1a03179f7f8b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0e9914d57f742f48440a29eeb47d61b = $(`<div id="html_a0e9914d57f742f48440a29eeb47d61b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce; Península de Osa. Aguabuena, cuenca media y superior de Quebrada Orito. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1990-10-25 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_00c1f79d1ca644a583f1a03179f7f8b0.setContent(html_a0e9914d57f742f48440a29eeb47d61b);
+        
+
+        circle_marker_19c836e994ef4b7895de9e3beac3e71c.bindPopup(popup_00c1f79d1ca644a583f1a03179f7f8b0)
+        ;
+
+        
+    
+    
+            var circle_marker_3f2a82f6d06645bd9b221eeede9ec9a5 = L.circleMarker(
+                [9.68, -84.39],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_2f3d10e31979474f804879391afc44c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d9fe4e1e70b4d288512ca48ae7da868 = $(`<div id="html_0d9fe4e1e70b4d288512ca48ae7da868" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. La Cangreja; Cerros de Puriscal. Mastatal de Puriscal, Quebrada Camarón y Quebrada Grande. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1993-07-15 00:00:00+00:00 <strong>Recolectores:</strong> Víctor H. Ramírez|J. F. Morales|Eduardo Lépiz|E. Ureña <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_2f3d10e31979474f804879391afc44c2.setContent(html_0d9fe4e1e70b4d288512ca48ae7da868);
+        
+
+        circle_marker_3f2a82f6d06645bd9b221eeede9ec9a5.bindPopup(popup_2f3d10e31979474f804879391afc44c2)
+        ;
+
+        
+    
+    
+            var circle_marker_62b190d35e10446ebf53e36e456ee8e6 = L.circleMarker(
+                [9.69, -84.38],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_8e11ebe99a7e41c392354432b3ab7e1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39ada4eff00d40368f082dd270819800 = $(`<div id="html_39ada4eff00d40368f082dd270819800" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. La Cangreja; Cerros de Puriscal. Santa Rosa de Puriscal. Bosque primario en las faldas de Fila La Cangreja. <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 1992-09-29 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_8e11ebe99a7e41c392354432b3ab7e1f.setContent(html_39ada4eff00d40368f082dd270819800);
+        
+
+        circle_marker_62b190d35e10446ebf53e36e456ee8e6.bindPopup(popup_8e11ebe99a7e41c392354432b3ab7e1f)
+        ;
+
+        
+    
+    
+            var circle_marker_1c864b65b92c4ff9804bf8f9b0243387 = L.circleMarker(
+                [8.68, -83.58],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_83f66e0ffb94430bb10c0f641ebc6bb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73d4209035f44439893b839135da1dc5 = $(`<div id="html_73d4209035f44439893b839135da1dc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tierras del Grupo de Conservación de Rancho Quemado. Sierpe. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1991-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marín <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_83f66e0ffb94430bb10c0f641ebc6bb8.setContent(html_73d4209035f44439893b839135da1dc5);
+        
+
+        circle_marker_1c864b65b92c4ff9804bf8f9b0243387.bindPopup(popup_83f66e0ffb94430bb10c0f641ebc6bb8)
+        ;
+
+        
+    
+    
+            var circle_marker_0eb14c5ae2594cb1b5e98003579b6979 = L.circleMarker(
+                [9.7, -84.33],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_932a55e7507b49e596152eee09555984 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0aa3259e11b4d118bf179b2c5fbe099 = $(`<div id="html_b0aa3259e11b4d118bf179b2c5fbe099" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal La Cangreja, Mastatal de Puriscal, along road between Puriscal and Quepos, forest patches along Río Negro at base of Cerro El Cangrejo <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1988-07-22 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Nelson Zamora|Michael H. Grayum|María Marta Chavarría <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_932a55e7507b49e596152eee09555984.setContent(html_b0aa3259e11b4d118bf179b2c5fbe099);
+        
+
+        circle_marker_0eb14c5ae2594cb1b5e98003579b6979.bindPopup(popup_932a55e7507b49e596152eee09555984)
+        ;
+
+        
+    
+    
+            var circle_marker_4be82eed32144eba9476ec28881abe44 = L.circleMarker(
+                [9.7, -84.39],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_4b34b3457c3c4d008e7136a32427626a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8629c997d0f64a70972c9fe8c82ec9e9 = $(`<div id="html_8629c997d0f64a70972c9fe8c82ec9e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z. P. La Cangreja. Santa Rosa de Puriscal. Bosque primario en las márgenes del río Negro. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1992-08-10 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_4b34b3457c3c4d008e7136a32427626a.setContent(html_8629c997d0f64a70972c9fe8c82ec9e9);
+        
+
+        circle_marker_4be82eed32144eba9476ec28881abe44.bindPopup(popup_4b34b3457c3c4d008e7136a32427626a)
+        ;
+
+        
+    
+    
+            var circle_marker_ee95a4f09c2844a1a4f46c3d71b20001 = L.circleMarker(
+                [9.7, -84.22],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_e709256cae9d4780b132cd129ef35ce8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5de84ac995f4129948bc93a341f745b = $(`<div id="html_c5de84ac995f4129948bc93a341f745b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Candelaria. Hda. Tiquires. Bosque primario y paredones alterrados en la cima de la Fila Zoncuano, por sendero a Tiquiritos. <strong>Elevación:</strong> 1025.0 m  <strong>Fecha:</strong> 1995-07-20 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales|José Á. González R. <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_e709256cae9d4780b132cd129ef35ce8.setContent(html_c5de84ac995f4129948bc93a341f745b);
+        
+
+        circle_marker_ee95a4f09c2844a1a4f46c3d71b20001.bindPopup(popup_e709256cae9d4780b132cd129ef35ce8)
+        ;
+
+        
+    
+    
+            var circle_marker_3d67c1b481734bf584ddd63a6e33469b = L.circleMarker(
+                [8.698889999999999, -83.2075],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_7c3160b9e09f4f408d829e6254c4dba6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd1d42d83ed041669defdd5b4b472fc6 = $(`<div id="html_cd1d42d83ed041669defdd5b4b472fc6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica, Puntarenas Province, Canton Golfito. Forrest surrounding Field Station La Gamba, crossing of Ozelot and Fila Trail. <strong>Elevación:</strong> 195.0 m  <strong>Fecha:</strong> 2016-11-21 00:00:00+00:00 <strong>Recolectores:</strong> Berger,A. <strong>Identificadores:</strong> A. Berger 2016-11</div>`)[0];
+            popup_7c3160b9e09f4f408d829e6254c4dba6.setContent(html_cd1d42d83ed041669defdd5b4b472fc6);
+        
+
+        circle_marker_3d67c1b481734bf584ddd63a6e33469b.bindPopup(popup_7c3160b9e09f4f408d829e6254c4dba6)
+        ;
+
+        
+    
+    
+            var circle_marker_fc47fff3f95246b68d22d73ef57991f6 = L.circleMarker(
+                [9.697222, -84.38194399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_a5320ed0d9114a199fd74489141d585a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd439544bf524a7f8f46c3bcfae6bf01 = $(`<div id="html_dd439544bf524a7f8f46c3bcfae6bf01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. La Cangreja. Cuenca del Tulín. Colecta sobre sendero principal después de la Quebrada Grande. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2000-09-19 00:00:00+00:00 <strong>Recolectores:</strong> Luis Acosta <strong>Identificadores:</strong> B. Torke & L. Ruiz</div>`)[0];
+            popup_a5320ed0d9114a199fd74489141d585a.setContent(html_dd439544bf524a7f8f46c3bcfae6bf01);
+        
+
+        circle_marker_fc47fff3f95246b68d22d73ef57991f6.bindPopup(popup_a5320ed0d9114a199fd74489141d585a)
+        ;
+
+        
+    
+    
+            var circle_marker_98e3eb47fa6e4e738d6a1f49f8d0b201 = L.circleMarker(
+                [8.6667, -83.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_90e7170399e54a0a8ed8c494fffc2741 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_034c145cb4ae4fccad04e63f388f004b = $(`<div id="html_034c145cb4ae4fccad04e63f388f004b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puntarenas: Refugio Nacional Golfito Both slopes of Fila Gamba and along crest of same, to ca. 0,7 km N of Golfito/Villa Briceño road <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Michael Grayum & Gerardo Herrera <strong>Identificadores:</strong> M.H. Grayum</div>`)[0];
+            popup_90e7170399e54a0a8ed8c494fffc2741.setContent(html_034c145cb4ae4fccad04e63f388f004b);
+        
+
+        circle_marker_98e3eb47fa6e4e738d6a1f49f8d0b201.bindPopup(popup_90e7170399e54a0a8ed8c494fffc2741)
+        ;
+
+        
+    
+    
+            var circle_marker_3c428b077f254be596210815cace51d0 = L.circleMarker(
+                [8.688811, -83.242312],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_c2a100d8bb1346299b1c25ae57cedec8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8931e69cdc2a41a0a5d74b95828727fd = $(`<div id="html_8931e69cdc2a41a0a5d74b95828727fd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Fila San Josecito <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1996-10-27 00:00:00+00:00 <strong>Recolectores:</strong> Eida Fletes <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_c2a100d8bb1346299b1c25ae57cedec8.setContent(html_8931e69cdc2a41a0a5d74b95828727fd);
+        
+
+        circle_marker_3c428b077f254be596210815cace51d0.bindPopup(popup_c2a100d8bb1346299b1c25ae57cedec8)
+        ;
+
+        
+    
+    
+            var circle_marker_37550f23049e4e4981e26f674e77d9c0 = L.circleMarker(
+                [8.688811, -83.242312],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_a09bbf012b614c9ba7ebea87ea028ec7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9b0b73812004d7dbca9849952b76f57 = $(`<div id="html_b9b0b73812004d7dbca9849952b76f57" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Fila San Josecito <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1996-10-27 00:00:00+00:00 <strong>Recolectores:</strong> Eida Fletes <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a09bbf012b614c9ba7ebea87ea028ec7.setContent(html_b9b0b73812004d7dbca9849952b76f57);
+        
+
+        circle_marker_37550f23049e4e4981e26f674e77d9c0.bindPopup(popup_a09bbf012b614c9ba7ebea87ea028ec7)
+        ;
+
+        
+    
+    
+            var circle_marker_12bb1143d7f6417a8292b05c65fd8906 = L.circleMarker(
+                [8.688811, -83.242312],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_f09bffecbd70403e9fd971f40433f0bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6155a2dbaf224fefa7e00c86ee071c6a = $(`<div id="html_6155a2dbaf224fefa7e00c86ee071c6a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Fila San Josecito <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1996-10-27 00:00:00+00:00 <strong>Recolectores:</strong> Eida Fletes <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f09bffecbd70403e9fd971f40433f0bd.setContent(html_6155a2dbaf224fefa7e00c86ee071c6a);
+        
+
+        circle_marker_12bb1143d7f6417a8292b05c65fd8906.bindPopup(popup_f09bffecbd70403e9fd971f40433f0bd)
+        ;
+
+        
+    
+    
+            var circle_marker_ddee77889a40432e9ee10a9da11ddfc6 = L.circleMarker(
+                [8.688811, -83.242312],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_a63d863ca8384048a40935ea74d665ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_806d950dd03b40cb916883f2275ebc29 = $(`<div id="html_806d950dd03b40cb916883f2275ebc29" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Fila San Josecito <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1996-10-27 00:00:00+00:00 <strong>Recolectores:</strong> Eida Fletes <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a63d863ca8384048a40935ea74d665ef.setContent(html_806d950dd03b40cb916883f2275ebc29);
+        
+
+        circle_marker_ddee77889a40432e9ee10a9da11ddfc6.bindPopup(popup_a63d863ca8384048a40935ea74d665ef)
+        ;
+
+        
+    
+    
+            var circle_marker_2345c4adb6ff4a42ae1287d76d2bec1f = L.circleMarker(
+                [9.706667, -84.393056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_6db8675cc7b146daa73575c2b399370a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2967d16a09874abfb77c20a2a59665a6 = $(`<div id="html_2967d16a09874abfb77c20a2a59665a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rosa de Puriscal. Bosque primario en las margenes del rio Negro. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1992-08-10 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6db8675cc7b146daa73575c2b399370a.setContent(html_2967d16a09874abfb77c20a2a59665a6);
+        
+
+        circle_marker_2345c4adb6ff4a42ae1287d76d2bec1f.bindPopup(popup_6db8675cc7b146daa73575c2b399370a)
+        ;
+
+        
+    
+    
+            var circle_marker_a7103ead43354e5aa6b7b619d74e6d1a = L.circleMarker(
+                [8.680556, -83.580556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_d2f7099ead404e74bf3de5df201c8961 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db7af85e346a445c893744667a92f5e0 = $(`<div id="html_db7af85e346a445c893744667a92f5e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tierras del Grupo de Conservacion de Rancho Quemado. Sierpe. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1991-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marin <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d2f7099ead404e74bf3de5df201c8961.setContent(html_db7af85e346a445c893744667a92f5e0);
+        
+
+        circle_marker_a7103ead43354e5aa6b7b619d74e6d1a.bindPopup(popup_d2f7099ead404e74bf3de5df201c8961)
+        ;
+
+        
+    
+    
+            var circle_marker_08c18c66d01a4c4bb7f8fe7b9c1b1812 = L.circleMarker(
+                [8.716667, -83.580557],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_c1e87ae7ac904e56b46a4a7a599cc6d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b75fef6d3e3a42db828d2d48345c9f70 = $(`<div id="html_b75fef6d3e3a42db828d2d48345c9f70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bahia Chal, entrada a Chocuaco. <strong>Elevación:</strong> 275.0 m  <strong>Fecha:</strong> 1995-11-09 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_c1e87ae7ac904e56b46a4a7a599cc6d9.setContent(html_b75fef6d3e3a42db828d2d48345c9f70);
+        
+
+        circle_marker_08c18c66d01a4c4bb7f8fe7b9c1b1812.bindPopup(popup_c1e87ae7ac904e56b46a4a7a599cc6d9)
+        ;
+
+        
+    
+    
+            var circle_marker_39ae6f58bd3941479fa6461d9022988d = L.circleMarker(
+                [9.709722, -84.226389],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_96405d86664d4cf089583fabf717257f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_753fc213576b4548b8a41cdfb09b4197 = $(`<div id="html_753fc213576b4548b8a41cdfb09b4197" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hda. Tiquires. Bosque primario y paredones alterrados en la cima de la Fila Zoncuano, por sendero a Tiquiritos. <strong>Elevación:</strong> 1025.0 m  <strong>Fecha:</strong> 1995-07-20 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_96405d86664d4cf089583fabf717257f.setContent(html_753fc213576b4548b8a41cdfb09b4197);
+        
+
+        circle_marker_39ae6f58bd3941479fa6461d9022988d.bindPopup(popup_96405d86664d4cf089583fabf717257f)
+        ;
+
+        
+    
+    
+            var circle_marker_50c33be21d634198b07a45980d5a8e28 = L.circleMarker(
+                [9.681944, -84.393889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_2681304bc536450a89b31051fd537993 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bcf6e52d2604592826fdb64d1ca820d = $(`<div id="html_5bcf6e52d2604592826fdb64d1ca820d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal de Puriscal, Quebrada Camaron y Quebrada Grande. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1993-07-15 00:00:00+00:00 <strong>Recolectores:</strong> Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2681304bc536450a89b31051fd537993.setContent(html_5bcf6e52d2604592826fdb64d1ca820d);
+        
+
+        circle_marker_50c33be21d634198b07a45980d5a8e28.bindPopup(popup_2681304bc536450a89b31051fd537993)
+        ;
+
+        
+    
+    
+            var circle_marker_4b12a4405ee14a369983485f8a060235 = L.circleMarker(
+                [9.697222, -84.38194399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_0dfc255978a6450d87df5f9d18ab5275 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f38dda6ccaa4a8b9957777364ae1d19 = $(`<div id="html_5f38dda6ccaa4a8b9957777364ae1d19" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal. Camino a Alto Concepci.Ribera Quebrada Grande.on <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2000-09-19 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0dfc255978a6450d87df5f9d18ab5275.setContent(html_5f38dda6ccaa4a8b9957777364ae1d19);
+        
+
+        circle_marker_4b12a4405ee14a369983485f8a060235.bindPopup(popup_0dfc255978a6450d87df5f9d18ab5275)
+        ;
+
+        
+    
+    
+            var circle_marker_2615fb4fe6ec4a39903e2e54df0a409e = L.circleMarker(
+                [9.697222, -84.38194399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_c982b98d51844ce787e85ee2df67b677 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0d2373f96754a98b92a0f83a70fc428 = $(`<div id="html_d0d2373f96754a98b92a0f83a70fc428" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal. Camino a Alto Concepci.Ribera Quebrada Grande.on <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2000-09-19 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_c982b98d51844ce787e85ee2df67b677.setContent(html_d0d2373f96754a98b92a0f83a70fc428);
+        
+
+        circle_marker_2615fb4fe6ec4a39903e2e54df0a409e.bindPopup(popup_c982b98d51844ce787e85ee2df67b677)
+        ;
+
+        
+    
+    
+            var circle_marker_ace87e3fecda478d853b35eb0cca9fa4 = L.circleMarker(
+                [9.697222, -84.38194399999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_587b9b6013594f33b38171b26d3f3c73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e93891f264f9441485149245f2aaa789 = $(`<div id="html_e93891f264f9441485149245f2aaa789" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal. Camino a Alto Concepci.Ribera Quebrada Grande.on <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2000-09-19 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_587b9b6013594f33b38171b26d3f3c73.setContent(html_e93891f264f9441485149245f2aaa789);
+        
+
+        circle_marker_ace87e3fecda478d853b35eb0cca9fa4.bindPopup(popup_587b9b6013594f33b38171b26d3f3c73)
+        ;
+
+        
+    
+    
+            var circle_marker_1912ab0f7ee54d1ca79c1bc1b96dc251 = L.circleMarker(
+                [9.216667, -83.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_a7de34fade4d48a68f89e9fdfd88935e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed49a158f554453399d3583a5a873267 = $(`<div id="html_ed49a158f554453399d3583a5a873267" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Above the valley of the Rio Grande de Orosi. Sendero Arboles Caidos, primary forest. Premontane wet forest. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 2002-11-13 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Claudia Aragón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a7de34fade4d48a68f89e9fdfd88935e.setContent(html_ed49a158f554453399d3583a5a873267);
+        
+
+        circle_marker_1912ab0f7ee54d1ca79c1bc1b96dc251.bindPopup(popup_a7de34fade4d48a68f89e9fdfd88935e)
+        ;
+
+        
+    
+    
+            var circle_marker_b8970b6fb5f945f685aac83196f3778b = L.circleMarker(
+                [9.216667, -83.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_b7b3617ee371481a87cf2234623412bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a02985f1b2c438fa2da7f764841ec21 = $(`<div id="html_7a02985f1b2c438fa2da7f764841ec21" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Above the valley of the Rio Grande de Orosi. Sendero Arboles Caidos, primary forest. Premontane wet forest. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 2002-11-13 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Claudia Aragón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b7b3617ee371481a87cf2234623412bf.setContent(html_7a02985f1b2c438fa2da7f764841ec21);
+        
+
+        circle_marker_b8970b6fb5f945f685aac83196f3778b.bindPopup(popup_b7b3617ee371481a87cf2234623412bf)
+        ;
+
+        
+    
+    
+            var circle_marker_4f198166a1fa489480a54f02013cf37e = L.circleMarker(
+                [9.689306, -84.368111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_aeda1d32864c42a5b431a8f5ae7363dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3208e3c45bc48b6b11f51e85fa18821 = $(`<div id="html_d3208e3c45bc48b6b11f51e85fa18821" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cangreja, sendero Río Negro. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2005-05-21 00:00:00+00:00 <strong>Recolectores:</strong> B. M. Torke; Daniel Santamaría <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_aeda1d32864c42a5b431a8f5ae7363dd.setContent(html_d3208e3c45bc48b6b11f51e85fa18821);
+        
+
+        circle_marker_4f198166a1fa489480a54f02013cf37e.bindPopup(popup_aeda1d32864c42a5b431a8f5ae7363dd)
+        ;
+
+        
+    
+    
+            var circle_marker_027f85ffab3a46f79ca72357e1fa080c = L.circleMarker(
+                [9.752194, -84.560889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_a4b31e977cf547bf93f6a2cca5d91682 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b31a36c9009c47c0bf35f572dd50a5bd = $(`<div id="html_b31a36c9009c47c0bf35f572dd50a5bd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Carara. Sendero paralelo a la calle. <strong>Elevación:</strong> 534.0 m  <strong>Fecha:</strong> 2006-12-22 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a4b31e977cf547bf93f6a2cca5d91682.setContent(html_b31a36c9009c47c0bf35f572dd50a5bd);
+        
+
+        circle_marker_027f85ffab3a46f79ca72357e1fa080c.bindPopup(popup_a4b31e977cf547bf93f6a2cca5d91682)
+        ;
+
+        
+    
+    
+            var circle_marker_3c371f75fae249398d650ca2ce6357c8 = L.circleMarker(
+                [9.752194, -84.560889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_d5688a3f9f214d7b9cf886ca206d9247 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f12cadbdbcf4b2cbe90e5ccef9887fc = $(`<div id="html_9f12cadbdbcf4b2cbe90e5ccef9887fc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Carara. Sendero paralelo a la calle. <strong>Elevación:</strong> 534.0 m  <strong>Fecha:</strong> 2006-12-22 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d5688a3f9f214d7b9cf886ca206d9247.setContent(html_9f12cadbdbcf4b2cbe90e5ccef9887fc);
+        
+
+        circle_marker_3c371f75fae249398d650ca2ce6357c8.bindPopup(popup_d5688a3f9f214d7b9cf886ca206d9247)
+        ;
+
+        
+    
+    
+            var circle_marker_5a3b921d8e3a44d09bec130d4364590b = L.circleMarker(
+                [9.752194, -84.560889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_10b8ecec111546c38f2081eb7e80d7c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc7294f91dad4b2b80ee6e45aa018a0c = $(`<div id="html_fc7294f91dad4b2b80ee6e45aa018a0c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Carara. Sendero paralelo a la calle. <strong>Elevación:</strong> 534.0 m  <strong>Fecha:</strong> 2006-12-22 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_10b8ecec111546c38f2081eb7e80d7c8.setContent(html_fc7294f91dad4b2b80ee6e45aa018a0c);
+        
+
+        circle_marker_5a3b921d8e3a44d09bec130d4364590b.bindPopup(popup_10b8ecec111546c38f2081eb7e80d7c8)
+        ;
+
+        
+    
+    
+            var circle_marker_e9e28807b8234fccb991823be99fa50a = L.circleMarker(
+                [8.736111, -83.466667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_3b7fcf435bd44f28ba7e60aa6cc9ccd7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48eff394dc1c43509dce9c39479addfb = $(`<div id="html_48eff394dc1c43509dce9c39479addfb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mogos. Bahía Chal. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-31 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3b7fcf435bd44f28ba7e60aa6cc9ccd7.setContent(html_48eff394dc1c43509dce9c39479addfb);
+        
+
+        circle_marker_e9e28807b8234fccb991823be99fa50a.bindPopup(popup_3b7fcf435bd44f28ba7e60aa6cc9ccd7)
+        ;
+
+        
+    
+    
+            var circle_marker_b330cf1f8bae4f3e826d23e22bff1255 = L.circleMarker(
+                [8.736111, -83.466667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_8a12c21c69f142d0b5eb1c877c356c4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbc338fb7bfa42799949de754cffe729 = $(`<div id="html_dbc338fb7bfa42799949de754cffe729" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mogos. Bahía Chal. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-31 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8a12c21c69f142d0b5eb1c877c356c4f.setContent(html_dbc338fb7bfa42799949de754cffe729);
+        
+
+        circle_marker_b330cf1f8bae4f3e826d23e22bff1255.bindPopup(popup_8a12c21c69f142d0b5eb1c877c356c4f)
+        ;
+
+        
+    
+    
+            var circle_marker_935e68e14d2e414aacbf39755ff17747 = L.circleMarker(
+                [8.736111, -83.466667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_9addb502abd048b2a0224783a3619be1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c970868f6f27452790a3730ef3c86ed0 = $(`<div id="html_c970868f6f27452790a3730ef3c86ed0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mogos. Bahía Chal. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-31 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_9addb502abd048b2a0224783a3619be1.setContent(html_c970868f6f27452790a3730ef3c86ed0);
+        
+
+        circle_marker_935e68e14d2e414aacbf39755ff17747.bindPopup(popup_9addb502abd048b2a0224783a3619be1)
+        ;
+
+        
+    
+    
+            var circle_marker_e264294b90d44089835b98e1c4134aa6 = L.circleMarker(
+                [8.680667, -83.57602800000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_156939f754a34d068403793c09c84404 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a801ac749b6442f28f7f0366a68f24e9 = $(`<div id="html_a801ac749b6442f28f7f0366a68f24e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Área de Conservación Osa, Reserva Forestal Golfo Dulce, Rancho Quemado, Fila Rancho Quemado. Sendero a Cero Brujo. <strong>Elevación:</strong> 395.0 m  <strong>Fecha:</strong> 2014-04-10 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; William Montero ; Guillermo Villalobos ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_156939f754a34d068403793c09c84404.setContent(html_a801ac749b6442f28f7f0366a68f24e9);
+        
+
+        circle_marker_e264294b90d44089835b98e1c4134aa6.bindPopup(popup_156939f754a34d068403793c09c84404)
+        ;
+
+        
+    
+    
+            var circle_marker_b44fe3e3d9bd4a97b8335bc3900aaffa = L.circleMarker(
+                [8.680667, -83.57602800000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_372afa8bf1034745ac2d403db077fd82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fc054ee27bd425599f898f07b79b456 = $(`<div id="html_6fc054ee27bd425599f898f07b79b456" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Área de Conservación Osa, Reserva Forestal Golfo Dulce, Rancho Quemado, Fila Rancho Quemado. Sendero a Cero Brujo. <strong>Elevación:</strong> 395.0 m  <strong>Fecha:</strong> 2014-04-10 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; William Montero ; Guillermo Villalobos ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_372afa8bf1034745ac2d403db077fd82.setContent(html_6fc054ee27bd425599f898f07b79b456);
+        
+
+        circle_marker_b44fe3e3d9bd4a97b8335bc3900aaffa.bindPopup(popup_372afa8bf1034745ac2d403db077fd82)
+        ;
+
+        
+    
+    
+            var circle_marker_2cd039f4aa5949388739e4648883e8c6 = L.circleMarker(
+                [8.680667, -83.57602800000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_eab5b7e68e5a44dbbcd43b15844fef6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d365696f52f49bb849fa40b80ca7d05 = $(`<div id="html_8d365696f52f49bb849fa40b80ca7d05" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Área de Conservación Osa, Reserva Forestal Golfo Dulce, Rancho Quemado, Fila Rancho Quemado. Sendero a Cero Brujo. <strong>Elevación:</strong> 395.0 m  <strong>Fecha:</strong> 2014-04-10 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; William Montero ; Guillermo Villalobos ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_eab5b7e68e5a44dbbcd43b15844fef6e.setContent(html_8d365696f52f49bb849fa40b80ca7d05);
+        
+
+        circle_marker_2cd039f4aa5949388739e4648883e8c6.bindPopup(popup_eab5b7e68e5a44dbbcd43b15844fef6e)
+        ;
+
+        
+    
+    
+            var circle_marker_cbe95540b05b419baabe4f444c168a69 = L.circleMarker(
+                [9.75, -84.563889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_0ef8a41abe454c68b97e93b13097106b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92828017f4d342728801f851f4d4b548 = $(`<div id="html_92828017f4d342728801f851f4d4b548" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Carara. Sector Bijagual. Sitio Quebrada Máquina. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1990-11-02 00:00:00+00:00 <strong>Recolectores:</strong> Rodolfo Zúñiga|Gerardo Varela <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_0ef8a41abe454c68b97e93b13097106b.setContent(html_92828017f4d342728801f851f4d4b548);
+        
+
+        circle_marker_cbe95540b05b419baabe4f444c168a69.bindPopup(popup_0ef8a41abe454c68b97e93b13097106b)
+        ;
+
+        
+    
+    
+            var circle_marker_a74bcb08b42840a89d76f88efedae54f = L.circleMarker(
+                [8.675, -83.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_e71cee07904c46f0bbeed3ae50a22e36 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_acf82300122547d5b6192e9f4f5e59c5 = $(`<div id="html_acf82300122547d5b6192e9f4f5e59c5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Refugio Nacional Golfito Both slopes of Fila Gamba and along crest of same, to ca. 0.7 km N of Golfito/Villa Briceño road. <strong>Elevación:</strong> 210.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum|Gerardo Herrera Ch. <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_e71cee07904c46f0bbeed3ae50a22e36.setContent(html_acf82300122547d5b6192e9f4f5e59c5);
+        
+
+        circle_marker_a74bcb08b42840a89d76f88efedae54f.bindPopup(popup_e71cee07904c46f0bbeed3ae50a22e36)
+        ;
+
+        
+    
+    
+            var circle_marker_e6ff21d9719646b58ba46b0da3030a27 = L.circleMarker(
+                [9.7, -84.333333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_2d139b43b9814afb9e06d315c74c5807 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_269a47e952f84177a84174160ed90672 = $(`<div id="html_269a47e952f84177a84174160ed90672" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. La Cangreja; Faja Costeña del Valle de Parrita. Mastatal de Puriscal <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1987-11-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora|Isidro A. Chacón G.|Solis <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_2d139b43b9814afb9e06d315c74c5807.setContent(html_269a47e952f84177a84174160ed90672);
+        
+
+        circle_marker_e6ff21d9719646b58ba46b0da3030a27.bindPopup(popup_2d139b43b9814afb9e06d315c74c5807)
+        ;
+
+        
+    
+    
+            var circle_marker_053a2f922c954522a87b174a4e7132b6 = L.circleMarker(
+                [8.8, -83.26],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_f67be19d1a8c45c08b13f0d18cd66eaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c251755f8034e5ca117a062e1b089f3 = $(`<div id="html_6c251755f8034e5ca117a062e1b089f3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera Interamericana 3 km N de Chacarita; bosque primario en una fila a lo largo de la carretera. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 1991-06-29 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|M. Nepokroeff <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_f67be19d1a8c45c08b13f0d18cd66eaf.setContent(html_6c251755f8034e5ca117a062e1b089f3);
+        
+
+        circle_marker_053a2f922c954522a87b174a4e7132b6.bindPopup(popup_f67be19d1a8c45c08b13f0d18cd66eaf)
+        ;
+
+        
+    
+    
+            var circle_marker_afb8bc0ffa0c43d78d193f44784e86af = L.circleMarker(
+                [9.68931, -84.3681],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_3aad5d435b8945b790a0d2056fc40dac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95f2d4ebeca04b7d8a97f0cafa15da3c = $(`<div id="html_95f2d4ebeca04b7d8a97f0cafa15da3c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cangreja National Park, Along Sendero Rio Negro <strong>Elevación:</strong> 430.0 m  <strong>Fecha:</strong> 2005-05-21 00:00:00+00:00 <strong>Recolectores:</strong> B. M. Torke & D. Santa Maria <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3aad5d435b8945b790a0d2056fc40dac.setContent(html_95f2d4ebeca04b7d8a97f0cafa15da3c);
+        
+
+        circle_marker_afb8bc0ffa0c43d78d193f44784e86af.bindPopup(popup_3aad5d435b8945b790a0d2056fc40dac)
+        ;
+
+        
+    
+    
+            var circle_marker_cb6c53eac47b4a40adc6f9074cc596af = L.circleMarker(
+                [9.689167, -84.36805600000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_5cf396aebf9b429896f9b61cfa0fc552 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0d6be0caf1d4bad899cd8e7e4a884c4 = $(`<div id="html_f0d6be0caf1d4bad899cd8e7e4a884c4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional La Cangreja, along Sendero Río Negro, which departs from Park Reception area, near Little and Big Waterfalls of Quebrada Grande and Quebrada Encanto, respectively. Humid primary forest on red clay soils, near waterfalls <strong>Elevación:</strong> 430.0 m  <strong>Fecha:</strong> 2005-05-21 00:00:00+00:00 <strong>Recolectores:</strong> Benjamin M. Torke|Daniel Santamaría <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_5cf396aebf9b429896f9b61cfa0fc552.setContent(html_f0d6be0caf1d4bad899cd8e7e4a884c4);
+        
+
+        circle_marker_cb6c53eac47b4a40adc6f9074cc596af.bindPopup(popup_5cf396aebf9b429896f9b61cfa0fc552)
+        ;
+
+        
+    
+    
+            var circle_marker_9ae2483bc5ae4f4f8e3f74cd293e1027 = L.circleMarker(
+                [8.7, -83.59],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_027ec262df3249f78608203677c5cde0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e97d9bca96fd47a48c93190658e41b84 = $(`<div id="html_e97d9bca96fd47a48c93190658e41b84" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce Rancho Quemado. Tierra de los conservacionistas de Rancho. <strong>Elevación:</strong> 425.0 m  <strong>Fecha:</strong> 1991-10-17 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_027ec262df3249f78608203677c5cde0.setContent(html_e97d9bca96fd47a48c93190658e41b84);
+        
+
+        circle_marker_9ae2483bc5ae4f4f8e3f74cd293e1027.bindPopup(popup_027ec262df3249f78608203677c5cde0)
+        ;
+
+        
+    
+    
+            var circle_marker_97ac8f1659bb4b53a59a1342fae761fe = L.circleMarker(
+                [8.71, -83.56],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_ffc5afab4ffc40cea771ddf35710494b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93fc42cc6d264289b91170f131f6ea00 = $(`<div id="html_93fc42cc6d264289b91170f131f6ea00" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce, Península de OSa. Bahía Chal, entrada a Chocuaco. <strong>Elevación:</strong> 275.0 m  <strong>Fecha:</strong> 1995-11-09 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_ffc5afab4ffc40cea771ddf35710494b.setContent(html_93fc42cc6d264289b91170f131f6ea00);
+        
+
+        circle_marker_97ac8f1659bb4b53a59a1342fae761fe.bindPopup(popup_ffc5afab4ffc40cea771ddf35710494b)
+        ;
+
+        
+    
+    
+            var circle_marker_412eaf6d0d81425b91b4e2d7ede1210a = L.circleMarker(
+                [8.67, -83.24],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_41ae9659f79b4b379e210d30c93ee6f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8c261ef72bc4ffd97ff1768c18b3814 = $(`<div id="html_a8c261ef72bc4ffd97ff1768c18b3814" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce, Serranias de Golfito, Sendero a San Josecito. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 1996-10-27 00:00:00+00:00 <strong>Recolectores:</strong> Eida Fletes <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_41ae9659f79b4b379e210d30c93ee6f0.setContent(html_a8c261ef72bc4ffd97ff1768c18b3814);
+        
+
+        circle_marker_412eaf6d0d81425b91b4e2d7ede1210a.bindPopup(popup_41ae9659f79b4b379e210d30c93ee6f0)
+        ;
+
+        
+    
+    
+            var circle_marker_d59e86eaefe843458577130366cde16a = L.circleMarker(
+                [9.69, -84.33],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+        
+    
+        var popup_bb36dc273cb14fa78b87206a9467dcf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c640e818734e419b9680cecf5fcae0ae = $(`<div id="html_c640e818734e419b9680cecf5fcae0ae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapatón de Puriscal, en bosque secundario avanzado <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1984-12-06 00:00:00+00:00 <strong>Recolectores:</strong> Luis J. Poveda Álvarez|Nelson Zamora|Pablo E. Sánchez V.|Óscar Castro <strong>Identificadores:</strong> B. M. Torke & N. Zamora</div>`)[0];
+            popup_bb36dc273cb14fa78b87206a9467dcf3.setContent(html_c640e818734e419b9680cecf5fcae0ae);
+        
+
+        circle_marker_d59e86eaefe843458577130366cde16a.bindPopup(popup_bb36dc273cb14fa78b87206a9467dcf3)
+        ;
+
+        
+    
+    
+            var layer_control_41b7bca998bb47759ed4cc27106d91f9 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6a41e24da9ac48d39352b9f88980606e,
+                    "ESRI World Imagery" : tile_layer_02bfebbb84c54f709fdac3bcafa8de26,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_41b7bca998bb47759ed4cc27106d91f9.base_layers,
+                layer_control_41b7bca998bb47759ed4cc27106d91f9.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_fdb57e3aae9e48a7a0b14f86cae2021b);
+            tile_layer_02bfebbb84c54f709fdac3bcafa8de26.remove();
+        
+</script>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_42de86795f0a4a2b9dc16cad0819f00f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_42de86795f0a4a2b9dc16cad0819f00f" ></div>
+        
+</body>
+<script>    
+    
+            var map_42de86795f0a4a2b9dc16cad0819f00f = L.map(
+                "map_42de86795f0a4a2b9dc16cad0819f00f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+
+            
+
+        
+    
+            var tile_layer_6722847c114448a4ad2bd71b0cfce8ba = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+            var tile_layer_e594493aebbc46f5b923216d2da4bca8 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+            var circle_marker_1e9dec3419d144dea8cb604c7ae980f0 = L.circleMarker(
+                [10.333333, -84.716667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_535133d0a56642988fe63680b0b2a675 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9cbfc692f3a42bb9e2c85ab3f1a1529 = $(`<div id="html_b9cbfc692f3a42bb9e2c85ab3f1a1529" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1986-10-07 00:00:00+00:00 <strong>Recolectores:</strong> Haber, W.A. <strong>Identificadores:</strong> Berg, M.E. van den</div>`)[0];
+            popup_535133d0a56642988fe63680b0b2a675.setContent(html_b9cbfc692f3a42bb9e2c85ab3f1a1529);
+        
+
+        circle_marker_1e9dec3419d144dea8cb604c7ae980f0.bindPopup(popup_535133d0a56642988fe63680b0b2a675)
+        ;
+
+        
+    
+    
+            var circle_marker_6e375f27e8a14b86b89fdc7eea0028be = L.circleMarker(
+                [10.38, -84.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_652adb796e1643c78a997cfa483f5f03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b1d266e5820949069065b480523e42b3 = $(`<div id="html_b1d266e5820949069065b480523e42b3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo Abajo, Río Caño Negro. Finca Quesada, Arce y Porras. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Bello, Erick <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_652adb796e1643c78a997cfa483f5f03.setContent(html_b1d266e5820949069065b480523e42b3);
+        
+
+        circle_marker_6e375f27e8a14b86b89fdc7eea0028be.bindPopup(popup_652adb796e1643c78a997cfa483f5f03)
+        ;
+
+        
+    
+    
+            var circle_marker_01ada34b2bc84943a37ffa55745a1353 = L.circleMarker(
+                [10.31, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_f2788e67bb454fecab85346979483a40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4fa90e6a666449d9030fd272c5e9715 = $(`<div id="html_c4fa90e6a666449d9030fd272c5e9715" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R. B. Monteverde Peñas Blancas Valley. Quebrada Celeste-Quebrada Azufre. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1988-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Bello, Erick <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_f2788e67bb454fecab85346979483a40.setContent(html_c4fa90e6a666449d9030fd272c5e9715);
+        
+
+        circle_marker_01ada34b2bc84943a37ffa55745a1353.bindPopup(popup_f2788e67bb454fecab85346979483a40)
+        ;
+
+        
+    
+    
+            var circle_marker_927b36f318ac444b8f8af9c675278702 = L.circleMarker(
+                [10.87, -85.39],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_4da81236ec2b4b88b9665c49f07f8d70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0b7fbe106a743b994f7b269cdf70857 = $(`<div id="html_b0b7fbe106a743b994f7b269cdf70857" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste Cordillera de Guanacaste. Sector de San Cristóbal. 2.5 km noreste después de la estación. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1994-11-11 00:00:00+00:00 <strong>Recolectores:</strong> Espinoza, Roberto <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_4da81236ec2b4b88b9665c49f07f8d70.setContent(html_b0b7fbe106a743b994f7b269cdf70857);
+        
+
+        circle_marker_927b36f318ac444b8f8af9c675278702.bindPopup(popup_4da81236ec2b4b88b9665c49f07f8d70)
+        ;
+
+        
+    
+    
+            var circle_marker_75de2e6f6c174cb689e7d48015512aae = L.circleMarker(
+                [10.87, -85.39],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_3e204483a6b14729b1f9e4bce12f12f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7273eeac7b6040dd87706a312b740aaa = $(`<div id="html_7273eeac7b6040dd87706a312b740aaa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector de San Cristobal, 2.5 km EN, despúes de la estación. Cordillera de Guanacaste. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1996-01-31 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_3e204483a6b14729b1f9e4bce12f12f8.setContent(html_7273eeac7b6040dd87706a312b740aaa);
+        
+
+        circle_marker_75de2e6f6c174cb689e7d48015512aae.bindPopup(popup_3e204483a6b14729b1f9e4bce12f12f8)
+        ;
+
+        
+    
+    
+            var circle_marker_dc11d1405ca94758af50f9088e9a734c = L.circleMarker(
+                [10.21, -84.58],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_a212a97c40cc43f799a9140a5a8a9736 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78b54d27c49848b2a6f74d722c42338e = $(`<div id="html_78b54d27c49848b2a6f74d722c42338e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cataratitas, camino a la Colonia Palmareña. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2002-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Blanco, Mario <strong>Identificadores:</strong> Blanco, Mario</div>`)[0];
+            popup_a212a97c40cc43f799a9140a5a8a9736.setContent(html_78b54d27c49848b2a6f74d722c42338e);
+        
+
+        circle_marker_dc11d1405ca94758af50f9088e9a734c.bindPopup(popup_a212a97c40cc43f799a9140a5a8a9736)
+        ;
+
+        
+    
+    
+            var circle_marker_fb21ca4510374e4a99b41fc339ed7675 = L.circleMarker(
+                [8.903056, -82.765556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_425a623e67d7445da6022e7179b089e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0c440c79c1e40f59fed1c25f62df9c1 = $(`<div id="html_a0c440c79c1e40f59fed1c25f62df9c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Coto Brus. Cuenca terraba-Sierpe. Loma Indio. Colectado a orilla de camino en bosque y orillas de potrero. <strong>Elevación:</strong> 1580.0 m  <strong>Fecha:</strong> 1999-01-10 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_425a623e67d7445da6022e7179b089e1.setContent(html_a0c440c79c1e40f59fed1c25f62df9c1);
+        
+
+        circle_marker_fb21ca4510374e4a99b41fc339ed7675.bindPopup(popup_425a623e67d7445da6022e7179b089e1)
+        ;
+
+        
+    
+    
+            var circle_marker_0dab40c1652f42a997fb9ff88f1c519e = L.circleMarker(
+                [10.202778, -84.536111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_b9d5f93346204ddcb8be5f2ce6f04129 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7d4f0bcc6dc47a5a05f30e50307ef63 = $(`<div id="html_a7d4f0bcc6dc47a5a05f30e50307ef63" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Angeles, Cataratas, a orilla de la carretera; cercano al cruce del rio Cataratitas. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|et al. <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_b9d5f93346204ddcb8be5f2ce6f04129.setContent(html_a7d4f0bcc6dc47a5a05f30e50307ef63);
+        
+
+        circle_marker_0dab40c1652f42a997fb9ff88f1c519e.bindPopup(popup_b9d5f93346204ddcb8be5f2ce6f04129)
+        ;
+
+        
+    
+    
+            var circle_marker_83461367a71e4cb4834606222ecffe7c = L.circleMarker(
+                [10.202778, -84.53611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_eafd5cf245bd4cd2ba1aabe6d06fb122 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ff3f5afbfb548f4816e7f1687e0debd = $(`<div id="html_6ff3f5afbfb548f4816e7f1687e0debd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Angeles, Cataratas, a orilla de la carretera; cercano al cruce del rio Cataratitas.                                                                                                                                                                                                                                                                                                                                                                                                                            <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_eafd5cf245bd4cd2ba1aabe6d06fb122.setContent(html_6ff3f5afbfb548f4816e7f1687e0debd);
+        
+
+        circle_marker_83461367a71e4cb4834606222ecffe7c.bindPopup(popup_eafd5cf245bd4cd2ba1aabe6d06fb122)
+        ;
+
+        
+    
+    
+            var circle_marker_88c46dd3b466490586d21a842795877b = L.circleMarker(
+                [10.202778, -84.536111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_63392a4fa5494c4497275a7c57b3d836 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b99988a0b418445b90404f4dfb7e49d3 = $(`<div id="html_b99988a0b418445b90404f4dfb7e49d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cercania de Rio Cataratitas, camino a Bajo Rodriguez. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_63392a4fa5494c4497275a7c57b3d836.setContent(html_b99988a0b418445b90404f4dfb7e49d3);
+        
+
+        circle_marker_88c46dd3b466490586d21a842795877b.bindPopup(popup_63392a4fa5494c4497275a7c57b3d836)
+        ;
+
+        
+    
+    
+            var circle_marker_61e0c974e33a4324a0a9399cbec15785 = L.circleMarker(
+                [10.202778, -84.536111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_45a95baaed014e1db15bcd61e6f8b1d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_668453ec4c22473d9a3c2ae2022ee055 = $(`<div id="html_668453ec4c22473d9a3c2ae2022ee055" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cercania de Rio Cataratitas, camino a Bajo Rodriguez. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_45a95baaed014e1db15bcd61e6f8b1d9.setContent(html_668453ec4c22473d9a3c2ae2022ee055);
+        
+
+        circle_marker_61e0c974e33a4324a0a9399cbec15785.bindPopup(popup_45a95baaed014e1db15bcd61e6f8b1d9)
+        ;
+
+        
+    
+    
+            var circle_marker_96a684f2b6f446eeaeffcbd1688f356a = L.circleMarker(
+                [10.202778, -84.536111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_2b5f2512a3674ac5af1bf3c84b28f9e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a32612dfb0c94c1595cbb92824cec384 = $(`<div id="html_a32612dfb0c94c1595cbb92824cec384" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cercania de Rio Cataratitas, camino a Bajo Rodriguez. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2b5f2512a3674ac5af1bf3c84b28f9e8.setContent(html_a32612dfb0c94c1595cbb92824cec384);
+        
+
+        circle_marker_96a684f2b6f446eeaeffcbd1688f356a.bindPopup(popup_2b5f2512a3674ac5af1bf3c84b28f9e8)
+        ;
+
+        
+    
+    
+            var circle_marker_bb404cf5e19a4589a8525f2195df9c5e = L.circleMarker(
+                [10.202778, -84.536111],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_9a22719ee3694f8c91a3922bb0e1f1e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd572f779d7b4491bea90988ca359ad5 = $(`<div id="html_bd572f779d7b4491bea90988ca359ad5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cercania de Rio Cataratitas, camino a Bajo Rodriguez. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1997-01-28 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_9a22719ee3694f8c91a3922bb0e1f1e2.setContent(html_bd572f779d7b4491bea90988ca359ad5);
+        
+
+        circle_marker_bb404cf5e19a4589a8525f2195df9c5e.bindPopup(popup_9a22719ee3694f8c91a3922bb0e1f1e2)
+        ;
+
+        
+    
+    
+            var circle_marker_762cd21b953a4ad3a40819e42a6a0c64 = L.circleMarker(
+                [10.875, -85.393056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_e8ae1d0ea6344038becbc7faaee5e572 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ac378e4b27b493b8ca354e0f7692dc7 = $(`<div id="html_9ac378e4b27b493b8ca354e0f7692dc7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector San Cristobal, 2.5 km noreste, despues de la estacion. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1996-01-31 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e8ae1d0ea6344038becbc7faaee5e572.setContent(html_9ac378e4b27b493b8ca354e0f7692dc7);
+        
+
+        circle_marker_762cd21b953a4ad3a40819e42a6a0c64.bindPopup(popup_e8ae1d0ea6344038becbc7faaee5e572)
+        ;
+
+        
+    
+    
+            var circle_marker_a53876e5950e4ff8a53dd7aab25fdd50 = L.circleMarker(
+                [10.386111, -84.80833299999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_a0076cc4df2c45c2992188be8f14f6b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45b93937c81b4cd59e023833cabef8df = $(`<div id="html_45b93937c81b4cd59e023833cabef8df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo Abajo, Rio Cano Negro. Fincas Quesada, Arce y Porras. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 1991-12-07 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a0076cc4df2c45c2992188be8f14f6b7.setContent(html_45b93937c81b4cd59e023833cabef8df);
+        
+
+        circle_marker_a53876e5950e4ff8a53dd7aab25fdd50.bindPopup(popup_a0076cc4df2c45c2992188be8f14f6b7)
+        ;
+
+        
+    
+    
+            var circle_marker_fbee6913576c4c1c8e5b145799590ef6 = L.circleMarker(
+                [10.316667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_3f905b618d064768ae91189539d474ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae668f0c59074db49e69c0dfe870be55 = $(`<div id="html_ae668f0c59074db49e69c0dfe870be55" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Penas Blancas Valley, Quebrada Celeste- Quebrada Azufre. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1988-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3f905b618d064768ae91189539d474ab.setContent(html_ae668f0c59074db49e69c0dfe870be55);
+        
+
+        circle_marker_fbee6913576c4c1c8e5b145799590ef6.bindPopup(popup_3f905b618d064768ae91189539d474ab)
+        ;
+
+        
+    
+    
+            var circle_marker_ce81936a2b744a6faf1953a21ae07d13 = L.circleMarker(
+                [10.333333, -84.716667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_8548894d760440618760b0a1693238a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_140fda52ee4f4e648a75501df80c1685 = $(`<div id="html_140fda52ee4f4e648a75501df80c1685" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas. Bosque pluvial premontano. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1987-03-11 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8548894d760440618760b0a1693238a2.setContent(html_140fda52ee4f4e648a75501df80c1685);
+        
+
+        circle_marker_ce81936a2b744a6faf1953a21ae07d13.bindPopup(popup_8548894d760440618760b0a1693238a2)
+        ;
+
+        
+    
+    
+            var circle_marker_7ab53ecfb5bb40298c5c047aac7b5168 = L.circleMarker(
+                [10.875, -85.393056],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_48abd5fb736e45cb9b163a01146ae14e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3254697bd984eb9a1bde2de786919e9 = $(`<div id="html_f3254697bd984eb9a1bde2de786919e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector San Cristobal, 2.5 Km noreste, despues de la estacion. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1994-11-11 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_48abd5fb736e45cb9b163a01146ae14e.setContent(html_f3254697bd984eb9a1bde2de786919e9);
+        
+
+        circle_marker_7ab53ecfb5bb40298c5c047aac7b5168.bindPopup(popup_48abd5fb736e45cb9b163a01146ae14e)
+        ;
+
+        
+    
+    
+            var circle_marker_fcbf787ca4a34d22978814a4d61a34c3 = L.circleMarker(
+                [10.316667, -84.716667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_cae610b56a994366bad5c6c7f875cc7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_047c1e802ffa42da930b79a269a85f5f = $(`<div id="html_047c1e802ffa42da930b79a269a85f5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas. Alrededores de los refugios Eladio y Alejandro, Mas Wilson. <strong>Elevación:</strong> 875.0 m  <strong>Fecha:</strong> 1989-09-08 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_cae610b56a994366bad5c6c7f875cc7f.setContent(html_047c1e802ffa42da930b79a269a85f5f);
+        
+
+        circle_marker_fcbf787ca4a34d22978814a4d61a34c3.bindPopup(popup_cae610b56a994366bad5c6c7f875cc7f)
+        ;
+
+        
+    
+    
+            var circle_marker_174363d85d4d4b4c9164602bcf085e12 = L.circleMarker(
+                [8.903163000000001, -82.765632],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_279305c3ed1c47898b0f73a10d5d5a47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca9160cf2e354a43ae7558a5675afa12 = $(`<div id="html_ca9160cf2e354a43ae7558a5675afa12" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Loma Indio, Fca E. Alfaro, 1.5 km NE. de Mellizas <strong>Elevación:</strong> 1580.0 m  <strong>Fecha:</strong> 1999-01-10 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_279305c3ed1c47898b0f73a10d5d5a47.setContent(html_ca9160cf2e354a43ae7558a5675afa12);
+        
+
+        circle_marker_174363d85d4d4b4c9164602bcf085e12.bindPopup(popup_279305c3ed1c47898b0f73a10d5d5a47)
+        ;
+
+        
+    
+    
+            var circle_marker_b22d9ba738ae4d1bbd2757de8f2b9595 = L.circleMarker(
+                [8.903163000000001, -82.765632],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_5988ed75b5b042ebb5d7af99e95fe81d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_276c0e3fe8154dccbfea127c10f7b61c = $(`<div id="html_276c0e3fe8154dccbfea127c10f7b61c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Loma Indio, Fca E. Alfaro, 1.5 km NE. de Mellizas <strong>Elevación:</strong> 1580.0 m  <strong>Fecha:</strong> 1999-01-10 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5988ed75b5b042ebb5d7af99e95fe81d.setContent(html_276c0e3fe8154dccbfea127c10f7b61c);
+        
+
+        circle_marker_b22d9ba738ae4d1bbd2757de8f2b9595.bindPopup(popup_5988ed75b5b042ebb5d7af99e95fe81d)
+        ;
+
+        
+    
+    
+            var circle_marker_cc42c1babf9e403685dc76e5311b5832 = L.circleMarker(
+                [8.903163000000001, -82.765632],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_9d5928fb44854f188adec9144ec73b31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b2682be4c6f474ab423aa305f9dfd4a = $(`<div id="html_5b2682be4c6f474ab423aa305f9dfd4a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Loma Indio, Fca E. Alfaro, 1.5 km NE. de Mellizas <strong>Elevación:</strong> 1580.0 m  <strong>Fecha:</strong> 1999-01-10 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_9d5928fb44854f188adec9144ec73b31.setContent(html_5b2682be4c6f474ab423aa305f9dfd4a);
+        
+
+        circle_marker_cc42c1babf9e403685dc76e5311b5832.bindPopup(popup_9d5928fb44854f188adec9144ec73b31)
+        ;
+
+        
+    
+    
+            var circle_marker_715490bdd43649bc9fc912eba159ea2a = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_5284f760317f46f48126a927652c9573 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18dec4b4f129446c96304c3f82edeced = $(`<div id="html_18dec4b4f129446c96304c3f82edeced" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5284f760317f46f48126a927652c9573.setContent(html_18dec4b4f129446c96304c3f82edeced);
+        
+
+        circle_marker_715490bdd43649bc9fc912eba159ea2a.bindPopup(popup_5284f760317f46f48126a927652c9573)
+        ;
+
+        
+    
+    
+            var circle_marker_0dc7ec7985e14b1d8f20d5ed66c4b0ef = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_59ad7380c4604936a273a0abb3f77198 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21507874717a4cb889f15009584fe233 = $(`<div id="html_21507874717a4cb889f15009584fe233" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_59ad7380c4604936a273a0abb3f77198.setContent(html_21507874717a4cb889f15009584fe233);
+        
+
+        circle_marker_0dc7ec7985e14b1d8f20d5ed66c4b0ef.bindPopup(popup_59ad7380c4604936a273a0abb3f77198)
+        ;
+
+        
+    
+    
+            var circle_marker_8e1f669b340d473789e65cc126a5ff8b = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_a0648f2577514e66ac371801b087250a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c4358bc6f544cd9a65af5e5e8eb110e = $(`<div id="html_9c4358bc6f544cd9a65af5e5e8eb110e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a0648f2577514e66ac371801b087250a.setContent(html_9c4358bc6f544cd9a65af5e5e8eb110e);
+        
+
+        circle_marker_8e1f669b340d473789e65cc126a5ff8b.bindPopup(popup_a0648f2577514e66ac371801b087250a)
+        ;
+
+        
+    
+    
+            var circle_marker_85dfeece53554f75bf850103ae12ff3e = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_57f9031e9452443693bd6376c6d07a5d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bf26cf1613e4a1392aa7a93093c1f9c = $(`<div id="html_4bf26cf1613e4a1392aa7a93093c1f9c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_57f9031e9452443693bd6376c6d07a5d.setContent(html_4bf26cf1613e4a1392aa7a93093c1f9c);
+        
+
+        circle_marker_85dfeece53554f75bf850103ae12ff3e.bindPopup(popup_57f9031e9452443693bd6376c6d07a5d)
+        ;
+
+        
+    
+    
+            var circle_marker_29f4abf953584ed49d62712184c16170 = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_0ed27a3e18ae49b08e8e77841312a718 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e20e559adb0f4a398b44888e0051b42c = $(`<div id="html_e20e559adb0f4a398b44888e0051b42c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0ed27a3e18ae49b08e8e77841312a718.setContent(html_e20e559adb0f4a398b44888e0051b42c);
+        
+
+        circle_marker_29f4abf953584ed49d62712184c16170.bindPopup(popup_0ed27a3e18ae49b08e8e77841312a718)
+        ;
+
+        
+    
+    
+            var circle_marker_3b8d9ff498ee4fc6b5b0eca3ddb59f56 = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_5646cc656eeb48b1b588e6754562f5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bda6692fb0b40feaa1235579146519e = $(`<div id="html_2bda6692fb0b40feaa1235579146519e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5646cc656eeb48b1b588e6754562f5d4.setContent(html_2bda6692fb0b40feaa1235579146519e);
+        
+
+        circle_marker_3b8d9ff498ee4fc6b5b0eca3ddb59f56.bindPopup(popup_5646cc656eeb48b1b588e6754562f5d4)
+        ;
+
+        
+    
+    
+            var circle_marker_a8ded168907e485cb5650c3a75bf1e5b = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_ab453acc23034343b25df920e9d5a0c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50f7612cd64442fa90688aea2bc22470 = $(`<div id="html_50f7612cd64442fa90688aea2bc22470" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ab453acc23034343b25df920e9d5a0c0.setContent(html_50f7612cd64442fa90688aea2bc22470);
+        
+
+        circle_marker_a8ded168907e485cb5650c3a75bf1e5b.bindPopup(popup_ab453acc23034343b25df920e9d5a0c0)
+        ;
+
+        
+    
+    
+            var circle_marker_25e4d584afff4689af0b796873d820cc = L.circleMarker(
+                [10.241667, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_14e72914ee6c4ba998b2181d9e98311a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31952de365a3453889c8d92a46f47867 = $(`<div id="html_31952de365a3453889c8d92a46f47867" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Miramar; Arancibia; Fila Cedral, entrando por Corazon de Jesus. Tacotales y bosques. AC Arenal. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1997-10-12 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_14e72914ee6c4ba998b2181d9e98311a.setContent(html_31952de365a3453889c8d92a46f47867);
+        
+
+        circle_marker_25e4d584afff4689af0b796873d820cc.bindPopup(popup_14e72914ee6c4ba998b2181d9e98311a)
+        ;
+
+        
+    
+    
+            var circle_marker_4122b3cb4f1d40dd839f10a09498c1ee = L.circleMarker(
+                [8.897222, -82.755556],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_2a76c0f59baf42eba30025d4f4816988 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b16db7fe16b34606b65968cbb8147ac7 = $(`<div id="html_b16db7fe16b34606b65968cbb8147ac7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Las Tablas, Sendero Quijada del diablo. <strong>Elevación:</strong> 1800.0 m  <strong>Fecha:</strong> 2003-12-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Ricardo Kriebel ; Evelio Alfaro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2a76c0f59baf42eba30025d4f4816988.setContent(html_b16db7fe16b34606b65968cbb8147ac7);
+        
+
+        circle_marker_4122b3cb4f1d40dd839f10a09498c1ee.bindPopup(popup_2a76c0f59baf42eba30025d4f4816988)
+        ;
+
+        
+    
+    
+            var circle_marker_67f77fffab33497283e68148c2fde2b9 = L.circleMarker(
+                [8.6, -80.05],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_5e4a242bdd1445f18bc0d08cd1c1bf05 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da93f6ba786a4779b323b3650443773d = $(`<div id="html_da93f6ba786a4779b323b3650443773d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1984-02-27 00:00:00+00:00 <strong>Recolectores:</strong> H. W. Churchill|Greg C. de Nevers <strong>Identificadores:</strong> M. Sousa, 1990 (MEXU)</div>`)[0];
+            popup_5e4a242bdd1445f18bc0d08cd1c1bf05.setContent(html_da93f6ba786a4779b323b3650443773d);
+        
+
+        circle_marker_67f77fffab33497283e68148c2fde2b9.bindPopup(popup_5e4a242bdd1445f18bc0d08cd1c1bf05)
+        ;
+
+        
+    
+    
+            var circle_marker_ec2307f394d449a5a0e96b870f4233be = L.circleMarker(
+                [10.33333, -84.71666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_9ed3ebd80b25438e895f43dda09d1c24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27d1237bd45d47f09e9d70fb0f82ebda = $(`<div id="html_27d1237bd45d47f09e9d70fb0f82ebda" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Río Peñas Blancas, Bosque pluvial premontano <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1987-03-11 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|Erick Bello C. <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_9ed3ebd80b25438e895f43dda09d1c24.setContent(html_27d1237bd45d47f09e9d70fb0f82ebda);
+        
+
+        circle_marker_ec2307f394d449a5a0e96b870f4233be.bindPopup(popup_9ed3ebd80b25438e895f43dda09d1c24)
+        ;
+
+        
+    
+    
+            var circle_marker_1bc04a3694d94057b5418a3456b7d5b3 = L.circleMarker(
+                [10.33333, -84.71666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_7ee676490a184074ba7a67521c6cf602 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9562c36a8b3941eeae56daf6ae4c4e3a = $(`<div id="html_9562c36a8b3941eeae56daf6ae4c4e3a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde Reserve, Peñas Blancas river valley, Atlantic slope rain forest. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1986-09-24 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|Eladio Cruz L. <strong>Identificadores:</strong> M. Sousa, 1989 (MEXU)</div>`)[0];
+            popup_7ee676490a184074ba7a67521c6cf602.setContent(html_9562c36a8b3941eeae56daf6ae4c4e3a);
+        
+
+        circle_marker_1bc04a3694d94057b5418a3456b7d5b3.bindPopup(popup_7ee676490a184074ba7a67521c6cf602)
+        ;
+
+        
+    
+    
+            var circle_marker_33237e4d8dff47bc86776f5014474dd5 = L.circleMarker(
+                [10.33333, -84.71666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_d96e7839ee38478295543b413ffec3f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3253c3dff81e4dccbb9190cd7b8feeae = $(`<div id="html_3253c3dff81e4dccbb9190cd7b8feeae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde Reserve, Peñas Blancas river valley, Atlantic slope rain forest <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1986-10-07 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|Eladio Cruz L. <strong>Identificadores:</strong> M. Sousa, 1989 (MEXU)</div>`)[0];
+            popup_d96e7839ee38478295543b413ffec3f4.setContent(html_3253c3dff81e4dccbb9190cd7b8feeae);
+        
+
+        circle_marker_33237e4d8dff47bc86776f5014474dd5.bindPopup(popup_d96e7839ee38478295543b413ffec3f4)
+        ;
+
+        
+    
+    
+            var circle_marker_08f0171954984e67badbfcd2954777ae = L.circleMarker(
+                [10.38, -84.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_6faaecaf3f90474dbd03d182ff9f834a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1057d8a783445329244bcca95310dbb = $(`<div id="html_e1057d8a783445329244bcca95310dbb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Tilarán. San Gerardo Abajo, Río Caño Negro. Fincas Quesada, Arce y Porras. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 1991-12-07 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C.|Eladio Cruz L. <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_6faaecaf3f90474dbd03d182ff9f834a.setContent(html_e1057d8a783445329244bcca95310dbb);
+        
+
+        circle_marker_08f0171954984e67badbfcd2954777ae.bindPopup(popup_6faaecaf3f90474dbd03d182ff9f834a)
+        ;
+
+        
+    
+    
+            var circle_marker_c5f94360cd6a450cbf1df9106709d8e7 = L.circleMarker(
+                [10.31, -84.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_b575b7a3194f4e279e81db69ce4171aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bfb8453e8a14958a537d0cbf4ce5efd = $(`<div id="html_9bfb8453e8a14958a537d0cbf4ce5efd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Peñas Blancas Valley, Quebrada Celeste- Quebrada Azufre. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1988-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C. <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_b575b7a3194f4e279e81db69ce4171aa.setContent(html_9bfb8453e8a14958a537d0cbf4ce5efd);
+        
+
+        circle_marker_c5f94360cd6a450cbf1df9106709d8e7.bindPopup(popup_b575b7a3194f4e279e81db69ce4171aa)
+        ;
+
+        
+    
+    
+            var circle_marker_a0ac1e5f8dc3400d8fc88723112a075f = L.circleMarker(
+                [8.583333, -80.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+        
+    
+        var popup_58d5ce2180fa4bada0a1303c634c5dee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_093a21262b554d1ea8270956e44e1b7f = $(`<div id="html_093a21262b554d1ea8270956e44e1b7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Valle, floor <strong>Elevación:</strong> 548.64 m  <strong>Fecha:</strong> 1947-04-08 00:00:00+00:00 <strong>Recolectores:</strong> Paul H. Allen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_58d5ce2180fa4bada0a1303c634c5dee.setContent(html_093a21262b554d1ea8270956e44e1b7f);
+        
+
+        circle_marker_a0ac1e5f8dc3400d8fc88723112a075f.bindPopup(popup_58d5ce2180fa4bada0a1303c634c5dee)
+        ;
+
+        
+    
+    
+            var layer_control_38d1dc19cae14e5892a1702829712aa6 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6722847c114448a4ad2bd71b0cfce8ba,
+                    "ESRI World Imagery" : tile_layer_e594493aebbc46f5b923216d2da4bca8,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_38d1dc19cae14e5892a1702829712aa6.base_layers,
+                layer_control_38d1dc19cae14e5892a1702829712aa6.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_42de86795f0a4a2b9dc16cad0819f00f);
+            tile_layer_e594493aebbc46f5b923216d2da4bca8.remove();
+        
+</script>

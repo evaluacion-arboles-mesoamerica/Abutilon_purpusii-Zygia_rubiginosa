@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_58ec34668f8947c0a1fa81a8773ac72a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_58ec34668f8947c0a1fa81a8773ac72a" ></div>
+        
+</body>
+<script>    
+    
+            var map_58ec34668f8947c0a1fa81a8773ac72a = L.map(
+                "map_58ec34668f8947c0a1fa81a8773ac72a",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_58ec34668f8947c0a1fa81a8773ac72a);
+
+            
+
+        
+    
+            var tile_layer_d369e97900074fb08e565c99abde67d8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_58ec34668f8947c0a1fa81a8773ac72a);
+        
+    
+            var tile_layer_9ae0f66a9a7047f9a79499f0f4122e76 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_58ec34668f8947c0a1fa81a8773ac72a);
+        
+    
+            var marker_cluster_43f65428ab4c47c2993b86f1a86e18f3 = L.markerClusterGroup(
+                {}
+            );
+            map_58ec34668f8947c0a1fa81a8773ac72a.addLayer(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+            var marker_7d84a1c7097b4f28baa2791f57d6d050 = L.marker(
+                [9.67, -83.04],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_3d95b6446cf441df9edbfa6bc6de05e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e587910769714560aeb070e613581069 = $(`<div id="html_e587910769714560aeb070e613581069" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Hitoy Cerere. From Río Cerere to Cerro Bobókara. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-02-26 00:00:00+00:00 <strong>Recolectores:</strong> Frank Almeda|Thomas F. Daniel|Bruce M. Bartholomew <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_3d95b6446cf441df9edbfa6bc6de05e2.setContent(html_e587910769714560aeb070e613581069);
+        
+
+        marker_7d84a1c7097b4f28baa2791f57d6d050.bindPopup(popup_3d95b6446cf441df9edbfa6bc6de05e2)
+        ;
+
+        
+    
+    
+            var marker_a90c61ee157f4c74b299a51b26208b98 = L.marker(
+                [9.566667, -82.63889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_f121db3729814803b0c66b4bd01bb685 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c133eb2b56f4aaf9a4a8e278ac3e0a2 = $(`<div id="html_4c133eb2b56f4aaf9a4a8e278ac3e0a2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. Finca ASACODE. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez <strong>Identificadores:</strong> W. Anderson</div>`)[0];
+            popup_f121db3729814803b0c66b4bd01bb685.setContent(html_4c133eb2b56f4aaf9a4a8e278ac3e0a2);
+        
+
+        marker_a90c61ee157f4c74b299a51b26208b98.bindPopup(popup_f121db3729814803b0c66b4bd01bb685)
+        ;
+
+        
+    
+    
+            var marker_6a855ba25f0242ee986cfd362281a4a6 = L.marker(
+                [9.811, -83.073611],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_eb0009237cb544ccab7f6a32ef2f8c89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88173df9a6fe44868a8622c3ac31ebc2 = $(`<div id="html_88173df9a6fe44868a8622c3ac31ebc2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida. Cuenca del Bananito. Point 1, forest close to edge of field adjoining Bananito Lodge. <strong>Elevación:</strong> 220.0 m  <strong>Fecha:</strong> 2010-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Alex K. Monro|Nelson Zamora|Daniel Solano <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_eb0009237cb544ccab7f6a32ef2f8c89.setContent(html_88173df9a6fe44868a8622c3ac31ebc2);
+        
+
+        marker_6a855ba25f0242ee986cfd362281a4a6.bindPopup(popup_eb0009237cb544ccab7f6a32ef2f8c89)
+        ;
+
+        
+    
+    
+            var marker_d605bff371ec4a50a931f30a248f71d3 = L.marker(
+                [9.928915, -83.43786999999999],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_e98a199be7ce433da4f4e98e92c8a454 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ae32ed4f5c8436bbdfaa3c4c7131258 = $(`<div id="html_7ae32ed4f5c8436bbdfaa3c4c7131258" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Barbilla, Cuenca del Matina, Sector Quebrada San Miguel. Camino a Moravia de Chirripo. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> E. Mora|E. Rojas <strong>Identificadores:</strong> W. Anderson</div>`)[0];
+            popup_e98a199be7ce433da4f4e98e92c8a454.setContent(html_7ae32ed4f5c8436bbdfaa3c4c7131258);
+        
+
+        marker_d605bff371ec4a50a931f30a248f71d3.bindPopup(popup_e98a199be7ce433da4f4e98e92c8a454)
+        ;
+
+        
+    
+    
+            var marker_eca39a2d7e3d4477aeab79c1a5abab19 = L.marker(
+                [10.408333, -84.60556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_f5562c81bc6a460a9afa33661461cd01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3123983595944448afb4ea446d99885c = $(`<div id="html_3123983595944448afb4ea446d99885c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Ramon, Pe?as Blancas, Chachagua. Finca Propiedad de la Asociacion de Desarrollo. Alrededores de Quebrada Chachaguita, en cercanias del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_f5562c81bc6a460a9afa33661461cd01.setContent(html_3123983595944448afb4ea446d99885c);
+        
+
+        marker_eca39a2d7e3d4477aeab79c1a5abab19.bindPopup(popup_f5562c81bc6a460a9afa33661461cd01)
+        ;
+
+        
+    
+    
+            var marker_b65d9ca498e7490d94c9f0ca5c76959d = L.marker(
+                [9.675, -83.022222],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_f5dd876c6e254164a3a0ebdd99dfcaec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1112edaab85b45c2b50ea013a35d7c74 = $(`<div id="html_1112edaab85b45c2b50ea013a35d7c74" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque primario, Bosque secundario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1992-07-09 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_f5dd876c6e254164a3a0ebdd99dfcaec.setContent(html_1112edaab85b45c2b50ea013a35d7c74);
+        
+
+        marker_b65d9ca498e7490d94c9f0ca5c76959d.bindPopup(popup_f5dd876c6e254164a3a0ebdd99dfcaec)
+        ;
+
+        
+    
+    
+            var marker_585058aabb97440aadc0d90d5bf390d8 = L.marker(
+                [9.675, -83.022222],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_e507f210e4104af48ccd49c1c4c38480 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c6d35974aad472f922cf081bbd426d1 = $(`<div id="html_2c6d35974aad472f922cf081bbd426d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación Hitoy Cerere <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1990-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_e507f210e4104af48ccd49c1c4c38480.setContent(html_2c6d35974aad472f922cf081bbd426d1);
+        
+
+        marker_585058aabb97440aadc0d90d5bf390d8.bindPopup(popup_e507f210e4104af48ccd49c1c4c38480)
+        ;
+
+        
+    
+    
+            var marker_7dc19b5167c94246881b1fa9ad2d3593 = L.marker(
+                [9.55, -83.016667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_a30e1dfffcab4ca1820139ab2ab5061a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_691a3659a780416fa66817c6e56db952 = $(`<div id="html_691a3659a780416fa66817c6e56db952" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Senderos Revienta-pechos y Espavel. <strong>Elevación:</strong> 695.0 m  <strong>Fecha:</strong> 1992-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_a30e1dfffcab4ca1820139ab2ab5061a.setContent(html_691a3659a780416fa66817c6e56db952);
+        
+
+        marker_7dc19b5167c94246881b1fa9ad2d3593.bindPopup(popup_a30e1dfffcab4ca1820139ab2ab5061a)
+        ;
+
+        
+    
+    
+            var marker_961cf0e77a854d66b3b2c9c21b2c3231 = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_4a136bdaa6184e9b9d91cd81aaf60a52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0f951790af04b9da60222e0810a7203 = $(`<div id="html_c0f951790af04b9da60222e0810a7203" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_4a136bdaa6184e9b9d91cd81aaf60a52.setContent(html_c0f951790af04b9da60222e0810a7203);
+        
+
+        marker_961cf0e77a854d66b3b2c9c21b2c3231.bindPopup(popup_4a136bdaa6184e9b9d91cd81aaf60a52)
+        ;
+
+        
+    
+    
+            var marker_64af53ef1e5345ddb11337458c5a231e = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_9c151c919f034bebbb4f44ac80986bce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d47aa58f85b9464594556026f808ac35 = $(`<div id="html_d47aa58f85b9464594556026f808ac35" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_9c151c919f034bebbb4f44ac80986bce.setContent(html_d47aa58f85b9464594556026f808ac35);
+        
+
+        marker_64af53ef1e5345ddb11337458c5a231e.bindPopup(popup_9c151c919f034bebbb4f44ac80986bce)
+        ;
+
+        
+    
+    
+            var marker_88c040c03a884eee929ca07aa8e8a60e = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_c4b4ef45575d469f938bf9ff121d05f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f83f2f550a554c1fb17b471af3cef67a = $(`<div id="html_f83f2f550a554c1fb17b471af3cef67a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_c4b4ef45575d469f938bf9ff121d05f3.setContent(html_f83f2f550a554c1fb17b471af3cef67a);
+        
+
+        marker_88c040c03a884eee929ca07aa8e8a60e.bindPopup(popup_c4b4ef45575d469f938bf9ff121d05f3)
+        ;
+
+        
+    
+    
+            var marker_cd5d827e8eaa449390c42bbd5b3ab1ee = L.marker(
+                [9.575, -82.666667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_3f3e2de2ffeb43109829c1acd5a9048d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0245adefc4b4de0bd9db8c21cfcbe43 = $(`<div id="html_f0245adefc4b4de0bd9db8c21cfcbe43" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel, Ascode, alrededores de la estacion. <strong>Elevación:</strong> 65.0 m  <strong>Fecha:</strong> 1997-01-15 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Erick Salazar <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_3f3e2de2ffeb43109829c1acd5a9048d.setContent(html_f0245adefc4b4de0bd9db8c21cfcbe43);
+        
+
+        marker_cd5d827e8eaa449390c42bbd5b3ab1ee.bindPopup(popup_3f3e2de2ffeb43109829c1acd5a9048d)
+        ;
+
+        
+    
+    
+            var marker_5909108a8d5b46bea3cf1deb161a5146 = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_b062524667dc4b9f8d21c4f047a89cf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8343cb5ab97948e28b6a7ea96d241370 = $(`<div id="html_8343cb5ab97948e28b6a7ea96d241370" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_b062524667dc4b9f8d21c4f047a89cf5.setContent(html_8343cb5ab97948e28b6a7ea96d241370);
+        
+
+        marker_5909108a8d5b46bea3cf1deb161a5146.bindPopup(popup_b062524667dc4b9f8d21c4f047a89cf5)
+        ;
+
+        
+    
+    
+            var marker_10851957bef84941b5d7576bc4c247f7 = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_aba1e81653924a478e1c6c7be6f7d2ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ef9e02feca44fc68ea4cbb00d243da1 = $(`<div id="html_1ef9e02feca44fc68ea4cbb00d243da1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_aba1e81653924a478e1c6c7be6f7d2ee.setContent(html_1ef9e02feca44fc68ea4cbb00d243da1);
+        
+
+        marker_10851957bef84941b5d7576bc4c247f7.bindPopup(popup_aba1e81653924a478e1c6c7be6f7d2ee)
+        ;
+
+        
+    
+    
+            var marker_517214a183d34b96815507eb732d90ff = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_9e7efb5eab5042cd9c8dc0c1f53d343c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d52bb71514f94eaaa31f5f083430a3cf = $(`<div id="html_d52bb71514f94eaaa31f5f083430a3cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_9e7efb5eab5042cd9c8dc0c1f53d343c.setContent(html_d52bb71514f94eaaa31f5f083430a3cf);
+        
+
+        marker_517214a183d34b96815507eb732d90ff.bindPopup(popup_9e7efb5eab5042cd9c8dc0c1f53d343c)
+        ;
+
+        
+    
+    
+            var marker_6a8829638a4e4a29aa666d499509fe15 = L.marker(
+                [10.366667, -84.616667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_820e9df920574f4b9e5dd023b08173e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab21c8a772dd44aab43f6ed323e71f67 = $(`<div id="html_ab21c8a772dd44aab43f6ed323e71f67" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas canyon, Nene Castro farm, 4 km NW of La Tigra. lowland wet forest. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1995-12-07 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_820e9df920574f4b9e5dd023b08173e8.setContent(html_ab21c8a772dd44aab43f6ed323e71f67);
+        
+
+        marker_6a8829638a4e4a29aa666d499509fe15.bindPopup(popup_820e9df920574f4b9e5dd023b08173e8)
+        ;
+
+        
+    
+    
+            var marker_5dd9a33e00d342b9b0423f3fd1fea207 = L.marker(
+                [10.366667, -84.616667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_9b3566a06b4645a9b896e44345952f1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed1c4280aeb54dfeb23258c1897ef6aa = $(`<div id="html_ed1c4280aeb54dfeb23258c1897ef6aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas canyon, Nene Castro farm, 4 km NW of La Tigra. lowland wet forest. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1995-12-07 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_9b3566a06b4645a9b896e44345952f1b.setContent(html_ed1c4280aeb54dfeb23258c1897ef6aa);
+        
+
+        marker_5dd9a33e00d342b9b0423f3fd1fea207.bindPopup(popup_9b3566a06b4645a9b896e44345952f1b)
+        ;
+
+        
+    
+    
+            var marker_d23b782384e24bc0806db40fee04cae2 = L.marker(
+                [9.928915, -83.437874],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_6f4c6b37b97d409da363ce9319b5275d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e963b07af584ec08194aafc9a800d99 = $(`<div id="html_6e963b07af584ec08194aafc9a800d99" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrialba, Pque Nal Barbilla, 2 Km S. Río Barbilla, Camino a Moravia <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Mora; Elias Rojas <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_6f4c6b37b97d409da363ce9319b5275d.setContent(html_6e963b07af584ec08194aafc9a800d99);
+        
+
+        marker_d23b782384e24bc0806db40fee04cae2.bindPopup(popup_6f4c6b37b97d409da363ce9319b5275d)
+        ;
+
+        
+    
+    
+            var marker_cc01b768fecb4f8b929c7a11f3b48886 = L.marker(
+                [9.928915, -83.437874],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_75807bb50e7844e4bd3970081883690b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_170c6ae9c04e465eaca3251a55f68b22 = $(`<div id="html_170c6ae9c04e465eaca3251a55f68b22" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrialba, Pque Nal Barbilla, 2 Km S. Río Barbilla, Camino a Moravia <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Mora; Elias Rojas <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_75807bb50e7844e4bd3970081883690b.setContent(html_170c6ae9c04e465eaca3251a55f68b22);
+        
+
+        marker_cc01b768fecb4f8b929c7a11f3b48886.bindPopup(popup_75807bb50e7844e4bd3970081883690b)
+        ;
+
+        
+    
+    
+            var marker_a2b4daf3fbab4377a6de58ca8840cea9 = L.marker(
+                [9.928915, -83.437874],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_67622b5cb99a4618aa199d4e5c44df17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa89b68be26740a4a148973a383f70d3 = $(`<div id="html_fa89b68be26740a4a148973a383f70d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrialba, Pque Nal Barbilla, 2 Km S. Río Barbilla, Camino a Moravia <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Mora; Elias Rojas <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_67622b5cb99a4618aa199d4e5c44df17.setContent(html_fa89b68be26740a4a148973a383f70d3);
+        
+
+        marker_a2b4daf3fbab4377a6de58ca8840cea9.bindPopup(popup_67622b5cb99a4618aa199d4e5c44df17)
+        ;
+
+        
+    
+    
+            var marker_a725c309dbed45ccbfecda3c55a7b688 = L.marker(
+                [9.928915, -83.437874],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_c68c8bc5168a4833a92979c97e56d942 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccd3adf5698a487facf7478f160eb4c5 = $(`<div id="html_ccd3adf5698a487facf7478f160eb4c5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrialba, Pque Nal Barbilla, 2 Km S. Río Barbilla, Camino a Moravia <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Mora; Elias Rojas <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_c68c8bc5168a4833a92979c97e56d942.setContent(html_ccd3adf5698a487facf7478f160eb4c5);
+        
+
+        marker_a725c309dbed45ccbfecda3c55a7b688.bindPopup(popup_c68c8bc5168a4833a92979c97e56d942)
+        ;
+
+        
+    
+    
+            var marker_fe0e7879e2224cdba8eded029370ead1 = L.marker(
+                [9.928915, -83.437874],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_d9008bef21d746c68bc09da19aede43b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00d58fe82efa477f84280f9efeddf252 = $(`<div id="html_00d58fe82efa477f84280f9efeddf252" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrialba, Pque Nal Barbilla, 2 Km S. Río Barbilla, Camino a Moravia <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Mora; Elias Rojas <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_d9008bef21d746c68bc09da19aede43b.setContent(html_00d58fe82efa477f84280f9efeddf252);
+        
+
+        marker_fe0e7879e2224cdba8eded029370ead1.bindPopup(popup_d9008bef21d746c68bc09da19aede43b)
+        ;
+
+        
+    
+    
+            var marker_fba5f33154824038a22b2c205f0afa4a = L.marker(
+                [9.825, -83.063889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_1106e8ced2cb44bba39a57d6f5f2fac8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d0d927dae5a4b59a268c5115ea3f92a = $(`<div id="html_0d0d927dae5a4b59a268c5115ea3f92a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama, Cerro Muchilla, Falda NW. Ro Bananito, Selva Bananito Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2001-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_1106e8ced2cb44bba39a57d6f5f2fac8.setContent(html_0d0d927dae5a4b59a268c5115ea3f92a);
+        
+
+        marker_fba5f33154824038a22b2c205f0afa4a.bindPopup(popup_1106e8ced2cb44bba39a57d6f5f2fac8)
+        ;
+
+        
+    
+    
+            var marker_a9c332dc341046478f8b6f92bb7e7236 = L.marker(
+                [9.825, -83.063889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_ce1738fd8a5e4bf5af9425cc3f8ffc43 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52c8670284e848de86d0d5e0bc4d33b1 = $(`<div id="html_52c8670284e848de86d0d5e0bc4d33b1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama, Cerro Muchilla, Falda NW. Ro Bananito, Selva Bananito Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2001-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_ce1738fd8a5e4bf5af9425cc3f8ffc43.setContent(html_52c8670284e848de86d0d5e0bc4d33b1);
+        
+
+        marker_a9c332dc341046478f8b6f92bb7e7236.bindPopup(popup_ce1738fd8a5e4bf5af9425cc3f8ffc43)
+        ;
+
+        
+    
+    
+            var marker_0e386c90a3554dbfba7b57889b55b216 = L.marker(
+                [9.67221, -83.025878],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_2fbbf362faef4f5a89108a56305ec93f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a6f602f51434843877a70ad53a2efee = $(`<div id="html_4a6f602f51434843877a70ad53a2efee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> A.C.L.A.C, Central, Reserva Biol Hitoy Cerere, Est Hitoy Cerere, Send Bobócara <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-02-26 00:00:00+00:00 <strong>Recolectores:</strong> Frank Almeda; Thomas Franklin Daniel ; B. Bartholomew <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_2fbbf362faef4f5a89108a56305ec93f.setContent(html_4a6f602f51434843877a70ad53a2efee);
+        
+
+        marker_0e386c90a3554dbfba7b57889b55b216.bindPopup(popup_2fbbf362faef4f5a89108a56305ec93f)
+        ;
+
+        
+    
+    
+            var marker_7d675aaf3ced4dd290f58d397cc17c92 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_2dcd9acbb35e4e38bb8bfe136e884910 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e234c7e735c24079bead043c5a7a2111 = $(`<div id="html_e234c7e735c24079bead043c5a7a2111" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_2dcd9acbb35e4e38bb8bfe136e884910.setContent(html_e234c7e735c24079bead043c5a7a2111);
+        
+
+        marker_7d675aaf3ced4dd290f58d397cc17c92.bindPopup(popup_2dcd9acbb35e4e38bb8bfe136e884910)
+        ;
+
+        
+    
+    
+            var marker_b1f84845251e4fbfbdb05427c1456bcf = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_dd9364d108e94fdd90b0e3dab3608247 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d61a300632d54c1cbfe92ee20fc250f4 = $(`<div id="html_d61a300632d54c1cbfe92ee20fc250f4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_dd9364d108e94fdd90b0e3dab3608247.setContent(html_d61a300632d54c1cbfe92ee20fc250f4);
+        
+
+        marker_b1f84845251e4fbfbdb05427c1456bcf.bindPopup(popup_dd9364d108e94fdd90b0e3dab3608247)
+        ;
+
+        
+    
+    
+            var marker_e55af35430084aaba3e526483213cccd = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_365e9077399c46d1b6f37aefd2a8c2eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77865e287dc842ce8e35df7a824b34db = $(`<div id="html_77865e287dc842ce8e35df7a824b34db" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_365e9077399c46d1b6f37aefd2a8c2eb.setContent(html_77865e287dc842ce8e35df7a824b34db);
+        
+
+        marker_e55af35430084aaba3e526483213cccd.bindPopup(popup_365e9077399c46d1b6f37aefd2a8c2eb)
+        ;
+
+        
+    
+    
+            var marker_3156e07d6bd449048f41b9189f22e3fa = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_3028b54aec48469791d55172881dbe81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2758a631b5444210ba6493e14a4c9c28 = $(`<div id="html_2758a631b5444210ba6493e14a4c9c28" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_3028b54aec48469791d55172881dbe81.setContent(html_2758a631b5444210ba6493e14a4c9c28);
+        
+
+        marker_3156e07d6bd449048f41b9189f22e3fa.bindPopup(popup_3028b54aec48469791d55172881dbe81)
+        ;
+
+        
+    
+    
+            var marker_14b865699ef547629486d18e95e3cbf5 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_262bafb993d646f9a794cd822ece4f4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56d5554d5ae54641b13f64b09a6f6640 = $(`<div id="html_56d5554d5ae54641b13f64b09a6f6640" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_262bafb993d646f9a794cd822ece4f4d.setContent(html_56d5554d5ae54641b13f64b09a6f6640);
+        
+
+        marker_14b865699ef547629486d18e95e3cbf5.bindPopup(popup_262bafb993d646f9a794cd822ece4f4d)
+        ;
+
+        
+    
+    
+            var marker_267dbae962e8435cb26f2b1a97b9ecc9 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_63d768bfd0bb4573854b626779b93588 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b8ee7ae3f754a2fb8f3923e7de5dc0b = $(`<div id="html_9b8ee7ae3f754a2fb8f3923e7de5dc0b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_63d768bfd0bb4573854b626779b93588.setContent(html_9b8ee7ae3f754a2fb8f3923e7de5dc0b);
+        
+
+        marker_267dbae962e8435cb26f2b1a97b9ecc9.bindPopup(popup_63d768bfd0bb4573854b626779b93588)
+        ;
+
+        
+    
+    
+            var marker_93053ead09a24ae0a0b9aa9110b32389 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_8a0ad1381aa949c9a55232c48db7204e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ae12505b8974a958447ebf86f680643 = $(`<div id="html_4ae12505b8974a958447ebf86f680643" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_8a0ad1381aa949c9a55232c48db7204e.setContent(html_4ae12505b8974a958447ebf86f680643);
+        
+
+        marker_93053ead09a24ae0a0b9aa9110b32389.bindPopup(popup_8a0ad1381aa949c9a55232c48db7204e)
+        ;
+
+        
+    
+    
+            var marker_178bae2e8962433d9fceacfcc89c8b84 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_db647dcb91c04160a2b381ea9e47c203 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90783e4406b94663af152b499794294a = $(`<div id="html_90783e4406b94663af152b499794294a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_db647dcb91c04160a2b381ea9e47c203.setContent(html_90783e4406b94663af152b499794294a);
+        
+
+        marker_178bae2e8962433d9fceacfcc89c8b84.bindPopup(popup_db647dcb91c04160a2b381ea9e47c203)
+        ;
+
+        
+    
+    
+            var marker_073bf0fad15547dd893127fa17ab5bb4 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_c15846bbe607435eb5579295c29948d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3f06863d852489e84225bd5fc63051d = $(`<div id="html_c3f06863d852489e84225bd5fc63051d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_c15846bbe607435eb5579295c29948d8.setContent(html_c3f06863d852489e84225bd5fc63051d);
+        
+
+        marker_073bf0fad15547dd893127fa17ab5bb4.bindPopup(popup_c15846bbe607435eb5579295c29948d8)
+        ;
+
+        
+    
+    
+            var marker_b39dbf1ea5884eab8eb116c91e2a4117 = L.marker(
+                [10.408333, -84.605556],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_c0fd905c6e4641a1809fd2f03bfd1b67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fcf034fb0d2c47faae95d01f3e863a24 = $(`<div id="html_fcf034fb0d2c47faae95d01f3e863a24" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chachagua. FInca Propiedad de la Asociación  de Desarrollo. Alrededores de Quebrada Chachagüita, en  cercanías del pueblo. <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 2007-11-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_c0fd905c6e4641a1809fd2f03bfd1b67.setContent(html_fcf034fb0d2c47faae95d01f3e863a24);
+        
+
+        marker_b39dbf1ea5884eab8eb116c91e2a4117.bindPopup(popup_c0fd905c6e4641a1809fd2f03bfd1b67)
+        ;
+
+        
+    
+    
+            var marker_872cf50025714629a8383478322d04e9 = L.marker(
+                [9.92, -83.43],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_ec61f6873a654f039ef622316194a107 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1dcd8e63773e49e3a28f0ba7d1af1155 = $(`<div id="html_1dcd8e63773e49e3a28f0ba7d1af1155" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Flora de Costa Rica. Cartago: Turrialba. P. N. Barbilla. Cuenca del Matina. Sector Quebrada San Miguel. Camino a Moravia de Chirripó. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2000-09-22 00:00:00+00:00 <strong>Recolectores:</strong> E. Mora & E. Rojas <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ec61f6873a654f039ef622316194a107.setContent(html_1dcd8e63773e49e3a28f0ba7d1af1155);
+        
+
+        marker_872cf50025714629a8383478322d04e9.bindPopup(popup_ec61f6873a654f039ef622316194a107)
+        ;
+
+        
+    
+    
+            var marker_3b09ab9197f54259865b5db22c8e3a3a = L.marker(
+                [9.64, -82.77],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_95e90929b7364e67baf7ce9d92098bc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04e690f196644e8e91ef0670643ba3ad = $(`<div id="html_04e690f196644e8e91ef0670643ba3ad" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Faja Costeña de Limón. Puerto Viejo. Trayecto de Finca Chimuri a Kecoldi. Creciendo en bosque. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1994-11-18 00:00:00+00:00 <strong>Recolectores:</strong> José Á. González R.|Luis J. Poveda Álvarez|Estudiantes del Curso Dendrología <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_95e90929b7364e67baf7ce9d92098bc7.setContent(html_04e690f196644e8e91ef0670643ba3ad);
+        
+
+        marker_3b09ab9197f54259865b5db22c8e3a3a.bindPopup(popup_95e90929b7364e67baf7ce9d92098bc7)
+        ;
+
+        
+    
+    
+            var marker_1bfbc24abb1844ec81e962060cc0a24d = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_8839f7125503488f88011d033ebd01b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_844634ac9fbe4a028b7d455afdf5cdf8 = $(`<div id="html_844634ac9fbe4a028b7d455afdf5cdf8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Sixaola. San Miguel de Sixaola <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_8839f7125503488f88011d033ebd01b9.setContent(html_844634ac9fbe4a028b7d455afdf5cdf8);
+        
+
+        marker_1bfbc24abb1844ec81e962060cc0a24d.bindPopup(popup_8839f7125503488f88011d033ebd01b9)
+        ;
+
+        
+    
+    
+            var marker_f60dd4a9e88e4a228bb592cec4d6bdc9 = L.marker(
+                [9.55, -82.633333],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_821d0e29eac647a494b62fb5ffaebc58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14a1c1973f6145efb4306aeb247f3d59 = $(`<div id="html_14a1c1973f6145efb4306aeb247f3d59" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida.  Puerto Viejo.  San Miguel de Sixaola.  Finca ASACODE. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1999-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez|Nelson Zamora|José Á. González R.|Evelio Alfaro|Edgar Mora Castro <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_821d0e29eac647a494b62fb5ffaebc58.setContent(html_14a1c1973f6145efb4306aeb247f3d59);
+        
+
+        marker_f60dd4a9e88e4a228bb592cec4d6bdc9.bindPopup(popup_821d0e29eac647a494b62fb5ffaebc58)
+        ;
+
+        
+    
+    
+            var marker_1c767d3a1ec84e5c93aa1149d10efbff = L.marker(
+                [9.583333, -82.966667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_223a88912f17495f94f26056de1b401a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23eeb57f84044b13aff9a88c83c02108 = $(`<div id="html_23eeb57f84044b13aff9a88c83c02108" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Selva alta perennifolia y borde del camino cerca del pozo Sano José # 1 (RECOPE), suelo rojo laterítico. <strong>Elevación:</strong> 180.0 m  <strong>Fecha:</strong> 1984-03-16 00:00:00+00:00 <strong>Recolectores:</strong> Clark P. Cowan <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_223a88912f17495f94f26056de1b401a.setContent(html_23eeb57f84044b13aff9a88c83c02108);
+        
+
+        marker_1c767d3a1ec84e5c93aa1149d10efbff.bindPopup(popup_223a88912f17495f94f26056de1b401a)
+        ;
+
+        
+    
+    
+            var marker_ff3df43ceffb4eef9eeb6b0c65c10e9f = L.marker(
+                [9.6725, -83.0275],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_a59097698ade48b1b7d1979420a26e93 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6794d1beb83d4ee9ae2a7ef020128593 = $(`<div id="html_6794d1beb83d4ee9ae2a7ef020128593" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.B. Hitoy Cerere. Cuenca del Estrella. Sendero Tepezcuintle. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2000-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Luis Acosta <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_a59097698ade48b1b7d1979420a26e93.setContent(html_6794d1beb83d4ee9ae2a7ef020128593);
+        
+
+        marker_ff3df43ceffb4eef9eeb6b0c65c10e9f.bindPopup(popup_a59097698ade48b1b7d1979420a26e93)
+        ;
+
+        
+    
+    
+            var marker_38d9dcc1ea5446dfa9e89d52abecc4d9 = L.marker(
+                [9.65, -83.01666],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_b58ab361533042228109ad2ffaf2d422 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8f7c7926e48431aabb66072dbc1f2cb = $(`<div id="html_d8f7c7926e48431aabb66072dbc1f2cb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biol. Hitoy Cerere Senderos Revienta-pechos y Espavel. <strong>Elevación:</strong> 695.0 m  <strong>Fecha:</strong> 1992-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> W. R. Anderson</div>`)[0];
+            popup_b58ab361533042228109ad2ffaf2d422.setContent(html_d8f7c7926e48431aabb66072dbc1f2cb);
+        
+
+        marker_38d9dcc1ea5446dfa9e89d52abecc4d9.bindPopup(popup_b58ab361533042228109ad2ffaf2d422)
+        ;
+
+        
+    
+    
+            var marker_eb279edb05a24801b5475ee957eb747c = L.marker(
+                [9.233333, -83.033333],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_527ceadde5b745939aa4049d4929068f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_666241ae2bc542f38f084e7bf1ff9d79 = $(`<div id="html_666241ae2bc542f38f084e7bf1ff9d79" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Hitoy Cerere, Valle de la Estrella. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1990-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_527ceadde5b745939aa4049d4929068f.setContent(html_666241ae2bc542f38f084e7bf1ff9d79);
+        
+
+        marker_eb279edb05a24801b5475ee957eb747c.bindPopup(popup_527ceadde5b745939aa4049d4929068f)
+        ;
+
+        
+    
+    
+            var marker_bfaeb252d7a948a892b3f41fe417656e = L.marker(
+                [9.273333000000001, -82.425],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_bca10cdd4cdd402b81f388129e02a3b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92be9765cfa24e4fbd51a2409da882ac = $(`<div id="html_92be9765cfa24e4fbd51a2409da882ac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> On Fila Almirante, along trail to Risco Abajo, 3 km SW of town of Almirante. Tropical moist forest <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1975-01-03 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Nee|Bruce F. Hansen <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_bca10cdd4cdd402b81f388129e02a3b2.setContent(html_92be9765cfa24e4fbd51a2409da882ac);
+        
+
+        marker_bfaeb252d7a948a892b3f41fe417656e.bindPopup(popup_bca10cdd4cdd402b81f388129e02a3b2)
+        ;
+
+        
+    
+    
+            var marker_4540dc5435d849b1a63315792985461b = L.marker(
+                [9.673611, -83.026389],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_c860e2d6332041fb968ff80d7a0bee33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e808913bd2d14432b757dfb2ccc475ab = $(`<div id="html_e808913bd2d14432b757dfb2ccc475ab" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.B. Hitoy Cerere. Cuenca del Estrella. Reserva Biológica Hitoy Cerere. Sendero Bobocara. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1999-05-11 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Víctor H. Ramírez|E. Salas|E. Rojas <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_c860e2d6332041fb968ff80d7a0bee33.setContent(html_e808913bd2d14432b757dfb2ccc475ab);
+        
+
+        marker_4540dc5435d849b1a63315792985461b.bindPopup(popup_c860e2d6332041fb968ff80d7a0bee33)
+        ;
+
+        
+    
+    
+            var marker_c747fe16e7994b749ca7b2b12b8a1add = L.marker(
+                [9.616667, -82.658333],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_186d56688b6c4facbf7d58a0317795ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6f8d1ed42bc4c5dafe760c5a4976ef6 = $(`<div id="html_f6f8d1ed42bc4c5dafe760c5a4976ef6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Range of hills ca. 2 km S of Manzanillo de Talamanca, E of Quebrada Hone Wark. Elev. Lower slopes to upper slopes and summit. <strong>Elevación:</strong> 115.0 m  <strong>Fecha:</strong> 1984-11-04 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum|Willie Burton|Ernesto Salazar <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_186d56688b6c4facbf7d58a0317795ef.setContent(html_f6f8d1ed42bc4c5dafe760c5a4976ef6);
+        
+
+        marker_c747fe16e7994b749ca7b2b12b8a1add.bindPopup(popup_186d56688b6c4facbf7d58a0317795ef)
+        ;
+
+        
+    
+    
+            var marker_3509e4bda1f84d0d81e0edf1e15d1d3c = L.marker(
+                [9.675, -83.022222],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_a016f97a41d04c1c882fce02218d1073 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_338883b47c8246db8898447916498e11 = $(`<div id="html_338883b47c8246db8898447916498e11" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biol. Hitoy Cerere Valle de la Estrella. Bosque primario, Bosque secundario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1992-07-09 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Carballo <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_a016f97a41d04c1c882fce02218d1073.setContent(html_338883b47c8246db8898447916498e11);
+        
+
+        marker_3509e4bda1f84d0d81e0edf1e15d1d3c.bindPopup(popup_a016f97a41d04c1c882fce02218d1073)
+        ;
+
+        
+    
+    
+            var marker_c582fb6dd7ec4c7199f738e3f8d53a03 = L.marker(
+                [9.583333, -82.966667],
+                {}
+            ).addTo(marker_cluster_43f65428ab4c47c2993b86f1a86e18f3);
+        
+    
+        var popup_cff9616b4b8246879f81912bf6d40a61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25b7f77cde064bb09e54103c20120b7e = $(`<div id="html_25b7f77cde064bb09e54103c20120b7e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Borde del camino cerca del pozo San José #1 (RECOPE) <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1984-03-16 00:00:00+00:00 <strong>Recolectores:</strong> Clark P. Cowan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_cff9616b4b8246879f81912bf6d40a61.setContent(html_25b7f77cde064bb09e54103c20120b7e);
+        
+
+        marker_c582fb6dd7ec4c7199f738e3f8d53a03.bindPopup(popup_cff9616b4b8246879f81912bf6d40a61)
+        ;
+
+        
+    
+    
+            var layer_control_e3ff5dd86a034df8a6fc1ea9ac09a164 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d369e97900074fb08e565c99abde67d8,
+                    "ESRI World Imagery" : tile_layer_9ae0f66a9a7047f9a79499f0f4122e76,
+                },
+                overlays :  {
+                    "macro_element_43f65428ab4c47c2993b86f1a86e18f3" : marker_cluster_43f65428ab4c47c2993b86f1a86e18f3,
+                },
+            };
+            L.control.layers(
+                layer_control_e3ff5dd86a034df8a6fc1ea9ac09a164.base_layers,
+                layer_control_e3ff5dd86a034df8a6fc1ea9ac09a164.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_58ec34668f8947c0a1fa81a8773ac72a);
+            tile_layer_9ae0f66a9a7047f9a79499f0f4122e76.remove();
+        
+</script>

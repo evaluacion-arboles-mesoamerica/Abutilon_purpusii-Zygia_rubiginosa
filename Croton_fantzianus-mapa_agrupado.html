@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4df2b4b720ad4206a727fc2cebee82e2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_4df2b4b720ad4206a727fc2cebee82e2" ></div>
+        
+</body>
+<script>    
+    
+            var map_4df2b4b720ad4206a727fc2cebee82e2 = L.map(
+                "map_4df2b4b720ad4206a727fc2cebee82e2",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_4df2b4b720ad4206a727fc2cebee82e2);
+
+            
+
+        
+    
+            var tile_layer_63957c05152944f7a63b81133f933c06 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4df2b4b720ad4206a727fc2cebee82e2);
+        
+    
+            var tile_layer_1ad687377d9a4c9290f88251859884a5 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4df2b4b720ad4206a727fc2cebee82e2);
+        
+    
+            var marker_cluster_6836a49315874c459927c338b7d9c3de = L.markerClusterGroup(
+                {}
+            );
+            map_4df2b4b720ad4206a727fc2cebee82e2.addLayer(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+            var marker_92d3b09d913145c4ab9451e3039bfb53 = L.marker(
+                [16.6993, -96.3206],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_8625d70f7cf648568a5e4b7d3dcd62f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7f34fb69c764ae1b081550f04960d9d = $(`<div id="html_d7f34fb69c764ae1b081550f04960d9d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Blanca;  22 mi N of El Cameron, E side of Mexico hwy 190 <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1973-12-18 00:00:00+00:00 <strong>Recolectores:</strong> Anton A. Reznicek & R.S.W. Bobbette <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8625d70f7cf648568a5e4b7d3dcd62f6.setContent(html_d7f34fb69c764ae1b081550f04960d9d);
+        
+
+        marker_92d3b09d913145c4ab9451e3039bfb53.bindPopup(popup_8625d70f7cf648568a5e4b7d3dcd62f6)
+        ;
+
+        
+    
+    
+            var marker_8f650d83578447db89ecd0591c601fba = L.marker(
+                [13.331945000000001, -86.639167],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_ce9f9d24e10448528aafbf9b1324cfd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8645a2fc215e4aa38cb20c074426bb78 = $(`<div id="html_8645a2fc215e4aa38cb20c074426bb78" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 1 km N of Miramar and 4 km S of Las Sabanas; dense semi-evergreen forest <strong>Elevación:</strong> 1460.0 m  <strong>Fecha:</strong> 2010-02-01 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|I. Coronado G.|O.M. Montiel J. <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_ce9f9d24e10448528aafbf9b1324cfd4.setContent(html_8645a2fc215e4aa38cb20c074426bb78);
+        
+
+        marker_8f650d83578447db89ecd0591c601fba.bindPopup(popup_ce9f9d24e10448528aafbf9b1324cfd4)
+        ;
+
+        
+    
+    
+            var marker_f592a7f66dfa41188916fba4d710a50e = L.marker(
+                [13.331945000000001, -86.638889],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_a25bdd0a37814ef4b9060daac6877477 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b59f229cb8d4cbfba84b7c025a44fc6 = $(`<div id="html_9b59f229cb8d4cbfba84b7c025a44fc6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 1 km N of Miramar along road to San Lucas; moist forest <strong>Elevación:</strong> 1465.0 m  <strong>Fecha:</strong> 2010-05-10 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|E. Duarte M. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a25bdd0a37814ef4b9060daac6877477.setContent(html_9b59f229cb8d4cbfba84b7c025a44fc6);
+        
+
+        marker_f592a7f66dfa41188916fba4d710a50e.bindPopup(popup_a25bdd0a37814ef4b9060daac6877477)
+        ;
+
+        
+    
+    
+            var marker_aaef49c023b24423a152440136975b16 = L.marker(
+                [13.25, -86.360833],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_b10f454baadf4c50a7ab855a09baa0bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbd491f82e1e4e90a8bc242cc96418a4 = $(`<div id="html_fbd491f82e1e4e90a8bc242cc96418a4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Km 168 of Panamerican Highway, 16 km N of Estelí, Cuesta de Kukamonga, nearly dry stream bed leading down to Río Estelí; dry forest with abundant epiphytes and steep stream banks of soft breccia <strong>Elevación:</strong> 825.0 m  <strong>Fecha:</strong> 2013-01-13 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b10f454baadf4c50a7ab855a09baa0bf.setContent(html_fbd491f82e1e4e90a8bc242cc96418a4);
+        
+
+        marker_aaef49c023b24423a152440136975b16.bindPopup(popup_b10f454baadf4c50a7ab855a09baa0bf)
+        ;
+
+        
+    
+    
+            var marker_b124854f2b18442daf4bad6bfa234405 = L.marker(
+                [27.0, -108.78333],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_ab92a885617e41459b1eaa49b94d7db9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50cfd123d7fe4b32b00d62f855f23611 = $(`<div id="html_50cfd123d7fe4b32b00d62f855f23611" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Guayabo (upper) crossing of the Rio Cuchujaqui, c. 3 km NE of Sabinito Sur and 15 km (airline) ESE of Alamos <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1992-10-12 00:00:00+00:00 <strong>Recolectores:</strong> A.C. Sanders; T.R. Van Devender, R.K. Van Devender, S. Meyer, B. Pitzer <strong>Identificadores:</strong> P.E. Berry & B. van Ee</div>`)[0];
+            popup_ab92a885617e41459b1eaa49b94d7db9.setContent(html_50cfd123d7fe4b32b00d62f855f23611);
+        
+
+        marker_b124854f2b18442daf4bad6bfa234405.bindPopup(popup_ab92a885617e41459b1eaa49b94d7db9)
+        ;
+
+        
+    
+    
+            var marker_f18214db55af43d29bbbbdd2aea7769f = L.marker(
+                [13.25, -86.35],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_7ab5db92ec9d48e7afe731f7ac4b481e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c82847544c8646f0afabb5cf0b293290 = $(`<div id="html_c82847544c8646f0afabb5cf0b293290" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuesta de Kukamonga, km 168 Carretera Panamericana Norte <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1985-05-11 00:00:00+00:00 <strong>Recolectores:</strong> P. Moreno <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_7ab5db92ec9d48e7afe731f7ac4b481e.setContent(html_c82847544c8646f0afabb5cf0b293290);
+        
+
+        marker_f18214db55af43d29bbbbdd2aea7769f.bindPopup(popup_7ab5db92ec9d48e7afe731f7ac4b481e)
+        ;
+
+        
+    
+    
+            var marker_119f70f4ab3145fdaf6245714d521b21 = L.marker(
+                [13.633944, -86.526472],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_f64ed4116ad74ebfa27b3bc5cf7affb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bfdb35d1fa3945709f73fc6cfd1ddad6 = $(`<div id="html_bfdb35d1fa3945709f73fc6cfd1ddad6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 5.4 km W of Ocotal (highway) along road to Macuelizo; thorn forest on schist <strong>Elevación:</strong> 646.0 m  <strong>Fecha:</strong> 2018-04-11 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f64ed4116ad74ebfa27b3bc5cf7affb4.setContent(html_bfdb35d1fa3945709f73fc6cfd1ddad6);
+        
+
+        marker_119f70f4ab3145fdaf6245714d521b21.bindPopup(popup_f64ed4116ad74ebfa27b3bc5cf7affb4)
+        ;
+
+        
+    
+    
+            var marker_61d2f688145a425f8aeeb8145d979fad = L.marker(
+                [16.672027, -96.206861],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_8e180a4ff4cb47abbe0d91c09e7f5b09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ce3459614014667808b57ff5072d2b5 = $(`<div id="html_4ce3459614014667808b57ff5072d2b5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 18 km al N de San Pedro Totolapan camino a Tehuantepec, km 98 carretera # 190, 500 m al S. <strong>Elevación:</strong> 520.0 m  <strong>Fecha:</strong> 2006-05-24 00:00:00+00:00 <strong>Recolectores:</strong> S. Salas M.; E. Lott; T. Atkinson; A. Sánchez M. <strong>Identificadores:</strong> M. Martínez G.</div>`)[0];
+            popup_8e180a4ff4cb47abbe0d91c09e7f5b09.setContent(html_4ce3459614014667808b57ff5072d2b5);
+        
+
+        marker_61d2f688145a425f8aeeb8145d979fad.bindPopup(popup_8e180a4ff4cb47abbe0d91c09e7f5b09)
+        ;
+
+        
+    
+    
+            var marker_747333f028ec4c8a94832c5266c6a75d = L.marker(
+                [13.211944, -86.330556],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_b0492b35c6c94960b74af89533e25534 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a760c7a839bc475da219dd75ce547208 = $(`<div id="html_a760c7a839bc475da219dd75ce547208" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Estelí, paisaje terrestre protegido Miraflor Moropotente, parcela 3, 100 m al oeste de la casa de  habitación del Sr. Félix Castillo <strong>Elevación:</strong> 910.0 m  <strong>Fecha:</strong> 2007-10-23 00:00:00+00:00 <strong>Recolectores:</strong> D.I. Moreno V. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b0492b35c6c94960b74af89533e25534.setContent(html_a760c7a839bc475da219dd75ce547208);
+        
+
+        marker_747333f028ec4c8a94832c5266c6a75d.bindPopup(popup_b0492b35c6c94960b74af89533e25534)
+        ;
+
+        
+    
+    
+            var marker_d97f4864f1174821a01e1cae880d9f7a = L.marker(
+                [13.211944, -86.330556],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_6e6bac74c21647e7be0b5afc06fbad3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ae2844a2c3140ebb423d8ce9e46db70 = $(`<div id="html_7ae2844a2c3140ebb423d8ce9e46db70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Estelí, Paisaje Terrestre Protegido Miraflor Moropotente, parcela 2 en la Comunidad El Coyolito en la propiedad del Sr. Alberto Rugama 500 m al norte <strong>Elevación:</strong> 910.0 m  <strong>Fecha:</strong> 2007-10-23 00:00:00+00:00 <strong>Recolectores:</strong> N. Pinell R. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_6e6bac74c21647e7be0b5afc06fbad3c.setContent(html_7ae2844a2c3140ebb423d8ce9e46db70);
+        
+
+        marker_d97f4864f1174821a01e1cae880d9f7a.bindPopup(popup_6e6bac74c21647e7be0b5afc06fbad3c)
+        ;
+
+        
+    
+    
+            var marker_c9119103b93840a8857a0b729bee85f3 = L.marker(
+                [13.211944, -86.330556],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_06ac357fd2cf44309fed323cd3f4031f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02a875df01ab4f6c8b0015eb108faa09 = $(`<div id="html_02a875df01ab4f6c8b0015eb108faa09" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Estelí, paisaje terrestre protegido Miraflor Moropotente, parcela 2 en la Comunidad El Coyolito en la propiedad del Sr. Alberto Rugama 500 m al norte <strong>Elevación:</strong> 910.0 m  <strong>Fecha:</strong> 2007-10-13 00:00:00+00:00 <strong>Recolectores:</strong> R.A. Rugama <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_06ac357fd2cf44309fed323cd3f4031f.setContent(html_02a875df01ab4f6c8b0015eb108faa09);
+        
+
+        marker_c9119103b93840a8857a0b729bee85f3.bindPopup(popup_06ac357fd2cf44309fed323cd3f4031f)
+        ;
+
+        
+    
+    
+            var marker_e6c557413bbe4d788f4122adc3a9c35c = L.marker(
+                [13.211944, -86.330556],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_9caeebac5c7a429fbb9e060098b5646b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4c08a6ed3564aa89f9cd008d867d93d = $(`<div id="html_f4c08a6ed3564aa89f9cd008d867d93d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva paisaje protegido Miraflor Moropotente, Comunidad El Coyolito, parcela 2, finca de Alberto Rugama <strong>Elevación:</strong> 910.0 m  <strong>Fecha:</strong> 2007-10-23 00:00:00+00:00 <strong>Recolectores:</strong> E.L. Siles G. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9caeebac5c7a429fbb9e060098b5646b.setContent(html_f4c08a6ed3564aa89f9cd008d867d93d);
+        
+
+        marker_e6c557413bbe4d788f4122adc3a9c35c.bindPopup(popup_9caeebac5c7a429fbb9e060098b5646b)
+        ;
+
+        
+    
+    
+            var marker_4babc828a9ae4b8bb32991fdf90b4f95 = L.marker(
+                [12.96667, -86.28333],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_9340ffb8cee0496c9c6c414931d1ee58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f7e49c940f34ace9050864ee5abf9c7 = $(`<div id="html_9f7e49c940f34ace9050864ee5abf9c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Hornillo al S de Santa Cruz <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1983-10-02 00:00:00+00:00 <strong>Recolectores:</strong> Pedro P. Moreno <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9340ffb8cee0496c9c6c414931d1ee58.setContent(html_9f7e49c940f34ace9050864ee5abf9c7);
+        
+
+        marker_4babc828a9ae4b8bb32991fdf90b4f95.bindPopup(popup_9340ffb8cee0496c9c6c414931d1ee58)
+        ;
+
+        
+    
+    
+            var marker_bad823ca49f74dadab6488ac4c2040fd = L.marker(
+                [13.680860999999998, -86.62133299999999],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_d8d66c7dcb294c6c9e9f83e97cc5d4f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7e0d66eda6a4a34840a8be0f6577cfa = $(`<div id="html_d7e0d66eda6a4a34840a8be0f6577cfa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 5.5 km W of Ocotal (highway) along road to Macuelizo, at first river (bed); thorn forest on metamorphic rocks <strong>Elevación:</strong> 840.0 m  <strong>Fecha:</strong> 2014-06-06 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_d8d66c7dcb294c6c9e9f83e97cc5d4f3.setContent(html_d7e0d66eda6a4a34840a8be0f6577cfa);
+        
+
+        marker_bad823ca49f74dadab6488ac4c2040fd.bindPopup(popup_d8d66c7dcb294c6c9e9f83e97cc5d4f3)
+        ;
+
+        
+    
+    
+            var marker_0316f93b198d40ee9e4aa9d26f539c49 = L.marker(
+                [13.682972, -86.411556],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_f78ef226ee534cf5a128d660fd3b1ad0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_452fe48356404296acef9b37854a9886 = $(`<div id="html_452fe48356404296acef9b37854a9886" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 3.5 km N of highway at Mozonte (at Km 235.8)  along road into the Cordillera de Dipilto y Jalapa; thorn forest along dry stream bed, on black to gray metamorphic rocks <strong>Elevación:</strong> 775.0 m  <strong>Fecha:</strong> 2015-01-08 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_f78ef226ee534cf5a128d660fd3b1ad0.setContent(html_452fe48356404296acef9b37854a9886);
+        
+
+        marker_0316f93b198d40ee9e4aa9d26f539c49.bindPopup(popup_f78ef226ee534cf5a128d660fd3b1ad0)
+        ;
+
+        
+    
+    
+            var marker_43eb7b3f4d2746b1913449a9894199f0 = L.marker(
+                [13.716667000000001, -86.5],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_8fad55179ed9468a9d72b2376a956c2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f9a162b700f41d4b6f2502aead3b145 = $(`<div id="html_5f9a162b700f41d4b6f2502aead3b145" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Dipilto, Route, south of Plan Grande, N of San Fernando, a tiny hamlet; steep hills, narrow valleys, clay soil  [Seymour series]. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1973-11-02 00:00:00+00:00 <strong>Recolectores:</strong> K.C. Budier <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8fad55179ed9468a9d72b2376a956c2e.setContent(html_5f9a162b700f41d4b6f2502aead3b145);
+        
+
+        marker_43eb7b3f4d2746b1913449a9894199f0.bindPopup(popup_8fad55179ed9468a9d72b2376a956c2e)
+        ;
+
+        
+    
+    
+            var marker_df218c26f87045a1ac49fc7d54728123 = L.marker(
+                [12.75, -86.26666],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_d24729830a3c436ebc8c236143ab33d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a606c3328f294a06920e5238cb1ecbc1 = $(`<div id="html_a606c3328f294a06920e5238cb1ecbc1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Nancitál, carretera al la planta hidroelectrica Santa Barbara, 10 km de la carretera León-San Isidro <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 1980-12-16 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> G. Webster</div>`)[0];
+            popup_d24729830a3c436ebc8c236143ab33d7.setContent(html_a606c3328f294a06920e5238cb1ecbc1);
+        
+
+        marker_df218c26f87045a1ac49fc7d54728123.bindPopup(popup_d24729830a3c436ebc8c236143ab33d7)
+        ;
+
+        
+    
+    
+            var marker_925f70d5fde146149723bef516f00ba9 = L.marker(
+                [13.23361, -86.33333],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_0b9719ae973d47378d62282fc72247b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b00036a198f74e4db07420d528b3b50c = $(`<div id="html_b00036a198f74e4db07420d528b3b50c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Comunidad La Naranja de Fatima, caminando sobre la parte noreste del Río Esteli <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1999-11-25 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_0b9719ae973d47378d62282fc72247b8.setContent(html_b00036a198f74e4db07420d528b3b50c);
+        
+
+        marker_925f70d5fde146149723bef516f00ba9.bindPopup(popup_0b9719ae973d47378d62282fc72247b8)
+        ;
+
+        
+    
+    
+            var marker_ad8d744c5e2b4eb7a4fef4d3a563c95d = L.marker(
+                [13.25, -86.36666],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_462e0909b36c41d9989d9ecb9dd8a6c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01212938014b440d9535b20c6f9aa142 = $(`<div id="html_01212938014b440d9535b20c6f9aa142" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Km 167 on Hwy. 1, ca. 15.8 km N of entrance to Estelí; along intermittent stream bed, deciduous forest on steep rocky slopes. <strong>Elevación:</strong> 812.5 m  <strong>Fecha:</strong> 1980-05-31 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_462e0909b36c41d9989d9ecb9dd8a6c9.setContent(html_01212938014b440d9535b20c6f9aa142);
+        
+
+        marker_ad8d744c5e2b4eb7a4fef4d3a563c95d.bindPopup(popup_462e0909b36c41d9989d9ecb9dd8a6c9)
+        ;
+
+        
+    
+    
+            var marker_b91bd9253d384293923d5f9e11eb27cb = L.marker(
+                [12.58333, -86.0],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_bf59436bad334e96917090c7b1af5b06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02d5639d90564dffbeca44df182c9913 = $(`<div id="html_02d5639d90564dffbeca44df182c9913" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Puertas Viejas, Santa Juana <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1983-06-08 00:00:00+00:00 <strong>Recolectores:</strong> M. Araquistain <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_bf59436bad334e96917090c7b1af5b06.setContent(html_02d5639d90564dffbeca44df182c9913);
+        
+
+        marker_b91bd9253d384293923d5f9e11eb27cb.bindPopup(popup_bf59436bad334e96917090c7b1af5b06)
+        ;
+
+        
+    
+    
+            var marker_70ae04b527ea4f4ab68fc296294e803d = L.marker(
+                [13.25, -86.35],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_8b40a2f359bd47569c1f4c2892fba413 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0127d0ac17f743e7b02eb203f210706b = $(`<div id="html_0127d0ac17f743e7b02eb203f210706b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuesta Kukamonga, Km 168 Carretera Panamericana Norte <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1985-05-03 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_8b40a2f359bd47569c1f4c2892fba413.setContent(html_0127d0ac17f743e7b02eb203f210706b);
+        
+
+        marker_70ae04b527ea4f4ab68fc296294e803d.bindPopup(popup_8b40a2f359bd47569c1f4c2892fba413)
+        ;
+
+        
+    
+    
+            var marker_ef30eba861924d729f87c7553c9ebb10 = L.marker(
+                [13.25, -86.35],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_ecb50a4910544ddc8a591852e73dc8af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_517e42def2f54960b63b1046fde21ea5 = $(`<div id="html_517e42def2f54960b63b1046fde21ea5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuesta de Kukamonga, Km 168 Carretera Panamericana Norte <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1985-05-11 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_ecb50a4910544ddc8a591852e73dc8af.setContent(html_517e42def2f54960b63b1046fde21ea5);
+        
+
+        marker_ef30eba861924d729f87c7553c9ebb10.bindPopup(popup_ecb50a4910544ddc8a591852e73dc8af)
+        ;
+
+        
+    
+    
+            var marker_f656bc152dbc4bfc9433e3fe2b45498c = L.marker(
+                [12.58333, -85.93333],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_9c83e267ec7d4273baa5962b4bbfa3eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9339b420bd04e9aa58d269316ad1dd0 = $(`<div id="html_c9339b420bd04e9aa58d269316ad1dd0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 5 km al oeste de El Cacao, carretera Puertas Viejas-Esquipulas <strong>Elevación:</strong> 540.0 m  <strong>Fecha:</strong> 1985-06-05 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_9c83e267ec7d4273baa5962b4bbfa3eb.setContent(html_c9339b420bd04e9aa58d269316ad1dd0);
+        
+
+        marker_f656bc152dbc4bfc9433e3fe2b45498c.bindPopup(popup_9c83e267ec7d4273baa5962b4bbfa3eb)
+        ;
+
+        
+    
+    
+            var marker_98356edcf2604187b3a1c9204fee2f8e = L.marker(
+                [12.966660000000001, -85.96666],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_4143101267db46718965fd6378349313 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_243e33124b674672a46c302083f04f31 = $(`<div id="html_243e33124b674672a46c302083f04f31" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Eden, camino viejo a Jinotega <strong>Elevación:</strong> 856.0 m  <strong>Fecha:</strong> 1984-02-01 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_4143101267db46718965fd6378349313.setContent(html_243e33124b674672a46c302083f04f31);
+        
+
+        marker_98356edcf2604187b3a1c9204fee2f8e.bindPopup(popup_4143101267db46718965fd6378349313)
+        ;
+
+        
+    
+    
+            var marker_006385f2c4454a43b2477ed29571c6e5 = L.marker(
+                [12.966660000000001, -86.28333],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_6fb62e6345994e6db81c9d8e985314ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ba1adc4549944698e0f2b49fd423821 = $(`<div id="html_1ba1adc4549944698e0f2b49fd423821" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Hornillo, al S de Santa Cruz <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1983-10-02 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> G. Webster</div>`)[0];
+            popup_6fb62e6345994e6db81c9d8e985314ac.setContent(html_1ba1adc4549944698e0f2b49fd423821);
+        
+
+        marker_006385f2c4454a43b2477ed29571c6e5.bindPopup(popup_6fb62e6345994e6db81c9d8e985314ac)
+        ;
+
+        
+    
+    
+            var marker_b934021f92cb49ddb527a0a5ca3011cd = L.marker(
+                [13.116660000000001, -86.41666],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_09b858c1e58b40d293d12e0f8ce57194 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8431fa5e17846be9be09d6458a376e0 = $(`<div id="html_b8431fa5e17846be9be09d6458a376e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Cipreses, 9 km NW de Estelí <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1983-03-31 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> G. Webster</div>`)[0];
+            popup_09b858c1e58b40d293d12e0f8ce57194.setContent(html_b8431fa5e17846be9be09d6458a376e0);
+        
+
+        marker_b934021f92cb49ddb527a0a5ca3011cd.bindPopup(popup_09b858c1e58b40d293d12e0f8ce57194)
+        ;
+
+        
+    
+    
+            var marker_5ba762730bed4d64b9894945e79e02f4 = L.marker(
+                [13.3875, -86.341667],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_07d9c5256fd64265b49de6307f7649df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef660ab8e7114eb4becc98fee81bc4a6 = $(`<div id="html_ef660ab8e7114eb4becc98fee81bc4a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 4.5 miles E of Condega. Disturbed roadsides <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1977-08-06 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat <strong>Identificadores:</strong> F. Seymour</div>`)[0];
+            popup_07d9c5256fd64265b49de6307f7649df.setContent(html_ef660ab8e7114eb4becc98fee81bc4a6);
+        
+
+        marker_5ba762730bed4d64b9894945e79e02f4.bindPopup(popup_07d9c5256fd64265b49de6307f7649df)
+        ;
+
+        
+    
+    
+            var marker_07f39b37b9f741df9aa704e87528db46 = L.marker(
+                [12.97638, -85.97666],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_cf8bba18b211424c9df300df3f27449d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7dbb090a042949d8903e62b14bcb7017 = $(`<div id="html_7dbb090a042949d8903e62b14bcb7017" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 7 km a la entrada del camino viejo a Jinotega, "El Eden" <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1983-10-25 00:00:00+00:00 <strong>Recolectores:</strong> S. Vega|W. Robleto T. <strong>Identificadores:</strong> G. Webster</div>`)[0];
+            popup_cf8bba18b211424c9df300df3f27449d.setContent(html_7dbb090a042949d8903e62b14bcb7017);
+        
+
+        marker_07f39b37b9f741df9aa704e87528db46.bindPopup(popup_cf8bba18b211424c9df300df3f27449d)
+        ;
+
+        
+    
+    
+            var marker_d71c4a55035e4b0fa1d73b740265840f = L.marker(
+                [21.748571151141466, -103.78578296787596],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_20b091169683496580e503355db4676f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8788a87052d4b6c92e08b1c468cca70 = $(`<div id="html_a8788a87052d4b6c92e08b1c468cca70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 11 Km al NE de San Martín de Bolaños, camino a Chimaltitán <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1983-10-21 00:00:00+00:00 <strong>Recolectores:</strong> E. J. Lott; L. Rico A.; O. Téllez V. <strong>Identificadores:</strong> G. L. Webster</div>`)[0];
+            popup_20b091169683496580e503355db4676f.setContent(html_a8788a87052d4b6c92e08b1c468cca70);
+        
+
+        marker_d71c4a55035e4b0fa1d73b740265840f.bindPopup(popup_20b091169683496580e503355db4676f)
+        ;
+
+        
+    
+    
+            var marker_4aa634a69bef4c8289bce056e6b948d9 = L.marker(
+                [27.0, -108.78333300000001],
+                {}
+            ).addTo(marker_cluster_6836a49315874c459927c338b7d9c3de);
+        
+    
+        var popup_54032345f26b4ab0a6897012254cec47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4797a6ac8847411c90c0d3b4b750fc49 = $(`<div id="html_4797a6ac8847411c90c0d3b4b750fc49" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Guayabo, (upper) Crossing of the Río Cuchujaqui, ca 3 Km NE of Sabinito Sur and 15 Km (airline) ESE of Alamos <strong>Elevación:</strong> 175.0 m  <strong>Fecha:</strong> 1992-10-12 00:00:00+00:00 <strong>Recolectores:</strong> T. R. van Devender; S. A. Meyer; B. Pitzer <strong>Identificadores:</strong> G. L. Webster</div>`)[0];
+            popup_54032345f26b4ab0a6897012254cec47.setContent(html_4797a6ac8847411c90c0d3b4b750fc49);
+        
+
+        marker_4aa634a69bef4c8289bce056e6b948d9.bindPopup(popup_54032345f26b4ab0a6897012254cec47)
+        ;
+
+        
+    
+    
+            var layer_control_364fa04e38554a6e9e0938d16ecc0730 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_63957c05152944f7a63b81133f933c06,
+                    "ESRI World Imagery" : tile_layer_1ad687377d9a4c9290f88251859884a5,
+                },
+                overlays :  {
+                    "macro_element_6836a49315874c459927c338b7d9c3de" : marker_cluster_6836a49315874c459927c338b7d9c3de,
+                },
+            };
+            L.control.layers(
+                layer_control_364fa04e38554a6e9e0938d16ecc0730.base_layers,
+                layer_control_364fa04e38554a6e9e0938d16ecc0730.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_4df2b4b720ad4206a727fc2cebee82e2);
+            tile_layer_1ad687377d9a4c9290f88251859884a5.remove();
+        
+</script>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ff4c591a76d4495ea3c1a4a852d374ca {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ff4c591a76d4495ea3c1a4a852d374ca" ></div>
+        
+</body>
+<script>    
+    
+            var map_ff4c591a76d4495ea3c1a4a852d374ca = L.map(
+                "map_ff4c591a76d4495ea3c1a4a852d374ca",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_ff4c591a76d4495ea3c1a4a852d374ca);
+
+            
+
+        
+    
+            var tile_layer_96e66b10b85949f49e230d3f302daafc = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ff4c591a76d4495ea3c1a4a852d374ca);
+        
+    
+            var tile_layer_4a4acf68807647e09f15e0ac05217a8e = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ff4c591a76d4495ea3c1a4a852d374ca);
+        
+    
+            var marker_cluster_9a960edc702c41c580d1ba6814494266 = L.markerClusterGroup(
+                {}
+            );
+            map_ff4c591a76d4495ea3c1a4a852d374ca.addLayer(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+            var marker_f60f880c7e7c4eacac8a5307c8f73002 = L.marker(
+                [9.4, -83.33],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_97c8ce0a14f6426998093044e02da448 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32d039f596d54faf862941dd759f6484 = $(`<div id="html_32d039f596d54faf862941dd759f6484" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Urén, subiendo a Cerro Chun, siguiendo un antiguocamino de Quebrada Chaho a Alto Lari. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Lobo, Silvia</div>`)[0];
+            popup_97c8ce0a14f6426998093044e02da448.setContent(html_32d039f596d54faf862941dd759f6484);
+        
+
+        marker_f60f880c7e7c4eacac8a5307c8f73002.bindPopup(popup_97c8ce0a14f6426998093044e02da448)
+        ;
+
+        
+    
+    
+            var marker_d4341065a7134e6988b67ac65f590cbc = L.marker(
+                [9.43, -83.05],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_65a1cfb46f7e42f8ac0d35b6cd44a202 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e702a2d538d4fd5b2b1cc60bdb8db95 = $(`<div id="html_2e702a2d538d4fd5b2b1cc60bdb8db95" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari. Siguiendo la fila entre río Dapari y Río Lari, bajando hasta el cauce del mismo. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_65a1cfb46f7e42f8ac0d35b6cd44a202.setContent(html_2e702a2d538d4fd5b2b1cc60bdb8db95);
+        
+
+        marker_d4341065a7134e6988b67ac65f590cbc.bindPopup(popup_65a1cfb46f7e42f8ac0d35b6cd44a202)
+        ;
+
+        
+    
+    
+            var marker_4316d9429a754cc5b881942e4e2bf191 = L.marker(
+                [9.78, -83.14],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_107ade1d6f8a448bb427717619ca02e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f4015c326dd4ed28060ae73138eb395 = $(`<div id="html_1f4015c326dd4ed28060ae73138eb395" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Progreso. Bosque transicional entre los 1200 m y 1500 m. Fila Matama. Valle de la Estrella. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-04-22 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Anderson, William R.</div>`)[0];
+            popup_107ade1d6f8a448bb427717619ca02e3.setContent(html_1f4015c326dd4ed28060ae73138eb395);
+        
+
+        marker_4316d9429a754cc5b881942e4e2bf191.bindPopup(popup_107ade1d6f8a448bb427717619ca02e3)
+        ;
+
+        
+    
+    
+            var marker_1b16c15e4b3f46cd823af93859f41c2a = L.marker(
+                [9.56, -84.01],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_b4c90b2b903b4a6c912b65080b947b82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a0b7bf543dd4c5a8e88cb61ca870da7 = $(`<div id="html_1a0b7bf543dd4c5a8e88cb61ca870da7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino entre Naranjillo y Los Llanos de Santa María <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1999-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Estrada, Armando <strong>Identificadores:</strong> Anderson, William R.</div>`)[0];
+            popup_b4c90b2b903b4a6c912b65080b947b82.setContent(html_1a0b7bf543dd4c5a8e88cb61ca870da7);
+        
+
+        marker_1b16c15e4b3f46cd823af93859f41c2a.bindPopup(popup_b4c90b2b903b4a6c912b65080b947b82)
+        ;
+
+        
+    
+    
+            var marker_7575b9bd4a504149861191ffb7f90315 = L.marker(
+                [9.29, -83.76],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_90f5016f48d8405fad0d623d405fa753 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8276815d163144dba46364ced3efbd9c = $(`<div id="html_8276815d163144dba46364ced3efbd9c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Tinamastes, por la fila del farallón. <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_90f5016f48d8405fad0d623d405fa753.setContent(html_8276815d163144dba46364ced3efbd9c);
+        
+
+        marker_7575b9bd4a504149861191ffb7f90315.bindPopup(popup_90f5016f48d8405fad0d623d405fa753)
+        ;
+
+        
+    
+    
+            var marker_df35198f6ff346afb5adbaa3c6c3090d = L.marker(
+                [9.72, -83.3],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_15a35e0d60bf425eacc8a3ed36658392 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef3fbed4193a4f68af2938f6bc00f6e7 = $(`<div id="html_ef3fbed4193a4f68af2938f6bc00f6e7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Almirante.  Cerro Chiqui.  Subiendo desde la base por el flanco noerte. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1995-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Anderson, William R.</div>`)[0];
+            popup_15a35e0d60bf425eacc8a3ed36658392.setContent(html_ef3fbed4193a4f68af2938f6bc00f6e7);
+        
+
+        marker_df35198f6ff346afb5adbaa3c6c3090d.bindPopup(popup_15a35e0d60bf425eacc8a3ed36658392)
+        ;
+
+        
+    
+    
+            var marker_f6275a1a335b47cfa254b952795686f1 = L.marker(
+                [9.4028, -83.3333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_fe42e65d56ee473eb83e0bf0b09a8e24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99161a89ca9d461888a7fed7be3f87d6 = $(`<div id="html_99161a89ca9d461888a7fed7be3f87d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Urén, subiendo a Cerro Chun siguendo un antiguo camino de Quebrada Chaho a Alto Lari <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Herrera C. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_fe42e65d56ee473eb83e0bf0b09a8e24.setContent(html_99161a89ca9d461888a7fed7be3f87d6);
+        
+
+        marker_f6275a1a335b47cfa254b952795686f1.bindPopup(popup_fe42e65d56ee473eb83e0bf0b09a8e24)
+        ;
+
+        
+    
+    
+            var marker_7dab8471637843e7bceeb84fb305ecd1 = L.marker(
+                [9.4028, -83.3333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_2c80364f7e7445ab878d194c4cda7df0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be94758891e740979a6ffdff0fdad4c2 = $(`<div id="html_be94758891e740979a6ffdff0fdad4c2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Urén, subiendo a Cerro Chun siguendo un antiguo camino de Quebrada Chaho a Alto Lari <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Herrera C. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2c80364f7e7445ab878d194c4cda7df0.setContent(html_be94758891e740979a6ffdff0fdad4c2);
+        
+
+        marker_7dab8471637843e7bceeb84fb305ecd1.bindPopup(popup_2c80364f7e7445ab878d194c4cda7df0)
+        ;
+
+        
+    
+    
+            var marker_aa349670fa1a482da4e7659ff382cfb5 = L.marker(
+                [9.402778, -83.333333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_ff4da8d44c1644cba901dd1b876f4f6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28e9392f4678406a93e478fbbad50ce2 = $(`<div id="html_28e9392f4678406a93e478fbbad50ce2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Talamanca, Alto Urén, up to Cerro Chun, on an old road from Quebrada Chaho & Alto Lari <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ff4da8d44c1644cba901dd1b876f4f6a.setContent(html_28e9392f4678406a93e478fbbad50ce2);
+        
+
+        marker_aa349670fa1a482da4e7659ff382cfb5.bindPopup(popup_ff4da8d44c1644cba901dd1b876f4f6a)
+        ;
+
+        
+    
+    
+            var marker_ffc1b68d58fc403388da82e222d91045 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_b355ed5c9342468c90f9991aac4a3803 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6767946c3b9746aaafbd181f700bb8b7 = $(`<div id="html_6767946c3b9746aaafbd181f700bb8b7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon, Valle de la Estrella, Fila Matama. Cerca de 11 km SW del pueblo de Aguas Zarcas. Punto 10C. Bosque con predominio de arboles de Drimys, Orepanax; sotobosque con Piper, Geonoma, Miconia. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_b355ed5c9342468c90f9991aac4a3803.setContent(html_6767946c3b9746aaafbd181f700bb8b7);
+        
+
+        marker_ffc1b68d58fc403388da82e222d91045.bindPopup(popup_b355ed5c9342468c90f9991aac4a3803)
+        ;
+
+        
+    
+    
+            var marker_723bf0b0c41f4a33ad732867cedb549a = L.marker(
+                [9.294722, -83.764167],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_984ebedacc094fc2bf106844788a7bd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0550cd4508a44df1af612ce5abce9635 = $(`<div id="html_0550cd4508a44df1af612ce5abce9635" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Tinamastes, por la Fila del Farallon, bosque y margen de bosque muy humedo (nublado) con pocos arboles gdes. <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_984ebedacc094fc2bf106844788a7bd4.setContent(html_0550cd4508a44df1af612ce5abce9635);
+        
+
+        marker_723bf0b0c41f4a33ad732867cedb549a.bindPopup(popup_984ebedacc094fc2bf106844788a7bd4)
+        ;
+
+        
+    
+    
+            var marker_044612be58754d8b9b9e579df08cd54a = L.marker(
+                [9.430556, -83.05555600000001],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_bf26992a98684ec18ee2ac3fd36f24b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df4d86f3750a4dc2a75c044566db7547 = $(`<div id="html_df4d86f3750a4dc2a75c044566db7547" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Lari, siguiendo fila entre Rios Dapari y Lari, bajando hasta su cauce. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_bf26992a98684ec18ee2ac3fd36f24b1.setContent(html_df4d86f3750a4dc2a75c044566db7547);
+        
+
+        marker_044612be58754d8b9b9e579df08cd54a.bindPopup(popup_bf26992a98684ec18ee2ac3fd36f24b1)
+        ;
+
+        
+    
+    
+            var marker_6aa3544f1e5346fda39264641d92f740 = L.marker(
+                [9.788611, -83.141667],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_9ea1bdba52e945989f55906f62a8bce3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c59e49f4b28415db35269d8157b14ea = $(`<div id="html_1c59e49f4b28415db35269d8157b14ea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Progreso. Bosque transicional entre los 1200 m y 1500 m. Fila Matama. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-04-22 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_9ea1bdba52e945989f55906f62a8bce3.setContent(html_1c59e49f4b28415db35269d8157b14ea);
+        
+
+        marker_6aa3544f1e5346fda39264641d92f740.bindPopup(popup_9ea1bdba52e945989f55906f62a8bce3)
+        ;
+
+        
+    
+    
+            var marker_fb17a4637aad4ff2befd8f030a915662 = L.marker(
+                [9.402778, -83.333333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_58643c12bc06416bb1c9399ab93f011b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc1ddf7bba3d492aa3e151874874e21b = $(`<div id="html_bc1ddf7bba3d492aa3e151874874e21b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Uren, subiendo a Cerro Chun siguiendo un antiguo camino de Quebrada Chaho a Alto Lari. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Anderson, William</div>`)[0];
+            popup_58643c12bc06416bb1c9399ab93f011b.setContent(html_bc1ddf7bba3d492aa3e151874874e21b);
+        
+
+        marker_fb17a4637aad4ff2befd8f030a915662.bindPopup(popup_58643c12bc06416bb1c9399ab93f011b)
+        ;
+
+        
+    
+    
+            var marker_b7567d0e18ea499f9deb17e5c27ff98a = L.marker(
+                [9.784722, -83.690278],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_fe56fee3018b4ba2814d9e10f80e1fae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a79dd04177b0440ebe801c04d59f27ac = $(`<div id="html_a79dd04177b0440ebe801c04d59f27ac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pejibaye, La Marta. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2006-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Armando Soto <strong>Identificadores:</strong> Soto, Armando</div>`)[0];
+            popup_fe56fee3018b4ba2814d9e10f80e1fae.setContent(html_a79dd04177b0440ebe801c04d59f27ac);
+        
+
+        marker_b7567d0e18ea499f9deb17e5c27ff98a.bindPopup(popup_fe56fee3018b4ba2814d9e10f80e1fae)
+        ;
+
+        
+    
+    
+            var marker_4a66d1f470fe438bbd745d636d1442ec = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_8939d7f3a19344258b168f4885888eee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_924994bc97aa400cb73717fb98d2300f = $(`<div id="html_924994bc97aa400cb73717fb98d2300f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_8939d7f3a19344258b168f4885888eee.setContent(html_924994bc97aa400cb73717fb98d2300f);
+        
+
+        marker_4a66d1f470fe438bbd745d636d1442ec.bindPopup(popup_8939d7f3a19344258b168f4885888eee)
+        ;
+
+        
+    
+    
+            var marker_4d3980760c6e4c57a25be0b93377ded0 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_9ac87394ed1f41da959583e98e43a7e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ecc7b35242274c3c96fb4e19ad545440 = $(`<div id="html_ecc7b35242274c3c96fb4e19ad545440" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_9ac87394ed1f41da959583e98e43a7e1.setContent(html_ecc7b35242274c3c96fb4e19ad545440);
+        
+
+        marker_4d3980760c6e4c57a25be0b93377ded0.bindPopup(popup_9ac87394ed1f41da959583e98e43a7e1)
+        ;
+
+        
+    
+    
+            var marker_774dd0302ae5487f88b36225ead08bfd = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_75acb3befd854a5fae0a642f71d67bcd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d21176ee3df04bf6929cc7c4d2a088d7 = $(`<div id="html_d21176ee3df04bf6929cc7c4d2a088d7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_75acb3befd854a5fae0a642f71d67bcd.setContent(html_d21176ee3df04bf6929cc7c4d2a088d7);
+        
+
+        marker_774dd0302ae5487f88b36225ead08bfd.bindPopup(popup_75acb3befd854a5fae0a642f71d67bcd)
+        ;
+
+        
+    
+    
+            var marker_ea5e39ca14bc474581c3187b0f0c1700 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_c0e7fe38d50f41fe90e59fbf31f036db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93638679f84743b4a1a2c99510d52f35 = $(`<div id="html_93638679f84743b4a1a2c99510d52f35" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_c0e7fe38d50f41fe90e59fbf31f036db.setContent(html_93638679f84743b4a1a2c99510d52f35);
+        
+
+        marker_ea5e39ca14bc474581c3187b0f0c1700.bindPopup(popup_c0e7fe38d50f41fe90e59fbf31f036db)
+        ;
+
+        
+    
+    
+            var marker_21b542b2499145e9bdf5ef6a365197f3 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_5dd91b142e7d4b7ea5b0331607fd3855 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e00c51aaa734dd593a931b1ebc802a4 = $(`<div id="html_5e00c51aaa734dd593a931b1ebc802a4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_5dd91b142e7d4b7ea5b0331607fd3855.setContent(html_5e00c51aaa734dd593a931b1ebc802a4);
+        
+
+        marker_21b542b2499145e9bdf5ef6a365197f3.bindPopup(popup_5dd91b142e7d4b7ea5b0331607fd3855)
+        ;
+
+        
+    
+    
+            var marker_88fbb9540b8843b58b6571c8a0b89e46 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_819f0aa4c18c403eb29e406018e03af2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4061780c96149c4bf2b4f16d9bc085b = $(`<div id="html_c4061780c96149c4bf2b4f16d9bc085b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_819f0aa4c18c403eb29e406018e03af2.setContent(html_c4061780c96149c4bf2b4f16d9bc085b);
+        
+
+        marker_88fbb9540b8843b58b6571c8a0b89e46.bindPopup(popup_819f0aa4c18c403eb29e406018e03af2)
+        ;
+
+        
+    
+    
+            var marker_f405b158b5484cd88906f72ec57da941 = L.marker(
+                [9.79699, -83.16212],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_a93310c0cbcf4854b094d013d30faae4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e9142d4f1fc34c51b9ee6909c968ada9 = $(`<div id="html_e9142d4f1fc34c51b9ee6909c968ada9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2007-10-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; Daniel Solano ; Marcos Moraga ; Carlos Godínez ; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Santamaría, Daniel</div>`)[0];
+            popup_a93310c0cbcf4854b094d013d30faae4.setContent(html_e9142d4f1fc34c51b9ee6909c968ada9);
+        
+
+        marker_f405b158b5484cd88906f72ec57da941.bindPopup(popup_a93310c0cbcf4854b094d013d30faae4)
+        ;
+
+        
+    
+    
+            var marker_9a69e47b57d7461d9af64e37a01a6d9e = L.marker(
+                [9.4, -83.33],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_f14f2b8822ba47618469f698367b932c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c7aa17d5da047e19eba29bcc4509eef = $(`<div id="html_2c7aa17d5da047e19eba29bcc4509eef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon: Cantón de Talamanca Alto Urén, subiendo a Cerro Chun siguiendo un antiguo camino de Quebrada Chaho a Alto Lari. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, G. <strong>Identificadores:</strong> Anderson, W.R.</div>`)[0];
+            popup_f14f2b8822ba47618469f698367b932c.setContent(html_2c7aa17d5da047e19eba29bcc4509eef);
+        
+
+        marker_9a69e47b57d7461d9af64e37a01a6d9e.bindPopup(popup_f14f2b8822ba47618469f698367b932c)
+        ;
+
+        
+    
+    
+            var marker_2f4b36c99ef04753bf3860884a4da4a6 = L.marker(
+                [9.4, -83.33],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_96ce42a8abb643aa9bb922ff1e93132c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ce9321b3a5e404fbe75783db94fb29b = $(`<div id="html_6ce9321b3a5e404fbe75783db94fb29b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon: Cantón de Talamanca Alto Urén, subiendo a Cerro Chun siguiendo un antiguo camino de Quebrada Chaho a Alto Lari. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, G. <strong>Identificadores:</strong> Anderson, W.R.</div>`)[0];
+            popup_96ce42a8abb643aa9bb922ff1e93132c.setContent(html_6ce9321b3a5e404fbe75783db94fb29b);
+        
+
+        marker_2f4b36c99ef04753bf3860884a4da4a6.bindPopup(popup_96ce42a8abb643aa9bb922ff1e93132c)
+        ;
+
+        
+    
+    
+            var marker_d47a454d582944948780ef64a6ccbd11 = L.marker(
+                [9.4, -83.33],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_019d0e854e604700ab013a25686634ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83633638e98a4678b9fb94c0ef83bba0 = $(`<div id="html_83633638e98a4678b9fb94c0ef83bba0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Urén <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> William Russell Anderson</div>`)[0];
+            popup_019d0e854e604700ab013a25686634ae.setContent(html_83633638e98a4678b9fb94c0ef83bba0);
+        
+
+        marker_d47a454d582944948780ef64a6ccbd11.bindPopup(popup_019d0e854e604700ab013a25686634ae)
+        ;
+
+        
+    
+    
+            var marker_a684b7f5bbdd4d4f85bc09a0c3865f20 = L.marker(
+                [9.4028, -83.3333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_fd044961c7d3477aa904480ce66a3a0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d94a76a0ff54c55ac5b8b8ab163e9b0 = $(`<div id="html_6d94a76a0ff54c55ac5b8b8ab163e9b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto Urén, subiendo a Cerro Chun siguiendo un antiguo camino de Quebrada Chaho a Alto Lari <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Herrera C. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_fd044961c7d3477aa904480ce66a3a0e.setContent(html_6d94a76a0ff54c55ac5b8b8ab163e9b0);
+        
+
+        marker_a684b7f5bbdd4d4f85bc09a0c3865f20.bindPopup(popup_fd044961c7d3477aa904480ce66a3a0e)
+        ;
+
+        
+    
+    
+            var marker_03a70cc61de24ff0b86cbee9f721e680 = L.marker(
+                [9.72, -83.3],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_9c6f20041a5c4e709098cc1a075bea44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b770e2a20fcd4804a64c4008a4ad4ce3 = $(`<div id="html_b770e2a20fcd4804a64c4008a4ad4ce3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Almirante. Cerro Chiqui. Subiendo desde la base por el flanco norte. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1995-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch.|William Gamboa E. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_9c6f20041a5c4e709098cc1a075bea44.setContent(html_b770e2a20fcd4804a64c4008a4ad4ce3);
+        
+
+        marker_03a70cc61de24ff0b86cbee9f721e680.bindPopup(popup_9c6f20041a5c4e709098cc1a075bea44)
+        ;
+
+        
+    
+    
+            var marker_af5662d817854c4586632607b6ed0eb9 = L.marker(
+                [9.29, -83.76],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_98b32ca01c3741c4a4e680fd42146e7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c4a056fd19947eea371efc01dc61abf = $(`<div id="html_3c4a056fd19947eea371efc01dc61abf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña, Fila Tinamstes, por la Fila del Farallón, bosque y margen de bosque muy húmedo (nublado) con pocos árboles grandes <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Sachiko Yasuda|José Á. González R.|T. Bermúdez <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_98b32ca01c3741c4a4e680fd42146e7c.setContent(html_3c4a056fd19947eea371efc01dc61abf);
+        
+
+        marker_af5662d817854c4586632607b6ed0eb9.bindPopup(popup_98b32ca01c3741c4a4e680fd42146e7c)
+        ;
+
+        
+    
+    
+            var marker_79514d072fe948a58c7ec25a0eb60df9 = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_031963684374477c8c82ec8ae38688a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab9de8d164744fbba7b400b3f4d4caee = $(`<div id="html_ab9de8d164744fbba7b400b3f4d4caee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam region, along road near start de trail from Forestry Station to Rio Hornito. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1988-08-06 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_031963684374477c8c82ec8ae38688a0.setContent(html_ab9de8d164744fbba7b400b3f4d4caee);
+        
+
+        marker_79514d072fe948a58c7ec25a0eb60df9.bindPopup(popup_031963684374477c8c82ec8ae38688a0)
+        ;
+
+        
+    
+    
+            var marker_0d0ca2d5debf41ee93919b9d7ee0aafa = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_36ac30be8dae413ead111dcf94c034df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23110e25fcdf48ef866ec8ac6c9d8f70 = $(`<div id="html_23110e25fcdf48ef866ec8ac6c9d8f70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam area, along trail from road across Rio Hornito. <strong>Elevación:</strong> 1175.0 m  <strong>Fecha:</strong> 1988-08-07 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_36ac30be8dae413ead111dcf94c034df.setContent(html_23110e25fcdf48ef866ec8ac6c9d8f70);
+        
+
+        marker_0d0ca2d5debf41ee93919b9d7ee0aafa.bindPopup(popup_36ac30be8dae413ead111dcf94c034df)
+        ;
+
+        
+    
+    
+            var marker_17fa6f31038f4e8587003a9776e4ca7e = L.marker(
+                [8.751111, -82.251111],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_2b513a36adba4bbdb22e55683cf29ab6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7562b7678de45f3867b075a9ae9b3fe = $(`<div id="html_a7562b7678de45f3867b075a9ae9b3fe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Fortuna Dam, in valley south of lake. Forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1986-12-25 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson|Jorge E. Aranda B. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_2b513a36adba4bbdb22e55683cf29ab6.setContent(html_a7562b7678de45f3867b075a9ae9b3fe);
+        
+
+        marker_17fa6f31038f4e8587003a9776e4ca7e.bindPopup(popup_2b513a36adba4bbdb22e55683cf29ab6)
+        ;
+
+        
+    
+    
+            var marker_e14da9614dac46af8cb216dd24910bd2 = L.marker(
+                [9.4, -83.33],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_96bebeedb3664007aac983eaddbc2006 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7855a1f76124a9da0610f01d4c4a72c = $(`<div id="html_f7855a1f76124a9da0610f01d4c4a72c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Talamanca Alto Urén, subiendo a Cerro Chun siguiendo un antiguo camino de Quebrada Chaho a Alto Lari. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-07-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_96bebeedb3664007aac983eaddbc2006.setContent(html_f7855a1f76124a9da0610f01d4c4a72c);
+        
+
+        marker_e14da9614dac46af8cb216dd24910bd2.bindPopup(popup_96bebeedb3664007aac983eaddbc2006)
+        ;
+
+        
+    
+    
+            var marker_e5cac50c79a242fda0953e7b19c43b85 = L.marker(
+                [9.788611, -83.141667],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_ee2ffffb30b948218db5bb8f5f5a2efc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c76bae4d64d445cd809f8165c5479993 = $(`<div id="html_c76bae4d64d445cd809f8165c5479993" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Limón El Progreso. Fila Matama. Valle de La Estrella. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-04-22 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch.|Abelardo Chacón <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_ee2ffffb30b948218db5bb8f5f5a2efc.setContent(html_c76bae4d64d445cd809f8165c5479993);
+        
+
+        marker_e5cac50c79a242fda0953e7b19c43b85.bindPopup(popup_ee2ffffb30b948218db5bb8f5f5a2efc)
+        ;
+
+        
+    
+    
+            var marker_d0b6c298b3894205a14bbb5a875e28c3 = L.marker(
+                [9.430556, -83.05555600000001],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_9c28d7e58ce443aa8f1fc1722f3166d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46e23525c05846929d41e3114e61182a = $(`<div id="html_46e23525c05846929d41e3114e61182a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bratsi. Alto Lari. Siguiendo la fila entre Río Dapari y Río Lari, bajando hasta el cauce del mismo. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|Heidi H. Schmidt <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_9c28d7e58ce443aa8f1fc1722f3166d4.setContent(html_46e23525c05846929d41e3114e61182a);
+        
+
+        marker_d0b6c298b3894205a14bbb5a875e28c3.bindPopup(popup_9c28d7e58ce443aa8f1fc1722f3166d4)
+        ;
+
+        
+    
+    
+            var marker_64d8886c1e6f470da82fbfdd6f404b28 = L.marker(
+                [8.716667, -82.283333],
+                {}
+            ).addTo(marker_cluster_9a960edc702c41c580d1ba6814494266);
+        
+    
+        var popup_55d8b138856545fba4067c8c41a6e521 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26e2f267903d4d4da5f3d0b839c382d3 = $(`<div id="html_26e2f267903d4d4da5f3d0b839c382d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> SO del campamento de Fortuna (Hornito), sito de presa subiendo hasta la finca de Pitti, bordeando el bosque y regresando por el lado S del campamento. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1976-08-14 00:00:00+00:00 <strong>Recolectores:</strong> Mireya D. Correa A.|Robert L. Dressler|Cristina Garibaldi E. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_55d8b138856545fba4067c8c41a6e521.setContent(html_26e2f267903d4d4da5f3d0b839c382d3);
+        
+
+        marker_64d8886c1e6f470da82fbfdd6f404b28.bindPopup(popup_55d8b138856545fba4067c8c41a6e521)
+        ;
+
+        
+    
+    
+            var layer_control_698a7213e7404289814a75a37ef6b379 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_96e66b10b85949f49e230d3f302daafc,
+                    "ESRI World Imagery" : tile_layer_4a4acf68807647e09f15e0ac05217a8e,
+                },
+                overlays :  {
+                    "macro_element_9a960edc702c41c580d1ba6814494266" : marker_cluster_9a960edc702c41c580d1ba6814494266,
+                },
+            };
+            L.control.layers(
+                layer_control_698a7213e7404289814a75a37ef6b379.base_layers,
+                layer_control_698a7213e7404289814a75a37ef6b379.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ff4c591a76d4495ea3c1a4a852d374ca);
+            tile_layer_4a4acf68807647e09f15e0ac05217a8e.remove();
+        
+</script>

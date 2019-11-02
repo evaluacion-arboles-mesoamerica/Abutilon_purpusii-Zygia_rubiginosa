@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ea33f03c8b7e4e898ace11f8d4b07b6f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ea33f03c8b7e4e898ace11f8d4b07b6f" ></div>
+        
+</body>
+<script>    
+    
+            var map_ea33f03c8b7e4e898ace11f8d4b07b6f = L.map(
+                "map_ea33f03c8b7e4e898ace11f8d4b07b6f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_ea33f03c8b7e4e898ace11f8d4b07b6f);
+
+            
+
+        
+    
+            var tile_layer_98af7072ede148458d7de10293fcf353 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ea33f03c8b7e4e898ace11f8d4b07b6f);
+        
+    
+            var tile_layer_20b17250ab20421391b8a2cc3db67a8f = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ea33f03c8b7e4e898ace11f8d4b07b6f);
+        
+    
+            var marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf = L.markerClusterGroup(
+                {}
+            );
+            map_ea33f03c8b7e4e898ace11f8d4b07b6f.addLayer(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+            var marker_579970fa08144190b0669c07e210b73f = L.marker(
+                [9.12, -82.96],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_0ace4b810cc74077983b0445c92287c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbe121f1e5ac4a2ba3c35cc581a5f4a2 = $(`<div id="html_dbe121f1e5ac4a2ba3c35cc581a5f4a2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad. Tararia. Cerros Tararia, Valle del Silencio. <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> F. J. Quesada <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_0ace4b810cc74077983b0445c92287c2.setContent(html_dbe121f1e5ac4a2ba3c35cc581a5f4a2);
+        
+
+        marker_579970fa08144190b0669c07e210b73f.bindPopup(popup_0ace4b810cc74077983b0445c92287c2)
+        ;
+
+        
+    
+    
+            var marker_bb1da072b8274846ab491b03c5145475 = L.marker(
+                [9.408333, -83.30972],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_8c8977b13aa84e18bc8da9bff37738a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2bad13708db47a79d6a10c95bcb9417 = $(`<div id="html_a2bad13708db47a79d6a10c95bcb9417" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad. Cuenca del Sixaola. Bajando hacia Sabanas Durika. <strong>Elevación:</strong> 2650.0 m  <strong>Fecha:</strong> 2003-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_8c8977b13aa84e18bc8da9bff37738a5.setContent(html_a2bad13708db47a79d6a10c95bcb9417);
+        
+
+        marker_bb1da072b8274846ab491b03c5145475.bindPopup(popup_8c8977b13aa84e18bc8da9bff37738a5)
+        ;
+
+        
+    
+    
+            var marker_a3f4b14267634a6abc8a0a0a09079cee = L.marker(
+                [10.183056, -84.23889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_d663f2866eb5444094da9cfdec6e0fba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fdcaedb3b609427a815ed99f42410dbb = $(`<div id="html_fdcaedb3b609427a815ed99f42410dbb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Volcán Poás. Cuenca del Tárcoles. Alrededores de la Estación. <strong>Elevación:</strong> 2548.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> R. Guido Vargas|Alexánder Rodríguez|Evelio Alfaro <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_d663f2866eb5444094da9cfdec6e0fba.setContent(html_fdcaedb3b609427a815ed99f42410dbb);
+        
+
+        marker_a3f4b14267634a6abc8a0a0a09079cee.bindPopup(popup_d663f2866eb5444094da9cfdec6e0fba)
+        ;
+
+        
+    
+    
+            var marker_4f9ecc50aaf64200884b029edee04bfd = L.marker(
+                [9.433271000000001, -83.36463],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_d80afc5f160749dfa0a954ec22d80048 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77a7072c7793416f95da2f71c3e82fde = $(`<div id="html_77a7072c7793416f95da2f71c3e82fde" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad. Cuenca del Sixaola. Talamanca, Bratsi. Sabanas Dúrika. <strong>Elevación:</strong> 2261.0 m  <strong>Fecha:</strong> 2003-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Luis A. González|A. Garita|C. Vargas <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_d80afc5f160749dfa0a954ec22d80048.setContent(html_77a7072c7793416f95da2f71c3e82fde);
+        
+
+        marker_4f9ecc50aaf64200884b029edee04bfd.bindPopup(popup_d80afc5f160749dfa0a954ec22d80048)
+        ;
+
+        
+    
+    
+            var marker_81ee9dfca4a44898ae0c6119b908a159 = L.marker(
+                [10.183056, -84.23889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_de8026e22de24a24af2638ba67dab950 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c27e3e94c02f4a77afc142b71b0abf03 = $(`<div id="html_c27e3e94c02f4a77afc142b71b0abf03" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Volcán Poás. Cuenca del Tárcoles. P.N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2479.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> G. Blanco-Segura|Alexánder Rodríguez <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_de8026e22de24a24af2638ba67dab950.setContent(html_c27e3e94c02f4a77afc142b71b0abf03);
+        
+
+        marker_81ee9dfca4a44898ae0c6119b908a159.bindPopup(popup_de8026e22de24a24af2638ba67dab950)
+        ;
+
+        
+    
+    
+            var marker_58283a3bf8c046b8bad55f2bd5acda58 = L.marker(
+                [9.120833, -82.965278],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_07455ed867bc44f6bf5fb6d304bfec89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c58e5c4fe1f24b299dec2eab28755d19 = $(`<div id="html_c58e5c4fe1f24b299dec2eab28755d19" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio. Cerro Asidbeta. Bosque Primario. <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Javier Quesada; Oscar Esquivel ; Carlos Mario Rodriguez ; Billen Gamboa R. ; Ronald Villalobos <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_07455ed867bc44f6bf5fb6d304bfec89.setContent(html_c58e5c4fe1f24b299dec2eab28755d19);
+        
+
+        marker_58283a3bf8c046b8bad55f2bd5acda58.bindPopup(popup_07455ed867bc44f6bf5fb6d304bfec89)
+        ;
+
+        
+    
+    
+            var marker_cd2f38387e4a48f496c5c36368f95a1d = L.marker(
+                [9.422222, -83.325],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_e6a3b5aca3374d6b9df8970a84d4f9da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83ac616c49b3439a93d1826c02bd7c8e = $(`<div id="html_83ac616c49b3439a93d1826c02bd7c8e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sabanas de Durika, Rio Kuk, 1 Km aguas abajo de la confluencia de los Rios Uk y Kuk. <strong>Elevación:</strong> 2430.0 m  <strong>Fecha:</strong> 1989-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Abelardo Chacon <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_e6a3b5aca3374d6b9df8970a84d4f9da.setContent(html_83ac616c49b3439a93d1826c02bd7c8e);
+        
+
+        marker_cd2f38387e4a48f496c5c36368f95a1d.bindPopup(popup_e6a3b5aca3374d6b9df8970a84d4f9da)
+        ;
+
+        
+    
+    
+            var marker_7b66578233194b2d9bc0acb724cad2f8 = L.marker(
+                [9.15, -82.966667],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_926554e082ce4fe38f1c622462c32218 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bdefd1629eae437bb28e58e6d8fcdfc5 = $(`<div id="html_bdefd1629eae437bb28e58e6d8fcdfc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Cerros Tararia (locally known as Tres Picos). <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1984-09-10 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_926554e082ce4fe38f1c622462c32218.setContent(html_bdefd1629eae437bb28e58e6d8fcdfc5);
+        
+
+        marker_7b66578233194b2d9bc0acb724cad2f8.bindPopup(popup_926554e082ce4fe38f1c622462c32218)
+        ;
+
+        
+    
+    
+            var marker_32f2affadaf844578f9ccd9fceeabb42 = L.marker(
+                [10.168056, -84.231944],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_db97a59825524859a6114fcfd2500f03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02ec78453907417b8f41746cf1dbbc0a = $(`<div id="html_02ec78453907417b8f41746cf1dbbc0a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> South slope of Volcan Poas, along road ca. 1.5 Km. below park entrance. <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1999-09-28 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_db97a59825524859a6114fcfd2500f03.setContent(html_02ec78453907417b8f41746cf1dbbc0a);
+        
+
+        marker_32f2affadaf844578f9ccd9fceeabb42.bindPopup(popup_db97a59825524859a6114fcfd2500f03)
+        ;
+
+        
+    
+    
+            var marker_bf5be153d68b4bbd9b90fb8bb03abd6e = L.marker(
+                [10.168056, -84.231944],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_fa7b9fae172f42c3807d0ad32c3396e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fa155af1a7a477b83cc35dcf9a43a50 = $(`<div id="html_1fa155af1a7a477b83cc35dcf9a43a50" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> South slope of Volcan Poas, along road ca. 1.5 Km. below park entrance. <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1999-09-28 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_fa7b9fae172f42c3807d0ad32c3396e8.setContent(html_1fa155af1a7a477b83cc35dcf9a43a50);
+        
+
+        marker_bf5be153d68b4bbd9b90fb8bb03abd6e.bindPopup(popup_fa7b9fae172f42c3807d0ad32c3396e8)
+        ;
+
+        
+    
+    
+            var marker_5f27267b03a544b68209cbf04d05d16d = L.marker(
+                [10.168056, -84.231944],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_c1ce6c7dab144e1abe4e2dd2646f1175 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80aa1899960d4bbea6bb6e19ae47e7e3 = $(`<div id="html_80aa1899960d4bbea6bb6e19ae47e7e3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> South slope of Volcan Poas, along road ca. 1.5 Km. below park entrance. <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1999-09-28 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_c1ce6c7dab144e1abe4e2dd2646f1175.setContent(html_80aa1899960d4bbea6bb6e19ae47e7e3);
+        
+
+        marker_5f27267b03a544b68209cbf04d05d16d.bindPopup(popup_c1ce6c7dab144e1abe4e2dd2646f1175)
+        ;
+
+        
+    
+    
+            var marker_fc4394c875574182a66b4040868e7878 = L.marker(
+                [9.408333, -83.309722],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_16f05fddc2f44777ade206486db3908e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b89bf1d3d4104026a8416e531d7e463c = $(`<div id="html_b89bf1d3d4104026a8416e531d7e463c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero entre Cerro Durika y sabanas de Durika, siguiendo el cauce de la Quebrada Intermitente <strong>Elevación:</strong> 2650.0 m  <strong>Fecha:</strong> 2003-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_16f05fddc2f44777ade206486db3908e.setContent(html_b89bf1d3d4104026a8416e531d7e463c);
+        
+
+        marker_fc4394c875574182a66b4040868e7878.bindPopup(popup_16f05fddc2f44777ade206486db3908e)
+        ;
+
+        
+    
+    
+            var marker_69aef3cd18fe4b8ca31448a642a8b15d = L.marker(
+                [9.408333, -83.309722],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_9ad39d5ad82d42ecba67d12a328f022d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_628aa3c7d9484db4b3911aeb6662430e = $(`<div id="html_628aa3c7d9484db4b3911aeb6662430e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero entre Cerro Durika y sabanas de Durika, siguiendo el cauce de la Quebrada Intermitente <strong>Elevación:</strong> 2650.0 m  <strong>Fecha:</strong> 2003-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_9ad39d5ad82d42ecba67d12a328f022d.setContent(html_628aa3c7d9484db4b3911aeb6662430e);
+        
+
+        marker_69aef3cd18fe4b8ca31448a642a8b15d.bindPopup(popup_9ad39d5ad82d42ecba67d12a328f022d)
+        ;
+
+        
+    
+    
+            var marker_a1efe876f048468db496d5e1c33a2832 = L.marker(
+                [9.408333, -83.309722],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_bb065c05e19644ac9451ebcaecb1215c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d48385320c04ac99aaad30cf01afef9 = $(`<div id="html_1d48385320c04ac99aaad30cf01afef9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero entre Cerro Durika y sabanas de Durika, siguiendo el cauce de la Quebrada Intermitente <strong>Elevación:</strong> 2650.0 m  <strong>Fecha:</strong> 2003-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_bb065c05e19644ac9451ebcaecb1215c.setContent(html_1d48385320c04ac99aaad30cf01afef9);
+        
+
+        marker_a1efe876f048468db496d5e1c33a2832.bindPopup(popup_bb065c05e19644ac9451ebcaecb1215c)
+        ;
+
+        
+    
+    
+            var marker_3f76c9c1cba2458684b73c14b1846c47 = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_c7492921e3a34b2db54c9246c482b896 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b77ef097508c41aa830e04a8a5f16aee = $(`<div id="html_b77ef097508c41aa830e04a8a5f16aee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2548.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Ronald Guido Vargas; Alexánder Francisco Rodríguez González ; Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_c7492921e3a34b2db54c9246c482b896.setContent(html_b77ef097508c41aa830e04a8a5f16aee);
+        
+
+        marker_3f76c9c1cba2458684b73c14b1846c47.bindPopup(popup_c7492921e3a34b2db54c9246c482b896)
+        ;
+
+        
+    
+    
+            var marker_09508e09c6ce4207b110d3a8029fd8f3 = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_d7b5ccdfd65d40a0b0d600532d9e32af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5197a14965a345f7abfe25fb22ea37d8 = $(`<div id="html_5197a14965a345f7abfe25fb22ea37d8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2548.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Ronald Guido Vargas; Alexánder Francisco Rodríguez González ; Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_d7b5ccdfd65d40a0b0d600532d9e32af.setContent(html_5197a14965a345f7abfe25fb22ea37d8);
+        
+
+        marker_09508e09c6ce4207b110d3a8029fd8f3.bindPopup(popup_d7b5ccdfd65d40a0b0d600532d9e32af)
+        ;
+
+        
+    
+    
+            var marker_d4a9646722564828968ff762d3623f6a = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_ca3e6a88c8374825b4624336ed998470 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e42283004a224b9cac3f23941b7b6da3 = $(`<div id="html_e42283004a224b9cac3f23941b7b6da3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2548.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Ronald Guido Vargas; Alexánder Francisco Rodríguez González ; Evelio Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_ca3e6a88c8374825b4624336ed998470.setContent(html_e42283004a224b9cac3f23941b7b6da3);
+        
+
+        marker_d4a9646722564828968ff762d3623f6a.bindPopup(popup_ca3e6a88c8374825b4624336ed998470)
+        ;
+
+        
+    
+    
+            var marker_5cf87852113b4eb584773ef643c93bb1 = L.marker(
+                [9.433271000000001, -83.364627],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_97d67f05be3e489d8f040ac2bc9635b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_507ff3ec5cc3404aa32034d1f40d760c = $(`<div id="html_507ff3ec5cc3404aa32034d1f40d760c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Talamanca, Bratsi. Sabanas Dúrika. <strong>Elevación:</strong> 2261.0 m  <strong>Fecha:</strong> 2003-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis González ; Alfonso Garita ; Carlos Vargas <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_97d67f05be3e489d8f040ac2bc9635b3.setContent(html_507ff3ec5cc3404aa32034d1f40d760c);
+        
+
+        marker_5cf87852113b4eb584773ef643c93bb1.bindPopup(popup_97d67f05be3e489d8f040ac2bc9635b3)
+        ;
+
+        
+    
+    
+            var marker_06e5b3bb567d4abe82801ed7405fde8a = L.marker(
+                [9.433271000000001, -83.364627],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_fe83751ec74246e5ae084883dfdf5951 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eedac5bc3c784b0b8418dd52ca136a68 = $(`<div id="html_eedac5bc3c784b0b8418dd52ca136a68" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Talamanca, Bratsi. Sabanas Dúrika. <strong>Elevación:</strong> 2261.0 m  <strong>Fecha:</strong> 2003-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis González ; Alfonso Garita ; Carlos Vargas <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_fe83751ec74246e5ae084883dfdf5951.setContent(html_eedac5bc3c784b0b8418dd52ca136a68);
+        
+
+        marker_06e5b3bb567d4abe82801ed7405fde8a.bindPopup(popup_fe83751ec74246e5ae084883dfdf5951)
+        ;
+
+        
+    
+    
+            var marker_87b24e9168c344b99abcf1750fe52eb6 = L.marker(
+                [9.433271000000001, -83.364627],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_2ffbf80c49084ed099013f24dc3c9281 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d47079d0acf4531aad8a5c3ff9f7571 = $(`<div id="html_1d47079d0acf4531aad8a5c3ff9f7571" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Talamanca, Bratsi. Sabanas Dúrika. <strong>Elevación:</strong> 2261.0 m  <strong>Fecha:</strong> 2003-03-07 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis González ; Alfonso Garita ; Carlos Vargas <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_2ffbf80c49084ed099013f24dc3c9281.setContent(html_1d47079d0acf4531aad8a5c3ff9f7571);
+        
+
+        marker_87b24e9168c344b99abcf1750fe52eb6.bindPopup(popup_2ffbf80c49084ed099013f24dc3c9281)
+        ;
+
+        
+    
+    
+            var marker_9c25891b9ec24c62b674cfd24959d64d = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_3108b4f28e934839a095d967cfae8803 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb79832ec13f4c0cbc3b76d60bb394cf = $(`<div id="html_eb79832ec13f4c0cbc3b76d60bb394cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2479.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Blanco Segura; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_3108b4f28e934839a095d967cfae8803.setContent(html_eb79832ec13f4c0cbc3b76d60bb394cf);
+        
+
+        marker_9c25891b9ec24c62b674cfd24959d64d.bindPopup(popup_3108b4f28e934839a095d967cfae8803)
+        ;
+
+        
+    
+    
+            var marker_2e6897a53b9a406bbcf2f132677c810b = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_9637f6582f284b64998744004478dc03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d1180733305499fb5857dc038bc5016 = $(`<div id="html_7d1180733305499fb5857dc038bc5016" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2479.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Blanco Segura; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_9637f6582f284b64998744004478dc03.setContent(html_7d1180733305499fb5857dc038bc5016);
+        
+
+        marker_2e6897a53b9a406bbcf2f132677c810b.bindPopup(popup_9637f6582f284b64998744004478dc03)
+        ;
+
+        
+    
+    
+            var marker_3a0e2effd08047f48ca9dfaf46a7aa55 = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_81bb77dfbdb64888b0e574ff3408ab68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0ffb43241454bfbb380fd03f19a8e9a = $(`<div id="html_f0ffb43241454bfbb380fd03f19a8e9a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2479.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Blanco Segura; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_81bb77dfbdb64888b0e574ff3408ab68.setContent(html_f0ffb43241454bfbb380fd03f19a8e9a);
+        
+
+        marker_3a0e2effd08047f48ca9dfaf46a7aa55.bindPopup(popup_81bb77dfbdb64888b0e574ff3408ab68)
+        ;
+
+        
+    
+    
+            var marker_7f8959223f1c4a3bb2682d17cb1abea0 = L.marker(
+                [10.183056, -84.238889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_1c22beafc3284065aaa926ae64c5cc60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb9324561d20490ab2b1a2ddda877f44 = $(`<div id="html_eb9324561d20490ab2b1a2ddda877f44" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Volcán Poás. Alrededores de la estación. <strong>Elevación:</strong> 2479.0 m  <strong>Fecha:</strong> 2003-07-02 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Blanco Segura; Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_1c22beafc3284065aaa926ae64c5cc60.setContent(html_eb9324561d20490ab2b1a2ddda877f44);
+        
+
+        marker_7f8959223f1c4a3bb2682d17cb1abea0.bindPopup(popup_1c22beafc3284065aaa926ae64c5cc60)
+        ;
+
+        
+    
+    
+            var marker_81fba3e91f33460e9b2d39c9c046f5ae = L.marker(
+                [9.637492, -83.848022],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_d3bedb4079134857b660bd74387d0449 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_612dd2aa17ad4981be6695f8f68bba72 = $(`<div id="html_612dd2aa17ad4981be6695f8f68bba72" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago, Tres de Junio, camino falda SO cerro Vueltas. <strong>Elevación:</strong> 2874.0 m  <strong>Fecha:</strong> 2012-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_d3bedb4079134857b660bd74387d0449.setContent(html_612dd2aa17ad4981be6695f8f68bba72);
+        
+
+        marker_81fba3e91f33460e9b2d39c9c046f5ae.bindPopup(popup_d3bedb4079134857b660bd74387d0449)
+        ;
+
+        
+    
+    
+            var marker_c2e70e1eac59423c9c2c8a6dd2bab1fe = L.marker(
+                [9.637492, -83.848022],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_78cbdb73be884c82812ccee262401526 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5db911be0294412c9ca1dee48c5afce4 = $(`<div id="html_5db911be0294412c9ca1dee48c5afce4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago, Tres de Junio, camino falda SO cerro Vueltas. <strong>Elevación:</strong> 2874.0 m  <strong>Fecha:</strong> 2012-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_78cbdb73be884c82812ccee262401526.setContent(html_5db911be0294412c9ca1dee48c5afce4);
+        
+
+        marker_c2e70e1eac59423c9c2c8a6dd2bab1fe.bindPopup(popup_78cbdb73be884c82812ccee262401526)
+        ;
+
+        
+    
+    
+            var marker_d8ac6b0dac79482e89112d2cc37df46e = L.marker(
+                [10.13, -84.1],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_dedb188b16744ee5b8f640840bdf8d2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_246180d399784d99a3e6d024b02c3544 = $(`<div id="html_246180d399784d99a3e6d024b02c3544" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo, Cordillera Central, upper Volcán Barva, trail to Laguna Barva <strong>Elevación:</strong> 2800.0 m  <strong>Fecha:</strong> 1993-08-13 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle|Jason C. Bradford|A.K. Sparks <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_dedb188b16744ee5b8f640840bdf8d2b.setContent(html_246180d399784d99a3e6d024b02c3544);
+        
+
+        marker_d8ac6b0dac79482e89112d2cc37df46e.bindPopup(popup_dedb188b16744ee5b8f640840bdf8d2b)
+        ;
+
+        
+    
+    
+            var marker_1a3e6d6b30cb40a288a70140212c87f0 = L.marker(
+                [10.13, -84.1],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_e8083fbffafc4c2a840f80044c562cdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_789efc937dc74ceabae58bd381836ad5 = $(`<div id="html_789efc937dc74ceabae58bd381836ad5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo, Cordillera Central, trail around edge of Laguna Barva <strong>Elevación:</strong> 2837.5 m  <strong>Fecha:</strong> 1993-08-14 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle|Alice Boyle|Jason C. Bradford|A.K. Sparks <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_e8083fbffafc4c2a840f80044c562cdb.setContent(html_789efc937dc74ceabae58bd381836ad5);
+        
+
+        marker_1a3e6d6b30cb40a288a70140212c87f0.bindPopup(popup_e8083fbffafc4c2a840f80044c562cdb)
+        ;
+
+        
+    
+    
+            var marker_8d4525c5db46440aa9c4c5ef13c80f3e = L.marker(
+                [10.233333, -84.25],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_2b689c63c86d41c4b462b40d77f0d382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec05f6bf55f84146a1778c6bf64776a9 = $(`<div id="html_ec05f6bf55f84146a1778c6bf64776a9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Poás.  Collected by H. Rodríguez. <strong>Elevación:</strong> 2700.0 m  <strong>Fecha:</strong> 1976-07-19 00:00:00+00:00 <strong>Recolectores:</strong> James C. Solomon <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_2b689c63c86d41c4b462b40d77f0d382.setContent(html_ec05f6bf55f84146a1778c6bf64776a9);
+        
+
+        marker_8d4525c5db46440aa9c4c5ef13c80f3e.bindPopup(popup_2b689c63c86d41c4b462b40d77f0d382)
+        ;
+
+        
+    
+    
+            var marker_beeef5e5cd43419190655ab0fbf28b95 = L.marker(
+                [9.15, -82.966667],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_8216e90e3f6a48e78c096042a299636a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6cff9e302bb40b0bb25b69e2e62c96f = $(`<div id="html_d6cff9e302bb40b0bb25b69e2e62c96f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, Cerros Tararia (locally known as Tres Picos). <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1984-09-10 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Michael H. Grayum <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_8216e90e3f6a48e78c096042a299636a.setContent(html_d6cff9e302bb40b0bb25b69e2e62c96f);
+        
+
+        marker_beeef5e5cd43419190655ab0fbf28b95.bindPopup(popup_8216e90e3f6a48e78c096042a299636a)
+        ;
+
+        
+    
+    
+            var marker_268c1043904c45398058ab2ff7a2e25c = L.marker(
+                [9.42, -83.32],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_9da53976ff624b68b187db497c7080d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_435c2b78b03d4bec91b3bea2eeee1762 = $(`<div id="html_435c2b78b03d4bec91b3bea2eeee1762" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sabanas de Dúrika, Río Kuk, 1 Km aguas abajo de la confluencia de los Ríos Uk y Kuk. <strong>Elevación:</strong> 2430.0 m  <strong>Fecha:</strong> 1989-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Abelardo Chacón <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_9da53976ff624b68b187db497c7080d6.setContent(html_435c2b78b03d4bec91b3bea2eeee1762);
+        
+
+        marker_268c1043904c45398058ab2ff7a2e25c.bindPopup(popup_9da53976ff624b68b187db497c7080d6)
+        ;
+
+        
+    
+    
+            var marker_79f8a60955c948e28a7135a074ff35ef = L.marker(
+                [10.170833, -84.233889],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_8d3266484e7349b9b58ccdb177f977a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22ccce8c32454c7792f9b1624f81da54 = $(`<div id="html_22ccce8c32454c7792f9b1624f81da54" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcán Poás, cloud forest towards the peak <strong>Elevación:</strong> 2484.12 m  <strong>Fecha:</strong> 1962-07-13 00:00:00+00:00 <strong>Recolectores:</strong> Grady L. Webster|Kim I. Miller|Lillian W. Miller <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_8d3266484e7349b9b58ccdb177f977a4.setContent(html_22ccce8c32454c7792f9b1624f81da54);
+        
+
+        marker_79f8a60955c948e28a7135a074ff35ef.bindPopup(popup_8d3266484e7349b9b58ccdb177f977a4)
+        ;
+
+        
+    
+    
+            var marker_428db031c43b40a694de8980cb56a69d = L.marker(
+                [10.19, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_a74b9708e7ff4302a871bcc58bef0485 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb067305ba7944a6959be3fa224ab734 = $(`<div id="html_eb067305ba7944a6959be3fa224ab734" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcán Poás <strong>Elevación:</strong> 2600.0 m  <strong>Fecha:</strong> 1965-09-11 00:00:00+00:00 <strong>Recolectores:</strong> Luciano Bernardi <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_a74b9708e7ff4302a871bcc58bef0485.setContent(html_eb067305ba7944a6959be3fa224ab734);
+        
+
+        marker_428db031c43b40a694de8980cb56a69d.bindPopup(popup_a74b9708e7ff4302a871bcc58bef0485)
+        ;
+
+        
+    
+    
+            var marker_a6b26b4b78fb46608d695ef0442cc788 = L.marker(
+                [10.19, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_c7646243e7ac4e598cec27e013bbbf9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11a34bcfb95446c1bbd70d5ac642b5fc = $(`<div id="html_11a34bcfb95446c1bbd70d5ac642b5fc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Upper slopes of Volcán Poás in the forest about the crater and just below the crater area <strong>Elevación:</strong> 2700.0 m  <strong>Fecha:</strong> 1968-09-01 00:00:00+00:00 <strong>Recolectores:</strong> Robert L. Wilbur|Donald E. Stone <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_c7646243e7ac4e598cec27e013bbbf9c.setContent(html_11a34bcfb95446c1bbd70d5ac642b5fc);
+        
+
+        marker_a6b26b4b78fb46608d695ef0442cc788.bindPopup(popup_c7646243e7ac4e598cec27e013bbbf9c)
+        ;
+
+        
+    
+    
+            var marker_7dcb2a292ece4b62aa60de967adfdbf4 = L.marker(
+                [10.17, -84.23],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_5d5fd62d2dd14419ad998bb46804afce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b6edd0eccf542bf9da4b2f38b7c2e16 = $(`<div id="html_9b6edd0eccf542bf9da4b2f38b7c2e16" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 15 km from Vara Blanca on the road to Volcán Poás, within 1 km of the crater, thickets and meadows <strong>Elevación:</strong> 2550.0 m  <strong>Fecha:</strong> 1973-12-31 00:00:00+00:00 <strong>Recolectores:</strong> Frank Almeda|Margaret Flowers|Robert E. Wyatt <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_5d5fd62d2dd14419ad998bb46804afce.setContent(html_9b6edd0eccf542bf9da4b2f38b7c2e16);
+        
+
+        marker_7dcb2a292ece4b62aa60de967adfdbf4.bindPopup(popup_5d5fd62d2dd14419ad998bb46804afce)
+        ;
+
+        
+    
+    
+            var marker_b9cac10bffca4e83bef33beec53ffc59 = L.marker(
+                [10.19, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_23028fc52c14418788aa26a8e79fc76f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41b5ac8dce974ca19a2ddac41e219183 = $(`<div id="html_41b5ac8dce974ca19a2ddac41e219183" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Beautiful open wooded slopes about 1 km from lip of crater and 19 km west of Vara Blanca on Volcán Poás <strong>Elevación:</strong> 2700.0 m  <strong>Fecha:</strong> 1968-01-21 00:00:00+00:00 <strong>Recolectores:</strong> Robert L. Wilbur|Donald E. Stone <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_23028fc52c14418788aa26a8e79fc76f.setContent(html_41b5ac8dce974ca19a2ddac41e219183);
+        
+
+        marker_b9cac10bffca4e83bef33beec53ffc59.bindPopup(popup_23028fc52c14418788aa26a8e79fc76f)
+        ;
+
+        
+    
+    
+            var marker_6d89af8a7bf04851b371c22460637dca = L.marker(
+                [10.19, -84.61],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_ce8f32a644004c21ad338c1df119d052 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fedefe48feb944d98e1b42bd0ce65e73 = $(`<div id="html_fedefe48feb944d98e1b42bd0ce65e73" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Volcán Viejo <strong>Elevación:</strong> 1900.0 m  <strong>Fecha:</strong> 1986-02-11 00:00:00+00:00 <strong>Recolectores:</strong> Jorge Gómez-Laurito <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_ce8f32a644004c21ad338c1df119d052.setContent(html_fedefe48feb944d98e1b42bd0ce65e73);
+        
+
+        marker_6d89af8a7bf04851b371c22460637dca.bindPopup(popup_ce8f32a644004c21ad338c1df119d052)
+        ;
+
+        
+    
+    
+            var marker_6f918c6a7e5b47d2a122b3c80cdc00cd = L.marker(
+                [10.19, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_3b29f16509b84bd78edc6cf8d80599bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bdcbebebd64140cb996f977315fd35b0 = $(`<div id="html_bdcbebebd64140cb996f977315fd35b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Summit area of Volcán Poás <strong>Elevación:</strong> 2667.0 m  <strong>Fecha:</strong> 1971-06-20 00:00:00+00:00 <strong>Recolectores:</strong> George R. Proctor <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_3b29f16509b84bd78edc6cf8d80599bd.setContent(html_bdcbebebd64140cb996f977315fd35b0);
+        
+
+        marker_6f918c6a7e5b47d2a122b3c80cdc00cd.bindPopup(popup_3b29f16509b84bd78edc6cf8d80599bd)
+        ;
+
+        
+    
+    
+            var marker_da30c20dfe4340e4a19f37caf54d469c = L.marker(
+                [10.18, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_c3636229bc2948b9b863d17aab4f9dbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f06a5f48add4ac2b7e9b00a7a49b815 = $(`<div id="html_9f06a5f48add4ac2b7e9b00a7a49b815" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cráter apagado del Poás <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1915-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Otón Jiménez L. <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_c3636229bc2948b9b863d17aab4f9dbc.setContent(html_9f06a5f48add4ac2b7e9b00a7a49b815);
+        
+
+        marker_da30c20dfe4340e4a19f37caf54d469c.bindPopup(popup_c3636229bc2948b9b863d17aab4f9dbc)
+        ;
+
+        
+    
+    
+            var marker_8278f7c4b596426493f5d4d6fa4c8a33 = L.marker(
+                [10.18, -84.22],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_e6d631a890f0436baa08a9a53a082f4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_794d4001bb854df985772139743054ea = $(`<div id="html_794d4001bb854df985772139743054ea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre cráter y Prádera del Volcán Poás, en borde del bosque <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1961-08-19 00:00:00+00:00 <strong>Recolectores:</strong> Alfonso Jiménez M. <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_e6d631a890f0436baa08a9a53a082f4d.setContent(html_794d4001bb854df985772139743054ea);
+        
+
+        marker_8278f7c4b596426493f5d4d6fa4c8a33.bindPopup(popup_e6d631a890f0436baa08a9a53a082f4d)
+        ;
+
+        
+    
+    
+            var marker_c2cb98c1875844eebaf9bfca3de7c39a = L.marker(
+                [10.193333, -84.2325],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_73a6b6997bb14901b7c898cd658c6d2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e4005facb5ae4be68d925d7d3433842b = $(`<div id="html_e4005facb5ae4be68d925d7d3433842b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcán Poás. <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1965-08-20 00:00:00+00:00 <strong>Recolectores:</strong> Sidney T. McDaniel <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_73a6b6997bb14901b7c898cd658c6d2c.setContent(html_e4005facb5ae4be68d925d7d3433842b);
+        
+
+        marker_c2cb98c1875844eebaf9bfca3de7c39a.bindPopup(popup_73a6b6997bb14901b7c898cd658c6d2c)
+        ;
+
+        
+    
+    
+            var marker_5c67e115320b4d429daabd75e822bd39 = L.marker(
+                [10.12, -84.11],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_098de8e870e84dbdbb1629822704271c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b103ad3baaaa4b53adc2bf8b02c928ee = $(`<div id="html_b103ad3baaaa4b53adc2bf8b02c928ee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Between Sacramento and Laguna de Barba at the summit of Volcán Barba <strong>Elevación:</strong> 2600.0 m  <strong>Fecha:</strong> 1975-04-12 00:00:00+00:00 <strong>Recolectores:</strong> John F. Utley|K. Burt-Utley <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_098de8e870e84dbdbb1629822704271c.setContent(html_b103ad3baaaa4b53adc2bf8b02c928ee);
+        
+
+        marker_5c67e115320b4d429daabd75e822bd39.bindPopup(popup_098de8e870e84dbdbb1629822704271c)
+        ;
+
+        
+    
+    
+            var marker_a115014345504d62897b849855017209 = L.marker(
+                [10.29, -84.78],
+                {}
+            ).addTo(marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf);
+        
+    
+        var popup_92b71d87af4a418ca863f3026586990d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de01fc4c6eb34d4394108114ce2c143b = $(`<div id="html_de01fc4c6eb34d4394108114ce2c143b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque enano (muy bajo) en cumbre de Divis. Continental (Brillante) <strong>Elevación:</strong> 1565.0 m  <strong>Fecha:</strong> 1976-11-30 00:00:00+00:00 <strong>Recolectores:</strong> Valerie J. Dryer <strong>Identificadores:</strong> J. F. Morales</div>`)[0];
+            popup_92b71d87af4a418ca863f3026586990d.setContent(html_de01fc4c6eb34d4394108114ce2c143b);
+        
+
+        marker_a115014345504d62897b849855017209.bindPopup(popup_92b71d87af4a418ca863f3026586990d)
+        ;
+
+        
+    
+    
+            var layer_control_6bce1598189249a89ad6608b706a44b1 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_98af7072ede148458d7de10293fcf353,
+                    "ESRI World Imagery" : tile_layer_20b17250ab20421391b8a2cc3db67a8f,
+                },
+                overlays :  {
+                    "macro_element_5f98f2d7704f4100a3d02a1ddee9fddf" : marker_cluster_5f98f2d7704f4100a3d02a1ddee9fddf,
+                },
+            };
+            L.control.layers(
+                layer_control_6bce1598189249a89ad6608b706a44b1.base_layers,
+                layer_control_6bce1598189249a89ad6608b706a44b1.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ea33f03c8b7e4e898ace11f8d4b07b6f);
+            tile_layer_20b17250ab20421391b8a2cc3db67a8f.remove();
+        
+</script>

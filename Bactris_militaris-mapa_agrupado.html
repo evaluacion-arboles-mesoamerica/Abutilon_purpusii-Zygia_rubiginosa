@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c42f60466cdd406d8d9d190206ad1425 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c42f60466cdd406d8d9d190206ad1425" ></div>
+        
+</body>
+<script>    
+    
+            var map_c42f60466cdd406d8d9d190206ad1425 = L.map(
+                "map_c42f60466cdd406d8d9d190206ad1425",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_c42f60466cdd406d8d9d190206ad1425);
+
+            
+
+        
+    
+            var tile_layer_74fdbbdaca2b400589d679c2761a7f27 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c42f60466cdd406d8d9d190206ad1425);
+        
+    
+            var tile_layer_6c3a15d48da94ec8b5e90cb5ec2de5fc = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c42f60466cdd406d8d9d190206ad1425);
+        
+    
+            var marker_cluster_7c714d4a04df435aa40a5a59ea007431 = L.markerClusterGroup(
+                {}
+            );
+            map_c42f60466cdd406d8d9d190206ad1425.addLayer(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+            var marker_00426b4f71c14514ac12c75a2f6cb08f = L.marker(
+                [9.56, -82.66],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_da45b79505744de4a01a4cb99b630469 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b243d3fd197547348902aab2fe6deec1 = $(`<div id="html_b243d3fd197547348902aab2fe6deec1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hills between headwaters of Quebrada MAta de Limón and upper branches of quebrada Tigre, and lowland forest of Quebrada Tigre drainage, Finca Anai. <strong>Elevación:</strong> 27.5 m  <strong>Fecha:</strong> 1984-11-18 00:00:00+00:00 <strong>Recolectores:</strong> Grayum, Michael <strong>Identificadores:</strong> Grayum, Michael</div>`)[0];
+            popup_da45b79505744de4a01a4cb99b630469.setContent(html_b243d3fd197547348902aab2fe6deec1);
+        
+
+        marker_00426b4f71c14514ac12c75a2f6cb08f.bindPopup(popup_da45b79505744de4a01a4cb99b630469)
+        ;
+
+        
+    
+    
+            var marker_f8e0df90ae8249b1bd92a9a9390c4cf7 = L.marker(
+                [10.33, -84.06],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_ddb2efda76c04f6aa58d121bd742adce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34b12730954a4faa865555c0c938f76f = $(`<div id="html_34b12730954a4faa865555c0c938f76f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Quebrada Las Juntas and Quebrada Cantarana. <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1986-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Chazdon, Robin <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ddb2efda76c04f6aa58d121bd742adce.setContent(html_34b12730954a4faa865555c0c938f76f);
+        
+
+        marker_f8e0df90ae8249b1bd92a9a9390c4cf7.bindPopup(popup_ddb2efda76c04f6aa58d121bd742adce)
+        ;
+
+        
+    
+    
+            var marker_6c1351a7dffa45ad86ea2a69fe045c2b = L.marker(
+                [10.63, -83.75],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_941e6c10cdab4e5ab23a3ee741ca354d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f37f80dd021c4eb6ac9b5d66d4fe6f9b = $(`<div id="html_f37f80dd021c4eb6ac9b5d66d4fe6f9b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Barra del Colorado Forests and pastures between Río chirripocotp and Río Sardina ( " Sardinal on Chirripó Atlantico quadrangle) <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 1988-11-11 00:00:00+00:00 <strong>Recolectores:</strong> Grayum, Michael <strong>Identificadores:</strong> Grayum, Michael</div>`)[0];
+            popup_941e6c10cdab4e5ab23a3ee741ca354d.setContent(html_f37f80dd021c4eb6ac9b5d66d4fe6f9b);
+        
+
+        marker_6c1351a7dffa45ad86ea2a69fe045c2b.bindPopup(popup_941e6c10cdab4e5ab23a3ee741ca354d)
+        ;
+
+        
+    
+    
+            var marker_ed833bc9334b49408f06ff540c194532 = L.marker(
+                [9.61, -82.63],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_c6a28b1c9dad40f5bf7791c4b6aa3914 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bedbf1da41a47a283e05e20fc7ef0fb = $(`<div id="html_5bedbf1da41a47a283e05e20fc7ef0fb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-03-31 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Herrera, Gerardo</div>`)[0];
+            popup_c6a28b1c9dad40f5bf7791c4b6aa3914.setContent(html_5bedbf1da41a47a283e05e20fc7ef0fb);
+        
+
+        marker_ed833bc9334b49408f06ff540c194532.bindPopup(popup_c6a28b1c9dad40f5bf7791c4b6aa3914)
+        ;
+
+        
+    
+    
+            var marker_cfc803b15cbe4e13835155b45cd7a64e = L.marker(
+                [8.91, -83.41],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_abf0e6b314d648219cddea08c2e9b98b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76527dcffc97467aade5431bac596342 = $(`<div id="html_76527dcffc97467aade5431bac596342" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle de Térraba. Palmar Norte. Olla Cero, remenete de bosque junto a la carretera con terreno semi-inundado temporalmente. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-07-20 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Zamora, Nelson & Aguilar, Reinaldo</div>`)[0];
+            popup_abf0e6b314d648219cddea08c2e9b98b.setContent(html_76527dcffc97467aade5431bac596342);
+        
+
+        marker_cfc803b15cbe4e13835155b45cd7a64e.bindPopup(popup_abf0e6b314d648219cddea08c2e9b98b)
+        ;
+
+        
+    
+    
+            var marker_7a30b26e70d045bcabd8416231509b19 = L.marker(
+                [10.28, -83.78],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_e4eb2ececb68423d888a1ddcfc804510 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c4e6da5afff4d68874112fff9cbf525 = $(`<div id="html_5c4e6da5afff4d68874112fff9cbf525" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El sota, La Rita. <strong>Elevación:</strong> 35.0 m  <strong>Fecha:</strong> 2000-08-10 00:00:00+00:00 <strong>Recolectores:</strong> Ling, Francisco <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_e4eb2ececb68423d888a1ddcfc804510.setContent(html_5c4e6da5afff4d68874112fff9cbf525);
+        
+
+        marker_7a30b26e70d045bcabd8416231509b19.bindPopup(popup_e4eb2ececb68423d888a1ddcfc804510)
+        ;
+
+        
+    
+    
+            var marker_123b7f5ce61c445dbda8e8a680736ed0 = L.marker(
+                [8.974722, -80.704444],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_4015d11b90fb4db8b6fe4aedf746a43b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccbb980ab66e4bb28b97022243004bcf = $(`<div id="html_ccbb980ab66e4bb28b97022243004bcf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> MPSA site. (UTM 532461 992074) <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Álex Espinosa|et al. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4015d11b90fb4db8b6fe4aedf746a43b.setContent(html_ccbb980ab66e4bb28b97022243004bcf);
+        
+
+        marker_123b7f5ce61c445dbda8e8a680736ed0.bindPopup(popup_4015d11b90fb4db8b6fe4aedf746a43b)
+        ;
+
+        
+    
+    
+            var marker_af79686ce73a4786b0582a693a28f33a = L.marker(
+                [8.9125, -83.419444],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_4984396245a0416dba8653b51f7a99e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0deaa69bb927446da8e9393aad8ff666 = $(`<div id="html_0deaa69bb927446da8e9393aad8ff666" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Palmar Norte. Olla Cero, remanente de bosque junto a la carretera con terreno semi-inundado temporalmente. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-07-20 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_4984396245a0416dba8653b51f7a99e6.setContent(html_0deaa69bb927446da8e9393aad8ff666);
+        
+
+        marker_af79686ce73a4786b0582a693a28f33a.bindPopup(popup_4984396245a0416dba8653b51f7a99e6)
+        ;
+
+        
+    
+    
+            var marker_2c33d5e6ac344aacbc92dc79c1ff65d5 = L.marker(
+                [9.575, -82.666667],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_ecfbdc6a4db3482d92647ed6398f9028 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6047fa22c0df45c198d3e9a162895797 = $(`<div id="html_6047fa22c0df45c198d3e9a162895797" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel, Ascode, alrededores de la estacion. <strong>Elevación:</strong> 65.0 m  <strong>Fecha:</strong> 1997-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Jose González; Isidro Chacón ; Reinaldo Aguilar ; Andrea Albertin ; Helena Dickson <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_ecfbdc6a4db3482d92647ed6398f9028.setContent(html_6047fa22c0df45c198d3e9a162895797);
+        
+
+        marker_2c33d5e6ac344aacbc92dc79c1ff65d5.bindPopup(popup_ecfbdc6a4db3482d92647ed6398f9028)
+        ;
+
+        
+    
+    
+            var marker_85c9f1285ea84faeb970f8d724063d1f = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_1db5f87baf1b4b45a482c1896fe9e3f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05d753a4adfe452b9f35feaf3c10ec71 = $(`<div id="html_05d753a4adfe452b9f35feaf3c10ec71" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_1db5f87baf1b4b45a482c1896fe9e3f9.setContent(html_05d753a4adfe452b9f35feaf3c10ec71);
+        
+
+        marker_85c9f1285ea84faeb970f8d724063d1f.bindPopup(popup_1db5f87baf1b4b45a482c1896fe9e3f9)
+        ;
+
+        
+    
+    
+            var marker_fcb3f0a189fd45608242827c4df73ad5 = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_0823147458684810ab00538772803e90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93290aa4cefd4d048d8ab5c4d9a20bcd = $(`<div id="html_93290aa4cefd4d048d8ab5c4d9a20bcd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0823147458684810ab00538772803e90.setContent(html_93290aa4cefd4d048d8ab5c4d9a20bcd);
+        
+
+        marker_fcb3f0a189fd45608242827c4df73ad5.bindPopup(popup_0823147458684810ab00538772803e90)
+        ;
+
+        
+    
+    
+            var marker_3afa3d0783574ee9b864b3845e670002 = L.marker(
+                [9.566667, -82.638889],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_b5e90974a82e48ce8476ff481943a86b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a12c555d5e624087acadcb4a667097d7 = $(`<div id="html_a12c555d5e624087acadcb4a667097d7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Miguel de Sixaola. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez; Nelson A. Zamora Villalobos ; Jose González ; Evelio Alfaro ; Edgar Mora <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b5e90974a82e48ce8476ff481943a86b.setContent(html_a12c555d5e624087acadcb4a667097d7);
+        
+
+        marker_3afa3d0783574ee9b864b3845e670002.bindPopup(popup_b5e90974a82e48ce8476ff481943a86b)
+        ;
+
+        
+    
+    
+            var marker_25b085005f8a4d4ea066f99a39849905 = L.marker(
+                [10.633333, -83.75],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_19179c1680084eaca141d9fc52a7253c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4642a593d51345d2b3633af48583cebc = $(`<div id="html_4642a593d51345d2b3633af48583cebc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Forests and pastures between Rio Chirripocito and Rio Sardina ( Sardinal  on Chirripo Atlantico quadrangle). <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 1988-11-11 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_19179c1680084eaca141d9fc52a7253c.setContent(html_4642a593d51345d2b3633af48583cebc);
+        
+
+        marker_25b085005f8a4d4ea066f99a39849905.bindPopup(popup_19179c1680084eaca141d9fc52a7253c)
+        ;
+
+        
+    
+    
+            var marker_9bc689a8a28440059a3536c06db7221f = L.marker(
+                [9.56, -82.636667],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_cbe8d6f1801645da85a3d5fed71eedf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2689919c7cd45c987f992097d983115 = $(`<div id="html_b2689919c7cd45c987f992097d983115" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sixaola. Finca de la Asociacion campesina ASACODE; sobre senderos alenos al albergue. Bosques intervenidos. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_cbe8d6f1801645da85a3d5fed71eedf3.setContent(html_b2689919c7cd45c987f992097d983115);
+        
+
+        marker_9bc689a8a28440059a3536c06db7221f.bindPopup(popup_cbe8d6f1801645da85a3d5fed71eedf3)
+        ;
+
+        
+    
+    
+            var marker_87645ce0eba0448ab2ed433acd1d4d91 = L.marker(
+                [9.56, -82.636667],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_dc024d317ebe4cf4b9127dd687b5fe20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5bdb009c9ff449397603f9a3ab74c95 = $(`<div id="html_a5bdb009c9ff449397603f9a3ab74c95" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sixaola. Finca de la Asociacion campesina ASACODE; sobre senderos alenos al albergue. Bosques intervenidos. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_dc024d317ebe4cf4b9127dd687b5fe20.setContent(html_a5bdb009c9ff449397603f9a3ab74c95);
+        
+
+        marker_87645ce0eba0448ab2ed433acd1d4d91.bindPopup(popup_dc024d317ebe4cf4b9127dd687b5fe20)
+        ;
+
+        
+    
+    
+            var marker_2e92b491d99e48e0957cf5578b93d59d = L.marker(
+                [8.87277, -83.38888],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_bca4b1bfff5e4172b5c7d5356263061a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7a1377f7d5f44ab94ce305af38ec913 = $(`<div id="html_a7a1377f7d5f44ab94ce305af38ec913" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Dirt road south from Interamerican Highway and just west of Río Olla Uno bridge at San Francisco, continue ca 1 km to former site of Tinoco Railroad Station and old Railroad grade, continue ca 1 km more south-southwest across rice paddy to forest remnant, ca 200 m south-southwest into forest, with Heliconia, giant Maranthaceae, wild banana, Dieffenbachia, Elaeis, Cryosophila, Astrocaryum <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1994-11-17 00:00:00+00:00 <strong>Recolectores:</strong> Donald R. Hodel|Michaela Binder|E. Schmid <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_bca4b1bfff5e4172b5c7d5356263061a.setContent(html_a7a1377f7d5f44ab94ce305af38ec913);
+        
+
+        marker_2e92b491d99e48e0957cf5578b93d59d.bindPopup(popup_bca4b1bfff5e4172b5c7d5356263061a)
+        ;
+
+        
+    
+    
+            var marker_744b2ace17114c24b1dabea78fa39697 = L.marker(
+                [9.56, -82.63665999999999],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_6e15554aa11b454989a0c1aef78f8a2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffee48be454148d0baf5decae5249835 = $(`<div id="html_ffee48be454148d0baf5decae5249835" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida. Cuenca del Sixaola. Sixaola. Finca de la Asociación campesina Asacode; sobre senderos aleños al albergue. Bosques intervenidos. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Luis Diego Vargas <strong>Identificadores:</strong> A. Rodríguez</div>`)[0];
+            popup_6e15554aa11b454989a0c1aef78f8a2d.setContent(html_ffee48be454148d0baf5decae5249835);
+        
+
+        marker_744b2ace17114c24b1dabea78fa39697.bindPopup(popup_6e15554aa11b454989a0c1aef78f8a2d)
+        ;
+
+        
+    
+    
+            var marker_8a3cb11af8854c5c908708da79d757f6 = L.marker(
+                [10.63, -83.75],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_0b8d13ec80a44eb89a6066208fd30094 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07bd4ff19f0f4dca97e4cb4ae6ab6ecf = $(`<div id="html_07bd4ff19f0f4dca97e4cb4ae6ab6ecf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Refugio Barra de Colorado Forests and pastures between Río Chirripocito and Río Sardina ("Sardinal" on Chirripó Atlántico quadrangle). Collected with Chacón, Morera, Bolaños & Aguilar <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 1988-11-11 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum <strong>Identificadores:</strong> G. de Nevers & A. Henderson</div>`)[0];
+            popup_0b8d13ec80a44eb89a6066208fd30094.setContent(html_07bd4ff19f0f4dca97e4cb4ae6ab6ecf);
+        
+
+        marker_8a3cb11af8854c5c908708da79d757f6.bindPopup(popup_0b8d13ec80a44eb89a6066208fd30094)
+        ;
+
+        
+    
+    
+            var marker_4680b52f635b45d8a19b647626dd250e = L.marker(
+                [9.56, -82.66],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_05da0d169fdd4bc4b1585ef8dbd54861 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bc7d32aab494b2ca8d4791b50548e3f = $(`<div id="html_8bc7d32aab494b2ca8d4791b50548e3f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hills between headwaters of Quebrada Mata de Limón and upper branches of Quebrada Tigre, and lowland forest of Quebrada Tigre drainage, Finca Anai. Elev. 25-30 m. 9º34'N, 82º40'W. (Sixaola region). <strong>Elevación:</strong> 27.5 m  <strong>Fecha:</strong> 1984-11-18 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum|Gerardo Herrera Ch.|Felipe Chavarría D. <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_05da0d169fdd4bc4b1585ef8dbd54861.setContent(html_8bc7d32aab494b2ca8d4791b50548e3f);
+        
+
+        marker_4680b52f635b45d8a19b647626dd250e.bindPopup(popup_05da0d169fdd4bc4b1585ef8dbd54861)
+        ;
+
+        
+    
+    
+            var marker_679c26ec71e14e6ab80b81e1d57ade4e = L.marker(
+                [9.56666, -82.63888],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_a575977c17c343f1a25e93e79ef6aa55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7bd8b7cb4eb489083347a135d35461b = $(`<div id="html_e7bd8b7cb4eb489083347a135d35461b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida. Puerto Viejo. San Miguel de Sixaola. Finca ASACODE. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1999-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Allan Jiménez <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_a575977c17c343f1a25e93e79ef6aa55.setContent(html_e7bd8b7cb4eb489083347a135d35461b);
+        
+
+        marker_679c26ec71e14e6ab80b81e1d57ade4e.bindPopup(popup_a575977c17c343f1a25e93e79ef6aa55)
+        ;
+
+        
+    
+    
+            var marker_cba81dde6c994ae2ae3fa06274c2d858 = L.marker(
+                [8.974722, -80.757778],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_4a148314a7664a50832e78d9f8c4d548 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c374bba879744a28e48a07d48c8c1c5 = $(`<div id="html_7c374bba879744a28e48a07d48c8c1c5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Teck Cominco Petaquilla mining concession. Forest on coastal slope. Collected with H. van der Werff. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 2007-12-09 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> M. Grayum</div>`)[0];
+            popup_4a148314a7664a50832e78d9f8c4d548.setContent(html_7c374bba879744a28e48a07d48c8c1c5);
+        
+
+        marker_cba81dde6c994ae2ae3fa06274c2d858.bindPopup(popup_4a148314a7664a50832e78d9f8c4d548)
+        ;
+
+        
+    
+    
+            var marker_8e1a7f67b43b476e9e5d28d033adfa12 = L.marker(
+                [9.0, -79.0],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_34bfbbbc518f4e9591c575bdb9387c53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7635b0e1783414fbdf473084d0d2ea3 = $(`<div id="html_f7635b0e1783414fbdf473084d0d2ea3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rita Ridge, 10 km. fro, Transistmica <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1995-03-04 00:00:00+00:00 <strong>Recolectores:</strong> G. C. de Nevers <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_34bfbbbc518f4e9591c575bdb9387c53.setContent(html_f7635b0e1783414fbdf473084d0d2ea3);
+        
+
+        marker_8e1a7f67b43b476e9e5d28d033adfa12.bindPopup(popup_34bfbbbc518f4e9591c575bdb9387c53)
+        ;
+
+        
+    
+    
+            var marker_e378150269184d998ec3e35598a4f2ca = L.marker(
+                [21.334722, -157.804722],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_d3ca63f979b14124b80953174cd64d54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d74b207d59784424bdfba6ae13b9cb8e = $(`<div id="html_d74b207d59784424bdfba6ae13b9cb8e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lyon Arboretum. Along trails on upper slopes of Manoa Valley. <strong>Elevación:</strong> 219.0 m  <strong>Fecha:</strong> 2008-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Andrew Townesmith|Karen M. Meyer <strong>Identificadores:</strong> A. Townesmith</div>`)[0];
+            popup_d3ca63f979b14124b80953174cd64d54.setContent(html_d74b207d59784424bdfba6ae13b9cb8e);
+        
+
+        marker_e378150269184d998ec3e35598a4f2ca.bindPopup(popup_d3ca63f979b14124b80953174cd64d54)
+        ;
+
+        
+    
+    
+            var marker_ce4dedeb52bf4dd6b7bc61a971473476 = L.marker(
+                [8.925806, -80.652694],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_0b65776fe9544a19a777523240c50fbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73f506d2284b4d3eb1d28d9defa0c92a = $(`<div id="html_73f506d2284b4d3eb1d28d9defa0c92a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Juan del General, Consecion del Proyecto Cobre Panama, Carretera a la Costa. <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 2014-09-07 00:00:00+00:00 <strong>Recolectores:</strong> José De Gracia <strong>Identificadores:</strong> Jose De Gracia</div>`)[0];
+            popup_0b65776fe9544a19a777523240c50fbe.setContent(html_73f506d2284b4d3eb1d28d9defa0c92a);
+        
+
+        marker_ce4dedeb52bf4dd6b7bc61a971473476.bindPopup(popup_0b65776fe9544a19a777523240c50fbe)
+        ;
+
+        
+    
+    
+            var marker_ec43f3497a1449e193d05f8498802c51 = L.marker(
+                [8.9, -83.41],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_d37306d908fd485bad37973e58dfc9bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5beffb6c71244be3be5afcf55a8e2ae0 = $(`<div id="html_5beffb6c71244be3be5afcf55a8e2ae0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Palmar Norte. Olla Cero, remanente de bosque junto a la carretera con terreno semi-inundado temporalmente. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> M. H. Grayum</div>`)[0];
+            popup_d37306d908fd485bad37973e58dfc9bb.setContent(html_5beffb6c71244be3be5afcf55a8e2ae0);
+        
+
+        marker_ec43f3497a1449e193d05f8498802c51.bindPopup(popup_d37306d908fd485bad37973e58dfc9bb)
+        ;
+
+        
+    
+    
+            var marker_33be5ea4dc4843a399f44dcf5baf368e = L.marker(
+                [10.0, -83.13],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_0437ce05cdec49e3b0809ac50ee6f5bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b1c5e944cd84867bdba5a803af53b1b = $(`<div id="html_7b1c5e944cd84867bdba5a803af53b1b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Between Río Madre and Blanco, shore at Moín, Atlantic coast, sea level <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Henri Pittier <strong>Identificadores:</strong> G. de Nevers & A. Henderson</div>`)[0];
+            popup_0437ce05cdec49e3b0809ac50ee6f5bb.setContent(html_7b1c5e944cd84867bdba5a803af53b1b);
+        
+
+        marker_33be5ea4dc4843a399f44dcf5baf368e.bindPopup(popup_0437ce05cdec49e3b0809ac50ee6f5bb)
+        ;
+
+        
+    
+    
+            var marker_8c757081cb3347e79074ae0535a66bc9 = L.marker(
+                [9.358333, -79.741667],
+                {}
+            ).addTo(marker_cluster_7c714d4a04df435aa40a5a59ea007431);
+        
+    
+        var popup_d8fefbd793744a08a635b1172b44b590 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_214485a4e0a140f2902a373e5b48f0aa = $(`<div id="html_214485a4e0a140f2902a373e5b48f0aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Santa Rita Ridge, 10 km from Transistmica. [Coordinates on original label: 09º20'N, 079º45'W] <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1995-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Andrew J. Henderson|Gloria A. Galeano|Rodrigo Bernal <strong>Identificadores:</strong> G. de Nevers & A. Henderson</div>`)[0];
+            popup_d8fefbd793744a08a635b1172b44b590.setContent(html_214485a4e0a140f2902a373e5b48f0aa);
+        
+
+        marker_8c757081cb3347e79074ae0535a66bc9.bindPopup(popup_d8fefbd793744a08a635b1172b44b590)
+        ;
+
+        
+    
+    
+            var layer_control_c1ba77f1b8cf4c7d8d737f96415949ed = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_74fdbbdaca2b400589d679c2761a7f27,
+                    "ESRI World Imagery" : tile_layer_6c3a15d48da94ec8b5e90cb5ec2de5fc,
+                },
+                overlays :  {
+                    "macro_element_7c714d4a04df435aa40a5a59ea007431" : marker_cluster_7c714d4a04df435aa40a5a59ea007431,
+                },
+            };
+            L.control.layers(
+                layer_control_c1ba77f1b8cf4c7d8d737f96415949ed.base_layers,
+                layer_control_c1ba77f1b8cf4c7d8d737f96415949ed.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c42f60466cdd406d8d9d190206ad1425);
+            tile_layer_6c3a15d48da94ec8b5e90cb5ec2de5fc.remove();
+        
+</script>

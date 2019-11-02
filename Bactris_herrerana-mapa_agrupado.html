@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_92c52db8de85494aacbfaa956ea5315f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_92c52db8de85494aacbfaa956ea5315f" ></div>
+        
+</body>
+<script>    
+    
+            var map_92c52db8de85494aacbfaa956ea5315f = L.map(
+                "map_92c52db8de85494aacbfaa956ea5315f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_92c52db8de85494aacbfaa956ea5315f);
+
+            
+
+        
+    
+            var tile_layer_bc39ce15c4294bf8a38f2f23cf2406ad = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_92c52db8de85494aacbfaa956ea5315f);
+        
+    
+            var tile_layer_20a35348b98a458f86c28a268c775601 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_92c52db8de85494aacbfaa956ea5315f);
+        
+    
+            var marker_cluster_b6f8e0810e1843d4962ad6504040b111 = L.markerClusterGroup(
+                {}
+            );
+            map_92c52db8de85494aacbfaa956ea5315f.addLayer(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+            var marker_13f7d0b7b1094832a500bc807f17101b = L.marker(
+                [9.29, -83.77],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_6ea697a1ed5b437aa85a9cd125a37762 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd24fac923a74dd8975ba7086103ebdb = $(`<div id="html_bd24fac923a74dd8975ba7086103ebdb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Cristobal, Finca Tinamaste ( 17 km de San Isidro  a Dominical). Remanente cerca de Fila Tinamaste. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1998-03-25 00:00:00+00:00 <strong>Recolectores:</strong> Valverde, Oscar <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_6ea697a1ed5b437aa85a9cd125a37762.setContent(html_bd24fac923a74dd8975ba7086103ebdb);
+        
+
+        marker_13f7d0b7b1094832a500bc807f17101b.bindPopup(popup_6ea697a1ed5b437aa85a9cd125a37762)
+        ;
+
+        
+    
+    
+            var marker_cdb54f4b7eed4bb8aab15a15b5988a29 = L.marker(
+                [9.29, -83.77],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_175fba734c0b49adb756507c60011e77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1305412fb9914980b6b0f70eea0e5067 = $(`<div id="html_1305412fb9914980b6b0f70eea0e5067" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R. F. Los Santos San Cristóbal. Finca Tinamaste (17km de S. Isidro a Dominical), remanente de bosque al pie de la Fila Tinamaste. <strong>Elevación:</strong> 665.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Cascante, Alfredo <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_175fba734c0b49adb756507c60011e77.setContent(html_1305412fb9914980b6b0f70eea0e5067);
+        
+
+        marker_cdb54f4b7eed4bb8aab15a15b5988a29.bindPopup(popup_175fba734c0b49adb756507c60011e77)
+        ;
+
+        
+    
+    
+            var marker_9f774fbeac614e229561ded8f3db2472 = L.marker(
+                [9.29, -83.77],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_abdffb0b070d4a899591416a6c27e791 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33c24f36412248a0979a89e5363c323a = $(`<div id="html_33c24f36412248a0979a89e5363c323a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tinamaste. Finca de los Suizos. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1999-04-13 00:00:00+00:00 <strong>Recolectores:</strong> Estrada, Armando <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_abdffb0b070d4a899591416a6c27e791.setContent(html_33c24f36412248a0979a89e5363c323a);
+        
+
+        marker_9f774fbeac614e229561ded8f3db2472.bindPopup(popup_abdffb0b070d4a899591416a6c27e791)
+        ;
+
+        
+    
+    
+            var marker_eec43348c65c414d992529b55f7ab82e = L.marker(
+                [9.698611, -84.27555600000001],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_60328a19c76247bbbe3ab4487251af1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2197eea9232475d962aeb2fe3df70eb = $(`<div id="html_d2197eea9232475d962aeb2fe3df70eb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colorado; bosque primario en la cuenca de la Quebrada Colorado, por Caspirola. <strong>Elevación:</strong> 390.0 m  <strong>Fecha:</strong> 1997-04-10 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_60328a19c76247bbbe3ab4487251af1d.setContent(html_d2197eea9232475d962aeb2fe3df70eb);
+        
+
+        marker_eec43348c65c414d992529b55f7ab82e.bindPopup(popup_60328a19c76247bbbe3ab4487251af1d)
+        ;
+
+        
+    
+    
+            var marker_1f89a0c1ff26486fab1123b53ab52d2f = L.marker(
+                [8.513889, -83.472222],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_5572879ed4ae42c08b40fc34efc8cef2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b818c165da54f74ac1097d18a7bdc2f = $(`<div id="html_6b818c165da54f74ac1097d18a7bdc2f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Rincon, Puerto Jimenez. Cabeceras de los Rios Tigre y Rincon. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1993-05-07 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_5572879ed4ae42c08b40fc34efc8cef2.setContent(html_6b818c165da54f74ac1097d18a7bdc2f);
+        
+
+        marker_1f89a0c1ff26486fab1123b53ab52d2f.bindPopup(popup_5572879ed4ae42c08b40fc34efc8cef2)
+        ;
+
+        
+    
+    
+            var marker_4ae4aded5dec4e8fa3c56f6758a6226c = L.marker(
+                [9.7, -84.391667],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_7aa6377738b44be8b15ce17f292fe4d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a995395ff29246f3ace53a2156660c12 = $(`<div id="html_a995395ff29246f3ace53a2156660c12" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Forests along Rio Negro, ca. 1.5 km E of Santa Rosa de Puriscal. <strong>Elevación:</strong> 320.0 m  <strong>Fecha:</strong> 1987-05-14 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_7aa6377738b44be8b15ce17f292fe4d3.setContent(html_a995395ff29246f3ace53a2156660c12);
+        
+
+        marker_4ae4aded5dec4e8fa3c56f6758a6226c.bindPopup(popup_7aa6377738b44be8b15ce17f292fe4d3)
+        ;
+
+        
+    
+    
+            var marker_4e39388462554fa78d54635a45102365 = L.marker(
+                [8.7, -83.516669],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_1165f69fd7be4e64bcfcc8e94b96db96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98a1f5e0a2304785a106ce979ae5c17c = $(`<div id="html_98a1f5e0a2304785a106ce979ae5c17c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Aguabuena, ca. 5 km W of Rincon forest near the road. Quebrada Aguabuena <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1992-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Andrew Augustus Henderson <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_1165f69fd7be4e64bcfcc8e94b96db96.setContent(html_98a1f5e0a2304785a106ce979ae5c17c);
+        
+
+        marker_4e39388462554fa78d54635a45102365.bindPopup(popup_1165f69fd7be4e64bcfcc8e94b96db96)
+        ;
+
+        
+    
+    
+            var marker_44423c83c310430298876f12b75143c7 = L.marker(
+                [8.7, -83.516669],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_2345678d171840658a743e7612eda6c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab412c320e1f4cbca247aae5b4d3fb88 = $(`<div id="html_ab412c320e1f4cbca247aae5b4d3fb88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Aguabuena, ca. 5 km W of Rincon forest near the road. Quebrada Aguabuena <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1992-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Andrew Augustus Henderson <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_2345678d171840658a743e7612eda6c8.setContent(html_ab412c320e1f4cbca247aae5b4d3fb88);
+        
+
+        marker_44423c83c310430298876f12b75143c7.bindPopup(popup_2345678d171840658a743e7612eda6c8)
+        ;
+
+        
+    
+    
+            var marker_14b717f0c38b434782863e7c389fa651 = L.marker(
+                [8.7, -83.516669],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_81547a3dcff9451099854e27081b8cc6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fdf2170e230b4ca09effd5aa5e8ee711 = $(`<div id="html_fdf2170e230b4ca09effd5aa5e8ee711" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Aguabuena, ca. 5 km W of Rincon forest near the road. Quebrada Aguabuena <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1992-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Andrew Augustus Henderson <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_81547a3dcff9451099854e27081b8cc6.setContent(html_fdf2170e230b4ca09effd5aa5e8ee711);
+        
+
+        marker_14b717f0c38b434782863e7c389fa651.bindPopup(popup_81547a3dcff9451099854e27081b8cc6)
+        ;
+
+        
+    
+    
+            var marker_c5bd00a04035484ca272f7b4b86c2e38 = L.marker(
+                [9.608333, -84.231944],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_fa7b74c1065049a097d32b8618c73476 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07c6a93866b54a7a9cba34ffef9b557d = $(`<div id="html_07c6a93866b54a7a9cba34ffef9b557d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Cabeza de Chancho, Faldas SO, ente el Carmen y Palo Seco. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1998-05-01 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_fa7b74c1065049a097d32b8618c73476.setContent(html_07c6a93866b54a7a9cba34ffef9b557d);
+        
+
+        marker_c5bd00a04035484ca272f7b4b86c2e38.bindPopup(popup_fa7b74c1065049a097d32b8618c73476)
+        ;
+
+        
+    
+    
+            var marker_dc6bd0be44734deba8f7f9ce41ee2d1e = L.marker(
+                [9.608333, -84.231944],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_102252d3eb974afeb93a8446788aabdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af55f12ceca44faeac8dbea89e58648c = $(`<div id="html_af55f12ceca44faeac8dbea89e58648c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Cabeza de Chancho, Faldas SO, ente el Carmen y Palo Seco. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1998-05-01 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Cascante, Alfredo</div>`)[0];
+            popup_102252d3eb974afeb93a8446788aabdb.setContent(html_af55f12ceca44faeac8dbea89e58648c);
+        
+
+        marker_dc6bd0be44734deba8f7f9ce41ee2d1e.bindPopup(popup_102252d3eb974afeb93a8446788aabdb)
+        ;
+
+        
+    
+    
+            var marker_12e90e42ed394ea1bd85ddf118d93b67 = L.marker(
+                [9.698611, -84.268056],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_17664fccf3204b809cc8df29533e3dfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7efa349ec3ba488eaf70b26139f67955 = $(`<div id="html_7efa349ec3ba488eaf70b26139f67955" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colorado. Tacotales y bosques residuales cerca del cruce sobre la Quebrada Colorado. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1999-04-13 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_17664fccf3204b809cc8df29533e3dfa.setContent(html_7efa349ec3ba488eaf70b26139f67955);
+        
+
+        marker_12e90e42ed394ea1bd85ddf118d93b67.bindPopup(popup_17664fccf3204b809cc8df29533e3dfa)
+        ;
+
+        
+    
+    
+            var marker_a34c987a50e8486a991e2198778c6076 = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_51b0dcbff95d451ea4950b68eef8776d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f9ec4bf40fa4bd492af134f1263c0bc = $(`<div id="html_8f9ec4bf40fa4bd492af134f1263c0bc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_51b0dcbff95d451ea4950b68eef8776d.setContent(html_8f9ec4bf40fa4bd492af134f1263c0bc);
+        
+
+        marker_a34c987a50e8486a991e2198778c6076.bindPopup(popup_51b0dcbff95d451ea4950b68eef8776d)
+        ;
+
+        
+    
+    
+            var marker_81ea7ae17e494dd7bd333ffcdfbe90de = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_ef9401a6ebec4145bf1908df74cc472a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e09b88c0f45645f4a2d24c478f791535 = $(`<div id="html_e09b88c0f45645f4a2d24c478f791535" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_ef9401a6ebec4145bf1908df74cc472a.setContent(html_e09b88c0f45645f4a2d24c478f791535);
+        
+
+        marker_81ea7ae17e494dd7bd333ffcdfbe90de.bindPopup(popup_ef9401a6ebec4145bf1908df74cc472a)
+        ;
+
+        
+    
+    
+            var marker_09208e0619a74dd78df00aa18cd71363 = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_d034a20513c142c29c4104a37b309455 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0eb8b4aea31464aa8056ead38d1bceb = $(`<div id="html_d0eb8b4aea31464aa8056ead38d1bceb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_d034a20513c142c29c4104a37b309455.setContent(html_d0eb8b4aea31464aa8056ead38d1bceb);
+        
+
+        marker_09208e0619a74dd78df00aa18cd71363.bindPopup(popup_d034a20513c142c29c4104a37b309455)
+        ;
+
+        
+    
+    
+            var marker_1b41c0cc4b554ffd97db278f72ce0a9f = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_c7e953fc73874e49b22a001958b77d1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7ee01e75ee440b1acab99d37f3f6292 = $(`<div id="html_d7ee01e75ee440b1acab99d37f3f6292" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_c7e953fc73874e49b22a001958b77d1f.setContent(html_d7ee01e75ee440b1acab99d37f3f6292);
+        
+
+        marker_1b41c0cc4b554ffd97db278f72ce0a9f.bindPopup(popup_c7e953fc73874e49b22a001958b77d1f)
+        ;
+
+        
+    
+    
+            var marker_eb8c5722a0c04e28aafa05099bcaf45b = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_d5b428c5612c4b449fe6c9921e981a9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49335e790c6545649bef838acba519ab = $(`<div id="html_49335e790c6545649bef838acba519ab" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_d5b428c5612c4b449fe6c9921e981a9d.setContent(html_49335e790c6545649bef838acba519ab);
+        
+
+        marker_eb8c5722a0c04e28aafa05099bcaf45b.bindPopup(popup_d5b428c5612c4b449fe6c9921e981a9d)
+        ;
+
+        
+    
+    
+            var marker_c2be923c1c314f66b696fc4204c4e894 = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_048f06da3a514277a58aa3ef4137a669 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aabe8a7eb26d417fb8be72863356a2f6 = $(`<div id="html_aabe8a7eb26d417fb8be72863356a2f6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1998-06-06 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_048f06da3a514277a58aa3ef4137a669.setContent(html_aabe8a7eb26d417fb8be72863356a2f6);
+        
+
+        marker_c2be923c1c314f66b696fc4204c4e894.bindPopup(popup_048f06da3a514277a58aa3ef4137a669)
+        ;
+
+        
+    
+    
+            var marker_9737c89b65b2498f8de8daf6437e4895 = L.marker(
+                [8.534815, -83.42666700000001],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_6d7f63f5395244c3a1944d2a79927036 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_677f2e1a3d3d49959353fe01780fa523 = $(`<div id="html_677f2e1a3d3d49959353fe01780fa523" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> A.C.O. Golfito, Reserva Ftal Golfo Dulce, Est Agujas <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 2000-05-24 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez ; Gerardo Soto ; Geovanny Sancho <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_6d7f63f5395244c3a1944d2a79927036.setContent(html_677f2e1a3d3d49959353fe01780fa523);
+        
+
+        marker_9737c89b65b2498f8de8daf6437e4895.bindPopup(popup_6d7f63f5395244c3a1944d2a79927036)
+        ;
+
+        
+    
+    
+            var marker_f7052d67890f44838116ec25cb2ffde9 = L.marker(
+                [8.534815, -83.42666700000001],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_1fb7e2b245ce497d9a8fe182e115834e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a65fc68009b4a6daff9820f84e3fefd = $(`<div id="html_6a65fc68009b4a6daff9820f84e3fefd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> A.C.O. Golfito, Reserva Ftal Golfo Dulce, Est Agujas <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 2000-05-24 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez ; Gerardo Soto ; Geovanny Sancho <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_1fb7e2b245ce497d9a8fe182e115834e.setContent(html_6a65fc68009b4a6daff9820f84e3fefd);
+        
+
+        marker_f7052d67890f44838116ec25cb2ffde9.bindPopup(popup_1fb7e2b245ce497d9a8fe182e115834e)
+        ;
+
+        
+    
+    
+            var marker_03f88ea7cad1448986aca035a3a93e1e = L.marker(
+                [8.683611, -83.228048],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_c461ce4564f247b1bc36a089d865d572 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42f94a1f3bd04048b51aded1a56c8063 = $(`<div id="html_42f94a1f3bd04048b51aded1a56c8063" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Piedras Blancas, sector El Bonito. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-10-15 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Helen Kennedy <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_c461ce4564f247b1bc36a089d865d572.setContent(html_42f94a1f3bd04048b51aded1a56c8063);
+        
+
+        marker_03f88ea7cad1448986aca035a3a93e1e.bindPopup(popup_c461ce4564f247b1bc36a089d865d572)
+        ;
+
+        
+    
+    
+            var marker_df9ba656772146de9bba7a10b040bb09 = L.marker(
+                [9.560556, -84.124167],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_8830a0c38dd34b30b7c591cfe142ba35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de0251429b5d4150a2894b10ff12a615 = $(`<div id="html_de0251429b5d4150a2894b10ff12a615" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tarrazú, San Carlos. Bajo La virgen. Finca Ríos Paraiso. Camino a cerros de Quepos. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 2003-07-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Jose González ; Armando Estrada ; Alonso Quesada <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_8830a0c38dd34b30b7c591cfe142ba35.setContent(html_de0251429b5d4150a2894b10ff12a615);
+        
+
+        marker_df9ba656772146de9bba7a10b040bb09.bindPopup(popup_8830a0c38dd34b30b7c591cfe142ba35)
+        ;
+
+        
+    
+    
+            var marker_9d7377114b3d4cd184a34f00ec55c4d7 = L.marker(
+                [9.29833, -83.77221999999999],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_81e8ef3e6cb44a0f895ac8d686535d68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5ad5d242a164b67aceeb37c9e5eddea = $(`<div id="html_c5ad5d242a164b67aceeb37c9e5eddea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pérez Zeledón, San Cristobal, Finca Tinamaste (17 km de San Isidro a Dominical). Remanentes cerca de la Fila Tinamaste. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1998-03-25 00:00:00+00:00 <strong>Recolectores:</strong> Óscar Valverde <strong>Identificadores:</strong> A. Cascante-M., May</div>`)[0];
+            popup_81e8ef3e6cb44a0f895ac8d686535d68.setContent(html_c5ad5d242a164b67aceeb37c9e5eddea);
+        
+
+        marker_9d7377114b3d4cd184a34f00ec55c4d7.bindPopup(popup_81e8ef3e6cb44a0f895ac8d686535d68)
+        ;
+
+        
+    
+    
+            var marker_181689a346cb47d895d84cdc45f0c7e9 = L.marker(
+                [8.534815, -83.42666700000001],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_ecc2bca878d4449ea3551b94ba4c72e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6323e158993e4793a4aaa7df81579a09 = $(`<div id="html_6323e158993e4793a4aaa7df81579a09" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce.  Península de Osa.  Alrededores de Estación Agujas. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 2000-05-24 00:00:00+00:00 <strong>Recolectores:</strong> Luis Acosta|Víctor H. Ramírez|Gerardo Soto|Geovanny Sancho <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_ecc2bca878d4449ea3551b94ba4c72e8.setContent(html_6323e158993e4793a4aaa7df81579a09);
+        
+
+        marker_181689a346cb47d895d84cdc45f0c7e9.bindPopup(popup_ecc2bca878d4449ea3551b94ba4c72e8)
+        ;
+
+        
+    
+    
+            var marker_88fa5f42434849adb4bbb76a9fa83401 = L.marker(
+                [9.7, -84.391667],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_f6d8b5013dde4e76906dc0887e50e94d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d00c38808724321898008dbd8e44354 = $(`<div id="html_9d00c38808724321898008dbd8e44354" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zona Protectora La Cangreja, forests along Río Negro, ca. 1.5 km east of Santa Rosa de Puriscal <strong>Elevación:</strong> 320.0 m  <strong>Fecha:</strong> 1987-05-14 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum|Gerardo Herrera Ch.|Gina Umaña Dodero|Nelson Zamora <strong>Identificadores:</strong> A. Cascante, V/</div>`)[0];
+            popup_f6d8b5013dde4e76906dc0887e50e94d.setContent(html_9d00c38808724321898008dbd8e44354);
+        
+
+        marker_88fa5f42434849adb4bbb76a9fa83401.bindPopup(popup_f6d8b5013dde4e76906dc0887e50e94d)
+        ;
+
+        
+    
+    
+            var marker_5f626b73059c4008906d9ce8d747e20d = L.marker(
+                [8.7, -83.51],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_ae074f1d97c949138f83706a493a534a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2bf6a4456304878921d619a5eed019f = $(`<div id="html_a2bf6a4456304878921d619a5eed019f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce; Península de Osa. Quebrada Agua Buena, Estacion Agua Buena, ca. 5 km W of Rincon, Forest near the road. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1992-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Andrew J. Henderson|Gloria A. Galeano|Barry E. Hammel <strong>Identificadores:</strong> M.H. Grayum (MO)</div>`)[0];
+            popup_ae074f1d97c949138f83706a493a534a.setContent(html_a2bf6a4456304878921d619a5eed019f);
+        
+
+        marker_5f626b73059c4008906d9ce8d747e20d.bindPopup(popup_ae074f1d97c949138f83706a493a534a)
+        ;
+
+        
+    
+    
+            var marker_f41f5c49ded34fcc9edee87e901a5d6d = L.marker(
+                [9.29833, -83.77221999999999],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_7ce6ea6cdbfa46819f0a2fe6c6d52afd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0db3763d07de4ff7abea86ed4cf00ee4 = $(`<div id="html_0db3763d07de4ff7abea86ed4cf00ee4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Cristobal, Finca Tinamaste (17 km de San Isidro a Dominical), remanente de bosque al pie de la Fila Tinamaste <strong>Elevación:</strong> 665.0 m  <strong>Fecha:</strong> 1998-12-02 00:00:00+00:00 <strong>Recolectores:</strong> Alfredo Cascante <strong>Identificadores:</strong> A. Cascante-M.</div>`)[0];
+            popup_7ce6ea6cdbfa46819f0a2fe6c6d52afd.setContent(html_0db3763d07de4ff7abea86ed4cf00ee4);
+        
+
+        marker_f41f5c49ded34fcc9edee87e901a5d6d.bindPopup(popup_7ce6ea6cdbfa46819f0a2fe6c6d52afd)
+        ;
+
+        
+    
+    
+            var marker_3eda1e048c64416298326d8b92fb6402 = L.marker(
+                [8.69, -83.52],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_b825af0cab534df3a0c5c2d650dc076e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9972fd516d784642b5b0d133f44c8549 = $(`<div id="html_9972fd516d784642b5b0d133f44c8549" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Boscosa, 5 km W of Rincon de Osa, moist forest. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1994-11-16 00:00:00+00:00 <strong>Recolectores:</strong> Donald R. Hodel|Michaela Binder <strong>Identificadores:</strong> M.H. Grayum (MO), III/</div>`)[0];
+            popup_b825af0cab534df3a0c5c2d650dc076e.setContent(html_9972fd516d784642b5b0d133f44c8549);
+        
+
+        marker_3eda1e048c64416298326d8b92fb6402.bindPopup(popup_b825af0cab534df3a0c5c2d650dc076e)
+        ;
+
+        
+    
+    
+            var marker_0e912956c56949f2b34f200a4b2336a1 = L.marker(
+                [9.6, -84.23],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_a6d06c8855bc479da9063e4ba520b39d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8cd25f614b849b88e6df10786e70563 = $(`<div id="html_b8cd25f614b849b88e6df10786e70563" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Pirris-Damas. Cerro Cabeza de Chancho, Faldas SO, ente el CArmen y Palo Seco. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1998-05-01 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales <strong>Identificadores:</strong> M.H. Grayum</div>`)[0];
+            popup_a6d06c8855bc479da9063e4ba520b39d.setContent(html_b8cd25f614b849b88e6df10786e70563);
+        
+
+        marker_0e912956c56949f2b34f200a4b2336a1.bindPopup(popup_a6d06c8855bc479da9063e4ba520b39d)
+        ;
+
+        
+    
+    
+            var marker_b3590d6448f5468998cd187a33413bd6 = L.marker(
+                [8.7, -83.51666],
+                {}
+            ).addTo(marker_cluster_b6f8e0810e1843d4962ad6504040b111);
+        
+    
+        var popup_44ed1660a44644e9bb363c1eef2a0d6d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ed56472f9a442c886e9f99704bacfde = $(`<div id="html_0ed56472f9a442c886e9f99704bacfde" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Slopes above Airport. Disturbed primary forest. Rincon de Osa. <strong>Elevación:</strong> 160.0 m  <strong>Fecha:</strong> 1974-02-12 00:00:00+00:00 <strong>Recolectores:</strong> Ronald L. Liesner <strong>Identificadores:</strong> M.H. Grayum, 1999 (MO)</div>`)[0];
+            popup_44ed1660a44644e9bb363c1eef2a0d6d.setContent(html_0ed56472f9a442c886e9f99704bacfde);
+        
+
+        marker_b3590d6448f5468998cd187a33413bd6.bindPopup(popup_44ed1660a44644e9bb363c1eef2a0d6d)
+        ;
+
+        
+    
+    
+            var layer_control_5962a102d14f4ddcb8e472feada20285 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_bc39ce15c4294bf8a38f2f23cf2406ad,
+                    "ESRI World Imagery" : tile_layer_20a35348b98a458f86c28a268c775601,
+                },
+                overlays :  {
+                    "macro_element_b6f8e0810e1843d4962ad6504040b111" : marker_cluster_b6f8e0810e1843d4962ad6504040b111,
+                },
+            };
+            L.control.layers(
+                layer_control_5962a102d14f4ddcb8e472feada20285.base_layers,
+                layer_control_5962a102d14f4ddcb8e472feada20285.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_92c52db8de85494aacbfaa956ea5315f);
+            tile_layer_20a35348b98a458f86c28a268c775601.remove();
+        
+</script>

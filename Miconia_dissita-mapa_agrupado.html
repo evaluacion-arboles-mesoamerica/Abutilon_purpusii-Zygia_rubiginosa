@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9b1e21063b84c14bff6a7e4545c8997 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e9b1e21063b84c14bff6a7e4545c8997" ></div>
+        
+</body>
+<script>    
+    
+            var map_e9b1e21063b84c14bff6a7e4545c8997 = L.map(
+                "map_e9b1e21063b84c14bff6a7e4545c8997",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e9b1e21063b84c14bff6a7e4545c8997);
+
+            
+
+        
+    
+            var tile_layer_fa22e4e657cc4ff390b12300d8f98fa2 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e9b1e21063b84c14bff6a7e4545c8997);
+        
+    
+            var tile_layer_345522db44044bf8994e522631ffe88a = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e9b1e21063b84c14bff6a7e4545c8997);
+        
+    
+            var marker_cluster_765211df84384d5bba7265621552ac20 = L.markerClusterGroup(
+                {}
+            );
+            map_e9b1e21063b84c14bff6a7e4545c8997.addLayer(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+            var marker_ad07d4c2f72b4abda5cb60538fa3ad81 = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_5841324a96e8458aa678bdfdd06c806c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b2da13fbfb04e7997239afa05d1fdd8 = $(`<div id="html_7b2da13fbfb04e7997239afa05d1fdd8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. Río Banano. Cuenca del Banano. Limón, Valle La Estrella Fila Matama. Ca. 11 km SW del Pueblo de Aguas Zarcas. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Alex K. Monro|Daniel Santamaría|Daniel Solano|Billen Gamboa R.|Eduardo Boza|M. Hernández Peña|Marcos Moraga|Ó. Chacón Chavarría|R. Delgado Dávila <strong>Identificadores:</strong> A. Rodriguez</div>`)[0];
+            popup_5841324a96e8458aa678bdfdd06c806c.setContent(html_7b2da13fbfb04e7997239afa05d1fdd8);
+        
+
+        marker_ad07d4c2f72b4abda5cb60538fa3ad81.bindPopup(popup_5841324a96e8458aa678bdfdd06c806c)
+        ;
+
+        
+    
+    
+            var marker_a416b75453f44fefad6ad439eaee7fe8 = L.marker(
+                [9.755556, -83.78333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_e15908e84f2a44dc804bda2189c651ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c4dd47c0a784f6996a8458d3764d6b8 = $(`<div id="html_8c4dd47c0a784f6996a8458d3764d6b8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Senderos Oropendola y La Pava, P. N. Tapanti. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_e15908e84f2a44dc804bda2189c651ad.setContent(html_8c4dd47c0a784f6996a8458d3764d6b8);
+        
+
+        marker_a416b75453f44fefad6ad439eaee7fe8.bindPopup(popup_e15908e84f2a44dc804bda2189c651ad)
+        ;
+
+        
+    
+    
+            var marker_c68b0e00dfd94cbab3bde47f4dc80156 = L.marker(
+                [9.558333, -83.716667],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_d2a134e379ab46639d019da1d3105aa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c74a25c936a487bbce7c7f6c0336d6b = $(`<div id="html_2c74a25c936a487bbce7c7f6c0336d6b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Villa Mills. Boundary between Provincia Cartago and Provincia San Jose: Along Carretera Interamericana on Continental Divide, vicinity of La Georgina. <strong>Elevación:</strong> 3150.0 m  <strong>Fecha:</strong> 2002-05-10 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_d2a134e379ab46639d019da1d3105aa5.setContent(html_2c74a25c936a487bbce7c7f6c0336d6b);
+        
+
+        marker_c68b0e00dfd94cbab3bde47f4dc80156.bindPopup(popup_d2a134e379ab46639d019da1d3105aa5)
+        ;
+
+        
+    
+    
+            var marker_8d27272f124e46b1a9f7c7f682b09ff6 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_1b9a649704a346098b43f6491cef6b7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_770280ec718c461dae4a244ba0ee4aca = $(`<div id="html_770280ec718c461dae4a244ba0ee4aca" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_1b9a649704a346098b43f6491cef6b7c.setContent(html_770280ec718c461dae4a244ba0ee4aca);
+        
+
+        marker_8d27272f124e46b1a9f7c7f682b09ff6.bindPopup(popup_1b9a649704a346098b43f6491cef6b7c)
+        ;
+
+        
+    
+    
+            var marker_1e66f96c44814ee588e482f4d986a1f9 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_e89bca781a6f4ba1b69e7758c4cfda35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0b473d58668489e86d7760a8685f24d = $(`<div id="html_d0b473d58668489e86d7760a8685f24d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_e89bca781a6f4ba1b69e7758c4cfda35.setContent(html_d0b473d58668489e86d7760a8685f24d);
+        
+
+        marker_1e66f96c44814ee588e482f4d986a1f9.bindPopup(popup_e89bca781a6f4ba1b69e7758c4cfda35)
+        ;
+
+        
+    
+    
+            var marker_30935edad0aa48d3b2e20dd5cc791e40 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_5d6495abac60453191ec7a9f6caa2275 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc08a17fb2c94c498d03906d9bb0eee7 = $(`<div id="html_bc08a17fb2c94c498d03906d9bb0eee7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_5d6495abac60453191ec7a9f6caa2275.setContent(html_bc08a17fb2c94c498d03906d9bb0eee7);
+        
+
+        marker_30935edad0aa48d3b2e20dd5cc791e40.bindPopup(popup_5d6495abac60453191ec7a9f6caa2275)
+        ;
+
+        
+    
+    
+            var marker_3d5e12d193ed498d833b6429eb566e43 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_f0abe36af73541d99c81af48bf57054f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53f625ad990446fd913ad0b7d34d0b53 = $(`<div id="html_53f625ad990446fd913ad0b7d34d0b53" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f0abe36af73541d99c81af48bf57054f.setContent(html_53f625ad990446fd913ad0b7d34d0b53);
+        
+
+        marker_3d5e12d193ed498d833b6429eb566e43.bindPopup(popup_f0abe36af73541d99c81af48bf57054f)
+        ;
+
+        
+    
+    
+            var marker_4b7111cd7183494aa8d2a82483c5cf7a = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_63b456bbbe5445459fbbcc0d88689169 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1183130c1d95420aaa21e1ff1589190f = $(`<div id="html_1183130c1d95420aaa21e1ff1589190f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_63b456bbbe5445459fbbcc0d88689169.setContent(html_1183130c1d95420aaa21e1ff1589190f);
+        
+
+        marker_4b7111cd7183494aa8d2a82483c5cf7a.bindPopup(popup_63b456bbbe5445459fbbcc0d88689169)
+        ;
+
+        
+    
+    
+            var marker_ac0438c9606846b5a64ce2663e7ee5b4 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_5b94a8c5a5224a258ca7ae78cfbb494f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1944127d1fe04c469c27583358ec8782 = $(`<div id="html_1944127d1fe04c469c27583358ec8782" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_5b94a8c5a5224a258ca7ae78cfbb494f.setContent(html_1944127d1fe04c469c27583358ec8782);
+        
+
+        marker_ac0438c9606846b5a64ce2663e7ee5b4.bindPopup(popup_5b94a8c5a5224a258ca7ae78cfbb494f)
+        ;
+
+        
+    
+    
+            var marker_bd39eb7d16bc49cdada82188c55a5396 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_047fe7f3863e45c5baa13b4db51f1c69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07c99ae4ecf240ff9f420955f82e54e2 = $(`<div id="html_07c99ae4ecf240ff9f420955f82e54e2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_047fe7f3863e45c5baa13b4db51f1c69.setContent(html_07c99ae4ecf240ff9f420955f82e54e2);
+        
+
+        marker_bd39eb7d16bc49cdada82188c55a5396.bindPopup(popup_047fe7f3863e45c5baa13b4db51f1c69)
+        ;
+
+        
+    
+    
+            var marker_7fa1521d69224c2eaa5e8bad85f49857 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_075191de83094b1c822150c2896dbe06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca710cacc0e640d382fbdfd75d3878ce = $(`<div id="html_ca710cacc0e640d382fbdfd75d3878ce" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_075191de83094b1c822150c2896dbe06.setContent(html_ca710cacc0e640d382fbdfd75d3878ce);
+        
+
+        marker_7fa1521d69224c2eaa5e8bad85f49857.bindPopup(popup_075191de83094b1c822150c2896dbe06)
+        ;
+
+        
+    
+    
+            var marker_ff884288cd734d73b6d2b46667aeae39 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_3c7bb86a96da4fe3a31b36577f4d4ac1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f578e5b1dbb44e395527de776de9256 = $(`<div id="html_0f578e5b1dbb44e395527de776de9256" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_3c7bb86a96da4fe3a31b36577f4d4ac1.setContent(html_0f578e5b1dbb44e395527de776de9256);
+        
+
+        marker_ff884288cd734d73b6d2b46667aeae39.bindPopup(popup_3c7bb86a96da4fe3a31b36577f4d4ac1)
+        ;
+
+        
+    
+    
+            var marker_a6eca0bd7bee425cbc45be166506c5fe = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_e081a74288724bf18576a7c80d305889 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf3b0f51b4924136b436b3e75369c192 = $(`<div id="html_cf3b0f51b4924136b436b3e75369c192" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_e081a74288724bf18576a7c80d305889.setContent(html_cf3b0f51b4924136b436b3e75369c192);
+        
+
+        marker_a6eca0bd7bee425cbc45be166506c5fe.bindPopup(popup_e081a74288724bf18576a7c80d305889)
+        ;
+
+        
+    
+    
+            var marker_fde1ea1effa141fb9a8f1e80d04c7ee5 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_409f5e08e97a48bc86b082f2d02ff470 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e075fdc903e4d1099dba0065f4440ee = $(`<div id="html_9e075fdc903e4d1099dba0065f4440ee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Oropendola. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_409f5e08e97a48bc86b082f2d02ff470.setContent(html_9e075fdc903e4d1099dba0065f4440ee);
+        
+
+        marker_fde1ea1effa141fb9a8f1e80d04c7ee5.bindPopup(popup_409f5e08e97a48bc86b082f2d02ff470)
+        ;
+
+        
+    
+    
+            var marker_0aec821b5630415798465818fbef397d = L.marker(
+                [9.755556, -83.783334],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_7cd294858c9c4c9a9d3fb3c4363fe6a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6dbb4817779749d796751bfea2012791 = $(`<div id="html_6dbb4817779749d796751bfea2012791" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Tapanti, Sendero La Heliconia. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_7cd294858c9c4c9a9d3fb3c4363fe6a9.setContent(html_6dbb4817779749d796751bfea2012791);
+        
+
+        marker_0aec821b5630415798465818fbef397d.bindPopup(popup_7cd294858c9c4c9a9d3fb3c4363fe6a9)
+        ;
+
+        
+    
+    
+            var marker_5dab135b6dd8455c95fb7b605822bdc4 = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_da4ff3101e064f82b59699bc35b206fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46e2bcd1878c4a3aa90c2bfdec702c58 = $(`<div id="html_46e2bcd1878c4a3aa90c2bfdec702c58" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_da4ff3101e064f82b59699bc35b206fd.setContent(html_46e2bcd1878c4a3aa90c2bfdec702c58);
+        
+
+        marker_5dab135b6dd8455c95fb7b605822bdc4.bindPopup(popup_da4ff3101e064f82b59699bc35b206fd)
+        ;
+
+        
+    
+    
+            var marker_466c842e1be14f108926d515e36e87b8 = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_9fa0e0cea12b4c40aadc87b11e38fa28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5524505ee1414792a9c77f49bcdeb638 = $(`<div id="html_5524505ee1414792a9c77f49bcdeb638" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_9fa0e0cea12b4c40aadc87b11e38fa28.setContent(html_5524505ee1414792a9c77f49bcdeb638);
+        
+
+        marker_466c842e1be14f108926d515e36e87b8.bindPopup(popup_9fa0e0cea12b4c40aadc87b11e38fa28)
+        ;
+
+        
+    
+    
+            var marker_ba5b2c2762424b33801a2833fec30ecf = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_6313c63bf64a4f61b3bdbcffed3637a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23b8e29aa4fb4b56b08d54e58f900e63 = $(`<div id="html_23b8e29aa4fb4b56b08d54e58f900e63" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_6313c63bf64a4f61b3bdbcffed3637a4.setContent(html_23b8e29aa4fb4b56b08d54e58f900e63);
+        
+
+        marker_ba5b2c2762424b33801a2833fec30ecf.bindPopup(popup_6313c63bf64a4f61b3bdbcffed3637a4)
+        ;
+
+        
+    
+    
+            var marker_c78244d8395d4b77bde29aa2c91c2c48 = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_0b1ee94bda524544ad500892f3152324 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccdfb47e81254b60b1a841c72b4f1dfe = $(`<div id="html_ccdfb47e81254b60b1a841c72b4f1dfe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_0b1ee94bda524544ad500892f3152324.setContent(html_ccdfb47e81254b60b1a841c72b4f1dfe);
+        
+
+        marker_c78244d8395d4b77bde29aa2c91c2c48.bindPopup(popup_0b1ee94bda524544ad500892f3152324)
+        ;
+
+        
+    
+    
+            var marker_6806b230285948aaad7904a4effb0cb8 = L.marker(
+                [9.81301, -83.16832],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_ad53cf67628449d1bbf4b408ea973e13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50ccfc1704c04279bb1eb7327f4304e9 = $(`<div id="html_50ccfc1704c04279bb1eb7327f4304e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. Punto 20. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 2007-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_ad53cf67628449d1bbf4b408ea973e13.setContent(html_50ccfc1704c04279bb1eb7327f4304e9);
+        
+
+        marker_6806b230285948aaad7904a4effb0cb8.bindPopup(popup_ad53cf67628449d1bbf4b408ea973e13)
+        ;
+
+        
+    
+    
+            var marker_b0149ef78ac9428aa023fd8fde5b73ad = L.marker(
+                [9.782055999999999, -83.688833],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_89d5f256b18d4070ab7aadd2277730d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de574e3e68334dc48829607e6cae7828 = $(`<div id="html_de574e3e68334dc48829607e6cae7828" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Marta, Centro Histórico. Pejibaye, Turrialba <strong>Elevación:</strong> 781.0 m  <strong>Fecha:</strong> 2010-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_89d5f256b18d4070ab7aadd2277730d3.setContent(html_de574e3e68334dc48829607e6cae7828);
+        
+
+        marker_b0149ef78ac9428aa023fd8fde5b73ad.bindPopup(popup_89d5f256b18d4070ab7aadd2277730d3)
+        ;
+
+        
+    
+    
+            var marker_439d45c174ca4f2f8ca0b250869b1d77 = L.marker(
+                [9.782055999999999, -83.688833],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_58f20323e3904d87b487c2e8ed598b8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_782beb3be4734a9facd2f4c3c4aa7389 = $(`<div id="html_782beb3be4734a9facd2f4c3c4aa7389" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Marta, Centro Histórico. Pejibaye, Turrialba <strong>Elevación:</strong> 781.0 m  <strong>Fecha:</strong> 2010-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_58f20323e3904d87b487c2e8ed598b8b.setContent(html_782beb3be4734a9facd2f4c3c4aa7389);
+        
+
+        marker_439d45c174ca4f2f8ca0b250869b1d77.bindPopup(popup_58f20323e3904d87b487c2e8ed598b8b)
+        ;
+
+        
+    
+    
+            var marker_d4bfc237247a4a3eb590ecb34b6a660d = L.marker(
+                [9.782055999999999, -83.688833],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_e8dcf222bbf84dd2ac86ed466edb6e38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fed630da10f4594bd0b8d135b76495f = $(`<div id="html_1fed630da10f4594bd0b8d135b76495f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Marta, Centro Histórico. Pejibaye, Turrialba <strong>Elevación:</strong> 781.0 m  <strong>Fecha:</strong> 2010-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_e8dcf222bbf84dd2ac86ed466edb6e38.setContent(html_1fed630da10f4594bd0b8d135b76495f);
+        
+
+        marker_d4bfc237247a4a3eb590ecb34b6a660d.bindPopup(popup_e8dcf222bbf84dd2ac86ed466edb6e38)
+        ;
+
+        
+    
+    
+            var marker_b597f7ea5d8c4880946c0fa26682b910 = L.marker(
+                [9.783333, -83.72030600000001],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_d647f11e1b954ffa85e5724c031bc55f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b83d4028e66400b98e1aa6ef41ff186 = $(`<div id="html_5b83d4028e66400b98e1aa6ef41ff186" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pejibaye, Turrialba, Camino a El Copal, del Humo al Copal. <strong>Elevación:</strong> 760.0 m  <strong>Fecha:</strong> 2010-01-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_d647f11e1b954ffa85e5724c031bc55f.setContent(html_5b83d4028e66400b98e1aa6ef41ff186);
+        
+
+        marker_b597f7ea5d8c4880946c0fa26682b910.bindPopup(popup_d647f11e1b954ffa85e5724c031bc55f)
+        ;
+
+        
+    
+    
+            var marker_48bbc847bf584f2a8fd2bcdb6bba9247 = L.marker(
+                [9.787649, -83.752778],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_e09ae16c724a4db884cb17bfa128f8a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae6e47275ec241e289bc312b2aeb750b = $(`<div id="html_ae6e47275ec241e289bc312b2aeb750b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Reventazón.  Turrialba.  El Humo.  Albergue El Copal. <strong>Elevación:</strong> 1050.0 m  <strong>Fecha:</strong> 2007-09-14 00:00:00+00:00 <strong>Recolectores:</strong> D. Santamaría <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_e09ae16c724a4db884cb17bfa128f8a0.setContent(html_ae6e47275ec241e289bc312b2aeb750b);
+        
+
+        marker_48bbc847bf584f2a8fd2bcdb6bba9247.bindPopup(popup_e09ae16c724a4db884cb17bfa128f8a0)
+        ;
+
+        
+    
+    
+            var marker_8d30231a92ee433690896f02659ac29b = L.marker(
+                [9.7875, -83.725],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_5e3362ca4ff246e4a5554f9750a455ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e5f2ef6bec34dc78edcdb0a31837b81 = $(`<div id="html_2e5f2ef6bec34dc78edcdb0a31837b81" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Reventazón.  R. V. S. La marta.  Pejibaye.  No protegida. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 2004-09-29 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_5e3362ca4ff246e4a5554f9750a455ac.setContent(html_2e5f2ef6bec34dc78edcdb0a31837b81);
+        
+
+        marker_8d30231a92ee433690896f02659ac29b.bindPopup(popup_5e3362ca4ff246e4a5554f9750a455ac)
+        ;
+
+        
+    
+    
+            var marker_bcb78e3bba1f4a118573ac742da630a3 = L.marker(
+                [8.7925, -82.225167],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_0a88c91524ec4bee920e25231d7a180f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3bdda3c3ef94e3797ac234b2a7500f1 = $(`<div id="html_e3bdda3c3ef94e3797ac234b2a7500f1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2005-02-03 00:00:00+00:00 <strong>Recolectores:</strong> Darin S. Penneys <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0a88c91524ec4bee920e25231d7a180f.setContent(html_e3bdda3c3ef94e3797ac234b2a7500f1);
+        
+
+        marker_bcb78e3bba1f4a118573ac742da630a3.bindPopup(popup_0a88c91524ec4bee920e25231d7a180f)
+        ;
+
+        
+    
+    
+            var marker_d3d96a9c58354ade84d348194ae39810 = L.marker(
+                [10.066667, -83.966667],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_88db37141f584aa7928dcee9e089f436 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e70b03f8ebee41a9bc1e6343232e0561 = $(`<div id="html_e70b03f8ebee41a9bc1e6343232e0561" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bajo de Hondura, Parque Nacional Braulio Carrillo. <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1983-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Luis Diego Gómez P.|Mario Sousa S.|Christopher J. Humphries|Nancy C. Garwood|Rachel J. Hampshire|Mary Gibby <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_88db37141f584aa7928dcee9e089f436.setContent(html_e70b03f8ebee41a9bc1e6343232e0561);
+        
+
+        marker_d3d96a9c58354ade84d348194ae39810.bindPopup(popup_88db37141f584aa7928dcee9e089f436)
+        ;
+
+        
+    
+    
+            var marker_aaaccfd17be5467eb16fc359a141b03e = L.marker(
+                [9.7556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_8066b603ae7c4c5596870e8a1b4d220e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fadaecf0e6e4960a2306f1d70ca37cf = $(`<div id="html_8fadaecf0e6e4960a2306f1d70ca37cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Tapant-Macizo de La Muerte.  Cuenca del Reventazón.  Senderos Oropéndola y La Pava, P. N. Tapantí. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_8066b603ae7c4c5596870e8a1b4d220e.setContent(html_8fadaecf0e6e4960a2306f1d70ca37cf);
+        
+
+        marker_aaaccfd17be5467eb16fc359a141b03e.bindPopup(popup_8066b603ae7c4c5596870e8a1b4d220e)
+        ;
+
+        
+    
+    
+            var marker_230534977caf41e297f12fcd15ee23a4 = L.marker(
+                [8.7925, -82.2253],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_4550ab03fafd44868114bca34dd07c42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a5d054e9e1d49b88dd5249673b83c01 = $(`<div id="html_6a5d054e9e1d49b88dd5249673b83c01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> near lago de Fortuna.  Bosque Proctector Palo Seco.  Sendero Los Tucanes (=Continental Divide Trail). <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 2005-02-03 00:00:00+00:00 <strong>Recolectores:</strong> D. S. Penneys <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_4550ab03fafd44868114bca34dd07c42.setContent(html_6a5d054e9e1d49b88dd5249673b83c01);
+        
+
+        marker_230534977caf41e297f12fcd15ee23a4.bindPopup(popup_4550ab03fafd44868114bca34dd07c42)
+        ;
+
+        
+    
+    
+            var marker_c08e50225a3146d2879e7c6965cd2c48 = L.marker(
+                [9.7556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_12398040a2914d9fbcc1894f400f897c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_125ab45382694dc19b31a9861c27c887 = $(`<div id="html_125ab45382694dc19b31a9861c27c887" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Tapant-Macizo de La Muerte.  Cuenca del Reventazón.  Senderos Oropéndola y La Pava, P. N. Tapantí. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-24 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_12398040a2914d9fbcc1894f400f897c.setContent(html_125ab45382694dc19b31a9861c27c887);
+        
+
+        marker_c08e50225a3146d2879e7c6965cd2c48.bindPopup(popup_12398040a2914d9fbcc1894f400f897c)
+        ;
+
+        
+    
+    
+            var marker_ee75abfbf4f3436ebc3731d99b531156 = L.marker(
+                [8.751111, -82.251111],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_13719c9eb55a4965b55330ab7a4599d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_610f8fb5b55647458ffc70a75ff8d474 = $(`<div id="html_610f8fb5b55647458ffc70a75ff8d474" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Edwin Fabrega Dam and Reserve in Fortuna, along the continental divide trail bordering Chiriquí Province. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1989-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, Frank; de Nevers, Gregory Clark; McPherson, G. <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_13719c9eb55a4965b55330ab7a4599d1.setContent(html_610f8fb5b55647458ffc70a75ff8d474);
+        
+
+        marker_ee75abfbf4f3436ebc3731d99b531156.bindPopup(popup_13719c9eb55a4965b55330ab7a4599d1)
+        ;
+
+        
+    
+    
+            var marker_19b6e330c8e84541bded0eb8744538ed = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_057a00fc0850481daae9d2219b2f4160 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c37b860e4c5d4102ab37b5fb19f9d0eb = $(`<div id="html_c37b860e4c5d4102ab37b5fb19f9d0eb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam region, above northern edge of lake <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1986-04-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_057a00fc0850481daae9d2219b2f4160.setContent(html_c37b860e4c5d4102ab37b5fb19f9d0eb);
+        
+
+        marker_19b6e330c8e84541bded0eb8744538ed.bindPopup(popup_057a00fc0850481daae9d2219b2f4160)
+        ;
+
+        
+    
+    
+            var marker_6d720ed7d3c44c12bc2e6316fbc477b8 = L.marker(
+                [8.75, -82.083333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_52e4f42187174453b4cc8ec688b3a9a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6b4408f6a614886a274df66741c3f9d = $(`<div id="html_f6b4408f6a614886a274df66741c3f9d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Edwin Fabrega Dam and Reserve in Fortuna along the trail to the Rio Hornito above Los Planes <strong>Elevación:</strong> 1075.0 m  <strong>Fecha:</strong> 1989-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, Frank; de Nevers, Greg; McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_52e4f42187174453b4cc8ec688b3a9a6.setContent(html_f6b4408f6a614886a274df66741c3f9d);
+        
+
+        marker_6d720ed7d3c44c12bc2e6316fbc477b8.bindPopup(popup_52e4f42187174453b4cc8ec688b3a9a6)
+        ;
+
+        
+    
+    
+            var marker_660a4373d63643d088ab5b09b16f625a = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_b387ce9f80cc42e19a8356a313110718 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_209122fe0b7b4a2da9935f4cb02c5f20 = $(`<div id="html_209122fe0b7b4a2da9935f4cb02c5f20" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam Site, above Gualaca. Forested slopes c. 8 km past dam on road towards Chiriqui Grande <strong>Elevación:</strong> 1130.0 m  <strong>Fecha:</strong> 1985-03-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_b387ce9f80cc42e19a8356a313110718.setContent(html_209122fe0b7b4a2da9935f4cb02c5f20);
+        
+
+        marker_660a4373d63643d088ab5b09b16f625a.bindPopup(popup_b387ce9f80cc42e19a8356a313110718)
+        ;
+
+        
+    
+    
+            var marker_15890c1213a445ab9e29068d4db5342d = L.marker(
+                [10.066667, -83.966667],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_2edfe90b2b0142978eae47cd59020282 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4011be4737634c7091af5ce5ea42b2a6 = $(`<div id="html_4011be4737634c7091af5ce5ea42b2a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bajo de Hondura, Parque Nacional Braulio Carrillo <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1983-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Davidse, G.; Gomez P., L. D.; Sousa, M.; Humphries, C. J.; Garwood, N.; Hampshire, R.; Gibby, Mary <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_2edfe90b2b0142978eae47cd59020282.setContent(html_4011be4737634c7091af5ce5ea42b2a6);
+        
+
+        marker_15890c1213a445ab9e29068d4db5342d.bindPopup(popup_2edfe90b2b0142978eae47cd59020282)
+        ;
+
+        
+    
+    
+            var marker_defcbd190c2843fcad64befa3075b93f = L.marker(
+                [8.751111, -82.251111],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_02ddd684981e474bbe5cc0fd6d8aeb68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0322aff697554b9798d905a41bf83b49 = $(`<div id="html_0322aff697554b9798d905a41bf83b49" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Fortuna Dam. Along road north of lake. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1987-02-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_02ddd684981e474bbe5cc0fd6d8aeb68.setContent(html_0322aff697554b9798d905a41bf83b49);
+        
+
+        marker_defcbd190c2843fcad64befa3075b93f.bindPopup(popup_02ddd684981e474bbe5cc0fd6d8aeb68)
+        ;
+
+        
+    
+    
+            var marker_7a150a96a76b4e958a12f1edb5fa3003 = L.marker(
+                [8.583333, -81.833333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_87b4fcc02bd44f55b09a281a877cb579 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb78eb6cca13429fa38bf8e71099aa95 = $(`<div id="html_fb78eb6cca13429fa38bf8e71099aa95" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Cerro Colorado mine above San Felix. Along trails north of road along continental divide. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1988-01-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_87b4fcc02bd44f55b09a281a877cb579.setContent(html_fb78eb6cca13429fa38bf8e71099aa95);
+        
+
+        marker_7a150a96a76b4e958a12f1edb5fa3003.bindPopup(popup_87b4fcc02bd44f55b09a281a877cb579)
+        ;
+
+        
+    
+    
+            var marker_d3c9a653784b4fd0a633e26f72c0e721 = L.marker(
+                [8.75, -82.083333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_a697cdb12d504d40966bc1da60af4dfc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffcc8f6321d44e1e90ccc7e3ec6549f3 = $(`<div id="html_ffcc8f6321d44e1e90ccc7e3ec6549f3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Edwin Fabrega Dam and Reserve in Fortuna. Quebrada Arena--the first creek south of the Continental Divide on the road to Chiriqui Grande. <strong>Elevación:</strong> 1075.0 m  <strong>Fecha:</strong> 1989-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, Frank; de Nevers, Greg; McPherson, Gordon <strong>Identificadores:</strong> Frank Almeda</div>`)[0];
+            popup_a697cdb12d504d40966bc1da60af4dfc.setContent(html_ffcc8f6321d44e1e90ccc7e3ec6549f3);
+        
+
+        marker_d3c9a653784b4fd0a633e26f72c0e721.bindPopup(popup_a697cdb12d504d40966bc1da60af4dfc)
+        ;
+
+        
+    
+    
+            var marker_44b1c4340a4a4d19a7066f874aee4873 = L.marker(
+                [8.798611, -82.23083299999999],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_f9f2c74ffdf0449aaeda731035c7ce79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a289721b5a154892bdf420873ef8afc5 = $(`<div id="html_a289721b5a154892bdf420873ef8afc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Near Lago de Fortuna. Sendero Los Tucanes (=Continental Divide Trail) <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2005-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Penneys, Darin S.; Blanco Coto, Mario A. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f9f2c74ffdf0449aaeda731035c7ce79.setContent(html_a289721b5a154892bdf420873ef8afc5);
+        
+
+        marker_44b1c4340a4a4d19a7066f874aee4873.bindPopup(popup_f9f2c74ffdf0449aaeda731035c7ce79)
+        ;
+
+        
+    
+    
+            var marker_b776bd36c9a849b7bff2cde93533adf7 = L.marker(
+                [8.75, -82.216667],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_88969f2b184d4289b95b770c713f00df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d11b6cb1bbe425c8b1bdd6adacd005c = $(`<div id="html_9d11b6cb1bbe425c8b1bdd6adacd005c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam area. Along Quebrada Bonito to E of road <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1984-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Churchill, H. W.; de Nevers, G.; Stockwell, H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_88969f2b184d4289b95b770c713f00df.setContent(html_9d11b6cb1bbe425c8b1bdd6adacd005c);
+        
+
+        marker_b776bd36c9a849b7bff2cde93533adf7.bindPopup(popup_88969f2b184d4289b95b770c713f00df)
+        ;
+
+        
+    
+    
+            var marker_32c7b701ecbb43e985d491b961d7e6a7 = L.marker(
+                [9.558333, -83.725],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_5531d0457d884f0e91ec7ea8f4f835bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ab619cfc2874d6bad0b055110f60af9 = $(`<div id="html_1ab619cfc2874d6bad0b055110f60af9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Interamerican Highway from San Isidro de General to Cerro de la Muerte. <strong>Elevación:</strong> 3150.0 m  <strong>Fecha:</strong> 2002-05-01 00:00:00+00:00 <strong>Recolectores:</strong> Penneys, Darin S. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5531d0457d884f0e91ec7ea8f4f835bf.setContent(html_1ab619cfc2874d6bad0b055110f60af9);
+        
+
+        marker_32c7b701ecbb43e985d491b961d7e6a7.bindPopup(popup_5531d0457d884f0e91ec7ea8f4f835bf)
+        ;
+
+        
+    
+    
+            var marker_fc0cfc0a374f497e94b5f4cb7070fad5 = L.marker(
+                [8.716667, -82.283333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_f3c3d86257344eb79fde56bd73aeb696 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7aafda84ad946869ce80fd63a6eb25b = $(`<div id="html_f7aafda84ad946869ce80fd63a6eb25b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along road between Fortuna Lake and Chiriquí Grande; 4.5-5km N of dam over Fortuna Lake <strong>Elevación:</strong> 1117.5 m  <strong>Fecha:</strong> 1985-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Croat, T. B.; Grayum, M. H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f3c3d86257344eb79fde56bd73aeb696.setContent(html_f7aafda84ad946869ce80fd63a6eb25b);
+        
+
+        marker_fc0cfc0a374f497e94b5f4cb7070fad5.bindPopup(popup_f3c3d86257344eb79fde56bd73aeb696)
+        ;
+
+        
+    
+    
+            var marker_9ab7d550f25f4b67a47b82135419899a = L.marker(
+                [8.733333, -82.283333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_c42f2f427c504581bfb2c2e51998697a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2bb0930386f432199997fc4beaedd62 = $(`<div id="html_a2bb0930386f432199997fc4beaedd62" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along road between Fortuna Dam and Crhiriqui Grande, along gravel road which departs main hwy. near Continental Divide (4.5 mi N of bridge over Fortuna Lake), just S of border with Bocas del Toro Province <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1987-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Croat, Thomas B. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c42f2f427c504581bfb2c2e51998697a.setContent(html_a2bb0930386f432199997fc4beaedd62);
+        
+
+        marker_9ab7d550f25f4b67a47b82135419899a.bindPopup(popup_c42f2f427c504581bfb2c2e51998697a)
+        ;
+
+        
+    
+    
+            var marker_e42f1e69346b4082b9cbefc5dfba2247 = L.marker(
+                [8.75, -82.216667],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_9bacc1734ce84be99d947a6fa53f6464 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd0bca780f5245baa20894a9d3481474 = $(`<div id="html_bd0bca780f5245baa20894a9d3481474" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam area. Along Quebrada Bonito to E of road <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1984-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Churchill, H. W.; de Nevers, G.; Stockwell, H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9bacc1734ce84be99d947a6fa53f6464.setContent(html_bd0bca780f5245baa20894a9d3481474);
+        
+
+        marker_e42f1e69346b4082b9cbefc5dfba2247.bindPopup(popup_9bacc1734ce84be99d947a6fa53f6464)
+        ;
+
+        
+    
+    
+            var marker_1e1aa1c195c84a4ab512ad86acc2a68b = L.marker(
+                [8.083333, -82.25],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_1e5cb3285ba14d7497d6c779ca20d8db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ecb33dc0fb5f4994aa3056a123c5e86f = $(`<div id="html_ecb33dc0fb5f4994aa3056a123c5e86f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Fortuna Dam, along trail below highway and across the valley of the Hornito <strong>Elevación:</strong> 1225.0 m  <strong>Fecha:</strong> 1988-01-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1e5cb3285ba14d7497d6c779ca20d8db.setContent(html_ecb33dc0fb5f4994aa3056a123c5e86f);
+        
+
+        marker_1e1aa1c195c84a4ab512ad86acc2a68b.bindPopup(popup_1e5cb3285ba14d7497d6c779ca20d8db)
+        ;
+
+        
+    
+    
+            var marker_2a95eaf37a174156b178b2dc903c3c24 = L.marker(
+                [8.751111, -82.251111],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_2b63fd64c705404ea53aa3dfe3a25c2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6ed8e2c19c54a58968f26b2dd6ed4d2 = $(`<div id="html_d6ed8e2c19c54a58968f26b2dd6ed4d2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam Area, along continental divide trail bordering ChiriquÍ Province <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1988-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, F.; Daniel, T. F.; McPherson, G. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2b63fd64c705404ea53aa3dfe3a25c2d.setContent(html_d6ed8e2c19c54a58968f26b2dd6ed4d2);
+        
+
+        marker_2a95eaf37a174156b178b2dc903c3c24.bindPopup(popup_2b63fd64c705404ea53aa3dfe3a25c2d)
+        ;
+
+        
+    
+    
+            var marker_6bd13e0208234ea28f522501ae76cb18 = L.marker(
+                [8.766667, -82.3],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_896eb0f2a0434af6848e366a81afaa3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9f0491caa7e41d3937fea13390e6aed = $(`<div id="html_a9f0491caa7e41d3937fea13390e6aed" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam Area, Fortuna-Chiriquí Grande, 0.7 m; NW of center of dam <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1994-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Croat, Thomas B.; Zhu, Guanghua <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_896eb0f2a0434af6848e366a81afaa3a.setContent(html_a9f0491caa7e41d3937fea13390e6aed);
+        
+
+        marker_6bd13e0208234ea28f522501ae76cb18.bindPopup(popup_896eb0f2a0434af6848e366a81afaa3a)
+        ;
+
+        
+    
+    
+            var marker_378af9bc04144f2fb798f04594f2dca4 = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_c5504095765d410f9de666fe7587130f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_54de078005cf454e9431e914b20ec010 = $(`<div id="html_54de078005cf454e9431e914b20ec010" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam Site, above Gualaca. c. 8 km past dam on road towards Chiriqui Grande <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1985-03-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c5504095765d410f9de666fe7587130f.setContent(html_54de078005cf454e9431e914b20ec010);
+        
+
+        marker_378af9bc04144f2fb798f04594f2dca4.bindPopup(popup_c5504095765d410f9de666fe7587130f)
+        ;
+
+        
+    
+    
+            var marker_b016764f7c2649a0b4a0c7096fc2f012 = L.marker(
+                [8.766667, -82.3],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_91d4827e63c74dfeb7d70a009e2f2a09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ef25fa916e34e3b937edb6838522f56 = $(`<div id="html_1ef25fa916e34e3b937edb6838522f56" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna Dam Area, Fortuna-Chiriquí Grande, 0.7 m; NW of center of dam <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1994-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Croat, Thomas B.; Zhu, Guanghua <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_91d4827e63c74dfeb7d70a009e2f2a09.setContent(html_1ef25fa916e34e3b937edb6838522f56);
+        
+
+        marker_b016764f7c2649a0b4a0c7096fc2f012.bindPopup(popup_91d4827e63c74dfeb7d70a009e2f2a09)
+        ;
+
+        
+    
+    
+            var marker_0f22693f91be48a9b66ddfe2a0001c08 = L.marker(
+                [9.755556, -83.783333],
+                {}
+            ).addTo(marker_cluster_765211df84384d5bba7265621552ac20);
+        
+    
+        var popup_b03e384c642c4da4aef5d1dd922c5aae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c29855e0c4104b918c4a376579eca61d = $(`<div id="html_c29855e0c4104b918c4a376579eca61d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Paraíso, P.N.  Tapantí-Macizo de La Muerte.  Cuenca del Reventazón.  Senderos Oropéndola y La Pava, P.N. Tapantí <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2003-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Kriebel, R.; Solano, D. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b03e384c642c4da4aef5d1dd922c5aae.setContent(html_c29855e0c4104b918c4a376579eca61d);
+        
+
+        marker_0f22693f91be48a9b66ddfe2a0001c08.bindPopup(popup_b03e384c642c4da4aef5d1dd922c5aae)
+        ;
+
+        
+    
+    
+            var layer_control_aa50f277c876468593068182ff48893e = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_fa22e4e657cc4ff390b12300d8f98fa2,
+                    "ESRI World Imagery" : tile_layer_345522db44044bf8994e522631ffe88a,
+                },
+                overlays :  {
+                    "macro_element_765211df84384d5bba7265621552ac20" : marker_cluster_765211df84384d5bba7265621552ac20,
+                },
+            };
+            L.control.layers(
+                layer_control_aa50f277c876468593068182ff48893e.base_layers,
+                layer_control_aa50f277c876468593068182ff48893e.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_e9b1e21063b84c14bff6a7e4545c8997);
+            tile_layer_345522db44044bf8994e522631ffe88a.remove();
+        
+</script>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_24546a90918a46faaa872f03b28ca8c1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_24546a90918a46faaa872f03b28ca8c1" ></div>
+        
+</body>
+<script>    
+    
+            var map_24546a90918a46faaa872f03b28ca8c1 = L.map(
+                "map_24546a90918a46faaa872f03b28ca8c1",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_24546a90918a46faaa872f03b28ca8c1);
+
+            
+
+        
+    
+            var tile_layer_eef2fcc7534040169020edf2e518237d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_24546a90918a46faaa872f03b28ca8c1);
+        
+    
+            var tile_layer_67a79fdba39345ea95f3c7957b4fac68 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_24546a90918a46faaa872f03b28ca8c1);
+        
+    
+            var marker_cluster_be135f5fe28e4329bd345f8e9dcc975e = L.markerClusterGroup(
+                {}
+            );
+            map_24546a90918a46faaa872f03b28ca8c1.addLayer(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+            var marker_6abedbebeb7546e789ff82e06d4a05fe = L.marker(
+                [17.121111, -94.641389],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_42cb2dbdb8fd4f2a8b2e3a0e280a3867 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ca03e80a924402582631148098b3f26 = $(`<div id="html_0ca03e80a924402582631148098b3f26" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Río Escondido, aserradero, ca. 11 km en línea recta al E, al S del Arroyo Agua Agual, sitio de inventario "El Cocuyo" de Vicente Sánchez, casí limite con el municipio Santa María Chimalapa; pendiente Este y filo <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1986-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Hernández G., Heriberto con V. Sánchez M. <strong>Identificadores:</strong> Wendt, Thomas Leighton, 1989</div>`)[0];
+            popup_42cb2dbdb8fd4f2a8b2e3a0e280a3867.setContent(html_0ca03e80a924402582631148098b3f26);
+        
+
+        marker_6abedbebeb7546e789ff82e06d4a05fe.bindPopup(popup_42cb2dbdb8fd4f2a8b2e3a0e280a3867)
+        ;
+
+        
+    
+    
+            var marker_c353b0270ca9470c85aca63a66d2f77e = L.marker(
+                [9.55, -84.03],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_e7c448a6f0d94854b4a76e4e3ad3cbb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d556aaa11bef4a3699b33ca247919fac = $(`<div id="html_d556aaa11bef4a3699b33ca247919fac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estribaciones del Cerro Diamante. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1997-11-16 00:00:00+00:00 <strong>Recolectores:</strong> Estrada, Armando <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_e7c448a6f0d94854b4a76e4e3ad3cbb8.setContent(html_d556aaa11bef4a3699b33ca247919fac);
+        
+
+        marker_c353b0270ca9470c85aca63a66d2f77e.bindPopup(popup_e7c448a6f0d94854b4a76e4e3ad3cbb8)
+        ;
+
+        
+    
+    
+            var marker_657438af25424cfab352b433699e95c3 = L.marker(
+                [8.69, -83.49],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_d7705975d5cf4c1fa5ed9d05a03a6a0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13463adde7db43d0bfd375fc7c75b685 = $(`<div id="html_13463adde7db43d0bfd375fc7c75b685" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce Fila Casa Loma a Cerro Chocuaco <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_d7705975d5cf4c1fa5ed9d05a03a6a0e.setContent(html_13463adde7db43d0bfd375fc7c75b685);
+        
+
+        marker_657438af25424cfab352b433699e95c3.bindPopup(popup_d7705975d5cf4c1fa5ed9d05a03a6a0e)
+        ;
+
+        
+    
+    
+            var marker_28d167e37d2a43fea89d1d1601658234 = L.marker(
+                [9.3619, -82.2403],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_d05c84ca41f14a2299f68cb31a5d6a4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebef43d982a84a7ca84e8ebe20209a1a = $(`<div id="html_ebef43d982a84a7ca84e8ebe20209a1a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Provincia de Bocas del Toro, Isla Colon, Camino a Mimitimbi <strong>Elevación:</strong> 5.0 m  <strong>Fecha:</strong> 2012-05-20 00:00:00+00:00 <strong>Recolectores:</strong> C. Galdames, J. Chin & R. Pitty <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_d05c84ca41f14a2299f68cb31a5d6a4a.setContent(html_ebef43d982a84a7ca84e8ebe20209a1a);
+        
+
+        marker_28d167e37d2a43fea89d1d1601658234.bindPopup(popup_d05c84ca41f14a2299f68cb31a5d6a4a)
+        ;
+
+        
+    
+    
+            var marker_04944e2297e94da7baf11563bb5b15fb = L.marker(
+                [8.6942, -83.4939],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_17c965ba153147dfa25e1aa23e8fc93d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_17bd4bfb57ae40f59388497d5e55a919 = $(`<div id="html_17bd4bfb57ae40f59388497d5e55a919" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puntarenas: Osa. R.F. Golfo Dulce. Península de Osa. Fila Casa Loma, Osa, a Cerro Chocuaco <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1998-04-14 00:00:00+00:00 <strong>Recolectores:</strong> R. Aguilar <strong>Identificadores:</strong> R. Aguilar</div>`)[0];
+            popup_17c965ba153147dfa25e1aa23e8fc93d.setContent(html_17bd4bfb57ae40f59388497d5e55a919);
+        
+
+        marker_04944e2297e94da7baf11563bb5b15fb.bindPopup(popup_17c965ba153147dfa25e1aa23e8fc93d)
+        ;
+
+        
+    
+    
+            var marker_6575ffafcfa048659e825670b45589d7 = L.marker(
+                [8.68333, -83.25],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_227cf3fefb244ff5ac9f22406efbc6ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6ca811f384c497cacdbce63dd8c27ae = $(`<div id="html_d6ca811f384c497cacdbce63dd8c27ae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Esquinas, near the Biological Station La Gamba on the ridge-fila (research-plot) <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-07-23 00:00:00+00:00 <strong>Recolectores:</strong> Huber Werner, Weissenhofer Anton <strong>Identificadores:</strong> Zamora Nelson</div>`)[0];
+            popup_227cf3fefb244ff5ac9f22406efbc6ef.setContent(html_d6ca811f384c497cacdbce63dd8c27ae);
+        
+
+        marker_6575ffafcfa048659e825670b45589d7.bindPopup(popup_227cf3fefb244ff5ac9f22406efbc6ef)
+        ;
+
+        
+    
+    
+            var marker_60cca9718e4c4f0ea92357becb1e8202 = L.marker(
+                [8.68333, -83.2167],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_962fdc1992944c7884ffc627e6d5de1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e57e55f71fa5482f846a1463a18f9eee = $(`<div id="html_e57e55f71fa5482f846a1463a18f9eee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P:N. Piedras Blancas, P.N. Esquinas, near the Tropenstation La Gamba on the fila (research-plot 696-F5re) <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 2002-01-27 00:00:00+00:00 <strong>Recolectores:</strong> Huber Werner <strong>Identificadores:</strong> Huber Werner, Zamora Nelson</div>`)[0];
+            popup_962fdc1992944c7884ffc627e6d5de1f.setContent(html_e57e55f71fa5482f846a1463a18f9eee);
+        
+
+        marker_60cca9718e4c4f0ea92357becb1e8202.bindPopup(popup_962fdc1992944c7884ffc627e6d5de1f)
+        ;
+
+        
+    
+    
+            var marker_d686f42208cf4e639123ad8494a68798 = L.marker(
+                [8.68333, -83.25],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_97521386572a443085eee2151b37215b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74f3319aefdd4b0f80f022558c2d47f9 = $(`<div id="html_74f3319aefdd4b0f80f022558c2d47f9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Esquinas, near the Biological Station La Gamba on the ridge-fila (research-plot) <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-03-26 00:00:00+00:00 <strong>Recolectores:</strong> Huber Werner, Weissenhofer Anton <strong>Identificadores:</strong> Zamora Nelson</div>`)[0];
+            popup_97521386572a443085eee2151b37215b.setContent(html_74f3319aefdd4b0f80f022558c2d47f9);
+        
+
+        marker_d686f42208cf4e639123ad8494a68798.bindPopup(popup_97521386572a443085eee2151b37215b)
+        ;
+
+        
+    
+    
+            var marker_89b3d28c364a4a8390853893529f380b = L.marker(
+                [8.68333, -83.25],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_2288bc8ec229482aaa20997378f0d756 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bcd736f2b2d461283cf58f181a35ac6 = $(`<div id="html_3bcd736f2b2d461283cf58f181a35ac6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Esquinas, near the Biological Station La Gamba on the ridge-fila (research-plot) <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-03-26 00:00:00+00:00 <strong>Recolectores:</strong> Huber Werner, Weissenhofer Anton <strong>Identificadores:</strong> Zamora Nelson</div>`)[0];
+            popup_2288bc8ec229482aaa20997378f0d756.setContent(html_3bcd736f2b2d461283cf58f181a35ac6);
+        
+
+        marker_89b3d28c364a4a8390853893529f380b.bindPopup(popup_2288bc8ec229482aaa20997378f0d756)
+        ;
+
+        
+    
+    
+            var marker_61b2e911ec43423fbb7bb0548ec58192 = L.marker(
+                [18.5667, -95.0667],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_fd05123b9227442e8ca8efabb8df5b2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_253dddfe142a42e2a1d8513ad44b582b = $(`<div id="html_253dddfe142a42e2a1d8513ad44b582b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> LOTE 69. Cerro Lázaro Cárdenas Estación de Biologia Tropical ``Los Tuxtlas``. N. Mpio. de <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1989-05-22 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Ibarra Manriquez; Santiago Sinaca Colin <strong>Identificadores:</strong> G. Ibarra</div>`)[0];
+            popup_fd05123b9227442e8ca8efabb8df5b2d.setContent(html_253dddfe142a42e2a1d8513ad44b582b);
+        
+
+        marker_61b2e911ec43423fbb7bb0548ec58192.bindPopup(popup_fd05123b9227442e8ca8efabb8df5b2d)
+        ;
+
+        
+    
+    
+            var marker_323d4c27d58e4a8dbf174493ed066abb = L.marker(
+                [10.794167, -85.276667],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_e119345aaeb64d61be4282051a1467a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba9a79e09b474d639da20446e58f103a = $(`<div id="html_ba9a79e09b474d639da20446e58f103a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colonia Blanca, Quebrada Leiva, 4 Km aguas arriba del limite este del parque. <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1991-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e119345aaeb64d61be4282051a1467a4.setContent(html_ba9a79e09b474d639da20446e58f103a);
+        
+
+        marker_323d4c27d58e4a8dbf174493ed066abb.bindPopup(popup_e119345aaeb64d61be4282051a1467a4)
+        ;
+
+        
+    
+    
+            var marker_8a6a6ed527a74245b5a6dddb89db757b = L.marker(
+                [10.779167, -85.26055600000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_151444b855684d6f962798544c0e9e2b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbb3363583e84f9e86b7214c98e971ca = $(`<div id="html_fbb3363583e84f9e86b7214c98e971ca" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colonia Blanca. Finca Los Moras, junto a Quebrada Mora. <strong>Elevación:</strong> 770.0 m  <strong>Fecha:</strong> 1991-06-13 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_151444b855684d6f962798544c0e9e2b.setContent(html_fbb3363583e84f9e86b7214c98e971ca);
+        
+
+        marker_8a6a6ed527a74245b5a6dddb89db757b.bindPopup(popup_151444b855684d6f962798544c0e9e2b)
+        ;
+
+        
+    
+    
+            var marker_7ca55570195644e8891916f14f3fc646 = L.marker(
+                [10.533333, -83.5],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_ee105ce6ccd041afa0f7f19695a5b582 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3037b2f0c8134cf2898e5d50288acf45 = $(`<div id="html_3037b2f0c8134cf2898e5d50288acf45" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Siguiendo la trocha que comunica Tortuguero con Cuatro Esquinas. Bosque primario de Carapa, Pentaclethra y Prioria como los arboles mas abundantes. <strong>Elevación:</strong> 6.0 m  <strong>Fecha:</strong> 1988-07-13 00:00:00+00:00 <strong>Recolectores:</strong> Rafael Robles <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ee105ce6ccd041afa0f7f19695a5b582.setContent(html_3037b2f0c8134cf2898e5d50288acf45);
+        
+
+        marker_7ca55570195644e8891916f14f3fc646.bindPopup(popup_ee105ce6ccd041afa0f7f19695a5b582)
+        ;
+
+        
+    
+    
+            var marker_0869edb3f1cf4a1cbd53a31e44692697 = L.marker(
+                [10.8, -85.283333],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_19685055234e4f8590021d07209a03d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0190e982db341ab8b4b3bfbb0ceae3c = $(`<div id="html_b0190e982db341ab8b4b3bfbb0ceae3c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colonia Libertad. 2 Km al Noreste. Cuenca del Rio Cano Negro. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1988-05-03 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_19685055234e4f8590021d07209a03d9.setContent(html_b0190e982db341ab8b4b3bfbb0ceae3c);
+        
+
+        marker_0869edb3f1cf4a1cbd53a31e44692697.bindPopup(popup_19685055234e4f8590021d07209a03d9)
+        ;
+
+        
+    
+    
+            var marker_42e2a79c3ed14b1c8bd9e01139f99823 = L.marker(
+                [8.68333, -83.21667],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_dbff45adf9374aafabfcad21405338bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ff6b40d1ff246ed86371ea211bb3ea1 = $(`<div id="html_0ff6b40d1ff246ed86371ea211bb3ea1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puntarenas/Golfito; P.N. Piedras Blancas, P.N. Esquinas, near the Tropenstation La Gamba, on the fila (research plot 696 F5re). 8°41' N, 83°13' W. Alt. 200 m. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 2002-01-27 00:00:00+00:00 <strong>Recolectores:</strong> Huber,W. <strong>Identificadores:</strong> W. Huber (WU) & N. Zamora (INB)</div>`)[0];
+            popup_dbff45adf9374aafabfcad21405338bc.setContent(html_0ff6b40d1ff246ed86371ea211bb3ea1);
+        
+
+        marker_42e2a79c3ed14b1c8bd9e01139f99823.bindPopup(popup_dbff45adf9374aafabfcad21405338bc)
+        ;
+
+        
+    
+    
+            var marker_d3b43199d66b46408c93c65d93db3808 = L.marker(
+                [8.68333, -83.21667],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_85c9fdff24f24617b3ecc7acb2bfefd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2839c7f31b96486081c0e7b19d1fe7aa = $(`<div id="html_2839c7f31b96486081c0e7b19d1fe7aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puntarenas/Golfito; P.N. Piedras Blancas, P.N. Esquinas, near the Tropenstation La Gamba, on the fila (research plot 696 F5re). 8°41' N, 83°13' W. Alt. 200 m. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 2002-01-27 00:00:00+00:00 <strong>Recolectores:</strong> Huber,W. <strong>Identificadores:</strong> W. Huber (WU) & N. Zamora (INB)</div>`)[0];
+            popup_85c9fdff24f24617b3ecc7acb2bfefd6.setContent(html_2839c7f31b96486081c0e7b19d1fe7aa);
+        
+
+        marker_d3b43199d66b46408c93c65d93db3808.bindPopup(popup_85c9fdff24f24617b3ecc7acb2bfefd6)
+        ;
+
+        
+    
+    
+            var marker_836d6cf441f743d4917d4ad41ab2343c = L.marker(
+                [8.507188000000001, -80.102665],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_d366d47a4f524ebdac91f63b1dc1e770 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67dce69fe381413fa8b6781e04b1c6e2 = $(`<div id="html_67dce69fe381413fa8b6781e04b1c6e2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Berthold Carl Seemann <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_d366d47a4f524ebdac91f63b1dc1e770.setContent(html_67dce69fe381413fa8b6781e04b1c6e2);
+        
+
+        marker_836d6cf441f743d4917d4ad41ab2343c.bindPopup(popup_d366d47a4f524ebdac91f63b1dc1e770)
+        ;
+
+        
+    
+    
+            var marker_dd47ce235c70430d8073386f24a99b7c = L.marker(
+                [17.191667000000002, -94.64416700000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_f227a2f7dcbe4ab9888778697db95fe7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51cb898fe8d64214b5ef1c72106296e1 = $(`<div id="html_51cb898fe8d64214b5ef1c72106296e1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Uxpanapa, por el camino a la Paz, ca. 5-6 km por camino al S de la brecha Uxpanapa-Sarabia. Lomerío al S del poblado 2. <strong>Elevación:</strong> 115.0 m  <strong>Fecha:</strong> 1998-10-28 00:00:00+00:00 <strong>Recolectores:</strong> J. Rivera H.; T. Wendt; P. Maas; M. Ishiki <strong>Identificadores:</strong> T. Wendt</div>`)[0];
+            popup_f227a2f7dcbe4ab9888778697db95fe7.setContent(html_51cb898fe8d64214b5ef1c72106296e1);
+        
+
+        marker_dd47ce235c70430d8073386f24a99b7c.bindPopup(popup_f227a2f7dcbe4ab9888778697db95fe7)
+        ;
+
+        
+    
+    
+            var marker_50dc533b9c0747eab8976f6b1679cbc1 = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_ce6d23f435db43a995ba897a229465d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e1f00275eb642ec89712fe7c329e7cc = $(`<div id="html_8e1f00275eb642ec89712fe7c329e7cc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> CERRO LAZARO CARDENAS, LOTE 69, ESTACION DE BIOLOGIA TROPICAL 'LOS TUXTLAS' <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-05-22 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M.; S. Sinaca C. <strong>Identificadores:</strong> G. Ibarra M.; J.A. Pérez de la R.</div>`)[0];
+            popup_ce6d23f435db43a995ba897a229465d1.setContent(html_8e1f00275eb642ec89712fe7c329e7cc);
+        
+
+        marker_50dc533b9c0747eab8976f6b1679cbc1.bindPopup(popup_ce6d23f435db43a995ba897a229465d1)
+        ;
+
+        
+    
+    
+            var marker_3a5a476c1490490a9820204039456f69 = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_bd14335dbff84cf3a89b22b5ec8936f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c8573284519422cb8ae7d3cfb1f7abb = $(`<div id="html_9c8573284519422cb8ae7d3cfb1f7abb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> LOTE 71, ESTACION DE BIOLOGIA TROPICAL 'LOS TUXTLAS' <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.; J.A. Pérez de la R.</div>`)[0];
+            popup_bd14335dbff84cf3a89b22b5ec8936f8.setContent(html_9c8573284519422cb8ae7d3cfb1f7abb);
+        
+
+        marker_3a5a476c1490490a9820204039456f69.bindPopup(popup_bd14335dbff84cf3a89b22b5ec8936f8)
+        ;
+
+        
+    
+    
+            var marker_1e5c7899b74e42c0b8a7733d231481e1 = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_8d5ee4be6a1c495092dfaa5117b54714 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_460d053b8cb641839278c4fc23ed8077 = $(`<div id="html_460d053b8cb641839278c4fc23ed8077" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> LOTE 71, ESTACION DE BIOLOGIA TROPICAL 'LOS TUXTLAS' <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.; J.A. Pérez de la R.</div>`)[0];
+            popup_8d5ee4be6a1c495092dfaa5117b54714.setContent(html_460d053b8cb641839278c4fc23ed8077);
+        
+
+        marker_1e5c7899b74e42c0b8a7733d231481e1.bindPopup(popup_8d5ee4be6a1c495092dfaa5117b54714)
+        ;
+
+        
+    
+    
+            var marker_b326f11102834991b5f35e9bc21bac38 = L.marker(
+                [8.68333, -83.25],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_3cb01f901f0b4d74ae13e971b972bce5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ffbcf057599488ea96217ab1474de43 = $(`<div id="html_8ffbcf057599488ea96217ab1474de43" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Esquinas, near the Biological Station La Gamba on the ridge-fila (research-plot) <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-07-23 00:00:00+00:00 <strong>Recolectores:</strong> Huber Werner, Weissenhofer Anton <strong>Identificadores:</strong> Zamora Nelson</div>`)[0];
+            popup_3cb01f901f0b4d74ae13e971b972bce5.setContent(html_8ffbcf057599488ea96217ab1474de43);
+        
+
+        marker_b326f11102834991b5f35e9bc21bac38.bindPopup(popup_3cb01f901f0b4d74ae13e971b972bce5)
+        ;
+
+        
+    
+    
+            var marker_02ea3a79bfb447ec9388102d074ef8b2 = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_124fc1690f0f4abe937d48287b95deca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df41763a8e3448179b61f5d53ecf4ca3 = $(`<div id="html_df41763a8e3448179b61f5d53ecf4ca3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lote 69, Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 165.0 m  <strong>Fecha:</strong> 1989-05-22 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M.; S. Sinaca C. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_124fc1690f0f4abe937d48287b95deca.setContent(html_df41763a8e3448179b61f5d53ecf4ca3);
+        
+
+        marker_02ea3a79bfb447ec9388102d074ef8b2.bindPopup(popup_124fc1690f0f4abe937d48287b95deca)
+        ;
+
+        
+    
+    
+            var marker_a20aa9db6dd4463e80802767c5c85a5c = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_2ef7b5350aee429bb5bf2b0e4921b633 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8b8fefb9a3c466dae620a6dccfd48f0 = $(`<div id="html_f8b8fefb9a3c466dae620a6dccfd48f0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Lázaro Cárdenas Lote 71, Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 165.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_2ef7b5350aee429bb5bf2b0e4921b633.setContent(html_f8b8fefb9a3c466dae620a6dccfd48f0);
+        
+
+        marker_a20aa9db6dd4463e80802767c5c85a5c.bindPopup(popup_2ef7b5350aee429bb5bf2b0e4921b633)
+        ;
+
+        
+    
+    
+            var marker_0ca566287be94631821e31003e6aa26a = L.marker(
+                [18.575, -95.075],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_67b0ae05d2f24e7fa536de5392059800 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fad5fc72b0ce415980adb0ac5757875e = $(`<div id="html_fad5fc72b0ce415980adb0ac5757875e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Lázaro Cárdenas Lote 71, Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 165.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_67b0ae05d2f24e7fa536de5392059800.setContent(html_fad5fc72b0ce415980adb0ac5757875e);
+        
+
+        marker_0ca566287be94631821e31003e6aa26a.bindPopup(popup_67b0ae05d2f24e7fa536de5392059800)
+        ;
+
+        
+    
+    
+            var marker_4477adcbba994d448e2c13ed62000ec1 = L.marker(
+                [17.2, -94.65],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_ebe0b7eb018e4422932835c48543bfc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_290c02120541407693097f9441d78806 = $(`<div id="html_290c02120541407693097f9441d78806" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lomas al S del Pob 2 (+ - 3 Km al S del entronque de la terracería La Laguna Boca del Monte con el camino al N al Pob. 2) <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1984-03-12 00:00:00+00:00 <strong>Recolectores:</strong> T. L. Wendt; A. García M. <strong>Identificadores:</strong> T. L. Wendt</div>`)[0];
+            popup_ebe0b7eb018e4422932835c48543bfc0.setContent(html_290c02120541407693097f9441d78806);
+        
+
+        marker_4477adcbba994d448e2c13ed62000ec1.bindPopup(popup_ebe0b7eb018e4422932835c48543bfc0)
+        ;
+
+        
+    
+    
+            var marker_ce9dda111b94441c8b9228c6e872cfd4 = L.marker(
+                [17.121111, -94.641389],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_07fa2e88ebb7400997e895a7eafc0aa4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ba59a4245d94573996cb833047f98ab = $(`<div id="html_1ba59a4245d94573996cb833047f98ab" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca 11 Km en línea recta al E del Aserradero Río Escondido, al S del Arroyo Agua Azul, sitio del inventario 'El Cocuyo' de Vicente Sánchez, casi límite con Mpio Sta Ma Chimalapa <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1986-04-14 00:00:00+00:00 <strong>Recolectores:</strong> H. Hernández G.; V. Sánchez <strong>Identificadores:</strong> H. Hernández G.</div>`)[0];
+            popup_07fa2e88ebb7400997e895a7eafc0aa4.setContent(html_1ba59a4245d94573996cb833047f98ab);
+        
+
+        marker_ce9dda111b94441c8b9228c6e872cfd4.bindPopup(popup_07fa2e88ebb7400997e895a7eafc0aa4)
+        ;
+
+        
+    
+    
+            var marker_410bdc574c1648c3b4131ba7ce3fc20b = L.marker(
+                [17.2, -94.56666700000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_b40614fd4016468f94acaa6cb455d089 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ee00c437020485cba26e49e6e7b1651 = $(`<div id="html_4ee00c437020485cba26e49e6e7b1651" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lomas al S del Poblado 2 (ca 3-5 Km al S del entronque de la terracería La Laguna-Sarabia con el camino al N del Pob. 2) <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1983-05-30 00:00:00+00:00 <strong>Recolectores:</strong> T. L. Wendt; A. Villalobos; J. García P. <strong>Identificadores:</strong> T. L. Wendt</div>`)[0];
+            popup_b40614fd4016468f94acaa6cb455d089.setContent(html_4ee00c437020485cba26e49e6e7b1651);
+        
+
+        marker_410bdc574c1648c3b4131ba7ce3fc20b.bindPopup(popup_b40614fd4016468f94acaa6cb455d089)
+        ;
+
+        
+    
+    
+            var marker_ed1076fdbb4b47068942511b9a758eb4 = L.marker(
+                [18.56955926691705, -95.06722641938823],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_b7b271300caa4443b14fb17717de47e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e54ba939ead942f1a6ad4f6748417491 = $(`<div id="html_e54ba939ead942f1a6ad4f6748417491" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_b7b271300caa4443b14fb17717de47e4.setContent(html_e54ba939ead942f1a6ad4f6748417491);
+        
+
+        marker_ed1076fdbb4b47068942511b9a758eb4.bindPopup(popup_b7b271300caa4443b14fb17717de47e4)
+        ;
+
+        
+    
+    
+            var marker_0818b188c38244778249074d5ef6c291 = L.marker(
+                [18.56955926691705, -95.06722641938823],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_479ddf2c2a3a41d3aad72c732b05f4ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99098e86eb5a4b3881c0e35819c5b425 = $(`<div id="html_99098e86eb5a4b3881c0e35819c5b425" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-05-22 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M.; S. Sinaca C. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_479ddf2c2a3a41d3aad72c732b05f4ce.setContent(html_99098e86eb5a4b3881c0e35819c5b425);
+        
+
+        marker_0818b188c38244778249074d5ef6c291.bindPopup(popup_479ddf2c2a3a41d3aad72c732b05f4ce)
+        ;
+
+        
+    
+    
+            var marker_5445faf9b15246f9ac9895d6e621ce5e = L.marker(
+                [17.458333, -94.55833299999999],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_57556538cc7e43bcb36c9496bdb6eade = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49fd0dc044b446f1b4d714bc5ed1efd4 = $(`<div id="html_49fd0dc044b446f1b4d714bc5ed1efd4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> NO DISPONIBLE <strong>Elevación:</strong> 115.0 m  <strong>Fecha:</strong> 1981-04-28 00:00:00+00:00 <strong>Recolectores:</strong> T. Wendt <strong>Identificadores:</strong> M. Sousa S.</div>`)[0];
+            popup_57556538cc7e43bcb36c9496bdb6eade.setContent(html_49fd0dc044b446f1b4d714bc5ed1efd4);
+        
+
+        marker_5445faf9b15246f9ac9895d6e621ce5e.bindPopup(popup_57556538cc7e43bcb36c9496bdb6eade)
+        ;
+
+        
+    
+    
+            var marker_1786576dad634bda8aba8ecfe1da35df = L.marker(
+                [17.208333, -94.658333],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_2f90599e60c74a5ba6dffaa08209a18e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8218f6052246431eb684b9526cee1c76 = $(`<div id="html_8218f6052246431eb684b9526cee1c76" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> S 2, 3 km al S del entronque de la terracería la Laguna-Boca del Monte con el camino al N 2 <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1983-05-30 00:00:00+00:00 <strong>Recolectores:</strong> T. Wendt <strong>Identificadores:</strong> M. Sousa S.</div>`)[0];
+            popup_2f90599e60c74a5ba6dffaa08209a18e.setContent(html_8218f6052246431eb684b9526cee1c76);
+        
+
+        marker_1786576dad634bda8aba8ecfe1da35df.bindPopup(popup_2f90599e60c74a5ba6dffaa08209a18e)
+        ;
+
+        
+    
+    
+            var marker_807af7b03be6490683ef1adf189b319d = L.marker(
+                [18.254722, -94.859167],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_ae6efaf278ad44bb8f067c3b91f2f82f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_872af3e0729e4710831031a56779f88f = $(`<div id="html_872af3e0729e4710831031a56779f88f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> N de Ocotal Chico, Sierra de Santa Marta <strong>Elevación:</strong> 445.0 m  <strong>Fecha:</strong> 1986-11-03 00:00:00+00:00 <strong>Recolectores:</strong> J.I. Calzada <strong>Identificadores:</strong> J.I. Calzada</div>`)[0];
+            popup_ae6efaf278ad44bb8f067c3b91f2f82f.setContent(html_872af3e0729e4710831031a56779f88f);
+        
+
+        marker_807af7b03be6490683ef1adf189b319d.bindPopup(popup_ae6efaf278ad44bb8f067c3b91f2f82f)
+        ;
+
+        
+    
+    
+            var marker_2766f9f490d349fe914deee263587691 = L.marker(
+                [17.2525, -94.612778],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_1cb379f07d1746879643c6381163d7f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_294e814e2f874013aeca45ad3875611b = $(`<div id="html_294e814e2f874013aeca45ad3875611b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Poblado 2, lomas al S, 3 km al S del entronque de la terracería La Laguna-Sarabia, camino N al Poblado 2 <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1984-03-12 00:00:00+00:00 <strong>Recolectores:</strong> T. Wendt; José García P. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_1cb379f07d1746879643c6381163d7f5.setContent(html_294e814e2f874013aeca45ad3875611b);
+        
+
+        marker_2766f9f490d349fe914deee263587691.bindPopup(popup_1cb379f07d1746879643c6381163d7f5)
+        ;
+
+        
+    
+    
+            var marker_aa4377a95979425190476389217de01f = L.marker(
+                [18.585, -95.07],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_360ffd91452a4e66972341b690665386 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3deac971868e4aceb9155a95f7b08d10 = $(`<div id="html_3deac971868e4aceb9155a95f7b08d10" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas, Lote 67 <strong>Elevación:</strong> 80.0 m  <strong>Fecha:</strong> 1986-02-23 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_360ffd91452a4e66972341b690665386.setContent(html_3deac971868e4aceb9155a95f7b08d10);
+        
+
+        marker_aa4377a95979425190476389217de01f.bindPopup(popup_360ffd91452a4e66972341b690665386)
+        ;
+
+        
+    
+    
+            var marker_ee6e5e5af9544de2b4f91321714da66f = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_2aedd21427974542bfe4e778d52f0bbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd05aca905e5491aaf413d77cd07a2eb = $(`<div id="html_cd05aca905e5491aaf413d77cd07a2eb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas, Cerro Lázaro Cárdenas, Lote 71 <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_2aedd21427974542bfe4e778d52f0bbc.setContent(html_cd05aca905e5491aaf413d77cd07a2eb);
+        
+
+        marker_ee6e5e5af9544de2b4f91321714da66f.bindPopup(popup_2aedd21427974542bfe4e778d52f0bbc)
+        ;
+
+        
+    
+    
+            var marker_5e93c03345884bd38f2ac6cd0beafcdc = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_066c7f3b80634072b8a148189727ea54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c1d9d623cb14cba8fa2cf4ca1737b1f = $(`<div id="html_1c1d9d623cb14cba8fa2cf4ca1737b1f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas, Cerro Lázaro Cárdenas, Lote 71 <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1989-08-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_066c7f3b80634072b8a148189727ea54.setContent(html_1c1d9d623cb14cba8fa2cf4ca1737b1f);
+        
+
+        marker_5e93c03345884bd38f2ac6cd0beafcdc.bindPopup(popup_066c7f3b80634072b8a148189727ea54)
+        ;
+
+        
+    
+    
+            var marker_513c65e048904de2a2411abd9b383521 = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_676f893a18c14da89aaee0dd84093a33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fbfcaf38ceb403fa01cdefbc151750f = $(`<div id="html_1fbfcaf38ceb403fa01cdefbc151750f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Cerro Lázaro Cárdenas, Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 1986-05-06 00:00:00+00:00 <strong>Recolectores:</strong> S. Sinaca C.; F. Chigo S <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_676f893a18c14da89aaee0dd84093a33.setContent(html_1fbfcaf38ceb403fa01cdefbc151750f);
+        
+
+        marker_513c65e048904de2a2411abd9b383521.bindPopup(popup_676f893a18c14da89aaee0dd84093a33)
+        ;
+
+        
+    
+    
+            var marker_2fe70955820d45af989affcbe83c2217 = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_50c4e3bfbf1a4b05b670e3d6829913a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ad157ffbd544b2eac18d378308ed4d1 = $(`<div id="html_4ad157ffbd544b2eac18d378308ed4d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Cerro Lázaro Cárdenas, Estación de Biología Tropical Los Tuxtlas <strong>Elevación:</strong> 280.0 m  <strong>Fecha:</strong> 1986-05-06 00:00:00+00:00 <strong>Recolectores:</strong> S. Sinaca C.; F. Chigo S <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_50c4e3bfbf1a4b05b670e3d6829913a6.setContent(html_4ad157ffbd544b2eac18d378308ed4d1);
+        
+
+        marker_2fe70955820d45af989affcbe83c2217.bindPopup(popup_50c4e3bfbf1a4b05b670e3d6829913a6)
+        ;
+
+        
+    
+    
+            var marker_816d1e8199044de18aa15fb0c0ae6e54 = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_26cfe6772e2d4aa89aa7a2017ed55828 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84e7f900cad94751991e0bffae3d8858 = $(`<div id="html_84e7f900cad94751991e0bffae3d8858" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas, Lote 71 <strong>Elevación:</strong> 175.0 m  <strong>Fecha:</strong> 1985-08-17 00:00:00+00:00 <strong>Recolectores:</strong> S. Sinaca C. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_26cfe6772e2d4aa89aa7a2017ed55828.setContent(html_84e7f900cad94751991e0bffae3d8858);
+        
+
+        marker_816d1e8199044de18aa15fb0c0ae6e54.bindPopup(popup_26cfe6772e2d4aa89aa7a2017ed55828)
+        ;
+
+        
+    
+    
+            var marker_7108790fffce4e95ba5a58a4f4735262 = L.marker(
+                [18.408333, -94.975],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_6fc63ded52d44103b97b05b7415b82b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4165adae803f40fd9e7da6f7aca72f41 = $(`<div id="html_4165adae803f40fd9e7da6f7aca72f41" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Bastonal, 18 km al NE de Tebanca <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1989-10-16 00:00:00+00:00 <strong>Recolectores:</strong> R. Cedillo T. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_6fc63ded52d44103b97b05b7415b82b0.setContent(html_4165adae803f40fd9e7da6f7aca72f41);
+        
+
+        marker_7108790fffce4e95ba5a58a4f4735262.bindPopup(popup_6fc63ded52d44103b97b05b7415b82b0)
+        ;
+
+        
+    
+    
+            var marker_bdc7b07a74c44082b9f1e29746235b34 = L.marker(
+                [18.584722, -95.07388900000001],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_2e05db73246d4900a8c43472ba579564 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d12f60106274bd9ad61a63a03b69d99 = $(`<div id="html_8d12f60106274bd9ad61a63a03b69d99" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Lázaro Cárdenas, Estación de Biología Tropical Los Tuxtlas, Lote 69 <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-05-22 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M.; S. Sinaca C. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_2e05db73246d4900a8c43472ba579564.setContent(html_8d12f60106274bd9ad61a63a03b69d99);
+        
+
+        marker_bdc7b07a74c44082b9f1e29746235b34.bindPopup(popup_2e05db73246d4900a8c43472ba579564)
+        ;
+
+        
+    
+    
+            var marker_5c0cb05ad00c4c27ba2d5c72c819f212 = L.marker(
+                [18.585, -95.07],
+                {}
+            ).addTo(marker_cluster_be135f5fe28e4329bd345f8e9dcc975e);
+        
+    
+        var popup_d0b72be5e02146f19fa7b1dccb6a2483 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_747e405c0c5a4261b8dbda2f778eabda = $(`<div id="html_747e405c0c5a4261b8dbda2f778eabda" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación de Biología Tropical Los Tuxtlas, Lote 67 <strong>Elevación:</strong> 80.0 m  <strong>Fecha:</strong> 1986-06-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M. <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_d0b72be5e02146f19fa7b1dccb6a2483.setContent(html_747e405c0c5a4261b8dbda2f778eabda);
+        
+
+        marker_5c0cb05ad00c4c27ba2d5c72c819f212.bindPopup(popup_d0b72be5e02146f19fa7b1dccb6a2483)
+        ;
+
+        
+    
+    
+            var layer_control_731a7ced98c44134be8f1d683011259d = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_eef2fcc7534040169020edf2e518237d,
+                    "ESRI World Imagery" : tile_layer_67a79fdba39345ea95f3c7957b4fac68,
+                },
+                overlays :  {
+                    "macro_element_be135f5fe28e4329bd345f8e9dcc975e" : marker_cluster_be135f5fe28e4329bd345f8e9dcc975e,
+                },
+            };
+            L.control.layers(
+                layer_control_731a7ced98c44134be8f1d683011259d.base_layers,
+                layer_control_731a7ced98c44134be8f1d683011259d.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_24546a90918a46faaa872f03b28ca8c1);
+            tile_layer_67a79fdba39345ea95f3c7957b4fac68.remove();
+        
+</script>

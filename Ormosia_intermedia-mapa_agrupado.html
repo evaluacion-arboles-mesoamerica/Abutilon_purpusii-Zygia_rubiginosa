@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce115fe443394b6f92505f1e57c0707c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ce115fe443394b6f92505f1e57c0707c" ></div>
+        
+</body>
+<script>    
+    
+            var map_ce115fe443394b6f92505f1e57c0707c = L.map(
+                "map_ce115fe443394b6f92505f1e57c0707c",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_ce115fe443394b6f92505f1e57c0707c);
+
+            
+
+        
+    
+            var tile_layer_291596e01a1245e68e0d7881b517ccab = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ce115fe443394b6f92505f1e57c0707c);
+        
+    
+            var tile_layer_2d14915fa6b4468fa320c7e696d82900 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ce115fe443394b6f92505f1e57c0707c);
+        
+    
+            var marker_cluster_e5196aa2fad84e20af302953edd3f3c1 = L.markerClusterGroup(
+                {}
+            );
+            map_ce115fe443394b6f92505f1e57c0707c.addLayer(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+            var marker_d69da368189a482abeb18e0cda933b2a = L.marker(
+                [10.675, -83.65833],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_60c7504e1a8a45b7b1bddfb846d565a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07f64fe97b2049258c498140d2c75a6d = $(`<div id="html_07f64fe97b2049258c498140d2c75a6d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Southwetern-most ridge of Cerro Coronel, NW facing slope, just S of the Rio Colorado. <strong>Elevación:</strong> 45.0 m  <strong>Fecha:</strong> 1986-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_60c7504e1a8a45b7b1bddfb846d565a5.setContent(html_07f64fe97b2049258c498140d2c75a6d);
+        
+
+        marker_d69da368189a482abeb18e0cda933b2a.bindPopup(popup_60c7504e1a8a45b7b1bddfb846d565a5)
+        ;
+
+        
+    
+    
+            var marker_de284847d52e43dc839164eef95ab991 = L.marker(
+                [10.748333, -84.168611],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_5ba9e07602b740c8b861217f6ec06690 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af7c912967cc4c479b8ea847c1a8a3c3 = $(`<div id="html_af7c912967cc4c479b8ea847c1a8a3c3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pital, Boca Tapada, Finca Aserradero San Jorge. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1996-01-21 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5ba9e07602b740c8b861217f6ec06690.setContent(html_af7c912967cc4c479b8ea847c1a8a3c3);
+        
+
+        marker_de284847d52e43dc839164eef95ab991.bindPopup(popup_5ba9e07602b740c8b861217f6ec06690)
+        ;
+
+        
+    
+    
+            var marker_6892549fbe6e4b51abb7081d4729842b = L.marker(
+                [10.433333, -84.01666800000001],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_b16f5c2dbeba48cb90f43732251f472c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ec06ec91357427088577efa65a67b4c = $(`<div id="html_3ec06ec91357427088577efa65a67b4c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> At confluence of Rio Sarapiqui and Rio Puerto Viejo, Atlantic Slope. Sendero Circular Cercano m 150 de los postes. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1991-10-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b16f5c2dbeba48cb90f43732251f472c.setContent(html_3ec06ec91357427088577efa65a67b4c);
+        
+
+        marker_6892549fbe6e4b51abb7081d4729842b.bindPopup(popup_b16f5c2dbeba48cb90f43732251f472c)
+        ;
+
+        
+    
+    
+            var marker_0d17a0f9a0764eb989902e09ebd54696 = L.marker(
+                [10.675, -83.658334],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_4d7d1c2b220b447fba7e115a9307fce9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4cf1eeb94fc14e0981e8c00bd8ee7183 = $(`<div id="html_4cf1eeb94fc14e0981e8c00bd8ee7183" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Southwetern-most ridge of Cerro Coronel, NW facing slope, just S of the Rio Colorado. <strong>Elevación:</strong> 45.0 m  <strong>Fecha:</strong> 1986-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_4d7d1c2b220b447fba7e115a9307fce9.setContent(html_4cf1eeb94fc14e0981e8c00bd8ee7183);
+        
+
+        marker_0d17a0f9a0764eb989902e09ebd54696.bindPopup(popup_4d7d1c2b220b447fba7e115a9307fce9)
+        ;
+
+        
+    
+    
+            var marker_9ea9c45853584f26b24a5dbb10e02983 = L.marker(
+                [10.641667, -84.00416700000001],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_510d49fc889c49f39f1fae2e04f492cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2451ec9bedb45f995c8bd9f7bf53704 = $(`<div id="html_d2451ec9bedb45f995c8bd9f7bf53704" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Arbolitos. Al N de Puerto Viejo, 4Km aguas arriba union Rios Toro y Sarapiqui <strong>Elevación:</strong> 20.0 m  <strong>Fecha:</strong> 1993-03-09 00:00:00+00:00 <strong>Recolectores:</strong> F. Araya <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_510d49fc889c49f39f1fae2e04f492cc.setContent(html_d2451ec9bedb45f995c8bd9f7bf53704);
+        
+
+        marker_9ea9c45853584f26b24a5dbb10e02983.bindPopup(popup_510d49fc889c49f39f1fae2e04f492cc)
+        ;
+
+        
+    
+    
+            var marker_e27aea48075d4ec3a85a07503ae7da7c = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_e2607e23810f41ab94726d58072e49f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d65ff043b39d419db782c3de0d9d5bc0 = $(`<div id="html_d65ff043b39d419db782c3de0d9d5bc0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e2607e23810f41ab94726d58072e49f7.setContent(html_d65ff043b39d419db782c3de0d9d5bc0);
+        
+
+        marker_e27aea48075d4ec3a85a07503ae7da7c.bindPopup(popup_e2607e23810f41ab94726d58072e49f7)
+        ;
+
+        
+    
+    
+            var marker_61fd62fb85cd458f97792f62de9ed237 = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_3e07edb037f54efd859fd54653848f8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6554a8788744e1197c50df56801f064 = $(`<div id="html_e6554a8788744e1197c50df56801f064" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3e07edb037f54efd859fd54653848f8d.setContent(html_e6554a8788744e1197c50df56801f064);
+        
+
+        marker_61fd62fb85cd458f97792f62de9ed237.bindPopup(popup_3e07edb037f54efd859fd54653848f8d)
+        ;
+
+        
+    
+    
+            var marker_8a34e93341d642ddb0a16a219a326ac7 = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_7c6ea4c2ffc34af8b09b6756e2b8a59a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c18c02c0dc34de4ab9c44ebf43b4cf3 = $(`<div id="html_7c18c02c0dc34de4ab9c44ebf43b4cf3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_7c6ea4c2ffc34af8b09b6756e2b8a59a.setContent(html_7c18c02c0dc34de4ab9c44ebf43b4cf3);
+        
+
+        marker_8a34e93341d642ddb0a16a219a326ac7.bindPopup(popup_7c6ea4c2ffc34af8b09b6756e2b8a59a)
+        ;
+
+        
+    
+    
+            var marker_754bdd4952e14470babb66f28d00fe30 = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_fd50feed477d42b5b0e656f349b5b1b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67a069bcaeb54000b02281559e974b6e = $(`<div id="html_67a069bcaeb54000b02281559e974b6e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_fd50feed477d42b5b0e656f349b5b1b2.setContent(html_67a069bcaeb54000b02281559e974b6e);
+        
+
+        marker_754bdd4952e14470babb66f28d00fe30.bindPopup(popup_fd50feed477d42b5b0e656f349b5b1b2)
+        ;
+
+        
+    
+    
+            var marker_c94e51378211436da2f4a0ce153dcb24 = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_0426847049af440b99289050e529be49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5b340ec034c4aa394851485729f951b = $(`<div id="html_d5b340ec034c4aa394851485729f951b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0426847049af440b99289050e529be49.setContent(html_d5b340ec034c4aa394851485729f951b);
+        
+
+        marker_c94e51378211436da2f4a0ce153dcb24.bindPopup(popup_0426847049af440b99289050e529be49)
+        ;
+
+        
+    
+    
+            var marker_3fda3ea8615b477fb70950f0132031fb = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_2a2fa34f2c96482296a5ab7b3dfdba5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1cee380a28543b7a03492cefbf69594 = $(`<div id="html_c1cee380a28543b7a03492cefbf69594" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2a2fa34f2c96482296a5ab7b3dfdba5f.setContent(html_c1cee380a28543b7a03492cefbf69594);
+        
+
+        marker_3fda3ea8615b477fb70950f0132031fb.bindPopup(popup_2a2fa34f2c96482296a5ab7b3dfdba5f)
+        ;
+
+        
+    
+    
+            var marker_ef0e60edc3f64f93b64e941357c42879 = L.marker(
+                [10.477228, -84.077561],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_9742fbbfd5a64769a461e5e45103a1a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75df364413f142c28c6b7f45d14682f1 = $(`<div id="html_75df364413f142c28c6b7f45d14682f1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Guaria de Puerto Viejo de Sarapiquí <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1997-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_9742fbbfd5a64769a461e5e45103a1a0.setContent(html_75df364413f142c28c6b7f45d14682f1);
+        
+
+        marker_ef0e60edc3f64f93b64e941357c42879.bindPopup(popup_9742fbbfd5a64769a461e5e45103a1a0)
+        ;
+
+        
+    
+    
+            var marker_04cf2d2b350e42f2bbec3a73bc843035 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_8efe15a3629a4040bf9a45d36ea78f24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb790243839044b98508a8d502ddc2d5 = $(`<div id="html_cb790243839044b98508a8d502ddc2d5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-11-16 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_8efe15a3629a4040bf9a45d36ea78f24.setContent(html_cb790243839044b98508a8d502ddc2d5);
+        
+
+        marker_04cf2d2b350e42f2bbec3a73bc843035.bindPopup(popup_8efe15a3629a4040bf9a45d36ea78f24)
+        ;
+
+        
+    
+    
+            var marker_04bb4dfa678d4cf58de7f83da91ca867 = L.marker(
+                [10.64, -84.0],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_8c02702dcb574b71a9a6dfd225e6bee2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ba51091094a41e8b01ec492efbc279e = $(`<div id="html_5ba51091094a41e8b01ec492efbc279e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos, Los Arbolitos, al norte de Puerto Viejo, 4 km aguas arriba unión Ríos Toro y Sarapiquí. [Original label coordinates 10°38'30"N 84°0'15"W] <strong>Elevación:</strong> 20.0 m  <strong>Fecha:</strong> 1993-03-09 00:00:00+00:00 <strong>Recolectores:</strong> Flor Araya <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_8c02702dcb574b71a9a6dfd225e6bee2.setContent(html_5ba51091094a41e8b01ec492efbc279e);
+        
+
+        marker_04bb4dfa678d4cf58de7f83da91ca867.bindPopup(popup_8c02702dcb574b71a9a6dfd225e6bee2)
+        ;
+
+        
+    
+    
+            var marker_d641368972e54cf09e4cc577392688c2 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_dba6c3b1e3e5461dad94f3c7c9347102 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df49c6bd685a4fc591a801c0b839afb5 = $(`<div id="html_df49c6bd685a4fc591a801c0b839afb5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Plantado al frente al cuarto de hornos. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2001-02-15 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> O. Vargas, 2/15/</div>`)[0];
+            popup_dba6c3b1e3e5461dad94f3c7c9347102.setContent(html_df49c6bd685a4fc591a801c0b839afb5);
+        
+
+        marker_d641368972e54cf09e4cc577392688c2.bindPopup(popup_dba6c3b1e3e5461dad94f3c7c9347102)
+        ;
+
+        
+    
+    
+            var marker_6e86e04f0404459689a39f1301440daa = L.marker(
+                [10.675, -83.658333],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_4b40b4b967454fefac9e64ddd29e2acb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f17f5511dc434b28a527ea4a39b752df = $(`<div id="html_f17f5511dc434b28a527ea4a39b752df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Southwestern-most ridge of Cerro Coronel, NW-facing slope, just S of the Río Colorado. <strong>Elevación:</strong> 45.0 m  <strong>Fecha:</strong> 1986-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch. <strong>Identificadores:</strong> R. Cruz Durán (MEXU)</div>`)[0];
+            popup_4b40b4b967454fefac9e64ddd29e2acb.setContent(html_f17f5511dc434b28a527ea4a39b752df);
+        
+
+        marker_6e86e04f0404459689a39f1301440daa.bindPopup(popup_4b40b4b967454fefac9e64ddd29e2acb)
+        ;
+
+        
+    
+    
+            var marker_937cf528228c4ab1a904432374fb7010 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_e5196aa2fad84e20af302953edd3f3c1);
+        
+    
+        var popup_bc8c12abd38440e98e79699f905c7976 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ead9bd12bc7466a934ca989601c1415 = $(`<div id="html_3ead9bd12bc7466a934ca989601c1415" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-08-29 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_bc8c12abd38440e98e79699f905c7976.setContent(html_3ead9bd12bc7466a934ca989601c1415);
+        
+
+        marker_937cf528228c4ab1a904432374fb7010.bindPopup(popup_bc8c12abd38440e98e79699f905c7976)
+        ;
+
+        
+    
+    
+            var layer_control_fbee28a82f7141fdbfcaf6872eeedba8 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_291596e01a1245e68e0d7881b517ccab,
+                    "ESRI World Imagery" : tile_layer_2d14915fa6b4468fa320c7e696d82900,
+                },
+                overlays :  {
+                    "macro_element_e5196aa2fad84e20af302953edd3f3c1" : marker_cluster_e5196aa2fad84e20af302953edd3f3c1,
+                },
+            };
+            L.control.layers(
+                layer_control_fbee28a82f7141fdbfcaf6872eeedba8.base_layers,
+                layer_control_fbee28a82f7141fdbfcaf6872eeedba8.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ce115fe443394b6f92505f1e57c0707c);
+            tile_layer_2d14915fa6b4468fa320c7e696d82900.remove();
+        
+</script>

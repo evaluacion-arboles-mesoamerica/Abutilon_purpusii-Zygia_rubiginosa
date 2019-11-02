@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_10f4f0328a02446d9c85eb8500ff023f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_10f4f0328a02446d9c85eb8500ff023f" ></div>
+        
+</body>
+<script>    
+    
+            var map_10f4f0328a02446d9c85eb8500ff023f = L.map(
+                "map_10f4f0328a02446d9c85eb8500ff023f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_10f4f0328a02446d9c85eb8500ff023f);
+
+            
+
+        
+    
+            var tile_layer_63fc89f7262a4b59b989ddbff5181bd6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_10f4f0328a02446d9c85eb8500ff023f);
+        
+    
+            var tile_layer_dfe0278dd6fc4b1a92962d4078219136 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_10f4f0328a02446d9c85eb8500ff023f);
+        
+    
+            var marker_cluster_077d024f973944eba7793c0680774bcd = L.markerClusterGroup(
+                {}
+            );
+            map_10f4f0328a02446d9c85eb8500ff023f.addLayer(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+            var marker_196c7aed4781479a89b9bf6b7257ce57 = L.marker(
+                [10.03, -84.0],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_807492edc88d4c8e9c850a93af6e66e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7156f060e4b14996a4735f129db75dd6 = $(`<div id="html_7156f060e4b14996a4735f129db75dd6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pasture land and wooded areas near the escarpment with frequent wind and rain from the Caribbean. La Palma area, northeast of San Jerónimo, above the La Hondura valley. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1968-05-27 00:00:00+00:00 <strong>Recolectores:</strong> Burger, William <strong>Identificadores:</strong> B. a Krukoff</div>`)[0];
+            popup_807492edc88d4c8e9c850a93af6e66e7.setContent(html_7156f060e4b14996a4735f129db75dd6);
+        
+
+        marker_196c7aed4781479a89b9bf6b7257ce57.bindPopup(popup_807492edc88d4c8e9c850a93af6e66e7)
+        ;
+
+        
+    
+    
+            var marker_171c80c8223d4117aa89436f05348d10 = L.marker(
+                [9.82, -84.11],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_29a58dd6f9e84360ba68f28e2134ff1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8aba01819fd4d79aac2386059aa028e = $(`<div id="html_b8aba01819fd4d79aac2386059aa028e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> About 0.7 km N of tarbaca on road to Aserrí, ridge E of road, essentially at divide. <strong>Elevación:</strong> 1870.0 m  <strong>Fecha:</strong> 1979-08-26 00:00:00+00:00 <strong>Recolectores:</strong> Stevens, Warren D. <strong>Identificadores:</strong> D. Neill</div>`)[0];
+            popup_29a58dd6f9e84360ba68f28e2134ff1f.setContent(html_b8aba01819fd4d79aac2386059aa028e);
+        
+
+        marker_171c80c8223d4117aa89436f05348d10.bindPopup(popup_29a58dd6f9e84360ba68f28e2134ff1f)
+        ;
+
+        
+    
+    
+            var marker_365043c405fc49daa3b26a4c99f646c8 = L.marker(
+                [10.06, -83.98],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_9dc7150ad60048809a155ea94aaf4b5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd51078601e04a59afd7ba3af46c0d21 = $(`<div id="html_bd51078601e04a59afd7ba3af46c0d21" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Cuenca del Sarapiquí. Bajo de la Hondura. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2002-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Acosta, Luis <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_9dc7150ad60048809a155ea94aaf4b5a.setContent(html_bd51078601e04a59afd7ba3af46c0d21);
+        
+
+        marker_365043c405fc49daa3b26a4c99f646c8.bindPopup(popup_9dc7150ad60048809a155ea94aaf4b5a)
+        ;
+
+        
+    
+    
+            var marker_bb8febb6b997424ea8cde77a7a7cf460 = L.marker(
+                [10.21, -84.16],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_88bdfe07aba242a68d3e5c87f3e16ad4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27838fd241ff4e498ae984fd2619c3af = $(`<div id="html_27838fd241ff4e498ae984fd2619c3af" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 8 km north of Vara Blanca along Highway 9, Lower Montane Rain Forest - Caribbean watershed <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1981-09-08 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_88bdfe07aba242a68d3e5c87f3e16ad4.setContent(html_27838fd241ff4e498ae984fd2619c3af);
+        
+
+        marker_bb8febb6b997424ea8cde77a7a7cf460.bindPopup(popup_88bdfe07aba242a68d3e5c87f3e16ad4)
+        ;
+
+        
+    
+    
+            var marker_0bba778819a94ffeb598cb123f7628ed = L.marker(
+                [10.22916, -84.42777],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_cedaf91771a1466da8b84e91cb93b256 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5fa7442c76c49edb6d229801d65290b = $(`<div id="html_e5fa7442c76c49edb6d229801d65290b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapote de Alfaro Ruiz <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Boris A. Krukoff <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_cedaf91771a1466da8b84e91cb93b256.setContent(html_e5fa7442c76c49edb6d229801d65290b);
+        
+
+        marker_0bba778819a94ffeb598cb123f7628ed.bindPopup(popup_cedaf91771a1466da8b84e91cb93b256)
+        ;
+
+        
+    
+    
+            var marker_24c518f27a4344f8b9aac4f7acdc88c3 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_2a2de29291534c7cb4cfc722b5fc0ced = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c07a5e48138d42e2bfa51dcf605754a7 = $(`<div id="html_c07a5e48138d42e2bfa51dcf605754a7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> B. A. Krukoff <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2a2de29291534c7cb4cfc722b5fc0ced.setContent(html_c07a5e48138d42e2bfa51dcf605754a7);
+        
+
+        marker_24c518f27a4344f8b9aac4f7acdc88c3.bindPopup(popup_2a2de29291534c7cb4cfc722b5fc0ced)
+        ;
+
+        
+    
+    
+            var marker_613e8d37e0854c9b81ca48bccaac1d27 = L.marker(
+                [10.054167, -83.988889],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_72b836aef41c4e108b173a09eb7a13a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_850ac37710964215ad5e5d15a376f05b = $(`<div id="html_850ac37710964215ad5e5d15a376f05b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera Central. San Jerónimo, Alto de La Palma. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1995-01-29 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora|Richard T. Pennington <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_72b836aef41c4e108b173a09eb7a13a0.setContent(html_850ac37710964215ad5e5d15a376f05b);
+        
+
+        marker_613e8d37e0854c9b81ca48bccaac1d27.bindPopup(popup_72b836aef41c4e108b173a09eb7a13a0)
+        ;
+
+        
+    
+    
+            var marker_d36799d328084e81b2ccbcd0fd1735c4 = L.marker(
+                [10.054167, -83.988889],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_e87c5251595941f4a48de180130acf98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_945780bb7d9f487a8f25ca00be32ece6 = $(`<div id="html_945780bb7d9f487a8f25ca00be32ece6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Jeronimo, Alto de La Palma. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1995-01-29 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e87c5251595941f4a48de180130acf98.setContent(html_945780bb7d9f487a8f25ca00be32ece6);
+        
+
+        marker_d36799d328084e81b2ccbcd0fd1735c4.bindPopup(popup_e87c5251595941f4a48de180130acf98)
+        ;
+
+        
+    
+    
+            var marker_2cdea9db882b44c7b813bd3b4516f5a6 = L.marker(
+                [10.061111, -83.986111],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_f1fcf19a062e47179ba9463d520bc4db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4989beb3f57f4cc2bb1f3d857a23a7df = $(`<div id="html_4989beb3f57f4cc2bb1f3d857a23a7df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zurqui Station, around Bajo La Hondura. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2000-02-24 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f1fcf19a062e47179ba9463d520bc4db.setContent(html_4989beb3f57f4cc2bb1f3d857a23a7df);
+        
+
+        marker_2cdea9db882b44c7b813bd3b4516f5a6.bindPopup(popup_f1fcf19a062e47179ba9463d520bc4db)
+        ;
+
+        
+    
+    
+            var marker_c83046b8ca064d55829f1b5b31c48682 = L.marker(
+                [10.061111, -83.986111],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_b0012df6844141adb1e73500b9c02a70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e390140aaccd4c26857bf7df1bb2f982 = $(`<div id="html_e390140aaccd4c26857bf7df1bb2f982" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zurqui Station, around Bajo La Hondura. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2000-02-24 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b0012df6844141adb1e73500b9c02a70.setContent(html_e390140aaccd4c26857bf7df1bb2f982);
+        
+
+        marker_c83046b8ca064d55829f1b5b31c48682.bindPopup(popup_b0012df6844141adb1e73500b9c02a70)
+        ;
+
+        
+    
+    
+            var marker_c4379134cd344f18b05f91110c7b0cd0 = L.marker(
+                [10.061111, -83.986111],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_6e976b79e2104277a476b04514a42106 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51ef2ed274994f8db1e8bc905a3723fa = $(`<div id="html_51ef2ed274994f8db1e8bc905a3723fa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zurqui Station, around Bajo La Hondura. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2000-02-24 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6e976b79e2104277a476b04514a42106.setContent(html_51ef2ed274994f8db1e8bc905a3723fa);
+        
+
+        marker_c4379134cd344f18b05f91110c7b0cd0.bindPopup(popup_6e976b79e2104277a476b04514a42106)
+        ;
+
+        
+    
+    
+            var marker_66d7e32cdfc64deeb87b883c4fdb9cd6 = L.marker(
+                [9.738272, -84.387333],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_f4d69cb61b1b4b06a009b20591e207f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24b59a65573d4f0187bb7327c1855290 = $(`<div id="html_24b59a65573d4f0187bb7327c1855290" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vara Blanca -- <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2001-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Claudia Aragón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f4d69cb61b1b4b06a009b20591e207f9.setContent(html_24b59a65573d4f0187bb7327c1855290);
+        
+
+        marker_66d7e32cdfc64deeb87b883c4fdb9cd6.bindPopup(popup_f4d69cb61b1b4b06a009b20591e207f9)
+        ;
+
+        
+    
+    
+            var marker_40335cd6f49649bbb05b4c656592ac75 = L.marker(
+                [9.738272, -84.387333],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_6bb4094ae74c4eae9f7a4dd3dc9338c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6da42b69f03c447a9c4f6674a579d950 = $(`<div id="html_6da42b69f03c447a9c4f6674a579d950" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vara Blanca -- <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2001-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Claudia Aragón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6bb4094ae74c4eae9f7a4dd3dc9338c8.setContent(html_6da42b69f03c447a9c4f6674a579d950);
+        
+
+        marker_40335cd6f49649bbb05b4c656592ac75.bindPopup(popup_6bb4094ae74c4eae9f7a4dd3dc9338c8)
+        ;
+
+        
+    
+    
+            var marker_2b09d015268d464599e4f173e4b386f3 = L.marker(
+                [9.738272, -84.387333],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_d9e5bc07f9d94ab38d94e8e767525cb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18dcf8b0f8cb4b87aa31ef1e02ae1444 = $(`<div id="html_18dcf8b0f8cb4b87aa31ef1e02ae1444" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vara Blanca -- <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2001-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Claudia Aragón <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d9e5bc07f9d94ab38d94e8e767525cb3.setContent(html_18dcf8b0f8cb4b87aa31ef1e02ae1444);
+        
+
+        marker_2b09d015268d464599e4f173e4b386f3.bindPopup(popup_d9e5bc07f9d94ab38d94e8e767525cb3)
+        ;
+
+        
+    
+    
+            var marker_1d813c6fa27b4c7fad906fc2281cdf43 = L.marker(
+                [9.98, -83.96],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_36b73059cbae442eb3f5bddc26187ca5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab0f5102aaa1436dbce338f9069a4955 = $(`<div id="html_ab0f5102aaa1436dbce338f9069a4955" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Nubes de Coronado, 7 km northwest of San Isidro, Lower Montane wet forest life zone, principal land use is dairy pasture <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1981-09-29 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora, 1994 (INB)</div>`)[0];
+            popup_36b73059cbae442eb3f5bddc26187ca5.setContent(html_ab0f5102aaa1436dbce338f9069a4955);
+        
+
+        marker_1d813c6fa27b4c7fad906fc2281cdf43.bindPopup(popup_36b73059cbae442eb3f5bddc26187ca5)
+        ;
+
+        
+    
+    
+            var marker_f768cf80ef9740e99cd24533e5833319 = L.marker(
+                [9.983333, -84.1],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_45208159957a42b4ab7a84ea85489f40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5ca7a1bb4ac42c99a98030463cd7b3a = $(`<div id="html_e5ca7a1bb4ac42c99a98030463cd7b3a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 0.7 km N of Tarbaca on road to Aserrí, ridge E of road, essentially at divide; on steep slopes. <strong>Elevación:</strong> 1870.0 m  <strong>Fecha:</strong> 1979-08-26 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens <strong>Identificadores:</strong> D. Neill</div>`)[0];
+            popup_45208159957a42b4ab7a84ea85489f40.setContent(html_e5ca7a1bb4ac42c99a98030463cd7b3a);
+        
+
+        marker_f768cf80ef9740e99cd24533e5833319.bindPopup(popup_45208159957a42b4ab7a84ea85489f40)
+        ;
+
+        
+    
+    
+            var marker_c030cfbb530748f7aeb48badf184a9a9 = L.marker(
+                [9.98583, -83.98944],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_a89887195ec549d192ba62d759ae5f99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f32a09cbf1840f6bcceb65b0ef0809f = $(`<div id="html_8f32a09cbf1840f6bcceb65b0ef0809f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Rafael de Coronado between San Isidro and Las Nubes <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1981-06-29 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_a89887195ec549d192ba62d759ae5f99.setContent(html_8f32a09cbf1840f6bcceb65b0ef0809f);
+        
+
+        marker_c030cfbb530748f7aeb48badf184a9a9.bindPopup(popup_a89887195ec549d192ba62d759ae5f99)
+        ;
+
+        
+    
+    
+            var marker_b28a49addc324b4992808dadded26ce7 = L.marker(
+                [10.21, -84.16],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_30de562cb416478f8ea3fc071f737e4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e04ae6c8c8c4e389bfb9e2266f12cbc = $(`<div id="html_0e04ae6c8c8c4e389bfb9e2266f12cbc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 8 km north of Vara Blanca along Highway 9, Lower Montane Rain Forest - Caribbean watershed <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1981-09-08 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> D. Neill</div>`)[0];
+            popup_30de562cb416478f8ea3fc071f737e4b.setContent(html_0e04ae6c8c8c4e389bfb9e2266f12cbc);
+        
+
+        marker_b28a49addc324b4992808dadded26ce7.bindPopup(popup_30de562cb416478f8ea3fc071f737e4b)
+        ;
+
+        
+    
+    
+            var marker_09af6d7e86394b1caeac673afdc17c0c = L.marker(
+                [9.98583, -83.98944],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_26f30b0db4064dce834bb45ab396ed64 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd4788f7ad1049b8821b147849a887a8 = $(`<div id="html_fd4788f7ad1049b8821b147849a887a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Rafael de Coronado between San Isidro and Las Nubes <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1981-06-29 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_26f30b0db4064dce834bb45ab396ed64.setContent(html_fd4788f7ad1049b8821b147849a887a8);
+        
+
+        marker_09af6d7e86394b1caeac673afdc17c0c.bindPopup(popup_26f30b0db4064dce834bb45ab396ed64)
+        ;
+
+        
+    
+    
+            var marker_ee0574445dd842ea9c3c38d415dd75c9 = L.marker(
+                [9.98638, -83.96555],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_aed89c2dc4274655b6807734d080e595 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1d3ac32103c4128884c3be0ef636c0e = $(`<div id="html_c1d3ac32103c4128884c3be0ef636c0e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Nubes de Coronado, Hacienda El Viejo, Lower Montane Wet Forest <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1981-09-28 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_aed89c2dc4274655b6807734d080e595.setContent(html_c1d3ac32103c4128884c3be0ef636c0e);
+        
+
+        marker_ee0574445dd842ea9c3c38d415dd75c9.bindPopup(popup_aed89c2dc4274655b6807734d080e595)
+        ;
+
+        
+    
+    
+            var marker_4e32fae933834ac5a7ea42829f5020b8 = L.marker(
+                [10.061110000000001, -83.98611],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_8d013c5621204c02b788c7690c122506 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60b10b7673bf4ee18d9cd49012bda016 = $(`<div id="html_60b10b7673bf4ee18d9cd49012bda016" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo, Cuenca del Sarapiquí, Bajo de la Hondura <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 2000-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Luis Acosta|Víctor H. Ramírez <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_8d013c5621204c02b788c7690c122506.setContent(html_60b10b7673bf4ee18d9cd49012bda016);
+        
+
+        marker_4e32fae933834ac5a7ea42829f5020b8.bindPopup(popup_8d013c5621204c02b788c7690c122506)
+        ;
+
+        
+    
+    
+            var marker_fbd202e74faf401bb97378c034f52686 = L.marker(
+                [9.98833, -83.96],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_7581b04c1d384e64b5990297b8e222d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf3aa920c01c4e359c89651738f2d0c0 = $(`<div id="html_bf3aa920c01c4e359c89651738f2d0c0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Nubes de Coronado, Lower Montane Wet Forest, dairy pasture <strong>Elevación:</strong> 1800.0 m  <strong>Fecha:</strong> 1981-08-14 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_7581b04c1d384e64b5990297b8e222d0.setContent(html_bf3aa920c01c4e359c89651738f2d0c0);
+        
+
+        marker_fbd202e74faf401bb97378c034f52686.bindPopup(popup_7581b04c1d384e64b5990297b8e222d0)
+        ;
+
+        
+    
+    
+            var marker_87489d972493493e9c9913bf0af1aa4c = L.marker(
+                [9.98638, -83.96555],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_44d7d159348144ea89c40c612baf322d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_996ff229f4974556804f92a190fc6551 = $(`<div id="html_996ff229f4974556804f92a190fc6551" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Nubes de Coronado, Hacienda El Viejo, Lower Montane Wet Forest <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1981-09-28 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_44d7d159348144ea89c40c612baf322d.setContent(html_996ff229f4974556804f92a190fc6551);
+        
+
+        marker_87489d972493493e9c9913bf0af1aa4c.bindPopup(popup_44d7d159348144ea89c40c612baf322d)
+        ;
+
+        
+    
+    
+            var marker_e7f4ebe9eee2425380b492599799273b = L.marker(
+                [10.22638, -84.42166],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_c4d6c9580f784a68aac95cecc1f33d6d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c97cdb7a9b5443efb6151fee34d2cc07 = $(`<div id="html_c97cdb7a9b5443efb6151fee34d2cc07" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zapote de Alfaro Ruiz <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Boris A. Krukoff <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_c4d6c9580f784a68aac95cecc1f33d6d.setContent(html_c97cdb7a9b5443efb6151fee34d2cc07);
+        
+
+        marker_e7f4ebe9eee2425380b492599799273b.bindPopup(popup_c4d6c9580f784a68aac95cecc1f33d6d)
+        ;
+
+        
+    
+    
+            var marker_9229880e9186421881c80a56c7b491db = L.marker(
+                [10.17, -84.15],
+                {}
+            ).addTo(marker_cluster_077d024f973944eba7793c0680774bcd);
+        
+    
+        var popup_491e12cb603449b0b14a6e84c1020c60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_537483b199984819aa795fc87cf0062a = $(`<div id="html_537483b199984819aa795fc87cf0062a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of Vara Blanca <strong>Elevación:</strong> 1880.0 m  <strong>Fecha:</strong> 1976-05-26 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat <strong>Identificadores:</strong> D. Neill</div>`)[0];
+            popup_491e12cb603449b0b14a6e84c1020c60.setContent(html_537483b199984819aa795fc87cf0062a);
+        
+
+        marker_9229880e9186421881c80a56c7b491db.bindPopup(popup_491e12cb603449b0b14a6e84c1020c60)
+        ;
+
+        
+    
+    
+            var layer_control_c0e04f6d2c27406b9b5d041201d864f5 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_63fc89f7262a4b59b989ddbff5181bd6,
+                    "ESRI World Imagery" : tile_layer_dfe0278dd6fc4b1a92962d4078219136,
+                },
+                overlays :  {
+                    "macro_element_077d024f973944eba7793c0680774bcd" : marker_cluster_077d024f973944eba7793c0680774bcd,
+                },
+            };
+            L.control.layers(
+                layer_control_c0e04f6d2c27406b9b5d041201d864f5.base_layers,
+                layer_control_c0e04f6d2c27406b9b5d041201d864f5.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_10f4f0328a02446d9c85eb8500ff023f);
+            tile_layer_dfe0278dd6fc4b1a92962d4078219136.remove();
+        
+</script>

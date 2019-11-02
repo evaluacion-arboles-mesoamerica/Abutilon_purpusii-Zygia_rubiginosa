@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_20781fef6ffc417cba1cbfb59cd6a844 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_20781fef6ffc417cba1cbfb59cd6a844" ></div>
+        
+</body>
+<script>    
+    
+            var map_20781fef6ffc417cba1cbfb59cd6a844 = L.map(
+                "map_20781fef6ffc417cba1cbfb59cd6a844",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_20781fef6ffc417cba1cbfb59cd6a844);
+
+            
+
+        
+    
+            var tile_layer_9f6f2ba1b9984334b7c75bd5f7c7dd5a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_20781fef6ffc417cba1cbfb59cd6a844);
+        
+    
+            var tile_layer_8fead60862504171a531af69c5ec22c9 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_20781fef6ffc417cba1cbfb59cd6a844);
+        
+    
+            var marker_cluster_45ac830cf6c648b68c9253a1e1104660 = L.markerClusterGroup(
+                {}
+            );
+            map_20781fef6ffc417cba1cbfb59cd6a844.addLayer(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+            var marker_9322b8a3d69e46bea79bed8682672755 = L.marker(
+                [10.43, -84.01],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_a5712fa42e1a4c51ad9c27aa6eec0825 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_401a5a36b027473aa4ce8e4779542006 = $(`<div id="html_401a5a36b027473aa4ce8e4779542006" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E.B. La Selva 3 Km S of Puerto Viejo. Tropical wet forest, mean daily temp. ca. 24 ºC, mean annual rainfall ca. 3800 mm. Voucher for population along Quebrada El Salto just N of the South Boundary Trail of Finca La Selva. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1982-09-20 00:00:00+00:00 <strong>Recolectores:</strong> Alverson, William S. <strong>Identificadores:</strong> W. Alverson</div>`)[0];
+            popup_a5712fa42e1a4c51ad9c27aa6eec0825.setContent(html_401a5a36b027473aa4ce8e4779542006);
+        
+
+        marker_9322b8a3d69e46bea79bed8682672755.bindPopup(popup_a5712fa42e1a4c51ad9c27aa6eec0825)
+        ;
+
+        
+    
+    
+            var marker_be36ebf9e9494fdfb4a088553dd5899c = L.marker(
+                [10.43, -84.01],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_528b3e83739b42a2be624394a2450657 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6306fc365d644fdbb3fbdf2a93a00a38 = $(`<div id="html_6306fc365d644fdbb3fbdf2a93a00a38" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tropical Wet Forest ( Holdrige Classification) mean daily temp ca. 24º C mean annual rainfall ca. 3800 mm. <strong>Elevación:</strong> 92.5 m  <strong>Fecha:</strong> 1983-09-13 00:00:00+00:00 <strong>Recolectores:</strong> Alverson, William S. <strong>Identificadores:</strong> Alverson, William S.</div>`)[0];
+            popup_528b3e83739b42a2be624394a2450657.setContent(html_6306fc365d644fdbb3fbdf2a93a00a38);
+        
+
+        marker_be36ebf9e9494fdfb4a088553dd5899c.bindPopup(popup_528b3e83739b42a2be624394a2450657)
+        ;
+
+        
+    
+    
+            var marker_b3f0b8c904a9443eb5cccd18db282323 = L.marker(
+                [10.52, -84.3],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_5a97683bf5394fdeb7472916bf6c2dd0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3322fdade62c42218ef664e99d7a70d6 = $(`<div id="html_3322fdade62c42218ef664e99d7a70d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos. Bosque remanente 1 km N de La Lengua. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1996-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_5a97683bf5394fdeb7472916bf6c2dd0.setContent(html_3322fdade62c42218ef664e99d7a70d6);
+        
+
+        marker_b3f0b8c904a9443eb5cccd18db282323.bindPopup(popup_5a97683bf5394fdeb7472916bf6c2dd0)
+        ;
+
+        
+    
+    
+            var marker_cbb12c9e048a4b118b40a6b1c15539f8 = L.marker(
+                [10.428045, -84.005299],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_29eac269da1e4a56b36e2984bdd20e21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_158455dbf5034059948f6e0ab1226f01 = $(`<div id="html_158455dbf5034059948f6e0ab1226f01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Research Station of OTS, in arboretum, tree no. 1189 at Sendero de los arboles #6. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2002-05-16 00:00:00+00:00 <strong>Recolectores:</strong> L. R. Landrum; A. Salywon, K. Bagstad, D. Damrel, R. Schoeninger, E. Gilbert, E. Makings <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_29eac269da1e4a56b36e2984bdd20e21.setContent(html_158455dbf5034059948f6e0ab1226f01);
+        
+
+        marker_cbb12c9e048a4b118b40a6b1c15539f8.bindPopup(popup_29eac269da1e4a56b36e2984bdd20e21)
+        ;
+
+        
+    
+    
+            var marker_132e04a85d494bae96898916dfcb181d = L.marker(
+                [10.428045, -84.009945],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_e7ee9e0a0a2b4ede92c74364ff9dbc22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d5778d919a041c5b111c9fe0d12395b = $(`<div id="html_7d5778d919a041c5b111c9fe0d12395b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Research Station of OTS, in arboretum, tree no. 1189 at Sendero de los arboles #6. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2002-05-16 00:00:00+00:00 <strong>Recolectores:</strong> L. R. Landrum; A. Salywon, K. Bagstad, D. Damrel, R. Schoeninger, E. Gilbert & E. Makings <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_e7ee9e0a0a2b4ede92c74364ff9dbc22.setContent(html_7d5778d919a041c5b111c9fe0d12395b);
+        
+
+        marker_132e04a85d494bae96898916dfcb181d.bindPopup(popup_e7ee9e0a0a2b4ede92c74364ff9dbc22)
+        ;
+
+        
+    
+    
+            var marker_e162bd70b4924c0e99775c365b8203e7 = L.marker(
+                [10.495833, -83.533333],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_4f9d3950b2c142aba5aaedd0c5b42f34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dafd0bc28d134cb9b7b035b0e0d89871 = $(`<div id="html_dafd0bc28d134cb9b7b035b0e0d89871" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lomas de Sierpe. Desde la Laguna Tortuguero, 8 o 10 Km subiendo por el Rio Tortuguero. Bosque primario. <strong>Elevación:</strong> 4.0 m  <strong>Fecha:</strong> 1997-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Michael H. Grayum <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_4f9d3950b2c142aba5aaedd0c5b42f34.setContent(html_dafd0bc28d134cb9b7b035b0e0d89871);
+        
+
+        marker_e162bd70b4924c0e99775c365b8203e7.bindPopup(popup_4f9d3950b2c142aba5aaedd0c5b42f34)
+        ;
+
+        
+    
+    
+            var marker_bce3a59ecd9042fcb2c28b73e599153e = L.marker(
+                [10.536944, -84.29083299999999],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_04c1f024dbb24bec8e2d2e3ac41b29ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1816bb8aae934b609a914135151a2201 = $(`<div id="html_1816bb8aae934b609a914135151a2201" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> (Pital). Bosque remanente 1 km N de La Legua. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1996-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Alverson, William</div>`)[0];
+            popup_04c1f024dbb24bec8e2d2e3ac41b29ce.setContent(html_1816bb8aae934b609a914135151a2201);
+        
+
+        marker_bce3a59ecd9042fcb2c28b73e599153e.bindPopup(popup_04c1f024dbb24bec8e2d2e3ac41b29ce)
+        ;
+
+        
+    
+    
+            var marker_7063c053c20c413e8025e2fd08ad73ae = L.marker(
+                [10.688056, -84.182222],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_6f7219d0cfa0462eb81268d57191f3ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fdd51e9fcd5459da82da6a3c921357f = $(`<div id="html_8fdd51e9fcd5459da82da6a3c921357f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Jorge. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2006-05-09 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Alverson, William</div>`)[0];
+            popup_6f7219d0cfa0462eb81268d57191f3ff.setContent(html_8fdd51e9fcd5459da82da6a3c921357f);
+        
+
+        marker_7063c053c20c413e8025e2fd08ad73ae.bindPopup(popup_6f7219d0cfa0462eb81268d57191f3ff)
+        ;
+
+        
+    
+    
+            var marker_5e502d741be24affab5bf206a4994ccf = L.marker(
+                [10.433333, -84.033333],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_fb528f8aaf424f4295c35bb2d22bbf96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f324462803b4d5f85732d042bfac78a = $(`<div id="html_4f324462803b4d5f85732d042bfac78a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Biologica La Selva. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2002-05-14 00:00:00+00:00 <strong>Recolectores:</strong> Leslie Roger Landrum <strong>Identificadores:</strong> Alverson, William</div>`)[0];
+            popup_fb528f8aaf424f4295c35bb2d22bbf96.setContent(html_4f324462803b4d5f85732d042bfac78a);
+        
+
+        marker_5e502d741be24affab5bf206a4994ccf.bindPopup(popup_fb528f8aaf424f4295c35bb2d22bbf96)
+        ;
+
+        
+    
+    
+            var marker_24303fe4d4dc4ce4b24b6f8b91f23b52 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_b6dedab7cd644697a34e617e099515d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4959573ec7d1482bad14884335a69120 = $(`<div id="html_4959573ec7d1482bad14884335a69120" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_b6dedab7cd644697a34e617e099515d0.setContent(html_4959573ec7d1482bad14884335a69120);
+        
+
+        marker_24303fe4d4dc4ce4b24b6f8b91f23b52.bindPopup(popup_b6dedab7cd644697a34e617e099515d0)
+        ;
+
+        
+    
+    
+            var marker_4916adf7320647758f79c5e8c804f6a3 = L.marker(
+                [10.431389, -84.00361099999999],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_acef83931c064e61a2afb921ee97bbb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19a00cf80bcf4996b3d41e96cb7c9146 = $(`<div id="html_19a00cf80bcf4996b3d41e96cb7c9146" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Finca La Selva, the OTS Field Station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-02-22 00:00:00+00:00 <strong>Recolectores:</strong> James P. Folsom <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_acef83931c064e61a2afb921ee97bbb0.setContent(html_19a00cf80bcf4996b3d41e96cb7c9146);
+        
+
+        marker_4916adf7320647758f79c5e8c804f6a3.bindPopup(popup_acef83931c064e61a2afb921ee97bbb0)
+        ;
+
+        
+    
+    
+            var marker_ad57c6e508af4747bfd8045f433b0644 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_468ea1a0cc684ef9bd4d6353b7ab93c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9867e2dc043641f39dfeea2e7b32a8d3 = $(`<div id="html_9867e2dc043641f39dfeea2e7b32a8d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-06-04 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_468ea1a0cc684ef9bd4d6353b7ab93c1.setContent(html_9867e2dc043641f39dfeea2e7b32a8d3);
+        
+
+        marker_ad57c6e508af4747bfd8045f433b0644.bindPopup(popup_468ea1a0cc684ef9bd4d6353b7ab93c1)
+        ;
+
+        
+    
+    
+            var marker_68bf762dc89844e08d517987996804a5 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_0fde8cf2cbc74d86a3a46ce4e3977a76 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6f1505edd494635970c2b8d9662a990 = $(`<div id="html_b6f1505edd494635970c2b8d9662a990" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_0fde8cf2cbc74d86a3a46ce4e3977a76.setContent(html_b6f1505edd494635970c2b8d9662a990);
+        
+
+        marker_68bf762dc89844e08d517987996804a5.bindPopup(popup_0fde8cf2cbc74d86a3a46ce4e3977a76)
+        ;
+
+        
+    
+    
+            var marker_12fbd9143b264e4aa9c0ddb931c6f9dc = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_de07145bdd8147f394772c519acf3968 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52ad1b70619d4df3a0842d53be2cc857 = $(`<div id="html_52ad1b70619d4df3a0842d53be2cc857" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-04-08 00:00:00+00:00 <strong>Recolectores:</strong> James P. Folsom <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_de07145bdd8147f394772c519acf3968.setContent(html_52ad1b70619d4df3a0842d53be2cc857);
+        
+
+        marker_12fbd9143b264e4aa9c0ddb931c6f9dc.bindPopup(popup_de07145bdd8147f394772c519acf3968)
+        ;
+
+        
+    
+    
+            var marker_623d5e6180dd4a3887f9f2146fc11bbb = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_5a7ff6b9c41045eb9f4a2f5a8a90cada = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5217647949bb4ca7a8d366afc339ab89 = $(`<div id="html_5217647949bb4ca7a8d366afc339ab89" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-05-14 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> W.S. Alverson</div>`)[0];
+            popup_5a7ff6b9c41045eb9f4a2f5a8a90cada.setContent(html_5217647949bb4ca7a8d366afc339ab89);
+        
+
+        marker_623d5e6180dd4a3887f9f2146fc11bbb.bindPopup(popup_5a7ff6b9c41045eb9f4a2f5a8a90cada)
+        ;
+
+        
+    
+    
+            var marker_ef25cf3ec0784a248a75ad0c41a73ce7 = L.marker(
+                [10.43333, -84.01666],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_4721bcd72daf4140884a2916b78e3990 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e54a174b154e422f834e18e09562ece0 = $(`<div id="html_e54a174b154e422f834e18e09562ece0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva Biological Reserve. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1982-09-07 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4721bcd72daf4140884a2916b78e3990.setContent(html_e54a174b154e422f834e18e09562ece0);
+        
+
+        marker_ef25cf3ec0784a248a75ad0c41a73ce7.bindPopup(popup_4721bcd72daf4140884a2916b78e3990)
+        ;
+
+        
+    
+    
+            var marker_4aaf9fcc0eb54359a1ab2c5f8619627f = L.marker(
+                [10.43333, -84.01666],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_43085c378322459b8e877572daf145db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3829c7e660864cafbf354730b3949515 = $(`<div id="html_3829c7e660864cafbf354730b3949515" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva Biological Reserve, ca. 3 km south of Puerto Viejo de Sarapiquí, tropical wet forest (Holdridge classification), mean daily temperature ca. 24 degrees Celsius, mean annual rainfall ca. 3800 mm <strong>Elevación:</strong> 92.5 m  <strong>Fecha:</strong> 1982-07-03 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_43085c378322459b8e877572daf145db.setContent(html_3829c7e660864cafbf354730b3949515);
+        
+
+        marker_4aaf9fcc0eb54359a1ab2c5f8619627f.bindPopup(popup_43085c378322459b8e877572daf145db)
+        ;
+
+        
+    
+    
+            var marker_6a0dca72d1fc4714a6da20219e12ee70 = L.marker(
+                [38.614111, -90.258889],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_b4066e3b8c3f4f60845cb794d5cc0ec8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24694caf9b844f67b0129dd20efcc72e = $(`<div id="html_24694caf9b844f67b0129dd20efcc72e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Missouri Botanical Garden, Climatron. Source: University of Wisconsin-Madison, Department of Botany, originally collected by Alverson # 1902, Costa Rica, Heredia, Finca La Selva, 20 Sep. 1992 (Wild). MOBOT LCMS Accession # 1993-0902-1. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2018-08-03 00:00:00+00:00 <strong>Recolectores:</strong> Mónica Carlsen|Gabrielle McAuley <strong>Identificadores:</strong> M. Carlsen (MO)</div>`)[0];
+            popup_b4066e3b8c3f4f60845cb794d5cc0ec8.setContent(html_24694caf9b844f67b0129dd20efcc72e);
+        
+
+        marker_6a0dca72d1fc4714a6da20219e12ee70.bindPopup(popup_b4066e3b8c3f4f60845cb794d5cc0ec8)
+        ;
+
+        
+    
+    
+            var marker_5935b1d894424843ba52abbc0ce6012c = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_f0eab17573b64c4690a8f939916144fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea5c1a65d53548ccb5f4fa85d25229c3 = $(`<div id="html_ea5c1a65d53548ccb5f4fa85d25229c3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Arboleda placa # 1189. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2000-08-21 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> O. Vargas, 8/21/</div>`)[0];
+            popup_f0eab17573b64c4690a8f939916144fd.setContent(html_ea5c1a65d53548ccb5f4fa85d25229c3);
+        
+
+        marker_5935b1d894424843ba52abbc0ce6012c.bindPopup(popup_f0eab17573b64c4690a8f939916144fd)
+        ;
+
+        
+    
+    
+            var marker_ef8bdd35cbda4a949b623b8835f6f677 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_6621258d5ae34190960e9ff193430bb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c309b8b9e3f4e8f9a93d330b90fc8c8 = $(`<div id="html_7c309b8b9e3f4e8f9a93d330b90fc8c8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Cantarrana, alrededor de la estación. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2004-04-15 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> R. Aguilar, 4/15/</div>`)[0];
+            popup_6621258d5ae34190960e9ff193430bb3.setContent(html_7c309b8b9e3f4e8f9a93d330b90fc8c8);
+        
+
+        marker_ef8bdd35cbda4a949b623b8835f6f677.bindPopup(popup_6621258d5ae34190960e9ff193430bb3)
+        ;
+
+        
+    
+    
+            var marker_7178d0be659941a99cdc51758549a650 = L.marker(
+                [10.32, -84.17],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_14e66370904340afac9129851770a28d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2fc9fd8c1da43de89d74c3b11370e2e = $(`<div id="html_b2fc9fd8c1da43de89d74c3b11370e2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Huetar Norte, San Carlos, (Pital). Bosque remanente 1 km N de La Legua. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1996-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry 20232 <strong>Identificadores:</strong> William Alverson</div>`)[0];
+            popup_14e66370904340afac9129851770a28d.setContent(html_b2fc9fd8c1da43de89d74c3b11370e2e);
+        
+
+        marker_7178d0be659941a99cdc51758549a650.bindPopup(popup_14e66370904340afac9129851770a28d)
+        ;
+
+        
+    
+    
+            var marker_58901216975c4819903ba826b2d56461 = L.marker(
+                [10.43, -84.02],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_3bf4cbc95a1741d28b7b20e29fb6566d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed999df15e9f4056b42bd76a81d28fc3 = $(`<div id="html_ed999df15e9f4056b42bd76a81d28fc3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva Biological Reserve. Ca. 3 km S of Puerto Viejo de Sarapiquí. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1982-09-20 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3bf4cbc95a1741d28b7b20e29fb6566d.setContent(html_ed999df15e9f4056b42bd76a81d28fc3);
+        
+
+        marker_58901216975c4819903ba826b2d56461.bindPopup(popup_3bf4cbc95a1741d28b7b20e29fb6566d)
+        ;
+
+        
+    
+    
+            var marker_e44576e0302e418386fc80f985f50b96 = L.marker(
+                [10.53, -84.29],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_1140a5d7ac5f4ca7925b3148d29689ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0fe8e7124cc04d8d847481122c16fa01 = $(`<div id="html_0fe8e7124cc04d8d847481122c16fa01" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos, (Pital), bosque remanente 1 km N de La Legua <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1996-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Nelson Zamora|Alexánder Rodríguez <strong>Identificadores:</strong> Alverson (F)</div>`)[0];
+            popup_1140a5d7ac5f4ca7925b3148d29689ab.setContent(html_0fe8e7124cc04d8d847481122c16fa01);
+        
+
+        marker_e44576e0302e418386fc80f985f50b96.bindPopup(popup_1140a5d7ac5f4ca7925b3148d29689ab)
+        ;
+
+        
+    
+    
+            var marker_d3b4852209ea406280741306e8dce7ff = L.marker(
+                [10.49, -83.53],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_8225d8d868514776b2a11f11dfb56ac9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_573b97409c1c4ba18830c4edf8f8ec38 = $(`<div id="html_573b97409c1c4ba18830c4edf8f8ec38" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lomas de Sierpe. Desde la Laguna Tortuguero, 8 o 10 km subiendo por el Rio Tortuguero. Bosque primario. <strong>Elevación:</strong> 4.0 m  <strong>Fecha:</strong> 1997-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Michael H. Grayum <strong>Identificadores:</strong> Hammel, 17 ABR</div>`)[0];
+            popup_8225d8d868514776b2a11f11dfb56ac9.setContent(html_573b97409c1c4ba18830c4edf8f8ec38);
+        
+
+        marker_d3b4852209ea406280741306e8dce7ff.bindPopup(popup_8225d8d868514776b2a11f11dfb56ac9)
+        ;
+
+        
+    
+    
+            var marker_457656639dba4ca0b099f97118aaf6e1 = L.marker(
+                [10.85, -84.166667],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_6c7073bdbf414750b0ffae980484dd9b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1d4d1e0d23b401b8f833140307ce7d5 = $(`<div id="html_a1d4d1e0d23b401b8f833140307ce7d5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio el Castillo, Reserva Indio-Maiz, Cerro Bolívar. <strong>Elevación:</strong> 215.0 m  <strong>Fecha:</strong> 1998-11-30 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|F. Flores|W. Velásquez|O. Caballero <strong>Identificadores:</strong> W. Alverson</div>`)[0];
+            popup_6c7073bdbf414750b0ffae980484dd9b.setContent(html_a1d4d1e0d23b401b8f833140307ce7d5);
+        
+
+        marker_457656639dba4ca0b099f97118aaf6e1.bindPopup(popup_6c7073bdbf414750b0ffae980484dd9b)
+        ;
+
+        
+    
+    
+            var marker_f2bd74800d4d45f6a791cff2a6e191d5 = L.marker(
+                [10.43, -84.01],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_19fb322d39e64e3989b3408f6a95ba90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_503ab5ac91f247288fe3f2bce2cc8e9f = $(`<div id="html_503ab5ac91f247288fe3f2bce2cc8e9f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva Biological Reserve, ca. 3 km south of Puerto Viejo de Sarapiquí, tropical wet forest (Holdridge Classification), mean daily temperature ca. 24ºC, mean annual rainfall ca. 3800 mm <strong>Elevación:</strong> 92.5 m  <strong>Fecha:</strong> 1982-09-06 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_19fb322d39e64e3989b3408f6a95ba90.setContent(html_503ab5ac91f247288fe3f2bce2cc8e9f);
+        
+
+        marker_f2bd74800d4d45f6a791cff2a6e191d5.bindPopup(popup_19fb322d39e64e3989b3408f6a95ba90)
+        ;
+
+        
+    
+    
+            var marker_05b133c7f1e8446f99baddf752d04105 = L.marker(
+                [10.43, -84.01],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_8e3f9a807c604afea16ea2f622d23c78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d82a48922b64586b4c69ae65c09eae2 = $(`<div id="html_7d82a48922b64586b4c69ae65c09eae2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva Biological Reserve, ca. 3 km S of Puerto Viejo de Sarapiqui. Tropical Wet Forest (Holdridge Classif.), mean daily temp. ca. 24ºC, mean annual rainfall ca. 3800 mm <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1982-09-20 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> W.S. Alverson, 1984 (WIS)</div>`)[0];
+            popup_8e3f9a807c604afea16ea2f622d23c78.setContent(html_7d82a48922b64586b4c69ae65c09eae2);
+        
+
+        marker_05b133c7f1e8446f99baddf752d04105.bindPopup(popup_8e3f9a807c604afea16ea2f622d23c78)
+        ;
+
+        
+    
+    
+            var marker_53b6d7c0acc84347b8b33e1c62c426c0 = L.marker(
+                [10.43333, -84.01666],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_7f3aa7394e544614aed28aba7633ddd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f63dbe6d8db647e68148440c40be244b = $(`<div id="html_f63dbe6d8db647e68148440c40be244b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 3 km S of Puerto Viejo de Sarapiqui, Tropical wet forest. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1982-09-06 00:00:00+00:00 <strong>Recolectores:</strong> W. S. Alverson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_7f3aa7394e544614aed28aba7633ddd4.setContent(html_f63dbe6d8db647e68148440c40be244b);
+        
+
+        marker_53b6d7c0acc84347b8b33e1c62c426c0.bindPopup(popup_7f3aa7394e544614aed28aba7633ddd4)
+        ;
+
+        
+    
+    
+            var marker_706101822fda47bab162407c6dc19349 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_471b0dbb72194515b7023bb47486bc82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e5d1415c8684306b5bf32d408623427 = $(`<div id="html_4e5d1415c8684306b5bf32d408623427" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1979-08-11 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum <strong>Identificadores:</strong> C.M. Taylor</div>`)[0];
+            popup_471b0dbb72194515b7023bb47486bc82.setContent(html_4e5d1415c8684306b5bf32d408623427);
+        
+
+        marker_706101822fda47bab162407c6dc19349.bindPopup(popup_471b0dbb72194515b7023bb47486bc82)
+        ;
+
+        
+    
+    
+            var marker_51921ab99a1940d9b2273dbcd03e20e7 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_45ac830cf6c648b68c9253a1e1104660);
+        
+    
+        var popup_cc12388e117e462f929951dbb4dc9922 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1989dc6e3a4410294fe20556dae1fd8 = $(`<div id="html_a1989dc6e3a4410294fe20556dae1fd8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1979-08-16 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum <strong>Identificadores:</strong> C.M. Taylor</div>`)[0];
+            popup_cc12388e117e462f929951dbb4dc9922.setContent(html_a1989dc6e3a4410294fe20556dae1fd8);
+        
+
+        marker_51921ab99a1940d9b2273dbcd03e20e7.bindPopup(popup_cc12388e117e462f929951dbb4dc9922)
+        ;
+
+        
+    
+    
+            var layer_control_fb55020ff4a740caaf0b6f55cb52e4c5 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9f6f2ba1b9984334b7c75bd5f7c7dd5a,
+                    "ESRI World Imagery" : tile_layer_8fead60862504171a531af69c5ec22c9,
+                },
+                overlays :  {
+                    "macro_element_45ac830cf6c648b68c9253a1e1104660" : marker_cluster_45ac830cf6c648b68c9253a1e1104660,
+                },
+            };
+            L.control.layers(
+                layer_control_fb55020ff4a740caaf0b6f55cb52e4c5.base_layers,
+                layer_control_fb55020ff4a740caaf0b6f55cb52e4c5.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_20781fef6ffc417cba1cbfb59cd6a844);
+            tile_layer_8fead60862504171a531af69c5ec22c9.remove();
+        
+</script>

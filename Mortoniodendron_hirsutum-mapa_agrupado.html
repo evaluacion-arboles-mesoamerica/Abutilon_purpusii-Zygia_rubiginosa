@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4b58c97d3a354c64be09ba8ce852dfde {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_4b58c97d3a354c64be09ba8ce852dfde" ></div>
+        
+</body>
+<script>    
+    
+            var map_4b58c97d3a354c64be09ba8ce852dfde = L.map(
+                "map_4b58c97d3a354c64be09ba8ce852dfde",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_4b58c97d3a354c64be09ba8ce852dfde);
+
+            
+
+        
+    
+            var tile_layer_1fcf73f97abf4af4af71aa25c8d58002 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4b58c97d3a354c64be09ba8ce852dfde);
+        
+    
+            var tile_layer_9fbf85b293fd47c186909e3e2e8c2f07 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4b58c97d3a354c64be09ba8ce852dfde);
+        
+    
+            var marker_cluster_45c4432ddb1e40209937dfd275987a17 = L.markerClusterGroup(
+                {}
+            );
+            map_4b58c97d3a354c64be09ba8ce852dfde.addLayer(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+            var marker_d68f911a14384eae8e6fa60610f4735c = L.marker(
+                [8.51, -83.51],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_3b5d4e11b7cf4217a79e71da34d28e7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0df301f893aa4faa9b88db16bd04a324 = $(`<div id="html_0df301f893aa4faa9b88db16bd04a324" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Corcovado 1 km from Los Chiles <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1977-07-11 00:00:00+00:00 <strong>Recolectores:</strong> Liesner, Ronald <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3b5d4e11b7cf4217a79e71da34d28e7f.setContent(html_0df301f893aa4faa9b88db16bd04a324);
+        
+
+        marker_d68f911a14384eae8e6fa60610f4735c.bindPopup(popup_3b5d4e11b7cf4217a79e71da34d28e7f)
+        ;
+
+        
+    
+    
+            var marker_23be6142a6c142ca985f9aa3b609610c = L.marker(
+                [8.45, -83.55],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_07d9b6b5da334557bde0c30483091699 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0ddb978bb6949a69c85fad720e1dd47 = $(`<div id="html_f0ddb978bb6949a69c85fad720e1dd47" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Corcovado Sirena <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1988-01-30 00:00:00+00:00 <strong>Recolectores:</strong> Kernan, C. <strong>Identificadores:</strong> W. Meijer</div>`)[0];
+            popup_07d9b6b5da334557bde0c30483091699.setContent(html_f0ddb978bb6949a69c85fad720e1dd47);
+        
+
+        marker_23be6142a6c142ca985f9aa3b609610c.bindPopup(popup_07d9b6b5da334557bde0c30483091699)
+        ;
+
+        
+    
+    
+            var marker_4ff51f7a1c0c40d5ba2d048c4e2218f7 = L.marker(
+                [8.72, -83.59],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_5df2aa1bbc804c70a2b3f4015932ccc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5694f234f4d64e72a32647c3777ea267 = $(`<div id="html_5694f234f4d64e72a32647c3777ea267" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce Fila Ganado, entre Rancho Quemado y Drake. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1990-10-18 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5df2aa1bbc804c70a2b3f4015932ccc1.setContent(html_5694f234f4d64e72a32647c3777ea267);
+        
+
+        marker_4ff51f7a1c0c40d5ba2d048c4e2218f7.bindPopup(popup_5df2aa1bbc804c70a2b3f4015932ccc1)
+        ;
+
+        
+    
+    
+            var marker_4e99636dc5de40dab4668df601a1d6be = L.marker(
+                [8.71, -83.52],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_bae797a1b17f41bf9334548fe69a11db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa87e800f5c24bfbbc201a2fb6c2dac1 = $(`<div id="html_fa87e800f5c24bfbbc201a2fb6c2dac1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rincón, cuenca superior de la Quebrada El Campo. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1990-10-25 00:00:00+00:00 <strong>Recolectores:</strong> Chacón, Abelardo M. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_bae797a1b17f41bf9334548fe69a11db.setContent(html_fa87e800f5c24bfbbc201a2fb6c2dac1);
+        
+
+        marker_4e99636dc5de40dab4668df601a1d6be.bindPopup(popup_bae797a1b17f41bf9334548fe69a11db)
+        ;
+
+        
+    
+    
+            var marker_12e3b67e58174625bc319b8bb055c6df = L.marker(
+                [8.42, -83.31],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_308d16cfd41947e6be8e3fb98cafbb88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae6f5d9a152b4b6e86c608222a76c515 = $(`<div id="html_ae6f5d9a152b4b6e86c608222a76c515" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alto de la Carbonera, camino a Cerro de Osa. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1990-09-18 00:00:00+00:00 <strong>Recolectores:</strong> Chacón, Abelardo M. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_308d16cfd41947e6be8e3fb98cafbb88.setContent(html_ae6f5d9a152b4b6e86c608222a76c515);
+        
+
+        marker_12e3b67e58174625bc319b8bb055c6df.bindPopup(popup_308d16cfd41947e6be8e3fb98cafbb88)
+        ;
+
+        
+    
+    
+            var marker_a098b3e2878e4bcfbc0f31cd4440f35e = L.marker(
+                [8.73, -83.6],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_a06dfba58721431b83d951fed48f197c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3116650c1e6943a0a85aa6408b0dd28c = $(`<div id="html_3116650c1e6943a0a85aa6408b0dd28c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Boca Ganado, Fila Ganado. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1993-11-23 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> M. Valerio V</div>`)[0];
+            popup_a06dfba58721431b83d951fed48f197c.setContent(html_3116650c1e6943a0a85aa6408b0dd28c);
+        
+
+        marker_a098b3e2878e4bcfbc0f31cd4440f35e.bindPopup(popup_a06dfba58721431b83d951fed48f197c)
+        ;
+
+        
+    
+    
+            var marker_8d1981d9d5934d478e8bd5c313c49f1d = L.marker(
+                [8.7, -83.55],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_6559b86e563a424bb5dc9a988466faed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c99e83ebbcd9428fa5a49d581671e655 = $(`<div id="html_c99e83ebbcd9428fa5a49d581671e655" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rincón, Fila before Rancho Quemado. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-01-13 00:00:00+00:00 <strong>Recolectores:</strong> Gentry, Alwyn H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_6559b86e563a424bb5dc9a988466faed.setContent(html_c99e83ebbcd9428fa5a49d581671e655);
+        
+
+        marker_8d1981d9d5934d478e8bd5c313c49f1d.bindPopup(popup_6559b86e563a424bb5dc9a988466faed)
+        ;
+
+        
+    
+    
+            var marker_5ee95f8a70c947449ccd0c5efa0bf43b = L.marker(
+                [8.7, -83.51],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_e60179e1966e4ab3996ccae1c56b01d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc391737d28c4aa4a8e87ff5d69bda05 = $(`<div id="html_cc391737d28c4aa4a8e87ff5d69bda05" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Aguabuena 4 km W of Rincón, open land. <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1992-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Thomsen, Karsten <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_e60179e1966e4ab3996ccae1c56b01d2.setContent(html_cc391737d28c4aa4a8e87ff5d69bda05);
+        
+
+        marker_5ee95f8a70c947449ccd0c5efa0bf43b.bindPopup(popup_e60179e1966e4ab3996ccae1c56b01d2)
+        ;
+
+        
+    
+    
+            var marker_2d1e69387c264043af00953ec5985188 = L.marker(
+                [8.71, -83.51],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_86b7b186e5dc4629914d70b17c485f10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae441b9a0ce240f2a0045c83a7e798de = $(`<div id="html_ae441b9a0ce240f2a0045c83a7e798de" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Aguabuena, 3.5 km W of Rincón. Four hectare permanent sample plot 1 km N of BOSCOSA, station in well-drained undulating terrain with slopes of 15-35 º. Tall primary forest with many palms and large lianas. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1994-08-27 00:00:00+00:00 <strong>Recolectores:</strong> Thomsen, Karsten <strong>Identificadores:</strong> Thomsen, Karsten</div>`)[0];
+            popup_86b7b186e5dc4629914d70b17c485f10.setContent(html_ae441b9a0ce240f2a0045c83a7e798de);
+        
+
+        marker_2d1e69387c264043af00953ec5985188.bindPopup(popup_86b7b186e5dc4629914d70b17c485f10)
+        ;
+
+        
+    
+    
+            var marker_1d47f9a308ee4cf18dbeffa280f4b0dc = L.marker(
+                [8.46, -83.58],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_db59e44979d94ed18faaa65ce4130e96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e0f88c50f08453fa84ddc425c53a6c8 = $(`<div id="html_3e0f88c50f08453fa84ddc425c53a6c8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Corcovado Estación Sirena, alrededores de la estación y del sendero la Olla. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1990-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Gilberto Fonseca <strong>Identificadores:</strong> González, José</div>`)[0];
+            popup_db59e44979d94ed18faaa65ce4130e96.setContent(html_3e0f88c50f08453fa84ddc425c53a6c8);
+        
+
+        marker_1d47f9a308ee4cf18dbeffa280f4b0dc.bindPopup(popup_db59e44979d94ed18faaa65ce4130e96)
+        ;
+
+        
+    
+    
+            var marker_68a49d8a1698429aba34a87e921e78e5 = L.marker(
+                [9.29, -83.76],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_53f4594be6174c53877c04308bd7e76c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_feab655ada094b98a94399e2b15466a2 = $(`<div id="html_feab655ada094b98a94399e2b15466a2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Tinamaste, siguiendo el Farallón. <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-26 00:00:00+00:00 <strong>Recolectores:</strong> González, José <strong>Identificadores:</strong> González, José</div>`)[0];
+            popup_53f4594be6174c53877c04308bd7e76c.setContent(html_feab655ada094b98a94399e2b15466a2);
+        
+
+        marker_68a49d8a1698429aba34a87e921e78e5.bindPopup(popup_53f4594be6174c53877c04308bd7e76c)
+        ;
+
+        
+    
+    
+            var marker_6ff4a30326e24db1ad0f2ac295f3f1c4 = L.marker(
+                [9.72, -84.37],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_b621ed787dde429eb4ad66cc97c02d23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_087632b91847411eb4464bea930aa589 = $(`<div id="html_087632b91847411eb4464bea930aa589" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Cangreja Cuenca del Tulín. Santa Gertrudis de San Martín. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Rodríguez, Alexánder <strong>Identificadores:</strong> Rodríguez, Alexánder</div>`)[0];
+            popup_b621ed787dde429eb4ad66cc97c02d23.setContent(html_087632b91847411eb4464bea930aa589);
+        
+
+        marker_6ff4a30326e24db1ad0f2ac295f3f1c4.bindPopup(popup_b621ed787dde429eb4ad66cc97c02d23)
+        ;
+
+        
+    
+    
+            var marker_fb50b7d006684419989c00645c5013ca = L.marker(
+                [9.71, -84.37],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_d6100776c5a243d7ba22a6661fde8de6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_869108275ccb42c1a12232ae7bb296b9 = $(`<div id="html_869108275ccb42c1a12232ae7bb296b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Cangreja Mastatal. Altos Fila Cangreja. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 1997-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Jiménez, Quírico <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_d6100776c5a243d7ba22a6661fde8de6.setContent(html_869108275ccb42c1a12232ae7bb296b9);
+        
+
+        marker_fb50b7d006684419989c00645c5013ca.bindPopup(popup_d6100776c5a243d7ba22a6661fde8de6)
+        ;
+
+        
+    
+    
+            var marker_e3dc830145f745e08a1c4d0db33b610e = L.marker(
+                [8.5714, -79.9106],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_c6deafa08b014911b7f66f1679ab2267 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_306959ebe6604d6890c88c13aafd4619 = $(`<div id="html_306959ebe6604d6890c88c13aafd4619" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1940-11-21 00:00:00+00:00 <strong>Recolectores:</strong> H. von Wedel <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c6deafa08b014911b7f66f1679ab2267.setContent(html_306959ebe6604d6890c88c13aafd4619);
+        
+
+        marker_e3dc830145f745e08a1c4d0db33b610e.bindPopup(popup_c6deafa08b014911b7f66f1679ab2267)
+        ;
+
+        
+    
+    
+            var marker_900a62b854cd47fdb947dcbe9edf2e10 = L.marker(
+                [8.8333, -82.1667],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_297f0f7837cd46f3a7fd671235359f38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4db2331d572a4555a9c5f8d5d27b1e79 = $(`<div id="html_4db2331d572a4555a9c5f8d5d27b1e79" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2004-05-26 00:00:00+00:00 <strong>Recolectores:</strong> R. Aizprúa <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_297f0f7837cd46f3a7fd671235359f38.setContent(html_4db2331d572a4555a9c5f8d5d27b1e79);
+        
+
+        marker_900a62b854cd47fdb947dcbe9edf2e10.bindPopup(popup_297f0f7837cd46f3a7fd671235359f38)
+        ;
+
+        
+    
+    
+            var marker_adc4e549671d482a9a0d9f0de792ecc4 = L.marker(
+                [9.294722, -83.764167],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_b8dd83b9539842a1aafaea120ab3939b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_706e9d887ed3472480a4ef0e63aeb027 = $(`<div id="html_706e9d887ed3472480a4ef0e63aeb027" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña.  Fila Tinamastes, siguiendo el Farallón. <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-26 00:00:00+00:00 <strong>Recolectores:</strong> José Á. González R.|Barry E. Hammel|T. Bermúdez|Sachiko Yasuda <strong>Identificadores:</strong> L. J. Dorr (US)</div>`)[0];
+            popup_b8dd83b9539842a1aafaea120ab3939b.setContent(html_706e9d887ed3472480a4ef0e63aeb027);
+        
+
+        marker_adc4e549671d482a9a0d9f0de792ecc4.bindPopup(popup_b8dd83b9539842a1aafaea120ab3939b)
+        ;
+
+        
+    
+    
+            var marker_eaabf0285e95428e8ba6b0fd165185d3 = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_199bc2476aea46a1a54e1d86844800cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f28f31266734da6833f7cf41dd4932a = $(`<div id="html_3f28f31266734da6833f7cf41dd4932a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z.P. La Cangreja.  Cuenca del Tulín.  Zona Protectora La Cangreja, Santa Gertrudis de San Martín.  Falda Oeste de la Fila La <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|J. F. Morales|Luis A. González <strong>Identificadores:</strong> L. J. Dorr (US)</div>`)[0];
+            popup_199bc2476aea46a1a54e1d86844800cb.setContent(html_3f28f31266734da6833f7cf41dd4932a);
+        
+
+        marker_eaabf0285e95428e8ba6b0fd165185d3.bindPopup(popup_199bc2476aea46a1a54e1d86844800cb)
+        ;
+
+        
+    
+    
+            var marker_24619ecbd85e428882dae0e52b62ca6c = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_68b3c298280a407cac2407e77afda3fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cae116ff52ed439b9c4739034cd62478 = $(`<div id="html_cae116ff52ed439b9c4739034cd62478" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_68b3c298280a407cac2407e77afda3fd.setContent(html_cae116ff52ed439b9c4739034cd62478);
+        
+
+        marker_24619ecbd85e428882dae0e52b62ca6c.bindPopup(popup_68b3c298280a407cac2407e77afda3fd)
+        ;
+
+        
+    
+    
+            var marker_ea4151e3a92d4b2d822f76ad092f6e0f = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_5018e6204acd4b1f8f9c291c37a3a388 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d59b11d9743b4b82bef618b70b3f6aec = $(`<div id="html_d59b11d9743b4b82bef618b70b3f6aec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_5018e6204acd4b1f8f9c291c37a3a388.setContent(html_d59b11d9743b4b82bef618b70b3f6aec);
+        
+
+        marker_ea4151e3a92d4b2d822f76ad092f6e0f.bindPopup(popup_5018e6204acd4b1f8f9c291c37a3a388)
+        ;
+
+        
+    
+    
+            var marker_cd907f30091941a7ad3581531db85a0c = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_fb95ee77704b405890440ca9e6be86e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7bfed6e7e4c246eca91eb922c77d6906 = $(`<div id="html_7bfed6e7e4c246eca91eb922c77d6906" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_fb95ee77704b405890440ca9e6be86e6.setContent(html_7bfed6e7e4c246eca91eb922c77d6906);
+        
+
+        marker_cd907f30091941a7ad3581531db85a0c.bindPopup(popup_fb95ee77704b405890440ca9e6be86e6)
+        ;
+
+        
+    
+    
+            var marker_01707c6095984545a84ae6a96fac667e = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_0b0cfb1e6f0f4a3a9c21254e955050fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3564a73ee2914297865f3fe42883a496 = $(`<div id="html_3564a73ee2914297865f3fe42883a496" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_0b0cfb1e6f0f4a3a9c21254e955050fb.setContent(html_3564a73ee2914297865f3fe42883a496);
+        
+
+        marker_01707c6095984545a84ae6a96fac667e.bindPopup(popup_0b0cfb1e6f0f4a3a9c21254e955050fb)
+        ;
+
+        
+    
+    
+            var marker_32c34f650a8c417b96f2f829330e22fe = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_26c512d0b9614178b2c684c6f12ff6d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51ecb610a8f740f7ac05713cbcb1ca38 = $(`<div id="html_51ecb610a8f740f7ac05713cbcb1ca38" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_26c512d0b9614178b2c684c6f12ff6d3.setContent(html_51ecb610a8f740f7ac05713cbcb1ca38);
+        
+
+        marker_32c34f650a8c417b96f2f829330e22fe.bindPopup(popup_26c512d0b9614178b2c684c6f12ff6d3)
+        ;
+
+        
+    
+    
+            var marker_d12daf2494774e318c47e6c90b8bcf36 = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_7562d4dcbbec4b5c8611116b80e85f8a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f541954931764e26aa2823e9a12e9101 = $(`<div id="html_f541954931764e26aa2823e9a12e9101" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_7562d4dcbbec4b5c8611116b80e85f8a.setContent(html_f541954931764e26aa2823e9a12e9101);
+        
+
+        marker_d12daf2494774e318c47e6c90b8bcf36.bindPopup(popup_7562d4dcbbec4b5c8611116b80e85f8a)
+        ;
+
+        
+    
+    
+            var marker_07c0a686109d4199a92e8865299703cb = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_3f31ec1e9dae4b06ab90c4ed8f6e91ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9950d1e42e364348a59b222f6b4a3f74 = $(`<div id="html_9950d1e42e364348a59b222f6b4a3f74" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_3f31ec1e9dae4b06ab90c4ed8f6e91ba.setContent(html_9950d1e42e364348a59b222f6b4a3f74);
+        
+
+        marker_07c0a686109d4199a92e8865299703cb.bindPopup(popup_3f31ec1e9dae4b06ab90c4ed8f6e91ba)
+        ;
+
+        
+    
+    
+            var marker_7aa7c3d335114cd7be70a61605a55fda = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_019327d067044c36be09b6dfc4b7ca42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_568cbf7716d74d2481e1a1da67d100ec = $(`<div id="html_568cbf7716d74d2481e1a1da67d100ec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_019327d067044c36be09b6dfc4b7ca42.setContent(html_568cbf7716d74d2481e1a1da67d100ec);
+        
+
+        marker_7aa7c3d335114cd7be70a61605a55fda.bindPopup(popup_019327d067044c36be09b6dfc4b7ca42)
+        ;
+
+        
+    
+    
+            var marker_fab2a1cffed14d0c9abebbae45727a25 = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_ed45d237187f48238dec61084a996ef0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3849ba0d3bc405aa0e0a6deb81406c5 = $(`<div id="html_b3849ba0d3bc405aa0e0a6deb81406c5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_ed45d237187f48238dec61084a996ef0.setContent(html_b3849ba0d3bc405aa0e0a6deb81406c5);
+        
+
+        marker_fab2a1cffed14d0c9abebbae45727a25.bindPopup(popup_ed45d237187f48238dec61084a996ef0)
+        ;
+
+        
+    
+    
+            var marker_6d3003ed893243f2a4e48a97cfea14a1 = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_2af749b21fe1421fb6af2e6e8277f0b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1905f6aa37fc4c7f9e5b297e8bd135f4 = $(`<div id="html_1905f6aa37fc4c7f9e5b297e8bd135f4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_2af749b21fe1421fb6af2e6e8277f0b1.setContent(html_1905f6aa37fc4c7f9e5b297e8bd135f4);
+        
+
+        marker_6d3003ed893243f2a4e48a97cfea14a1.bindPopup(popup_2af749b21fe1421fb6af2e6e8277f0b1)
+        ;
+
+        
+    
+    
+            var marker_8c98edbfef50476eb05007a7b6c7d010 = L.marker(
+                [9.723611, -84.378056],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_aa985c476fd84030a831d13e19032bee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2cae374fd4643069fcad5f7d0561e69 = $(`<div id="html_f2cae374fd4643069fcad5f7d0561e69" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Falda W Cerro Cangreja, Santa Gertrudis. Cabeceras Rio Negro. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1996-06-27 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Juan Francisco Morales Quirós ; Luis González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_aa985c476fd84030a831d13e19032bee.setContent(html_f2cae374fd4643069fcad5f7d0561e69);
+        
+
+        marker_8c98edbfef50476eb05007a7b6c7d010.bindPopup(popup_aa985c476fd84030a831d13e19032bee)
+        ;
+
+        
+    
+    
+            var marker_1dabd58baa3e41fbab9237af9d03d4dd = L.marker(
+                [9.719444000000001, -84.373611],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_ad5871a7da1941cfacf22ebef338a0ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1a70ffb33244ce29a661c07e113bc0f = $(`<div id="html_f1a70ffb33244ce29a661c07e113bc0f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal.Altos Fila Cangreja. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 1997-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez; Alejandro Solano <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_ad5871a7da1941cfacf22ebef338a0ac.setContent(html_f1a70ffb33244ce29a661c07e113bc0f);
+        
+
+        marker_1dabd58baa3e41fbab9237af9d03d4dd.bindPopup(popup_ad5871a7da1941cfacf22ebef338a0ac)
+        ;
+
+        
+    
+    
+            var marker_1d6f8bf3003e4ef9a994f82a7ed1325a = L.marker(
+                [9.719444000000001, -84.373611],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_ce33ed9281074cb2bcb7bae0106ca4a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4001b51baf86407f87523e0bb695344b = $(`<div id="html_4001b51baf86407f87523e0bb695344b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal.Altos Fila Cangreja. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 1997-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez; Alejandro Solano <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_ce33ed9281074cb2bcb7bae0106ca4a8.setContent(html_4001b51baf86407f87523e0bb695344b);
+        
+
+        marker_1d6f8bf3003e4ef9a994f82a7ed1325a.bindPopup(popup_ce33ed9281074cb2bcb7bae0106ca4a8)
+        ;
+
+        
+    
+    
+            var marker_2bb3e9ba82764b5e8d34c6e7371453fb = L.marker(
+                [9.719444000000001, -84.373611],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_bfcc5e87dc6c4e23bf9b802560054b61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a37d284398c4b168a91b5d94b658a8b = $(`<div id="html_0a37d284398c4b168a91b5d94b658a8b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal.Altos Fila Cangreja. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 1997-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez; Alejandro Solano <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_bfcc5e87dc6c4e23bf9b802560054b61.setContent(html_0a37d284398c4b168a91b5d94b658a8b);
+        
+
+        marker_2bb3e9ba82764b5e8d34c6e7371453fb.bindPopup(popup_bfcc5e87dc6c4e23bf9b802560054b61)
+        ;
+
+        
+    
+    
+            var marker_009aecba90844b4c9f3e748031a8e7d7 = L.marker(
+                [9.8, -84.45277800000001],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_0557e2ca4e99457a972e7f082a1e0d81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bf038dd76464d04b1de41be74374963 = $(`<div id="html_4bf038dd76464d04b1de41be74374963" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potenciana arriba, cerca del Cerro Turrubares. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 1993-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_0557e2ca4e99457a972e7f082a1e0d81.setContent(html_4bf038dd76464d04b1de41be74374963);
+        
+
+        marker_009aecba90844b4c9f3e748031a8e7d7.bindPopup(popup_0557e2ca4e99457a972e7f082a1e0d81)
+        ;
+
+        
+    
+    
+            var marker_a02c6bdad8684e43b26fcf442856554d = L.marker(
+                [9.294722, -83.764167],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_3b0af47a568943ecba500ea5158d9974 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a057fb27c8249ff8f14cd7a6ddc3cd3 = $(`<div id="html_2a057fb27c8249ff8f14cd7a6ddc3cd3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Tinamastes, siguiendo el Farallon. <strong>Elevación:</strong> 1140.0 m  <strong>Fecha:</strong> 1996-02-26 00:00:00+00:00 <strong>Recolectores:</strong> Jose González <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_3b0af47a568943ecba500ea5158d9974.setContent(html_2a057fb27c8249ff8f14cd7a6ddc3cd3);
+        
+
+        marker_a02c6bdad8684e43b26fcf442856554d.bindPopup(popup_3b0af47a568943ecba500ea5158d9974)
+        ;
+
+        
+    
+    
+            var marker_23b66e3689b1407193cd92ddebb7e731 = L.marker(
+                [9.541667, -82.9],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_5a5bc893d7254ae0b8719300bfb3c170 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e23c14649af4656a6a48aad67fd7975 = $(`<div id="html_9e23c14649af4656a6a48aad67fd7975" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Amubri. Margen izquierdo del Rio Uren. Loma Sheuab. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1989-06-25 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_5a5bc893d7254ae0b8719300bfb3c170.setContent(html_9e23c14649af4656a6a48aad67fd7975);
+        
+
+        marker_23b66e3689b1407193cd92ddebb7e731.bindPopup(popup_5a5bc893d7254ae0b8719300bfb3c170)
+        ;
+
+        
+    
+    
+            var marker_4b8c4a7860c749a8b6469c584561c682 = L.marker(
+                [17.941667000000002, -96.508333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_d17e0a97c26c4bd1bfbad54f6e15a655 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a7c7b5f121c4ebc9049b75bc5b3669c = $(`<div id="html_8a7c7b5f121c4ebc9049b75bc5b3669c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Verde, 7 km al NNE de San Felipe Usila <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-10-01 00:00:00+00:00 <strong>Recolectores:</strong> G. Ibarra M.; J. Meave del C.; M. Vargas <strong>Identificadores:</strong> G. Ibarra M.</div>`)[0];
+            popup_d17e0a97c26c4bd1bfbad54f6e15a655.setContent(html_8a7c7b5f121c4ebc9049b75bc5b3669c);
+        
+
+        marker_4b8c4a7860c749a8b6469c584561c682.bindPopup(popup_d17e0a97c26c4bd1bfbad54f6e15a655)
+        ;
+
+        
+    
+    
+            var marker_57052383ac7d4e259018b0cac418d1ea = L.marker(
+                [9.235, -82.41833000000001],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_510ab4fdc6b44bfba41809cddadde1d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e21d9a9f4fb9461190409888a35cb564 = $(`<div id="html_e21d9a9f4fb9461190409888a35cb564" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque Protector Palo Seco. Valle Riscó. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 2004-05-26 00:00:00+00:00 <strong>Recolectores:</strong> Rafael Aizprúa|Alicia Ibáñez|I. Alvarez|Paul J. M. Maas|Nelson Zamora <strong>Identificadores:</strong> R. Aizprúa</div>`)[0];
+            popup_510ab4fdc6b44bfba41809cddadde1d9.setContent(html_e21d9a9f4fb9461190409888a35cb564);
+        
+
+        marker_57052383ac7d4e259018b0cac418d1ea.bindPopup(popup_510ab4fdc6b44bfba41809cddadde1d9)
+        ;
+
+        
+    
+    
+            var marker_91a9af93ab154fd2bc74873a95b363ef = L.marker(
+                [9.333333, -79.0],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_874f4fb853934bafbd796783c0e4faaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e79ba751edc4c2a9bb8fe39e4d8cd16 = $(`<div id="html_5e79ba751edc4c2a9bb8fe39e4d8cd16" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Panama/San Blas. El Llano- Cartí road. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1982-08-28 00:00:00+00:00 <strong>Recolectores:</strong> Clem W. Hamilton|Henry Stockwell <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_874f4fb853934bafbd796783c0e4faaf.setContent(html_5e79ba751edc4c2a9bb8fe39e4d8cd16);
+        
+
+        marker_91a9af93ab154fd2bc74873a95b363ef.bindPopup(popup_874f4fb853934bafbd796783c0e4faaf)
+        ;
+
+        
+    
+    
+            var marker_fe0d5b2f082d4afbb1a0d5c4e2e1430c = L.marker(
+                [9.7, -84.33],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_08eba0ed72564d9c859ea666c24ff4e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9517fb7bc88e417bbd330bdbc27cd73f = $(`<div id="html_9517fb7bc88e417bbd330bdbc27cd73f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal El Cangrejo Mastatal de Puriscal; along road between Puriscal ad Quepos; forest patches along Río Negro at base of Cerro El Cangrejo. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1988-07-22 00:00:00+00:00 <strong>Recolectores:</strong> B. E. Hammel, N. Zamora, M. H. Grayum & M. Chavarría <strong>Identificadores:</strong> Dorr, L. J., (BOT), Smithsonian Institution - National Museum of Natural History (UNITED STATES)</div>`)[0];
+            popup_08eba0ed72564d9c859ea666c24ff4e8.setContent(html_9517fb7bc88e417bbd330bdbc27cd73f);
+        
+
+        marker_fe0d5b2f082d4afbb1a0d5c4e2e1430c.bindPopup(popup_08eba0ed72564d9c859ea666c24ff4e8)
+        ;
+
+        
+    
+    
+            var marker_b6b13ea40c1c4e46abce42ba709fc13b = L.marker(
+                [9.6997, -84.3844],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_1857ec2c69d24ec9963f3063b17ea017 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b44743645f742d49dac614ee4e24e21 = $(`<div id="html_6b44743645f742d49dac614ee4e24e21" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Z. P. La Cangreja. Santa Rosa de Puriscal. Bosque primario en las faldas de Fila La Cangreja <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1992-08-27 00:00:00+00:00 <strong>Recolectores:</strong> J. Morales <strong>Identificadores:</strong> Dorr, L. J., (BOT), Smithsonian Institution - National Museum of Natural History (UNITED STATES)</div>`)[0];
+            popup_1857ec2c69d24ec9963f3063b17ea017.setContent(html_6b44743645f742d49dac614ee4e24e21);
+        
+
+        marker_b6b13ea40c1c4e46abce42ba709fc13b.bindPopup(popup_1857ec2c69d24ec9963f3063b17ea017)
+        ;
+
+        
+    
+    
+            var marker_a812062725c1404c86b88d162f02bea0 = L.marker(
+                [9.245, -82.383333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_a9cf94b697474248bd9a536894a9ad29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea5fe822409449b085a29ab9fcda4111 = $(`<div id="html_ea5fe822409449b085a29ab9fcda4111" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Water Valley, vicinity of Chiriquí Lagoon <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1940-11-21 00:00:00+00:00 <strong>Recolectores:</strong> H. von Wedel <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a9cf94b697474248bd9a536894a9ad29.setContent(html_ea5fe822409449b085a29ab9fcda4111);
+        
+
+        marker_a812062725c1404c86b88d162f02bea0.bindPopup(popup_a9cf94b697474248bd9a536894a9ad29)
+        ;
+
+        
+    
+    
+            var marker_b8143117fdbd49dd9ef1bbea6d957bed = L.marker(
+                [9.25, -79.0],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_e3f47b644dd246ca9c477307fb527047 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e34cbc299d54b31a25d9b6421ede29c = $(`<div id="html_3e34cbc299d54b31a25d9b6421ede29c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llano-Carti road, 9 miles north de highway; along divide trail west of road. <strong>Elevación:</strong> 275.0 m  <strong>Fecha:</strong> 1988-02-12 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> William Meijer</div>`)[0];
+            popup_e3f47b644dd246ca9c477307fb527047.setContent(html_3e34cbc299d54b31a25d9b6421ede29c);
+        
+
+        marker_b8143117fdbd49dd9ef1bbea6d957bed.bindPopup(popup_e3f47b644dd246ca9c477307fb527047)
+        ;
+
+        
+    
+    
+            var marker_eec89f6d2cca4ab5ae2915dc3bc5f8e3 = L.marker(
+                [9.35, -78.966667],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_035cbd562ec74f8e97f3d5f1aa09270c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de20f7c2dd5f4f259486b473897a7cff = $(`<div id="html_de20f7c2dd5f4f259486b473897a7cff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Llano-Cartí road, near Nusagandi, along Sendero Nusagandi; c. 11 road-miles from Pan-American Highway. [Coordinates on original label: 9º15'N 079º00'W] <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1988-07-12 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_035cbd562ec74f8e97f3d5f1aa09270c.setContent(html_de20f7c2dd5f4f259486b473897a7cff);
+        
+
+        marker_eec89f6d2cca4ab5ae2915dc3bc5f8e3.bindPopup(popup_035cbd562ec74f8e97f3d5f1aa09270c)
+        ;
+
+        
+    
+    
+            var marker_0126012f824e4b2590e4ffde025794bf = L.marker(
+                [9.383333, -78.85],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_36fc7229175949559d42886f15986349 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec463125269e40c7b1bc6b74f7180e7a = $(`<div id="html_ec463125269e40c7b1bc6b74f7180e7a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Trail from Río Esadi to Cerro Banega. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 1985-12-21 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Heraclio Herrera <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_36fc7229175949559d42886f15986349.setContent(html_ec463125269e40c7b1bc6b74f7180e7a);
+        
+
+        marker_0126012f824e4b2590e4ffde025794bf.bindPopup(popup_36fc7229175949559d42886f15986349)
+        ;
+
+        
+    
+    
+            var marker_c1cf868e4de045e8b76b7f122626d3c0 = L.marker(
+                [9.333333, -78.983333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_86b47308d33a44909514e47003b35108 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3826bd8807ef41aca09fd7466b33e3f0 = $(`<div id="html_3826bd8807ef41aca09fd7466b33e3f0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Nusagandi, summit of El Llano-Cartí Road, along the first stretch of the Trocha S of camp [Coordinates on original label: 09º19'N, 78º15'W] <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1984-08-10 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Balbino González <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_86b47308d33a44909514e47003b35108.setContent(html_3826bd8807ef41aca09fd7466b33e3f0);
+        
+
+        marker_c1cf868e4de045e8b76b7f122626d3c0.bindPopup(popup_86b47308d33a44909514e47003b35108)
+        ;
+
+        
+    
+    
+            var marker_d034ac34f2904c869c84b9a634b6cace = L.marker(
+                [9.333333, -78.966667],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_e46e2a9088f444c79be6109246b7fdd1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa886ce8cfb34a38bb4ba3638f1eaf8f = $(`<div id="html_aa886ce8cfb34a38bb4ba3638f1eaf8f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Llano-Cartí Rd. 19.1 km from Interamerican Hwy. [Coordinates on original label: 9º19'N, 78º55'W]. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1985-02-12 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|David Cavagnaro|J. Herrera|Susan Charnley <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_e46e2a9088f444c79be6109246b7fdd1.setContent(html_aa886ce8cfb34a38bb4ba3638f1eaf8f);
+        
+
+        marker_d034ac34f2904c869c84b9a634b6cace.bindPopup(popup_e46e2a9088f444c79be6109246b7fdd1)
+        ;
+
+        
+    
+    
+            var marker_d3f934426f00490e9e3f0ac10c172472 = L.marker(
+                [9.35, -78.966667],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_deed44eddab24272945844d76d0ca699 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1177a7a381a74e37a69bbb4a007b0f58 = $(`<div id="html_1177a7a381a74e37a69bbb4a007b0f58" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along El Llano-Cartí Road. Forest W of road 13.8 km to 15.8 km from Interamerican Hwy. [Coordinates on original label: 09º19'N, 78º55'W] <strong>Elevación:</strong> 325.0 m  <strong>Fecha:</strong> 1984-08-24 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Ceremiro de León|Mickey Marcus <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_deed44eddab24272945844d76d0ca699.setContent(html_1177a7a381a74e37a69bbb4a007b0f58);
+        
+
+        marker_d3f934426f00490e9e3f0ac10c172472.bindPopup(popup_deed44eddab24272945844d76d0ca699)
+        ;
+
+        
+    
+    
+            var marker_52fdc788a35740a79093eb2fe0660c6a = L.marker(
+                [9.366667, -78.966667],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_09434fd3a0b04d8b853bb56950fbbe04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ef6a4e6e295486ead0738fbada2344e = $(`<div id="html_4ef6a4e6e295486ead0738fbada2344e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Llano-Cartí Road. Km 26.5, along Río Cartí Chico. [Coordinates on original label: 9º19'N, 78º55'W] <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1985-04-13 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Heraclio Herrera|Susan Charnley <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_09434fd3a0b04d8b853bb56950fbbe04.setContent(html_4ef6a4e6e295486ead0738fbada2344e);
+        
+
+        marker_52fdc788a35740a79093eb2fe0660c6a.bindPopup(popup_09434fd3a0b04d8b853bb56950fbbe04)
+        ;
+
+        
+    
+    
+            var marker_400e11c8d239420f8c67ecaecd5ab59e = L.marker(
+                [17.95, -96.55],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_b8e4d86928874bb5ac480b52a8713a4e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e2009d7b2db42309f70afa05ee29962 = $(`<div id="html_9e2009d7b2db42309f70afa05ee29962" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Verde, 8 km al NNE de San Felipe Usila. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1992-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Ibarra Manríquez|Jorge A. Meave|Manuel Rojas Vargas <strong>Identificadores:</strong> G. Ibarra M</div>`)[0];
+            popup_b8e4d86928874bb5ac480b52a8713a4e.setContent(html_9e2009d7b2db42309f70afa05ee29962);
+        
+
+        marker_400e11c8d239420f8c67ecaecd5ab59e.bindPopup(popup_b8e4d86928874bb5ac480b52a8713a4e)
+        ;
+
+        
+    
+    
+            var marker_a6d79562eec1466a8e48d249d9b3e70e = L.marker(
+                [17.941667000000002, -96.508333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_c3c5c093463d482ca234397b45e60e46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43c96b44b69a44f7a9995cddbb247d95 = $(`<div id="html_43c96b44b69a44f7a9995cddbb247d95" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alrededores de Cerro Verde, 7 km al NNE de San Felipe Usila <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-10-01 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Ibarra Manriquez <strong>Identificadores:</strong> Guillermo Ibarra Manriquez</div>`)[0];
+            popup_c3c5c093463d482ca234397b45e60e46.setContent(html_43c96b44b69a44f7a9995cddbb247d95);
+        
+
+        marker_a6d79562eec1466a8e48d249d9b3e70e.bindPopup(popup_c3c5c093463d482ca234397b45e60e46)
+        ;
+
+        
+    
+    
+            var marker_397a3b5431704392b68357a2a356de60 = L.marker(
+                [17.958333, -96.508333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_8f577530d07a4f1588b51f5eaed2fd6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c88a90a968bb459e9cf3d43ceccd28ac = $(`<div id="html_c88a90a968bb459e9cf3d43ceccd28ac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alrededores de Cerro Verde, 8 km al NNE de San Felipe Usila <strong>Elevación:</strong> 325.0 m  <strong>Fecha:</strong> 1992-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Ibarra Manriquez <strong>Identificadores:</strong> Guillermo Ibarra Manriquez</div>`)[0];
+            popup_8f577530d07a4f1588b51f5eaed2fd6f.setContent(html_c88a90a968bb459e9cf3d43ceccd28ac);
+        
+
+        marker_397a3b5431704392b68357a2a356de60.bindPopup(popup_8f577530d07a4f1588b51f5eaed2fd6f)
+        ;
+
+        
+    
+    
+            var marker_f4918e1ceeab4d7398bdfec64274c579 = L.marker(
+                [17.991667, -96.55833299999999],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_e2e02690b74640e4ab072f0a97f3089a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a3f98d4981544cdab7f6f845e62e9c4 = $(`<div id="html_4a3f98d4981544cdab7f6f845e62e9c4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Pico, 1.5 km al N de Peña Blanca <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 1992-07-28 00:00:00+00:00 <strong>Recolectores:</strong> Jorge Meave del Castillo <strong>Identificadores:</strong> Guillermo Ibarra Manriquez</div>`)[0];
+            popup_e2e02690b74640e4ab072f0a97f3089a.setContent(html_4a3f98d4981544cdab7f6f845e62e9c4);
+        
+
+        marker_f4918e1ceeab4d7398bdfec64274c579.bindPopup(popup_e2e02690b74640e4ab072f0a97f3089a)
+        ;
+
+        
+    
+    
+            var marker_1d7643b6dd27420eb35dd977665c44ca = L.marker(
+                [17.958333, -96.508333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_495500f07bc34eb6a81467db05e44044 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a2adcc4fe9341d89b5e8c47267c47b2 = $(`<div id="html_9a2adcc4fe9341d89b5e8c47267c47b2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alrededores de Cerro Verde, 8 km al NNE de San Felipe Usila <strong>Elevación:</strong> 325.0 m  <strong>Fecha:</strong> 1992-09-29 00:00:00+00:00 <strong>Recolectores:</strong> Guillermo Ibarra Manriquez <strong>Identificadores:</strong> Guillermo Ibarra Manriquez</div>`)[0];
+            popup_495500f07bc34eb6a81467db05e44044.setContent(html_9a2adcc4fe9341d89b5e8c47267c47b2);
+        
+
+        marker_1d7643b6dd27420eb35dd977665c44ca.bindPopup(popup_495500f07bc34eb6a81467db05e44044)
+        ;
+
+        
+    
+    
+            var marker_9aab3f6fbacf489088bfcdcfc6d87c2a = L.marker(
+                [17.941667000000002, -96.508333],
+                {}
+            ).addTo(marker_cluster_45c4432ddb1e40209937dfd275987a17);
+        
+    
+        var popup_38174575f4f146d0a1262a7741bd43cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_237b0d791ac14de3bf716aabf203b2ca = $(`<div id="html_237b0d791ac14de3bf716aabf203b2ca" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alrededor del Cerro Verde, 7 km NNE de Usila, Distrito Tuxtepec <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-10-01 00:00:00+00:00 <strong>Recolectores:</strong> NO DISPONIBLE <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_38174575f4f146d0a1262a7741bd43cc.setContent(html_237b0d791ac14de3bf716aabf203b2ca);
+        
+
+        marker_9aab3f6fbacf489088bfcdcfc6d87c2a.bindPopup(popup_38174575f4f146d0a1262a7741bd43cc)
+        ;
+
+        
+    
+    
+            var layer_control_923b54d9fc874c41b78269d77826dba9 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1fcf73f97abf4af4af71aa25c8d58002,
+                    "ESRI World Imagery" : tile_layer_9fbf85b293fd47c186909e3e2e8c2f07,
+                },
+                overlays :  {
+                    "macro_element_45c4432ddb1e40209937dfd275987a17" : marker_cluster_45c4432ddb1e40209937dfd275987a17,
+                },
+            };
+            L.control.layers(
+                layer_control_923b54d9fc874c41b78269d77826dba9.base_layers,
+                layer_control_923b54d9fc874c41b78269d77826dba9.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_4b58c97d3a354c64be09ba8ce852dfde);
+            tile_layer_9fbf85b293fd47c186909e3e2e8c2f07.remove();
+        
+</script>

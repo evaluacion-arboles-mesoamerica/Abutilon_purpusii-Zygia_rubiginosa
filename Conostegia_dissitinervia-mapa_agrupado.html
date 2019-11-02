@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9e1ac937c5d24768a75dcb15cba96c3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9e1ac937c5d24768a75dcb15cba96c3a" ></div>
+        
+</body>
+<script>    
+    
+            var map_9e1ac937c5d24768a75dcb15cba96c3a = L.map(
+                "map_9e1ac937c5d24768a75dcb15cba96c3a",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_9e1ac937c5d24768a75dcb15cba96c3a);
+
+            
+
+        
+    
+            var tile_layer_9d4a0d8a75d745cca915c2c2088a9eba = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9e1ac937c5d24768a75dcb15cba96c3a);
+        
+    
+            var tile_layer_b48d6d549f91440782bfc63912d98f24 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9e1ac937c5d24768a75dcb15cba96c3a);
+        
+    
+            var marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806 = L.markerClusterGroup(
+                {}
+            );
+            map_9e1ac937c5d24768a75dcb15cba96c3a.addLayer(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+            var marker_feee74286c384a6890f8da9eca71d5d8 = L.marker(
+                [8.40574, -83.3421],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_2fddf3a76861434893f7090e92d97f82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b1080338b65f460786f3e6a8f21b3c8e = $(`<div id="html_b1080338b65f460786f3e6a8f21b3c8e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida. Península de Osa. Cerca del Río Piro. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel|Reinaldo Aguilar|Daniel Santamaría <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_2fddf3a76861434893f7090e92d97f82.setContent(html_b1080338b65f460786f3e6a8f21b3c8e);
+        
+
+        marker_feee74286c384a6890f8da9eca71d5d8.bindPopup(popup_2fddf3a76861434893f7090e92d97f82)
+        ;
+
+        
+    
+    
+            var marker_8fb21d3eff674e1d8cef7bb7bb95439c = L.marker(
+                [8.481076, -83.595012],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_f71bfbb9c46a4a15a6d47acb8053a443 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93b5dfa2245c4e1694e025d4b5b2a4f5 = $(`<div id="html_93b5dfa2245c4e1694e025d4b5b2a4f5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Espaveles <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1997-01-16 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f71bfbb9c46a4a15a6d47acb8053a443.setContent(html_93b5dfa2245c4e1694e025d4b5b2a4f5);
+        
+
+        marker_8fb21d3eff674e1d8cef7bb7bb95439c.bindPopup(popup_f71bfbb9c46a4a15a6d47acb8053a443)
+        ;
+
+        
+    
+    
+            var marker_16b5d887b620416c94f14b4c6856f1d9 = L.marker(
+                [8.481076, -83.595012],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_b9bf6c755ea94ae1b0655db97348d0f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72b6eca6f8b14524ab7e258b455d91e1 = $(`<div id="html_72b6eca6f8b14524ab7e258b455d91e1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Espaveles <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1997-01-16 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_b9bf6c755ea94ae1b0655db97348d0f6.setContent(html_72b6eca6f8b14524ab7e258b455d91e1);
+        
+
+        marker_16b5d887b620416c94f14b4c6856f1d9.bindPopup(popup_b9bf6c755ea94ae1b0655db97348d0f6)
+        ;
+
+        
+    
+    
+            var marker_9f7212a1f2da44f99f06f8bb9f0fd5fd = L.marker(
+                [8.481076, -83.595012],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_0ad99d2b68d24310aa9f61f3ea07d8ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1edc67b6b90a4d638a3fa34945b0bda8 = $(`<div id="html_1edc67b6b90a4d638a3fa34945b0bda8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Espaveles <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1997-01-16 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_0ad99d2b68d24310aa9f61f3ea07d8ff.setContent(html_1edc67b6b90a4d638a3fa34945b0bda8);
+        
+
+        marker_9f7212a1f2da44f99f06f8bb9f0fd5fd.bindPopup(popup_0ad99d2b68d24310aa9f61f3ea07d8ff)
+        ;
+
+        
+    
+    
+            var marker_d5620782daeb476485933cf83f88ac54 = L.marker(
+                [8.481076, -83.595012],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_ed19f671d6134f4d89c0ac4680de4cdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89a97bf8e2b14d39b12d5ed1ac61a718 = $(`<div id="html_89a97bf8e2b14d39b12d5ed1ac61a718" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Espaveles <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1997-01-16 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_ed19f671d6134f4d89c0ac4680de4cdb.setContent(html_89a97bf8e2b14d39b12d5ed1ac61a718);
+        
+
+        marker_d5620782daeb476485933cf83f88ac54.bindPopup(popup_ed19f671d6134f4d89c0ac4680de4cdb)
+        ;
+
+        
+    
+    
+            var marker_50348a7a28154909b5f29ea0685dac0a = L.marker(
+                [8.480556, -83.591667],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_c7f6cccf37ad477ea9a31085ce867b9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ae80f13c7f24f8596a1a33110d9e05c = $(`<div id="html_5ae80f13c7f24f8596a1a33110d9e05c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Ollas, sector a 10 msnm <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1994-02-09 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_c7f6cccf37ad477ea9a31085ce867b9a.setContent(html_5ae80f13c7f24f8596a1a33110d9e05c);
+        
+
+        marker_50348a7a28154909b5f29ea0685dac0a.bindPopup(popup_c7f6cccf37ad477ea9a31085ce867b9a)
+        ;
+
+        
+    
+    
+            var marker_5cfc88d9f4544d96be5653f312cdda1c = L.marker(
+                [8.7, -83.55],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_8c8f10a5f5d44ac49d89b72393c1701b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0e2ab8678e5443d81172fb33b3314ec = $(`<div id="html_b0e2ab8678e5443d81172fb33b3314ec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila before Rancho Quemado, near Rincon. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-01-11 00:00:00+00:00 <strong>Recolectores:</strong> Alwyn Howard Gentry <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_8c8f10a5f5d44ac49d89b72393c1701b.setContent(html_b0e2ab8678e5443d81172fb33b3314ec);
+        
+
+        marker_5cfc88d9f4544d96be5653f312cdda1c.bindPopup(popup_8c8f10a5f5d44ac49d89b72393c1701b)
+        ;
+
+        
+    
+    
+            var marker_d8501898a9a6406b996f08be45e9deeb = L.marker(
+                [8.565278, -83.388889],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_ef77a7fdb61f4322867eb371131d372a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a325b91159745f59959c183dd239028 = $(`<div id="html_0a325b91159745f59959c183dd239028" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puerto Jimenez.  Agujas. <strong>Elevación:</strong> 5.5 m  <strong>Fecha:</strong> 1995-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_ef77a7fdb61f4322867eb371131d372a.setContent(html_0a325b91159745f59959c183dd239028);
+        
+
+        marker_d8501898a9a6406b996f08be45e9deeb.bindPopup(popup_ef77a7fdb61f4322867eb371131d372a)
+        ;
+
+        
+    
+    
+            var marker_cab3df93bafc4318953e95727a98168d = L.marker(
+                [9.705556, -84.58694399999999],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_2b79c74b508341e7b162ed5003729d73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66b3cd0d75774193b4860cc6c821393f = $(`<div id="html_66b3cd0d75774193b4860cc6c821393f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrubares, San Juan de Mata, Lajas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 2001-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Armando Estrada; Armando Ruiz <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_2b79c74b508341e7b162ed5003729d73.setContent(html_66b3cd0d75774193b4860cc6c821393f);
+        
+
+        marker_cab3df93bafc4318953e95727a98168d.bindPopup(popup_2b79c74b508341e7b162ed5003729d73)
+        ;
+
+        
+    
+    
+            var marker_19dbd4e83cad48758ff7c3ecc170a9d3 = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_d147eec3851f4c93b37bea0112ebfe5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01d16be419ed4f62913ae6502d74c2c6 = $(`<div id="html_01d16be419ed4f62913ae6502d74c2c6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Río Piro, Estación Tuva <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar ; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_d147eec3851f4c93b37bea0112ebfe5f.setContent(html_01d16be419ed4f62913ae6502d74c2c6);
+        
+
+        marker_19dbd4e83cad48758ff7c3ecc170a9d3.bindPopup(popup_d147eec3851f4c93b37bea0112ebfe5f)
+        ;
+
+        
+    
+    
+            var marker_9d709f983a5547b28f3f26a1375404e9 = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_bc91f2c2c79647139220292d98519683 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_977ea26a04fb4eadb3e6d2cc2bf05514 = $(`<div id="html_977ea26a04fb4eadb3e6d2cc2bf05514" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Río Piro, Estación Tuva <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar ; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_bc91f2c2c79647139220292d98519683.setContent(html_977ea26a04fb4eadb3e6d2cc2bf05514);
+        
+
+        marker_9d709f983a5547b28f3f26a1375404e9.bindPopup(popup_bc91f2c2c79647139220292d98519683)
+        ;
+
+        
+    
+    
+            var marker_6f45df55930a490295a2bfe683190475 = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_823ed6fd344a489a9165daab17ce3cb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9ddd857436b419a9c11fa821623cde2 = $(`<div id="html_f9ddd857436b419a9c11fa821623cde2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Río Piro, Estación Tuva <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar ; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_823ed6fd344a489a9165daab17ce3cb8.setContent(html_f9ddd857436b419a9c11fa821623cde2);
+        
+
+        marker_6f45df55930a490295a2bfe683190475.bindPopup(popup_823ed6fd344a489a9165daab17ce3cb8)
+        ;
+
+        
+    
+    
+            var marker_229038c897fa46bd9340dfc017106a3b = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_fdca377029b7433e8594e4f78c4cf2d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_328b57aa7202454eb7ef0dbf8a4768f6 = $(`<div id="html_328b57aa7202454eb7ef0dbf8a4768f6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Río Piro, Estación Tuva <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar ; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_fdca377029b7433e8594e4f78c4cf2d2.setContent(html_328b57aa7202454eb7ef0dbf8a4768f6);
+        
+
+        marker_229038c897fa46bd9340dfc017106a3b.bindPopup(popup_fdca377029b7433e8594e4f78c4cf2d2)
+        ;
+
+        
+    
+    
+            var marker_650a09b7b4794b639c750e9540998c75 = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_f8611a18e07d4de78de0fa120fcaf8b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ce5541631f8441489127d811eea28aa = $(`<div id="html_6ce5541631f8441489127d811eea28aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Río Piro, Estación Tuva <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar ; Daniel Santamaría <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f8611a18e07d4de78de0fa120fcaf8b9.setContent(html_6ce5541631f8441489127d811eea28aa);
+        
+
+        marker_650a09b7b4794b639c750e9540998c75.bindPopup(popup_f8611a18e07d4de78de0fa120fcaf8b9)
+        ;
+
+        
+    
+    
+            var marker_017ef04f2b0f43eaa0e1caf6b76a40d8 = L.marker(
+                [8.623611, -83.476389],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_0512d58846db48d7aae05e658744b9cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74ee80d3851f4d2d953d7918ece7880a = $(`<div id="html_74ee80d3851f4d2d953d7918ece7880a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa. Rincón. Guadalupe La Tarde. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 2009-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_0512d58846db48d7aae05e658744b9cf.setContent(html_74ee80d3851f4d2d953d7918ece7880a);
+        
+
+        marker_017ef04f2b0f43eaa0e1caf6b76a40d8.bindPopup(popup_0512d58846db48d7aae05e658744b9cf)
+        ;
+
+        
+    
+    
+            var marker_3fc532cfb6f34ea88f995fcb3f37c0df = L.marker(
+                [8.623611, -83.476389],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_35d192765391447d8887fdb7941ee11b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8b456b81c514da7b11b03fb46cd2fc6 = $(`<div id="html_a8b456b81c514da7b11b03fb46cd2fc6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa. Rincón. Guadalupe La Tarde. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 2009-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_35d192765391447d8887fdb7941ee11b.setContent(html_a8b456b81c514da7b11b03fb46cd2fc6);
+        
+
+        marker_3fc532cfb6f34ea88f995fcb3f37c0df.bindPopup(popup_35d192765391447d8887fdb7941ee11b)
+        ;
+
+        
+    
+    
+            var marker_9acedc7e2e874498ba9186540a3387a0 = L.marker(
+                [8.623611, -83.476389],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_a994996fba164ee1b81e912a5227fef3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f73d4a67d87546088128428d55accf8a = $(`<div id="html_f73d4a67d87546088128428d55accf8a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa. Rincón. Guadalupe La Tarde. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 2009-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Reinaldo Aguilar <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_a994996fba164ee1b81e912a5227fef3.setContent(html_f73d4a67d87546088128428d55accf8a);
+        
+
+        marker_9acedc7e2e874498ba9186540a3387a0.bindPopup(popup_a994996fba164ee1b81e912a5227fef3)
+        ;
+
+        
+    
+    
+            var marker_1697e8319cde48229aab6d4d7887992d = L.marker(
+                [8.681806, -83.57458299999999],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_207ec9c0334645829079187c52251b3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a201a9877e34f41b3f0a334aa8283a5 = $(`<div id="html_0a201a9877e34f41b3f0a334aa8283a5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa, Rancho Quemado, bosque alrededor del puesto operativo, sendero al Cerro Brujo. <strong>Elevación:</strong> 343.0 m  <strong>Fecha:</strong> 2013-07-30 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_207ec9c0334645829079187c52251b3c.setContent(html_0a201a9877e34f41b3f0a334aa8283a5);
+        
+
+        marker_1697e8319cde48229aab6d4d7887992d.bindPopup(popup_207ec9c0334645829079187c52251b3c)
+        ;
+
+        
+    
+    
+            var marker_7c422a848f074c14883d3ec40a19c982 = L.marker(
+                [8.681806, -83.57458299999999],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_d09adf5a10d64ce889ff5cb874198037 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bc50ab553af405bb4298c73ee4639ed = $(`<div id="html_2bc50ab553af405bb4298c73ee4639ed" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa, Rancho Quemado, bosque alrededor del puesto operativo, sendero al Cerro Brujo. <strong>Elevación:</strong> 343.0 m  <strong>Fecha:</strong> 2013-07-30 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_d09adf5a10d64ce889ff5cb874198037.setContent(html_2bc50ab553af405bb4298c73ee4639ed);
+        
+
+        marker_7c422a848f074c14883d3ec40a19c982.bindPopup(popup_d09adf5a10d64ce889ff5cb874198037)
+        ;
+
+        
+    
+    
+            var marker_804b5fc51433468090964c99c47d8f24 = L.marker(
+                [8.681806, -83.57458299999999],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_98618461c0824d7985ea5b358959db2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca7a92bcdb4e4865a93f2c545f74b39a = $(`<div id="html_ca7a92bcdb4e4865a93f2c545f74b39a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa, Rancho Quemado, bosque alrededor del puesto operativo, sendero al Cerro Brujo. <strong>Elevación:</strong> 343.0 m  <strong>Fecha:</strong> 2013-07-30 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar; Nelson A. Zamora Villalobos ; Soo-Yong Kim ; Guillermo Villalobos ; Alejandro Azofeifa Zúñiga ; D. Solorzano <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_98618461c0824d7985ea5b358959db2c.setContent(html_ca7a92bcdb4e4865a93f2c545f74b39a);
+        
+
+        marker_804b5fc51433468090964c99c47d8f24.bindPopup(popup_98618461c0824d7985ea5b358959db2c)
+        ;
+
+        
+    
+    
+            var marker_3cc4bbe2b4414cbe89b679e4bb0ce7fc = L.marker(
+                [8.834583, -83.0535],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_ec267da790b24beb809fd243edcd2178 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42558d7c80774e318bbd0ac178febc8f = $(`<div id="html_42558d7c80774e318bbd0ac178febc8f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> -</div>`)[0];
+            popup_ec267da790b24beb809fd243edcd2178.setContent(html_42558d7c80774e318bbd0ac178febc8f);
+        
+
+        marker_3cc4bbe2b4414cbe89b679e4bb0ce7fc.bindPopup(popup_ec267da790b24beb809fd243edcd2178)
+        ;
+
+        
+    
+    
+            var marker_426617bb174e4c49bffd660164f09e71 = L.marker(
+                [8.466660000000001, -83.58333],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_3742151b202d4e65affeaa9149c74f83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba834994d3d048b09482980e46c4012c = $(`<div id="html_ba834994d3d048b09482980e46c4012c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Corcovado. Forest on ridges above Río Claro. Tropical wet forest. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Sandy Knapp|Jim Mallet <strong>Identificadores:</strong> D. Santamaria</div>`)[0];
+            popup_3742151b202d4e65affeaa9149c74f83.setContent(html_ba834994d3d048b09482980e46c4012c);
+        
+
+        marker_426617bb174e4c49bffd660164f09e71.bindPopup(popup_3742151b202d4e65affeaa9149c74f83)
+        ;
+
+        
+    
+    
+            var marker_1c194627da1c48efb93925d6b3128655 = L.marker(
+                [9.70555, -84.58694],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_d04ce30da42f40fe93dcb50939373c6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6b76314a6a448b8825c4efcc514561d = $(`<div id="html_d6b76314a6a448b8825c4efcc514561d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Juan De Mata. Area no protegida. Lajas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 2001-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Armando Estrada|et al. <strong>Identificadores:</strong> A. Estrada, May</div>`)[0];
+            popup_d04ce30da42f40fe93dcb50939373c6c.setContent(html_d6b76314a6a448b8825c4efcc514561d);
+        
+
+        marker_1c194627da1c48efb93925d6b3128655.bindPopup(popup_d04ce30da42f40fe93dcb50939373c6c)
+        ;
+
+        
+    
+    
+            var marker_2194ba44ca4f4d3d975c9d02d939371d = L.marker(
+                [8.7, -83.51666],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_57af3f465851436ca6b50a83bc1b2463 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51d287b6ec07438b922f6433b2a32f0e = $(`<div id="html_51d287b6ec07438b922f6433b2a32f0e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along abandoned "high road" W of Rincón de Osa. <strong>Elevación:</strong> 395.0 m  <strong>Fecha:</strong> 1985-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat|Michael H. Grayum <strong>Identificadores:</strong> D. Santamaria</div>`)[0];
+            popup_57af3f465851436ca6b50a83bc1b2463.setContent(html_51d287b6ec07438b922f6433b2a32f0e);
+        
+
+        marker_2194ba44ca4f4d3d975c9d02d939371d.bindPopup(popup_57af3f465851436ca6b50a83bc1b2463)
+        ;
+
+        
+    
+    
+            var marker_0e88f3433cc7476184a155c58536fdfb = L.marker(
+                [8.7, -83.55],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_52eef8379c0d4f399af2568b0b920996 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cde164b5be24493bae12123f0c65d64d = $(`<div id="html_cde164b5be24493bae12123f0c65d64d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila before Rancho Quemada, near Rincon, Osa Peninsula.  Transect 3. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-01-11 00:00:00+00:00 <strong>Recolectores:</strong> Alwyn H. Gentry|Rosa Ortiz|Irene Shonle|Jason C. Bradford|P. Anderson <strong>Identificadores:</strong> R. Kriebel et al.</div>`)[0];
+            popup_52eef8379c0d4f399af2568b0b920996.setContent(html_cde164b5be24493bae12123f0c65d64d);
+        
+
+        marker_0e88f3433cc7476184a155c58536fdfb.bindPopup(popup_52eef8379c0d4f399af2568b0b920996)
+        ;
+
+        
+    
+    
+            var marker_a4fc52030d0d4b558af76c774b087cdb = L.marker(
+                [8.623611, -83.476389],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_059ee5a41d11443b83cddd66e19075e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac73e9ebda1248569a6be25d0eb79b2e = $(`<div id="html_ac73e9ebda1248569a6be25d0eb79b2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Guadalupe La Tarde. Acompañan: Nilo Aguilar y Megan Houseberg. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 2009-01-04 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_059ee5a41d11443b83cddd66e19075e4.setContent(html_ac73e9ebda1248569a6be25d0eb79b2e);
+        
+
+        marker_a4fc52030d0d4b558af76c774b087cdb.bindPopup(popup_059ee5a41d11443b83cddd66e19075e4)
+        ;
+
+        
+    
+    
+            var marker_c0adaa2bf1954b5b9ff5b29ccb0b3185 = L.marker(
+                [8.46, -83.58],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_7bd8b39abdc34fc195b535295e635af8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5efc98b9939e4233b1f41751774eed22 = $(`<div id="html_5efc98b9939e4233b1f41751774eed22" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Sirena. Sendero Espaveles. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1997-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> R. Kriebel et al.</div>`)[0];
+            popup_7bd8b39abdc34fc195b535295e635af8.setContent(html_5efc98b9939e4233b1f41751774eed22);
+        
+
+        marker_c0adaa2bf1954b5b9ff5b29ccb0b3185.bindPopup(popup_7bd8b39abdc34fc195b535295e635af8)
+        ;
+
+        
+    
+    
+            var marker_7f3f6a6bddb642888c097ac83c517519 = L.marker(
+                [8.46, -83.58],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_f76e1e1bb7c34e34805cb77108b23c8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f100e615b3d4356a6ab9144e3b977c1 = $(`<div id="html_5f100e615b3d4356a6ab9144e3b977c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Sirena. Sendero Ollas. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1994-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> R. Kriebel et al.</div>`)[0];
+            popup_f76e1e1bb7c34e34805cb77108b23c8f.setContent(html_5f100e615b3d4356a6ab9144e3b977c1);
+        
+
+        marker_7f3f6a6bddb642888c097ac83c517519.bindPopup(popup_f76e1e1bb7c34e34805cb77108b23c8f)
+        ;
+
+        
+    
+    
+            var marker_942a4175e0274340a6d334c6da0889d7 = L.marker(
+                [8.55, -83.38],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_af441ee67cba43a9b1f532382fd29af0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07459642d5e14b9aaa7c9481a3edef04 = $(`<div id="html_07459642d5e14b9aaa7c9481a3edef04" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puerto Jimenez. Agujas. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1995-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> R. Kriebel et al.</div>`)[0];
+            popup_af441ee67cba43a9b1f532382fd29af0.setContent(html_07459642d5e14b9aaa7c9481a3edef04);
+        
+
+        marker_942a4175e0274340a6d334c6da0889d7.bindPopup(popup_af441ee67cba43a9b1f532382fd29af0)
+        ;
+
+        
+    
+    
+            var marker_6c8b1f760e9642c88fd708af4f62b046 = L.marker(
+                [8.3, -82.96666],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_2fca1e38353e4729a90a43ea0b93af29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01118835b195411d82d1c73bbe5b3825 = $(`<div id="html_01118835b195411d82d1c73bbe5b3825" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Burica Peninsula. Primary forest; San Bartolo Limite, 12 mi. (20 km) west of Puerto Armuelles. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1973-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Ronald L. Liesner <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_2fca1e38353e4729a90a43ea0b93af29.setContent(html_01118835b195411d82d1c73bbe5b3825);
+        
+
+        marker_6c8b1f760e9642c88fd708af4f62b046.bindPopup(popup_2fca1e38353e4729a90a43ea0b93af29)
+        ;
+
+        
+    
+    
+            var marker_2410da6d91ae457fbeb496e706ffb088 = L.marker(
+                [9.705556, -84.58694399999999],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_40fd854a6c724259bc1d5e1df548068b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12a7979f27c14326bd3e797b52310826 = $(`<div id="html_12a7979f27c14326bd3e797b52310826" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Turrubares, San Juan De Mata. Area no protegida. Lajas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 2001-11-01 00:00:00+00:00 <strong>Recolectores:</strong> Estrada, Aramando; Chacón, R.; Ruis, A.; others <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_40fd854a6c724259bc1d5e1df548068b.setContent(html_12a7979f27c14326bd3e797b52310826);
+        
+
+        marker_2410da6d91ae457fbeb496e706ffb088.bindPopup(popup_40fd854a6c724259bc1d5e1df548068b)
+        ;
+
+        
+    
+    
+            var marker_6d3b86e225964383b28e5f86a4f6e090 = L.marker(
+                [8.565278, -83.388889],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_7c689db788a04a3c8f8d74d6b2ee1b08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c67a9b8680542b69d2129fc59cfdb8e = $(`<div id="html_2c67a9b8680542b69d2129fc59cfdb8e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de GOLFITO. Península de Osa. Puerto Jiménez. Agujas. <strong>Elevación:</strong> 5.5 m  <strong>Fecha:</strong> 1995-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo; Azofeifa, José; Azofeifa, Juan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_7c689db788a04a3c8f8d74d6b2ee1b08.setContent(html_2c67a9b8680542b69d2129fc59cfdb8e);
+        
+
+        marker_6d3b86e225964383b28e5f86a4f6e090.bindPopup(popup_7c689db788a04a3c8f8d74d6b2ee1b08)
+        ;
+
+        
+    
+    
+            var marker_23c9962b842e4545b0976e63626a810e = L.marker(
+                [8.7, -83.516667],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_4226338e01a0469db99077fbaec35fd3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9adedc668604085a3a73c65f394823e = $(`<div id="html_d9adedc668604085a3a73c65f394823e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along abandoned "high road" W of Rincón de Osa <strong>Elevación:</strong> 395.0 m  <strong>Fecha:</strong> 1985-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Croat, T. B.; Grayum, M. H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4226338e01a0469db99077fbaec35fd3.setContent(html_d9adedc668604085a3a73c65f394823e);
+        
+
+        marker_23c9962b842e4545b0976e63626a810e.bindPopup(popup_4226338e01a0469db99077fbaec35fd3)
+        ;
+
+        
+    
+    
+            var marker_e32b8bea33af45b1b82fac576d8d566f = L.marker(
+                [8.7, -83.55],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_dada3c26a5654c35a9f38e54cfaedb2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_358892dad43b44598e6bf38a01a25a3c = $(`<div id="html_358892dad43b44598e6bf38a01a25a3c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila before Rancho Quemada, near Rincon, Osa Peninsula. Transect 3 <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Gentry, A.; Ortiz, R.; Shonle, I.; Bradford, J.; Anderson, P. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_dada3c26a5654c35a9f38e54cfaedb2e.setContent(html_358892dad43b44598e6bf38a01a25a3c);
+        
+
+        marker_e32b8bea33af45b1b82fac576d8d566f.bindPopup(popup_dada3c26a5654c35a9f38e54cfaedb2e)
+        ;
+
+        
+    
+    
+            var marker_421cbdd174dc4c78b404365e8164f482 = L.marker(
+                [8.480556, -83.591667],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_80a2299686674fe3b3c9480e84d6efab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5facac80073347f5af70f7110dd0f988 = $(`<div id="html_5facac80073347f5af70f7110dd0f988" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N.  Corcovado. Península de Osa. Estación Sirena. Sendero Ollas <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1994-02-01 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_80a2299686674fe3b3c9480e84d6efab.setContent(html_5facac80073347f5af70f7110dd0f988);
+        
+
+        marker_421cbdd174dc4c78b404365e8164f482.bindPopup(popup_80a2299686674fe3b3c9480e84d6efab)
+        ;
+
+        
+    
+    
+            var marker_a4f5a761d6c24d4092199e35f4ddef92 = L.marker(
+                [8.40574, -83.342098],
+                {}
+            ).addTo(marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806);
+        
+    
+        var popup_22fbdd3d3157434e8c74684bdf0341ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_734cccf4b1644a2f87381edee38d8aab = $(`<div id="html_734cccf4b1644a2f87381edee38d8aab" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerca del Río Piro. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2004-12-29 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_22fbdd3d3157434e8c74684bdf0341ed.setContent(html_734cccf4b1644a2f87381edee38d8aab);
+        
+
+        marker_a4f5a761d6c24d4092199e35f4ddef92.bindPopup(popup_22fbdd3d3157434e8c74684bdf0341ed)
+        ;
+
+        
+    
+    
+            var layer_control_8776cd96afbf4ff9b5ed3993611a1730 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9d4a0d8a75d745cca915c2c2088a9eba,
+                    "ESRI World Imagery" : tile_layer_b48d6d549f91440782bfc63912d98f24,
+                },
+                overlays :  {
+                    "macro_element_5d7d7f9bfdc74075945b7152c8c4f806" : marker_cluster_5d7d7f9bfdc74075945b7152c8c4f806,
+                },
+            };
+            L.control.layers(
+                layer_control_8776cd96afbf4ff9b5ed3993611a1730.base_layers,
+                layer_control_8776cd96afbf4ff9b5ed3993611a1730.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_9e1ac937c5d24768a75dcb15cba96c3a);
+            tile_layer_b48d6d549f91440782bfc63912d98f24.remove();
+        
+</script>

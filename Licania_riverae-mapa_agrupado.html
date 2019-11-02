@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bf92c154801b43c7997de5ebf8c319d6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bf92c154801b43c7997de5ebf8c319d6" ></div>
+        
+</body>
+<script>    
+    
+            var map_bf92c154801b43c7997de5ebf8c319d6 = L.map(
+                "map_bf92c154801b43c7997de5ebf8c319d6",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_bf92c154801b43c7997de5ebf8c319d6);
+
+            
+
+        
+    
+            var tile_layer_47d1f1daace6478a94172772e446597a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bf92c154801b43c7997de5ebf8c319d6);
+        
+    
+            var tile_layer_73d620d2201e4e85b86cb69e458d921d = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bf92c154801b43c7997de5ebf8c319d6);
+        
+    
+            var marker_cluster_7715a9b82e594f7cb0462766cb86dc68 = L.markerClusterGroup(
+                {}
+            );
+            map_bf92c154801b43c7997de5ebf8c319d6.addLayer(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+            var marker_0d40a26707a24ea6bede30b310967bc8 = L.marker(
+                [10.8, -85.31],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_f4285b3179bf4b4a98f3e104c88db58d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9251119a68f442a4a7e78476e2fb6c74 = $(`<div id="html_9251119a68f442a4a7e78476e2fb6c74" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Hacienda Santa María, de la planta hidroeléctrica, 0.5 km sobre el canal subiendo hacia el oeste en el primer puente de dicho canal <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1987-08-16 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_f4285b3179bf4b4a98f3e104c88db58d.setContent(html_9251119a68f442a4a7e78476e2fb6c74);
+        
+
+        marker_0d40a26707a24ea6bede30b310967bc8.bindPopup(popup_f4285b3179bf4b4a98f3e104c88db58d)
+        ;
+
+        
+    
+    
+            var marker_f88e8386597a4e46ae6cc43073dbc07b = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_19a3ff6d1e1d457288c869128beea418 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d8412b6c6214e0d811ea4e6c9b2e106 = $(`<div id="html_3d8412b6c6214e0d811ea4e6c9b2e106" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste Estación Mengo, Volcán Cacao, Bosque primario <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-07-16 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Rivera, Gerardo</div>`)[0];
+            popup_19a3ff6d1e1d457288c869128beea418.setContent(html_3d8412b6c6214e0d811ea4e6c9b2e106);
+        
+
+        marker_f88e8386597a4e46ae6cc43073dbc07b.bindPopup(popup_19a3ff6d1e1d457288c869128beea418)
+        ;
+
+        
+    
+    
+            var marker_59483f5263c14adf9bfcd0a5d7fd67f2 = L.marker(
+                [10.73, -85.28],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_1763cd11f88e4ede94ce592ccbbc924e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b283c1ccbbb84adaa62d2f528befbde7 = $(`<div id="html_b283c1ccbbb84adaa62d2f528befbde7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Rincón de la Vieja Cordillera de Guanacaste. San Jorge. Alrededores y a 1 km de la entrada a Quebrada El Salto. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> Rivera, Gerardo <strong>Identificadores:</strong> G. Prance</div>`)[0];
+            popup_1763cd11f88e4ede94ce592ccbbc924e.setContent(html_b283c1ccbbb84adaa62d2f528befbde7);
+        
+
+        marker_59483f5263c14adf9bfcd0a5d7fd67f2.bindPopup(popup_1763cd11f88e4ede94ce592ccbbc924e)
+        ;
+
+        
+    
+    
+            var marker_44d2c2e85e294b71a7b03c5da712d912 = L.marker(
+                [11.0, -85.55],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_303a5e94ed824d4a9dbaa3f3f00847e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b901558e9f0a46cd88ec0ccc2bf6e97b = $(`<div id="html_b901558e9f0a46cd88ec0ccc2bf6e97b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste Cerro El Hacha.Camino a Santa Cecilia <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Espinoza, Roberto <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_303a5e94ed824d4a9dbaa3f3f00847e3.setContent(html_b901558e9f0a46cd88ec0ccc2bf6e97b);
+        
+
+        marker_44d2c2e85e294b71a7b03c5da712d912.bindPopup(popup_303a5e94ed824d4a9dbaa3f3f00847e3)
+        ;
+
+        
+    
+    
+            var marker_0ccbab2aae1b4031ab3668d40e0353c2 = L.marker(
+                [10.77, -85.31],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_51170de195414a04ba066f0e49bba9d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45dd51667da44de4886671df0bb17c7f = $(`<div id="html_45dd51667da44de4886671df0bb17c7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Sendero a las aguas termales, despúes el paso por Río Negro <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1991-06-02 00:00:00+00:00 <strong>Recolectores:</strong> Rivera, Gerardo <strong>Identificadores:</strong> Prance, G.</div>`)[0];
+            popup_51170de195414a04ba066f0e49bba9d3.setContent(html_45dd51667da44de4886671df0bb17c7f);
+        
+
+        marker_0ccbab2aae1b4031ab3668d40e0353c2.bindPopup(popup_51170de195414a04ba066f0e49bba9d3)
+        ;
+
+        
+    
+    
+            var marker_00e9260b17124f1289627d6330144bd2 = L.marker(
+                [10.92, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_021521a28f984500b85db809b4e59957 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_769c0f12f6fa4fd084a7d6795939393d = $(`<div id="html_769c0f12f6fa4fd084a7d6795939393d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste Estación Cacao. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Chávez, Carlos <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_021521a28f984500b85db809b4e59957.setContent(html_769c0f12f6fa4fd084a7d6795939393d);
+        
+
+        marker_00e9260b17124f1289627d6330144bd2.bindPopup(popup_021521a28f984500b85db809b4e59957)
+        ;
+
+        
+    
+    
+            var marker_dd8088ca9b364b7cbf1e8814b2822490 = L.marker(
+                [10.72, -85.35],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_700af38eb4524e10b5520b183920d4c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e7b3929a3134231916445619aa25e12 = $(`<div id="html_2e7b3929a3134231916445619aa25e12" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Sector El Escabio. Carrtera que va hacia Liberia <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1991-07-29 00:00:00+00:00 <strong>Recolectores:</strong> Rivera, Gerardo <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_700af38eb4524e10b5520b183920d4c7.setContent(html_2e7b3929a3134231916445619aa25e12);
+        
+
+        marker_dd8088ca9b364b7cbf1e8814b2822490.bindPopup(popup_700af38eb4524e10b5520b183920d4c7)
+        ;
+
+        
+    
+    
+            var marker_1a568108e01d465dbd464ff030b696f9 = L.marker(
+                [10.76, -85.29],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_53a38ed2fdd24159938bee978107d9c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_062675caecd546bbaa512f49be11b8fd = $(`<div id="html_062675caecd546bbaa512f49be11b8fd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Sendero a la toma de agua, a 3 km de la estación <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1990-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Rivera, Gerardo <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_53a38ed2fdd24159938bee978107d9c6.setContent(html_062675caecd546bbaa512f49be11b8fd);
+        
+
+        marker_1a568108e01d465dbd464ff030b696f9.bindPopup(popup_53a38ed2fdd24159938bee978107d9c6)
+        ;
+
+        
+    
+    
+            var marker_faf7f7607a394eb6b8d4eea0a7cb091e = L.marker(
+                [10.92, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_9f3082d9e1c94eafb09347b3de85cb20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9cdb519d453447f90bca2c737357009 = $(`<div id="html_c9cdb519d453447f90bca2c737357009" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste Ceunca del Tempisque. Estación Cacao; sendero a la Cima. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Rodríguez, Alexánder <strong>Identificadores:</strong> Rodríguez, Alexánder</div>`)[0];
+            popup_9f3082d9e1c94eafb09347b3de85cb20.setContent(html_c9cdb519d453447f90bca2c737357009);
+        
+
+        marker_faf7f7607a394eb6b8d4eea0a7cb091e.bindPopup(popup_9f3082d9e1c94eafb09347b3de85cb20)
+        ;
+
+        
+    
+    
+            var marker_dab8eb064cdd40c4bdf54a0f40e27517 = L.marker(
+                [10.92, -85.48],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_7a7e801897a84244a85de8eb797f374e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b3b37897c0d47b9ab82496ccba2a700 = $(`<div id="html_7b3b37897c0d47b9ab82496ccba2a700" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste; Cordillera de Guanacaste. Estación Cacao. Faldas de Cerro Pedregal frente a la estación. Bosque medio húmedo transición a bosque seco. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-06-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_7a7e801897a84244a85de8eb797f374e.setContent(html_7b3b37897c0d47b9ab82496ccba2a700);
+        
+
+        marker_dab8eb064cdd40c4bdf54a0f40e27517.bindPopup(popup_7a7e801897a84244a85de8eb797f374e)
+        ;
+
+        
+    
+    
+            var marker_7de73c3c3bf547c89388b6f25dc9d3f8 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_52b8ac15307e4367b47a41f44e7b93f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39bc483ca2b3498aa49d5eee0fee2edd = $(`<div id="html_39bc483ca2b3498aa49d5eee0fee2edd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> G. Rivera <strong>Identificadores:</strong> G. T. Prance</div>`)[0];
+            popup_52b8ac15307e4367b47a41f44e7b93f0.setContent(html_39bc483ca2b3498aa49d5eee0fee2edd);
+        
+
+        marker_7de73c3c3bf547c89388b6f25dc9d3f8.bindPopup(popup_52b8ac15307e4367b47a41f44e7b93f0)
+        ;
+
+        
+    
+    
+            var marker_5ca22bdfb2354bbd8592c7db9b54d57d = L.marker(
+                [10.5, -85.25],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_568d2c383be34bd19748d81a94c11501 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_766082c8e5f54d1fab72365125a26a88 = $(`<div id="html_766082c8e5f54d1fab72365125a26a88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1991-07-29 00:00:00+00:00 <strong>Recolectores:</strong> G. Rivera <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_568d2c383be34bd19748d81a94c11501.setContent(html_766082c8e5f54d1fab72365125a26a88);
+        
+
+        marker_5ca22bdfb2354bbd8592c7db9b54d57d.bindPopup(popup_568d2c383be34bd19748d81a94c11501)
+        ;
+
+        
+    
+    
+            var marker_c781186b72004a02b9946382198f0b72 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_35fcd3a76c8949438725f127d4b37855 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3cba8a30c75b4863b6f920f191e4d0a1 = $(`<div id="html_3cba8a30c75b4863b6f920f191e4d0a1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> G. Rivera <strong>Identificadores:</strong> G. T. Prance</div>`)[0];
+            popup_35fcd3a76c8949438725f127d4b37855.setContent(html_3cba8a30c75b4863b6f920f191e4d0a1);
+        
+
+        marker_c781186b72004a02b9946382198f0b72.bindPopup(popup_35fcd3a76c8949438725f127d4b37855)
+        ;
+
+        
+    
+    
+            var marker_2738941e123e4855aa09652c4d3ecaca = L.marker(
+                [10.961111, -85.496944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_17741e64849b441babc8f3e642142b7e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d0660fb885246ff9d276b8b3ae1f81c = $(`<div id="html_4d0660fb885246ff9d276b8b3ae1f81c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste.  Cuenca del Sapoá.  Estación Maritza. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1997-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> S. Letcher</div>`)[0];
+            popup_17741e64849b441babc8f3e642142b7e.setContent(html_4d0660fb885246ff9d276b8b3ae1f81c);
+        
+
+        marker_2738941e123e4855aa09652c4d3ecaca.bindPopup(popup_17741e64849b441babc8f3e642142b7e)
+        ;
+
+        
+    
+    
+            var marker_1c74c78b92b742b79b0d4747945bb82b = L.marker(
+                [10.955326, -85.491567],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_2dadf21f9ae641d1984f5fdee17c746d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e254b3ebc6d849a3a2eb30f0186d6a5a = $(`<div id="html_e254b3ebc6d849a3a2eb30f0186d6a5a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste.  Cuenca del Tempisque.  Volcán Orosí, Estación Biológica Maritza.  Trail to Cacao Station, ca. 1 km from Maritza comedor, ~ 100 km into first patch of primary forest.  N side of trail.  0.1 ha Transect Maritza. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2003-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle|William A. Haber|Willow Zuchowski <strong>Identificadores:</strong> B. Boyle</div>`)[0];
+            popup_2dadf21f9ae641d1984f5fdee17c746d.setContent(html_e254b3ebc6d849a3a2eb30f0186d6a5a);
+        
+
+        marker_1c74c78b92b742b79b0d4747945bb82b.bindPopup(popup_2dadf21f9ae641d1984f5fdee17c746d)
+        ;
+
+        
+    
+    
+            var marker_c7e2b463920444d2acfef7f696669c28 = L.marker(
+                [10.930121, -85.459903],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_cd2c379c97dc467d8f7b776547e909be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1ee976b55444ca19ffe6f3f710de52b = $(`<div id="html_e1ee976b55444ca19ffe6f3f710de52b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste.  Cuenca del Tempisque.  Estación Biológica Cacao.  Trail to Cacao summit, aprox. 1 km from station, along-side trail.  Premontane Moist Forest.  Tenth ha transect Cacao -1. <strong>Elevación:</strong> 1262.5 m  <strong>Fecha:</strong> 2003-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> B. Boyle</div>`)[0];
+            popup_cd2c379c97dc467d8f7b776547e909be.setContent(html_e1ee976b55444ca19ffe6f3f710de52b);
+        
+
+        marker_c7e2b463920444d2acfef7f696669c28.bindPopup(popup_cd2c379c97dc467d8f7b776547e909be)
+        ;
+
+        
+    
+    
+            var marker_8881027a2b9e499e97a2232d5965f428 = L.marker(
+                [10.5, -85.25],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_b7eb7a9f8f124093b714a8a0cd99f8a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a2e9d24fe28415c9daabcdbfa472a9b = $(`<div id="html_0a2e9d24fe28415c9daabcdbfa472a9b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1991-06-02 00:00:00+00:00 <strong>Recolectores:</strong> G. Rivera <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_b7eb7a9f8f124093b714a8a0cd99f8a1.setContent(html_0a2e9d24fe28415c9daabcdbfa472a9b);
+        
+
+        marker_8881027a2b9e499e97a2232d5965f428.bindPopup(popup_b7eb7a9f8f124093b714a8a0cd99f8a1)
+        ;
+
+        
+    
+    
+            var marker_17b05006d3d447d68c64421cbf594b89 = L.marker(
+                [10.73, -85.28],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_66ba9d3c25e0425d89c3239ef063ad66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb0b1eae43b447cda1e1864bf36801bf = $(`<div id="html_eb0b1eae43b447cda1e1864bf36801bf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Guanacaste: P. Nac. Rincón de la Vieja San Jorge. Aldredores y a 1 km de la entrada a Quebrada El Salto. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> Rivera, G. <strong>Identificadores:</strong> Prance, G.T.</div>`)[0];
+            popup_66ba9d3c25e0425d89c3239ef063ad66.setContent(html_eb0b1eae43b447cda1e1864bf36801bf);
+        
+
+        marker_17b05006d3d447d68c64421cbf594b89.bindPopup(popup_66ba9d3c25e0425d89c3239ef063ad66)
+        ;
+
+        
+    
+    
+            var marker_606805501b334ce2986f712feedc4e0b = L.marker(
+                [10.77, -85.323611],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_bfff1d2368054daab27ce197e98124eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_47fde73f15e74b98a85867742a94aca2 = $(`<div id="html_47fde73f15e74b98a85867742a94aca2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Santa María. Sendero a las Pailas, cruce a Aguas Termales. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 1996-08-13 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_bfff1d2368054daab27ce197e98124eb.setContent(html_47fde73f15e74b98a85867742a94aca2);
+        
+
+        marker_606805501b334ce2986f712feedc4e0b.bindPopup(popup_bfff1d2368054daab27ce197e98124eb)
+        ;
+
+        
+    
+    
+            var marker_0d2a31179329449791b260eae305587f = L.marker(
+                [10.733335, -85.283333],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_baafa59df8f141aa9ac43b2a3bda3ef0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d85446bb0f04fc59a7684de9339b68d = $(`<div id="html_8d85446bb0f04fc59a7684de9339b68d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Jorge. Alrededores y a 1 Km de la entrada a Quebrada El Salto. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Prance, Ghillean</div>`)[0];
+            popup_baafa59df8f141aa9ac43b2a3bda3ef0.setContent(html_8d85446bb0f04fc59a7684de9339b68d);
+        
+
+        marker_0d2a31179329449791b260eae305587f.bindPopup(popup_baafa59df8f141aa9ac43b2a3bda3ef0)
+        ;
+
+        
+    
+    
+            var marker_d883462ff05d4064825451e02930676a = L.marker(
+                [10.728611, -85.355556],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_df0b31d00f2a4868a0ebe6b37fabaaa7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_def68ad44c9f4f0c8076e9781653fe88 = $(`<div id="html_def68ad44c9f4f0c8076e9781653fe88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector El Escabio. Carretera que va hacia Liberia. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1991-07-29 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_df0b31d00f2a4868a0ebe6b37fabaaa7.setContent(html_def68ad44c9f4f0c8076e9781653fe88);
+        
+
+        marker_d883462ff05d4064825451e02930676a.bindPopup(popup_df0b31d00f2a4868a0ebe6b37fabaaa7)
+        ;
+
+        
+    
+    
+            var marker_b744c73a00f9421caf06623b9db2282f = L.marker(
+                [10.768056, -85.294444],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_e4182f9c9e1a414e9f2ccbce3e907b4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a747d2f9ee14de18e0c46556c2c3d31 = $(`<div id="html_6a747d2f9ee14de18e0c46556c2c3d31" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero de la toma de agua, a 3 Km. de la estacion. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1990-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_e4182f9c9e1a414e9f2ccbce3e907b4a.setContent(html_6a747d2f9ee14de18e0c46556c2c3d31);
+        
+
+        marker_b744c73a00f9421caf06623b9db2282f.bindPopup(popup_e4182f9c9e1a414e9f2ccbce3e907b4a)
+        ;
+
+        
+    
+    
+            var marker_0f63d2d4de97495a8ec677da811dd043 = L.marker(
+                [10.929167, -85.470834],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_c45bc17d3fb3475786ac11e63ce4ae58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_218d566e498a43ca929111dd060d1e33 = $(`<div id="html_218d566e498a43ca929111dd060d1e33" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-12-17 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Chavez <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_c45bc17d3fb3475786ac11e63ce4ae58.setContent(html_218d566e498a43ca929111dd060d1e33);
+        
+
+        marker_0f63d2d4de97495a8ec677da811dd043.bindPopup(popup_c45bc17d3fb3475786ac11e63ce4ae58)
+        ;
+
+        
+    
+    
+            var marker_e70a652872f74d1a9bf51cbce01f3217 = L.marker(
+                [10.96, -85.49333299999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_6c90adf763e84f3e91b5d705d24386e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29158dfcdd7e4a0d88c60d22928763b0 = $(`<div id="html_29158dfcdd7e4a0d88c60d22928763b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Maritza, bosque primario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-07-01 00:00:00+00:00 <strong>Recolectores:</strong> I INBio <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_6c90adf763e84f3e91b5d705d24386e9.setContent(html_29158dfcdd7e4a0d88c60d22928763b0);
+        
+
+        marker_e70a652872f74d1a9bf51cbce01f3217.bindPopup(popup_6c90adf763e84f3e91b5d705d24386e9)
+        ;
+
+        
+    
+    
+            var marker_00cb113c0dd14dd4ba19fcb8c1295fd2 = L.marker(
+                [10.929167, -85.48472199999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_ec1539de94f145bda680ffe9d3ed93e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89caba912a3e4736b9abd061cd34f6db = $(`<div id="html_89caba912a3e4736b9abd061cd34f6db" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao. Faldas de Cerro Pedregal frente a la estacion.  Bosque medio humedo transicion a bosque seco. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-06-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_ec1539de94f145bda680ffe9d3ed93e7.setContent(html_89caba912a3e4736b9abd061cd34f6db);
+        
+
+        marker_00cb113c0dd14dd4ba19fcb8c1295fd2.bindPopup(popup_ec1539de94f145bda680ffe9d3ed93e7)
+        ;
+
+        
+    
+    
+            var marker_30be77e177b64468bb8a08e9c8162fbd = L.marker(
+                [11.0, -85.55],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_30719916bf3a40689744f5b878c3359d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_209644b79b3a4a6cac1537c54a4e3eaa = $(`<div id="html_209644b79b3a4a6cac1537c54a4e3eaa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro El Hacha, Camino a Santa Cecilia. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_30719916bf3a40689744f5b878c3359d.setContent(html_209644b79b3a4a6cac1537c54a4e3eaa);
+        
+
+        marker_30be77e177b64468bb8a08e9c8162fbd.bindPopup(popup_30719916bf3a40689744f5b878c3359d)
+        ;
+
+        
+    
+    
+            var marker_8ca488e4a1bc41519a4b2908ccfb504d = L.marker(
+                [10.772778, -85.311944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_43dcbb2eb8524927acf5793594545f4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88690bbdb16c4e90af9a1dcadcda5c83 = $(`<div id="html_88690bbdb16c4e90af9a1dcadcda5c83" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero a las aguas termales, despues del paso por Rio Negro. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1991-06-02 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Prance, Ghillean</div>`)[0];
+            popup_43dcbb2eb8524927acf5793594545f4d.setContent(html_88690bbdb16c4e90af9a1dcadcda5c83);
+        
+
+        marker_8ca488e4a1bc41519a4b2908ccfb504d.bindPopup(popup_43dcbb2eb8524927acf5793594545f4d)
+        ;
+
+        
+    
+    
+            var marker_1223557322664aeeb8e9661bf1395a43 = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_74e463b25514430fa96884d18440dfec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a118f331214a446d80cc1d25a235dfc3 = $(`<div id="html_a118f331214a446d80cc1d25a235dfc3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao; bosque primario y secundario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González ; Roberto Espinoza <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_74e463b25514430fa96884d18440dfec.setContent(html_a118f331214a446d80cc1d25a235dfc3);
+        
+
+        marker_1223557322664aeeb8e9661bf1395a43.bindPopup(popup_74e463b25514430fa96884d18440dfec)
+        ;
+
+        
+    
+    
+            var marker_277b2f5d55d44aa1b6ffd169aaa76d91 = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_68ec9f93ec3d4e7f9ad080e6dd9fce8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37eabecfbf3f4b8fb39f03838258c48a = $(`<div id="html_37eabecfbf3f4b8fb39f03838258c48a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao; bosque primario y secundario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González ; Roberto Espinoza <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_68ec9f93ec3d4e7f9ad080e6dd9fce8f.setContent(html_37eabecfbf3f4b8fb39f03838258c48a);
+        
+
+        marker_277b2f5d55d44aa1b6ffd169aaa76d91.bindPopup(popup_68ec9f93ec3d4e7f9ad080e6dd9fce8f)
+        ;
+
+        
+    
+    
+            var marker_10cf937841704543a6aa8a4f1e146029 = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_dfa8d5d3705749bc906d31c79a18bf73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ff5edee060b42c081341fb99e16471a = $(`<div id="html_1ff5edee060b42c081341fb99e16471a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao; bosque primario y secundario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González ; Roberto Espinoza <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_dfa8d5d3705749bc906d31c79a18bf73.setContent(html_1ff5edee060b42c081341fb99e16471a);
+        
+
+        marker_10cf937841704543a6aa8a4f1e146029.bindPopup(popup_dfa8d5d3705749bc906d31c79a18bf73)
+        ;
+
+        
+    
+    
+            var marker_c68c755e665f45608a6793e16f224867 = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_9c22017cd267404c9eb0272ae9097fbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e72879c409745b3a263c09f3a2e7186 = $(`<div id="html_0e72879c409745b3a263c09f3a2e7186" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao; bosque primario y secundario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González ; Roberto Espinoza <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_9c22017cd267404c9eb0272ae9097fbb.setContent(html_0e72879c409745b3a263c09f3a2e7186);
+        
+
+        marker_c68c755e665f45608a6793e16f224867.bindPopup(popup_9c22017cd267404c9eb0272ae9097fbb)
+        ;
+
+        
+    
+    
+            var marker_6eea177815194e7d9dc8cc9f03edc4b5 = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_d2583e506e0f46dcadb10c555c4badd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ef29b8179dc45b69a19ef720270a9ee = $(`<div id="html_2ef29b8179dc45b69a19ef720270a9ee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Cacao; bosque primario y secundario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González ; Roberto Espinoza <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_d2583e506e0f46dcadb10c555c4badd8.setContent(html_2ef29b8179dc45b69a19ef720270a9ee);
+        
+
+        marker_6eea177815194e7d9dc8cc9f03edc4b5.bindPopup(popup_d2583e506e0f46dcadb10c555c4badd8)
+        ;
+
+        
+    
+    
+            var marker_57a21a6eda194feb88df0be5c5d9e753 = L.marker(
+                [10.961111, -85.496944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_eee84bdb6562419d8670562429d845e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1886c686375943b1846f5dd3fb155d1b = $(`<div id="html_1886c686375943b1846f5dd3fb155d1b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Maritza. Bosque Primario y Secundario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1997-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_eee84bdb6562419d8670562429d845e9.setContent(html_1886c686375943b1846f5dd3fb155d1b);
+        
+
+        marker_57a21a6eda194feb88df0be5c5d9e753.bindPopup(popup_eee84bdb6562419d8670562429d845e9)
+        ;
+
+        
+    
+    
+            var marker_86ff7deb1ad84cebac48d3c1dd4ab37f = L.marker(
+                [10.961111, -85.496944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_eec6f094ec2945199e8b857caa4ba327 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9096de3aa60496dab3ca386619405b0 = $(`<div id="html_f9096de3aa60496dab3ca386619405b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Maritza. Bosque Primario y Secundario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1997-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_eec6f094ec2945199e8b857caa4ba327.setContent(html_f9096de3aa60496dab3ca386619405b0);
+        
+
+        marker_86ff7deb1ad84cebac48d3c1dd4ab37f.bindPopup(popup_eec6f094ec2945199e8b857caa4ba327)
+        ;
+
+        
+    
+    
+            var marker_405fa7eea6e94afca5dd43dd5828e124 = L.marker(
+                [10.961111, -85.496944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_443dabeb91c543cd95a2269229e04477 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7dbb4b75d8ca4bdcabc442c588fd3501 = $(`<div id="html_7dbb4b75d8ca4bdcabc442c588fd3501" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Maritza. Bosque Primario y Secundario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1997-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_443dabeb91c543cd95a2269229e04477.setContent(html_7dbb4b75d8ca4bdcabc442c588fd3501);
+        
+
+        marker_405fa7eea6e94afca5dd43dd5828e124.bindPopup(popup_443dabeb91c543cd95a2269229e04477)
+        ;
+
+        
+    
+    
+            var marker_182f58c91d4e402a8f9a09e0a58be269 = L.marker(
+                [10.961111, -85.496944],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_c7f8e4cf74294150ac138aa6ed7ffe1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_707e8e3eaf664a2e91b76c499e828a84 = $(`<div id="html_707e8e3eaf664a2e91b76c499e828a84" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Maritza. Bosque Primario y Secundario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1997-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Letcher, Susan</div>`)[0];
+            popup_c7f8e4cf74294150ac138aa6ed7ffe1b.setContent(html_707e8e3eaf664a2e91b76c499e828a84);
+        
+
+        marker_182f58c91d4e402a8f9a09e0a58be269.bindPopup(popup_c7f8e4cf74294150ac138aa6ed7ffe1b)
+        ;
+
+        
+    
+    
+            var marker_b6abb14c6fad45c3a22429c7fe14d658 = L.marker(
+                [10.889383, -85.475773],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_984d65bf26dd4f17ba39efd6edb2eafa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1e4da3a6365486fad19d1dca0e04c0f = $(`<div id="html_f1e4da3a6365486fad19d1dca0e04c0f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación Góngora <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 2000-04-28 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez ; Armando Soto ; Gerardo Soto ; Geovanny Sancho <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_984d65bf26dd4f17ba39efd6edb2eafa.setContent(html_f1e4da3a6365486fad19d1dca0e04c0f);
+        
+
+        marker_b6abb14c6fad45c3a22429c7fe14d658.bindPopup(popup_984d65bf26dd4f17ba39efd6edb2eafa)
+        ;
+
+        
+    
+    
+            var marker_39743c3bcc7d4bc79d3773aaaecee5e1 = L.marker(
+                [10.955326, -85.491568],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_83104c16e461460eb8f2d39cb2471cd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb6f1f709a7044dd890bea4690917837 = $(`<div id="html_cb6f1f709a7044dd890bea4690917837" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Mayorga, P.N.G., Sendero de Estación Maritza a Estación Cacao. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2003-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; William Haber ; Willow Zuchowski <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_83104c16e461460eb8f2d39cb2471cd8.setContent(html_cb6f1f709a7044dd890bea4690917837);
+        
+
+        marker_39743c3bcc7d4bc79d3773aaaecee5e1.bindPopup(popup_83104c16e461460eb8f2d39cb2471cd8)
+        ;
+
+        
+    
+    
+            var marker_b30bd69efdb643c48283cedee9c3fcd2 = L.marker(
+                [10.955326, -85.491568],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_b84a8f16fde8491eb551dad077d115ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a47c34df2654e35a6d2a3f55bdf7a9a = $(`<div id="html_4a47c34df2654e35a6d2a3f55bdf7a9a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Mayorga, P.N.G., Sendero de Estación Maritza a Estación Cacao. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2003-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; William Haber ; Willow Zuchowski <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_b84a8f16fde8491eb551dad077d115ef.setContent(html_4a47c34df2654e35a6d2a3f55bdf7a9a);
+        
+
+        marker_b30bd69efdb643c48283cedee9c3fcd2.bindPopup(popup_b84a8f16fde8491eb551dad077d115ef)
+        ;
+
+        
+    
+    
+            var marker_efe03d615e124b96a16d04be2c776187 = L.marker(
+                [10.955326, -85.491568],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_c3b181bc369940a0b73cf1e36dc90d8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd195231f2ff4c3ea67ee1f95966c07a = $(`<div id="html_bd195231f2ff4c3ea67ee1f95966c07a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Mayorga, P.N.G., Sendero de Estación Maritza a Estación Cacao. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2003-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; William Haber ; Willow Zuchowski <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_c3b181bc369940a0b73cf1e36dc90d8e.setContent(html_bd195231f2ff4c3ea67ee1f95966c07a);
+        
+
+        marker_efe03d615e124b96a16d04be2c776187.bindPopup(popup_c3b181bc369940a0b73cf1e36dc90d8e)
+        ;
+
+        
+    
+    
+            var marker_3c5fa14584f445ff863c3c8d131ed077 = L.marker(
+                [10.955326, -85.491568],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_9ad3d03c6c374c92993c9dbe29c5a80b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8f04f1964d64a7fa03faa6726cd63f9 = $(`<div id="html_c8f04f1964d64a7fa03faa6726cd63f9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia, Mayorga, P.N.G., Sendero de Estación Maritza a Estación Cacao. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2003-03-12 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle; William Haber ; Willow Zuchowski <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_9ad3d03c6c374c92993c9dbe29c5a80b.setContent(html_c8f04f1964d64a7fa03faa6726cd63f9);
+        
+
+        marker_3c5fa14584f445ff863c3c8d131ed077.bindPopup(popup_9ad3d03c6c374c92993c9dbe29c5a80b)
+        ;
+
+        
+    
+    
+            var marker_2c1e77dd36ef4787a77bd2afed05c1d2 = L.marker(
+                [10.930121, -85.459903],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_7ef371c582f64304a34adc57acec9c13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a431085d58714c93a3c216ae2bce3f31 = $(`<div id="html_a431085d58714c93a3c216ae2bce3f31" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Est. Cacao <strong>Elevación:</strong> 1262.5 m  <strong>Fecha:</strong> 2003-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_7ef371c582f64304a34adc57acec9c13.setContent(html_a431085d58714c93a3c216ae2bce3f31);
+        
+
+        marker_2c1e77dd36ef4787a77bd2afed05c1d2.bindPopup(popup_7ef371c582f64304a34adc57acec9c13)
+        ;
+
+        
+    
+    
+            var marker_2b9084c88d354acaa4fcdfb3d9d7b21e = L.marker(
+                [10.930121, -85.459903],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_418478ca1e12434c9f7d436395a01027 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_799c30bf88584d6aa19ea8ecd785d9d7 = $(`<div id="html_799c30bf88584d6aa19ea8ecd785d9d7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Est. Cacao <strong>Elevación:</strong> 1262.5 m  <strong>Fecha:</strong> 2003-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_418478ca1e12434c9f7d436395a01027.setContent(html_799c30bf88584d6aa19ea8ecd785d9d7);
+        
+
+        marker_2b9084c88d354acaa4fcdfb3d9d7b21e.bindPopup(popup_418478ca1e12434c9f7d436395a01027)
+        ;
+
+        
+    
+    
+            var marker_d9ab5dc68f334849aa8990fd08e27d28 = L.marker(
+                [10.930121, -85.459903],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_8ec96f0229354a80b6017e1043fc1aa0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_366afee65e6f4e4490d5ea5f82146729 = $(`<div id="html_366afee65e6f4e4490d5ea5f82146729" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Est. Cacao <strong>Elevación:</strong> 1262.5 m  <strong>Fecha:</strong> 2003-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_8ec96f0229354a80b6017e1043fc1aa0.setContent(html_366afee65e6f4e4490d5ea5f82146729);
+        
+
+        marker_d9ab5dc68f334849aa8990fd08e27d28.bindPopup(popup_8ec96f0229354a80b6017e1043fc1aa0)
+        ;
+
+        
+    
+    
+            var marker_16171aea3352426d94c994e7707f9408 = L.marker(
+                [10.930121, -85.459903],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_6402898144924c4d89ffd44f0fe1ee01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6b62445cc374dffb01f3bb500d59335 = $(`<div id="html_f6b62445cc374dffb01f3bb500d59335" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Est. Cacao <strong>Elevación:</strong> 1262.5 m  <strong>Fecha:</strong> 2003-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Boyle, Brad</div>`)[0];
+            popup_6402898144924c4d89ffd44f0fe1ee01.setContent(html_f6b62445cc374dffb01f3bb500d59335);
+        
+
+        marker_16171aea3352426d94c994e7707f9408.bindPopup(popup_6402898144924c4d89ffd44f0fe1ee01)
+        ;
+
+        
+    
+    
+            var marker_f485fba521744c5d9d479df1ea6d0f2b = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_eb9c6dff2f104351b21b689e53e85e01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_674f46e10acd4d67ac87d5b28e253ff4 = $(`<div id="html_674f46e10acd4d67ac87d5b28e253ff4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_eb9c6dff2f104351b21b689e53e85e01.setContent(html_674f46e10acd4d67ac87d5b28e253ff4);
+        
+
+        marker_f485fba521744c5d9d479df1ea6d0f2b.bindPopup(popup_eb9c6dff2f104351b21b689e53e85e01)
+        ;
+
+        
+    
+    
+            var marker_314a816c2cfb44ceb0ddf141c7c4ba41 = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_fbbf7361125149dcb3b241825362c6c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4b1e6aff795d4603b0b26f5b97fdd7b0 = $(`<div id="html_4b1e6aff795d4603b0b26f5b97fdd7b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_fbbf7361125149dcb3b241825362c6c6.setContent(html_4b1e6aff795d4603b0b26f5b97fdd7b0);
+        
+
+        marker_314a816c2cfb44ceb0ddf141c7c4ba41.bindPopup(popup_fbbf7361125149dcb3b241825362c6c6)
+        ;
+
+        
+    
+    
+            var marker_96b119aa6c7b48dd855e48e68f8ab0a3 = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_3d1943067ecd4ae0802422cb4033a34a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a094dbd3dc434838a35f6836de0f8a6c = $(`<div id="html_a094dbd3dc434838a35f6836de0f8a6c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3d1943067ecd4ae0802422cb4033a34a.setContent(html_a094dbd3dc434838a35f6836de0f8a6c);
+        
+
+        marker_96b119aa6c7b48dd855e48e68f8ab0a3.bindPopup(popup_3d1943067ecd4ae0802422cb4033a34a)
+        ;
+
+        
+    
+    
+            var marker_a5c2cdb229ce4a9cad239b2d90b08086 = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_6b1d088cf64c4d52966f795d18f12c09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f77ea94eb3ce4d35a7cefc9f7a2a2aea = $(`<div id="html_f77ea94eb3ce4d35a7cefc9f7a2a2aea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6b1d088cf64c4d52966f795d18f12c09.setContent(html_f77ea94eb3ce4d35a7cefc9f7a2a2aea);
+        
+
+        marker_a5c2cdb229ce4a9cad239b2d90b08086.bindPopup(popup_6b1d088cf64c4d52966f795d18f12c09)
+        ;
+
+        
+    
+    
+            var marker_eec4f308a7094814adbed5f17c929adc = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_68bc2427e70a46dbad457a3605400ef3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fdec2c7db934601931957cfae04ce97 = $(`<div id="html_4fdec2c7db934601931957cfae04ce97" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_68bc2427e70a46dbad457a3605400ef3.setContent(html_4fdec2c7db934601931957cfae04ce97);
+        
+
+        marker_eec4f308a7094814adbed5f17c929adc.bindPopup(popup_68bc2427e70a46dbad457a3605400ef3)
+        ;
+
+        
+    
+    
+            var marker_57b409b3a68a4974a00d82838dd0cf47 = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_f8358609cc2b4bd089e1f73106706a48 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f0f56dbc6c94d7b9b2dd7a6540bd074 = $(`<div id="html_1f0f56dbc6c94d7b9b2dd7a6540bd074" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f8358609cc2b4bd089e1f73106706a48.setContent(html_1f0f56dbc6c94d7b9b2dd7a6540bd074);
+        
+
+        marker_57b409b3a68a4974a00d82838dd0cf47.bindPopup(popup_f8358609cc2b4bd089e1f73106706a48)
+        ;
+
+        
+    
+    
+            var marker_1c7a056c4713437bab3c51f5d917a693 = L.marker(
+                [10.941667, -85.511111],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_22967163a04f495ca8bb01e31ecdbe9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c97d912732c479199d1d32226611fcf = $(`<div id="html_1c97d912732c479199d1d32226611fcf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Cruz. P.N. Guanacaste, Estación Maritza. Laguna Mata Redonda. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; S. Obando <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_22967163a04f495ca8bb01e31ecdbe9c.setContent(html_1c97d912732c479199d1d32226611fcf);
+        
+
+        marker_1c7a056c4713437bab3c51f5d917a693.bindPopup(popup_22967163a04f495ca8bb01e31ecdbe9c)
+        ;
+
+        
+    
+    
+            var marker_a6e2afddbc5747afa83e3dba3d4a0780 = L.marker(
+                [10.764139, -85.307861],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_3a7fbf16064d456ca7d258ee2abe7ad0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b32bbe3c6c92479eb1aa964b96315ce5 = $(`<div id="html_b32bbe3c6c92479eb1aa964b96315ce5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Rincón de la Vieja. Estación Santa María. Sendero Colibrí y Aguas Termales. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2013-06-04 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Guillermo Villalobos ; Soo-Yong Kim ; Roberto Espinoza ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3a7fbf16064d456ca7d258ee2abe7ad0.setContent(html_b32bbe3c6c92479eb1aa964b96315ce5);
+        
+
+        marker_a6e2afddbc5747afa83e3dba3d4a0780.bindPopup(popup_3a7fbf16064d456ca7d258ee2abe7ad0)
+        ;
+
+        
+    
+    
+            var marker_e8e27fca104f4ad0bf24e4d30d30ceb3 = L.marker(
+                [10.764139, -85.307861],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_32547c5ff64d4d59bfc348e7700c60a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99e6496f2fab40888fbb3b7e963e6865 = $(`<div id="html_99e6496f2fab40888fbb3b7e963e6865" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Rincón de la Vieja. Estación Santa María. Sendero Colibrí y Aguas Termales. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2013-06-04 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Guillermo Villalobos ; Soo-Yong Kim ; Roberto Espinoza ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_32547c5ff64d4d59bfc348e7700c60a1.setContent(html_99e6496f2fab40888fbb3b7e963e6865);
+        
+
+        marker_e8e27fca104f4ad0bf24e4d30d30ceb3.bindPopup(popup_32547c5ff64d4d59bfc348e7700c60a1)
+        ;
+
+        
+    
+    
+            var marker_56cbbfed57ce420eb0bff30ed709d7a5 = L.marker(
+                [10.764139, -85.307861],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_db0d3564643140caafb58066be943ee8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50c5bd3761d4480ea33f75ed80bb0b5f = $(`<div id="html_50c5bd3761d4480ea33f75ed80bb0b5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Rincón de la Vieja. Estación Santa María. Sendero Colibrí y Aguas Termales. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2013-06-04 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Guillermo Villalobos ; Soo-Yong Kim ; Roberto Espinoza ; Adrián Guadamuz <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_db0d3564643140caafb58066be943ee8.setContent(html_50c5bd3761d4480ea33f75ed80bb0b5f);
+        
+
+        marker_56cbbfed57ce420eb0bff30ed709d7a5.bindPopup(popup_db0d3564643140caafb58066be943ee8)
+        ;
+
+        
+    
+    
+            var marker_70440ab335ea49ca91e46c4fb56d767f = L.marker(
+                [10.924444, -85.4675],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_5399f95eb2704daa81f397dbce73f3c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4d42273b41045d6aba314499460d993 = $(`<div id="html_d4d42273b41045d6aba314499460d993" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia. Área de Conservación Guanacaste, Estación Cacao, Sendero Arenales. <strong>Elevación:</strong> 1075.0 m  <strong>Fecha:</strong> 2014-08-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; G. Lianming ; M. Pengfei ; Roberto Espinoza ; Enia Navarro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5399f95eb2704daa81f397dbce73f3c4.setContent(html_d4d42273b41045d6aba314499460d993);
+        
+
+        marker_70440ab335ea49ca91e46c4fb56d767f.bindPopup(popup_5399f95eb2704daa81f397dbce73f3c4)
+        ;
+
+        
+    
+    
+            var marker_b38f2c33081644e79f650fe9b075b137 = L.marker(
+                [10.924444, -85.4675],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_a4ddfe52d105431c9c5dd27f95477a58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e795f003f2240f2b244f5bfc3c73d6b = $(`<div id="html_7e795f003f2240f2b244f5bfc3c73d6b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia. Área de Conservación Guanacaste, Estación Cacao, Sendero Arenales. <strong>Elevación:</strong> 1075.0 m  <strong>Fecha:</strong> 2014-08-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; G. Lianming ; M. Pengfei ; Roberto Espinoza ; Enia Navarro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a4ddfe52d105431c9c5dd27f95477a58.setContent(html_7e795f003f2240f2b244f5bfc3c73d6b);
+        
+
+        marker_b38f2c33081644e79f650fe9b075b137.bindPopup(popup_a4ddfe52d105431c9c5dd27f95477a58)
+        ;
+
+        
+    
+    
+            var marker_926cea9c3ac24450a6238ce0a3bb138c = L.marker(
+                [10.924444, -85.4675],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_5f8d53ba3b854b7d854a2885a46493dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8571384f33fc4d1987031a9ba11b2d92 = $(`<div id="html_8571384f33fc4d1987031a9ba11b2d92" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Liberia. Área de Conservación Guanacaste, Estación Cacao, Sendero Arenales. <strong>Elevación:</strong> 1075.0 m  <strong>Fecha:</strong> 2014-08-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; G. Lianming ; M. Pengfei ; Roberto Espinoza ; Enia Navarro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5f8d53ba3b854b7d854a2885a46493dc.setContent(html_8571384f33fc4d1987031a9ba11b2d92);
+        
+
+        marker_926cea9c3ac24450a6238ce0a3bb138c.bindPopup(popup_5f8d53ba3b854b7d854a2885a46493dc)
+        ;
+
+        
+    
+    
+            var marker_f0a51d94332c4a8c852ed9f81b0aea59 = L.marker(
+                [10.956806, -85.488444],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_4ea492c02abe4a4db02646d372f40e97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0280eb725d34c418cfb1cb3b2b50054 = $(`<div id="html_d0280eb725d34c418cfb1cb3b2b50054" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste. Estación Maritza. Sendero a la cumbre del Cerro Orosí, por la fila entre el Río Tempisquito y Tempisquita Sur, parte baja. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2015-04-25 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jose Antonio Azofeifa Zuñiga ; Róger Gutiérrez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_4ea492c02abe4a4db02646d372f40e97.setContent(html_d0280eb725d34c418cfb1cb3b2b50054);
+        
+
+        marker_f0a51d94332c4a8c852ed9f81b0aea59.bindPopup(popup_4ea492c02abe4a4db02646d372f40e97)
+        ;
+
+        
+    
+    
+            var marker_0e96ee40c7e64b0196a0d83c21409093 = L.marker(
+                [10.956806, -85.488444],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_266e7337a0274fb99517dc6757bbd15d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_539f3984aaff4177ad333b4a18f22cb1 = $(`<div id="html_539f3984aaff4177ad333b4a18f22cb1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste. Estación Maritza. Sendero a la cumbre del Cerro Orosí, por la fila entre el Río Tempisquito y Tempisquita Sur, parte baja. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2015-04-25 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jose Antonio Azofeifa Zuñiga ; Róger Gutiérrez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_266e7337a0274fb99517dc6757bbd15d.setContent(html_539f3984aaff4177ad333b4a18f22cb1);
+        
+
+        marker_0e96ee40c7e64b0196a0d83c21409093.bindPopup(popup_266e7337a0274fb99517dc6757bbd15d)
+        ;
+
+        
+    
+    
+            var marker_7f2db1431241411e93ce4f7d7315067b = L.marker(
+                [10.956806, -85.488444],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_689fd2b9c8f845beba7204bb31e7f55c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a04d20171cba46c38df246274c469f9d = $(`<div id="html_a04d20171cba46c38df246274c469f9d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste. Estación Maritza. Sendero a la cumbre del Cerro Orosí, por la fila entre el Río Tempisquito y Tempisquita Sur, parte baja. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 2015-04-25 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jose Antonio Azofeifa Zuñiga ; Róger Gutiérrez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_689fd2b9c8f845beba7204bb31e7f55c.setContent(html_a04d20171cba46c38df246274c469f9d);
+        
+
+        marker_7f2db1431241411e93ce4f7d7315067b.bindPopup(popup_689fd2b9c8f845beba7204bb31e7f55c)
+        ;
+
+        
+    
+    
+            var marker_5e209aa85899499f9af95bf935500698 = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_ba60c53140664a30ab12ba565162f54b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eaa7bde126e94aa3beececf5d73aa4e0 = $(`<div id="html_eaa7bde126e94aa3beececf5d73aa4e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ba60c53140664a30ab12ba565162f54b.setContent(html_eaa7bde126e94aa3beececf5d73aa4e0);
+        
+
+        marker_5e209aa85899499f9af95bf935500698.bindPopup(popup_ba60c53140664a30ab12ba565162f54b)
+        ;
+
+        
+    
+    
+            var marker_98ada6bc9cb84fe88107f857e972ba5c = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_bd9f146d1545416aa2e85343de677977 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7df6f1377d904e419768bef99546b958 = $(`<div id="html_7df6f1377d904e419768bef99546b958" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_bd9f146d1545416aa2e85343de677977.setContent(html_7df6f1377d904e419768bef99546b958);
+        
+
+        marker_98ada6bc9cb84fe88107f857e972ba5c.bindPopup(popup_bd9f146d1545416aa2e85343de677977)
+        ;
+
+        
+    
+    
+            var marker_51d6bf3cab174b57b8f3c762258f90f8 = L.marker(
+                [10.89, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_ca0ff83679644401a9bb020df8325155 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b3095642c004e428db5d53cd05bd06b = $(`<div id="html_6b3095642c004e428db5d53cd05bd06b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ca0ff83679644401a9bb020df8325155.setContent(html_6b3095642c004e428db5d53cd05bd06b);
+        
+
+        marker_51d6bf3cab174b57b8f3c762258f90f8.bindPopup(popup_ca0ff83679644401a9bb020df8325155)
+        ;
+
+        
+    
+    
+            var marker_971e53325aee466ca0b259088792ffed = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_db764db727454f4ca58b5ed1417f56ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32f0586085d94a7cb589d4ac726cf095 = $(`<div id="html_32f0586085d94a7cb589d4ac726cf095" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_db764db727454f4ca58b5ed1417f56ce.setContent(html_32f0586085d94a7cb589d4ac726cf095);
+        
+
+        marker_971e53325aee466ca0b259088792ffed.bindPopup(popup_db764db727454f4ca58b5ed1417f56ce)
+        ;
+
+        
+    
+    
+            var marker_05b88808392f4c34852caba06a5732e1 = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_dae13c57f1e14d97944f3bf55ad85acf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea93900f613c4ed9aacdd194bb78f996 = $(`<div id="html_ea93900f613c4ed9aacdd194bb78f996" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_dae13c57f1e14d97944f3bf55ad85acf.setContent(html_ea93900f613c4ed9aacdd194bb78f996);
+        
+
+        marker_05b88808392f4c34852caba06a5732e1.bindPopup(popup_dae13c57f1e14d97944f3bf55ad85acf)
+        ;
+
+        
+    
+    
+            var marker_ac593e430e3d4b64aa4bb5f06462e230 = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_b4b55512be8448eaa5d436f30dd918d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f215e5164894a468d0cf4039551eb19 = $(`<div id="html_7f215e5164894a468d0cf4039551eb19" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Rancho Harol, camino a Cacao, bosque alterado en regeneracion <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-06-11 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b4b55512be8448eaa5d436f30dd918d3.setContent(html_7f215e5164894a468d0cf4039551eb19);
+        
+
+        marker_ac593e430e3d4b64aa4bb5f06462e230.bindPopup(popup_b4b55512be8448eaa5d436f30dd918d3)
+        ;
+
+        
+    
+    
+            var marker_ce3a9c3eb0114fe2ae13c46d8ff6e8c8 = L.marker(
+                [10.89, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_b1ee74040d374f75858de7eba6e62024 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5c8016b83084dc1a5e7c82e6fd2df03 = $(`<div id="html_c5c8016b83084dc1a5e7c82e6fd2df03" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b1ee74040d374f75858de7eba6e62024.setContent(html_c5c8016b83084dc1a5e7c82e6fd2df03);
+        
+
+        marker_ce3a9c3eb0114fe2ae13c46d8ff6e8c8.bindPopup(popup_b1ee74040d374f75858de7eba6e62024)
+        ;
+
+        
+    
+    
+            var marker_be5fcd230e564ccb9f4ffaafe8c588bf = L.marker(
+                [10.89, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_eb3748f9639a4bb4bb60f2fa77c3f0cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc029b6db90f40f38d432efc66692923 = $(`<div id="html_bc029b6db90f40f38d432efc66692923" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_eb3748f9639a4bb4bb60f2fa77c3f0cb.setContent(html_bc029b6db90f40f38d432efc66692923);
+        
+
+        marker_be5fcd230e564ccb9f4ffaafe8c588bf.bindPopup(popup_eb3748f9639a4bb4bb60f2fa77c3f0cb)
+        ;
+
+        
+    
+    
+            var marker_eaa690c98c554896acd1ca67835014f0 = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_3ed41ca2d2834df7b18a14eb606ae14a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2ec627bea1a4f488d946ba338de9f57 = $(`<div id="html_f2ec627bea1a4f488d946ba338de9f57" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3ed41ca2d2834df7b18a14eb606ae14a.setContent(html_f2ec627bea1a4f488d946ba338de9f57);
+        
+
+        marker_eaa690c98c554896acd1ca67835014f0.bindPopup(popup_3ed41ca2d2834df7b18a14eb606ae14a)
+        ;
+
+        
+    
+    
+            var marker_d9fc302eb7624f0a9d03d6c0b84c7b6b = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_55ba27404e7647d2b538e3836eb640df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6065b14124c64c489e99231d28f6df74 = $(`<div id="html_6065b14124c64c489e99231d28f6df74" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Rancho Harol, camino a Cacao, bosque alterado en regeneracion <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-06-11 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_55ba27404e7647d2b538e3836eb640df.setContent(html_6065b14124c64c489e99231d28f6df74);
+        
+
+        marker_d9fc302eb7624f0a9d03d6c0b84c7b6b.bindPopup(popup_55ba27404e7647d2b538e3836eb640df)
+        ;
+
+        
+    
+    
+            var marker_9e85bd3592d14649a665ed4b46791397 = L.marker(
+                [10.9, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_9ae2af107aa34d538709b2c252e10cd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_587945609815428799a2c77e0f9c4107 = $(`<div id="html_587945609815428799a2c77e0f9c4107" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9ae2af107aa34d538709b2c252e10cd4.setContent(html_587945609815428799a2c77e0f9c4107);
+        
+
+        marker_9e85bd3592d14649a665ed4b46791397.bindPopup(popup_9ae2af107aa34d538709b2c252e10cd4)
+        ;
+
+        
+    
+    
+            var marker_f6d142cb94bc4dccb938f0c82780e5aa = L.marker(
+                [10.929167, -85.470833],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_2dd00857da944ee1846708c022f77337 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59370ab954594a51b23f3c1ef848acc0 = $(`<div id="html_59370ab954594a51b23f3c1ef848acc0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste, Estación Biológica Volcán Cacao. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-12-17 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Chávez <strong>Identificadores:</strong> G.T. Prance (K)</div>`)[0];
+            popup_2dd00857da944ee1846708c022f77337.setContent(html_59370ab954594a51b23f3c1ef848acc0);
+        
+
+        marker_f6d142cb94bc4dccb938f0c82780e5aa.bindPopup(popup_2dd00857da944ee1846708c022f77337)
+        ;
+
+        
+    
+    
+            var marker_95b448c57ecb4c048e7c2111ec5f262e = L.marker(
+                [10.9275, -85.47],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_72ead62cefd547128d780a817b107c60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2df53ad8ff64fe19939167eaf155fce = $(`<div id="html_c2df53ad8ff64fe19939167eaf155fce" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste. Cuenca del Tempisque. Estación Cacao; Sendero a la Cima. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1998-03-18 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Luis Diego Vargas|José Á. González R.|Roberto Espinoza <strong>Identificadores:</strong> Alex. Rodríguez, 18 Apr</div>`)[0];
+            popup_72ead62cefd547128d780a817b107c60.setContent(html_c2df53ad8ff64fe19939167eaf155fce);
+        
+
+        marker_95b448c57ecb4c048e7c2111ec5f262e.bindPopup(popup_72ead62cefd547128d780a817b107c60)
+        ;
+
+        
+    
+    
+            var marker_43b54a3d27774d7986aede7bf0110c5c = L.marker(
+                [10.77, -85.33],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_96e840959db3491d99828d182fcb62db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d67f25af7e34098a27348279568d81e = $(`<div id="html_3d67f25af7e34098a27348279568d81e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. Nac. Rincón de la Vieja Sendero a Las Pailas, a 3 Km de la administración. <strong>Elevación:</strong> 1050.0 m  <strong>Fecha:</strong> 1991-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> G.T. Prance</div>`)[0];
+            popup_96e840959db3491d99828d182fcb62db.setContent(html_3d67f25af7e34098a27348279568d81e);
+        
+
+        marker_43b54a3d27774d7986aede7bf0110c5c.bindPopup(popup_96e840959db3491d99828d182fcb62db)
+        ;
+
+        
+    
+    
+            var marker_bcb020ac3eab49b8a22a40fb3aa417a2 = L.marker(
+                [10.77, -85.31],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_8dff01a9e31944159626999375b83ab2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42ec9a304f874b13939d2bc14faf80a0 = $(`<div id="html_42ec9a304f874b13939d2bc14faf80a0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. Nac. Rincón de la Vieja Sendero a las Termales 200 m S del paso de Río Negro. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1991-06-02 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> G. T. Prance (K)</div>`)[0];
+            popup_8dff01a9e31944159626999375b83ab2.setContent(html_42ec9a304f874b13939d2bc14faf80a0);
+        
+
+        marker_bcb020ac3eab49b8a22a40fb3aa417a2.bindPopup(popup_8dff01a9e31944159626999375b83ab2)
+        ;
+
+        
+    
+    
+            var marker_45fbd106914f41ce9fc086f76cbdf6f3 = L.marker(
+                [10.72, -85.35],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_36f98b61bcba41909385b619ed7392b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9929e58b70444d309f90c7e822b3d2b9 = $(`<div id="html_9929e58b70444d309f90c7e822b3d2b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. Nac. Rincón de la Vieja Sector El Escabio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1991-07-29 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> G.T. Prance (K)</div>`)[0];
+            popup_36f98b61bcba41909385b619ed7392b9.setContent(html_9929e58b70444d309f90c7e822b3d2b9);
+        
+
+        marker_45fbd106914f41ce9fc086f76cbdf6f3.bindPopup(popup_36f98b61bcba41909385b619ed7392b9)
+        ;
+
+        
+    
+    
+            var marker_57cb3c4f10aa4be78066459a156ea78f = L.marker(
+                [10.768056, -85.294444],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_3180c4abbd494263a715045dd8daa3ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e18b5c3856b4e9fa2db10f207261fc3 = $(`<div id="html_3e18b5c3856b4e9fa2db10f207261fc3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. Nac. Rincón de la Vieja.  Sendero de la toma de agua, a 3 Km. de la estación. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1990-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> G.T. Prance (K)</div>`)[0];
+            popup_3180c4abbd494263a715045dd8daa3ef.setContent(html_3e18b5c3856b4e9fa2db10f207261fc3);
+        
+
+        marker_57cb3c4f10aa4be78066459a156ea78f.bindPopup(popup_3180c4abbd494263a715045dd8daa3ef)
+        ;
+
+        
+    
+    
+            var marker_c9e8353a0ced4bce9195cd88463d632e = L.marker(
+                [10.898, -85.465],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_d317c0d97fc24ada9bcc7524be923a55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f7b029187d64f5db8a1ff3a31e30462 = $(`<div id="html_1f7b029187d64f5db8a1ff3a31e30462" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_d317c0d97fc24ada9bcc7524be923a55.setContent(html_1f7b029187d64f5db8a1ff3a31e30462);
+        
+
+        marker_c9e8353a0ced4bce9195cd88463d632e.bindPopup(popup_d317c0d97fc24ada9bcc7524be923a55)
+        ;
+
+        
+    
+    
+            var marker_1d6572e05b0547ae8bb4f3ad6592db62 = L.marker(
+                [10.898, -85.465],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_0515730fbb904cb5a917b924b643f1f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba15058d005e485c89b71c4151e389af = $(`<div id="html_ba15058d005e485c89b71c4151e389af" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_0515730fbb904cb5a917b924b643f1f9.setContent(html_ba15058d005e485c89b71c4151e389af);
+        
+
+        marker_1d6572e05b0547ae8bb4f3ad6592db62.bindPopup(popup_0515730fbb904cb5a917b924b643f1f9)
+        ;
+
+        
+    
+    
+            var marker_e822e2c237a3486383382763a8649b88 = L.marker(
+                [10.898, -85.465],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_5e4b554f53d842999cddda0b72c1aeaa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d2196284fe545a3a71a24cc8cbfd8fb = $(`<div id="html_6d2196284fe545a3a71a24cc8cbfd8fb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_5e4b554f53d842999cddda0b72c1aeaa.setContent(html_6d2196284fe545a3a71a24cc8cbfd8fb);
+        
+
+        marker_e822e2c237a3486383382763a8649b88.bindPopup(popup_5e4b554f53d842999cddda0b72c1aeaa)
+        ;
+
+        
+    
+    
+            var marker_6972a02763a440e7ad4a3183782fcd27 = L.marker(
+                [10.898, -85.465],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_917cbaede0364123a1725c6a351268e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c6e02cb36ff6418cbfbe7ec6ecea9823 = $(`<div id="html_c6e02cb36ff6418cbfbe7ec6ecea9823" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Cacao, Bosque Los Leones, Camino a Cacao <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 2009-04-30 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_917cbaede0364123a1725c6a351268e1.setContent(html_c6e02cb36ff6418cbfbe7ec6ecea9823);
+        
+
+        marker_6972a02763a440e7ad4a3183782fcd27.bindPopup(popup_917cbaede0364123a1725c6a351268e1)
+        ;
+
+        
+    
+    
+            var marker_f1ea52ed5e454a96a4223eac869ad4bd = L.marker(
+                [10.905, -85.46799999999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_e8e8c60fde25438d858635bc828977e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7bee0cdfff8a45a38e5e8fe8fb26dbbc = $(`<div id="html_7bee0cdfff8a45a38e5e8fe8fb26dbbc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Cacao, Rancho Harol, camino a Cacao, bosque alterado en r <strong>Elevación:</strong> 820.0 m  <strong>Fecha:</strong> 2009-06-11 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_e8e8c60fde25438d858635bc828977e9.setContent(html_7bee0cdfff8a45a38e5e8fe8fb26dbbc);
+        
+
+        marker_f1ea52ed5e454a96a4223eac869ad4bd.bindPopup(popup_e8e8c60fde25438d858635bc828977e9)
+        ;
+
+        
+    
+    
+            var marker_7345d8178d1d4e06a699d79f7c686989 = L.marker(
+                [10.888, -85.47399999999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_1daaade092574526ba9208ca06d1d866 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_412ebc90ffde4bf68915ba7b07b487c1 = $(`<div id="html_412ebc90ffde4bf68915ba7b07b487c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector  Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> 590.0 m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1daaade092574526ba9208ca06d1d866.setContent(html_412ebc90ffde4bf68915ba7b07b487c1);
+        
+
+        marker_7345d8178d1d4e06a699d79f7c686989.bindPopup(popup_1daaade092574526ba9208ca06d1d866)
+        ;
+
+        
+    
+    
+            var marker_78cc3ed4a60140e3b8783a98a0612342 = L.marker(
+                [10.888, -85.47399999999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_a53b78e0963d486d9b008fe07112ee3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2866f90e59f6464d88a1e26932f8f7d5 = $(`<div id="html_2866f90e59f6464d88a1e26932f8f7d5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector  Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> 590.0 m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a53b78e0963d486d9b008fe07112ee3e.setContent(html_2866f90e59f6464d88a1e26932f8f7d5);
+        
+
+        marker_78cc3ed4a60140e3b8783a98a0612342.bindPopup(popup_a53b78e0963d486d9b008fe07112ee3e)
+        ;
+
+        
+    
+    
+            var marker_21198e054d9440b694d05e2d5dfb9e45 = L.marker(
+                [10.888, -85.47399999999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_c0bef77be472416d8c55c07a1a7382d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4c8a7c2fe974b008d67e9d6d6379e75 = $(`<div id="html_c4c8a7c2fe974b008d67e9d6d6379e75" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector  Cacao, Sendero el Pajarito en Gongora <strong>Elevación:</strong> 590.0 m  <strong>Fecha:</strong> 2011-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Adrian Guadamuz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c0bef77be472416d8c55c07a1a7382d1.setContent(html_c4c8a7c2fe974b008d67e9d6d6379e75);
+        
+
+        marker_21198e054d9440b694d05e2d5dfb9e45.bindPopup(popup_c0bef77be472416d8c55c07a1a7382d1)
+        ;
+
+        
+    
+    
+            var marker_af4746ce1caa41a5ba775a396523fd7c = L.marker(
+                [10.323077, -85.420764],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_62c1cbad6c3445618a5e6d88e389bf84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e90307f7d7b47e39aa336a2fa258166 = $(`<div id="html_9e90307f7d7b47e39aa336a2fa258166" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Nicoya.  R.V.S. Laguna Mata Redonda.  Cuenca del Tempisque.  La Cruz.  P.N. Guanacaste.  Estación Maritza.  Laguna Mata Redonda, con una condición de 95% seca.  Sendero de Mata Redonda. <strong>Elevación:</strong> 275.0 m  <strong>Fecha:</strong> 2008-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_62c1cbad6c3445618a5e6d88e389bf84.setContent(html_9e90307f7d7b47e39aa336a2fa258166);
+        
+
+        marker_af4746ce1caa41a5ba775a396523fd7c.bindPopup(popup_62c1cbad6c3445618a5e6d88e389bf84)
+        ;
+
+        
+    
+    
+            var marker_3911d82c1f6442c59967ed372f1243ad = L.marker(
+                [10.96, -85.49333299999999],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_3cdc1fd924d7463f9dab8449b001027b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa79dc78a7144048953fdf6eba466569 = $(`<div id="html_fa79dc78a7144048953fdf6eba466569" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste.  Estación Maritza, bosque primario. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-07-01 00:00:00+00:00 <strong>Recolectores:</strong> INBio Estudiantes de Biodiversidad I <strong>Identificadores:</strong> J. F. Morales (INB)</div>`)[0];
+            popup_3cdc1fd924d7463f9dab8449b001027b.setContent(html_fa79dc78a7144048953fdf6eba466569);
+        
+
+        marker_3911d82c1f6442c59967ed372f1243ad.bindPopup(popup_3cdc1fd924d7463f9dab8449b001027b)
+        ;
+
+        
+    
+    
+            var marker_475c62077a6d474a9e1280c452270429 = L.marker(
+                [10.8, -85.31666700000001],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_2688fe9a58034069a35abf0bbbcb5a4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_157227a770174c65bb30dbb0b5edab94 = $(`<div id="html_157227a770174c65bb30dbb0b5edab94" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Rincón de la Vieja.  Hacienda Santa María.  De la planta Hidroeléctrica 0.5 km sobre el canal subiendo hacia el oeste en el primer "puente" de dicho canal. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1987-08-16 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> G. T. Prance (K)</div>`)[0];
+            popup_2688fe9a58034069a35abf0bbbcb5a4f.setContent(html_157227a770174c65bb30dbb0b5edab94);
+        
+
+        marker_475c62077a6d474a9e1280c452270429.bindPopup(popup_2688fe9a58034069a35abf0bbbcb5a4f)
+        ;
+
+        
+    
+    
+            var marker_3ac9008098634cbf97b25d8fd1069726 = L.marker(
+                [11.0, -85.55],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_a3b82d4a5e16434089ad291358f5bb43 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a686d300ced54d88aef58cdb39bcc1cf = $(`<div id="html_a686d300ced54d88aef58cdb39bcc1cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste.  Cerro El Hacha, Camino a Santa Cecilia. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> G.T. Prance (K)</div>`)[0];
+            popup_a3b82d4a5e16434089ad291358f5bb43.setContent(html_a686d300ced54d88aef58cdb39bcc1cf);
+        
+
+        marker_3ac9008098634cbf97b25d8fd1069726.bindPopup(popup_a3b82d4a5e16434089ad291358f5bb43)
+        ;
+
+        
+    
+    
+            var marker_660d7c6ae1814d82af1facc298a310a4 = L.marker(
+                [10.73, -85.28],
+                {}
+            ).addTo(marker_cluster_7715a9b82e594f7cb0462766cb86dc68);
+        
+    
+        var popup_647eb83c9888444e8b8a25e67ff4a02c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac2608adc2a44f63b1d3408c151fe557 = $(`<div id="html_ac2608adc2a44f63b1d3408c151fe557" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Cordillera de Guanacaste. San Jorge. Alrededores y a 1 km. de la entrada a Quebrada El Salto. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1991-05-07 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> G. Prance</div>`)[0];
+            popup_647eb83c9888444e8b8a25e67ff4a02c.setContent(html_ac2608adc2a44f63b1d3408c151fe557);
+        
+
+        marker_660d7c6ae1814d82af1facc298a310a4.bindPopup(popup_647eb83c9888444e8b8a25e67ff4a02c)
+        ;
+
+        
+    
+    
+            var layer_control_d67ea23ab1454f38911fca4146128c60 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_47d1f1daace6478a94172772e446597a,
+                    "ESRI World Imagery" : tile_layer_73d620d2201e4e85b86cb69e458d921d,
+                },
+                overlays :  {
+                    "macro_element_7715a9b82e594f7cb0462766cb86dc68" : marker_cluster_7715a9b82e594f7cb0462766cb86dc68,
+                },
+            };
+            L.control.layers(
+                layer_control_d67ea23ab1454f38911fca4146128c60.base_layers,
+                layer_control_d67ea23ab1454f38911fca4146128c60.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_bf92c154801b43c7997de5ebf8c319d6);
+            tile_layer_73d620d2201e4e85b86cb69e458d921d.remove();
+        
+</script>

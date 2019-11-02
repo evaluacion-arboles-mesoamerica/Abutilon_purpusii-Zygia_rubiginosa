@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a4732aba846347f2ab98bc5885738a15 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a4732aba846347f2ab98bc5885738a15" ></div>
+        
+</body>
+<script>    
+    
+            var map_a4732aba846347f2ab98bc5885738a15 = L.map(
+                "map_a4732aba846347f2ab98bc5885738a15",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_a4732aba846347f2ab98bc5885738a15);
+
+            
+
+        
+    
+            var tile_layer_c35bcc8c8fcc4b98a8b52351057114c9 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a4732aba846347f2ab98bc5885738a15);
+        
+    
+            var tile_layer_4599f235bda64da2ba701c57053f3b16 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a4732aba846347f2ab98bc5885738a15);
+        
+    
+            var marker_cluster_816af72bf58c4d13b9c69e23af63032d = L.markerClusterGroup(
+                {}
+            );
+            map_a4732aba846347f2ab98bc5885738a15.addLayer(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+            var marker_e1982ad327954525a829897f8766cef2 = L.marker(
+                [8.817222000000001, -83.189722],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_461fafd0c8ee4a71a9d72ee4415cef34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b380a70276fc44a9a38ef9d8467808e2 = $(`<div id="html_b380a70276fc44a9a38ef9d8467808e2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña, Cerro Anguciana, Cabezera del Río Piedras Blancas. Fila Cruces <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_461fafd0c8ee4a71a9d72ee4415cef34.setContent(html_b380a70276fc44a9a38ef9d8467808e2);
+        
+
+        marker_e1982ad327954525a829897f8766cef2.bindPopup(popup_461fafd0c8ee4a71a9d72ee4415cef34)
+        ;
+
+        
+    
+    
+            var marker_1e184de1e3ae4df19709b82928aa4aec = L.marker(
+                [8.73, -83.45],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_67aba7e0880147ecb3c6a358193a6d97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccc90257723e4b6a8e2e6da4d7061f09 = $(`<div id="html_ccc90257723e4b6a8e2e6da4d7061f09" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce Cuenca Térraba - Sierpe. Bahía  Chal,trocha que va a La Parcela <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> González, José</div>`)[0];
+            popup_67aba7e0880147ecb3c6a358193a6d97.setContent(html_ccc90257723e4b6a8e2e6da4d7061f09);
+        
+
+        marker_1e184de1e3ae4df19709b82928aa4aec.bindPopup(popup_67aba7e0880147ecb3c6a358193a6d97)
+        ;
+
+        
+    
+    
+            var marker_ecca1658c1004e7bb4d74ba760365fab = L.marker(
+                [8.73, -83.45],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_fd71d2d945bc496d9d064d7539b5d64a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45c5a58864b24b27b56966fc5a340318 = $(`<div id="html_45c5a58864b24b27b56966fc5a340318" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce Cuenca Térraba - Sierpe. Cerca de la Parcela. Bahía Chal. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> González, José</div>`)[0];
+            popup_fd71d2d945bc496d9d064d7539b5d64a.setContent(html_45c5a58864b24b27b56966fc5a340318);
+        
+
+        marker_ecca1658c1004e7bb4d74ba760365fab.bindPopup(popup_fd71d2d945bc496d9d064d7539b5d64a)
+        ;
+
+        
+    
+    
+            var marker_6d582e6b468a4b7f9eb383c51502b1b1 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_536d325142414131afc78a6e54d93941 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67d66d7830c84caeb7772a44c72de064 = $(`<div id="html_67d66d7830c84caeb7772a44c72de064" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad. Cuenca Térraba-Sierpe. Buenos Aires, Potrero Grande, La Lucha. PILA <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano|Daniel Santamaría|William Gamboa E.|Alfredo Cascante <strong>Identificadores:</strong> B. Hammel (MO)</div>`)[0];
+            popup_536d325142414131afc78a6e54d93941.setContent(html_67d66d7830c84caeb7772a44c72de064);
+        
+
+        marker_6d582e6b468a4b7f9eb383c51502b1b1.bindPopup(popup_536d325142414131afc78a6e54d93941)
+        ;
+
+        
+    
+    
+            var marker_501ced5315b84124ab6f225127755f34 = L.marker(
+                [9.136389, -83.056111],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_ffe3df42d5b4410d8e5d10ef505023ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fac32dcacaf45fcafbbb585d0f6a2fb = $(`<div id="html_4fac32dcacaf45fcafbbb585d0f6a2fb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad. Cuenca Térraba-Sierpe. Buenos Aires, Potrero Grande, Tres Collinas. PILA. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_ffe3df42d5b4410d8e5d10ef505023ac.setContent(html_4fac32dcacaf45fcafbbb585d0f6a2fb);
+        
+
+        marker_501ced5315b84124ab6f225127755f34.bindPopup(popup_ffe3df42d5b4410d8e5d10ef505023ac)
+        ;
+
+        
+    
+    
+            var marker_a8f79bacc64c417f8d8f28580bb5440c = L.marker(
+                [9.111616, -83.10172],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_dcb502362c3b4f50ad23e953094c8516 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b808b8d2f009490c8d3dd61e31df70b3 = $(`<div id="html_b808b8d2f009490c8d3dd61e31df70b3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Buenos Aires, Potrero Grande, La Lucha. PILA. Matorral denso arbolado de 1-15 m. Predominado por arboles de Cecropia, Hampea appendiculata, Alchornea latifolia, Virola guatemalensis, Erythrina gibbosa; con especies de menor tama?o de Poaceae y Asteraceae.                                                                                                                                                                                                                                                    <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano <strong>Identificadores:</strong> B. Hammel</div>`)[0];
+            popup_dcb502362c3b4f50ad23e953094c8516.setContent(html_b808b8d2f009490c8d3dd61e31df70b3);
+        
+
+        marker_a8f79bacc64c417f8d8f28580bb5440c.bindPopup(popup_dcb502362c3b4f50ad23e953094c8516)
+        ;
+
+        
+    
+    
+            var marker_800191611e664752a8f945025e971ccf = L.marker(
+                [9.136330000000001, -83.05619],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_be12e55ee07c4bd9acffd98c2676bf78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9cf41779b54043868fbed2f610279579 = $(`<div id="html_9cf41779b54043868fbed2f610279579" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Buenos Aires, Potrero Grande, Tres Colinas. PILA. Matorral denso arbolado de 5-25 m. con arboles de Magnolia sororum, Quercus, Ulmus mexicana, Heliocarpus americanus, Billia rosea; el sotobosque con Heliconia sp., Chusquea, Geonoma y Piper spp.                                                                                                                                                                                                                                                               <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_be12e55ee07c4bd9acffd98c2676bf78.setContent(html_9cf41779b54043868fbed2f610279579);
+        
+
+        marker_800191611e664752a8f945025e971ccf.bindPopup(popup_be12e55ee07c4bd9acffd98c2676bf78)
+        ;
+
+        
+    
+    
+            var marker_835a46b6576d4f8c99bdd731ace500f3 = L.marker(
+                [9.114278, -83.08308000000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_7b599b0944fa4c2b8f57e8d9f4710fa9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_572afa852a0c446e815a2376f9e65a5f = $(`<div id="html_572afa852a0c446e815a2376f9e65a5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Amistad National Park. Tres Colinas sector. Guineal river edge. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas <strong>Identificadores:</strong> B. Hammel</div>`)[0];
+            popup_7b599b0944fa4c2b8f57e8d9f4710fa9.setContent(html_572afa852a0c446e815a2376f9e65a5f);
+        
+
+        marker_835a46b6576d4f8c99bdd731ace500f3.bindPopup(popup_7b599b0944fa4c2b8f57e8d9f4710fa9)
+        ;
+
+        
+    
+    
+            var marker_2f84d8039eba4537a367ac25f774e933 = L.marker(
+                [8.8172, -83.1897],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_cc9e03d190494c10879082dfc0d6bf50 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64fcab9730f1431aa1689af621c15879 = $(`<div id="html_64fcab9730f1431aa1689af621c15879" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña, Cerro Anguciana, cabeceras del Rio Piedras Blancas. Fila Cruces; <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> R. Aguilar et al. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_cc9e03d190494c10879082dfc0d6bf50.setContent(html_64fcab9730f1431aa1689af621c15879);
+        
+
+        marker_2f84d8039eba4537a367ac25f774e933.bindPopup(popup_cc9e03d190494c10879082dfc0d6bf50)
+        ;
+
+        
+    
+    
+            var marker_63c1a4c575dc4a43bf937feb07ce3790 = L.marker(
+                [8.817222000000001, -83.190278],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_bb145ff9f4574ac7846562b66ffe59f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce5a931342314da8be09bc01f91af568 = $(`<div id="html_ce5a931342314da8be09bc01f91af568" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cabeceras del Rio Piedras Blancas; Cerro Anguciana faldas al Oeste; bosque en roca de cal. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_bb145ff9f4574ac7846562b66ffe59f1.setContent(html_ce5a931342314da8be09bc01f91af568);
+        
+
+        marker_63c1a4c575dc4a43bf937feb07ce3790.bindPopup(popup_bb145ff9f4574ac7846562b66ffe59f1)
+        ;
+
+        
+    
+    
+            var marker_cafe2b7c038845eaad4c6da788178192 = L.marker(
+                [8.817222000000001, -83.189722],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_df76d67194fd4f15bad3d5b77a51effd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dcaa2b290ca64b9db309d09b711e74c7 = $(`<div id="html_dcaa2b290ca64b9db309d09b711e74c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Anguciana, cabeceras del Rio Piedras Blancas. Fila Cruces. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_df76d67194fd4f15bad3d5b77a51effd.setContent(html_dcaa2b290ca64b9db309d09b711e74c7);
+        
+
+        marker_cafe2b7c038845eaad4c6da788178192.bindPopup(popup_df76d67194fd4f15bad3d5b77a51effd)
+        ;
+
+        
+    
+    
+            var marker_aa62de8ff9f74307bb056ebb44d53581 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_cc831fbe13ec41c3937f111f4fe6b4d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b016954ba3143b1aa9dd5418a3af0a8 = $(`<div id="html_2b016954ba3143b1aa9dd5418a3af0a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_cc831fbe13ec41c3937f111f4fe6b4d4.setContent(html_2b016954ba3143b1aa9dd5418a3af0a8);
+        
+
+        marker_aa62de8ff9f74307bb056ebb44d53581.bindPopup(popup_cc831fbe13ec41c3937f111f4fe6b4d4)
+        ;
+
+        
+    
+    
+            var marker_7ac33c599ce747a389629f5d59fcaffd = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_507259abaad34363b6624cc82c387a7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44bf0e494e514399a42e5307b1b6f4f4 = $(`<div id="html_44bf0e494e514399a42e5307b1b6f4f4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_507259abaad34363b6624cc82c387a7b.setContent(html_44bf0e494e514399a42e5307b1b6f4f4);
+        
+
+        marker_7ac33c599ce747a389629f5d59fcaffd.bindPopup(popup_507259abaad34363b6624cc82c387a7b)
+        ;
+
+        
+    
+    
+            var marker_e654cdca3c7a4f33a22ea509852f8ca9 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_df76b1ad3da74bfe89626a7c753a10fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ecf5625d5a94f48b77324ff7590ca3c = $(`<div id="html_6ecf5625d5a94f48b77324ff7590ca3c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_df76b1ad3da74bfe89626a7c753a10fd.setContent(html_6ecf5625d5a94f48b77324ff7590ca3c);
+        
+
+        marker_e654cdca3c7a4f33a22ea509852f8ca9.bindPopup(popup_df76b1ad3da74bfe89626a7c753a10fd)
+        ;
+
+        
+    
+    
+            var marker_def87ce3273644bfa224f8e9f4aa6686 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_1912f51b9de94f5284e53b57d78b1f3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df2d491ea7d74a81b5c31a08d13ce8f2 = $(`<div id="html_df2d491ea7d74a81b5c31a08d13ce8f2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_1912f51b9de94f5284e53b57d78b1f3e.setContent(html_df2d491ea7d74a81b5c31a08d13ce8f2);
+        
+
+        marker_def87ce3273644bfa224f8e9f4aa6686.bindPopup(popup_1912f51b9de94f5284e53b57d78b1f3e)
+        ;
+
+        
+    
+    
+            var marker_8d6175053d24491cb9e22dc21a09e338 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_9b3f523fc5ae4acfb3f1911946e56587 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f302db412b58447fb4f9ab0ca8f16abf = $(`<div id="html_f302db412b58447fb4f9ab0ca8f16abf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_9b3f523fc5ae4acfb3f1911946e56587.setContent(html_f302db412b58447fb4f9ab0ca8f16abf);
+        
+
+        marker_8d6175053d24491cb9e22dc21a09e338.bindPopup(popup_9b3f523fc5ae4acfb3f1911946e56587)
+        ;
+
+        
+    
+    
+            var marker_0f2dba91111b40108f85c997b887d6a5 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_6a3c40e946374c54b967a5b17595149a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b64397a3a9d548c0b8b717f8f68f0866 = $(`<div id="html_b64397a3a9d548c0b8b717f8f68f0866" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_6a3c40e946374c54b967a5b17595149a.setContent(html_b64397a3a9d548c0b8b717f8f68f0866);
+        
+
+        marker_0f2dba91111b40108f85c997b887d6a5.bindPopup(popup_6a3c40e946374c54b967a5b17595149a)
+        ;
+
+        
+    
+    
+            var marker_d43eb1456eaa492c80dce708e74a3801 = L.marker(
+                [9.111616, -83.101718],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_c155f770036f4293b4172b6b46e4fa5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86c5fc9f86ec4b44b90dcc28ace2f569 = $(`<div id="html_86c5fc9f86ec4b44b90dcc28ace2f569" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, La Lucha. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 2008-02-21 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; William Gamboa ; Audilio Rivera Cascante <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_c155f770036f4293b4172b6b46e4fa5a.setContent(html_86c5fc9f86ec4b44b90dcc28ace2f569);
+        
+
+        marker_d43eb1456eaa492c80dce708e74a3801.bindPopup(popup_c155f770036f4293b4172b6b46e4fa5a)
+        ;
+
+        
+    
+    
+            var marker_ad4e9e69527a41c7a1462170d303e2b0 = L.marker(
+                [9.136330000000001, -83.05619200000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_daf90986011b46f7b732ec45a49b99ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07a20ea63d7f43908bbf9d0ef99711d2 = $(`<div id="html_07a20ea63d7f43908bbf9d0ef99711d2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, Tres Colinas. 5 km de Tres Colinas desviándose del sendero a Kámuk hacia el río Singri. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; Hugo Solano Arias <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_daf90986011b46f7b732ec45a49b99ec.setContent(html_07a20ea63d7f43908bbf9d0ef99711d2);
+        
+
+        marker_ad4e9e69527a41c7a1462170d303e2b0.bindPopup(popup_daf90986011b46f7b732ec45a49b99ec)
+        ;
+
+        
+    
+    
+            var marker_ffed5c850dbd45829966bdbbff6485af = L.marker(
+                [9.136330000000001, -83.05619200000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_a80bd32a80884f35b2346f36a0866e40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7545d717f4cb4ce2a1c215fae401a6d2 = $(`<div id="html_7545d717f4cb4ce2a1c215fae401a6d2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, Tres Colinas. 5 km de Tres Colinas desviándose del sendero a Kámuk hacia el río Singri. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; Hugo Solano Arias <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_a80bd32a80884f35b2346f36a0866e40.setContent(html_7545d717f4cb4ce2a1c215fae401a6d2);
+        
+
+        marker_ffed5c850dbd45829966bdbbff6485af.bindPopup(popup_a80bd32a80884f35b2346f36a0866e40)
+        ;
+
+        
+    
+    
+            var marker_f2f6e8fc3e264c23bfb2f4e444bda3de = L.marker(
+                [9.136330000000001, -83.05619200000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_d7a39b6b903345a483e98636e3d70fb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_522c1d5812df400dbf1729319974a489 = $(`<div id="html_522c1d5812df400dbf1729319974a489" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, Tres Colinas. 5 km de Tres Colinas desviándose del sendero a Kámuk hacia el río Singri. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; Hugo Solano Arias <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_d7a39b6b903345a483e98636e3d70fb1.setContent(html_522c1d5812df400dbf1729319974a489);
+        
+
+        marker_f2f6e8fc3e264c23bfb2f4e444bda3de.bindPopup(popup_d7a39b6b903345a483e98636e3d70fb1)
+        ;
+
+        
+    
+    
+            var marker_c2ae1001413f48da8e7132f1585160d9 = L.marker(
+                [9.136330000000001, -83.05619200000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_0b83d737e3e4469cb4b4cb593b6e2221 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76893396827347e89b84005071f88de4 = $(`<div id="html_76893396827347e89b84005071f88de4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, Tres Colinas. 5 km de Tres Colinas desviándose del sendero a Kámuk hacia el río Singri. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; Hugo Solano Arias <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_0b83d737e3e4469cb4b4cb593b6e2221.setContent(html_76893396827347e89b84005071f88de4);
+        
+
+        marker_c2ae1001413f48da8e7132f1585160d9.bindPopup(popup_0b83d737e3e4469cb4b4cb593b6e2221)
+        ;
+
+        
+    
+    
+            var marker_6fb4a579cdbe4304b6dbdd9c2503b5ac = L.marker(
+                [9.136330000000001, -83.05619200000001],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_a575965447824ac9a5301f0a9386fec0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d39627c833af4506a148270c24d1d25a = $(`<div id="html_d39627c833af4506a148270c24d1d25a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Potrero Grande, Tres Colinas. 5 km de Tres Colinas desviándose del sendero a Kámuk hacia el río Singri. <strong>Elevación:</strong> 1750.0 m  <strong>Fecha:</strong> 2008-02-29 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Daniel Santamaría ; Hugo Solano Arias <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_a575965447824ac9a5301f0a9386fec0.setContent(html_d39627c833af4506a148270c24d1d25a);
+        
+
+        marker_6fb4a579cdbe4304b6dbdd9c2503b5ac.bindPopup(popup_a575965447824ac9a5301f0a9386fec0)
+        ;
+
+        
+    
+    
+            var marker_5eedb3a5fadd4edcae96e0867a905814 = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_07b060630c19417c8eebbe3478293cdd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a54817af3dd4467ebba513ba49d9dd38 = $(`<div id="html_a54817af3dd4467ebba513ba49d9dd38" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_07b060630c19417c8eebbe3478293cdd.setContent(html_a54817af3dd4467ebba513ba49d9dd38);
+        
+
+        marker_5eedb3a5fadd4edcae96e0867a905814.bindPopup(popup_07b060630c19417c8eebbe3478293cdd)
+        ;
+
+        
+    
+    
+            var marker_a738883926374b0eb14e4bb69f3ed0e1 = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_f02fbe783da94aa4afc4c06542de72c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15f0212ce83b4c0580b945aacab01b2d = $(`<div id="html_15f0212ce83b4c0580b945aacab01b2d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_f02fbe783da94aa4afc4c06542de72c4.setContent(html_15f0212ce83b4c0580b945aacab01b2d);
+        
+
+        marker_a738883926374b0eb14e4bb69f3ed0e1.bindPopup(popup_f02fbe783da94aa4afc4c06542de72c4)
+        ;
+
+        
+    
+    
+            var marker_660dfdff83f245cb84800290e7f3b17b = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_3ee99460ad8049feab913a9499cb3794 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94495218c43d40f98c326cf63adc3185 = $(`<div id="html_94495218c43d40f98c326cf63adc3185" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_3ee99460ad8049feab913a9499cb3794.setContent(html_94495218c43d40f98c326cf63adc3185);
+        
+
+        marker_660dfdff83f245cb84800290e7f3b17b.bindPopup(popup_3ee99460ad8049feab913a9499cb3794)
+        ;
+
+        
+    
+    
+            var marker_85dbbb5daf314dac8c65eb58ba42394f = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_79cb9887b85146eeb3e09592bd4d80e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7fb4d0ff2db470980036e71cfabd32a = $(`<div id="html_a7fb4d0ff2db470980036e71cfabd32a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_79cb9887b85146eeb3e09592bd4d80e3.setContent(html_a7fb4d0ff2db470980036e71cfabd32a);
+        
+
+        marker_85dbbb5daf314dac8c65eb58ba42394f.bindPopup(popup_79cb9887b85146eeb3e09592bd4d80e3)
+        ;
+
+        
+    
+    
+            var marker_781dfd5963ef40afadde87907c2b1282 = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_85298b8d6d7e44cfafbe0648d01a12af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4898ef941524a9d8c8abc1bbc8200fa = $(`<div id="html_d4898ef941524a9d8c8abc1bbc8200fa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_85298b8d6d7e44cfafbe0648d01a12af.setContent(html_d4898ef941524a9d8c8abc1bbc8200fa);
+        
+
+        marker_781dfd5963ef40afadde87907c2b1282.bindPopup(popup_85298b8d6d7e44cfafbe0648d01a12af)
+        ;
+
+        
+    
+    
+            var marker_8691f3f32a0448f68e16245a19fb0147 = L.marker(
+                [9.114278, -83.083083],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_db62ecbc68a4417d9154b21b3bcc7114 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3ebc468de5e4f7aa6378dd38814a8a6 = $(`<div id="html_c3ebc468de5e4f7aa6378dd38814a8a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. La Amistad, Tres Colinas. Orillas del Río Guineal. <strong>Elevación:</strong> 1642.0 m  <strong>Fecha:</strong> 2010-03-03 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_db62ecbc68a4417d9154b21b3bcc7114.setContent(html_c3ebc468de5e4f7aa6378dd38814a8a6);
+        
+
+        marker_8691f3f32a0448f68e16245a19fb0147.bindPopup(popup_db62ecbc68a4417d9154b21b3bcc7114)
+        ;
+
+        
+    
+    
+            var marker_f0a2531f195c44a5925c9f41d349b3b9 = L.marker(
+                [8.81, -83.19],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_e4f7d3658b56408ab47e81bd4d1a4be0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3450aeda0c542ad8c29d5c7b5acfd29 = $(`<div id="html_e3450aeda0c542ad8c29d5c7b5acfd29" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña. Cabeceras del Río Piedras Blancas; Cerro Anguciana faldas al Oeste; bosque en roca de cal. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Reinaldo Aguilar|Michael H. Grayum <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_e4f7d3658b56408ab47e81bd4d1a4be0.setContent(html_e3450aeda0c542ad8c29d5c7b5acfd29);
+        
+
+        marker_f0a2531f195c44a5925c9f41d349b3b9.bindPopup(popup_e4f7d3658b56408ab47e81bd4d1a4be0)
+        ;
+
+        
+    
+    
+            var marker_0a85f121c7b9404da9ab0b0665ab0912 = L.marker(
+                [8.81, -83.18],
+                {}
+            ).addTo(marker_cluster_816af72bf58c4d13b9c69e23af63032d);
+        
+    
+        var popup_8e2910b575564296bfc773ad0c0bc5e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57017f2e376e4b45af7349feff30ac8a = $(`<div id="html_57017f2e376e4b45af7349feff30ac8a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Costeña. Cerro Anguciana, cabeceras del Río Piedras Blancas. Fila Cruces. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-12-08 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|et al. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8e2910b575564296bfc773ad0c0bc5e2.setContent(html_57017f2e376e4b45af7349feff30ac8a);
+        
+
+        marker_0a85f121c7b9404da9ab0b0665ab0912.bindPopup(popup_8e2910b575564296bfc773ad0c0bc5e2)
+        ;
+
+        
+    
+    
+            var layer_control_2f4b6c6e61454b35ba16b54d18a5b3b0 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_c35bcc8c8fcc4b98a8b52351057114c9,
+                    "ESRI World Imagery" : tile_layer_4599f235bda64da2ba701c57053f3b16,
+                },
+                overlays :  {
+                    "macro_element_816af72bf58c4d13b9c69e23af63032d" : marker_cluster_816af72bf58c4d13b9c69e23af63032d,
+                },
+            };
+            L.control.layers(
+                layer_control_2f4b6c6e61454b35ba16b54d18a5b3b0.base_layers,
+                layer_control_2f4b6c6e61454b35ba16b54d18a5b3b0.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_a4732aba846347f2ab98bc5885738a15);
+            tile_layer_4599f235bda64da2ba701c57053f3b16.remove();
+        
+</script>

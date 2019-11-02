@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_35e1edc2320f4739b54d2a3fbf1abe38 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_35e1edc2320f4739b54d2a3fbf1abe38" ></div>
+        
+</body>
+<script>    
+    
+            var map_35e1edc2320f4739b54d2a3fbf1abe38 = L.map(
+                "map_35e1edc2320f4739b54d2a3fbf1abe38",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_35e1edc2320f4739b54d2a3fbf1abe38);
+
+            
+
+        
+    
+            var tile_layer_e5da5d103a5a45ddad71320499a467bb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_35e1edc2320f4739b54d2a3fbf1abe38);
+        
+    
+            var tile_layer_1b6d5eccd4be43ff8193545d0b6ffee2 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_35e1edc2320f4739b54d2a3fbf1abe38);
+        
+    
+            var marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e = L.markerClusterGroup(
+                {}
+            );
+            map_35e1edc2320f4739b54d2a3fbf1abe38.addLayer(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+            var marker_cca5e0615af54678910738c12630bf82 = L.marker(
+                [10.35, -84.666667],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_133472cea0c54722b399b13b4c3b5f3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b872705709541dc84203bf98a6bc903 = $(`<div id="html_7b872705709541dc84203bf98a6bc903" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Laguna de Poco Sol, Sendero Río y Río Peñas Blancas <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_133472cea0c54722b399b13b4c3b5f3a.setContent(html_7b872705709541dc84203bf98a6bc903);
+        
+
+        marker_cca5e0615af54678910738c12630bf82.bindPopup(popup_133472cea0c54722b399b13b4c3b5f3a)
+        ;
+
+        
+    
+    
+            var marker_5a66f0207d8d49f5aeaee29d79dc56cb = L.marker(
+                [9.57, -82.6],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_53aad24784664ed5b402086ad77cda45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95bc24db054d4983880fd9e361134b12 = $(`<div id="html_95bc24db054d4983880fd9e361134b12" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Gandoca. Finca Cangrejo. ANAI. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_53aad24784664ed5b402086ad77cda45.setContent(html_95bc24db054d4983880fd9e361134b12);
+        
+
+        marker_5a66f0207d8d49f5aeaee29d79dc56cb.bindPopup(popup_53aad24784664ed5b402086ad77cda45)
+        ;
+
+        
+    
+    
+            var marker_d7df91accc43453884b360ebe326ddaf = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_81b692eed2ea4e4da25abf574a56cebc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49d0942ffec64cf9bff3804107ac0b15 = $(`<div id="html_49d0942ffec64cf9bff3804107ac0b15" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Barra del Colorado Llanura de Tortuguero.Sardinas <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Araya, Flor <strong>Identificadores:</strong> Jiménez, Quírico & Zamora, Nelson</div>`)[0];
+            popup_81b692eed2ea4e4da25abf574a56cebc.setContent(html_49d0942ffec64cf9bff3804107ac0b15);
+        
+
+        marker_d7df91accc43453884b360ebe326ddaf.bindPopup(popup_81b692eed2ea4e4da25abf574a56cebc)
+        ;
+
+        
+    
+    
+            var marker_dec02db129b1405584c11079b20ae8e6 = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_b30bcddb30964d01ab9f71b535560dd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25777e93bdbd47c18de5179a57e55856 = $(`<div id="html_25777e93bdbd47c18de5179a57e55856" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Barra del Colorado Llanura de Tortuguero.Sardinas <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Araya, Flor <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_b30bcddb30964d01ab9f71b535560dd6.setContent(html_25777e93bdbd47c18de5179a57e55856);
+        
+
+        marker_dec02db129b1405584c11079b20ae8e6.bindPopup(popup_b30bcddb30964d01ab9f71b535560dd6)
+        ;
+
+        
+    
+    
+            var marker_0d9748941b7d4f4b8e3b9f3c3783a60e = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_4c1cc2da063540adb252b4871ec1da8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e2de417a4ef4ceea0ffc92d6db0c887 = $(`<div id="html_3e2de417a4ef4ceea0ffc92d6db0c887" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> E. Bello C. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4c1cc2da063540adb252b4871ec1da8e.setContent(html_3e2de417a4ef4ceea0ffc92d6db0c887);
+        
+
+        marker_0d9748941b7d4f4b8e3b9f3c3783a60e.bindPopup(popup_4c1cc2da063540adb252b4871ec1da8e)
+        ;
+
+        
+    
+    
+            var marker_093894d9f0a44b8ebc976b5219c77651 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_df6260c92a7d45558d28a5b43c7bf2e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3ea94d53d83416fa32ae071cbd76a69 = $(`<div id="html_e3ea94d53d83416fa32ae071cbd76a69" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> E. Bello C. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_df6260c92a7d45558d28a5b43c7bf2e9.setContent(html_e3ea94d53d83416fa32ae071cbd76a69);
+        
+
+        marker_093894d9f0a44b8ebc976b5219c77651.bindPopup(popup_df6260c92a7d45558d28a5b43c7bf2e9)
+        ;
+
+        
+    
+    
+            var marker_b33338514acd4999818d870fdbd08c16 = L.marker(
+                [10.441667, -84.619444],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_2a2268d5c92c4f39a568254a013b1217 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0477b2a185984666bc8ed9aafb90506f = $(`<div id="html_0477b2a185984666bc8ed9aafb90506f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida.  Cuenca del San Carlos.  Fortuna, El bosque (San Martín, El Burrito).  Reserva Biológica Dendrobates.  Alrededores de Quebrada Piedrita. <strong>Elevación:</strong> 825.0 m  <strong>Fecha:</strong> 2007-05-12 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez <strong>Identificadores:</strong> A. Rodríguez (INB)</div>`)[0];
+            popup_2a2268d5c92c4f39a568254a013b1217.setContent(html_0477b2a185984666bc8ed9aafb90506f);
+        
+
+        marker_b33338514acd4999818d870fdbd08c16.bindPopup(popup_2a2268d5c92c4f39a568254a013b1217)
+        ;
+
+        
+    
+    
+            var marker_2db7aadcbe234d37a97e8b98eb076b99 = L.marker(
+                [10.35, -84.67],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_22d4ed953923442bb37ac8160243de54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f7095e69ce14ee2897b0f9ef122024c = $(`<div id="html_6f7095e69ce14ee2897b0f9ef122024c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela: Reserva Biológica Monteverde Laguna de Poco Sol, Sendero Río y Río Peñas Blancas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Bello, E. <strong>Identificadores:</strong> Prance, G.T.</div>`)[0];
+            popup_22d4ed953923442bb37ac8160243de54.setContent(html_6f7095e69ce14ee2897b0f9ef122024c);
+        
+
+        marker_2db7aadcbe234d37a97e8b98eb076b99.bindPopup(popup_22d4ed953923442bb37ac8160243de54)
+        ;
+
+        
+    
+    
+            var marker_905d281e2da8452f828ab3541fbc3fbe = L.marker(
+                [10.35, -84.67],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_a3aa8ff0023142638558955a0dba8aae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_39c4dd8d3b15481b9a873dae9fa5ed64 = $(`<div id="html_39c4dd8d3b15481b9a873dae9fa5ed64" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela: Reserva Biológica Monteverde Laguna de Poco Sol, Sendero Río y Río Peñas Blancas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Bello, E. <strong>Identificadores:</strong> Prance, G.T.</div>`)[0];
+            popup_a3aa8ff0023142638558955a0dba8aae.setContent(html_39c4dd8d3b15481b9a873dae9fa5ed64);
+        
+
+        marker_905d281e2da8452f828ab3541fbc3fbe.bindPopup(popup_a3aa8ff0023142638558955a0dba8aae)
+        ;
+
+        
+    
+    
+            var marker_18c4a68a8a334f449a4aaa4c19a05adf = L.marker(
+                [9.583333, -82.6],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_ea80027304134774bcc71860f10821cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_faa0a13f5951411b93c93e72d4b85ad8 = $(`<div id="html_faa0a13f5951411b93c93e72d4b85ad8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Rio Gandoca from mouth ( Gandoca Bar ) to ca. 2 km upstream. Mainly Rhiz- ophora toward mouth; Raphia, Acrostichum and Montrichardia prominent upstream. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1996-08-17 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ea80027304134774bcc71860f10821cb.setContent(html_faa0a13f5951411b93c93e72d4b85ad8);
+        
+
+        marker_18c4a68a8a334f449a4aaa4c19a05adf.bindPopup(popup_ea80027304134774bcc71860f10821cb)
+        ;
+
+        
+    
+    
+            var marker_3c4722f2367b4c45991ae3595a0ca392 = L.marker(
+                [9.583333, -82.6],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_98fbac5b6f3b43c2b02899933831e4fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ce688fba0d84de594a76daed0427b85 = $(`<div id="html_0ce688fba0d84de594a76daed0427b85" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Rio Gandoca from mouth ( Gandoca Bar ) to ca. 2 km upstream. Mainly Rhiz- ophora toward mouth; Raphia, Acrostichum and Montrichardia prominent upstream. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1996-08-17 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_98fbac5b6f3b43c2b02899933831e4fe.setContent(html_0ce688fba0d84de594a76daed0427b85);
+        
+
+        marker_3c4722f2367b4c45991ae3595a0ca392.bindPopup(popup_98fbac5b6f3b43c2b02899933831e4fe)
+        ;
+
+        
+    
+    
+            var marker_f2bcdc8bbfdf4237a5333290149f2610 = L.marker(
+                [10.35, -84.666667],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_26646859282c438c8760c7e9411834ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2665298b66144933a3ba4159f5714fa6 = $(`<div id="html_2665298b66144933a3ba4159f5714fa6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Laguna de Poco Sol, Sendero Rio y Rio Penas Blancas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> Prance, Ghillean</div>`)[0];
+            popup_26646859282c438c8760c7e9411834ac.setContent(html_2665298b66144933a3ba4159f5714fa6);
+        
+
+        marker_f2bcdc8bbfdf4237a5333290149f2610.bindPopup(popup_26646859282c438c8760c7e9411834ac)
+        ;
+
+        
+    
+    
+            var marker_6695bca9fdae46c7a4b0fee99f02aafe = L.marker(
+                [10.316667, -84.716667],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_5bfa099d3a7a41e39c4a1b0f34f47b86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4cb2b0f0a9d4f669474d1e993844e0f = $(`<div id="html_b4cb2b0f0a9d4f669474d1e993844e0f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas, Finca Wilson Badilla. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> Prance, Ghillean</div>`)[0];
+            popup_5bfa099d3a7a41e39c4a1b0f34f47b86.setContent(html_b4cb2b0f0a9d4f669474d1e993844e0f);
+        
+
+        marker_6695bca9fdae46c7a4b0fee99f02aafe.bindPopup(popup_5bfa099d3a7a41e39c4a1b0f34f47b86)
+        ;
+
+        
+    
+    
+            var marker_3894199afbc14caea9f6480d048ce027 = L.marker(
+                [10.643889, -83.736111],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_c88e059a6dd64cb48a1285adc4b3f3e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a73efc94d5f84cf2a7f06681789df7a5 = $(`<div id="html_a73efc94d5f84cf2a7f06681789df7a5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-04-20 00:00:00+00:00 <strong>Recolectores:</strong> F. Araya <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_c88e059a6dd64cb48a1285adc4b3f3e7.setContent(html_a73efc94d5f84cf2a7f06681789df7a5);
+        
+
+        marker_3894199afbc14caea9f6480d048ce027.bindPopup(popup_c88e059a6dd64cb48a1285adc4b3f3e7)
+        ;
+
+        
+    
+    
+            var marker_3a14224bd68d4bd9a686f0a887af3b97 = L.marker(
+                [10.683333, -83.63333399999999],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_c3e25336d38142b9bd9cb4b15098f58e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8b5a35c5f494159bc98694d0d61f76f = $(`<div id="html_d8b5a35c5f494159bc98694d0d61f76f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Coronel, este de Laguna Danto; tall evergreen forest on gentle to moderately steep slopes <strong>Elevación:</strong> 95.0 m  <strong>Fecha:</strong> 1986-09-15 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_c3e25336d38142b9bd9cb4b15098f58e.setContent(html_d8b5a35c5f494159bc98694d0d61f76f);
+        
+
+        marker_3a14224bd68d4bd9a686f0a887af3b97.bindPopup(popup_c3e25336d38142b9bd9cb4b15098f58e)
+        ;
+
+        
+    
+    
+            var marker_af3e25bc0d084f50903054ea7ba87327 = L.marker(
+                [10.65, -83.677778],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_bea5f5808b3a4c5fa2ad3a14222f0a46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e1c5b5fa5ce48ca911bd691d84732a9 = $(`<div id="html_9e1c5b5fa5ce48ca911bd691d84732a9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hills 3 1/2 airline km S of Islas Buena Vista in the R. Colorado, 16 airline km SW of Barra del Colorado. <strong>Elevación:</strong> 65.0 m  <strong>Fecha:</strong> 1986-09-15 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_bea5f5808b3a4c5fa2ad3a14222f0a46.setContent(html_9e1c5b5fa5ce48ca911bd691d84732a9);
+        
+
+        marker_af3e25bc0d084f50903054ea7ba87327.bindPopup(popup_bea5f5808b3a4c5fa2ad3a14222f0a46)
+        ;
+
+        
+    
+    
+            var marker_ef3582e4daef45558520d75977880471 = L.marker(
+                [10.643889, -83.736111],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_ba084d2ea5634ce6a8f54a4e3805c7d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2f5c230d6974708ab0949e65d70cb1a = $(`<div id="html_f2f5c230d6974708ab0949e65d70cb1a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-09-21 00:00:00+00:00 <strong>Recolectores:</strong> F. Araya <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_ba084d2ea5634ce6a8f54a4e3805c7d9.setContent(html_f2f5c230d6974708ab0949e65d70cb1a);
+        
+
+        marker_ef3582e4daef45558520d75977880471.bindPopup(popup_ba084d2ea5634ce6a8f54a4e3805c7d9)
+        ;
+
+        
+    
+    
+            var marker_3b1398f395a14608aad44e095cd261c5 = L.marker(
+                [10.718055999999999, -85.045287],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_e2a5b1395354446094aa06ae876b4477 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fe7596c13284d94aae7e9146058cc29 = $(`<div id="html_6fe7596c13284d94aae7e9146058cc29" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bijagua. Albergue Heliconias. <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 2004-05-18 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Jose González <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_e2a5b1395354446094aa06ae876b4477.setContent(html_6fe7596c13284d94aae7e9146058cc29);
+        
+
+        marker_3b1398f395a14608aad44e095cd261c5.bindPopup(popup_e2a5b1395354446094aa06ae876b4477)
+        ;
+
+        
+    
+    
+            var marker_a1d5f5821f174e2ab848d178c9bc3cc0 = L.marker(
+                [10.718055999999999, -85.045287],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_d2e3e0b2b88047c9a4bffaa49c299446 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b5502b00ffb45fc9e339d9db2954cd3 = $(`<div id="html_6b5502b00ffb45fc9e339d9db2954cd3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bijagua. Albergue Heliconias. <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 2004-05-18 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Jose González <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_d2e3e0b2b88047c9a4bffaa49c299446.setContent(html_6b5502b00ffb45fc9e339d9db2954cd3);
+        
+
+        marker_a1d5f5821f174e2ab848d178c9bc3cc0.bindPopup(popup_d2e3e0b2b88047c9a4bffaa49c299446)
+        ;
+
+        
+    
+    
+            var marker_c46398f972cf45cfa8cd87bedcc11512 = L.marker(
+                [10.441667, -84.619444],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_f3c7b3befe4741d7b42a562c227b4ac9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a911544f069e4f6abaccc00ee2644654 = $(`<div id="html_a911544f069e4f6abaccc00ee2644654" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna, El bosque. R. B. Dendrobates. Alrededores Quebrada Piedrita. <strong>Elevación:</strong> 825.0 m  <strong>Fecha:</strong> 2007-05-12 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_f3c7b3befe4741d7b42a562c227b4ac9.setContent(html_a911544f069e4f6abaccc00ee2644654);
+        
+
+        marker_c46398f972cf45cfa8cd87bedcc11512.bindPopup(popup_f3c7b3befe4741d7b42a562c227b4ac9)
+        ;
+
+        
+    
+    
+            var marker_d50f191a85104da197b2c62168b9b000 = L.marker(
+                [10.441667, -84.619444],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_f2af415ea8a041c5a4cc67eac442e2cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff00216601ca4cdbbdf25f7b3fbe7e97 = $(`<div id="html_ff00216601ca4cdbbdf25f7b3fbe7e97" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna, El bosque. R. B. Dendrobates. Alrededores Quebrada Piedrita. <strong>Elevación:</strong> 825.0 m  <strong>Fecha:</strong> 2007-05-12 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_f2af415ea8a041c5a4cc67eac442e2cd.setContent(html_ff00216601ca4cdbbdf25f7b3fbe7e97);
+        
+
+        marker_d50f191a85104da197b2c62168b9b000.bindPopup(popup_f2af415ea8a041c5a4cc67eac442e2cd)
+        ;
+
+        
+    
+    
+            var marker_f7d4002561a14f79b9559f0e095087cd = L.marker(
+                [10.441667, -84.619444],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_ec349a1297d14b98b73137da32e12ac2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6929a20612df4a12bd7ed6120d0c6e51 = $(`<div id="html_6929a20612df4a12bd7ed6120d0c6e51" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fortuna, El bosque. R. B. Dendrobates. Alrededores Quebrada Piedrita. <strong>Elevación:</strong> 825.0 m  <strong>Fecha:</strong> 2007-05-12 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_ec349a1297d14b98b73137da32e12ac2.setContent(html_6929a20612df4a12bd7ed6120d0c6e51);
+        
+
+        marker_f7d4002561a14f79b9559f0e095087cd.bindPopup(popup_ec349a1297d14b98b73137da32e12ac2)
+        ;
+
+        
+    
+    
+            var marker_67a226fd25fb4b1699794751fca1961a = L.marker(
+                [9.579167, -82.605556],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_85e8b9d70e8d4313a80d4d598e561e2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51335de5324c4beb9d6ad4de3f5130d5 = $(`<div id="html_51335de5324c4beb9d6ad4de3f5130d5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Talamanca. Sixaola. Gandoca. Finca Cangrejo, Anai. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1995-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> D. Santamaria Aguilar, 25 Mar.</div>`)[0];
+            popup_85e8b9d70e8d4313a80d4d598e561e2c.setContent(html_51335de5324c4beb9d6ad4de3f5130d5);
+        
+
+        marker_67a226fd25fb4b1699794751fca1961a.bindPopup(popup_85e8b9d70e8d4313a80d4d598e561e2c)
+        ;
+
+        
+    
+    
+            var marker_8055965ccadb49d4a361353999f319c7 = L.marker(
+                [8.8, -83.1],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_519a5b3f2b5f4d07a95d9f6112d2a36a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5778d08ab0844118b5987ba5d386fd37 = $(`<div id="html_5778d08ab0844118b5987ba5d386fd37" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> J.B. Rob. & Cat. Wilson; Fila Costeña. Frente a la estación. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1993-03-19 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> G.T. Prance</div>`)[0];
+            popup_519a5b3f2b5f4d07a95d9f6112d2a36a.setContent(html_5778d08ab0844118b5987ba5d386fd37);
+        
+
+        marker_8055965ccadb49d4a361353999f319c7.bindPopup(popup_519a5b3f2b5f4d07a95d9f6112d2a36a)
+        ;
+
+        
+    
+    
+            var marker_96269b9146e24a1fac62c717c5898307 = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_78264f7f4722460eb30ea34735c11df3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c178e816ab7d4d3f9cd580d1cece1a58 = $(`<div id="html_c178e816ab7d4d3f9cd580d1cece1a58" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.N.F.S. Barra del Colorado; Llanura de Tortuguero. Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Flor Araya|Nelson Zamora|Jorge F. Corrales <strong>Identificadores:</strong> Q. Jiménez & N. Zamora (INB)</div>`)[0];
+            popup_78264f7f4722460eb30ea34735c11df3.setContent(html_c178e816ab7d4d3f9cd580d1cece1a58);
+        
+
+        marker_96269b9146e24a1fac62c717c5898307.bindPopup(popup_78264f7f4722460eb30ea34735c11df3)
+        ;
+
+        
+    
+    
+            var marker_7b5c5d1e99f442a5b35efb9fcd760858 = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_79f02d28295b411287d4d6e874829944 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d94bd3882d747578378ce56b4f58bad = $(`<div id="html_4d94bd3882d747578378ce56b4f58bad" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.N.F.S. Barra del Colorado; Llanura de Tortuguero. Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1993-09-21 00:00:00+00:00 <strong>Recolectores:</strong> Flor Araya <strong>Identificadores:</strong> G.T. Prance (K)</div>`)[0];
+            popup_79f02d28295b411287d4d6e874829944.setContent(html_4d94bd3882d747578378ce56b4f58bad);
+        
+
+        marker_7b5c5d1e99f442a5b35efb9fcd760858.bindPopup(popup_79f02d28295b411287d4d6e874829944)
+        ;
+
+        
+    
+    
+            var marker_bed77798b42547b8ac649c56acd81805 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_a158c23112664668a48b53d96faed469 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_760686d987574b8f9ea9dcee0f4f6e1a = $(`<div id="html_760686d987574b8f9ea9dcee0f4f6e1a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Detrás de puesto #1, a 1 m. de la cerca de Finca Murillo. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2006-10-31 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> J. González, 10/31/</div>`)[0];
+            popup_a158c23112664668a48b53d96faed469.setContent(html_760686d987574b8f9ea9dcee0f4f6e1a);
+        
+
+        marker_bed77798b42547b8ac649c56acd81805.bindPopup(popup_a158c23112664668a48b53d96faed469)
+        ;
+
+        
+    
+    
+            var marker_b9ff518f611a413985198a94c649f08d = L.marker(
+                [10.31, -84.71],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_716ebcd7465248aca3dcb6586bc5ab20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33bc08e4e09b40c7a0c36e83eefe43fd = $(`<div id="html_33bc08e4e09b40c7a0c36e83eefe43fd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Río Peñas Blancas, Finca Wilson Badilla. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1989-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C. <strong>Identificadores:</strong> G. T. Prance (K)</div>`)[0];
+            popup_716ebcd7465248aca3dcb6586bc5ab20.setContent(html_33bc08e4e09b40c7a0c36e83eefe43fd);
+        
+
+        marker_b9ff518f611a413985198a94c649f08d.bindPopup(popup_716ebcd7465248aca3dcb6586bc5ab20)
+        ;
+
+        
+    
+    
+            var marker_626de36769094abca2857ae5688693f5 = L.marker(
+                [10.35, -84.66],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_459b359655884e598f23fc3fdc1fe188 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b591bf608b6420ebd01cbe85757bb7e = $(`<div id="html_9b591bf608b6420ebd01cbe85757bb7e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Laguna de Poco Sol, Sendero Río y Río Peñas Blancas. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C. <strong>Identificadores:</strong> G.T. Prance</div>`)[0];
+            popup_459b359655884e598f23fc3fdc1fe188.setContent(html_9b591bf608b6420ebd01cbe85757bb7e);
+        
+
+        marker_626de36769094abca2857ae5688693f5.bindPopup(popup_459b359655884e598f23fc3fdc1fe188)
+        ;
+
+        
+    
+    
+            var marker_e8b4a7541aae4fc7b0c59b6794676498 = L.marker(
+                [11.033333, -83.9],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_bae8d35b642444b78d0d2b009a592ab1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a693d19742af48c5bf3b772e98318400 = $(`<div id="html_a693d19742af48c5bf3b772e98318400" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Río Indio, Caño Negro. <strong>Elevación:</strong> 5.0 m  <strong>Fecha:</strong> 1982-12-04 00:00:00+00:00 <strong>Recolectores:</strong> M. Araquistain <strong>Identificadores:</strong> G. T. Prance (K)</div>`)[0];
+            popup_bae8d35b642444b78d0d2b009a592ab1.setContent(html_a693d19742af48c5bf3b772e98318400);
+        
+
+        marker_e8b4a7541aae4fc7b0c59b6794676498.bindPopup(popup_bae8d35b642444b78d0d2b009a592ab1)
+        ;
+
+        
+    
+    
+            var marker_d3abc6c97ae2423fb1ca0f50e3deff68 = L.marker(
+                [10.683333, -83.633333],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_4fbe75af9ac94cf892e3c915c441e426 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e441e745c024c2a95422bc174590f9c = $(`<div id="html_0e441e745c024c2a95422bc174590f9c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Coronel, E of Laguna Danto. <strong>Elevación:</strong> 95.0 m  <strong>Fecha:</strong> 1986-09-15 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|O.M. Montiel J. <strong>Identificadores:</strong> G. T. Prance</div>`)[0];
+            popup_4fbe75af9ac94cf892e3c915c441e426.setContent(html_0e441e745c024c2a95422bc174590f9c);
+        
+
+        marker_d3abc6c97ae2423fb1ca0f50e3deff68.bindPopup(popup_4fbe75af9ac94cf892e3c915c441e426)
+        ;
+
+        
+    
+    
+            var marker_108a5a474793468888cf74c01f03bd24 = L.marker(
+                [10.65, -83.677778],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_62e8d9c8c8784dcab7f2055004536448 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d33dc2b46bc4967b4505cc81075fa12 = $(`<div id="html_8d33dc2b46bc4967b4505cc81075fa12" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hills 3 1/2 airline km S of Islas Buena Vista in the Río Colorado, 16 airline km SW of Barra del Colorado. <strong>Elevación:</strong> 65.0 m  <strong>Fecha:</strong> 1986-09-15 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch. <strong>Identificadores:</strong> G. T. Prance (K)</div>`)[0];
+            popup_62e8d9c8c8784dcab7f2055004536448.setContent(html_8d33dc2b46bc4967b4505cc81075fa12);
+        
+
+        marker_108a5a474793468888cf74c01f03bd24.bindPopup(popup_62e8d9c8c8784dcab7f2055004536448)
+        ;
+
+        
+    
+    
+            var marker_dca50bb532f14881b76e3ffc6bec828d = L.marker(
+                [11.016667, -84.2],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_59e525deb7da481a8718f205c037515a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b74ca87200384d63b3001a97903ba61e = $(`<div id="html_b74ca87200384d63b3001a97903ba61e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Indio-Maíz, Municipio de el Castillo, Cerro el Diablo. <strong>Elevación:</strong> 504.5 m  <strong>Fecha:</strong> 1997-01-06 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|I. Coronado G.|O. Aráuz|F. Flores <strong>Identificadores:</strong> G.T. Prance (K), Oct.</div>`)[0];
+            popup_59e525deb7da481a8718f205c037515a.setContent(html_b74ca87200384d63b3001a97903ba61e);
+        
+
+        marker_dca50bb532f14881b76e3ffc6bec828d.bindPopup(popup_59e525deb7da481a8718f205c037515a)
+        ;
+
+        
+    
+    
+            var marker_576f8d755e114a8dba82a9d8a7959217 = L.marker(
+                [9.583333, -82.6],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_a150f1d3400c40b5bb87997eba5d77de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72daa076455a453a987219429aeab244 = $(`<div id="html_72daa076455a453a987219429aeab244" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.V.S. Gandoca-Manzanillo.  Caribe Sur.  Gandoca. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1996-08-17 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> N. Zamora & R. Aguilar (INB)</div>`)[0];
+            popup_a150f1d3400c40b5bb87997eba5d77de.setContent(html_72daa076455a453a987219429aeab244);
+        
+
+        marker_576f8d755e114a8dba82a9d8a7959217.bindPopup(popup_a150f1d3400c40b5bb87997eba5d77de)
+        ;
+
+        
+    
+    
+            var marker_b55027cfd51140308da17891919c5886 = L.marker(
+                [10.85, -84.166667],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_1158462828764e5e9e85034d990a0f15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e53ad50fae2b495e8261543a0261e5e8 = $(`<div id="html_e53ad50fae2b495e8261543a0261e5e8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio el Castillo, Reserva Indio-Maiz, Cerro Bolívar. <strong>Elevación:</strong> 215.0 m  <strong>Fecha:</strong> 1998-11-29 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|F. Flores|W. Velásquez|O. Caballero <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1158462828764e5e9e85034d990a0f15.setContent(html_e53ad50fae2b495e8261543a0261e5e8);
+        
+
+        marker_b55027cfd51140308da17891919c5886.bindPopup(popup_1158462828764e5e9e85034d990a0f15)
+        ;
+
+        
+    
+    
+            var marker_353f5b12416343a3bf074cd27f58ae53 = L.marker(
+                [10.35, -84.67],
+                {}
+            ).addTo(marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e);
+        
+    
+        var popup_f9e6b2e2ba4b41e9aa7900f06f289a84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9114d17976d240b4b12a0a1e431a2e92 = $(`<div id="html_9114d17976d240b4b12a0a1e431a2e92" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde, Laguna de Poco Sol, Sendero Río y Río Peñas Blancas <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-09-30 00:00:00+00:00 <strong>Recolectores:</strong> E. Bello <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f9e6b2e2ba4b41e9aa7900f06f289a84.setContent(html_9114d17976d240b4b12a0a1e431a2e92);
+        
+
+        marker_353f5b12416343a3bf074cd27f58ae53.bindPopup(popup_f9e6b2e2ba4b41e9aa7900f06f289a84)
+        ;
+
+        
+    
+    
+            var layer_control_01f8b1a938c34fe8a19327c15a804657 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e5da5d103a5a45ddad71320499a467bb,
+                    "ESRI World Imagery" : tile_layer_1b6d5eccd4be43ff8193545d0b6ffee2,
+                },
+                overlays :  {
+                    "macro_element_1333fd18a94b4854bc95030ff9d0cf2e" : marker_cluster_1333fd18a94b4854bc95030ff9d0cf2e,
+                },
+            };
+            L.control.layers(
+                layer_control_01f8b1a938c34fe8a19327c15a804657.base_layers,
+                layer_control_01f8b1a938c34fe8a19327c15a804657.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_35e1edc2320f4739b54d2a3fbf1abe38);
+            tile_layer_1b6d5eccd4be43ff8193545d0b6ffee2.remove();
+        
+</script>

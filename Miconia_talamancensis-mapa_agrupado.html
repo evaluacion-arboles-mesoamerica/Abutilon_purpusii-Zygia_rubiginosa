@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cba704a6ba8a49ac86c1b594476a1ace {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cba704a6ba8a49ac86c1b594476a1ace" ></div>
+        
+</body>
+<script>    
+    
+            var map_cba704a6ba8a49ac86c1b594476a1ace = L.map(
+                "map_cba704a6ba8a49ac86c1b594476a1ace",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_cba704a6ba8a49ac86c1b594476a1ace);
+
+            
+
+        
+    
+            var tile_layer_07c3b1242e594d438fc9a17eb451255a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cba704a6ba8a49ac86c1b594476a1ace);
+        
+    
+            var tile_layer_1e7366391b684ad8960f29dab79898b5 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cba704a6ba8a49ac86c1b594476a1ace);
+        
+    
+            var marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b = L.markerClusterGroup(
+                {}
+            );
+            map_cba704a6ba8a49ac86c1b594476a1ace.addLayer(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+            var marker_b503ad6cd81f4bdcbe994baacbb0255a = L.marker(
+                [9.6, -83.76],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_85841954b9a84bca91fa1f682f44f780 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bd160be5f04414e8622085a9e5bc39f = $(`<div id="html_9bd160be5f04414e8622085a9e5bc39f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Interamerican Hwy ca. 25.0 km SW of road to La Cima and 4.1 km NW of Cerro Asunción, E end of abandoned section of road.Rocky slopes with patches of paramo, bamboo, and dense stands of shrubs, occasionally small trees. <strong>Elevación:</strong> 3200.0 m  <strong>Fecha:</strong> 1979-09-11 00:00:00+00:00 <strong>Recolectores:</strong> Stevens, Warren D. <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_85841954b9a84bca91fa1f682f44f780.setContent(html_9bd160be5f04414e8622085a9e5bc39f);
+        
+
+        marker_b503ad6cd81f4bdcbe994baacbb0255a.bindPopup(popup_85841954b9a84bca91fa1f682f44f780)
+        ;
+
+        
+    
+    
+            var marker_384e054d855349b68981e4e7a8d97623 = L.marker(
+                [9.26, -83.04],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_e7628f3122f74ad2a18b7cadfed0ac8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae79324ba39a4c2fae2aa1eddc163218 = $(`<div id="html_ae79324ba39a4c2fae2aa1eddc163218" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, southwestern foot of Cerro Kamuk. <strong>Elevación:</strong> 3300.0 m  <strong>Fecha:</strong> 1984-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Davidse, Gerrit <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_e7628f3122f74ad2a18b7cadfed0ac8e.setContent(html_ae79324ba39a4c2fae2aa1eddc163218);
+        
+
+        marker_384e054d855349b68981e4e7a8d97623.bindPopup(popup_e7628f3122f74ad2a18b7cadfed0ac8e)
+        ;
+
+        
+    
+    
+            var marker_57bd8157371a42e98b02dd06674eb3a7 = L.marker(
+                [9.53, -83.68],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_7795a2761aa343efbd82512ccbfb6479 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05ea06b721ac47c3b90867619d4f870a = $(`<div id="html_05ea06b721ac47c3b90867619d4f870a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Villa Mills in the vicinity of La Georgina. <strong>Elevación:</strong> 2800.0 m  <strong>Fecha:</strong> 1981-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, Frank <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_7795a2761aa343efbd82512ccbfb6479.setContent(html_05ea06b721ac47c3b90867619d4f870a);
+        
+
+        marker_57bd8157371a42e98b02dd06674eb3a7.bindPopup(popup_7795a2761aa343efbd82512ccbfb6479)
+        ;
+
+        
+    
+    
+            var marker_ab8fce089a4c4e74ad37e6e677381642 = L.marker(
+                [9.56, -83.7],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_f99b7d885276458a9ca8b018af8d7b8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d985bec3063f41c781df375bbe3b093c = $(`<div id="html_d985bec3063f41c781df375bbe3b093c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago/ San José Province Border.  Cordillera de Talamanca.  Ca.  3 km W of  Villa Mills.  Oak forest bordering  Spahgnum  bog. <strong>Elevación:</strong> 3000.0 m  <strong>Fecha:</strong> 1981-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Almeda, Frank <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_f99b7d885276458a9ca8b018af8d7b8f.setContent(html_d985bec3063f41c781df375bbe3b093c);
+        
+
+        marker_ab8fce089a4c4e74ad37e6e677381642.bindPopup(popup_f99b7d885276458a9ca8b018af8d7b8f)
+        ;
+
+        
+    
+    
+            var marker_006f35bf5b59440b940564551e936f1e = L.marker(
+                [9.616667, -83.81944],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_040f974493c541e1a628a580f3992cf0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f5e7be9f91a452caec13475d5034060 = $(`<div id="html_4f5e7be9f91a452caec13475d5034060" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro de la Muerte, entrando por el camino a Providencia, entrada frente a Los Chespiritos #2. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-11-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_040f974493c541e1a628a580f3992cf0.setContent(html_4f5e7be9f91a452caec13475d5034060);
+        
+
+        marker_006f35bf5b59440b940564551e936f1e.bindPopup(popup_040f974493c541e1a628a580f3992cf0)
+        ;
+
+        
+    
+    
+            var marker_af85e22936bf476d9de377f2615a1519 = L.marker(
+                [9.558333, -83.711111],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_04ae2098cdd64f8da365d4d260906b1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06e4b14cfffd480b922c6148ecddd5a8 = $(`<div id="html_06e4b14cfffd480b922c6148ecddd5a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Villa Mills. <strong>Elevación:</strong> 3100.0 m  <strong>Fecha:</strong> 1981-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Frank Almeda <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_04ae2098cdd64f8da365d4d260906b1b.setContent(html_06e4b14cfffd480b922c6148ecddd5a8);
+        
+
+        marker_af85e22936bf476d9de377f2615a1519.bindPopup(popup_04ae2098cdd64f8da365d4d260906b1b)
+        ;
+
+        
+    
+    
+            var marker_ba9af468591343698a42120e0283c76b = L.marker(
+                [9.616667, -83.81944399999999],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_aac88d8ad57f4f4286cbc8ff85f29b6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_08b3ba1fcccc4a89ab7f8b08af89ca28 = $(`<div id="html_08b3ba1fcccc4a89ab7f8b08af89ca28" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo, camino a Providencia entrando por Restaurant Chespiritos. <strong>Elevación:</strong> 2950.0 m  <strong>Fecha:</strong> 2003-11-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_aac88d8ad57f4f4286cbc8ff85f29b6e.setContent(html_08b3ba1fcccc4a89ab7f8b08af89ca28);
+        
+
+        marker_ba9af468591343698a42120e0283c76b.bindPopup(popup_aac88d8ad57f4f4286cbc8ff85f29b6e)
+        ;
+
+        
+    
+    
+            var marker_01963efc0b2b4ea4a1f1b90784d8e858 = L.marker(
+                [9.616667, -83.81944399999999],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_67cb8b924b4f45a1bfea62f1eee03941 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5fde38e7773401a84b613d0e4893691 = $(`<div id="html_c5fde38e7773401a84b613d0e4893691" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo, camino a Providencia entrando por Restaurant Chespiritos. <strong>Elevación:</strong> 2950.0 m  <strong>Fecha:</strong> 2003-11-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_67cb8b924b4f45a1bfea62f1eee03941.setContent(html_c5fde38e7773401a84b613d0e4893691);
+        
+
+        marker_01963efc0b2b4ea4a1f1b90784d8e858.bindPopup(popup_67cb8b924b4f45a1bfea62f1eee03941)
+        ;
+
+        
+    
+    
+            var marker_e272575361574cf5b8ddefdb84bc5ed5 = L.marker(
+                [9.616667, -83.81944399999999],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_e877cca578694c3dabee444d32b8a888 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_285a21422d714e47a4d63179b643006f = $(`<div id="html_285a21422d714e47a4d63179b643006f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo, camino a Providencia entrando por Restaurant Chespiritos. <strong>Elevación:</strong> 2950.0 m  <strong>Fecha:</strong> 2003-11-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_e877cca578694c3dabee444d32b8a888.setContent(html_285a21422d714e47a4d63179b643006f);
+        
+
+        marker_e272575361574cf5b8ddefdb84bc5ed5.bindPopup(popup_e877cca578694c3dabee444d32b8a888)
+        ;
+
+        
+    
+    
+            var marker_32d9fc10618242c4bb5ce585e16b5028 = L.marker(
+                [9.616667, -83.81944399999999],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_c4b65422597b48ff8699d4a253211cd3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cbf2f00a5fc4dad9f2956c86fb0eb57 = $(`<div id="html_2cbf2f00a5fc4dad9f2956c86fb0eb57" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Gerardo, camino a Providencia entrando por Restaurant Chespiritos. <strong>Elevación:</strong> 2950.0 m  <strong>Fecha:</strong> 2003-11-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Daniel Solano <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_c4b65422597b48ff8699d4a253211cd3.setContent(html_2cbf2f00a5fc4dad9f2956c86fb0eb57);
+        
+
+        marker_32d9fc10618242c4bb5ce585e16b5028.bindPopup(popup_c4b65422597b48ff8699d4a253211cd3)
+        ;
+
+        
+    
+    
+            var marker_409b9cb424c64f3fa4b7197ea1f39e5f = L.marker(
+                [9.296667, -83.048056],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_fe9a698bea294399b61aa0374a7f044d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61b481365ca246a8a55e2cd60a349078 = $(`<div id="html_61b481365ca246a8a55e2cd60a349078" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> 3200.0 m  <strong>Fecha:</strong> 2006-03-09 00:00:00+00:00 <strong>Recolectores:</strong> A.K. Monro & S. Knapp <strong>Identificadores:</strong> Daniel Santamaria</div>`)[0];
+            popup_fe9a698bea294399b61aa0374a7f044d.setContent(html_61b481365ca246a8a55e2cd60a349078);
+        
+
+        marker_409b9cb424c64f3fa4b7197ea1f39e5f.bindPopup(popup_fe9a698bea294399b61aa0374a7f044d)
+        ;
+
+        
+    
+    
+            var marker_7aaddd307159422abdea07ebd79dc678 = L.marker(
+                [9.268592, -83.04140100000001],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_be302daef20c41f38fc382a08aa66732 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f02b0ae3b8cf4ddc90c3a3bb2c3ca4cf = $(`<div id="html_f02b0ae3b8cf4ddc90c3a3bb2c3ca4cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad.  Cuenca del Sixaola.  1 km SO de Cerro Kámuk. <strong>Elevación:</strong> 3375.0 m  <strong>Fecha:</strong> 2002-04-15 00:00:00+00:00 <strong>Recolectores:</strong> L. González <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_be302daef20c41f38fc382a08aa66732.setContent(html_f02b0ae3b8cf4ddc90c3a3bb2c3ca4cf);
+        
+
+        marker_7aaddd307159422abdea07ebd79dc678.bindPopup(popup_be302daef20c41f38fc382a08aa66732)
+        ;
+
+        
+    
+    
+            var marker_86656eb295a5450285f3c50cf9ed76e9 = L.marker(
+                [9.427216, -83.488001],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_24eb4d16417c4a3d9aebf811c073ad85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_561a5376a89f436daebfbed64f82688e = $(`<div id="html_561a5376a89f436daebfbed64f82688e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Chirripó. Cuenca Térraba-Sierpe. Cerro Amo. <strong>Elevación:</strong> 3414.5 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> L. González <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_24eb4d16417c4a3d9aebf811c073ad85.setContent(html_561a5376a89f436daebfbed64f82688e);
+        
+
+        marker_86656eb295a5450285f3c50cf9ed76e9.bindPopup(popup_24eb4d16417c4a3d9aebf811c073ad85)
+        ;
+
+        
+    
+    
+            var marker_fdc86608e8794393977c97effe386ea6 = L.marker(
+                [9.07638, -82.91111],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_d80e8b8535c3495281cc96c9bf94e42d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_edea5c3d23a74092a8cae48f86e55438 = $(`<div id="html_edea5c3d23a74092a8cae48f86e55438" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional La Amistad. Cerro Pittier. Oak forest at high altitude dominated by 40 m x 100 cm tall Quercus, Oreopanax, Chusquea, Melastomataceae trees covered in mosses and lichens. <strong>Elevación:</strong> 2900.0 m  <strong>Fecha:</strong> 2003-03-09 00:00:00+00:00 <strong>Recolectores:</strong> Bente B. Klitgaard|Alex K. Monro|J. de Gracia <strong>Identificadores:</strong> Daniel Santamaría</div>`)[0];
+            popup_d80e8b8535c3495281cc96c9bf94e42d.setContent(html_edea5c3d23a74092a8cae48f86e55438);
+        
+
+        marker_fdc86608e8794393977c97effe386ea6.bindPopup(popup_d80e8b8535c3495281cc96c9bf94e42d)
+        ;
+
+        
+    
+    
+            var marker_0ab85e3702094a4e9510e2d91c18be43 = L.marker(
+                [9.27, -83.0417],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_4819fc91a6c6498596cfd5e26580dbca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a6826f9fd207480eb7425a163d50fef8 = $(`<div id="html_a6826f9fd207480eb7425a163d50fef8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, southwestern foot of Cerro Kámuk. <strong>Elevación:</strong> 3275.0 m  <strong>Fecha:</strong> 1984-03-24 00:00:00+00:00 <strong>Recolectores:</strong> G. Davidse, G. Herrera Ch. & R. Warner <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4819fc91a6c6498596cfd5e26580dbca.setContent(html_a6826f9fd207480eb7425a163d50fef8);
+        
+
+        marker_0ab85e3702094a4e9510e2d91c18be43.bindPopup(popup_4819fc91a6c6498596cfd5e26580dbca)
+        ;
+
+        
+    
+    
+            var marker_9ccb0106be5b4b73bf540f7abb011c60 = L.marker(
+                [8.75, -82.5],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_edfdd2864c164160a5ba268a04229afe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3dc03d64fef640238ffcda64e35b3d4b = $(`<div id="html_3dc03d64fef640238ffcda64e35b3d4b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcan Baru, along road to summit. <strong>Elevación:</strong> 3125.0 m  <strong>Fecha:</strong> 1986-06-10 00:00:00+00:00 <strong>Recolectores:</strong> G. D. McPherson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_edfdd2864c164160a5ba268a04229afe.setContent(html_3dc03d64fef640238ffcda64e35b3d4b);
+        
+
+        marker_9ccb0106be5b4b73bf540f7abb011c60.bindPopup(popup_edfdd2864c164160a5ba268a04229afe)
+        ;
+
+        
+    
+    
+            var marker_4500a0f0af374f5685d38aa2b003c05f = L.marker(
+                [9.266667, -83.041667],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_3c9ba8e0d90e4d6d81e7f6b880d3ad5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7037eb0534e340ba93f55ea8eeb65725 = $(`<div id="html_7037eb0534e340ba93f55ea8eeb65725" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, south-western foot of Cerro Kámuk. <strong>Elevación:</strong> 3275.0 m  <strong>Fecha:</strong> 1984-03-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Richard H. Warner <strong>Identificadores:</strong> D. Santamaria</div>`)[0];
+            popup_3c9ba8e0d90e4d6d81e7f6b880d3ad5b.setContent(html_7037eb0534e340ba93f55ea8eeb65725);
+        
+
+        marker_4500a0f0af374f5685d38aa2b003c05f.bindPopup(popup_3c9ba8e0d90e4d6d81e7f6b880d3ad5b)
+        ;
+
+        
+    
+    
+            var marker_f666e35bc5de4fcd9ff0d03767a4738a = L.marker(
+                [9.1118, -82.87755],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_faa6286fcaa940b7ab9ea4ac333e86bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18c3da8add664888be6ab250104586c0 = $(`<div id="html_18c3da8add664888be6ab250104586c0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> N of Camp 1 and going W on ridges towards Kamuk, S-facing slope of NW ridges. <strong>Elevación:</strong> 3200.0 m  <strong>Fecha:</strong> 2006-03-09 00:00:00+00:00 <strong>Recolectores:</strong> Alex K. Monro|Sandy Knapp <strong>Identificadores:</strong> Daniel Santamaría</div>`)[0];
+            popup_faa6286fcaa940b7ab9ea4ac333e86bd.setContent(html_18c3da8add664888be6ab250104586c0);
+        
+
+        marker_f666e35bc5de4fcd9ff0d03767a4738a.bindPopup(popup_faa6286fcaa940b7ab9ea4ac333e86bd)
+        ;
+
+        
+    
+    
+            var marker_f622599fb6fa4a31b81ec2a6715a7177 = L.marker(
+                [8.75, -82.5],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_9f8bd9c3bfdd499da909d9cbf64c11da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a2d0752d73c4bb7814e37c96bfc948e = $(`<div id="html_8a2d0752d73c4bb7814e37c96bfc948e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcan Baru, along road to summit.  Forested slopes. <strong>Elevación:</strong> 3125.0 m  <strong>Fecha:</strong> 1986-06-10 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> F. Almeda, 2000 (CAS)</div>`)[0];
+            popup_9f8bd9c3bfdd499da909d9cbf64c11da.setContent(html_8a2d0752d73c4bb7814e37c96bfc948e);
+        
+
+        marker_f622599fb6fa4a31b81ec2a6715a7177.bindPopup(popup_9f8bd9c3bfdd499da909d9cbf64c11da)
+        ;
+
+        
+    
+    
+            var marker_6857c1605c664f059d4a79a64ab0df6f = L.marker(
+                [8.81055, -82.55666],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_e566f130d9f54a219d0f7106fde4c7f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e68a1a8c4aa4ed9bb21f005291a2e2a = $(`<div id="html_9e68a1a8c4aa4ed9bb21f005291a2e2a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Top of high ridge N of summit of Volcán Barú, "Cerro Pavon" <strong>Elevación:</strong> 3322.32 m  <strong>Fecha:</strong> 1979-03-15 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|William G. D'Arcy <strong>Identificadores:</strong> F. Almeda, CAS</div>`)[0];
+            popup_e566f130d9f54a219d0f7106fde4c7f5.setContent(html_9e68a1a8c4aa4ed9bb21f005291a2e2a);
+        
+
+        marker_6857c1605c664f059d4a79a64ab0df6f.bindPopup(popup_e566f130d9f54a219d0f7106fde4c7f5)
+        ;
+
+        
+    
+    
+            var marker_ca1cef49eb37456ca430df8a2f1381a8 = L.marker(
+                [8.813611, -82.535278],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_d049c71f89f74be8b2c51182ab0717f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ae2a40d37644a4d9fe94708120c72b1 = $(`<div id="html_6ae2a40d37644a4d9fe94708120c72b1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Nivera, below summit of El Barú. <strong>Elevación:</strong> 3185.16 m  <strong>Fecha:</strong> 1979-03-14 00:00:00+00:00 <strong>Recolectores:</strong> William G. D'Arcy|Barry E. Hammel <strong>Identificadores:</strong> F. Almeda, 2000 (CAS)</div>`)[0];
+            popup_d049c71f89f74be8b2c51182ab0717f7.setContent(html_6ae2a40d37644a4d9fe94708120c72b1);
+        
+
+        marker_ca1cef49eb37456ca430df8a2f1381a8.bindPopup(popup_d049c71f89f74be8b2c51182ab0717f7)
+        ;
+
+        
+    
+    
+            var marker_f76ab109f00b490db6ccbe6edfbcaef2 = L.marker(
+                [9.55, -83.72],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_fb2aeee0342544f3a7cd256e9179fc55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5aa48904b26644c3ab7c47ff03c2d4b7 = $(`<div id="html_5aa48904b26644c3ab7c47ff03c2d4b7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cartago/San José province border, Cordillera de Talamanca, Villa Mills in the vicinity of La Georgina, cloud forest remnants <strong>Elevación:</strong> 2971.8 m  <strong>Fecha:</strong> 1981-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Frank Almeda|K. Nakai <strong>Identificadores:</strong> F. Almeda (CAS)</div>`)[0];
+            popup_fb2aeee0342544f3a7cd256e9179fc55.setContent(html_5aa48904b26644c3ab7c47ff03c2d4b7);
+        
+
+        marker_f76ab109f00b490db6ccbe6edfbcaef2.bindPopup(popup_fb2aeee0342544f3a7cd256e9179fc55)
+        ;
+
+        
+    
+    
+            var marker_97bb7730d347443c9f4a6f7b067c060b = L.marker(
+                [9.6, -83.766667],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_44f6427fc0c0484e997a65d8d52239fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e10ec90c1d1c44be87d17982ad3ea528 = $(`<div id="html_e10ec90c1d1c44be87d17982ad3ea528" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Interamerican Hwy ca. 25.0 km SE of road to La Cima and 4.1 km NW of Cerro Asunción, E end of abandoned section of road. <strong>Elevación:</strong> 3200.0 m  <strong>Fecha:</strong> 1979-09-01 00:00:00+00:00 <strong>Recolectores:</strong> Stevens, Warren D. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_44f6427fc0c0484e997a65d8d52239fe.setContent(html_e10ec90c1d1c44be87d17982ad3ea528);
+        
+
+        marker_97bb7730d347443c9f4a6f7b067c060b.bindPopup(popup_44f6427fc0c0484e997a65d8d52239fe)
+        ;
+
+        
+    
+    
+            var marker_41208a5501a3489eae18731e2ca43118 = L.marker(
+                [9.066667, -82.9],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_0ef2b007fb9d4a65a4a110af73e5ebe2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01ccb2a991f148aa9c0750403dd2abb8 = $(`<div id="html_01ccb2a991f148aa9c0750403dd2abb8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional La Amistad. Cerro Pittier. <strong>Elevación:</strong> 2900.0 m  <strong>Fecha:</strong> 2003-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Klitgaard, B.B.; Monro, A. K.; Degracia, J. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0ef2b007fb9d4a65a4a110af73e5ebe2.setContent(html_01ccb2a991f148aa9c0750403dd2abb8);
+        
+
+        marker_41208a5501a3489eae18731e2ca43118.bindPopup(popup_0ef2b007fb9d4a65a4a110af73e5ebe2)
+        ;
+
+        
+    
+    
+            var marker_2d8a0caffc674f578058b974e7c73206 = L.marker(
+                [9.266667, -83.041667],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_b39336cedc694c03be5ade1e98112a37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_286211cc7d42428bbae13154ecf9d2e5 = $(`<div id="html_286211cc7d42428bbae13154ecf9d2e5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, southwestern foot of Cerro Kámuk. <strong>Elevación:</strong> 3275.0 m  <strong>Fecha:</strong> 1984-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Davidse, Gerrit; Herrera Ch., G.; Warner, R. H. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b39336cedc694c03be5ade1e98112a37.setContent(html_286211cc7d42428bbae13154ecf9d2e5);
+        
+
+        marker_2d8a0caffc674f578058b974e7c73206.bindPopup(popup_b39336cedc694c03be5ade1e98112a37)
+        ;
+
+        
+    
+    
+            var marker_5278c9201ba94fe99bcaf78266eb4762 = L.marker(
+                [9.6, -83.77],
+                {}
+            ).addTo(marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b);
+        
+    
+        var popup_62055608f7bb4e3597e025a3acdf0a98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_600ae2ed223544a4aea286761eb84019 = $(`<div id="html_600ae2ed223544a4aea286761eb84019" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Interamerican Hwy ca 25.0 km SW of road to La Cima and 4.1 km NW of Cerro Asunción, E end of abandoned section of road. <strong>Elevación:</strong> 3200.0 m  <strong>Fecha:</strong> 1979-09-11 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_62055608f7bb4e3597e025a3acdf0a98.setContent(html_600ae2ed223544a4aea286761eb84019);
+        
+
+        marker_5278c9201ba94fe99bcaf78266eb4762.bindPopup(popup_62055608f7bb4e3597e025a3acdf0a98)
+        ;
+
+        
+    
+    
+            var layer_control_8d9d69b90bc44ff3b4b9c89734753ddf = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_07c3b1242e594d438fc9a17eb451255a,
+                    "ESRI World Imagery" : tile_layer_1e7366391b684ad8960f29dab79898b5,
+                },
+                overlays :  {
+                    "macro_element_aa5aa1c75f62425b9e7bf6233c6d2f9b" : marker_cluster_aa5aa1c75f62425b9e7bf6233c6d2f9b,
+                },
+            };
+            L.control.layers(
+                layer_control_8d9d69b90bc44ff3b4b9c89734753ddf.base_layers,
+                layer_control_8d9d69b90bc44ff3b4b9c89734753ddf.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_cba704a6ba8a49ac86c1b594476a1ace);
+            tile_layer_1e7366391b684ad8960f29dab79898b5.remove();
+        
+</script>

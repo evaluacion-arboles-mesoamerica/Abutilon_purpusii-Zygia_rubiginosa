@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_016284f2d1e144d1ba66b264c30d0688 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_016284f2d1e144d1ba66b264c30d0688" ></div>
+        
+</body>
+<script>    
+    
+            var map_016284f2d1e144d1ba66b264c30d0688 = L.map(
+                "map_016284f2d1e144d1ba66b264c30d0688",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_016284f2d1e144d1ba66b264c30d0688);
+
+            
+
+        
+    
+            var tile_layer_1248c0320184492c98a7f017855e1c04 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_016284f2d1e144d1ba66b264c30d0688);
+        
+    
+            var tile_layer_73a58466b2de496daf41edb53162970a = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_016284f2d1e144d1ba66b264c30d0688);
+        
+    
+            var marker_cluster_7536189cf82046fc9aba0cfd590cfd38 = L.markerClusterGroup(
+                {}
+            );
+            map_016284f2d1e144d1ba66b264c30d0688.addLayer(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+            var marker_c504c17997e647cfab9417455fe3c054 = L.marker(
+                [9.13, -82.96],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_206e77961a594c5ba41dce1e8914e854 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5b769f3401e44d2b8af09d0c8ced95a = $(`<div id="html_d5b769f3401e44d2b8af09d0c8ced95a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Valle del Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rican Panamanian Border <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 1984-09-08 00:00:00+00:00 <strong>Recolectores:</strong> Davidse, Gerrit <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_206e77961a594c5ba41dce1e8914e854.setContent(html_d5b769f3401e44d2b8af09d0c8ced95a);
+        
+
+        marker_c504c17997e647cfab9417455fe3c054.bindPopup(popup_206e77961a594c5ba41dce1e8914e854)
+        ;
+
+        
+    
+    
+            var marker_26562b9ecada4ff399f661a7f2f2f993 = L.marker(
+                [9.12, -82.96],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_c24b97ce73f847f2be23ffec78172fad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8890d3dbb4c34d16946b8cffb324a6af = $(`<div id="html_8890d3dbb4c34d16946b8cffb324a6af" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.I. La Amistad Cerros Tararia, valle del Silencio. Tararia <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> J. Quesada <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_c24b97ce73f847f2be23ffec78172fad.setContent(html_8890d3dbb4c34d16946b8cffb324a6af);
+        
+
+        marker_26562b9ecada4ff399f661a7f2f2f993.bindPopup(popup_c24b97ce73f847f2be23ffec78172fad)
+        ;
+
+        
+    
+    
+            var marker_899d2813372742fa9f36ca4782d5790d = L.marker(
+                [9.1006, -82.9675],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_24f102271a4e4b4cbe0865ce8c80bb16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2948c5df69874d04bd4c22afaf58049b = $(`<div id="html_2948c5df69874d04bd4c22afaf58049b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limón: Talamanca. P.N. La Amistad. Tararia. Valle del Silencio, Sendero El Alto <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-06-20 00:00:00+00:00 <strong>Recolectores:</strong> E. Alfaro & al. <strong>Identificadores:</strong> J. Morales</div>`)[0];
+            popup_24f102271a4e4b4cbe0865ce8c80bb16.setContent(html_2948c5df69874d04bd4c22afaf58049b);
+        
+
+        marker_899d2813372742fa9f36ca4782d5790d.bindPopup(popup_24f102271a4e4b4cbe0865ce8c80bb16)
+        ;
+
+        
+    
+    
+            var marker_8d08653466b34658befecf122752eb2d = L.marker(
+                [9.120833, -82.965278],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_0bcf59106767495c97c46926a4f76e6a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dae04bc2aefd43488576b7774f505cb1 = $(`<div id="html_dae04bc2aefd43488576b7774f505cb1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio. Cerro Asidbeta. Bosque Primario. <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Javier Quesada; Oscar Esquivel ; Carlos Mario Rodriguez ; Billen Gamboa R. ; Ronald Villalobos <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_0bcf59106767495c97c46926a4f76e6a.setContent(html_dae04bc2aefd43488576b7774f505cb1);
+        
+
+        marker_8d08653466b34658befecf122752eb2d.bindPopup(popup_0bcf59106767495c97c46926a4f76e6a)
+        ;
+
+        
+    
+    
+            var marker_81c4adaa4e8c4d9d8bceeed208ad9d45 = L.marker(
+                [9.120833, -82.965278],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_7ad5b1fc34d6477eaa86272cbfe76812 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0df6a27e7ebc4e64a61f33f5b7ac3516 = $(`<div id="html_0df6a27e7ebc4e64a61f33f5b7ac3516" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio. Cerro Asidbeta. Bosque Primario. <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Javier Quesada; Oscar Esquivel ; Carlos Mario Rodriguez ; Billen Gamboa R. ; Ronald Villalobos <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_7ad5b1fc34d6477eaa86272cbfe76812.setContent(html_0df6a27e7ebc4e64a61f33f5b7ac3516);
+        
+
+        marker_81c4adaa4e8c4d9d8bceeed208ad9d45.bindPopup(popup_7ad5b1fc34d6477eaa86272cbfe76812)
+        ;
+
+        
+    
+    
+            var marker_47bcde61cddf44c0b35c3de1a10444a0 = L.marker(
+                [9.120833, -82.965278],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_52a602e07f5a40c095b97b94ba268755 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3264c9215c664d7cb875bcf75d5fb587 = $(`<div id="html_3264c9215c664d7cb875bcf75d5fb587" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio. Cerro Asidbeta. Bosque Primario. <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Javier Quesada; Oscar Esquivel ; Carlos Mario Rodriguez ; Billen Gamboa R. ; Ronald Villalobos <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_52a602e07f5a40c095b97b94ba268755.setContent(html_3264c9215c664d7cb875bcf75d5fb587);
+        
+
+        marker_47bcde61cddf44c0b35c3de1a10444a0.bindPopup(popup_52a602e07f5a40c095b97b94ba268755)
+        ;
+
+        
+    
+    
+            var marker_65cc5923546a4e70a2c9f3f0c65f3b2e = L.marker(
+                [9.15, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_67d142b44e8247a3b7fcffe09d0052b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02b56f2aaf1241ff8d12833844fcf28f = $(`<div id="html_02b56f2aaf1241ff8d12833844fcf28f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Cerros Tararia (locally known as Tres Picos). <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1984-09-10 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_67d142b44e8247a3b7fcffe09d0052b8.setContent(html_02b56f2aaf1241ff8d12833844fcf28f);
+        
+
+        marker_65cc5923546a4e70a2c9f3f0c65f3b2e.bindPopup(popup_67d142b44e8247a3b7fcffe09d0052b8)
+        ;
+
+        
+    
+    
+            var marker_d0fa849341574fa180e773af89f646f6 = L.marker(
+                [9.2, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_4c69a1b2e6ed42dcac58acb8bca10f77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24c4574dfdd448e49d4971f7781def06 = $(`<div id="html_24c4574dfdd448e49d4971f7781def06" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, unnamend cordillera between the Rio Terbi an the Rio Sini. <strong>Elevación:</strong> 2575.0 m  <strong>Fecha:</strong> 1994-09-13 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_4c69a1b2e6ed42dcac58acb8bca10f77.setContent(html_24c4574dfdd448e49d4971f7781def06);
+        
+
+        marker_d0fa849341574fa180e773af89f646f6.bindPopup(popup_4c69a1b2e6ed42dcac58acb8bca10f77)
+        ;
+
+        
+    
+    
+            var marker_b46e30d3562c40f097a49035344e0ae2 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_e9600e3bae8c47509e00d9b8fb3ca4ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85b5a1def41c45f4ac00936efd9c4ddf = $(`<div id="html_85b5a1def41c45f4ac00936efd9c4ddf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rica-Panama. <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 1984-09-08 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_e9600e3bae8c47509e00d9b8fb3ca4ce.setContent(html_85b5a1def41c45f4ac00936efd9c4ddf);
+        
+
+        marker_b46e30d3562c40f097a49035344e0ae2.bindPopup(popup_e9600e3bae8c47509e00d9b8fb3ca4ce)
+        ;
+
+        
+    
+    
+            var marker_3d1888c58a9540599434542dce0f5715 = L.marker(
+                [9.066667, -82.983333],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_c70c571c95a547528426514a58caa428 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1401c06d72d0417a9149e196af59f5ed = $(`<div id="html_1401c06d72d0417a9149e196af59f5ed" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Altamira. Sendero a Casa de Coca al Valle del Silencio. <strong>Elevación:</strong> 2100.0 m  <strong>Fecha:</strong> 1995-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Luis Angulo <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_c70c571c95a547528426514a58caa428.setContent(html_1401c06d72d0417a9149e196af59f5ed);
+        
+
+        marker_3d1888c58a9540599434542dce0f5715.bindPopup(popup_c70c571c95a547528426514a58caa428)
+        ;
+
+        
+    
+    
+            var marker_2f891e5984e6485f853ebf9ec9727b88 = L.marker(
+                [9.066667, -82.983333],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_d6ca10c28fcd4822ab0d262a399031db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e28b6f2168b4a65b57b888a341f74dc = $(`<div id="html_8e28b6f2168b4a65b57b888a341f74dc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Altamira. Sendero a Casa de Coca al Valle del Silencio. <strong>Elevación:</strong> 2100.0 m  <strong>Fecha:</strong> 1995-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Luis Angulo <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_d6ca10c28fcd4822ab0d262a399031db.setContent(html_8e28b6f2168b4a65b57b888a341f74dc);
+        
+
+        marker_2f891e5984e6485f853ebf9ec9727b88.bindPopup(popup_d6ca10c28fcd4822ab0d262a399031db)
+        ;
+
+        
+    
+    
+            var marker_06460659facc4676ba436958787a2cae = L.marker(
+                [9.100725, -82.967548],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_ea018d8014f44f99b20927406bb0904e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70c58ab1fab04a1d9ab5889d3521371e = $(`<div id="html_70c58ab1fab04a1d9ab5889d3521371e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio, Vallecito, Los Sphagnum. <strong>Elevación:</strong> 2440.0 m  <strong>Fecha:</strong> 2003-06-20 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Milady Alfaro ; Hugo Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_ea018d8014f44f99b20927406bb0904e.setContent(html_70c58ab1fab04a1d9ab5889d3521371e);
+        
+
+        marker_06460659facc4676ba436958787a2cae.bindPopup(popup_ea018d8014f44f99b20927406bb0904e)
+        ;
+
+        
+    
+    
+            var marker_30f67e7c346d4a33894aafe18997877e = L.marker(
+                [9.100725, -82.967548],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_a64109e12967482cadcd92568434df85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1271c178201e4b68beff1111164733d4 = $(`<div id="html_1271c178201e4b68beff1111164733d4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio, Vallecito, Los Sphagnum. <strong>Elevación:</strong> 2440.0 m  <strong>Fecha:</strong> 2003-06-20 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Milady Alfaro ; Hugo Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_a64109e12967482cadcd92568434df85.setContent(html_1271c178201e4b68beff1111164733d4);
+        
+
+        marker_30f67e7c346d4a33894aafe18997877e.bindPopup(popup_a64109e12967482cadcd92568434df85)
+        ;
+
+        
+    
+    
+            var marker_e58be256a7ca4aeebe214161212f9665 = L.marker(
+                [9.100725, -82.967548],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_8c8a7cf9f9de4b328209e750b4ece7a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5753311f08224c7391cc7fdff1362f2e = $(`<div id="html_5753311f08224c7391cc7fdff1362f2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Silencio, Vallecito, Los Sphagnum. <strong>Elevación:</strong> 2440.0 m  <strong>Fecha:</strong> 2003-06-20 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Milady Alfaro ; Hugo Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_8c8a7cf9f9de4b328209e750b4ece7a1.setContent(html_5753311f08224c7391cc7fdff1362f2e);
+        
+
+        marker_e58be256a7ca4aeebe214161212f9665.bindPopup(popup_8c8a7cf9f9de4b328209e750b4ece7a1)
+        ;
+
+        
+    
+    
+            var marker_763adb723c38469ea08aa8f98f93c490 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_69f9dccaad774839be851b39cd0e03ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d241b050d8d49e0b185b36c210336c7 = $(`<div id="html_5d241b050d8d49e0b185b36c210336c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rica-Panama. <strong>Elevación:</strong> 2350.0 m  <strong>Fecha:</strong> 2003-06-24 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Roberto Delgado ; Milady Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_69f9dccaad774839be851b39cd0e03ee.setContent(html_5d241b050d8d49e0b185b36c210336c7);
+        
+
+        marker_763adb723c38469ea08aa8f98f93c490.bindPopup(popup_69f9dccaad774839be851b39cd0e03ee)
+        ;
+
+        
+    
+    
+            var marker_450890aad2cd4e399bdec16f7db40341 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_65bfd791e0f04ff5b782984cd78702d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66a9d40b8d314ad180bf793a504cf3dd = $(`<div id="html_66a9d40b8d314ad180bf793a504cf3dd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rica-Panama. <strong>Elevación:</strong> 2350.0 m  <strong>Fecha:</strong> 2003-06-24 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Roberto Delgado ; Milady Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_65bfd791e0f04ff5b782984cd78702d3.setContent(html_66a9d40b8d314ad180bf793a504cf3dd);
+        
+
+        marker_450890aad2cd4e399bdec16f7db40341.bindPopup(popup_65bfd791e0f04ff5b782984cd78702d3)
+        ;
+
+        
+    
+    
+            var marker_6260465c3ac344568bc07bc2f69e3b76 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_4cdd4c318dd84a8ba9d4f68849bec361 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f9d0c3a7501437bb3e66d2f7c3d664b = $(`<div id="html_3f9d0c3a7501437bb3e66d2f7c3d664b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rica-Panama. <strong>Elevación:</strong> 2350.0 m  <strong>Fecha:</strong> 2003-06-24 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Roberto Delgado ; Milady Alfaro <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_4cdd4c318dd84a8ba9d4f68849bec361.setContent(html_3f9d0c3a7501437bb3e66d2f7c3d664b);
+        
+
+        marker_6260465c3ac344568bc07bc2f69e3b76.bindPopup(popup_4cdd4c318dd84a8ba9d4f68849bec361)
+        ;
+
+        
+    
+    
+            var marker_83b368c395eb453f80c0243d0c5c6c83 = L.marker(
+                [9.120365, -82.96241500000001],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_ae09c831484442939df956be0b100062 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fe1a13472894dccb8b23816a6405b08 = $(`<div id="html_6fe1a13472894dccb8b23816a6405b08" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del silecio. <strong>Elevación:</strong> 2450.0 m  <strong>Fecha:</strong> 2004-11-19 00:00:00+00:00 <strong>Recolectores:</strong> Luis González; Armando Soto <strong>Identificadores:</strong> González, Luis</div>`)[0];
+            popup_ae09c831484442939df956be0b100062.setContent(html_6fe1a13472894dccb8b23816a6405b08);
+        
+
+        marker_83b368c395eb453f80c0243d0c5c6c83.bindPopup(popup_ae09c831484442939df956be0b100062)
+        ;
+
+        
+    
+    
+            var marker_327c1a96bd6c4f8eb3e65a32b356566b = L.marker(
+                [9.120365, -82.96241500000001],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_a3e05583372f435f82222875e0ec2f15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73aee98d9ce946cf91bee3532278e02e = $(`<div id="html_73aee98d9ce946cf91bee3532278e02e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del silecio. <strong>Elevación:</strong> 2450.0 m  <strong>Fecha:</strong> 2004-11-19 00:00:00+00:00 <strong>Recolectores:</strong> Luis González; Armando Soto <strong>Identificadores:</strong> González, Luis</div>`)[0];
+            popup_a3e05583372f435f82222875e0ec2f15.setContent(html_73aee98d9ce946cf91bee3532278e02e);
+        
+
+        marker_327c1a96bd6c4f8eb3e65a32b356566b.bindPopup(popup_a3e05583372f435f82222875e0ec2f15)
+        ;
+
+        
+    
+    
+            var marker_b2d6520e76fb4545b522b87a41b2fa34 = L.marker(
+                [9.127936, -82.960747],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_5ec059dc9f254266a6dd60bcb0736c3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1394427178244a3d9a10c4dec79fd3d0 = $(`<div id="html_1394427178244a3d9a10c4dec79fd3d0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> PILA Amistad, Valle del Silencio, entre estación y El Jardín, río Terbi. <strong>Elevación:</strong> 2410.0 m  <strong>Fecha:</strong> 2011-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_5ec059dc9f254266a6dd60bcb0736c3a.setContent(html_1394427178244a3d9a10c4dec79fd3d0);
+        
+
+        marker_b2d6520e76fb4545b522b87a41b2fa34.bindPopup(popup_5ec059dc9f254266a6dd60bcb0736c3a)
+        ;
+
+        
+    
+    
+            var marker_f1602f978dd44808b4af7376fb9fd11f = L.marker(
+                [9.158333, -82.975],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_b0c96638e8e84d74a7d77cc07c4d918e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5493d0742144596968cb96a5206acec = $(`<div id="html_a5493d0742144596968cb96a5206acec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, Cerros Tararia (locallyty know as Tres Picos) <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1984-09-10 00:00:00+00:00 <strong>Recolectores:</strong> G. Davidse; G. Herrera; M. H. Grayum <strong>Identificadores:</strong> C. L. Lundell</div>`)[0];
+            popup_b0c96638e8e84d74a7d77cc07c4d918e.setContent(html_a5493d0742144596968cb96a5206acec);
+        
+
+        marker_f1602f978dd44808b4af7376fb9fd11f.bindPopup(popup_b0c96638e8e84d74a7d77cc07c4d918e)
+        ;
+
+        
+    
+    
+            var marker_56ba97c7930641b297d3e4d7441d11c4 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_844c99030a9a4ea9a1c3729e8b724d7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_208d87fc46f04d8aa1d589d92f8b2e3e = $(`<div id="html_208d87fc46f04d8aa1d589d92f8b2e3e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rican-Panamanian border. <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 1984-09-08 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Michael H. Grayum <strong>Identificadores:</strong> Jon Ricketson (MO)</div>`)[0];
+            popup_844c99030a9a4ea9a1c3729e8b724d7f.setContent(html_208d87fc46f04d8aa1d589d92f8b2e3e);
+        
+
+        marker_56ba97c7930641b297d3e4d7441d11c4.bindPopup(popup_844c99030a9a4ea9a1c3729e8b724d7f)
+        ;
+
+        
+    
+    
+            var marker_b62d6dd9bbe74568ab9e527c6141671c = L.marker(
+                [9.0, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_59fd80788ada4030aadd571525505440 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d81446bc2ae4103a8772c6bee7ee1db = $(`<div id="html_4d81446bc2ae4103a8772c6bee7ee1db" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, unnamed cordillera between the Río Terbi and the Río Siní. <strong>Elevación:</strong> 2575.0 m  <strong>Fecha:</strong> 1984-09-13 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Michael H. Grayum <strong>Identificadores:</strong> Jon Ricketson (MO)</div>`)[0];
+            popup_59fd80788ada4030aadd571525505440.setContent(html_4d81446bc2ae4103a8772c6bee7ee1db);
+        
+
+        marker_b62d6dd9bbe74568ab9e527c6141671c.bindPopup(popup_59fd80788ada4030aadd571525505440)
+        ;
+
+        
+    
+    
+            var marker_126cf9bc06f74f5787cdc8e5dbf45b6c = L.marker(
+                [9.15, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_acd258e842e44e15b3615a7fe01b692f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7abd699dbbd240f0866ba6b3c646473f = $(`<div id="html_7abd699dbbd240f0866ba6b3c646473f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, Cerros Tararia (locally known as Tres Picos). <strong>Elevación:</strong> 2500.0 m  <strong>Fecha:</strong> 1984-09-10 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Michael H. Grayum <strong>Identificadores:</strong> Jon Ricketson (MO)</div>`)[0];
+            popup_acd258e842e44e15b3615a7fe01b692f.setContent(html_7abd699dbbd240f0866ba6b3c646473f);
+        
+
+        marker_126cf9bc06f74f5787cdc8e5dbf45b6c.bindPopup(popup_acd258e842e44e15b3615a7fe01b692f)
+        ;
+
+        
+    
+    
+            var marker_5a502e04c8c34dd98367988df8192516 = L.marker(
+                [9.133333, -82.966667],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_8ea586b24cf14fea931479ed0e48a906 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d0f993a152742159b670967485fffaf = $(`<div id="html_8d0f993a152742159b670967485fffaf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Talamanca, Atlantic slope, Valle de Silencio, area just N of Cerro Hoffman, 4 1/2 airline km W of the Costa Rican-Panamanian border. <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 1984-09-08 00:00:00+00:00 <strong>Recolectores:</strong> Gerrit Davidse|Gerardo Herrera Ch.|Michael H. Grayum <strong>Identificadores:</strong> Jon Ricketson (MO)</div>`)[0];
+            popup_8ea586b24cf14fea931479ed0e48a906.setContent(html_8d0f993a152742159b670967485fffaf);
+        
+
+        marker_5a502e04c8c34dd98367988df8192516.bindPopup(popup_8ea586b24cf14fea931479ed0e48a906)
+        ;
+
+        
+    
+    
+            var marker_1bdc483e006840f1a709300df4360b1a = L.marker(
+                [9.6666, -82.98333000000001],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_5b8b92fd3f3743538b39efdab95c22c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64fe204b2eb946239f90006e3a84053d = $(`<div id="html_64fe204b2eb946239f90006e3a84053d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Indígena La Amistad, Cordillera de Talamanca, Estación Altamira, Sendero a Casa de Coca al Valle del Silencio <strong>Elevación:</strong> 2100.0 m  <strong>Fecha:</strong> 1995-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Luis Angulo <strong>Identificadores:</strong> Jon Ricketson (MO),</div>`)[0];
+            popup_5b8b92fd3f3743538b39efdab95c22c2.setContent(html_64fe204b2eb946239f90006e3a84053d);
+        
+
+        marker_1bdc483e006840f1a709300df4360b1a.bindPopup(popup_5b8b92fd3f3743538b39efdab95c22c2)
+        ;
+
+        
+    
+    
+            var marker_3464294c3977472aae0b9d0318b3c834 = L.marker(
+                [9.0666, -82.9833],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_801180a04dec4f72ac26916fb3fbe9a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8270cd24b6e64bf6baeab810183a70ff = $(`<div id="html_8270cd24b6e64bf6baeab810183a70ff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.I. La Amistad, Cordillera de Talamanca, Estación Altamira, sendero a casa de Coca al Valle del Silencio <strong>Elevación:</strong> 2100.0 m  <strong>Fecha:</strong> 1995-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Luis Angulo <strong>Identificadores:</strong> Jon Ricketson (MO),</div>`)[0];
+            popup_801180a04dec4f72ac26916fb3fbe9a0.setContent(html_8270cd24b6e64bf6baeab810183a70ff);
+        
+
+        marker_3464294c3977472aae0b9d0318b3c834.bindPopup(popup_801180a04dec4f72ac26916fb3fbe9a0)
+        ;
+
+        
+    
+    
+            var marker_0ef130d6204948108f45f9de36ce2fbb = L.marker(
+                [9.1167, -82.95],
+                {}
+            ).addTo(marker_cluster_7536189cf82046fc9aba0cfd590cfd38);
+        
+    
+        var popup_5687db1686f94bc6be23ecf090a91a7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5776395b430b4ded80f5b433b6198fa4 = $(`<div id="html_5776395b430b4ded80f5b433b6198fa4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. la Amistad, Tararia, Cerros Tararia, Valle del Silencio <strong>Elevación:</strong> 2698.0 m  <strong>Fecha:</strong> 1997-04-01 00:00:00+00:00 <strong>Recolectores:</strong> F. J. Quesada <strong>Identificadores:</strong> Jon Ricketson (MO),</div>`)[0];
+            popup_5687db1686f94bc6be23ecf090a91a7f.setContent(html_5776395b430b4ded80f5b433b6198fa4);
+        
+
+        marker_0ef130d6204948108f45f9de36ce2fbb.bindPopup(popup_5687db1686f94bc6be23ecf090a91a7f)
+        ;
+
+        
+    
+    
+            var layer_control_38432b1949bf48b4bc73381f21b5fa2e = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1248c0320184492c98a7f017855e1c04,
+                    "ESRI World Imagery" : tile_layer_73a58466b2de496daf41edb53162970a,
+                },
+                overlays :  {
+                    "macro_element_7536189cf82046fc9aba0cfd590cfd38" : marker_cluster_7536189cf82046fc9aba0cfd590cfd38,
+                },
+            };
+            L.control.layers(
+                layer_control_38432b1949bf48b4bc73381f21b5fa2e.base_layers,
+                layer_control_38432b1949bf48b4bc73381f21b5fa2e.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_016284f2d1e144d1ba66b264c30d0688);
+            tile_layer_73a58466b2de496daf41edb53162970a.remove();
+        
+</script>

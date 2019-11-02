@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_451906cfa60246a9aa211a23c1955f4d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_451906cfa60246a9aa211a23c1955f4d" ></div>
+        
+</body>
+<script>    
+    
+            var map_451906cfa60246a9aa211a23c1955f4d = L.map(
+                "map_451906cfa60246a9aa211a23c1955f4d",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_451906cfa60246a9aa211a23c1955f4d);
+
+            
+
+        
+    
+            var tile_layer_d0a27b278a0143abb202c2bbd53b15d8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_451906cfa60246a9aa211a23c1955f4d);
+        
+    
+            var tile_layer_3fd4f717f37140eea8eb90a2f3f31dd5 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_451906cfa60246a9aa211a23c1955f4d);
+        
+    
+            var marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7 = L.markerClusterGroup(
+                {}
+            );
+            map_451906cfa60246a9aa211a23c1955f4d.addLayer(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+            var marker_38c20c28f7a54917b1e05d521f5c6e8e = L.marker(
+                [9.27, -83.24],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_868164782881446993049af8d9328882 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a1a8485e12f4de09d149634f65dcea7 = $(`<div id="html_4a1a8485e12f4de09d149634f65dcea7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.I. Ujarrás Cordillera de Talamanca. Reserva Biológica Dúrika. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1995-09-06 00:00:00+00:00 <strong>Recolectores:</strong> Jiménez, Quírico <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_868164782881446993049af8d9328882.setContent(html_4a1a8485e12f4de09d149634f65dcea7);
+        
+
+        marker_38c20c28f7a54917b1e05d521f5c6e8e.bindPopup(popup_868164782881446993049af8d9328882)
+        ;
+
+        
+    
+    
+            var marker_4426395ca86c454da415d4c201d4124e = L.marker(
+                [9.78, -83.39],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_e2b9c80eff8442a18d13d40bf02441c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d00c2c751f734b949943d3453d85c9a2 = $(`<div id="html_d00c2c751f734b949943d3453d85c9a2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chirripó Abajo. Bloriñak. <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1995-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_e2b9c80eff8442a18d13d40bf02441c0.setContent(html_d00c2c751f734b949943d3453d85c9a2);
+        
+
+        marker_4426395ca86c454da415d4c201d4124e.bindPopup(popup_e2b9c80eff8442a18d13d40bf02441c0)
+        ;
+
+        
+    
+    
+            var marker_20539b706ba84bf3a8f15d42fee0c2d1 = L.marker(
+                [9.29, -83.77],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_69d1e9e36c03494088c2644aff792858 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49ab32ccfae745668779142ec19b00ef = $(`<div id="html_49ab32ccfae745668779142ec19b00ef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tinamaste. Finca de los Suizos. Faldas de fila Tinamaste. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1998-05-29 00:00:00+00:00 <strong>Recolectores:</strong> Valverde, Oscar <strong>Identificadores:</strong> Valverde, Oscar</div>`)[0];
+            popup_69d1e9e36c03494088c2644aff792858.setContent(html_49ab32ccfae745668779142ec19b00ef);
+        
+
+        marker_20539b706ba84bf3a8f15d42fee0c2d1.bindPopup(popup_69d1e9e36c03494088c2644aff792858)
+        ;
+
+        
+    
+    
+            var marker_6a964da5fa924d7aa2af71b47ecbe82b = L.marker(
+                [9.29, -83.77],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_1acfaf11cec94b9d9e93a392f24f452a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ec7d7b468f9405693577992d6860dd4 = $(`<div id="html_6ec7d7b468f9405693577992d6860dd4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tinamaste.Finca de los Suizos <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Estrada, Armando <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_1acfaf11cec94b9d9e93a392f24f452a.setContent(html_6ec7d7b468f9405693577992d6860dd4);
+        
+
+        marker_6a964da5fa924d7aa2af71b47ecbe82b.bindPopup(popup_1acfaf11cec94b9d9e93a392f24f452a)
+        ;
+
+        
+    
+    
+            var marker_5e45b32b6a5b400a88e51f4bf585b8f6 = L.marker(
+                [-1.4628, -78.1869],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_567103ca8b5f4b618f2d3a4c81d7c005 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_08906d4a3ef144718ace6956dec70784 = $(`<div id="html_08906d4a3ef144718ace6956dec70784" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_567103ca8b5f4b618f2d3a4c81d7c005.setContent(html_08906d4a3ef144718ace6956dec70784);
+        
+
+        marker_5e45b32b6a5b400a88e51f4bf585b8f6.bindPopup(popup_567103ca8b5f4b618f2d3a4c81d7c005)
+        ;
+
+        
+    
+    
+            var marker_bedc217e28044c119072b2e81f1b83cd = L.marker(
+                [-1.4628, -78.1869],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_86acf61d017e4948addb2a5c5ea557e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ad2ea895abb4ea2ba8cb6e7f70795c1 = $(`<div id="html_8ad2ea895abb4ea2ba8cb6e7f70795c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_86acf61d017e4948addb2a5c5ea557e7.setContent(html_8ad2ea895abb4ea2ba8cb6e7f70795c1);
+        
+
+        marker_bedc217e28044c119072b2e81f1b83cd.bindPopup(popup_86acf61d017e4948addb2a5c5ea557e7)
+        ;
+
+        
+    
+    
+            var marker_3b36cb72d9974205b82b60aef20ae8f6 = L.marker(
+                [-9.1839, -74.14],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_5036de2bf5c5445891a3c7dd27d18ddd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c0646527dad499898c0febc8abc0203 = $(`<div id="html_5c0646527dad499898c0febc8abc0203" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5036de2bf5c5445891a3c7dd27d18ddd.setContent(html_5c0646527dad499898c0febc8abc0203);
+        
+
+        marker_3b36cb72d9974205b82b60aef20ae8f6.bindPopup(popup_5036de2bf5c5445891a3c7dd27d18ddd)
+        ;
+
+        
+    
+    
+            var marker_d86f5fddec074605bfc54153be27111c = L.marker(
+                [-1.9333330000000002, -77.81666700000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_82171bb54dc74b6cbe5c4d9ae6301853 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1b3c17370f743b68e5dd2b6ca88349f = $(`<div id="html_a1b3c17370f743b68e5dd2b6ca88349f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Comunidad Consuelo. 2 km abajo del puente sobre Rio Pastaza en cruce de vía Puyo-Macas. Aqua RAP Conservation International. PE13 / P99-E-BOT13. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1999-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Walter A. Palacios <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_82171bb54dc74b6cbe5c4d9ae6301853.setContent(html_a1b3c17370f743b68e5dd2b6ca88349f);
+        
+
+        marker_d86f5fddec074605bfc54153be27111c.bindPopup(popup_82171bb54dc74b6cbe5c4d9ae6301853)
+        ;
+
+        
+    
+    
+            var marker_3cbddd45ce1e4bd58f0536e8660d6b59 = L.marker(
+                [-9.1839, -74.14],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_61913b53e3ff484e96a031993d10f365 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2489d1ccb2a54204a34e82cc95eb1277 = $(`<div id="html_2489d1ccb2a54204a34e82cc95eb1277" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_61913b53e3ff484e96a031993d10f365.setContent(html_2489d1ccb2a54204a34e82cc95eb1277);
+        
+
+        marker_3cbddd45ce1e4bd58f0536e8660d6b59.bindPopup(popup_61913b53e3ff484e96a031993d10f365)
+        ;
+
+        
+    
+    
+            var marker_3dd8424d36214d8b9cf879e92596fddf = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_9d0ff5a4d6574f79ac25b143ece227cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f210ecd8e4c45989cef8acf1a91c4d1 = $(`<div id="html_5f210ecd8e4c45989cef8acf1a91c4d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1897-05-11 00:00:00+00:00 <strong>Recolectores:</strong> H. F. Pittier <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9d0ff5a4d6574f79ac25b143ece227cf.setContent(html_5f210ecd8e4c45989cef8acf1a91c4d1);
+        
+
+        marker_3dd8424d36214d8b9cf879e92596fddf.bindPopup(popup_9d0ff5a4d6574f79ac25b143ece227cf)
+        ;
+
+        
+    
+    
+            var marker_24e6c431e1b0429cb0dd14e411cbac2f = L.marker(
+                [9.275, -83.244445],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_36fff64dbea841af84b7eacb7943da10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c944027fc5f84fa890c6c4e8ecaacfc2 = $(`<div id="html_c944027fc5f84fa890c6c4e8ecaacfc2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biologica Durika. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1995-09-06 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_36fff64dbea841af84b7eacb7943da10.setContent(html_c944027fc5f84fa890c6c4e8ecaacfc2);
+        
+
+        marker_24e6c431e1b0429cb0dd14e411cbac2f.bindPopup(popup_36fff64dbea841af84b7eacb7943da10)
+        ;
+
+        
+    
+    
+            var marker_a869ed98a34c4a45b6a0e6ecf406e2a2 = L.marker(
+                [9.891667, -83.19166700000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_d6d0a7ffa86748c6ab05e1eb1af4d9fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4527919ce4ce4221bc5c511a3af80310 = $(`<div id="html_4527919ce4ce4221bc5c511a3af80310" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Asuncion. La Bomba. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1995-05-16 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d6d0a7ffa86748c6ab05e1eb1af4d9fe.setContent(html_4527919ce4ce4221bc5c511a3af80310);
+        
+
+        marker_a869ed98a34c4a45b6a0e6ecf406e2a2.bindPopup(popup_d6d0a7ffa86748c6ab05e1eb1af4d9fe)
+        ;
+
+        
+    
+    
+            var marker_c69c53b0075a4bef9fef21006258da6b = L.marker(
+                [10.728944, -85.08675],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_3e44da8420d845e1aee2e0c0a8260688 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b28c01a57ad4f8993ef651e46960e8f = $(`<div id="html_8b28c01a57ad4f8993ef651e46960e8f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Upala, Bijagua. Cuenca del Río Bijagua, Sendero a la Catarata del Río Bijagua, límite inferior de la Zona Protectora Miravalles. <strong>Elevación:</strong> 565.0 m  <strong>Fecha:</strong> 2015-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_3e44da8420d845e1aee2e0c0a8260688.setContent(html_8b28c01a57ad4f8993ef651e46960e8f);
+        
+
+        marker_c69c53b0075a4bef9fef21006258da6b.bindPopup(popup_3e44da8420d845e1aee2e0c0a8260688)
+        ;
+
+        
+    
+    
+            var marker_e5b341c5bdc74d748d36d73061dd7ade = L.marker(
+                [10.728944, -85.08675],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_5204e631d21048acaa8bc00c806472ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56e4963fcf2847eea32b7bab4093e5b1 = $(`<div id="html_56e4963fcf2847eea32b7bab4093e5b1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Upala, Bijagua. Cuenca del Río Bijagua, Sendero a la Catarata del Río Bijagua, límite inferior de la Zona Protectora Miravalles. <strong>Elevación:</strong> 565.0 m  <strong>Fecha:</strong> 2015-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5204e631d21048acaa8bc00c806472ce.setContent(html_56e4963fcf2847eea32b7bab4093e5b1);
+        
+
+        marker_e5b341c5bdc74d748d36d73061dd7ade.bindPopup(popup_5204e631d21048acaa8bc00c806472ce)
+        ;
+
+        
+    
+    
+            var marker_591a3481bfa84163830d56b9415892c9 = L.marker(
+                [10.728944, -85.08675],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_651dc1a5e24c4175a3451d34ff84a977 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90db8072d3d04649b25005846bef36b2 = $(`<div id="html_90db8072d3d04649b25005846bef36b2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Upala, Bijagua. Cuenca del Río Bijagua, Sendero a la Catarata del Río Bijagua, límite inferior de la Zona Protectora Miravalles. <strong>Elevación:</strong> 565.0 m  <strong>Fecha:</strong> 2015-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Soo-Yong Kim ; Jose Antonio Azofeifa Zuñiga <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_651dc1a5e24c4175a3451d34ff84a977.setContent(html_90db8072d3d04649b25005846bef36b2);
+        
+
+        marker_591a3481bfa84163830d56b9415892c9.bindPopup(popup_651dc1a5e24c4175a3451d34ff84a977)
+        ;
+
+        
+    
+    
+            var marker_3a053df31bcd41bda92ca3de74d1d353 = L.marker(
+                [-0.72, -77.67],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_fdf25b18a3294c34bf0802799cd622ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da98095353214ee28bb457b07f4588ec = $(`<div id="html_da98095353214ee28bb457b07f4588ec" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón Archidona. Faldas al sur del volcán Sumaco. Carretera Hollín Loreto, entre Huamaní y el Río Pucuno. Bosque pluvial Premontano. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> W. Palacios & C. Iguago <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_fdf25b18a3294c34bf0802799cd622ae.setContent(html_da98095353214ee28bb457b07f4588ec);
+        
+
+        marker_3a053df31bcd41bda92ca3de74d1d353.bindPopup(popup_fdf25b18a3294c34bf0802799cd622ae)
+        ;
+
+        
+    
+    
+            var marker_6df3a89dc6704403ba9a62155dbef080 = L.marker(
+                [-4.7169, -78.9631],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_2243fd90e9a84ca293ddb59e85e4e644 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_088d6185d56d481f83c45ac9a99217e6 = $(`<div id="html_088d6185d56d481f83c45ac9a99217e6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Palanda, Región de la Cordillera del Cóndor, sector sur. Parroquia San Francisco de Vergel. Playones. Cuenca alta del Río Vergel. <strong>Elevación:</strong> 2040.0 m  <strong>Fecha:</strong> 2005-03-17 00:00:00+00:00 <strong>Recolectores:</strong> W. Quizhpe, B. Medina, C. Aguirre & M. Prado <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2243fd90e9a84ca293ddb59e85e4e644.setContent(html_088d6185d56d481f83c45ac9a99217e6);
+        
+
+        marker_6df3a89dc6704403ba9a62155dbef080.bindPopup(popup_2243fd90e9a84ca293ddb59e85e4e644)
+        ;
+
+        
+    
+    
+            var marker_4c481ab509ec4d84812b451763c4ed62 = L.marker(
+                [-0.65, -76.43],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_bd45fc3f9c6240098d3412c5c1a571e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7023dada97424971a0c6c6f852281125 = $(`<div id="html_7023dada97424971a0c6c6f852281125" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sacha Lodge, 3 km NW of the village Añangu, near the Napo river. Tropical Moist Forest. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1995-06-09 00:00:00+00:00 <strong>Recolectores:</strong> J. L. Clark, L. Demattia & T. Miller <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_bd45fc3f9c6240098d3412c5c1a571e4.setContent(html_7023dada97424971a0c6c6f852281125);
+        
+
+        marker_4c481ab509ec4d84812b451763c4ed62.bindPopup(popup_bd45fc3f9c6240098d3412c5c1a571e4)
+        ;
+
+        
+    
+    
+            var marker_7b2828697df94830b38954bbc2cc7769 = L.marker(
+                [9.78055, -83.39583],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_08b789114bf14b65ad13281515599267 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f25c6ce02364207a568702e83f7e3d6 = $(`<div id="html_7f25c6ce02364207a568702e83f7e3d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tayutic, Area no Protegida, Chirripó abajo, Bloriñak <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1995-08-08 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> T.D. Pennington</div>`)[0];
+            popup_08b789114bf14b65ad13281515599267.setContent(html_7f25c6ce02364207a568702e83f7e3d6);
+        
+
+        marker_7b2828697df94830b38954bbc2cc7769.bindPopup(popup_08b789114bf14b65ad13281515599267)
+        ;
+
+        
+    
+    
+            var marker_6452e385a85a45bc8c50e2147b0dbd22 = L.marker(
+                [9.298333, -83.772222],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_d0b2f4939eed42f69beb926818e2d249 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bedcdd7c3d244e4b2f1788b0c8f6229 = $(`<div id="html_4bedcdd7c3d244e4b2f1788b0c8f6229" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Tinamaste. Finca de los suizos. Creciendo dentro del bosque. <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1998-12-03 00:00:00+00:00 <strong>Recolectores:</strong> Armando Estrada|Javier Solano|E. Volio <strong>Identificadores:</strong> A. Estrada</div>`)[0];
+            popup_d0b2f4939eed42f69beb926818e2d249.setContent(html_4bedcdd7c3d244e4b2f1788b0c8f6229);
+        
+
+        marker_6452e385a85a45bc8c50e2147b0dbd22.bindPopup(popup_d0b2f4939eed42f69beb926818e2d249)
+        ;
+
+        
+    
+    
+            var marker_c33c773f553e433f9e9222cbd686a9d0 = L.marker(
+                [-4.71694, -78.96305],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_f9e7df161451421baa47174e8f60e030 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f28b0c05c284a72814d7d80200c4921 = $(`<div id="html_5f28b0c05c284a72814d7d80200c4921" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Región de la Cordillera del Cóndor, sector sur. Parroquia San Francisco de Vergel. Playones. Cuenca alta del Río Vergel. Bosque muy húmdeo montano bajo. <strong>Elevación:</strong> 2040.0 m  <strong>Fecha:</strong> 2005-03-17 00:00:00+00:00 <strong>Recolectores:</strong> Wilson Quizhpe|Byron Medina|C. Aguirre|M. Prado <strong>Identificadores:</strong> T.D. Pennington (K)</div>`)[0];
+            popup_f9e7df161451421baa47174e8f60e030.setContent(html_5f28b0c05c284a72814d7d80200c4921);
+        
+
+        marker_c33c773f553e433f9e9222cbd686a9d0.bindPopup(popup_f9e7df161451421baa47174e8f60e030)
+        ;
+
+        
+    
+    
+            var marker_32d4f8292ff94fb895147f9673066f6c = L.marker(
+                [-0.783333, -76.5],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_98465a0c0be34efd80b0dbe7f4199260 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0dabcdbaaa7f4490a1ee7b55fd636353 = $(`<div id="html_0dabcdbaaa7f4490a1ee7b55fd636353" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Yasuní. Carretera y Oleoducto de Maxus en construcción, Km 46-52. Bosque húmedo Tropical. Bosque primario, colinas de suelo rojo. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1993-09-01 00:00:00+00:00 <strong>Recolectores:</strong> Milton Aulestia|Carlos Aulestia|J. Andi <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_98465a0c0be34efd80b0dbe7f4199260.setContent(html_0dabcdbaaa7f4490a1ee7b55fd636353);
+        
+
+        marker_32d4f8292ff94fb895147f9673066f6c.bindPopup(popup_98465a0c0be34efd80b0dbe7f4199260)
+        ;
+
+        
+    
+    
+            var marker_f2f1dca7a5724b7cb197cbd5e447f3aa = L.marker(
+                [-9.66666, -75.03333],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_f3a8dc40ad8947b7871bd3c8c91a63e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83f25af885864df2bd8926b11744607d = $(`<div id="html_83f25af885864df2bd8926b11744607d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Unidad Modelo de Manejo y Producción Forestal DANTAS. Dtto. Yuyapichis, Prov. Puerto Inca, Dpto. Huánuco. Bosque húmedo tropical. Bosque de lomadas, colinas bajas y terrazas altas. <strong>Elevación:</strong> 270.0 m  <strong>Fecha:</strong> 1990-10-16 00:00:00+00:00 <strong>Recolectores:</strong> C. Tello E. <strong>Identificadores:</strong> Botánicos Dantas</div>`)[0];
+            popup_f3a8dc40ad8947b7871bd3c8c91a63e3.setContent(html_83f25af885864df2bd8926b11744607d);
+        
+
+        marker_f2f1dca7a5724b7cb197cbd5e447f3aa.bindPopup(popup_f3a8dc40ad8947b7871bd3c8c91a63e3)
+        ;
+
+        
+    
+    
+            var marker_2962d232de624f8587235327007230fe = L.marker(
+                [-5.76666, -77.43333],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_8bd2194c9e224dac955fbaa1860aeb39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9173f5401f4849989d331c5426cc1ce7 = $(`<div id="html_9173f5401f4849989d331c5426cc1ce7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Prov, vicinity of Puente Serranoyacu, S sid eof valley. Montane rainforest. Vouchers for habitat analysis, Yellow-tailed Wooly Monkey study. <strong>Elevación:</strong> 1715.0 m  <strong>Fecha:</strong> 1983-08-01 00:00:00+00:00 <strong>Recolectores:</strong> Mariella Leo Luna <strong>Identificadores:</strong> W. Palacios</div>`)[0];
+            popup_8bd2194c9e224dac955fbaa1860aeb39.setContent(html_9173f5401f4849989d331c5426cc1ce7);
+        
+
+        marker_2962d232de624f8587235327007230fe.bindPopup(popup_8bd2194c9e224dac955fbaa1860aeb39)
+        ;
+
+        
+    
+    
+            var marker_0bb4f77241084917a692eac3b75ea103 = L.marker(
+                [-1.919, -77.82600000000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_990966f6636a45bc8d81d3d8f78844db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3f4919f895040a985b34b41c532dcd5 = $(`<div id="html_b3f4919f895040a985b34b41c532dcd5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Consuelo <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1999-07-12 00:00:00+00:00 <strong>Recolectores:</strong> Walter A. Palacios <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_990966f6636a45bc8d81d3d8f78844db.setContent(html_b3f4919f895040a985b34b41c532dcd5);
+        
+
+        marker_0bb4f77241084917a692eac3b75ea103.bindPopup(popup_990966f6636a45bc8d81d3d8f78844db)
+        ;
+
+        
+    
+    
+            var marker_113779b11a6d43a19e5cda4b407cbb40 = L.marker(
+                [-2.439194, -76.64663900000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_3556fc3979e44615b75996b1fcea3cbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44ff304f13414c3e9c177e660226cab8 = $(`<div id="html_44ff304f13414c3e9c177e660226cab8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque inundable por rios de aguas negras entre Tinkias y Chihirat, Parcela Tinkias Norte No 2 <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2011-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Gonzalo Rivas|Janeth Santiana|Lorena Benitez <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3556fc3979e44615b75996b1fcea3cbe.setContent(html_44ff304f13414c3e9c177e660226cab8);
+        
+
+        marker_113779b11a6d43a19e5cda4b407cbb40.bindPopup(popup_3556fc3979e44615b75996b1fcea3cbe)
+        ;
+
+        
+    
+    
+            var marker_346081d1ec3c4594b511fff2cdabc21a = L.marker(
+                [-0.044889, -77.36155600000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_5271d33f869e448983f7d87164e5c3ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff6bce25c3314ac2a171300f72641f41 = $(`<div id="html_ff6bce25c3314ac2a171300f72641f41" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Gonzalo Pizarro <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Gonzalo Rivas <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5271d33f869e448983f7d87164e5c3ca.setContent(html_ff6bce25c3314ac2a171300f72641f41);
+        
+
+        marker_346081d1ec3c4594b511fff2cdabc21a.bindPopup(popup_5271d33f869e448983f7d87164e5c3ca)
+        ;
+
+        
+    
+    
+            var marker_f0680122d9244dbb9de5710eb0bd2dfa = L.marker(
+                [-0.044889, -77.36155600000001],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_a01596d82e4d4facb98b87b2b4531962 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a38942504e7f4cbf9435f19870c75f71 = $(`<div id="html_a38942504e7f4cbf9435f19870c75f71" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Gonzalo Pizarro <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Gonzalo Rivas <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a01596d82e4d4facb98b87b2b4531962.setContent(html_a38942504e7f4cbf9435f19870c75f71);
+        
+
+        marker_f0680122d9244dbb9de5710eb0bd2dfa.bindPopup(popup_a01596d82e4d4facb98b87b2b4531962)
+        ;
+
+        
+    
+    
+            var marker_027adac25d124dfdbf86f2fb16dcf61a = L.marker(
+                [-0.65, -76.43],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_2b1ad20a224a49ae9839cf19761b2e40 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1030c08bcc942e3947d0d5456f072e0 = $(`<div id="html_a1030c08bcc942e3947d0d5456f072e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sacha Lodge, 3 km NW of the village Añangu, near the Napo river. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1995-06-09 00:00:00+00:00 <strong>Recolectores:</strong> J. L. Clark <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2b1ad20a224a49ae9839cf19761b2e40.setContent(html_a1030c08bcc942e3947d0d5456f072e0);
+        
+
+        marker_027adac25d124dfdbf86f2fb16dcf61a.bindPopup(popup_2b1ad20a224a49ae9839cf19761b2e40)
+        ;
+
+        
+    
+    
+            var marker_d5ce71c616bb4b7598c695e63d389f73 = L.marker(
+                [-10.291944, -75.247778],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_0704a6a85812461c85f5d4594ef7b367 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dcf038d78ba74bb88f783fd9beab046c = $(`<div id="html_dcf038d78ba74bb88f783fd9beab046c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito Palcazú. Iscozacín. Reserva Comunal Yanesha. Sector Playa Caliente. <strong>Elevación:</strong> 569.0 m  <strong>Fecha:</strong> 2013-05-24 00:00:00+00:00 <strong>Recolectores:</strong> Luis Valenzuela G.|Andrea Castagnola|Carlos Mogollón|Jaime Flores|Eduardo Cruz Ortíz|Gerry Shareva|Espiritu Ballesteros|A. Utani|K. Mercado <strong>Identificadores:</strong> L. Valenzuela. (HOXA)</div>`)[0];
+            popup_0704a6a85812461c85f5d4594ef7b367.setContent(html_dcf038d78ba74bb88f783fd9beab046c);
+        
+
+        marker_d5ce71c616bb4b7598c695e63d389f73.bindPopup(popup_0704a6a85812461c85f5d4594ef7b367)
+        ;
+
+        
+    
+    
+            var marker_ea3bf109880045ab83f4349126da7d19 = L.marker(
+                [-0.65, -76.43333],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_584ba7aa38474c3689c069b6889690ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14a38b36710f4e32ae9672237936bc7f = $(`<div id="html_14a38b36710f4e32ae9672237936bc7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sacha Lodge, 3 km NW of the village Añangu, near the Napo river. Tropical Moist Forest. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1995-06-09 00:00:00+00:00 <strong>Recolectores:</strong> John L. Clark|Demattia, Liz|Tim Miller <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_584ba7aa38474c3689c069b6889690ba.setContent(html_14a38b36710f4e32ae9672237936bc7f);
+        
+
+        marker_ea3bf109880045ab83f4349126da7d19.bindPopup(popup_584ba7aa38474c3689c069b6889690ba)
+        ;
+
+        
+    
+    
+            var marker_f51414350df4406b8e95a39ced7a302d = L.marker(
+                [-4.8666599999999995, -78.31694],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_9be17e736434420a9e75bda6fdd32542 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_038f397897f14740a575824a29b721ae = $(`<div id="html_038f397897f14740a575824a29b721ae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Dtto. Imaza, Pumpu Entsa. Bosque de rivera del Río Marañón. <strong>Elevación:</strong> 320.0 m  <strong>Fecha:</strong> 1997-11-13 00:00:00+00:00 <strong>Recolectores:</strong> Rodolfo Vásquez|et al. <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_9be17e736434420a9e75bda6fdd32542.setContent(html_038f397897f14740a575824a29b721ae);
+        
+
+        marker_f51414350df4406b8e95a39ced7a302d.bindPopup(popup_9be17e736434420a9e75bda6fdd32542)
+        ;
+
+        
+    
+    
+            var marker_d22a4863815e4aa09c4bce20eb718aba = L.marker(
+                [-0.7166600000000001, -77.66666],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_281ab91d25124dbfbaf7b6a3033630a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_792c8c8e361746bd89f03cddfee7749b = $(`<div id="html_792c8c8e361746bd89f03cddfee7749b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón Archidona. Faldas al sur del volcán Sumaco. Carretera Hollín  Loreto, entre Huamaní y el Río  Pucuno. Bosque pluvial Premontano.  Bosque primario; suelos volcánicos. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-10-18 00:00:00+00:00 <strong>Recolectores:</strong> Walter A. Palacios|Carlos Iguago <strong>Identificadores:</strong> T. Pennington (K)</div>`)[0];
+            popup_281ab91d25124dbfbaf7b6a3033630a3.setContent(html_792c8c8e361746bd89f03cddfee7749b);
+        
+
+        marker_d22a4863815e4aa09c4bce20eb718aba.bindPopup(popup_281ab91d25124dbfbaf7b6a3033630a3)
+        ;
+
+        
+    
+    
+            var marker_0d84c4acfd4a48cf8a2fa838c159b1d5 = L.marker(
+                [-0.716667, -77.666667],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_fad49e26851d4243899f2e4b588c097f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_456141fbab554cf6bae649619bf51d77 = $(`<div id="html_456141fbab554cf6bae649619bf51d77" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón Archidona. Faldas al sur del volcán Sumaco. Carretera Hollín  Loreto, entre Huamaní y el Río  Pucuno. Bosque pluvial Premontano.  Bosque primario; suelos volcánicos. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1989-10-18 00:00:00+00:00 <strong>Recolectores:</strong> Walter A. Palacios|Carlos Iguago <strong>Identificadores:</strong> T. Pennington (K)</div>`)[0];
+            popup_fad49e26851d4243899f2e4b588c097f.setContent(html_456141fbab554cf6bae649619bf51d77);
+        
+
+        marker_0d84c4acfd4a48cf8a2fa838c159b1d5.bindPopup(popup_fad49e26851d4243899f2e4b588c097f)
+        ;
+
+        
+    
+    
+            var marker_0f3b2d604d4543ecb07bcbca0ca8780b = L.marker(
+                [-0.68333, -77.68333],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_b298e6c90c27455dade103ffd1a2f40e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a397420355d64ceba9cab048802cf6c1 = $(`<div id="html_a397420355d64ceba9cab048802cf6c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Canton Archidona. Carretera Hollín-Loreto, Km 17. Cerca del Río Hollín. Bosque pluvial Premontano. Bosque primario. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1989-02-14 00:00:00+00:00 <strong>Recolectores:</strong> Fernando Hurtado|Shiguango, Juan <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_b298e6c90c27455dade103ffd1a2f40e.setContent(html_a397420355d64ceba9cab048802cf6c1);
+        
+
+        marker_0f3b2d604d4543ecb07bcbca0ca8780b.bindPopup(popup_b298e6c90c27455dade103ffd1a2f40e)
+        ;
+
+        
+    
+    
+            var marker_1b7e0a1f9acf4523a2fc410362514b1c = L.marker(
+                [-0.7166600000000001, -77.6],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_82b4bd3431c14abf903b6597559ba8d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43aa0607af5f428fbe76db6eaaddb46d = $(`<div id="html_43aa0607af5f428fbe76db6eaaddb46d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera Hollín-Loreto, km 40-50. Bosque pluvial Premontano. Bosque primario. Alrededores de la comunidad Huamaní y del Río Pucuno. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1988-10-10 00:00:00+00:00 <strong>Recolectores:</strong> Fernando Hurtado <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_82b4bd3431c14abf903b6597559ba8d4.setContent(html_43aa0607af5f428fbe76db6eaaddb46d);
+        
+
+        marker_1b7e0a1f9acf4523a2fc410362514b1c.bindPopup(popup_82b4bd3431c14abf903b6597559ba8d4)
+        ;
+
+        
+    
+    
+            var marker_081ea9c9adca4b7b85258aceec859eb2 = L.marker(
+                [-0.41666000000000003, -76.61666],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_f2918ef3d6734250b6857caddc78deb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b00c160aa374de59387bc7ac84a8a7f = $(`<div id="html_3b00c160aa374de59387bc7ac84a8a7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Pompeya. Carretera MAXUS km 3.9-5.2. Bosque primario. Bosque húmedo Tropical. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1992-12-14 00:00:00+00:00 <strong>Recolectores:</strong> Edgar Gudiño|Guillermo Grefa|Nestor Andi <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_f2918ef3d6734250b6857caddc78deb8.setContent(html_3b00c160aa374de59387bc7ac84a8a7f);
+        
+
+        marker_081ea9c9adca4b7b85258aceec859eb2.bindPopup(popup_f2918ef3d6734250b6857caddc78deb8)
+        ;
+
+        
+    
+    
+            var marker_1db0681d5e074c938d378ab873ee5631 = L.marker(
+                [-0.7, -77.733333],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_63ff7eaddfd74d2e897c0ea520d4cca1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_010cebe92f7e47a7aedf1565f6f16570 = $(`<div id="html_010cebe92f7e47a7aedf1565f6f16570" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Southern slopes of Volcán Sumaco. Hollin-Loreto road, Km 17, near Río Hollin Bridge. Premontane Rain Forest. Disturbed forest near road. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1989-02-11 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill|Mercedes Asanza <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_63ff7eaddfd74d2e897c0ea520d4cca1.setContent(html_010cebe92f7e47a7aedf1565f6f16570);
+        
+
+        marker_1db0681d5e074c938d378ab873ee5631.bindPopup(popup_63ff7eaddfd74d2e897c0ea520d4cca1)
+        ;
+
+        
+    
+    
+            var marker_c7699632bff84acd93b919e027c7ba3c = L.marker(
+                [-0.66666, -76.46666],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_902a116f86e143b2a165819a75285139 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69f65918c58e414e8d6b85c978487b13 = $(`<div id="html_69f65918c58e414e8d6b85c978487b13" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Yasuní. Carretera y oleoducto de Maxus en construcción, Km 38-45. Bosque húmedo Tropical. Bosque primario. Suelos rojos. <strong>Elevación:</strong> 244.0 m  <strong>Fecha:</strong> 1993-11-16 00:00:00+00:00 <strong>Recolectores:</strong> Alberto Dik <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_902a116f86e143b2a165819a75285139.setContent(html_69f65918c58e414e8d6b85c978487b13);
+        
+
+        marker_c7699632bff84acd93b919e027c7ba3c.bindPopup(popup_902a116f86e143b2a165819a75285139)
+        ;
+
+        
+    
+    
+            var marker_6ba29377833541d787b534e5315a839e = L.marker(
+                [-0.783333, -76.5],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_26f09629a6f34907b1f47d2fac77cd0c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aebd60e6b404482f84d8cf9c57bd8047 = $(`<div id="html_aebd60e6b404482f84d8cf9c57bd8047" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Yasuní. Carretera y oleoducto de Maxus en construcción, Km 46-52. Bosque húmedo Tropical. Bosque primario. Colinas de suelo rojo. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1993-09-01 00:00:00+00:00 <strong>Recolectores:</strong> Milton Aulestia|J. Andi <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_26f09629a6f34907b1f47d2fac77cd0c.setContent(html_aebd60e6b404482f84d8cf9c57bd8047);
+        
+
+        marker_6ba29377833541d787b534e5315a839e.bindPopup(popup_26f09629a6f34907b1f47d2fac77cd0c)
+        ;
+
+        
+    
+    
+            var marker_8aa49eb6790941b1b94b4b55e0798e71 = L.marker(
+                [-0.7, -76.46666],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_b26dd086e0cb4648a25c86e817ec31e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8aa05fd9902462ca91f300957c45e2e = $(`<div id="html_e8aa05fd9902462ca91f300957c45e2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Yasuni National Park. Kms 46-47 of the Maxus/YPF pipeline road, in the UC Davis primate plot. Mature terra firme forest on hilly terrain. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Nigel Pitman <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_b26dd086e0cb4648a25c86e817ec31e9.setContent(html_e8aa05fd9902462ca91f300957c45e2e);
+        
+
+        marker_8aa49eb6790941b1b94b4b55e0798e71.bindPopup(popup_b26dd086e0cb4648a25c86e817ec31e9)
+        ;
+
+        
+    
+    
+            var marker_632fd5f93b494583b7bc24714b9e622d = L.marker(
+                [-0.7, -76.46666],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_8ba03e3112c4466488c219f8ab0bce7e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0eeeddec9600446fa3b709dfcfce6375 = $(`<div id="html_0eeeddec9600446fa3b709dfcfce6375" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Yasuni National Park. Kms 46-47 of the Maxus/YPF pipeline road, in the UC Davis primate plot. Mature terra firme forest on hilly terrain. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1999-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Nigel Pitman <strong>Identificadores:</strong> W. Palacios (QCNE)</div>`)[0];
+            popup_8ba03e3112c4466488c219f8ab0bce7e.setContent(html_0eeeddec9600446fa3b709dfcfce6375);
+        
+
+        marker_632fd5f93b494583b7bc24714b9e622d.bindPopup(popup_8ba03e3112c4466488c219f8ab0bce7e)
+        ;
+
+        
+    
+    
+            var marker_c8592bce10684cbd895b61ed3ac21aef = L.marker(
+                [9.89, -83.65],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_0398146f1ba34ba38a249ac06022230f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8655004b8a414ad8a9577e8168b62170 = $(`<div id="html_8655004b8a414ad8a9577e8168b62170" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> CATIE <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1975-10-18 00:00:00+00:00 <strong>Recolectores:</strong> Luis J. Poveda Álvarez <strong>Identificadores:</strong> T.D. Pennington, 1979 (K)</div>`)[0];
+            popup_0398146f1ba34ba38a249ac06022230f.setContent(html_8655004b8a414ad8a9577e8168b62170);
+        
+
+        marker_c8592bce10684cbd895b61ed3ac21aef.bindPopup(popup_0398146f1ba34ba38a249ac06022230f)
+        ;
+
+        
+    
+    
+            var marker_c8b4bcd636ea486989807eb30f02b615 = L.marker(
+                [9.89166, -83.65305],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_872299076cf042ab948b1fe21bdb76ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63fe91f13bb34e55b1d3d62340585e4f = $(`<div id="html_63fe91f13bb34e55b1d3d62340585e4f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> En borde del bosque costado sur del editicio principal del CATIE, Turrialba <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1985-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Luis J. Poveda Álvarez|Charles Veiman|M. Barrios|Ma. Eugenia Benarides <strong>Identificadores:</strong> T.D. Pennington</div>`)[0];
+            popup_872299076cf042ab948b1fe21bdb76ef.setContent(html_63fe91f13bb34e55b1d3d62340585e4f);
+        
+
+        marker_c8b4bcd636ea486989807eb30f02b615.bindPopup(popup_872299076cf042ab948b1fe21bdb76ef)
+        ;
+
+        
+    
+    
+            var marker_e7fd8c7ff4bd4d93a719047931265892 = L.marker(
+                [10.28388, -84.43],
+                {}
+            ).addTo(marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7);
+        
+    
+        var popup_e1a460dc568345349701c44f44a7a7bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_125dc3d2ad554c288bf9ac51b9e752a8 = $(`<div id="html_125dc3d2ad554c288bf9ac51b9e752a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Edge forest, Caribbean rain forest, Sucre <strong>Elevación:</strong> 1025.0 m  <strong>Fecha:</strong> 1939-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Austin Smith <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_e1a460dc568345349701c44f44a7a7bf.setContent(html_125dc3d2ad554c288bf9ac51b9e752a8);
+        
+
+        marker_e7fd8c7ff4bd4d93a719047931265892.bindPopup(popup_e1a460dc568345349701c44f44a7a7bf)
+        ;
+
+        
+    
+    
+            var layer_control_f28b9d7e045a4ad49badf2f762a838c0 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d0a27b278a0143abb202c2bbd53b15d8,
+                    "ESRI World Imagery" : tile_layer_3fd4f717f37140eea8eb90a2f3f31dd5,
+                },
+                overlays :  {
+                    "macro_element_c73abb2fb1134bb3975be2188dd7d0c7" : marker_cluster_c73abb2fb1134bb3975be2188dd7d0c7,
+                },
+            };
+            L.control.layers(
+                layer_control_f28b9d7e045a4ad49badf2f762a838c0.base_layers,
+                layer_control_f28b9d7e045a4ad49badf2f762a838c0.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_451906cfa60246a9aa211a23c1955f4d);
+            tile_layer_3fd4f717f37140eea8eb90a2f3f31dd5.remove();
+        
+</script>

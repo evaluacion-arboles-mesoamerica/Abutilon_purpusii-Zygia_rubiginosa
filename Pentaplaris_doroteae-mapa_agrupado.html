@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6f3a0a235bec486b97bb3ca304ec9720 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6f3a0a235bec486b97bb3ca304ec9720" ></div>
+        
+</body>
+<script>    
+    
+            var map_6f3a0a235bec486b97bb3ca304ec9720 = L.map(
+                "map_6f3a0a235bec486b97bb3ca304ec9720",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_6f3a0a235bec486b97bb3ca304ec9720);
+
+            
+
+        
+    
+            var tile_layer_e6d413cd80a140dcb6c5830228e4e5a3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6f3a0a235bec486b97bb3ca304ec9720);
+        
+    
+            var tile_layer_1fc04498a50345a9b2c7a88297967856 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6f3a0a235bec486b97bb3ca304ec9720);
+        
+    
+            var marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7 = L.markerClusterGroup(
+                {}
+            );
+            map_6f3a0a235bec486b97bb3ca304ec9720.addLayer(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+            var marker_cec9c5430d804a178fe7b518c505b906 = L.marker(
+                [8.25, -74.06666700000001],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_113b148021ad4a2895bcd1531d610a01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7864b1570fdb4f8c9d0faeb0aa31d8dd = $(`<div id="html_7864b1570fdb4f8c9d0faeb0aa31d8dd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of Barrancabermeja. Mico-Ahumado camp. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1966-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Bruijn J de <strong>Identificadores:</strong> Dorr LJ</div>`)[0];
+            popup_113b148021ad4a2895bcd1531d610a01.setContent(html_7864b1570fdb4f8c9d0faeb0aa31d8dd);
+        
+
+        marker_cec9c5430d804a178fe7b518c505b906.bindPopup(popup_113b148021ad4a2895bcd1531d610a01)
+        ;
+
+        
+    
+    
+            var marker_c19023045c56488cb1ca6cb9f33270c7 = L.marker(
+                [8.25, -74.06666700000001],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_cb5edaa05c294f47945951fb44f6f6e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f80ac2d0454a48bfbbe693b9bb7257a1 = $(`<div id="html_f80ac2d0454a48bfbbe693b9bb7257a1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of Barrancabermeja. Mico-Ahumado camp. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1966-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Bruijn J de <strong>Identificadores:</strong> Dorr LJ</div>`)[0];
+            popup_cb5edaa05c294f47945951fb44f6f6e3.setContent(html_f80ac2d0454a48bfbbe693b9bb7257a1);
+        
+
+        marker_c19023045c56488cb1ca6cb9f33270c7.bindPopup(popup_cb5edaa05c294f47945951fb44f6f6e3)
+        ;
+
+        
+    
+    
+            var marker_2ee87836165941a5b0300944f29838ac = L.marker(
+                [8.25, -74.06666700000001],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_73399f2d18be4305954f55b84b0f5c5d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8644297b835a4ad68bf8e84c1cd97354 = $(`<div id="html_8644297b835a4ad68bf8e84c1cd97354" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of Barrancabermeja. Mico-Ahumado camp. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1966-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Bruijn J de <strong>Identificadores:</strong> Dorr LJ</div>`)[0];
+            popup_73399f2d18be4305954f55b84b0f5c5d.setContent(html_8644297b835a4ad68bf8e84c1cd97354);
+        
+
+        marker_2ee87836165941a5b0300944f29838ac.bindPopup(popup_73399f2d18be4305954f55b84b0f5c5d)
+        ;
+
+        
+    
+    
+            var marker_88f115270fc849fea80b4c3ec093b62e = L.marker(
+                [8.096781, -76.522442],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_f3f022132590474fa4cb81f397ccc732 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea97d8176acd407ca6222be5dc1207b1 = $(`<div id="html_ea97d8176acd407ca6222be5dc1207b1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> 436.0 m  <strong>Fecha:</strong> 2011-12-17 00:00:00+00:00 <strong>Recolectores:</strong> Suescún D. | García L. <strong>Identificadores:</strong> Idárraga A.</div>`)[0];
+            popup_f3f022132590474fa4cb81f397ccc732.setContent(html_ea97d8176acd407ca6222be5dc1207b1);
+        
+
+        marker_88f115270fc849fea80b4c3ec093b62e.bindPopup(popup_f3f022132590474fa4cb81f397ccc732)
+        ;
+
+        
+    
+    
+            var marker_9e53bfe2d50f48df943a75fe31ebe267 = L.marker(
+                [8.276667, -76.766667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_c831a4da4a854849bf3a07d86efba805 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c92beca183d94f5989f71ca92c311d6e = $(`<div id="html_c92beca183d94f5989f71ca92c311d6e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Resguardo indígena Caimán Nuevo <strong>Elevación:</strong> 80.0 m  <strong>Fecha:</strong> 1993-01-21 00:00:00+00:00 <strong>Recolectores:</strong> Castaño L. | Márquez S. | López N. | Melendrez J. <strong>Identificadores:</strong> Alverson W.</div>`)[0];
+            popup_c831a4da4a854849bf3a07d86efba805.setContent(html_c92beca183d94f5989f71ca92c311d6e);
+        
+
+        marker_9e53bfe2d50f48df943a75fe31ebe267.bindPopup(popup_c831a4da4a854849bf3a07d86efba805)
+        ;
+
+        
+    
+    
+            var marker_c78b3bebf5b948ebb0d189558a1e1956 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_05858112587842a7891ad44b0a9b149e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21b1a2c3e1b248758a288ee8bbe23796 = $(`<div id="html_21b1a2c3e1b248758a288ee8bbe23796" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada Sur, Fila Retinto, cerros justamente al Norte de Palmar Norte, filas y laderas del cañon de la Quebrada Benjamín. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_05858112587842a7891ad44b0a9b149e.setContent(html_21b1a2c3e1b248758a288ee8bbe23796);
+        
+
+        marker_c78b3bebf5b948ebb0d189558a1e1956.bindPopup(popup_05858112587842a7891ad44b0a9b149e)
+        ;
+
+        
+    
+    
+            var marker_88d21002bbc1467d8214a2f35ee8a627 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_48366b58e4854bb09c70148a8da06ef1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_abc69a9573654b83bb01978fd66606bb = $(`<div id="html_abc69a9573654b83bb01978fd66606bb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada Sur, Fila Retinto, cerros justamente al Norte de Palmar Norte, filas y laderas del cañon de la Quebrada Benjamín. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_48366b58e4854bb09c70148a8da06ef1.setContent(html_abc69a9573654b83bb01978fd66606bb);
+        
+
+        marker_88d21002bbc1467d8214a2f35ee8a627.bindPopup(popup_48366b58e4854bb09c70148a8da06ef1)
+        ;
+
+        
+    
+    
+            var marker_732fa3e8f94d4483ab9a1bc4a94eb6e1 = L.marker(
+                [8.98, -83.96],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_edc1c614136a4ecbaa65cf32b85693b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bfe8329161724e6a9b2502d7012f616a = $(`<div id="html_bfe8329161724e6a9b2502d7012f616a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Retinto, cerros justamente al Norte de Palmar Norte, a lo largo de Quebrada Benjamín desde  la toma de Agua para la minicipalidad hacia abajo. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1990-01-03 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_edc1c614136a4ecbaa65cf32b85693b7.setContent(html_bfe8329161724e6a9b2502d7012f616a);
+        
+
+        marker_732fa3e8f94d4483ab9a1bc4a94eb6e1.bindPopup(popup_edc1c614136a4ecbaa65cf32b85693b7)
+        ;
+
+        
+    
+    
+            var marker_263b433a016e4627962b7889b88ac959 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_9be2c74ecb6c46329a2ea6fc5b25ba05 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f16dea8d238d47ba98839d70762d455e = $(`<div id="html_f16dea8d238d47ba98839d70762d455e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada Sur, Fila Retinto, cerros justamente al Norte de Palmar Norte, filas y laderas del cañon de la Quebrada Benjamín. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_9be2c74ecb6c46329a2ea6fc5b25ba05.setContent(html_f16dea8d238d47ba98839d70762d455e);
+        
+
+        marker_263b433a016e4627962b7889b88ac959.bindPopup(popup_9be2c74ecb6c46329a2ea6fc5b25ba05)
+        ;
+
+        
+    
+    
+            var marker_ffc7e28b7dcc4524aa9e590384c28602 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_d24dccac96444c039ab6d55a07973c8c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_329370bdd9814e0eb4f27a2c73b0a19a = $(`<div id="html_329370bdd9814e0eb4f27a2c73b0a19a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada Sur, Fila Retinto, cerros justamente al Norte de Palmar Norte, filas y laderas del cañon de la Quebrada Benjamín. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_d24dccac96444c039ab6d55a07973c8c.setContent(html_329370bdd9814e0eb4f27a2c73b0a19a);
+        
+
+        marker_ffc7e28b7dcc4524aa9e590384c28602.bindPopup(popup_d24dccac96444c039ab6d55a07973c8c)
+        ;
+
+        
+    
+    
+            var marker_37816ba41f8e4192bbb3104fd2092134 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_37c08c3701b74d80b758fde41fef28ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2571720c6e14f63bf5a8c8adca465f7 = $(`<div id="html_f2571720c6e14f63bf5a8c8adca465f7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Retinto, Palmar Norte, bosque primario en las cercanías del tanque. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Morales, Juan Francisco <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_37c08c3701b74d80b758fde41fef28ae.setContent(html_f2571720c6e14f63bf5a8c8adca465f7);
+        
+
+        marker_37816ba41f8e4192bbb3104fd2092134.bindPopup(popup_37c08c3701b74d80b758fde41fef28ae)
+        ;
+
+        
+    
+    
+            var marker_7c32b51b2b17478996f45b62a860c481 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_27d2eb71d5774987a579a634c89beafe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_192de80ae35a4d13a2a23cd67d7ec65d = $(`<div id="html_192de80ae35a4d13a2a23cd67d7ec65d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada Sur, Fila Retinto, frente a  Palmar Norte  Quebrada Benjamín. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1993-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_27d2eb71d5774987a579a634c89beafe.setContent(html_192de80ae35a4d13a2a23cd67d7ec65d);
+        
+
+        marker_7c32b51b2b17478996f45b62a860c481.bindPopup(popup_27d2eb71d5774987a579a634c89beafe)
+        ;
+
+        
+    
+    
+            var marker_94f29e945d90494bbddb0dacbe5a5342 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_a8d1a5a5d682463784c9044b54e0df81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_adba08ac176f49b3be5253e45fa7f880 = $(`<div id="html_adba08ac176f49b3be5253e45fa7f880" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Térraba. Fachada sur de Fila Retinta, al norte de Palmar Norte, filas y laderas del cañón de la Quebrada Benjamín. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Michael H. Grayum <strong>Identificadores:</strong> L.J. Dorr</div>`)[0];
+            popup_a8d1a5a5d682463784c9044b54e0df81.setContent(html_adba08ac176f49b3be5253e45fa7f880);
+        
+
+        marker_94f29e945d90494bbddb0dacbe5a5342.bindPopup(popup_a8d1a5a5d682463784c9044b54e0df81)
+        ;
+
+        
+    
+    
+            var marker_8c2b960fb07a4543a613fcb49ae08e17 = L.marker(
+                [8.98333, -83.46666],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_1a1cd361edd745ac9e78ac6c18bb5773 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_066bf6ef758f4f1fa934cb08ea6b77f1 = $(`<div id="html_066bf6ef758f4f1fa934cb08ea6b77f1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fachada sur de Fila Retinta, al N de Palmar Norte, filas y laderas del canon de la Quebrada Benjamin. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Michael H. Grayum <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1a1cd361edd745ac9e78ac6c18bb5773.setContent(html_066bf6ef758f4f1fa934cb08ea6b77f1);
+        
+
+        marker_8c2b960fb07a4543a613fcb49ae08e17.bindPopup(popup_1a1cd361edd745ac9e78ac6c18bb5773)
+        ;
+
+        
+    
+    
+            var marker_3c8d962dbf7740f89ebac201e2b2127b = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_01be51b5313b44bfbc04c8e39a0532dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7824b87dcb6840ad8674eaf1d92e543a = $(`<div id="html_7824b87dcb6840ad8674eaf1d92e543a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Térraba. Fila Retinto; cerros justamente al norte de Palmar Norte; a lo largo de Quebrada Benjamín desde la toma de agua para la municipalidad hacia abajo. <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1990-01-03 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Abelardo Chacón|Gerardo Herrera Ch. <strong>Identificadores:</strong> L.J. Dorr, (US)</div>`)[0];
+            popup_01be51b5313b44bfbc04c8e39a0532dc.setContent(html_7824b87dcb6840ad8674eaf1d92e543a);
+        
+
+        marker_3c8d962dbf7740f89ebac201e2b2127b.bindPopup(popup_01be51b5313b44bfbc04c8e39a0532dc)
+        ;
+
+        
+    
+    
+            var marker_72adde7008234e3e843fa33f55518ec4 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_4cbcbbc091b34f25b9dc1ae48daae5d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3941264650945cfa07953c31d21b1c3 = $(`<div id="html_c3941264650945cfa07953c31d21b1c3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1951-12-10 00:00:00+00:00 <strong>Recolectores:</strong> P. H. Allen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_4cbcbbc091b34f25b9dc1ae48daae5d0.setContent(html_c3941264650945cfa07953c31d21b1c3);
+        
+
+        marker_72adde7008234e3e843fa33f55518ec4.bindPopup(popup_4cbcbbc091b34f25b9dc1ae48daae5d0)
+        ;
+
+        
+    
+    
+            var marker_4e1065c10ae5478b8d99b60850c8cc1d = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_c7955d4c5ac74dd88bcc08b36bbda98e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d340bb7315964cdb91da75ef581c1756 = $(`<div id="html_d340bb7315964cdb91da75ef581c1756" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1951-12-10 00:00:00+00:00 <strong>Recolectores:</strong> P. H. Allen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c7955d4c5ac74dd88bcc08b36bbda98e.setContent(html_d340bb7315964cdb91da75ef581c1756);
+        
+
+        marker_4e1065c10ae5478b8d99b60850c8cc1d.bindPopup(popup_c7955d4c5ac74dd88bcc08b36bbda98e)
+        ;
+
+        
+    
+    
+            var marker_9941759d820a4bc49ed19927e49504d6 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_17e0d83e05fd40669add06912e56440d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e05b3f0bb60479ba65c3faea272cf99 = $(`<div id="html_9e05b3f0bb60479ba65c3faea272cf99" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1951-12-10 00:00:00+00:00 <strong>Recolectores:</strong> P. H. Allen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_17e0d83e05fd40669add06912e56440d.setContent(html_9e05b3f0bb60479ba65c3faea272cf99);
+        
+
+        marker_9941759d820a4bc49ed19927e49504d6.bindPopup(popup_17e0d83e05fd40669add06912e56440d)
+        ;
+
+        
+    
+    
+            var marker_6ec6275ecc414a4db792fb9e7eaa4c37 = L.marker(
+                [8.986111, -83.463889],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_505007e37b7247d288aafae9c26f2289 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3bd3e6306154d98966b8c022ab499be = $(`<div id="html_b3bd3e6306154d98966b8c022ab499be" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Palmar Norte; Fila Retinto; bosque primario en las cercanias del tanque. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_505007e37b7247d288aafae9c26f2289.setContent(html_b3bd3e6306154d98966b8c022ab499be);
+        
+
+        marker_6ec6275ecc414a4db792fb9e7eaa4c37.bindPopup(popup_505007e37b7247d288aafae9c26f2289)
+        ;
+
+        
+    
+    
+            var marker_cec35bf0619b4095b052b1fc7766c60b = L.marker(
+                [8.983333, -83.466667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_c0f2e2d395564983b3c0ad4b1fb92146 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e02138671981411090dc27c0b1b97d53 = $(`<div id="html_e02138671981411090dc27c0b1b97d53" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Retinta; frente a Palmar Norte, Quebrada Benjamin. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1993-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_c0f2e2d395564983b3c0ad4b1fb92146.setContent(html_e02138671981411090dc27c0b1b97d53);
+        
+
+        marker_cec35bf0619b4095b052b1fc7766c60b.bindPopup(popup_c0f2e2d395564983b3c0ad4b1fb92146)
+        ;
+
+        
+    
+    
+            var marker_854ec159d8d24d4499eeb5f839c7e8a8 = L.marker(
+                [8.983333, -83.466667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_a569b394889c461a8332df00a956a14c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03af097cdbc3457496c5dd2ff89ffc9e = $(`<div id="html_03af097cdbc3457496c5dd2ff89ffc9e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> fachada sur de Fila Retinta, al norte de Palmar Norte, filas y laderas del canon de la Quebrada Benjamin. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_a569b394889c461a8332df00a956a14c.setContent(html_03af097cdbc3457496c5dd2ff89ffc9e);
+        
+
+        marker_854ec159d8d24d4499eeb5f839c7e8a8.bindPopup(popup_a569b394889c461a8332df00a956a14c)
+        ;
+
+        
+    
+    
+            var marker_9e0597f43449460988ea79d0aadc07c1 = L.marker(
+                [8.983333, -83.466667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_0a8c2178c9b04693a412e65861335eed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a73e4b77910479baa9dfc1d17873a0a = $(`<div id="html_7a73e4b77910479baa9dfc1d17873a0a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> fachada sur de Fila Retinta, al norte de Palmar Norte, filas y laderas del canon de la Quebrada Benjamin. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_0a8c2178c9b04693a412e65861335eed.setContent(html_7a73e4b77910479baa9dfc1d17873a0a);
+        
+
+        marker_9e0597f43449460988ea79d0aadc07c1.bindPopup(popup_0a8c2178c9b04693a412e65861335eed)
+        ;
+
+        
+    
+    
+            var marker_4cf5a7d983514c06957d7a820e09a790 = L.marker(
+                [8.983333, -83.466667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_fea773eb9be94c188fb9d644ca7d7c73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_680443d675b743108d06d0764d5059d6 = $(`<div id="html_680443d675b743108d06d0764d5059d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Retinto; cerros justamente al norte de Palmar Norte; a lo largo de Quebrada Benjamin desde la toma de agua para la municipalidad hacia abajo. <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1990-01-03 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_fea773eb9be94c188fb9d644ca7d7c73.setContent(html_680443d675b743108d06d0764d5059d6);
+        
+
+        marker_4cf5a7d983514c06957d7a820e09a790.bindPopup(popup_fea773eb9be94c188fb9d644ca7d7c73)
+        ;
+
+        
+    
+    
+            var marker_8150d2fe54b74af79c94224d57ffbac9 = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_5926c71c16ec4d9e8b317f566746b9c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ff76c9a0fe44931a535089f1e21c4a3 = $(`<div id="html_1ff76c9a0fe44931a535089f1e21c4a3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Térraba. Palmar Norte; Fila Retinto; bosque primario en las cercanías del tanque. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-11-24 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales|et al. <strong>Identificadores:</strong> L.J. Dorr, (US)</div>`)[0];
+            popup_5926c71c16ec4d9e8b317f566746b9c0.setContent(html_1ff76c9a0fe44931a535089f1e21c4a3);
+        
+
+        marker_8150d2fe54b74af79c94224d57ffbac9.bindPopup(popup_5926c71c16ec4d9e8b317f566746b9c0)
+        ;
+
+        
+    
+    
+            var marker_b6b0393f56ce43398c4ce9aca148affb = L.marker(
+                [8.98, -83.46],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_b0ed22759ed2464ca24c09cd704257cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d189c935eb1c466e85749e53359c3a43 = $(`<div id="html_d189c935eb1c466e85749e53359c3a43" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Valle del Térraba. Fila Retinta; frente a Palmar Norte, Quebrada Benjamín. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1993-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Alwyn H. Gentry|et al. <strong>Identificadores:</strong> L.J. Dorr</div>`)[0];
+            popup_b0ed22759ed2464ca24c09cd704257cf.setContent(html_d189c935eb1c466e85749e53359c3a43);
+        
+
+        marker_b6b0393f56ce43398c4ce9aca148affb.bindPopup(popup_b0ed22759ed2464ca24c09cd704257cf)
+        ;
+
+        
+    
+    
+            var marker_6a7fe75c98674d7d82975b226be2a757 = L.marker(
+                [8.25, -74.0667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_63fba52a27244d77b9683f2f76fc2b5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3d2c97d5fac4ea89b3bb4002a9d78f0 = $(`<div id="html_f3d2c97d5fac4ea89b3bb4002a9d78f0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of  Barrancabermeja. Mico-Ahumado Camp. <strong>Elevación:</strong> 900.0 m  <strong>Fecha:</strong> 1966-08-18 00:00:00+00:00 <strong>Recolectores:</strong> J. Bruijn <strong>Identificadores:</strong> Dorr, L. J., (BOT), Smithsonian Institution - National Museum of Natural History (UNITED STATES)</div>`)[0];
+            popup_63fba52a27244d77b9683f2f76fc2b5f.setContent(html_f3d2c97d5fac4ea89b3bb4002a9d78f0);
+        
+
+        marker_6a7fe75c98674d7d82975b226be2a757.bindPopup(popup_63fba52a27244d77b9683f2f76fc2b5f)
+        ;
+
+        
+    
+    
+            var marker_ef754ca564e84cc98c3b35573a344fdd = L.marker(
+                [8.25, -74.06666],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_e4cf36ba437049e489934012db87f166 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04edd4ed703e454f97a23ba581852619 = $(`<div id="html_04edd4ed703e454f97a23ba581852619" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of Barrancabermeja. Mico-Ahumado camp Primary forest <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1966-01-01 00:00:00+00:00 <strong>Recolectores:</strong> J. de Bruijn <strong>Identificadores:</strong> L. J. Dorr</div>`)[0];
+            popup_e4cf36ba437049e489934012db87f166.setContent(html_04edd4ed703e454f97a23ba581852619);
+        
+
+        marker_ef754ca564e84cc98c3b35573a344fdd.bindPopup(popup_e4cf36ba437049e489934012db87f166)
+        ;
+
+        
+    
+    
+            var marker_cfa9fb59fce746eea8d3f99ff19f2511 = L.marker(
+                [8.839444, -80.6475],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_0ad8e87875974f20b0381fd480ebf9be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac42f18305a149cd8fbf1804800afa4a = $(`<div id="html_ac42f18305a149cd8fbf1804800afa4a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Teck Cominco Petaquilla mining concession. Slope; collected near plot C003. <strong>Elevación:</strong> 184.0 m  <strong>Fecha:</strong> 2007-09-18 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> R. Perez, (PMA), 2011 [!McP/15]</div>`)[0];
+            popup_0ad8e87875974f20b0381fd480ebf9be.setContent(html_ac42f18305a149cd8fbf1804800afa4a);
+        
+
+        marker_cfa9fb59fce746eea8d3f99ff19f2511.bindPopup(popup_0ad8e87875974f20b0381fd480ebf9be)
+        ;
+
+        
+    
+    
+            var marker_d0448d6e778d4762a2c5aa561da71945 = L.marker(
+                [8.9833, -83.4667],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_24e50b9844b34c6388e6b7fc69258545 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79b05fc0981b444e91efb0ef7bcb722d = $(`<div id="html_79b05fc0981b444e91efb0ef7bcb722d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Osa fachada sur de Fila Retinta, al N de Palmar Norte, filas y laderas de la Quebrada Benjamín <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> B. E. Hammel & M. H. Grayum <strong>Identificadores:</strong> Hammel, B. E., (MO), Missouri Botanical Garden</div>`)[0];
+            popup_24e50b9844b34c6388e6b7fc69258545.setContent(html_79b05fc0981b444e91efb0ef7bcb722d);
+        
+
+        marker_d0448d6e778d4762a2c5aa561da71945.bindPopup(popup_24e50b9844b34c6388e6b7fc69258545)
+        ;
+
+        
+    
+    
+            var marker_2f4baf8d76da465e815b4d25c62a07f8 = L.marker(
+                [8.98, -83.47],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_8048e047a40a4cef81dce89446fbe05c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ebbadc33d2640d795aab9905e5faa71 = $(`<div id="html_0ebbadc33d2640d795aab9905e5faa71" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Osa fachada sur de Fila Retinta, al N de Palmar Norte, filas y laderas del canon de la Quebrada Benjamin. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1989-12-13 00:00:00+00:00 <strong>Recolectores:</strong> B. E. Hammel & M. H. Grayum <strong>Identificadores:</strong> Hammel, B. E., (MO), Missouri Botanical Garden</div>`)[0];
+            popup_8048e047a40a4cef81dce89446fbe05c.setContent(html_0ebbadc33d2640d795aab9905e5faa71);
+        
+
+        marker_2f4baf8d76da465e815b4d25c62a07f8.bindPopup(popup_8048e047a40a4cef81dce89446fbe05c)
+        ;
+
+        
+    
+    
+            var marker_6003ef5b467b4004a2763431498c2ba7 = L.marker(
+                [8.98, -83.45],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_0d7a3fe7ed594c7b861841b9169a3fa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ee1e48d681a4f10bb24b866c92621ff = $(`<div id="html_2ee1e48d681a4f10bb24b866c92621ff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> forested hills above Palmar Norte <strong>Elevación:</strong> 375.0 m  <strong>Fecha:</strong> 1951-12-10 00:00:00+00:00 <strong>Recolectores:</strong> Paul H. Allen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0d7a3fe7ed594c7b861841b9169a3fa5.setContent(html_2ee1e48d681a4f10bb24b866c92621ff);
+        
+
+        marker_6003ef5b467b4004a2763431498c2ba7.bindPopup(popup_0d7a3fe7ed594c7b861841b9169a3fa5)
+        ;
+
+        
+    
+    
+            var marker_b5bf3394b0d1498dade34e9692df74a0 = L.marker(
+                [8.25, -74.06666700000001],
+                {}
+            ).addTo(marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7);
+        
+    
+        var popup_c0c5a336bb3b49f4bfa4833795614132 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd099c98c720440aa5e5bc255f0be04b = $(`<div id="html_bd099c98c720440aa5e5bc255f0be04b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 150 km N of Barrancabermeja. Mico-Ahumado camp. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1966-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Bruijn J de <strong>Identificadores:</strong> Dorr LJ</div>`)[0];
+            popup_c0c5a336bb3b49f4bfa4833795614132.setContent(html_bd099c98c720440aa5e5bc255f0be04b);
+        
+
+        marker_b5bf3394b0d1498dade34e9692df74a0.bindPopup(popup_c0c5a336bb3b49f4bfa4833795614132)
+        ;
+
+        
+    
+    
+            var layer_control_845f9434342f4f769c16de793502889a = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e6d413cd80a140dcb6c5830228e4e5a3,
+                    "ESRI World Imagery" : tile_layer_1fc04498a50345a9b2c7a88297967856,
+                },
+                overlays :  {
+                    "macro_element_2ad71bc2206348fb8e73fcfcbc735df7" : marker_cluster_2ad71bc2206348fb8e73fcfcbc735df7,
+                },
+            };
+            L.control.layers(
+                layer_control_845f9434342f4f769c16de793502889a.base_layers,
+                layer_control_845f9434342f4f769c16de793502889a.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_6f3a0a235bec486b97bb3ca304ec9720);
+            tile_layer_1fc04498a50345a9b2c7a88297967856.remove();
+        
+</script>

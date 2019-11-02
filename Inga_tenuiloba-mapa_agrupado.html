@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce9283c6e71e44e080628ca749650e4f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ce9283c6e71e44e080628ca749650e4f" ></div>
+        
+</body>
+<script>    
+    
+            var map_ce9283c6e71e44e080628ca749650e4f = L.map(
+                "map_ce9283c6e71e44e080628ca749650e4f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_ce9283c6e71e44e080628ca749650e4f);
+
+            
+
+        
+    
+            var tile_layer_f0b2b378f50746a4b7d9452addcaa943 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ce9283c6e71e44e080628ca749650e4f);
+        
+    
+            var tile_layer_a2a310d92e9f41a5988fb40e411baa7c = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ce9283c6e71e44e080628ca749650e4f);
+        
+    
+            var marker_cluster_2e927bc1ab844ca08335d449e8ebebda = L.markerClusterGroup(
+                {}
+            );
+            map_ce9283c6e71e44e080628ca749650e4f.addLayer(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+            var marker_99f0b69e0225428aa8e12bf6c73379f6 = L.marker(
+                [8.7, -83.59],
+                {}
+            ).addTo(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+        var popup_d9f6bbe92d0a4ec584d762608a5d75f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6211c77621b4de9942cff0b12532d55 = $(`<div id="html_b6211c77621b4de9942cff0b12532d55" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce; Península de Osa. Rancho Quemado, fila al Oeste, Tierra Grupo Conservación. A tanques de agua. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-11-25 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora|et al. <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_d9f6bbe92d0a4ec584d762608a5d75f7.setContent(html_b6211c77621b4de9942cff0b12532d55);
+        
+
+        marker_99f0b69e0225428aa8e12bf6c73379f6.bindPopup(popup_d9f6bbe92d0a4ec584d762608a5d75f7)
+        ;
+
+        
+    
+    
+            var marker_e180c4649e1f44aeafe507f06b175fe6 = L.marker(
+                [8.683333, -83.516667],
+                {}
+            ).addTo(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+        var popup_83254c0c232d4d1aaa0b23d3f499ffd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b14fe605bc0c41a5a915d3c413174367 = $(`<div id="html_b14fe605bc0c41a5a915d3c413174367" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincón. Aguas arriba a partir del tanque de agua del pueblo. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1990-09-06 00:00:00+00:00 <strong>Recolectores:</strong> Carlos O. Morales <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_83254c0c232d4d1aaa0b23d3f499ffd4.setContent(html_b14fe605bc0c41a5a915d3c413174367);
+        
+
+        marker_e180c4649e1f44aeafe507f06b175fe6.bindPopup(popup_83254c0c232d4d1aaa0b23d3f499ffd4)
+        ;
+
+        
+    
+    
+            var marker_50ac0f1d6080451c94d459f2fb5d4921 = L.marker(
+                [8.7167, -83.5806],
+                {}
+            ).addTo(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+        var popup_2f658e4062064ed3a328e073f7d1abae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b0dca7b435d49e3b12abdcc47fb8e99 = $(`<div id="html_7b0dca7b435d49e3b12abdcc47fb8e99" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa; fila al oeste de Rancho Quemado, tierra de conservacón, por la trocha a los tanques de agua <strong>Elevación:</strong> 275.0 m  <strong>Fecha:</strong> 1993-11-25 00:00:00+00:00 <strong>Recolectores:</strong> N. A. Zamora Villalobos <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2f658e4062064ed3a328e073f7d1abae.setContent(html_7b0dca7b435d49e3b12abdcc47fb8e99);
+        
+
+        marker_50ac0f1d6080451c94d459f2fb5d4921.bindPopup(popup_2f658e4062064ed3a328e073f7d1abae)
+        ;
+
+        
+    
+    
+            var marker_2ecf67ad88674ed3bc617b5ddf1a46e7 = L.marker(
+                [8.7, -83.594445],
+                {}
+            ).addTo(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+        var popup_ebe09e1cf4e34c8495acc0b17a734df0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bc7989477c8429e875f0ea13b6e9dae = $(`<div id="html_8bc7989477c8429e875f0ea13b6e9dae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, fila al Oeste, Tierra Grupo Conservacion. A tanques de agua. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1993-11-25 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ebe09e1cf4e34c8495acc0b17a734df0.setContent(html_8bc7989477c8429e875f0ea13b6e9dae);
+        
+
+        marker_2ecf67ad88674ed3bc617b5ddf1a46e7.bindPopup(popup_ebe09e1cf4e34c8495acc0b17a734df0)
+        ;
+
+        
+    
+    
+            var marker_9ed1d89496354bc7a91533b15a1a4b10 = L.marker(
+                [8.683419, -83.516654],
+                {}
+            ).addTo(marker_cluster_2e927bc1ab844ca08335d449e8ebebda);
+        
+    
+        var popup_959b1d67f9f047e89e57b771bf4c08d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ca6c6ed642a4c09b612453c4543bd0f = $(`<div id="html_4ca6c6ed642a4c09b612453c4543bd0f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Agua Buena, Rincon. Aguas arriba a partir del tanque de agua del pueblo. Bosque primario. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1990-09-06 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Morales <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_959b1d67f9f047e89e57b771bf4c08d0.setContent(html_4ca6c6ed642a4c09b612453c4543bd0f);
+        
+
+        marker_9ed1d89496354bc7a91533b15a1a4b10.bindPopup(popup_959b1d67f9f047e89e57b771bf4c08d0)
+        ;
+
+        
+    
+    
+            var layer_control_e53598705d074e4ea1b8280dbed8fb6b = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f0b2b378f50746a4b7d9452addcaa943,
+                    "ESRI World Imagery" : tile_layer_a2a310d92e9f41a5988fb40e411baa7c,
+                },
+                overlays :  {
+                    "macro_element_2e927bc1ab844ca08335d449e8ebebda" : marker_cluster_2e927bc1ab844ca08335d449e8ebebda,
+                },
+            };
+            L.control.layers(
+                layer_control_e53598705d074e4ea1b8280dbed8fb6b.base_layers,
+                layer_control_e53598705d074e4ea1b8280dbed8fb6b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ce9283c6e71e44e080628ca749650e4f);
+            tile_layer_a2a310d92e9f41a5988fb40e411baa7c.remove();
+        
+</script>

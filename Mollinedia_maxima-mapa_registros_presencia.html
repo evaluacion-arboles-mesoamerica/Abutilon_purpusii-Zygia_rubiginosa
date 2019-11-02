@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e74803daef3d45cc8f41c12b1b35e22d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e74803daef3d45cc8f41c12b1b35e22d" ></div>
+        
+</body>
+<script>    
+    
+            var map_e74803daef3d45cc8f41c12b1b35e22d = L.map(
+                "map_e74803daef3d45cc8f41c12b1b35e22d",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+
+            
+
+        
+    
+            var tile_layer_b7e7117392ae4a89ae43c918f2bd0c44 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+            var tile_layer_f96cd2ab497c428fb4b75e099d1c04f3 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+            var circle_marker_50fbfec476194ed6987c0f1797acf6c9 = L.circleMarker(
+                [9.95, -84.14],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_fbc421043ea747f49d225437505a85b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25f0877ea0744085b031501dd0b4ba57 = $(`<div id="html_25f0877ea0744085b031501dd0b4ba57" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo; Cordillera Central. Bosque primario en el sendero Las Palmas Estación Quebrada Gónzalez al puente sobre el Río Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-18 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales|Eduardo Lépiz|Víctor H. Ramírez <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_fbc421043ea747f49d225437505a85b2.setContent(html_25f0877ea0744085b031501dd0b4ba57);
+        
+
+        circle_marker_50fbfec476194ed6987c0f1797acf6c9.bindPopup(popup_fbc421043ea747f49d225437505a85b2)
+        ;
+
+        
+    
+    
+            var circle_marker_b86a01222ecc4804bcc1adaea972c0f3 = L.circleMarker(
+                [-0.23138000000000003, -78.80277],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_8f8b59bace5646509a88db7c77f57b32 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab195027667b4d4f8aa856cd7c89d3e1 = $(`<div id="html_ab195027667b4d4f8aa856cd7c89d3e1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Florística- Ecológica "Rio Guajalito", Km 59 de la carretera antigua Quito-Sto Domingo de los Colorados, 3.5 km al NE de la carretera. estribaciones occidentales del Volcán Pichincha: En bosque nublado de vegetación primario y alrededores. <strong>Elevación:</strong> 2000.0 m  <strong>Fecha:</strong> 1985-07-09 00:00:00+00:00 <strong>Recolectores:</strong> Jaime L. Jaramillo|Vlastimil Zak <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8f8b59bace5646509a88db7c77f57b32.setContent(html_ab195027667b4d4f8aa856cd7c89d3e1);
+        
+
+        circle_marker_b86a01222ecc4804bcc1adaea972c0f3.bindPopup(popup_8f8b59bace5646509a88db7c77f57b32)
+        ;
+
+        
+    
+    
+            var circle_marker_a4acdb1cf49c4f488a5cf8126b33f4a9 = L.circleMarker(
+                [9.9528, -84.1472],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_0777c93cce0546849167e4002a07aa5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3872a76436144e95866bb6031cc4dba6 = $(`<div id="html_3872a76436144e95866bb6031cc4dba6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Braulio Carrillo National Park <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-18 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales et al. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0777c93cce0546849167e4002a07aa5e.setContent(html_3872a76436144e95866bb6031cc4dba6);
+        
+
+        circle_marker_a4acdb1cf49c4f488a5cf8126b33f4a9.bindPopup(popup_0777c93cce0546849167e4002a07aa5e)
+        ;
+
+        
+    
+    
+            var circle_marker_7ff906f988844d6badba938f6e1afaad = L.circleMarker(
+                [9.9528, -84.1472],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_68cf4b173ef84d89bed5d2be1f08af37 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbc2f22a6e9a4c95bc1a9a3e6c5b6264 = $(`<div id="html_fbc2f22a6e9a4c95bc1a9a3e6c5b6264" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Braulio Carrillo National Park <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-18 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales et al. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_68cf4b173ef84d89bed5d2be1f08af37.setContent(html_fbc2f22a6e9a4c95bc1a9a3e6c5b6264);
+        
+
+        circle_marker_7ff906f988844d6badba938f6e1afaad.bindPopup(popup_68cf4b173ef84d89bed5d2be1f08af37)
+        ;
+
+        
+    
+    
+            var circle_marker_059cbf8694d74afe9b9e35658fd09c70 = L.circleMarker(
+                [-1.4628, -78.1869],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_c71d8359531b4826a1b51f59275de816 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9c6184f3d6248e0b9926cfbd87575e2 = $(`<div id="html_c9c6184f3d6248e0b9926cfbd87575e2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_c71d8359531b4826a1b51f59275de816.setContent(html_c9c6184f3d6248e0b9926cfbd87575e2);
+        
+
+        circle_marker_059cbf8694d74afe9b9e35658fd09c70.bindPopup(popup_c71d8359531b4826a1b51f59275de816)
+        ;
+
+        
+    
+    
+            var circle_marker_48d2a740355e45bca00cd8e2a473b966 = L.circleMarker(
+                [-0.1667, -78.6667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_6921a2436537410b89e29b60f5818681 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cbd93bdd4e6f43c283980940d976ab2c = $(`<div id="html_cbd93bdd4e6f43c283980940d976ab2c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> J. Jaramillo <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_6921a2436537410b89e29b60f5818681.setContent(html_cbd93bdd4e6f43c283980940d976ab2c);
+        
+
+        circle_marker_48d2a740355e45bca00cd8e2a473b966.bindPopup(popup_6921a2436537410b89e29b60f5818681)
+        ;
+
+        
+    
+    
+            var circle_marker_25ef5ded4c0d4ae19789bda0073b20ab = L.circleMarker(
+                [10.155555999999999, -83.94166700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_435f99f27c6f477b837d9304dc592b52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a1af656833b476d9d0cff6488a07d29 = $(`<div id="html_0a1af656833b476d9d0cff6488a07d29" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo, Cordillera Central.  Sendero Las Palmas.  Estación Quebrada González. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-16 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_435f99f27c6f477b837d9304dc592b52.setContent(html_0a1af656833b476d9d0cff6488a07d29);
+        
+
+        circle_marker_25ef5ded4c0d4ae19789bda0073b20ab.bindPopup(popup_435f99f27c6f477b837d9304dc592b52)
+        ;
+
+        
+    
+    
+            var circle_marker_cab0a66c28f64770a3625057bbba90bf = L.circleMarker(
+                [10.155555999999999, -83.94166700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_bcb615646c8248eeacee3029a3009bb5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1beae39ce23842f288b919816d96a76e = $(`<div id="html_1beae39ce23842f288b919816d96a76e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Las Palmas. Estacion Quebrada Gonzalez. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-16 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_bcb615646c8248eeacee3029a3009bb5.setContent(html_1beae39ce23842f288b919816d96a76e);
+        
+
+        circle_marker_cab0a66c28f64770a3625057bbba90bf.bindPopup(popup_bcb615646c8248eeacee3029a3009bb5)
+        ;
+
+        
+    
+    
+            var circle_marker_530f984e63bb4d4e8bf746a7b47b9eea = L.circleMarker(
+                [10.154167, -83.94166700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_8f98bcfe5074445bb9d7bb8e2fc753e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06d18b48bfa8463d877e17b75e40352b = $(`<div id="html_06d18b48bfa8463d877e17b75e40352b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque primario en el sendero Las Palmas Estacion Quebrada Gonzalez al puente sobre el Rio Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-18 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_8f98bcfe5074445bb9d7bb8e2fc753e1.setContent(html_06d18b48bfa8463d877e17b75e40352b);
+        
+
+        circle_marker_530f984e63bb4d4e8bf746a7b47b9eea.bindPopup(popup_8f98bcfe5074445bb9d7bb8e2fc753e1)
+        ;
+
+        
+    
+    
+            var circle_marker_211cf2c0ae054de2a1e539a23fde1c42 = L.circleMarker(
+                [10.283333, -84.033334],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_146aa04926c54eaeb4463cbbd9c100b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0fe99386fe2d432299a50b26ae0ffd35 = $(`<div id="html_0fe99386fe2d432299a50b26ae0ffd35" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero a Catarata por Fila Gary Stiles. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1994-01-26 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_146aa04926c54eaeb4463cbbd9c100b7.setContent(html_0fe99386fe2d432299a50b26ae0ffd35);
+        
+
+        circle_marker_211cf2c0ae054de2a1e539a23fde1c42.bindPopup(popup_146aa04926c54eaeb4463cbbd9c100b7)
+        ;
+
+        
+    
+    
+            var circle_marker_3c8f6b170d094dc98db3ace45c976f3e = L.circleMarker(
+                [10.155555999999999, -83.94166700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_f4d8847a4a8346daa9af1955469a2f92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aab6f842ec784319862f9a9efd5ee777 = $(`<div id="html_aab6f842ec784319862f9a9efd5ee777" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Quebrada Gonzalez, Rio Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1988-07-22 00:00:00+00:00 <strong>Recolectores:</strong> Maria M. Chavarría <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_f4d8847a4a8346daa9af1955469a2f92.setContent(html_aab6f842ec784319862f9a9efd5ee777);
+        
+
+        circle_marker_3c8f6b170d094dc98db3ace45c976f3e.bindPopup(popup_f4d8847a4a8346daa9af1955469a2f92)
+        ;
+
+        
+    
+    
+            var circle_marker_f0a2927c6d2249109d8bea924ad35af7 = L.circleMarker(
+                [10.163344, -83.939112],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_3210401e11db45bf8712f7c09a8bd5ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9480c3e63ccf4192aae67559632e4181 = $(`<div id="html_9480c3e63ccf4192aae67559632e4181" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> CR Limon PNBC Est Queb Gonsalez <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1999-02-16 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado; Jose González ; Luis Diego Vargas <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_3210401e11db45bf8712f7c09a8bd5ac.setContent(html_9480c3e63ccf4192aae67559632e4181);
+        
+
+        circle_marker_f0a2927c6d2249109d8bea924ad35af7.bindPopup(popup_3210401e11db45bf8712f7c09a8bd5ac)
+        ;
+
+        
+    
+    
+            var circle_marker_598127eefdab4b5889e36d89667e781c = L.circleMarker(
+                [10.163344, -83.939112],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_92dbcf2a35c84e17854b51cd08a405d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a1a036f4c354772adae59f08c8f2a35 = $(`<div id="html_7a1a036f4c354772adae59f08c8f2a35" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> CR Limon PNBC Est Queb Gonsalez <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1999-02-16 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado; Jose González ; Luis Diego Vargas <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_92dbcf2a35c84e17854b51cd08a405d1.setContent(html_7a1a036f4c354772adae59f08c8f2a35);
+        
+
+        circle_marker_598127eefdab4b5889e36d89667e781c.bindPopup(popup_92dbcf2a35c84e17854b51cd08a405d1)
+        ;
+
+        
+    
+    
+            var circle_marker_3e7c78e997de43c9aa7f15673ec95560 = L.circleMarker(
+                [10.058333, -84.016667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_73499288d92a424fa057fca9fe2b3597 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36bd2b7561f646cf864057773b0470e6 = $(`<div id="html_36bd2b7561f646cf864057773b0470e6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero frente a Estacion Zurqui. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-02-15 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; L. Acosta <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_73499288d92a424fa057fca9fe2b3597.setContent(html_36bd2b7561f646cf864057773b0470e6);
+        
+
+        circle_marker_3e7c78e997de43c9aa7f15673ec95560.bindPopup(popup_73499288d92a424fa057fca9fe2b3597)
+        ;
+
+        
+    
+    
+            var circle_marker_7d544d44914f4ebd97f8b8d0170daa4c = L.circleMarker(
+                [10.058333, -84.016667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_dc04479764be4eb58539385e11bbcbc2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b8ec8ed70784a278cc54f759c05bb7f = $(`<div id="html_1b8ec8ed70784a278cc54f759c05bb7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero frente a Estacion Zurqui. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-02-15 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; L. Acosta <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_dc04479764be4eb58539385e11bbcbc2.setContent(html_1b8ec8ed70784a278cc54f759c05bb7f);
+        
+
+        circle_marker_7d544d44914f4ebd97f8b8d0170daa4c.bindPopup(popup_dc04479764be4eb58539385e11bbcbc2)
+        ;
+
+        
+    
+    
+            var circle_marker_4ea579241e6242ccb287e3d0573fa63f = L.circleMarker(
+                [10.163889, -83.940278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_5ab2f5604f7944cba740e830dd86d2fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48b3cfd0bee64aa8bdb9841249b830d3 = $(`<div id="html_48b3cfd0bee64aa8bdb9841249b830d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Braulio Carrillo. Puesto Quebrada González, Sendero Las Palmas. <strong>Elevación:</strong> 515.0 m  <strong>Fecha:</strong> 2006-01-18 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Luis Diego Vargas ; Guillermo Villalobos <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_5ab2f5604f7944cba740e830dd86d2fd.setContent(html_48b3cfd0bee64aa8bdb9841249b830d3);
+        
+
+        circle_marker_4ea579241e6242ccb287e3d0573fa63f.bindPopup(popup_5ab2f5604f7944cba740e830dd86d2fd)
+        ;
+
+        
+    
+    
+            var circle_marker_ff8cb2eb0ef040be888be165aa812ac4 = L.circleMarker(
+                [9.9528, -84.1472],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_a7b2a6825f3148fd907d6e0ddaa3b77e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea944235b55e4ff0aefd79db6b7a776f = $(`<div id="html_ea944235b55e4ff0aefd79db6b7a776f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo. Enh el sendereo Las Palmas Estación Quebrada Gónzalez al puente sobre el Rí Sucio <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-18 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales Quirós <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a7b2a6825f3148fd907d6e0ddaa3b77e.setContent(html_ea944235b55e4ff0aefd79db6b7a776f);
+        
+
+        circle_marker_ff8cb2eb0ef040be888be165aa812ac4.bindPopup(popup_a7b2a6825f3148fd907d6e0ddaa3b77e)
+        ;
+
+        
+    
+    
+            var circle_marker_76734c52d61548ceb93f10e0037ec4c8 = L.circleMarker(
+                [9.95, -84.15],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_007efcd121b540ed94e1238ac9624a8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec4eeec27bab4c8d978ec49ae8d8d9cf = $(`<div id="html_ec4eeec27bab4c8d978ec49ae8d8d9cf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon: Parq. Nacl. Braulio Carrillo   Bosque Primario en al sendaro Las Palmas Estacion Quebrada Gpnzalez [Gonzalez?] al puente sobre el Río Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Morales, J.F.; Ramirez, V.H.; Lépiz, E <strong>Identificadores:</strong> De Lirio, E.J.</div>`)[0];
+            popup_007efcd121b540ed94e1238ac9624a8b.setContent(html_ec4eeec27bab4c8d978ec49ae8d8d9cf);
+        
+
+        circle_marker_76734c52d61548ceb93f10e0037ec4c8.bindPopup(popup_007efcd121b540ed94e1238ac9624a8b)
+        ;
+
+        
+    
+    
+            var circle_marker_6d066f0dd73f4237a66344ef31cbb8dd = L.circleMarker(
+                [9.95, -84.15],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_59577837176641cd914d20bd81abaa78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4388ce505324b3bb7bacd451cc77116 = $(`<div id="html_c4388ce505324b3bb7bacd451cc77116" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon: Parq. Nacl. Braulio Carrillo   Bosque Primario en al sendaro Las Palmas Estacion Quebrada Gpnzalez [Gonzalez?] al puente sobre el Río Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Morales, J.F.; Ramirez, V.H.; Lépiz, E <strong>Identificadores:</strong> De Lirio, E.J.</div>`)[0];
+            popup_59577837176641cd914d20bd81abaa78.setContent(html_c4388ce505324b3bb7bacd451cc77116);
+        
+
+        circle_marker_6d066f0dd73f4237a66344ef31cbb8dd.bindPopup(popup_59577837176641cd914d20bd81abaa78)
+        ;
+
+        
+    
+    
+            var circle_marker_0c02ddd54dc141689d9ce4379d9ce18f = L.circleMarker(
+                [9.95, -84.15],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_6bfff7871aba46e2871b0e18f5f345c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70efac20745d4c348c166c1b83d17310 = $(`<div id="html_70efac20745d4c348c166c1b83d17310" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Limon: Parq. Nacl. Braulio Carrillo   Bosque Primario en al sendaro Las Palmas Estacion Quebrada Gpnzalez [Gonzalez?] al puente sobre el Río Sucio. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1993-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Morales, J.F.; Ramirez, V.H.; Lépiz, E <strong>Identificadores:</strong> De Lirio, E.J.</div>`)[0];
+            popup_6bfff7871aba46e2871b0e18f5f345c9.setContent(html_70efac20745d4c348c166c1b83d17310);
+        
+
+        circle_marker_0c02ddd54dc141689d9ce4379d9ce18f.bindPopup(popup_6bfff7871aba46e2871b0e18f5f345c9)
+        ;
+
+        
+    
+    
+            var circle_marker_48aa0ee81f8542ca8d38145e8612e5f7 = L.circleMarker(
+                [-0.2222, -78.7786],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_9a5b8545d1e642038cdf7d61251ca8ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_091b933517e8482688791a81cbf85212 = $(`<div id="html_091b933517e8482688791a81cbf85212" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera Quito-San Juan-Chiribogañ Empalme-Sto. Domingo de los Colorados, km 59 a 15 km al NO de la carretera.  Colecciones en bosque nublado de vegetación primaria y de bosque intervenido. <strong>Elevación:</strong> 1850.0 m  <strong>Fecha:</strong> 1986-09-23 00:00:00+00:00 <strong>Recolectores:</strong> Vlastimil Zak <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_9a5b8545d1e642038cdf7d61251ca8ac.setContent(html_091b933517e8482688791a81cbf85212);
+        
+
+        circle_marker_48aa0ee81f8542ca8d38145e8612e5f7.bindPopup(popup_9a5b8545d1e642038cdf7d61251ca8ac)
+        ;
+
+        
+    
+    
+            var circle_marker_b9ed071df77040efa1e790d61abbed0e = L.circleMarker(
+                [10.163333, -83.938889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_7022d218a7934d98bdd3c711ca1c3078 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c40f4146806406f950a29c6f44614fe = $(`<div id="html_7c40f4146806406f950a29c6f44614fe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo. Cuenca del Sarapiquí. Sendero Quebrada González. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1999-02-16 00:00:00+00:00 <strong>Recolectores:</strong> Priscilla Hurtado|José Á. González R.|Luis Diego Vargas <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_7022d218a7934d98bdd3c711ca1c3078.setContent(html_7c40f4146806406f950a29c6f44614fe);
+        
+
+        circle_marker_b9ed071df77040efa1e790d61abbed0e.bindPopup(popup_7022d218a7934d98bdd3c711ca1c3078)
+        ;
+
+        
+    
+    
+            var circle_marker_56cdfb8b3ac64c028a8e9d917695422f = L.circleMarker(
+                [10.058333, -84.016667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_007a86156fec4766ab596a6c3292490e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_471c2a38b35145c39f08da8ff6a088d1 = $(`<div id="html_471c2a38b35145c39f08da8ff6a088d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo. Cuenca del Sarapiqui. Moravia. San Jerónimo. Sendero La Botella <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-02-15 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_007a86156fec4766ab596a6c3292490e.setContent(html_471c2a38b35145c39f08da8ff6a088d1);
+        
+
+        circle_marker_56cdfb8b3ac64c028a8e9d917695422f.bindPopup(popup_007a86156fec4766ab596a6c3292490e)
+        ;
+
+        
+    
+    
+            var circle_marker_f3bd6776763a49c99470314c1865239b = L.circleMarker(
+                [10.058333, -84.166667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_ad36c80547cf453885b74ebe91a6bb97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9bd6c2e5f2264f2fb2dde5193503f5f7 = $(`<div id="html_9bd6c2e5f2264f2fb2dde5193503f5f7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo. Cuenca del Sarapiquí. Moravia. San Jerónimo. Sendero La Botella. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-02-15 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Víctor H. Ramírez|Luis Acosta <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_ad36c80547cf453885b74ebe91a6bb97.setContent(html_9bd6c2e5f2264f2fb2dde5193503f5f7);
+        
+
+        circle_marker_f3bd6776763a49c99470314c1865239b.bindPopup(popup_ad36c80547cf453885b74ebe91a6bb97)
+        ;
+
+        
+    
+    
+            var circle_marker_830eebe108004fb8a76c003011a4b171 = L.circleMarker(
+                [10.15, -83.94],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_1c4b41df149d4aee952108a2d5578491 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93ce3edc34254311bf783c02754d60fe = $(`<div id="html_93ce3edc34254311bf783c02754d60fe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo. Cordillera Central. Estación Quebrada González. Río Sucio <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1988-07-22 00:00:00+00:00 <strong>Recolectores:</strong> María Marta Chavarría <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_1c4b41df149d4aee952108a2d5578491.setContent(html_93ce3edc34254311bf783c02754d60fe);
+        
+
+        circle_marker_830eebe108004fb8a76c003011a4b171.bindPopup(popup_1c4b41df149d4aee952108a2d5578491)
+        ;
+
+        
+    
+    
+            var circle_marker_fcf509fb500441dc928faa73f96ad298 = L.circleMarker(
+                [10.28, -84.03],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+        
+    
+        var popup_af1c04e29aa84591a295a81eedb9e455 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c08712175452474ea597e21a9be3c8f2 = $(`<div id="html_c08712175452474ea597e21a9be3c8f2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos. Sendero a Catarata por Fila Gary Stiles <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1994-01-26 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_af1c04e29aa84591a295a81eedb9e455.setContent(html_c08712175452474ea597e21a9be3c8f2);
+        
+
+        circle_marker_fcf509fb500441dc928faa73f96ad298.bindPopup(popup_af1c04e29aa84591a295a81eedb9e455)
+        ;
+
+        
+    
+    
+            var layer_control_770278d97a6c4aab9ff7125a3e00d297 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_b7e7117392ae4a89ae43c918f2bd0c44,
+                    "ESRI World Imagery" : tile_layer_f96cd2ab497c428fb4b75e099d1c04f3,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_770278d97a6c4aab9ff7125a3e00d297.base_layers,
+                layer_control_770278d97a6c4aab9ff7125a3e00d297.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_e74803daef3d45cc8f41c12b1b35e22d);
+            tile_layer_f96cd2ab497c428fb4b75e099d1c04f3.remove();
+        
+</script>

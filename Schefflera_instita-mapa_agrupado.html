@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_30d43022ca204468a87d4491ef6dc7a6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_30d43022ca204468a87d4491ef6dc7a6" ></div>
+        
+</body>
+<script>    
+    
+            var map_30d43022ca204468a87d4491ef6dc7a6 = L.map(
+                "map_30d43022ca204468a87d4491ef6dc7a6",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_30d43022ca204468a87d4491ef6dc7a6);
+
+            
+
+        
+    
+            var tile_layer_42e654f3e65d49d8a6546d97b8271cdd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_30d43022ca204468a87d4491ef6dc7a6);
+        
+    
+            var tile_layer_6bdea5a01f2e42468954a260b7d99931 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_30d43022ca204468a87d4491ef6dc7a6);
+        
+    
+            var marker_cluster_d791d5b9d57f4873b9f600b74de672de = L.markerClusterGroup(
+                {}
+            );
+            map_30d43022ca204468a87d4491ef6dc7a6.addLayer(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+            var marker_31255982f5764c3d926d716e3f74c9dc = L.marker(
+                [10.06, -84.0],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_f511578f642d4d2693b36a1bd3664e5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d862153786a14a65b02636b0ace419ef = $(`<div id="html_d862153786a14a65b02636b0ace419ef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Sector Zurquí. Cerca al Túnel. <strong>Elevación:</strong> 1550.0 m  <strong>Fecha:</strong> 1992-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_f511578f642d4d2693b36a1bd3664e5b.setContent(html_d862153786a14a65b02636b0ace419ef);
+        
+
+        marker_31255982f5764c3d926d716e3f74c9dc.bindPopup(popup_f511578f642d4d2693b36a1bd3664e5b)
+        ;
+
+        
+    
+    
+            var marker_086d558b6fba4759bf15a9de316f3edc = L.marker(
+                [10.05, -84.02],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_7e77d9f2647640ddae8dbae6da75f90a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14b872685bd04af48c779bfef0368ac6 = $(`<div id="html_14b872685bd04af48c779bfef0368ac6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> edge of pasture near Río Para Blanco <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 1973-04-28 00:00:00+00:00 <strong>Recolectores:</strong> R. W. Lent <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_7e77d9f2647640ddae8dbae6da75f90a.setContent(html_14b872685bd04af48c779bfef0368ac6);
+        
+
+        marker_086d558b6fba4759bf15a9de316f3edc.bindPopup(popup_7e77d9f2647640ddae8dbae6da75f90a)
+        ;
+
+        
+    
+    
+            var marker_bf249d855540497ab2369c83ba38ace9 = L.marker(
+                [10.288056, -84.38278000000001],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_1c12bf581a074f0e99f74d33e35bbebb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d3a3c3238f44aab895b0f57f26d64db = $(`<div id="html_1d3a3c3238f44aab895b0f57f26d64db" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entrando por San Vicente, faldas del Cerro Platanar.                                                                                                                                                                                                                                                                                                                                                                                                                                                               <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2000-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez <strong>Identificadores:</strong> A. Rodriguez</div>`)[0];
+            popup_1c12bf581a074f0e99f74d33e35bbebb.setContent(html_1d3a3c3238f44aab895b0f57f26d64db);
+        
+
+        marker_bf249d855540497ab2369c83ba38ace9.bindPopup(popup_1c12bf581a074f0e99f74d33e35bbebb)
+        ;
+
+        
+    
+    
+            var marker_ea15e7c4fd0848298163cab5bc1c6458 = L.marker(
+                [9.356111, -83.23028000000001],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_448b7440f74a48a5a11fb9cf3729364c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c71e74ca44af4506bafc132a5b7b71a4 = $(`<div id="html_c71e74ca44af4506bafc132a5b7b71a4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Lori.  Bosque nuboso con predominancia de arboles de Alfaroa, Podocarpus, Weinmannia, Quercus, Drimys, Lauraceae. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría <strong>Identificadores:</strong> J. Morales</div>`)[0];
+            popup_448b7440f74a48a5a11fb9cf3729364c.setContent(html_c71e74ca44af4506bafc132a5b7b71a4);
+        
+
+        marker_ea15e7c4fd0848298163cab5bc1c6458.bindPopup(popup_448b7440f74a48a5a11fb9cf3729364c)
+        ;
+
+        
+    
+    
+            var marker_24d2db4947074e668b8c8d93e9f40716 = L.marker(
+                [10.068056, -84.00694399999999],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_ea9d3702c74f483c821856ad0aa148e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b35bf47c8504553bc2e274f95e2d4f2 = $(`<div id="html_8b35bf47c8504553bc2e274f95e2d4f2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector Zurqui. Cerca al Tunel. <strong>Elevación:</strong> 1550.0 m  <strong>Fecha:</strong> 1992-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ea9d3702c74f483c821856ad0aa148e3.setContent(html_8b35bf47c8504553bc2e274f95e2d4f2);
+        
+
+        marker_24d2db4947074e668b8c8d93e9f40716.bindPopup(popup_ea9d3702c74f483c821856ad0aa148e3)
+        ;
+
+        
+    
+    
+            var marker_bede90ea75144711b1c723e69e08d196 = L.marker(
+                [10.766667, -85.31666700000001],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_2cdfd97be62447ecb07d4ad890c46f52 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a45d68f693e4267b581a79180d3bed1 = $(`<div id="html_6a45d68f693e4267b581a79180d3bed1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Del Mirador siguiendo la Fila al Volcan Santa Maria. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1987-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Frodin, David Gamman</div>`)[0];
+            popup_2cdfd97be62447ecb07d4ad890c46f52.setContent(html_6a45d68f693e4267b581a79180d3bed1);
+        
+
+        marker_bede90ea75144711b1c723e69e08d196.bindPopup(popup_2cdfd97be62447ecb07d4ad890c46f52)
+        ;
+
+        
+    
+    
+            var marker_9be248762350475b86e1832228a3467f = L.marker(
+                [10.288056, -84.382778],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_405e80d8984840a5acb845bc34988ea7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f31f971e45ee47e782274c248f7690e0 = $(`<div id="html_f31f971e45ee47e782274c248f7690e0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Vicente, a orilla del camino ruta al Parque Nacional Juan Castro Blanco. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; Geovanny Sancho ; Gerardo Soto <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_405e80d8984840a5acb845bc34988ea7.setContent(html_f31f971e45ee47e782274c248f7690e0);
+        
+
+        marker_9be248762350475b86e1832228a3467f.bindPopup(popup_405e80d8984840a5acb845bc34988ea7)
+        ;
+
+        
+    
+    
+            var marker_b1cf9f3fe39d4da7964511dba5975e55 = L.marker(
+                [10.288056, -84.382778],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_730edccc9bd8446ba8f81ff16f66ec06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55949a11992b4d5f8668fe22c0621484 = $(`<div id="html_55949a11992b4d5f8668fe22c0621484" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Vicente, a orilla del camino ruta al Parque Nacional Juan Castro Blanco. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; Geovanny Sancho ; Gerardo Soto <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_730edccc9bd8446ba8f81ff16f66ec06.setContent(html_55949a11992b4d5f8668fe22c0621484);
+        
+
+        marker_b1cf9f3fe39d4da7964511dba5975e55.bindPopup(popup_730edccc9bd8446ba8f81ff16f66ec06)
+        ;
+
+        
+    
+    
+            var marker_0a378b9d5a544b8cbdc3847854fddb21 = L.marker(
+                [10.288056, -84.382778],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_4d2ce27bb07f470db9965b68a1a256b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b4b647d59114810a8ae5c6f118d0424 = $(`<div id="html_8b4b647d59114810a8ae5c6f118d0424" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Vicente, a orilla del camino ruta al Parque Nacional Juan Castro Blanco. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; Geovanny Sancho ; Gerardo Soto <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_4d2ce27bb07f470db9965b68a1a256b3.setContent(html_8b4b647d59114810a8ae5c6f118d0424);
+        
+
+        marker_0a378b9d5a544b8cbdc3847854fddb21.bindPopup(popup_4d2ce27bb07f470db9965b68a1a256b3)
+        ;
+
+        
+    
+    
+            var marker_7e7615dfa06a4444bafcee286e2fd89a = L.marker(
+                [10.288056, -84.382778],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_da3750d9acd6442cb419102ac1af6235 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5206ac72dba4198898d1abf7875d991 = $(`<div id="html_f5206ac72dba4198898d1abf7875d991" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Vicente, a orilla del camino ruta al Parque Nacional Juan Castro Blanco. <strong>Elevación:</strong> 1600.0 m  <strong>Fecha:</strong> 2000-07-19 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Victor Ramírez ; Geovanny Sancho ; Gerardo Soto <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_da3750d9acd6442cb419102ac1af6235.setContent(html_f5206ac72dba4198898d1abf7875d991);
+        
+
+        marker_7e7615dfa06a4444bafcee286e2fd89a.bindPopup(popup_da3750d9acd6442cb419102ac1af6235)
+        ;
+
+        
+    
+    
+            var marker_3ab528627c1946af94203da4550a68da = L.marker(
+                [9.356111, -83.230278],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_8a20a49f001f4e679dd6dff12838408d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9f7c241b41a4040a6273b811d3f7101 = $(`<div id="html_f9f7c241b41a4040a6273b811d3f7101" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre quebrada Kuisa y Río Lari. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; A. K. Monro ; Marcos Moraga ; Billen Gamboa R. <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_8a20a49f001f4e679dd6dff12838408d.setContent(html_f9f7c241b41a4040a6273b811d3f7101);
+        
+
+        marker_3ab528627c1946af94203da4550a68da.bindPopup(popup_8a20a49f001f4e679dd6dff12838408d)
+        ;
+
+        
+    
+    
+            var marker_461f2b61a7e24ddfbf3a5bf42662a2b6 = L.marker(
+                [9.356111, -83.230278],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_bfa6ca22fed14d3fbfd28bc0784943a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff1f3c303b4c4c068682a0317b38ee0b = $(`<div id="html_ff1f3c303b4c4c068682a0317b38ee0b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre quebrada Kuisa y Río Lari. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; A. K. Monro ; Marcos Moraga ; Billen Gamboa R. <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_bfa6ca22fed14d3fbfd28bc0784943a3.setContent(html_ff1f3c303b4c4c068682a0317b38ee0b);
+        
+
+        marker_461f2b61a7e24ddfbf3a5bf42662a2b6.bindPopup(popup_bfa6ca22fed14d3fbfd28bc0784943a3)
+        ;
+
+        
+    
+    
+            var marker_bef9e82d25724c19887fc30e67bffe3a = L.marker(
+                [9.356111, -83.230278],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_4b3bb4dee11748b3b11b854d64d6fd94 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36b881b536604de7874d26e1a7df350c = $(`<div id="html_36b881b536604de7874d26e1a7df350c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre quebrada Kuisa y Río Lari. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; A. K. Monro ; Marcos Moraga ; Billen Gamboa R. <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_4b3bb4dee11748b3b11b854d64d6fd94.setContent(html_36b881b536604de7874d26e1a7df350c);
+        
+
+        marker_bef9e82d25724c19887fc30e67bffe3a.bindPopup(popup_4b3bb4dee11748b3b11b854d64d6fd94)
+        ;
+
+        
+    
+    
+            var marker_0a6b2918137247daa22848763588bfda = L.marker(
+                [9.356111, -83.230278],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_3bd42333e9924edfae6719a07123ceb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9cdaddf6018f4820bcc09448f3d14e32 = $(`<div id="html_9cdaddf6018f4820bcc09448f3d14e32" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre quebrada Kuisa y Río Lari. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; A. K. Monro ; Marcos Moraga ; Billen Gamboa R. <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_3bd42333e9924edfae6719a07123ceb0.setContent(html_9cdaddf6018f4820bcc09448f3d14e32);
+        
+
+        marker_0a6b2918137247daa22848763588bfda.bindPopup(popup_3bd42333e9924edfae6719a07123ceb0)
+        ;
+
+        
+    
+    
+            var marker_6b73272123fd4dfc85e125bf133346f5 = L.marker(
+                [9.356111, -83.230278],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_9df21f0899ec496ea752d06c633a9f90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e66bcfd6a6674ac68ae9f4fb4d444750 = $(`<div id="html_e66bcfd6a6674ac68ae9f4fb4d444750" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre quebrada Kuisa y Río Lari. <strong>Elevación:</strong> 1950.0 m  <strong>Fecha:</strong> 2007-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría; A. K. Monro ; Marcos Moraga ; Billen Gamboa R. <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_9df21f0899ec496ea752d06c633a9f90.setContent(html_e66bcfd6a6674ac68ae9f4fb4d444750);
+        
+
+        marker_6b73272123fd4dfc85e125bf133346f5.bindPopup(popup_9df21f0899ec496ea752d06c633a9f90)
+        ;
+
+        
+    
+    
+            var marker_2daa0e5308ea484a8693e3580d214b18 = L.marker(
+                [9.38898, -83.20962],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_84346954fa3947faab71dd8096ca37ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06e2613faa2d433ab83e138318eba28f = $(`<div id="html_06e2613faa2d433ab83e138318eba28f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bratsi, Parque Internacional La Amistad, sendero Transtalamanca. Entre Ujarrás y San José Cabécar. Río Coén, fila montañosa cercana al río, ruta a Río Lori. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 2007-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Daniel Solano ; William Gamboa ; Oscar Chacón Chavarría ; Ronny Samaniego ; David Salvador Mitre Bethancourt <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_84346954fa3947faab71dd8096ca37ad.setContent(html_06e2613faa2d433ab83e138318eba28f);
+        
+
+        marker_2daa0e5308ea484a8693e3580d214b18.bindPopup(popup_84346954fa3947faab71dd8096ca37ad)
+        ;
+
+        
+    
+    
+            var marker_f8c4abc46f414c2b97db8f543ee0712a = L.marker(
+                [10.17, -84.0],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_f5cc94183fd44d0680dfc4649cfcbd5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccd689dd818b4cdfae2cac407048fb64 = $(`<div id="html_ccd689dd818b4cdfae2cac407048fb64" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Old cart road to Limon, 5.6 km N of San Jeronimo, near La Palma, along stream <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 1987-01-13 00:00:00+00:00 <strong>Recolectores:</strong> S. R. Hill <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f5cc94183fd44d0680dfc4649cfcbd5f.setContent(html_ccd689dd818b4cdfae2cac407048fb64);
+        
+
+        marker_f8c4abc46f414c2b97db8f543ee0712a.bindPopup(popup_f5cc94183fd44d0680dfc4649cfcbd5f)
+        ;
+
+        
+    
+    
+            var marker_b2f559f44ef94236afbf6c35db631de8 = L.marker(
+                [10.06, -84.0],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_c9d8c23a71c94d5ba8de36caa0070d75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f86f1feccd304870a5440b92b94178dd = $(`<div id="html_f86f1feccd304870a5440b92b94178dd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo; Cordillera Central. Sector Zurquí. Cerca al Túnel. <strong>Elevación:</strong> 1550.0 m  <strong>Fecha:</strong> 1992-06-19 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora <strong>Identificadores:</strong> N. Zamora, V</div>`)[0];
+            popup_c9d8c23a71c94d5ba8de36caa0070d75.setContent(html_f86f1feccd304870a5440b92b94178dd);
+        
+
+        marker_b2f559f44ef94236afbf6c35db631de8.bindPopup(popup_c9d8c23a71c94d5ba8de36caa0070d75)
+        ;
+
+        
+    
+    
+            var marker_98dac0201f514a99936e507e9a290551 = L.marker(
+                [10.8, -85.32],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_db066da7d5944c57891df49ca5c1620d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a799b48021d54afa8b0be5b070f85f97 = $(`<div id="html_a799b48021d54afa8b0be5b070f85f97" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Rincón de La Vieja Liberia. Del Mirador siguiendo la Fila al Volcán Santa María. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1987-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> D. Frodin</div>`)[0];
+            popup_db066da7d5944c57891df49ca5c1620d.setContent(html_a799b48021d54afa8b0be5b070f85f97);
+        
+
+        marker_98dac0201f514a99936e507e9a290551.bindPopup(popup_db066da7d5944c57891df49ca5c1620d)
+        ;
+
+        
+    
+    
+            var marker_cb002c124fe94f0884f58b7bd5c03d0c = L.marker(
+                [10.433333, -84.916667],
+                {}
+            ).addTo(marker_cluster_d791d5b9d57f4873b9f600b74de672de);
+        
+    
+        var popup_a96428138e3b4511af008e6c6fdaf91c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8f51d3571b743da83ad3e7206d06179 = $(`<div id="html_d8f51d3571b743da83ad3e7206d06179" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Quebrada Grande, Tilarán Sendero Esperanza-Las Nubes, División Continental. <strong>Elevación:</strong> 1350.0 m  <strong>Fecha:</strong> 1987-02-24 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|Erick Bello C. <strong>Identificadores:</strong> M.J. Cannon & F.M. Cannon</div>`)[0];
+            popup_a96428138e3b4511af008e6c6fdaf91c.setContent(html_d8f51d3571b743da83ad3e7206d06179);
+        
+
+        marker_cb002c124fe94f0884f58b7bd5c03d0c.bindPopup(popup_a96428138e3b4511af008e6c6fdaf91c)
+        ;
+
+        
+    
+    
+            var layer_control_a717dba0203f490695fdc6d4df7173c8 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_42e654f3e65d49d8a6546d97b8271cdd,
+                    "ESRI World Imagery" : tile_layer_6bdea5a01f2e42468954a260b7d99931,
+                },
+                overlays :  {
+                    "macro_element_d791d5b9d57f4873b9f600b74de672de" : marker_cluster_d791d5b9d57f4873b9f600b74de672de,
+                },
+            };
+            L.control.layers(
+                layer_control_a717dba0203f490695fdc6d4df7173c8.base_layers,
+                layer_control_a717dba0203f490695fdc6d4df7173c8.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_30d43022ca204468a87d4491ef6dc7a6);
+            tile_layer_6bdea5a01f2e42468954a260b7d99931.remove();
+        
+</script>

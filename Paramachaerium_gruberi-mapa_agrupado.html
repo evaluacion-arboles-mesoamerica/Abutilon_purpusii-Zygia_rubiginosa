@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d83280bb1b0648dab3b8c46d94a5cf1f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d83280bb1b0648dab3b8c46d94a5cf1f" ></div>
+        
+</body>
+<script>    
+    
+            var map_d83280bb1b0648dab3b8c46d94a5cf1f = L.map(
+                "map_d83280bb1b0648dab3b8c46d94a5cf1f",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_d83280bb1b0648dab3b8c46d94a5cf1f);
+
+            
+
+        
+    
+            var tile_layer_0f3f41f6b23c4e8b90300bc5404e47cb = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d83280bb1b0648dab3b8c46d94a5cf1f);
+        
+    
+            var tile_layer_20a67726a1684ddbabbbc115c018ccd6 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d83280bb1b0648dab3b8c46d94a5cf1f);
+        
+    
+            var marker_cluster_f650f43d461f410d85131ce9410dfc46 = L.markerClusterGroup(
+                {}
+            );
+            map_d83280bb1b0648dab3b8c46d94a5cf1f.addLayer(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+            var marker_abf208f6781542cdaa76a488f287bed4 = L.marker(
+                [8.43, -83.3],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_80b8ed67abfc489a8c8af5ac0f92fc35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e042cc4bc43c41b89ff0f2ac8420f865 = $(`<div id="html_e042cc4bc43c41b89ff0f2ac8420f865" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Carbonera, 15 km sur de Puerto Jiménez. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1989-02-22 00:00:00+00:00 <strong>Recolectores:</strong> Jiménez, Quírico <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_80b8ed67abfc489a8c8af5ac0f92fc35.setContent(html_e042cc4bc43c41b89ff0f2ac8420f865);
+        
+
+        marker_abf208f6781542cdaa76a488f287bed4.bindPopup(popup_80b8ed67abfc489a8c8af5ac0f92fc35)
+        ;
+
+        
+    
+    
+            var marker_9055e4b995c1452682a36cd6ba830bd0 = L.marker(
+                [8.43, -83.3],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_a2d982596fa94923b7209856483e3dd0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6995aa4d1a04bcdbfabe7a7cc774005 = $(`<div id="html_b6995aa4d1a04bcdbfabe7a7cc774005" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Carbonera, 15 km sur de Puerto Jiménez. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1989-02-22 00:00:00+00:00 <strong>Recolectores:</strong> Jiménez, Quírico <strong>Identificadores:</strong> Jiménez, Quírico</div>`)[0];
+            popup_a2d982596fa94923b7209856483e3dd0.setContent(html_b6995aa4d1a04bcdbfabe7a7cc774005);
+        
+
+        marker_9055e4b995c1452682a36cd6ba830bd0.bindPopup(popup_a2d982596fa94923b7209856483e3dd0)
+        ;
+
+        
+    
+    
+            var marker_4d7e9ba76f3743e1942950be9ac58af7 = L.marker(
+                [8.39, -83.29],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_73d57bd08d034179a2e9f34cf0133ea1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a9adcb78e554100b361cf5682f6f8ac = $(`<div id="html_0a9adcb78e554100b361cf5682f6f8ac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Subiendo a la Carbonera. Jiménez. <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 1991-10-15 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> V. Rudd</div>`)[0];
+            popup_73d57bd08d034179a2e9f34cf0133ea1.setContent(html_0a9adcb78e554100b361cf5682f6f8ac);
+        
+
+        marker_4d7e9ba76f3743e1942950be9ac58af7.bindPopup(popup_73d57bd08d034179a2e9f34cf0133ea1)
+        ;
+
+        
+    
+    
+            var marker_4f566ec306f146f796bf1b1e7401a091 = L.marker(
+                [8.4, -83.28],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_0ac93f768b5f4da190e26105ce8312cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ed859822087454d8bbd74ff8647f2b9 = $(`<div id="html_1ed859822087454d8bbd74ff8647f2b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carbonera Ridge. In tall, undisturbed forest on rocky, hilly terrain. Collected by Edwin Jenkins. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1993-01-24 00:00:00+00:00 <strong>Recolectores:</strong> Thomsen, Karsten <strong>Identificadores:</strong> Thomsen, Karsten</div>`)[0];
+            popup_0ac93f768b5f4da190e26105ce8312cc.setContent(html_1ed859822087454d8bbd74ff8647f2b9);
+        
+
+        marker_4f566ec306f146f796bf1b1e7401a091.bindPopup(popup_0ac93f768b5f4da190e26105ce8312cc)
+        ;
+
+        
+    
+    
+            var marker_ff783b1db30a437fa75baf8d1fed6f55 = L.marker(
+                [8.4, -83.28],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_900d16a3784d402a88f49962e7b297f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1de26ea2658495ea1bf09e0e41b68ba = $(`<div id="html_a1de26ea2658495ea1bf09e0e41b68ba" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa. Playa Carbonera. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1994-01-08 00:00:00+00:00 <strong>Recolectores:</strong> Aguilar, Reinaldo <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_900d16a3784d402a88f49962e7b297f1.setContent(html_a1de26ea2658495ea1bf09e0e41b68ba);
+        
+
+        marker_ff783b1db30a437fa75baf8d1fed6f55.bindPopup(popup_900d16a3784d402a88f49962e7b297f1)
+        ;
+
+        
+    
+    
+            var marker_c87ef7931cfc4023b14fd21b1144cc98 = L.marker(
+                [8.436111, -83.30833299999999],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_2d8a29e71b384cbc91f27fd6dc12db3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a7fb2a5299c4b6ca0923d02b6f7f2eb = $(`<div id="html_0a7fb2a5299c4b6ca0923d02b6f7f2eb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Carbonera, 15 Km sur de Puerto Jiménez. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1989-02-22 00:00:00+00:00 <strong>Recolectores:</strong> Quírico Jiménez|E. Vargas|Juan J. Jiménez <strong>Identificadores:</strong> Q. Jiménez, II/</div>`)[0];
+            popup_2d8a29e71b384cbc91f27fd6dc12db3f.setContent(html_0a7fb2a5299c4b6ca0923d02b6f7f2eb);
+        
+
+        marker_c87ef7931cfc4023b14fd21b1144cc98.bindPopup(popup_2d8a29e71b384cbc91f27fd6dc12db3f)
+        ;
+
+        
+    
+    
+            var marker_8750971d2443497792a73e003b8c58fd = L.marker(
+                [8.393611, -83.291944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_713cd07951e74b71b351c613d5da99c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6dd19526ac24a8fa1939cfa266d4f35 = $(`<div id="html_e6dd19526ac24a8fa1939cfa266d4f35" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Peninsula de Osa.  Puerto Jimenez, Carbonera. <strong>Elevación:</strong> 412.0 m  <strong>Fecha:</strong> 1999-06-09 00:00:00+00:00 <strong>Recolectores:</strong> Priscilla Hurtado <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_713cd07951e74b71b351c613d5da99c0.setContent(html_e6dd19526ac24a8fa1939cfa266d4f35);
+        
+
+        marker_8750971d2443497792a73e003b8c58fd.bindPopup(popup_713cd07951e74b71b351c613d5da99c0)
+        ;
+
+        
+    
+    
+            var marker_115c1fa463694b04a40462666ed5b985 = L.marker(
+                [8.5, -82.25],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_7d571a31d3d340079d800e6bff59d1ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6377853d10e345b9b6d8a4b72b7c7be1 = $(`<div id="html_6377853d10e345b9b6d8a4b72b7c7be1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1973-02-24 00:00:00+00:00 <strong>Recolectores:</strong> T. B. Croat <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_7d571a31d3d340079d800e6bff59d1ff.setContent(html_6377853d10e345b9b6d8a4b72b7c7be1);
+        
+
+        marker_115c1fa463694b04a40462666ed5b985.bindPopup(popup_7d571a31d3d340079d800e6bff59d1ff)
+        ;
+
+        
+    
+    
+            var marker_c17943a25a3041459e88cbb918efe5ab = L.marker(
+                [8.408333, -83.294444],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_88393428316c41acb0cac23375a9b2dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d48097057a864a30941627024cbc4d5f = $(`<div id="html_d48097057a864a30941627024cbc4d5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Subiendo a Fila Carbonera <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1991-10-15 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Rudd, Velva Elaine</div>`)[0];
+            popup_88393428316c41acb0cac23375a9b2dd.setContent(html_d48097057a864a30941627024cbc4d5f);
+        
+
+        marker_c17943a25a3041459e88cbb918efe5ab.bindPopup(popup_88393428316c41acb0cac23375a9b2dd)
+        ;
+
+        
+    
+    
+            var marker_1a8fb7fdc977496995235a82fec44440 = L.marker(
+                [8.408333, -83.283333],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_5859744ed3be4759b3c6a1ca54b62c4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7050a86d611d430eb287716ba996d559 = $(`<div id="html_7050a86d611d430eb287716ba996d559" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puerto Jimenez; Playa Carbonera. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1994-01-08 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_5859744ed3be4759b3c6a1ca54b62c4d.setContent(html_7050a86d611d430eb287716ba996d559);
+        
+
+        marker_1a8fb7fdc977496995235a82fec44440.bindPopup(popup_5859744ed3be4759b3c6a1ca54b62c4d)
+        ;
+
+        
+    
+    
+            var marker_1027b1984a844148883650d36fac5fca = L.marker(
+                [8.393611, -83.291944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_e515e941de754898926306ca054f47a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cdaee76aca84b1ca892534755bdac02 = $(`<div id="html_1cdaee76aca84b1ca892534755bdac02" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carbonera. <strong>Elevación:</strong> 412.0 m  <strong>Fecha:</strong> 1999-06-09 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e515e941de754898926306ca054f47a0.setContent(html_1cdaee76aca84b1ca892534755bdac02);
+        
+
+        marker_1027b1984a844148883650d36fac5fca.bindPopup(popup_e515e941de754898926306ca054f47a0)
+        ;
+
+        
+    
+    
+            var marker_3f8c74a797b4429491b1eb8886c76f62 = L.marker(
+                [8.393611, -83.291944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_e7142a7bfcfe45b0a3a843d7112015db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b197cb4893d44df99009d4bdb45b411a = $(`<div id="html_b197cb4893d44df99009d4bdb45b411a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carbonera. <strong>Elevación:</strong> 412.0 m  <strong>Fecha:</strong> 1999-06-09 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e7142a7bfcfe45b0a3a843d7112015db.setContent(html_b197cb4893d44df99009d4bdb45b411a);
+        
+
+        marker_3f8c74a797b4429491b1eb8886c76f62.bindPopup(popup_e7142a7bfcfe45b0a3a843d7112015db)
+        ;
+
+        
+    
+    
+            var marker_76d13fdccb2241059fb3c266a2835024 = L.marker(
+                [8.393611, -83.291944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_265aa325a0d54ec2afc178d308b06310 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a24ef2690adb4dd5b28299057ad6b8b9 = $(`<div id="html_a24ef2690adb4dd5b28299057ad6b8b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carbonera. <strong>Elevación:</strong> 412.0 m  <strong>Fecha:</strong> 1999-06-09 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_265aa325a0d54ec2afc178d308b06310.setContent(html_a24ef2690adb4dd5b28299057ad6b8b9);
+        
+
+        marker_76d13fdccb2241059fb3c266a2835024.bindPopup(popup_265aa325a0d54ec2afc178d308b06310)
+        ;
+
+        
+    
+    
+            var marker_b49e9b34cb4c4782afc9e3a4e4a44fef = L.marker(
+                [8.393611, -83.291944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_55f44ab2efda4ca2918f76aced6ef4b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7fdf70f0d024bb0b8f7162ed0bd5c2c = $(`<div id="html_b7fdf70f0d024bb0b8f7162ed0bd5c2c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carbonera. <strong>Elevación:</strong> 412.0 m  <strong>Fecha:</strong> 1999-06-09 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_55f44ab2efda4ca2918f76aced6ef4b0.setContent(html_b7fdf70f0d024bb0b8f7162ed0bd5c2c);
+        
+
+        marker_b49e9b34cb4c4782afc9e3a4e4a44fef.bindPopup(popup_55f44ab2efda4ca2918f76aced6ef4b0)
+        ;
+
+        
+    
+    
+            var marker_5746ca9ade914e9c9250fc3cfeba1173 = L.marker(
+                [8.4, -83.306944],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_5d43f9839e7d41e5b97efe4fef1aaba0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c01b4c39c88478f8b4f346b3f377927 = $(`<div id="html_0c01b4c39c88478f8b4f346b3f377927" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Carbonera. <strong>Elevación:</strong> 345.5 m  <strong>Fecha:</strong> 1989-02-22 00:00:00+00:00 <strong>Recolectores:</strong> Quirico Jiménez <strong>Identificadores:</strong> Jiménez, Quirico</div>`)[0];
+            popup_5d43f9839e7d41e5b97efe4fef1aaba0.setContent(html_0c01b4c39c88478f8b4f346b3f377927);
+        
+
+        marker_5746ca9ade914e9c9250fc3cfeba1173.bindPopup(popup_5d43f9839e7d41e5b97efe4fef1aaba0)
+        ;
+
+        
+    
+    
+            var marker_04302f0c2dfb40c180b470d14f88f13e = L.marker(
+                [8.4, -83.28],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_334f13b675a44f97a58d25e76a3efaee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76bff033eca94d09adfd377fe60ab93e = $(`<div id="html_76bff033eca94d09adfd377fe60ab93e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Península de Osa. Puerto Jiménez; Playa Carbonera. <strong>Elevación:</strong> 1.0 m  <strong>Fecha:</strong> 1994-01-08 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|V. Alpízar|Mery Ocampo <strong>Identificadores:</strong> N. Zamora (INB)</div>`)[0];
+            popup_334f13b675a44f97a58d25e76a3efaee.setContent(html_76bff033eca94d09adfd377fe60ab93e);
+        
+
+        marker_04302f0c2dfb40c180b470d14f88f13e.bindPopup(popup_334f13b675a44f97a58d25e76a3efaee)
+        ;
+
+        
+    
+    
+            var marker_9bcc94ac3f5744648f64e7e67306ae9f = L.marker(
+                [8.396666999999999, -83.294444],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_3d0be31b5e554aa4ace6188136e1e5ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f210191092d547359fed516c2edd22fa = $(`<div id="html_f210191092d547359fed516c2edd22fa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Subiendo a la Carbonera. Jiménez. <strong>Elevación:</strong> 15.0 m  <strong>Fecha:</strong> 1991-10-15 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> B. B. Klitgaard (BM)</div>`)[0];
+            popup_3d0be31b5e554aa4ace6188136e1e5ba.setContent(html_f210191092d547359fed516c2edd22fa);
+        
+
+        marker_9bcc94ac3f5744648f64e7e67306ae9f.bindPopup(popup_3d0be31b5e554aa4ace6188136e1e5ba)
+        ;
+
+        
+    
+    
+            var marker_9f246bac50574203852ddb4fc71b72e8 = L.marker(
+                [8.45, -82.883333],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_240a8324813e48149593c53c346753e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2561d1683d64426191ee133a0057f44f = $(`<div id="html_2561d1683d64426191ee133a0057f44f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monte Verde (oeste de Puerto Armuelles) <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-03-23 00:00:00+00:00 <strong>Recolectores:</strong> Luis M. Vargas|L.B. Vargas <strong>Identificadores:</strong> L.M. Vargas</div>`)[0];
+            popup_240a8324813e48149593c53c346753e9.setContent(html_2561d1683d64426191ee133a0057f44f);
+        
+
+        marker_9f246bac50574203852ddb4fc71b72e8.bindPopup(popup_240a8324813e48149593c53c346753e9)
+        ;
+
+        
+    
+    
+            var marker_b9cfb9f2ecea4212bba5ad5d15d91cf1 = L.marker(
+                [8.35, -82.983333],
+                {}
+            ).addTo(marker_cluster_f650f43d461f410d85131ce9410dfc46);
+        
+    
+        var popup_da1c34d26fe7496ca8ca804d21ba712c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_367d7f6759e44472b48c9d8758e7a5c8 = $(`<div id="html_367d7f6759e44472b48c9d8758e7a5c8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> West of San Bartolo Limité near Costa Rican border. Primary forest (freshly cut) <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1973-02-24 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat <strong>Identificadores:</strong> B.B. Klitgaard</div>`)[0];
+            popup_da1c34d26fe7496ca8ca804d21ba712c.setContent(html_367d7f6759e44472b48c9d8758e7a5c8);
+        
+
+        marker_b9cfb9f2ecea4212bba5ad5d15d91cf1.bindPopup(popup_da1c34d26fe7496ca8ca804d21ba712c)
+        ;
+
+        
+    
+    
+            var layer_control_7bfc144b5d26437bb17c2c972f0a7d80 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0f3f41f6b23c4e8b90300bc5404e47cb,
+                    "ESRI World Imagery" : tile_layer_20a67726a1684ddbabbbc115c018ccd6,
+                },
+                overlays :  {
+                    "macro_element_f650f43d461f410d85131ce9410dfc46" : marker_cluster_f650f43d461f410d85131ce9410dfc46,
+                },
+            };
+            L.control.layers(
+                layer_control_7bfc144b5d26437bb17c2c972f0a7d80.base_layers,
+                layer_control_7bfc144b5d26437bb17c2c972f0a7d80.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_d83280bb1b0648dab3b8c46d94a5cf1f);
+            tile_layer_20a67726a1684ddbabbbc115c018ccd6.remove();
+        
+</script>

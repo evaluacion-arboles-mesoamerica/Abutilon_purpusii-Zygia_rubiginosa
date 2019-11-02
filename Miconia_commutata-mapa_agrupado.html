@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f8fc863354dc4cefb386a666d2f803c6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f8fc863354dc4cefb386a666d2f803c6" ></div>
+        
+</body>
+<script>    
+    
+            var map_f8fc863354dc4cefb386a666d2f803c6 = L.map(
+                "map_f8fc863354dc4cefb386a666d2f803c6",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_f8fc863354dc4cefb386a666d2f803c6);
+
+            
+
+        
+    
+            var tile_layer_0eaecd96895446a4901ae21e3a63fb84 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f8fc863354dc4cefb386a666d2f803c6);
+        
+    
+            var tile_layer_adedc85c31a5449ab4dd1b697c9b3fde = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f8fc863354dc4cefb386a666d2f803c6);
+        
+    
+            var marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05 = L.markerClusterGroup(
+                {}
+            );
+            map_f8fc863354dc4cefb386a666d2f803c6.addLayer(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+            var marker_d9382e0498944ea8b370ed9a3d365086 = L.marker(
+                [10.4, -84.05],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_3010cda6b91e4a718989de4a067559bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af9f738371db414ba8f1d6972c9a7050 = $(`<div id="html_af9f738371db414ba8f1d6972c9a7050" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Río Peje, estación Magsasay. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1994-02-14 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_3010cda6b91e4a718989de4a067559bd.setContent(html_af9f738371db414ba8f1d6972c9a7050);
+        
+
+        marker_d9382e0498944ea8b370ed9a3d365086.bindPopup(popup_3010cda6b91e4a718989de4a067559bd)
+        ;
+
+        
+    
+    
+            var marker_2fffae3610a84536bb571404986da4bf = L.marker(
+                [8.68, -83.21],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_29155b6869da40a6bb900b7fc1614cec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef14dc79a28d438580f60336eb9fa2ad = $(`<div id="html_ef14dc79a28d438580f60336eb9fa2ad" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque de los Austriacos. Primary forest-Research plot-La Gamba. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1994-01-04 00:00:00+00:00 <strong>Recolectores:</strong> Huber, Werner <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_29155b6869da40a6bb900b7fc1614cec.setContent(html_ef14dc79a28d438580f60336eb9fa2ad);
+        
+
+        marker_2fffae3610a84536bb571404986da4bf.bindPopup(popup_29155b6869da40a6bb900b7fc1614cec)
+        ;
+
+        
+    
+    
+            var marker_0993a926eaa247ebb2851ce9546ce4ef = L.marker(
+                [8.62, -83.68],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_f1c8869ad76f4938af9e329639184b1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c6e707b365c47398280033f8f341d25 = $(`<div id="html_2c6e707b365c47398280033f8f341d25" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Corcovado  Los Planes, bosque comunal La Gloria a orillas de Río Claro. Península de Osa. <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 1991-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Cordero, Geovanny <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_f1c8869ad76f4938af9e329639184b1c.setContent(html_2c6e707b365c47398280033f8f341d25);
+        
+
+        marker_0993a926eaa247ebb2851ce9546ce4ef.bindPopup(popup_f1c8869ad76f4938af9e329639184b1c)
+        ;
+
+        
+    
+    
+            var marker_70118961d6e44e02bf1d7e73f8089072 = L.marker(
+                [10.366667, -84.06944],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_d87919e526854e51aaa70213c4191833 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_378e3fcade1c4469936bab5666b41001 = $(`<div id="html_378e3fcade1c4469936bab5666b41001" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_d87919e526854e51aaa70213c4191833.setContent(html_378e3fcade1c4469936bab5666b41001);
+        
+
+        marker_70118961d6e44e02bf1d7e73f8089072.bindPopup(popup_d87919e526854e51aaa70213c4191833)
+        ;
+
+        
+    
+    
+            var marker_90f06711f22b42c78c7ab84c474487bd = L.marker(
+                [10.3667, -84.0694],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_844fc569623743e8971bfdada454fe67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d7f09d92b9c4c9c8987da5d74761fd3 = $(`<div id="html_5d7f09d92b9c4c9c8987da5d74761fd3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Heredia: Sarapiquí. No protegida. Cuenca del Sarapiquí. Hotel Selva Verde <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_844fc569623743e8971bfdada454fe67.setContent(html_5d7f09d92b9c4c9c8987da5d74761fd3);
+        
+
+        marker_90f06711f22b42c78c7ab84c474487bd.bindPopup(popup_844fc569623743e8971bfdada454fe67)
+        ;
+
+        
+    
+    
+            var marker_dff5181f4e914a4f8d7f210a861b86ab = L.marker(
+                [10.405, -84.05833299999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_9232251090bf4866851d07558f6855b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc79c4c8f83a46f598126f85e9446f3f = $(`<div id="html_fc79c4c8f83a46f598126f85e9446f3f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Magsasay. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1994-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_9232251090bf4866851d07558f6855b8.setContent(html_fc79c4c8f83a46f598126f85e9446f3f);
+        
+
+        marker_dff5181f4e914a4f8d7f210a861b86ab.bindPopup(popup_9232251090bf4866851d07558f6855b8)
+        ;
+
+        
+    
+    
+            var marker_ed1f097f42284fc6978da4b569dd25a0 = L.marker(
+                [8.625, -83.68055600000001],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_51cd3f4ae6c44046a8d661cab568e04e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d72d9c71624463aa7ecc84e6fe792f8 = $(`<div id="html_8d72d9c71624463aa7ecc84e6fe792f8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Planes. Bosque comunal La Gloria A orillas de Rio Claro. <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 1991-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Geovanny Cordero <strong>Identificadores:</strong> Almeda, Frank</div>`)[0];
+            popup_51cd3f4ae6c44046a8d661cab568e04e.setContent(html_8d72d9c71624463aa7ecc84e6fe792f8);
+        
+
+        marker_ed1f097f42284fc6978da4b569dd25a0.bindPopup(popup_51cd3f4ae6c44046a8d661cab568e04e)
+        ;
+
+        
+    
+    
+            var marker_43c4275bd1de4e1ab47564f7331fd19e = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_f46ae53b6b9445a0a4dd93b6522b088d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d24a814c0dd44e31b72dc95dd6d0afea = $(`<div id="html_d24a814c0dd44e31b72dc95dd6d0afea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f46ae53b6b9445a0a4dd93b6522b088d.setContent(html_d24a814c0dd44e31b72dc95dd6d0afea);
+        
+
+        marker_43c4275bd1de4e1ab47564f7331fd19e.bindPopup(popup_f46ae53b6b9445a0a4dd93b6522b088d)
+        ;
+
+        
+    
+    
+            var marker_c10d00efa2d248bab369d1a709552698 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_a088a955843e4b0794ed2e363d54035f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6b17dc387dc41e898b395219bc1553b = $(`<div id="html_e6b17dc387dc41e898b395219bc1553b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_a088a955843e4b0794ed2e363d54035f.setContent(html_e6b17dc387dc41e898b395219bc1553b);
+        
+
+        marker_c10d00efa2d248bab369d1a709552698.bindPopup(popup_a088a955843e4b0794ed2e363d54035f)
+        ;
+
+        
+    
+    
+            var marker_5f62e15511cf4363bb0c2dd93750550b = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_99c05285e8f7465ea0f41bcbfe60f6ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e546922e0434db4807040a4791c18a8 = $(`<div id="html_0e546922e0434db4807040a4791c18a8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_99c05285e8f7465ea0f41bcbfe60f6ea.setContent(html_0e546922e0434db4807040a4791c18a8);
+        
+
+        marker_5f62e15511cf4363bb0c2dd93750550b.bindPopup(popup_99c05285e8f7465ea0f41bcbfe60f6ea)
+        ;
+
+        
+    
+    
+            var marker_93291e85c46743c89af0f11258913881 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_b03a36cbc1da467289c708a7df22eb11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8e91e7bcc0e4c5f994ff289ecef2d39 = $(`<div id="html_f8e91e7bcc0e4c5f994ff289ecef2d39" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_b03a36cbc1da467289c708a7df22eb11.setContent(html_f8e91e7bcc0e4c5f994ff289ecef2d39);
+        
+
+        marker_93291e85c46743c89af0f11258913881.bindPopup(popup_b03a36cbc1da467289c708a7df22eb11)
+        ;
+
+        
+    
+    
+            var marker_09a910f0ef9a4aeab3090227ea280d0d = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_debc40eeff4b46b696a71f04c960622b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3bb37e75a27464c86361e225a7402ca = $(`<div id="html_e3bb37e75a27464c86361e225a7402ca" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_debc40eeff4b46b696a71f04c960622b.setContent(html_e3bb37e75a27464c86361e225a7402ca);
+        
+
+        marker_09a910f0ef9a4aeab3090227ea280d0d.bindPopup(popup_debc40eeff4b46b696a71f04c960622b)
+        ;
+
+        
+    
+    
+            var marker_120398dcb4624ad18bcfad2b67c4de98 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_8d00796296fa4950947879c1880b4b0a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69bfac84ba9242ca84e9af218648e4da = $(`<div id="html_69bfac84ba9242ca84e9af218648e4da" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_8d00796296fa4950947879c1880b4b0a.setContent(html_69bfac84ba9242ca84e9af218648e4da);
+        
+
+        marker_120398dcb4624ad18bcfad2b67c4de98.bindPopup(popup_8d00796296fa4950947879c1880b4b0a)
+        ;
+
+        
+    
+    
+            var marker_fae7efc5af744b0aa532d9e0a94f9fe3 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_3d8f2c2ce93142eb98225963d68a2e4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3dec3afad7c84cd497337313f62c6fa9 = $(`<div id="html_3dec3afad7c84cd497337313f62c6fa9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_3d8f2c2ce93142eb98225963d68a2e4a.setContent(html_3dec3afad7c84cd497337313f62c6fa9);
+        
+
+        marker_fae7efc5af744b0aa532d9e0a94f9fe3.bindPopup(popup_3d8f2c2ce93142eb98225963d68a2e4a)
+        ;
+
+        
+    
+    
+            var marker_9b90656207b74f10a5c28b267b5a2eee = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_a9c408606e024628ae8e777bcabc0286 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c391c6e143e54fddb798069886fbddfe = $(`<div id="html_c391c6e143e54fddb798069886fbddfe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_a9c408606e024628ae8e777bcabc0286.setContent(html_c391c6e143e54fddb798069886fbddfe);
+        
+
+        marker_9b90656207b74f10a5c28b267b5a2eee.bindPopup(popup_a9c408606e024628ae8e777bcabc0286)
+        ;
+
+        
+    
+    
+            var marker_6c43fc3cef58436886c7614c6cb3b766 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_f378116674fb4198b3fac40a8c775901 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0eb98a63c73c437bbf786c8c7a11a2f2 = $(`<div id="html_0eb98a63c73c437bbf786c8c7a11a2f2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f378116674fb4198b3fac40a8c775901.setContent(html_0eb98a63c73c437bbf786c8c7a11a2f2);
+        
+
+        marker_6c43fc3cef58436886c7614c6cb3b766.bindPopup(popup_f378116674fb4198b3fac40a8c775901)
+        ;
+
+        
+    
+    
+            var marker_228aff19e5474ae9a9bd7aa767e8a606 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_707ba14d1f6b437e8ac5eeb72d32cdb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6eabdecd861740b9b75a7113a7211e06 = $(`<div id="html_6eabdecd861740b9b75a7113a7211e06" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_707ba14d1f6b437e8ac5eeb72d32cdb0.setContent(html_6eabdecd861740b9b75a7113a7211e06);
+        
+
+        marker_228aff19e5474ae9a9bd7aa767e8a606.bindPopup(popup_707ba14d1f6b437e8ac5eeb72d32cdb0)
+        ;
+
+        
+    
+    
+            var marker_61d26e4b21154bf59703cec23645d6c6 = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_a03ac8adfac24500b92b343107abf67a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca6d820594ad4294a0f9f5e1cc9ac5bb = $(`<div id="html_ca6d820594ad4294a0f9f5e1cc9ac5bb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_a03ac8adfac24500b92b343107abf67a.setContent(html_ca6d820594ad4294a0f9f5e1cc9ac5bb);
+        
+
+        marker_61d26e4b21154bf59703cec23645d6c6.bindPopup(popup_a03ac8adfac24500b92b343107abf67a)
+        ;
+
+        
+    
+    
+            var marker_fb518f24961b44a6ad45c2061b16f04b = L.marker(
+                [10.366667, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_46a83cc4fe9847239bf5110e11ff218e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44232c4dad1c4fadb4cafd7507a5bc29 = $(`<div id="html_44232c4dad1c4fadb4cafd7507a5bc29" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hotel Selva Verde. Chilamate. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_46a83cc4fe9847239bf5110e11ff218e.setContent(html_44232c4dad1c4fadb4cafd7507a5bc29);
+        
+
+        marker_fb518f24961b44a6ad45c2061b16f04b.bindPopup(popup_46a83cc4fe9847239bf5110e11ff218e)
+        ;
+
+        
+    
+    
+            var marker_96ca2625fb06413e8fda0afe1347306e = L.marker(
+                [10.415556, -84.12138900000001],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_f5acff55beb14374a1ff08920fc1cf09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59f7a8f3b7234a6491ac1a71da973610 = $(`<div id="html_59f7a8f3b7234a6491ac1a71da973610" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Tirimbina, Sarapiquí. <strong>Elevación:</strong> 152.0 m  <strong>Fecha:</strong> 2009-01-12 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Jose González <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_f5acff55beb14374a1ff08920fc1cf09.setContent(html_59f7a8f3b7234a6491ac1a71da973610);
+        
+
+        marker_96ca2625fb06413e8fda0afe1347306e.bindPopup(popup_f5acff55beb14374a1ff08920fc1cf09)
+        ;
+
+        
+    
+    
+            var marker_5b236a3506fd45f59be177fddd0eaf73 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_b3c50881759b43de9c1731a807ec9053 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c4334f1595f49c58709c48bc6adb9c1 = $(`<div id="html_5c4334f1595f49c58709c48bc6adb9c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-04-15 00:00:00+00:00 <strong>Recolectores:</strong> James P. Folsom <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_b3c50881759b43de9c1731a807ec9053.setContent(html_5c4334f1595f49c58709c48bc6adb9c1);
+        
+
+        marker_5b236a3506fd45f59be177fddd0eaf73.bindPopup(popup_b3c50881759b43de9c1731a807ec9053)
+        ;
+
+        
+    
+    
+            var marker_4ce8fca703874050ab8c2ce7053945d5 = L.marker(
+                [10.4, -84.05],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_9b6544d2a9984fc2ac4b0cf2eceeb434 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aef9481b28de4c8b85da463a2f7aae86 = $(`<div id="html_aef9481b28de4c8b85da463a2f7aae86" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo; Llanura de San Carlos. Estación Magsasay. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1994-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Quírico Jiménez|Eduardo Lépiz|Víctor H. Ramírez|R.M. Rueda <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_9b6544d2a9984fc2ac4b0cf2eceeb434.setContent(html_aef9481b28de4c8b85da463a2f7aae86);
+        
+
+        marker_4ce8fca703874050ab8c2ce7053945d5.bindPopup(popup_9b6544d2a9984fc2ac4b0cf2eceeb434)
+        ;
+
+        
+    
+    
+            var marker_88a0b4b48e0f47d682ae6e98a74e26e8 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_45657e13b9c841a58bd7dc75e2ca030b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ae00059bc2b4ee6806b2e49ef053376 = $(`<div id="html_5ae00059bc2b4ee6806b2e49ef053376" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_45657e13b9c841a58bd7dc75e2ca030b.setContent(html_5ae00059bc2b4ee6806b2e49ef053376);
+        
+
+        marker_88a0b4b48e0f47d682ae6e98a74e26e8.bindPopup(popup_45657e13b9c841a58bd7dc75e2ca030b)
+        ;
+
+        
+    
+    
+            var marker_c04b87937c0946ed93fba64f7ad8a5e6 = L.marker(
+                [8.625, -83.68055],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_5d3f4537d760486b8e4509eb77b7eafe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_104c09bdc7654f06ab6e03ebff8f746d = $(`<div id="html_104c09bdc7654f06ab6e03ebff8f746d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Corcovado Los Planes. Bosque comunal La Gloria A orillas de Río Claro. <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 1991-02-18 00:00:00+00:00 <strong>Recolectores:</strong> Geovanny Cordero <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_5d3f4537d760486b8e4509eb77b7eafe.setContent(html_104c09bdc7654f06ab6e03ebff8f746d);
+        
+
+        marker_c04b87937c0946ed93fba64f7ad8a5e6.bindPopup(popup_5d3f4537d760486b8e4509eb77b7eafe)
+        ;
+
+        
+    
+    
+            var marker_9a63703bad2e40e1800a391b894bb16b = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_8540681826004ea1836949218ceb5f4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2addc12361a44d129a6e88e27b30bcb0 = $(`<div id="html_2addc12361a44d129a6e88e27b30bcb0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Sendero: CC 1200m. Izq. Planta recolectada por A. Hurtado. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2006-04-18 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Vargas <strong>Identificadores:</strong> O. Vargas, 4/18/</div>`)[0];
+            popup_8540681826004ea1836949218ceb5f4f.setContent(html_2addc12361a44d129a6e88e27b30bcb0);
+        
+
+        marker_9a63703bad2e40e1800a391b894bb16b.bindPopup(popup_8540681826004ea1836949218ceb5f4f)
+        ;
+
+        
+    
+    
+            var marker_8815664af50a4671ab9e9442e26a004d = L.marker(
+                [8.68, -83.561111],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_92c74f3fb1564f6bbda336f64f167183 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f68fe59857f4f8d901e5369735473df = $(`<div id="html_0f68fe59857f4f8d901e5369735473df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce.  Península de Osa.  Camino a Cerro Brujo.  Curso Sapotaceas. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 2006-03-22 00:00:00+00:00 <strong>Recolectores:</strong> D. Santamaría <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_92c74f3fb1564f6bbda336f64f167183.setContent(html_0f68fe59857f4f8d901e5369735473df);
+        
+
+        marker_8815664af50a4671ab9e9442e26a004d.bindPopup(popup_92c74f3fb1564f6bbda336f64f167183)
+        ;
+
+        
+    
+    
+            var marker_ab18fdca43264e3bba9a921dba2d36a8 = L.marker(
+                [10.37, -84.0694],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_1dfba01a0a6a45a6900526d43da83739 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d102473c4eb4e3ab8a20bbb91e86cfe = $(`<div id="html_6d102473c4eb4e3ab8a20bbb91e86cfe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Sarapiquí.  Hotel Selva Verde.  No protegida. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-06 00:00:00+00:00 <strong>Recolectores:</strong> R. Kriebel <strong>Identificadores:</strong> R. Kriebel</div>`)[0];
+            popup_1dfba01a0a6a45a6900526d43da83739.setContent(html_6d102473c4eb4e3ab8a20bbb91e86cfe);
+        
+
+        marker_ab18fdca43264e3bba9a921dba2d36a8.bindPopup(popup_1dfba01a0a6a45a6900526d43da83739)
+        ;
+
+        
+    
+    
+            var marker_6a67da664aae4a269f47ebe5dc6f961b = L.marker(
+                [9.302769999999999, -82.53888],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_6d154cad347e408aa4ee11548e20e4f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27f9c71d09a54aa2af8278abe1379a61 = $(`<div id="html_27f9c71d09a54aa2af8278abe1379a61" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> A orillas del río Changuinola y bosque alrededor de Corriente Grande. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1980-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Mireya D. Correa A.|Alberto S. Taylor B.|Noris Salazar A.|Luis G. Carrasquilla|Tania Béliz|Carmen G. Vergara <strong>Identificadores:</strong> F. Almeda</div>`)[0];
+            popup_6d154cad347e408aa4ee11548e20e4f9.setContent(html_27f9c71d09a54aa2af8278abe1379a61);
+        
+
+        marker_6a67da664aae4a269f47ebe5dc6f961b.bindPopup(popup_6d154cad347e408aa4ee11548e20e4f9)
+        ;
+
+        
+    
+    
+            var marker_f91be85bf5ff4aca9357608849423a96 = L.marker(
+                [10.431389, -84.00361099999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_88208f203d5543c0860994babd223cf7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72a6ac5ed1fe480db07e9be22a7e318d = $(`<div id="html_72a6ac5ed1fe480db07e9be22a7e318d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1982-02-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> Almeda, TYPE</div>`)[0];
+            popup_88208f203d5543c0860994babd223cf7.setContent(html_72a6ac5ed1fe480db07e9be22a7e318d);
+        
+
+        marker_f91be85bf5ff4aca9357608849423a96.bindPopup(popup_88208f203d5543c0860994babd223cf7)
+        ;
+
+        
+    
+    
+            var marker_b0a03172fa124bb3b8bd21d500cd54ae = L.marker(
+                [10.369722, -84.06944399999999],
+                {}
+            ).addTo(marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05);
+        
+    
+        var popup_5ce05a72be83446ab1542337d6ac2707 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6307ef8429d84f3a922005142ef81fb8 = $(`<div id="html_6307ef8429d84f3a922005142ef81fb8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sarapiquí.  No protegida.  Cuenca del Sarapiquí.  Hotel Selva Verde. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2003-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Kriebel, R. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5ce05a72be83446ab1542337d6ac2707.setContent(html_6307ef8429d84f3a922005142ef81fb8);
+        
+
+        marker_b0a03172fa124bb3b8bd21d500cd54ae.bindPopup(popup_5ce05a72be83446ab1542337d6ac2707)
+        ;
+
+        
+    
+    
+            var layer_control_e9d6f44a01e547a8a55767be478a07ef = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0eaecd96895446a4901ae21e3a63fb84,
+                    "ESRI World Imagery" : tile_layer_adedc85c31a5449ab4dd1b697c9b3fde,
+                },
+                overlays :  {
+                    "macro_element_0a1f81426dae4fd2a8f8a262791e2d05" : marker_cluster_0a1f81426dae4fd2a8f8a262791e2d05,
+                },
+            };
+            L.control.layers(
+                layer_control_e9d6f44a01e547a8a55767be478a07ef.base_layers,
+                layer_control_e9d6f44a01e547a8a55767be478a07ef.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_f8fc863354dc4cefb386a666d2f803c6);
+            tile_layer_adedc85c31a5449ab4dd1b697c9b3fde.remove();
+        
+</script>

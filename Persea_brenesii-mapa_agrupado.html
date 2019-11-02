@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2f256d33d4ac4107820ab4c4e5e73a10 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_2f256d33d4ac4107820ab4c4e5e73a10" ></div>
+        
+</body>
+<script>    
+    
+            var map_2f256d33d4ac4107820ab4c4e5e73a10 = L.map(
+                "map_2f256d33d4ac4107820ab4c4e5e73a10",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_2f256d33d4ac4107820ab4c4e5e73a10);
+
+            
+
+        
+    
+            var tile_layer_0c5dc889d27044349a5a07afa49ac7a6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2f256d33d4ac4107820ab4c4e5e73a10);
+        
+    
+            var tile_layer_15cdcdd7aa2e475b9317a7957b6ccbdd = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2f256d33d4ac4107820ab4c4e5e73a10);
+        
+    
+            var marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb = L.markerClusterGroup(
+                {}
+            );
+            map_2f256d33d4ac4107820ab4c4e5e73a10.addLayer(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+            var marker_c1a9b316b2d74b3e997a7db8cabe4a96 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_3e4f517d43664d81aacdfa7d26bacbf8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35104c6e970c47d090243bc49beb01f7 = $(`<div id="html_35104c6e970c47d090243bc49beb01f7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1925-09-01 00:00:00+00:00 <strong>Recolectores:</strong> A. M. Brenes <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3e4f517d43664d81aacdfa7d26bacbf8.setContent(html_35104c6e970c47d090243bc49beb01f7);
+        
+
+        marker_c1a9b316b2d74b3e997a7db8cabe4a96.bindPopup(popup_3e4f517d43664d81aacdfa7d26bacbf8)
+        ;
+
+        
+    
+    
+            var marker_b90759e28e894e8187131fdb76268780 = L.marker(
+                [10.82, -85.33],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_d725522819244c7486164a49fd36e708 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2521ab8d41046b69f010e81f36f3315 = $(`<div id="html_d2521ab8d41046b69f010e81f36f3315" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Cordillera de Guanacaste, Rincón de la Vieja; Volcán Rincón de la Vieja; bosque enano en la falda suroeste. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1993-01-09 00:00:00+00:00 <strong>Recolectores:</strong> Morales, Juan Francisco <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_d725522819244c7486164a49fd36e708.setContent(html_d2521ab8d41046b69f010e81f36f3315);
+        
+
+        marker_b90759e28e894e8187131fdb76268780.bindPopup(popup_d725522819244c7486164a49fd36e708)
+        ;
+
+        
+    
+    
+            var marker_69f3edf13d4c4334afa36985767a5c48 = L.marker(
+                [10.77, -85.35],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_482cb2f5df8940dc9fe3f470155de73a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6c2cecb639543918cb9cc7cc315cceb = $(`<div id="html_f6c2cecb639543918cb9cc7cc315cceb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja Estación Las Pailas. Cordillera de Guanacaste. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1992-11-08 00:00:00+00:00 <strong>Recolectores:</strong> Espinoza, Roberto <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_482cb2f5df8940dc9fe3f470155de73a.setContent(html_f6c2cecb639543918cb9cc7cc315cceb);
+        
+
+        marker_69f3edf13d4c4334afa36985767a5c48.bindPopup(popup_482cb2f5df8940dc9fe3f470155de73a)
+        ;
+
+        
+    
+    
+            var marker_7791f4fe768e45d681a4b41de44b3771 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_301d8a0154634ecebd4fc06d4dbc626b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ec50c19c8864bf0acac20d4d5bbed26 = $(`<div id="html_6ec50c19c8864bf0acac20d4d5bbed26" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_301d8a0154634ecebd4fc06d4dbc626b.setContent(html_6ec50c19c8864bf0acac20d4d5bbed26);
+        
+
+        marker_7791f4fe768e45d681a4b41de44b3771.bindPopup(popup_301d8a0154634ecebd4fc06d4dbc626b)
+        ;
+
+        
+    
+    
+            var marker_5815511ded534a6480cfea4d492c2531 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_bde9e46074c649638571c8ac30c02929 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c123aa4b175468683c104b0dc03b71f = $(`<div id="html_6c123aa4b175468683c104b0dc03b71f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_bde9e46074c649638571c8ac30c02929.setContent(html_6c123aa4b175468683c104b0dc03b71f);
+        
+
+        marker_5815511ded534a6480cfea4d492c2531.bindPopup(popup_bde9e46074c649638571c8ac30c02929)
+        ;
+
+        
+    
+    
+            var marker_804030f68c4b40a3a8bac5b27e1f12a8 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_fd299ba75b4c46888e6169f86379147b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_343b5624efdb429893d40cbb798a226c = $(`<div id="html_343b5624efdb429893d40cbb798a226c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_fd299ba75b4c46888e6169f86379147b.setContent(html_343b5624efdb429893d40cbb798a226c);
+        
+
+        marker_804030f68c4b40a3a8bac5b27e1f12a8.bindPopup(popup_fd299ba75b4c46888e6169f86379147b)
+        ;
+
+        
+    
+    
+            var marker_99e2a9c85264484f9695a8f57d8f4aa2 = L.marker(
+                [10.0114, -83.9519],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_b88fe1bda98f4890929c5f3900665edf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9f587693b6841fca7a1f18e59d07968 = $(`<div id="html_a9f587693b6841fca7a1f18e59d07968" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1925-09-29 00:00:00+00:00 <strong>Recolectores:</strong> A. M. Brenes <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b88fe1bda98f4890929c5f3900665edf.setContent(html_a9f587693b6841fca7a1f18e59d07968);
+        
+
+        marker_99e2a9c85264484f9695a8f57d8f4aa2.bindPopup(popup_b88fe1bda98f4890929c5f3900665edf)
+        ;
+
+        
+    
+    
+            var marker_6e54b831e17a45b7bff48dffd8adda09 = L.marker(
+                [10.829167, -85.336667],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_05437c8bcd8e4e6f8291f2f919597a61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1ec9f3e5fda4d03923f87281eb503f3 = $(`<div id="html_d1ec9f3e5fda4d03923f87281eb503f3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Volcan Rincon de la Vieja; bosque enano en la falda suroeste. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1993-01-09 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_05437c8bcd8e4e6f8291f2f919597a61.setContent(html_d1ec9f3e5fda4d03923f87281eb503f3);
+        
+
+        marker_6e54b831e17a45b7bff48dffd8adda09.bindPopup(popup_05437c8bcd8e4e6f8291f2f919597a61)
+        ;
+
+        
+    
+    
+            var marker_5d59f004cd9a4414bda27f837da9d342 = L.marker(
+                [10.82, -85.34944399999999],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_86bb04171db54629b212bc022b714a55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e959979af1ad42dea45fba4fb0c4b96c = $(`<div id="html_e959979af1ad42dea45fba4fb0c4b96c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sitio Copelares, al pie del Volcan. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1991-06-11 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_86bb04171db54629b212bc022b714a55.setContent(html_e959979af1ad42dea45fba4fb0c4b96c);
+        
+
+        marker_5d59f004cd9a4414bda27f837da9d342.bindPopup(popup_86bb04171db54629b212bc022b714a55)
+        ;
+
+        
+    
+    
+            var marker_c4e20d02b22444faab9f66865670cde2 = L.marker(
+                [10.777778, -85.352778],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_0db6a513251a4ca2aa9421ce8cc287eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff40b96b99dd4d9fb5b1ead714a9aaa9 = $(`<div id="html_ff40b96b99dd4d9fb5b1ead714a9aaa9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Las Pailas. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1992-11-08 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_0db6a513251a4ca2aa9421ce8cc287eb.setContent(html_ff40b96b99dd4d9fb5b1ead714a9aaa9);
+        
+
+        marker_c4e20d02b22444faab9f66865670cde2.bindPopup(popup_0db6a513251a4ca2aa9421ce8cc287eb)
+        ;
+
+        
+    
+    
+            var marker_6e431c875b6d4c879d25baa391e2a536 = L.marker(
+                [10.8, -85.31666700000001],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_5770f8c072b5465aba450e02cc3702e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_009ffbdbba5a4d26b636ae3bc3f7b66b = $(`<div id="html_009ffbdbba5a4d26b636ae3bc3f7b66b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hacienda Santa Maria; sendero desde la casita de Las Pailas hasta el crater del Volcan Von-Seebach, empezando del borde de la vegetacion arborea hasta la cumbre <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1987-10-06 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> van der Werff, Henk</div>`)[0];
+            popup_5770f8c072b5465aba450e02cc3702e1.setContent(html_009ffbdbba5a4d26b636ae3bc3f7b66b);
+        
+
+        marker_6e431c875b6d4c879d25baa391e2a536.bindPopup(popup_5770f8c072b5465aba450e02cc3702e1)
+        ;
+
+        
+    
+    
+            var marker_d89c9ab8b26d46e3b9d4368a8954065a = L.marker(
+                [10.8, -85.35],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_63c1374b30d44c2b95102da09b86517d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_184cc15dfcc240e4874473247d14a2de = $(`<div id="html_184cc15dfcc240e4874473247d14a2de" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja. Las Pailas. Sendero al Crater del volcán. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2003-01-02 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Jimena Larraguivel <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_63c1374b30d44c2b95102da09b86517d.setContent(html_184cc15dfcc240e4874473247d14a2de);
+        
+
+        marker_d89c9ab8b26d46e3b9d4368a8954065a.bindPopup(popup_63c1374b30d44c2b95102da09b86517d)
+        ;
+
+        
+    
+    
+            var marker_838ffdd1a7014a07bbccc5c0908cb142 = L.marker(
+                [10.8, -85.35],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_4aca8e1f922943c4976da61f730e9857 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_038b1a11746344179ca649036d40ea48 = $(`<div id="html_038b1a11746344179ca649036d40ea48" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja. Las Pailas. Sendero al Crater del volcán. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2003-01-02 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel; Jimena Larraguivel <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_4aca8e1f922943c4976da61f730e9857.setContent(html_038b1a11746344179ca649036d40ea48);
+        
+
+        marker_838ffdd1a7014a07bbccc5c0908cb142.bindPopup(popup_4aca8e1f922943c4976da61f730e9857)
+        ;
+
+        
+    
+    
+            var marker_ec510da3b3ce4de2b424776f192a2a39 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_915f7741633c40019829c4e57a6c1360 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb2c28ff941f4699ba6a655760c6f78f = $(`<div id="html_eb2c28ff941f4699ba6a655760c6f78f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_915f7741633c40019829c4e57a6c1360.setContent(html_eb2c28ff941f4699ba6a655760c6f78f);
+        
+
+        marker_ec510da3b3ce4de2b424776f192a2a39.bindPopup(popup_915f7741633c40019829c4e57a6c1360)
+        ;
+
+        
+    
+    
+            var marker_8f2f6da369f9436aa3a821faffc8d538 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_1df0c47407ef4d46bab53d34cfb893cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a75ab1ff4344606b73c28d217756fe4 = $(`<div id="html_6a75ab1ff4344606b73c28d217756fe4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1df0c47407ef4d46bab53d34cfb893cc.setContent(html_6a75ab1ff4344606b73c28d217756fe4);
+        
+
+        marker_8f2f6da369f9436aa3a821faffc8d538.bindPopup(popup_1df0c47407ef4d46bab53d34cfb893cc)
+        ;
+
+        
+    
+    
+            var marker_cd8a5aa6e3c04109bd5795dd6e64f9b5 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_52a98b4f06aa4338a42527ed60b92116 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e747b4fcbe934121af26eeda42d21b27 = $(`<div id="html_e747b4fcbe934121af26eeda42d21b27" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_52a98b4f06aa4338a42527ed60b92116.setContent(html_e747b4fcbe934121af26eeda42d21b27);
+        
+
+        marker_cd8a5aa6e3c04109bd5795dd6e64f9b5.bindPopup(popup_52a98b4f06aa4338a42527ed60b92116)
+        ;
+
+        
+    
+    
+            var marker_8c2d97a0d4e041ba9b64cf61cf5578a9 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_6a859c0943cb4764806b37e36f19bbf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57556186942e467ea8d79d1eeb4efb3a = $(`<div id="html_57556186942e467ea8d79d1eeb4efb3a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_6a859c0943cb4764806b37e36f19bbf9.setContent(html_57556186942e467ea8d79d1eeb4efb3a);
+        
+
+        marker_8c2d97a0d4e041ba9b64cf61cf5578a9.bindPopup(popup_6a859c0943cb4764806b37e36f19bbf9)
+        ;
+
+        
+    
+    
+            var marker_7a330473ba854d9ca1673490d261c935 = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_d6d1a585982f42a9a7f6d4b5dd2114b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d423abcb43e455e976b9ec11ea4b21d = $(`<div id="html_5d423abcb43e455e976b9ec11ea4b21d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_d6d1a585982f42a9a7f6d4b5dd2114b2.setContent(html_5d423abcb43e455e976b9ec11ea4b21d);
+        
+
+        marker_7a330473ba854d9ca1673490d261c935.bindPopup(popup_d6d1a585982f42a9a7f6d4b5dd2114b2)
+        ;
+
+        
+    
+    
+            var marker_d4d23b66ba4641c9b4f0e3859619eebe = L.marker(
+                [10.93, -85.47],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_14d78032845f485987a9a3b2871f469f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e24bb6270bf74b0fa63848aa4ece2282 = $(`<div id="html_e24bb6270bf74b0fa63848aa4ece2282" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Costa Rica:Area de Conservacion Guanacaste, Sector Cacao, Estacion Cacao <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2007-03-28 00:00:00+00:00 <strong>Recolectores:</strong> Daniel H. Janzen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_14d78032845f485987a9a3b2871f469f.setContent(html_e24bb6270bf74b0fa63848aa4ece2282);
+        
+
+        marker_d4d23b66ba4641c9b4f0e3859619eebe.bindPopup(popup_14d78032845f485987a9a3b2871f469f)
+        ;
+
+        
+    
+    
+            var marker_29f322f9141d473e8d59f680e529b2f4 = L.marker(
+                [10.82, -85.33],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_5b87d2ca69ea4534a1661ccbff688c39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55104dfb61624d628b92456637d763e8 = $(`<div id="html_55104dfb61624d628b92456637d763e8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja; Cordillera de Guanacaste. Volcán Rincón de la Vieja; bosque enano en la falda suroeste. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1993-01-09 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_5b87d2ca69ea4534a1661ccbff688c39.setContent(html_55104dfb61624d628b92456637d763e8);
+        
+
+        marker_29f322f9141d473e8d59f680e529b2f4.bindPopup(popup_5b87d2ca69ea4534a1661ccbff688c39)
+        ;
+
+        
+    
+    
+            var marker_7eeb1803b1224ef292d2c6b7264f5416 = L.marker(
+                [10.77777, -85.35276999999999],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_d57c40e9ff36462c99d26f239982e1f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38b4fcd04c8a47a9a62bb8f98ce20c59 = $(`<div id="html_38b4fcd04c8a47a9a62bb8f98ce20c59" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincon de la Vieja. Cordillera de Guanacaste. Estación Las Pailas. <strong>Elevación:</strong> 800.0 m  <strong>Fecha:</strong> 1992-11-08 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> J.F. Morales</div>`)[0];
+            popup_d57c40e9ff36462c99d26f239982e1f5.setContent(html_38b4fcd04c8a47a9a62bb8f98ce20c59);
+        
+
+        marker_7eeb1803b1224ef292d2c6b7264f5416.bindPopup(popup_d57c40e9ff36462c99d26f239982e1f5)
+        ;
+
+        
+    
+    
+            var marker_6823ee247fe34b408f1fc7028f2a15c4 = L.marker(
+                [10.82, -85.34],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_3fcb386ac591446d847641c52ea0b447 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa3c54b63a3c4eefb2ad94c781847127 = $(`<div id="html_aa3c54b63a3c4eefb2ad94c781847127" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. Nac. Rincón de la Vieja Los copelares, al pie del Volcán. <strong>Elevación:</strong> 1700.0 m  <strong>Fecha:</strong> 1991-06-11 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Rivera <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_3fcb386ac591446d847641c52ea0b447.setContent(html_aa3c54b63a3c4eefb2ad94c781847127);
+        
+
+        marker_6823ee247fe34b408f1fc7028f2a15c4.bindPopup(popup_3fcb386ac591446d847641c52ea0b447)
+        ;
+
+        
+    
+    
+            var marker_780bdd942596402a86ee01003ef81403 = L.marker(
+                [10.8, -85.31],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_64d7c1f7e9ed48938ced07c58726b0d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9acc0ec1ab74f46adc5e20e34476a8b = $(`<div id="html_a9acc0ec1ab74f46adc5e20e34476a8b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Rincón de la Vieja Hacienda Santa María; sendero desde la casita de Las Pailas hasta el cráter del Volcán Von-Seebach, empezando del borde de la vegetación arbórea hasta la cumbre <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 1987-10-06 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch.|Rafael Robles <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_64d7c1f7e9ed48938ced07c58726b0d6.setContent(html_a9acc0ec1ab74f46adc5e20e34476a8b);
+        
+
+        marker_780bdd942596402a86ee01003ef81403.bindPopup(popup_64d7c1f7e9ed48938ced07c58726b0d6)
+        ;
+
+        
+    
+    
+            var marker_cead44cd68ae453da0a1084f702aa861 = L.marker(
+                [10.128333, -84.53666700000001],
+                {}
+            ).addTo(marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb);
+        
+    
+        var popup_0f20a9d126c1450da06990299502c495 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dab1580177fe4f9eaf6b8ce2dc38d4e1 = $(`<div id="html_dab1580177fe4f9eaf6b8ce2dc38d4e1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Palma de San Ramón <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Alberto M. Brenes <strong>Identificadores:</strong> L.E. Kopp (NY)</div>`)[0];
+            popup_0f20a9d126c1450da06990299502c495.setContent(html_dab1580177fe4f9eaf6b8ce2dc38d4e1);
+        
+
+        marker_cead44cd68ae453da0a1084f702aa861.bindPopup(popup_0f20a9d126c1450da06990299502c495)
+        ;
+
+        
+    
+    
+            var layer_control_7bb76c0ae7484b2ab732dc885ecab4e9 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0c5dc889d27044349a5a07afa49ac7a6,
+                    "ESRI World Imagery" : tile_layer_15cdcdd7aa2e475b9317a7957b6ccbdd,
+                },
+                overlays :  {
+                    "macro_element_bab8a8ad546a4d08933923c66b1c2ddb" : marker_cluster_bab8a8ad546a4d08933923c66b1c2ddb,
+                },
+            };
+            L.control.layers(
+                layer_control_7bb76c0ae7484b2ab732dc885ecab4e9.base_layers,
+                layer_control_7bb76c0ae7484b2ab732dc885ecab4e9.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_2f256d33d4ac4107820ab4c4e5e73a10);
+            tile_layer_15cdcdd7aa2e475b9317a7957b6ccbdd.remove();
+        
+</script>

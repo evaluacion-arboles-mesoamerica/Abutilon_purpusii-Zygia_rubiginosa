@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7d36466a12ff4441a91c069a8fb5c17c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_7d36466a12ff4441a91c069a8fb5c17c" ></div>
+        
+</body>
+<script>    
+    
+            var map_7d36466a12ff4441a91c069a8fb5c17c = L.map(
+                "map_7d36466a12ff4441a91c069a8fb5c17c",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_7d36466a12ff4441a91c069a8fb5c17c);
+
+            
+
+        
+    
+            var tile_layer_9d843a712d78477894ead37fe9357d2b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7d36466a12ff4441a91c069a8fb5c17c);
+        
+    
+            var tile_layer_e475851d68ae4fcbbcc928b60bb2f1f7 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7d36466a12ff4441a91c069a8fb5c17c);
+        
+    
+            var marker_cluster_eb021298dd8b4e2ba0833cdf977589cb = L.markerClusterGroup(
+                {}
+            );
+            map_7d36466a12ff4441a91c069a8fb5c17c.addLayer(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+            var marker_34ccab2a92104353b2ff7efb7e083ab2 = L.marker(
+                [10.43, -84.01],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_2faeed690e4649f4a00f6ee96cf64596 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c43559044404bf0ab20b4a71769b107 = $(`<div id="html_9c43559044404bf0ab20b4a71769b107" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.B. La Selva Squatter clearing near southwest immature. <strong>Elevación:</strong> 1346.0 m  <strong>Fecha:</strong> 1974-01-19 00:00:00+00:00 <strong>Recolectores:</strong> Hartshorn, Gary S. <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_2faeed690e4649f4a00f6ee96cf64596.setContent(html_9c43559044404bf0ab20b4a71769b107);
+        
+
+        marker_34ccab2a92104353b2ff7efb7e083ab2.bindPopup(popup_2faeed690e4649f4a00f6ee96cf64596)
+        ;
+
+        
+    
+    
+            var marker_c699a54310de45f2816f1e43d1e4b212 = L.marker(
+                [10.93, -85.3],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_3deea696622247879e6005b90f088c00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa799332f9fd433c8749336d0de544e1 = $(`<div id="html_aa799332f9fd433c8749336d0de544e1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 1o km. al Noreste del pueblo. Asentamiento campesino San Gil. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1988-04-07 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Estrada, Armando</div>`)[0];
+            popup_3deea696622247879e6005b90f088c00.setContent(html_aa799332f9fd433c8749336d0de544e1);
+        
+
+        marker_c699a54310de45f2816f1e43d1e4b212.bindPopup(popup_3deea696622247879e6005b90f088c00)
+        ;
+
+        
+    
+    
+            var marker_0789e36c96c1402db1b72d9b4debfeca = L.marker(
+                [10.29, -84.06],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_3b59af684b3a483290e54a0ce3a4a2a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7db0ac8e829b4fdf8768304b7f63f4aa = $(`<div id="html_7db0ac8e829b4fdf8768304b7f63f4aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto el Ceibo, 1/4 km W of río Guácimo, off trail that runs due E from transect at 730 m.Primary premontane wet forest. <strong>Elevación:</strong> 760.0 m  <strong>Fecha:</strong> 1994-04-22 00:00:00+00:00 <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_3b59af684b3a483290e54a0ce3a4a2a7.setContent(html_7db0ac8e829b4fdf8768304b7f63f4aa);
+        
+
+        marker_0789e36c96c1402db1b72d9b4debfeca.bindPopup(popup_3b59af684b3a483290e54a0ce3a4a2a7)
+        ;
+
+        
+    
+    
+            var marker_f4e6d012b8664532bed9976c879a49d1 = L.marker(
+                [10.29, -84.07],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_6b30f1b950cc466ab22aed008166b168 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_09deea5e5e264f9194e101bf2c3c9c83 = $(`<div id="html_09deea5e5e264f9194e101bf2c3c9c83" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto el Ceibo, on ridge crest 250 m W of transect trail, primary premontane wet forest. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 1994-03-05 00:00:00+00:00 <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_6b30f1b950cc466ab22aed008166b168.setContent(html_09deea5e5e264f9194e101bf2c3c9c83);
+        
+
+        marker_f4e6d012b8664532bed9976c879a49d1.bindPopup(popup_6b30f1b950cc466ab22aed008166b168)
+        ;
+
+        
+    
+    
+            var marker_d896a8ce19584e7eb68be45b026fe03e = L.marker(
+                [10.29, -84.07],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_5293e980bd774f62ba5bbee157ff5e96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d763842318f9493aa7aab940e9dd1f20 = $(`<div id="html_d763842318f9493aa7aab940e9dd1f20" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto el Ceibo, on ridge crest 250 m W of transect trail, primary premontane wet forest. <strong>Elevación:</strong> 74.0 m  <strong>Fecha:</strong> 1994-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_5293e980bd774f62ba5bbee157ff5e96.setContent(html_d763842318f9493aa7aab940e9dd1f20);
+        
+
+        marker_d896a8ce19584e7eb68be45b026fe03e.bindPopup(popup_5293e980bd774f62ba5bbee157ff5e96)
+        ;
+
+        
+    
+    
+            var marker_5403ec14acfc4a459cc47743b37e9d0f = L.marker(
+                [10.29, -84.07],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_8698413d979d413b88c66989d47688ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bcdcc433adf4838873d7129036e7ce6 = $(`<div id="html_3bcdcc433adf4838873d7129036e7ce6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto el Ceibo, on ridge crest 250 m W of transect trail, primary premontane wet forest. <strong>Elevación:</strong> 765.0 m  <strong>Fecha:</strong> 1994-04-17 00:00:00+00:00 <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_8698413d979d413b88c66989d47688ed.setContent(html_3bcdcc433adf4838873d7129036e7ce6);
+        
+
+        marker_5403ec14acfc4a459cc47743b37e9d0f.bindPopup(popup_8698413d979d413b88c66989d47688ed)
+        ;
+
+        
+    
+    
+            var marker_dd7bd8003387447ea30984fce2c61fee = L.marker(
+                [10.29, -84.06],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_7e1818d687634a92983dfb3fdca0ddd9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10c9977a5a7b41e8a085d80f22e89bc9 = $(`<div id="html_10c9977a5a7b41e8a085d80f22e89bc9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto el Ceibo, 1/4 km W of río Guácimo, off trail that runs due E from transect at 730 m.Primary premontane wet forest. <strong>Elevación:</strong> 760.0 m  <strong>Fecha:</strong> 1994-04-22 00:00:00+00:00 <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_7e1818d687634a92983dfb3fdca0ddd9.setContent(html_10c9977a5a7b41e8a085d80f22e89bc9);
+        
+
+        marker_dd7bd8003387447ea30984fce2c61fee.bindPopup(popup_7e1818d687634a92983dfb3fdca0ddd9)
+        ;
+
+        
+    
+    
+            var marker_3b64290c5a8a4e93bf71d467a95ed70e = L.marker(
+                [3.75, -76.5],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_c332e5cd483f45eaa3a469548f84a5a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_619d2ccc6d7b454aa3088f3fca1a8438 = $(`<div id="html_619d2ccc6d7b454aa3088f3fca1a8438" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1944-01-31 00:00:00+00:00 <strong>Recolectores:</strong> J. Cuatrecasas <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_c332e5cd483f45eaa3a469548f84a5a3.setContent(html_619d2ccc6d7b454aa3088f3fca1a8438);
+        
+
+        marker_3b64290c5a8a4e93bf71d467a95ed70e.bindPopup(popup_c332e5cd483f45eaa3a469548f84a5a3)
+        ;
+
+        
+    
+    
+            var marker_639e28a10a204541b6d2b1272749e5e0 = L.marker(
+                [10.7125, -85.0408],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_ac0b283346de472ea907bc9e7eb112a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_699eb6a0df534896b45fd5a7259e39b4 = $(`<div id="html_699eb6a0df534896b45fd5a7259e39b4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela: Upala. Cuenca del Zapote. Estación Heliconias. Sendero Laguna Danta <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2001-03-27 00:00:00+00:00 <strong>Recolectores:</strong> J.L. Chaves & R. Aguilar <strong>Identificadores:</strong> J. Chaves</div>`)[0];
+            popup_ac0b283346de472ea907bc9e7eb112a3.setContent(html_699eb6a0df534896b45fd5a7259e39b4);
+        
+
+        marker_639e28a10a204541b6d2b1272749e5e0.bindPopup(popup_ac0b283346de472ea907bc9e7eb112a3)
+        ;
+
+        
+    
+    
+            var marker_613e466dd8bd45db870027102360e364 = L.marker(
+                [-1.4628, -78.1869],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_a3f6cf0a38b748ac9e751f14fd590dc2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75dd1396fe034542bccc2b8e3819c7dc = $(`<div id="html_75dd1396fe034542bccc2b8e3819c7dc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> nan <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a3f6cf0a38b748ac9e751f14fd590dc2.setContent(html_75dd1396fe034542bccc2b8e3819c7dc);
+        
+
+        marker_613e466dd8bd45db870027102360e364.bindPopup(popup_a3f6cf0a38b748ac9e751f14fd590dc2)
+        ;
+
+        
+    
+    
+            var marker_c5e7d050b5d84d70b7cf1875ba4b178d = L.marker(
+                [10.297222, -84.073611],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_d50ef398333742629be182daf7ad632e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1355f20222084ca788b9439dce885bf6 = $(`<div id="html_1355f20222084ca788b9439dce885bf6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puesto El Ceibo. On ridge crest 250 m E of Transect Trail. Primary premontane wet forest. <strong>Elevación:</strong> 740.0 m  <strong>Fecha:</strong> 1994-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_d50ef398333742629be182daf7ad632e.setContent(html_1355f20222084ca788b9439dce885bf6);
+        
+
+        marker_c5e7d050b5d84d70b7cf1875ba4b178d.bindPopup(popup_d50ef398333742629be182daf7ad632e)
+        ;
+
+        
+    
+    
+            var marker_f904d2fde7a0472fa245f620ae9593e5 = L.marker(
+                [10.297222, -84.073611],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_76b8196ac1d743a9877e34d293a3fff2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8dc063af2924ccda810822e86331134 = $(`<div id="html_e8dc063af2924ccda810822e86331134" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puesto El Ceibo. On ridge crest 250 m E of Transect Trail. Primary premontane wet forest. <strong>Elevación:</strong> 740.0 m  <strong>Fecha:</strong> 1994-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_76b8196ac1d743a9877e34d293a3fff2.setContent(html_e8dc063af2924ccda810822e86331134);
+        
+
+        marker_f904d2fde7a0472fa245f620ae9593e5.bindPopup(popup_76b8196ac1d743a9877e34d293a3fff2)
+        ;
+
+        
+    
+    
+            var marker_2e893d529a9a4c9fbd748a2601e0a952 = L.marker(
+                [10.990556, -85.427779],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_0fe3cc5d499a4f25b542ec97e4fe62d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f93c1c450824d30b4418775720234fb = $(`<div id="html_5f93c1c450824d30b4418775720234fb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Pitilla. Fila Orosilito y Sendero El Mismo. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1991-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Petrona Ríos Castro <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_0fe3cc5d499a4f25b542ec97e4fe62d1.setContent(html_5f93c1c450824d30b4418775720234fb);
+        
+
+        marker_2e893d529a9a4c9fbd748a2601e0a952.bindPopup(popup_0fe3cc5d499a4f25b542ec97e4fe62d1)
+        ;
+
+        
+    
+    
+            var marker_609c5d7d9db24588ae43ad8d5dfff9c6 = L.marker(
+                [10.433333, -84.01666800000001],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_dde2509e33c3401fb28629fb475cbe1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf04d10b6ef844228ac4534fc4cc50d3 = $(`<div id="html_bf04d10b6ef844228ac4534fc4cc50d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> At confluence of Rio Sarapiqui and Rio Puerto Viejo, Atlantic Slope. Sendero Circular Cercano m 150 de los postes. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1991-10-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_dde2509e33c3401fb28629fb475cbe1a.setContent(html_bf04d10b6ef844228ac4534fc4cc50d3);
+        
+
+        marker_609c5d7d9db24588ae43ad8d5dfff9c6.bindPopup(popup_dde2509e33c3401fb28629fb475cbe1a)
+        ;
+
+        
+    
+    
+            var marker_04b4103e92a04241b8df9a328fad0a15 = L.marker(
+                [10.391667, -84.052778],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_380fbb96948046b2bd880abf8d7a59ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_180455d5d04b4634bba219ac55a332fe = $(`<div id="html_180455d5d04b4634bba219ac55a332fe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Magsasay, borde de Rio Peje. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1998-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Esteban Uren~a <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_380fbb96948046b2bd880abf8d7a59ba.setContent(html_180455d5d04b4634bba219ac55a332fe);
+        
+
+        marker_04b4103e92a04241b8df9a328fad0a15.bindPopup(popup_380fbb96948046b2bd880abf8d7a59ba)
+        ;
+
+        
+    
+    
+            var marker_5015b27ba9794ee9a5a9775890edde13 = L.marker(
+                [10.391667, -84.052778],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_b2033caf5c804a00be69bce03bfc6154 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_368fcf01c0a54559a76bc972a32b33d3 = $(`<div id="html_368fcf01c0a54559a76bc972a32b33d3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Magsasay, borde de Rio Peje. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1998-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Esteban Uren~a <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_b2033caf5c804a00be69bce03bfc6154.setContent(html_368fcf01c0a54559a76bc972a32b33d3);
+        
+
+        marker_5015b27ba9794ee9a5a9775890edde13.bindPopup(popup_b2033caf5c804a00be69bce03bfc6154)
+        ;
+
+        
+    
+    
+            var marker_7e59458181394a0a824784373cbbd606 = L.marker(
+                [10.391667, -84.052778],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_97e26e4dd5c649cdb4a8cdaf34fbaf7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_498e94481eb14245aa9e379acc61fdfd = $(`<div id="html_498e94481eb14245aa9e379acc61fdfd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Magsasay, borde de Rio Peje. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1998-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Esteban Uren~a <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_97e26e4dd5c649cdb4a8cdaf34fbaf7f.setContent(html_498e94481eb14245aa9e379acc61fdfd);
+        
+
+        marker_7e59458181394a0a824784373cbbd606.bindPopup(popup_97e26e4dd5c649cdb4a8cdaf34fbaf7f)
+        ;
+
+        
+    
+    
+            var marker_6ecc5f22e11b483b9056a4ca76e5934c = L.marker(
+                [10.391667, -84.052778],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_6546e8e7afc941019d53ea2bdc20c348 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07619c9a92664b9a99343d36ea26520a = $(`<div id="html_07619c9a92664b9a99343d36ea26520a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Magsasay, borde de Rio Peje. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1998-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Esteban Uren~a <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_6546e8e7afc941019d53ea2bdc20c348.setContent(html_07619c9a92664b9a99343d36ea26520a);
+        
+
+        marker_6ecc5f22e11b483b9056a4ca76e5934c.bindPopup(popup_6546e8e7afc941019d53ea2bdc20c348)
+        ;
+
+        
+    
+    
+            var marker_16f111cf2f4944a19ed1e64b83a2d8fe = L.marker(
+                [10.338889, -84.0],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_73137781081a442e9101d9db5ec2e299 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f83d8567ebef4fa0be4762b6a26bce08 = $(`<div id="html_f83d8567ebef4fa0be4762b6a26bce08" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Horquetas. camino a Raravis. Bosque riparios junto al camino. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_73137781081a442e9101d9db5ec2e299.setContent(html_f83d8567ebef4fa0be4762b6a26bce08);
+        
+
+        marker_16f111cf2f4944a19ed1e64b83a2d8fe.bindPopup(popup_73137781081a442e9101d9db5ec2e299)
+        ;
+
+        
+    
+    
+            var marker_42e4f85b9ce64d21b473013c481eb4ff = L.marker(
+                [10.338889, -84.0],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_5088570d442645d7b953ae34283926bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07d0fe3d112944b195e7d6d8d8b41b5f = $(`<div id="html_07d0fe3d112944b195e7d6d8d8b41b5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Horquetas. camino a Raravis. Bosque riparios junto al camino. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_5088570d442645d7b953ae34283926bd.setContent(html_07d0fe3d112944b195e7d6d8d8b41b5f);
+        
+
+        marker_42e4f85b9ce64d21b473013c481eb4ff.bindPopup(popup_5088570d442645d7b953ae34283926bd)
+        ;
+
+        
+    
+    
+            var marker_583ee0f47c1b4e82951d3398797a65c4 = L.marker(
+                [10.338889, -84.0],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_30485b0768f44ef6b8414fb0cf096b34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2137072a63dc4358a67487b07c5bcbd3 = $(`<div id="html_2137072a63dc4358a67487b07c5bcbd3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Horquetas. camino a Raravis. Bosque riparios junto al camino. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_30485b0768f44ef6b8414fb0cf096b34.setContent(html_2137072a63dc4358a67487b07c5bcbd3);
+        
+
+        marker_583ee0f47c1b4e82951d3398797a65c4.bindPopup(popup_30485b0768f44ef6b8414fb0cf096b34)
+        ;
+
+        
+    
+    
+            var marker_5be00a7dddd547dab8925114ffe6c55c = L.marker(
+                [10.338889, -84.0],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_75746f15e099466d84e5770249b2cf77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97983c3e28814f85a77ccb9ca66feb00 = $(`<div id="html_97983c3e28814f85a77ccb9ca66feb00" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Horquetas. camino a Raravis. Bosque riparios junto al camino. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; Luis Diego Vargas ; Jose González <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_75746f15e099466d84e5770249b2cf77.setContent(html_97983c3e28814f85a77ccb9ca66feb00);
+        
+
+        marker_5be00a7dddd547dab8925114ffe6c55c.bindPopup(popup_75746f15e099466d84e5770249b2cf77)
+        ;
+
+        
+    
+    
+            var marker_852d8f5e79834f33a6aaae0b5621f808 = L.marker(
+                [10.297222, -84.073611],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_733f299209a24fde9001e2f0c93268c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_233c3798bbec41d68f24e708966f2a40 = $(`<div id="html_233c3798bbec41d68f24e708966f2a40" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puesto El Ceibo. On ridge crest 250 m E of Transect Trail. Primary premontane wet forest. <strong>Elevación:</strong> 740.0 m  <strong>Fecha:</strong> 1994-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_733f299209a24fde9001e2f0c93268c6.setContent(html_233c3798bbec41d68f24e708966f2a40);
+        
+
+        marker_852d8f5e79834f33a6aaae0b5621f808.bindPopup(popup_733f299209a24fde9001e2f0c93268c6)
+        ;
+
+        
+    
+    
+            var marker_a051bcd18bf243fb9bdab562ef8a229a = L.marker(
+                [10.297222, -84.073611],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_7e641446fafc4c6fa7b8a7fcdb0d08cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82aa15d9e5e64f5e85d6e81c41e8f521 = $(`<div id="html_82aa15d9e5e64f5e85d6e81c41e8f521" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puesto El Ceibo. On ridge crest 250 m E of Transect Trail. Primary premontane wet forest. <strong>Elevación:</strong> 740.0 m  <strong>Fecha:</strong> 1994-02-25 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_7e641446fafc4c6fa7b8a7fcdb0d08cc.setContent(html_82aa15d9e5e64f5e85d6e81c41e8f521);
+        
+
+        marker_a051bcd18bf243fb9bdab562ef8a229a.bindPopup(popup_7e641446fafc4c6fa7b8a7fcdb0d08cc)
+        ;
+
+        
+    
+    
+            var marker_12b8103588f64d21806e6019e71daa10 = L.marker(
+                [10.441667, -83.788889],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_2049906a512c4bad9f154069781bbedf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a82ca4a2fcb4226968d6babba4eb33f = $(`<div id="html_1a82ca4a2fcb4226968d6babba4eb33f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Suerte. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2002-11-02 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_2049906a512c4bad9f154069781bbedf.setContent(html_1a82ca4a2fcb4226968d6babba4eb33f);
+        
+
+        marker_12b8103588f64d21806e6019e71daa10.bindPopup(popup_2049906a512c4bad9f154069781bbedf)
+        ;
+
+        
+    
+    
+            var marker_eddfc9af5c2244e1ac3d19d8873b015c = L.marker(
+                [10.441667, -83.788889],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_13e4dcfc2da1456a8292d5f4b62476f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e801a2467df4fd69f594d4c9db98112 = $(`<div id="html_3e801a2467df4fd69f594d4c9db98112" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Suerte. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 2002-11-02 00:00:00+00:00 <strong>Recolectores:</strong> Ricardo Kriebel <strong>Identificadores:</strong> Kriebel, Ricardo</div>`)[0];
+            popup_13e4dcfc2da1456a8292d5f4b62476f0.setContent(html_3e801a2467df4fd69f594d4c9db98112);
+        
+
+        marker_eddfc9af5c2244e1ac3d19d8873b015c.bindPopup(popup_13e4dcfc2da1456a8292d5f4b62476f0)
+        ;
+
+        
+    
+    
+            var marker_c36da17c58864aae80b5de5945ce136f = L.marker(
+                [9.81788, -83.15871],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_775b5026b3234b3d8468bbb7408bab46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd77d0f0a7034c7ba0d8f8f72e3a06c1 = $(`<div id="html_cd77d0f0a7034c7ba0d8f8f72e3a06c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2007-11-01 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_775b5026b3234b3d8468bbb7408bab46.setContent(html_cd77d0f0a7034c7ba0d8f8f72e3a06c1);
+        
+
+        marker_c36da17c58864aae80b5de5945ce136f.bindPopup(popup_775b5026b3234b3d8468bbb7408bab46)
+        ;
+
+        
+    
+    
+            var marker_c158fa48986a4c46a417d034f548678e = L.marker(
+                [9.81788, -83.15871],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_59068e0742d5417e9ac94d84ade94998 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce78503bc6a74f169b9c4445940f2dbd = $(`<div id="html_ce78503bc6a74f169b9c4445940f2dbd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila Matama. <strong>Elevación:</strong> 850.0 m  <strong>Fecha:</strong> 2007-11-01 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Francisco Rodríguez González; A. K. Monro ; Daniel Santamaría ; Daniel Solano ; Billen Gamboa R. ; Eduardo Boza ; Mario Hernández Peña ; Marcos Moraga ; Oscar Chacón Chavarría ; Ruth Delgado Dávila <strong>Identificadores:</strong> Rodríguez González, Alexánder Francisco</div>`)[0];
+            popup_59068e0742d5417e9ac94d84ade94998.setContent(html_ce78503bc6a74f169b9c4445940f2dbd);
+        
+
+        marker_c158fa48986a4c46a417d034f548678e.bindPopup(popup_59068e0742d5417e9ac94d84ade94998)
+        ;
+
+        
+    
+    
+            var marker_8ab71711a84f41a180d90244a821cfe1 = L.marker(
+                [5.721947, -76.64905],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_d9f6d624074b451ab27424b4572e81e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7750244c50f342b9a927fdca2c769f2c = $(`<div id="html_7750244c50f342b9a927fdca2c769f2c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera Quibdó Guayabal, 4 kms de Quibdó. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1975-05-01 00:00:00+00:00 <strong>Recolectores:</strong> Enrique Forero González <strong>Identificadores:</strong> G. T. Prance</div>`)[0];
+            popup_d9f6d624074b451ab27424b4572e81e1.setContent(html_7750244c50f342b9a927fdca2c769f2c);
+        
+
+        marker_8ab71711a84f41a180d90244a821cfe1.bindPopup(popup_d9f6d624074b451ab27424b4572e81e1)
+        ;
+
+        
+    
+    
+            var marker_baf917a6f78c4f198b28b4b3e4d9d7a4 = L.marker(
+                [0.125, -78.633333],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_0f61e8c0f49843c5b55aed1082c73126 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_97f6189cd2ab48f499722c7f8dfe89d9 = $(`<div id="html_97f6189cd2ab48f499722c7f8dfe89d9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parroquia Nanegal: Reserva Maquipucuna. Trail from Hacienda Esparragos to Cerro Sosa, secondary forest at edge of pasture. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1995-01-11 00:00:00+00:00 <strong>Recolectores:</strong> Grady L. Webster|Bernardo Castro <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0f61e8c0f49843c5b55aed1082c73126.setContent(html_97f6189cd2ab48f499722c7f8dfe89d9);
+        
+
+        marker_baf917a6f78c4f198b28b4b3e4d9d7a4.bindPopup(popup_0f61e8c0f49843c5b55aed1082c73126)
+        ;
+
+        
+    
+    
+            var marker_da829011627a45d4b4fe26a1d109b026 = L.marker(
+                [10.39166, -84.05277],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_317f05be8ce24292a265e331631bd72d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f38de2975454b039b7e7c5c3c148cdc = $(`<div id="html_6f38de2975454b039b7e7c5c3c148cdc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cuenca del Sarapiqui. Magsasay, bosque y potreros bordeando el Rio Peje. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1998-03-10 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Luis Diego Vargas|E. Ureña <strong>Identificadores:</strong> A. Rodríguez (INB), IV/</div>`)[0];
+            popup_317f05be8ce24292a265e331631bd72d.setContent(html_6f38de2975454b039b7e7c5c3c148cdc);
+        
+
+        marker_da829011627a45d4b4fe26a1d109b026.bindPopup(popup_317f05be8ce24292a265e331631bd72d)
+        ;
+
+        
+    
+    
+            var marker_4b044070bae246c7ade36d821cdcc974 = L.marker(
+                [10.33888, -84.0],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_170f6eb094fb490bbba357a019fe1950 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93538040016040798fe7a566a5cb340f = $(`<div id="html_93538040016040798fe7a566a5cb340f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Raravia. Bosque riparios junto al camino. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1998-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Alexánder Rodríguez|Luis Diego Vargas|José Á. González R. <strong>Identificadores:</strong> R. Kriebel & A. Rodríguez</div>`)[0];
+            popup_170f6eb094fb490bbba357a019fe1950.setContent(html_93538040016040798fe7a566a5cb340f);
+        
+
+        marker_4b044070bae246c7ade36d821cdcc974.bindPopup(popup_170f6eb094fb490bbba357a019fe1950)
+        ;
+
+        
+    
+    
+            var marker_781349ca502e476cbe16908803ec8633 = L.marker(
+                [-0.616667, -79.3],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_abb0839c8e2249faaa53e94497b49e89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25ffd7add259436ebd34ffc5092bdf0d = $(`<div id="html_25ffd7add259436ebd34ffc5092bdf0d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Prov. Los Ríos or Pichincha.  El Centinela, at km 12 on the road from Patricia Pilar to 24 de Mayo, from km 47 on the Santo Domingo-Quevedo road. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1980-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Calaway H. Dodson|Alwyn H. Gentry|Carmen Bonifaz B. <strong>Identificadores:</strong> Prance</div>`)[0];
+            popup_abb0839c8e2249faaa53e94497b49e89.setContent(html_25ffd7add259436ebd34ffc5092bdf0d);
+        
+
+        marker_781349ca502e476cbe16908803ec8633.bindPopup(popup_abb0839c8e2249faaa53e94497b49e89)
+        ;
+
+        
+    
+    
+            var marker_6cc7e5dd70314998a1edd2ade866c27a = L.marker(
+                [10.431389, -84.00361099999999],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_067cd657623c4218885fe4050bf3d5af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f662dc0bb364db8a896a388b35d5435 = $(`<div id="html_9f662dc0bb364db8a896a388b35d5435" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Selva Biological Station. Arboleda <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2003-10-14 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> N. Zamora, 10/14/</div>`)[0];
+            popup_067cd657623c4218885fe4050bf3d5af.setContent(html_9f662dc0bb364db8a896a388b35d5435);
+        
+
+        marker_6cc7e5dd70314998a1edd2ade866c27a.bindPopup(popup_067cd657623c4218885fe4050bf3d5af)
+        ;
+
+        
+    
+    
+            var marker_8ee7e79f5ba2433ebd61fe3da4d9c5f2 = L.marker(
+                [0.116667, -78.633333],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_751f247939064bfbab4902fd47c5016e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b5e655e2cd046aab66b16fba8510b13 = $(`<div id="html_1b5e655e2cd046aab66b16fba8510b13" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parroquia Nanegal:  Reserva Maquipucuna, secondary; rain forest along trail, Hacienda Esparragos,; elev. c. 1400 m, 00°07'N, 78°38'W; tree 5 m high; frs. red, fleshy. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1990-07-08 00:00:00+00:00 <strong>Recolectores:</strong> Grady L. Webster <strong>Identificadores:</strong> dupl. det. Ronald Liesner, 1993</div>`)[0];
+            popup_751f247939064bfbab4902fd47c5016e.setContent(html_1b5e655e2cd046aab66b16fba8510b13);
+        
+
+        marker_8ee7e79f5ba2433ebd61fe3da4d9c5f2.bindPopup(popup_751f247939064bfbab4902fd47c5016e)
+        ;
+
+        
+    
+    
+            var marker_94e97a3e4de847f6b2570830aa7b0e0d = L.marker(
+                [0.116667, -78.633333],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_ac4b265389f542ff97b48fca5990400e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dee4da9434f2461ea4f9c7bccdd3e33a = $(`<div id="html_dee4da9434f2461ea4f9c7bccdd3e33a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parroquia Nanegal:  Reserva Maquipucuna, trail; from Hacienda Esparragos to Cerro Sosa, secondary; forest at edge of pasture, 1500 m, 00°07'N,; 78°38'W; tree 10 m X 25 cm; flowers white. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1995-01-11 00:00:00+00:00 <strong>Recolectores:</strong> Grady L. Webster <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ac4b265389f542ff97b48fca5990400e.setContent(html_dee4da9434f2461ea4f9c7bccdd3e33a);
+        
+
+        marker_94e97a3e4de847f6b2570830aa7b0e0d.bindPopup(popup_ac4b265389f542ff97b48fca5990400e)
+        ;
+
+        
+    
+    
+            var marker_afbe3ecae46a46d39fdd7a2451ee7716 = L.marker(
+                [11.033333, -85.408333],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_51cc5aa76be94138b98c6458c8c4b724 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0262f5ed6b2448be94283400bf6f6a5f = $(`<div id="html_0262f5ed6b2448be94283400bf6f6a5f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste Estación Pitilla. Sendero Nacho. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1991-01-03 00:00:00+00:00 <strong>Recolectores:</strong> Petrona Ríos Castro <strong>Identificadores:</strong> R. Kriebel & A. Rodríguez</div>`)[0];
+            popup_51cc5aa76be94138b98c6458c8c4b724.setContent(html_0262f5ed6b2448be94283400bf6f6a5f);
+        
+
+        marker_afbe3ecae46a46d39fdd7a2451ee7716.bindPopup(popup_51cc5aa76be94138b98c6458c8c4b724)
+        ;
+
+        
+    
+    
+            var marker_f0ffde0351e34292bd21fcce5d08d7a8 = L.marker(
+                [13.166667000000002, -85.916667],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_340f8981808b443ea45838a4ed0d125e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7c22c068b28491a810267bbe38af0c3 = $(`<div id="html_a7c22c068b28491a810267bbe38af0c3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro El Picacho; lower montante forest <strong>Elevación:</strong> 1420.0 m  <strong>Fecha:</strong> 1984-01-05 00:00:00+00:00 <strong>Recolectores:</strong> Alwyn H. Gentry|W. D. Stevens|P. P. Moreno <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_340f8981808b443ea45838a4ed0d125e.setContent(html_a7c22c068b28491a810267bbe38af0c3);
+        
+
+        marker_f0ffde0351e34292bd21fcce5d08d7a8.bindPopup(popup_340f8981808b443ea45838a4ed0d125e)
+        ;
+
+        
+    
+    
+            var marker_f156770143e544d5aed9066bc7481c7c = L.marker(
+                [13.0, -85.916667],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_f06a3b4d513b478b87d0ed42e2b7a102 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fc9dfef9a5b448eb9f0036e2c41463d = $(`<div id="html_8fc9dfef9a5b448eb9f0036e2c41463d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> W slope of Cerro El Picacho; cloud forest <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1984-08-22 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_f06a3b4d513b478b87d0ed42e2b7a102.setContent(html_8fc9dfef9a5b448eb9f0036e2c41463d);
+        
+
+        marker_f156770143e544d5aed9066bc7481c7c.bindPopup(popup_f06a3b4d513b478b87d0ed42e2b7a102)
+        ;
+
+        
+    
+    
+            var marker_6473ea30c0314515a4c4716d9add50a9 = L.marker(
+                [-0.9, -79.6],
+                {}
+            ).addTo(marker_cluster_eb021298dd8b4e2ba0833cdf977589cb);
+        
+    
+        var popup_ebbe90a0178a4bcc9e02d43710777d14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2af85b9ceda548c3a696252baebd1e3e = $(`<div id="html_2af85b9ceda548c3a696252baebd1e3e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Hacienda Manfrei, 14 km W of Buena Fe, 21 km S of road, remnant mature forest dominated by Brownea. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-01-25 00:00:00+00:00 <strong>Recolectores:</strong> Alwyn H. Gentry|Jorge Loor C. <strong>Identificadores:</strong> R. Liesner (MO)</div>`)[0];
+            popup_ebbe90a0178a4bcc9e02d43710777d14.setContent(html_2af85b9ceda548c3a696252baebd1e3e);
+        
+
+        marker_6473ea30c0314515a4c4716d9add50a9.bindPopup(popup_ebbe90a0178a4bcc9e02d43710777d14)
+        ;
+
+        
+    
+    
+            var layer_control_15148aaee9fe40828809422628feee31 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9d843a712d78477894ead37fe9357d2b,
+                    "ESRI World Imagery" : tile_layer_e475851d68ae4fcbbcc928b60bb2f1f7,
+                },
+                overlays :  {
+                    "macro_element_eb021298dd8b4e2ba0833cdf977589cb" : marker_cluster_eb021298dd8b4e2ba0833cdf977589cb,
+                },
+            };
+            L.control.layers(
+                layer_control_15148aaee9fe40828809422628feee31.base_layers,
+                layer_control_15148aaee9fe40828809422628feee31.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_7d36466a12ff4441a91c069a8fb5c17c);
+            tile_layer_e475851d68ae4fcbbcc928b60bb2f1f7.remove();
+        
+</script>

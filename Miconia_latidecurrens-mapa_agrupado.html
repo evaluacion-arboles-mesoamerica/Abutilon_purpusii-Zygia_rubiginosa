@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_41700959ce2a4255b1fead5c16487e3c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_41700959ce2a4255b1fead5c16487e3c" ></div>
+        
+</body>
+<script>    
+    
+            var map_41700959ce2a4255b1fead5c16487e3c = L.map(
+                "map_41700959ce2a4255b1fead5c16487e3c",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_41700959ce2a4255b1fead5c16487e3c);
+
+            
+
+        
+    
+            var tile_layer_745ff643e9a84b5c898dd96d41ea4779 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_41700959ce2a4255b1fead5c16487e3c);
+        
+    
+            var tile_layer_27ea7371026d42508569376932fdc898 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_41700959ce2a4255b1fead5c16487e3c);
+        
+    
+            var marker_cluster_957ee712d43e442fbccd3a5f38bd5b42 = L.markerClusterGroup(
+                {}
+            );
+            map_41700959ce2a4255b1fead5c16487e3c.addLayer(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+            var marker_3ecfb17ae41c4c4b89ba9dfea18ba96e = L.marker(
+                [8.974445, -80.706389],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_835cf89366d34c60a5bfb8ae5ea25b2a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_738f26833f23464f92a0825a3c2ef646 = $(`<div id="html_738f26833f23464f92a0825a3c2ef646" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Westernmost part of province, site of proposed copper mine (INMET). Along proposed road to coast. Collected with Jean-Yves Serein. <strong>Elevación:</strong> 130.0 m  <strong>Fecha:</strong> 2009-04-09 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> D. Gamba</div>`)[0];
+            popup_835cf89366d34c60a5bfb8ae5ea25b2a.setContent(html_738f26833f23464f92a0825a3c2ef646);
+        
+
+        marker_3ecfb17ae41c4c4b89ba9dfea18ba96e.bindPopup(popup_835cf89366d34c60a5bfb8ae5ea25b2a)
+        ;
+
+        
+    
+    
+            var marker_f9a688db3c824b928f6a240a3d1c467f = L.marker(
+                [8.965278, -80.699722],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_3e46db63e1624fac8b497769b685d354 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9e24cb0e0ea4f62800504611bc198ea = $(`<div id="html_f9e24cb0e0ea4f62800504611bc198ea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Site of proposed copper mine (MPSA). Forested slopes. Collected with Mary Merello. <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 2009-12-03 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_3e46db63e1624fac8b497769b685d354.setContent(html_f9e24cb0e0ea4f62800504611bc198ea);
+        
+
+        marker_f9a688db3c824b928f6a240a3d1c467f.bindPopup(popup_3e46db63e1624fac8b497769b685d354)
+        ;
+
+        
+    
+    
+            var marker_6e0765f19b5e43e99a413bd9d769f4b1 = L.marker(
+                [8.888056, -80.673611],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_2914d3b2cbf24a4883dcde8c32ce276e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac0abf80ab844238a489f37a55a5132b = $(`<div id="html_ac0abf80ab844238a489f37a55a5132b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del Helipad T02A, Tomando la ruta Sur, a orilla de una trocha. <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> D. Gamba & F. Almeda</div>`)[0];
+            popup_2914d3b2cbf24a4883dcde8c32ce276e.setContent(html_ac0abf80ab844238a489f37a55a5132b);
+        
+
+        marker_6e0765f19b5e43e99a413bd9d769f4b1.bindPopup(popup_2914d3b2cbf24a4883dcde8c32ce276e)
+        ;
+
+        
+    
+    
+            var marker_d85899bb2a344bc8981caa277e959e2c = L.marker(
+                [8.941667, -80.6925],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_60d86228a3464f468336abbe3e0ad0c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80c7e8a775b445009cc24962439eb2ed = $(`<div id="html_80c7e8a775b445009cc24962439eb2ed" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad CR10, tomando hacia el sur. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Jorge E. Aranda B. <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_60d86228a3464f468336abbe3e0ad0c7.setContent(html_80c7e8a775b445009cc24962439eb2ed);
+        
+
+        marker_d85899bb2a344bc8981caa277e959e2c.bindPopup(popup_60d86228a3464f468336abbe3e0ad0c7)
+        ;
+
+        
+    
+    
+            var marker_f3b3cc23fbf44224a184fcd9bbfd10bf = L.marker(
+                [8.893056, -80.681111],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_ea4d81457ed5451c9b9efb5f3fdd2bf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60684514cbd841448b6fb8dd795c635d = $(`<div id="html_60684514cbd841448b6fb8dd795c635d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad T02A, caminando hacia la ruta Oeste. <strong>Elevación:</strong> 143.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Álex Espinosa <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_ea4d81457ed5451c9b9efb5f3fdd2bf3.setContent(html_60684514cbd841448b6fb8dd795c635d);
+        
+
+        marker_f3b3cc23fbf44224a184fcd9bbfd10bf.bindPopup(popup_ea4d81457ed5451c9b9efb5f3fdd2bf3)
+        ;
+
+        
+    
+    
+            var marker_cab335e301634dadb5a55f1fcf63bff3 = L.marker(
+                [8.896389, -80.68],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_dbde91b5251349b3b97da7c1bec6adad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90d376977b794410919713adc6bc579a = $(`<div id="html_90d376977b794410919713adc6bc579a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad T02A, caminando hacia la ruta norte. <strong>Elevación:</strong> 77.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Álex Espinosa <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_dbde91b5251349b3b97da7c1bec6adad.setContent(html_90d376977b794410919713adc6bc579a);
+        
+
+        marker_cab335e301634dadb5a55f1fcf63bff3.bindPopup(popup_dbde91b5251349b3b97da7c1bec6adad)
+        ;
+
+        
+    
+    
+            var marker_db4cecc429794ca6a51f17bd24200787 = L.marker(
+                [8.888889, -80.673889],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_47ddecd9602448b2a0e74d64ea5d76a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6404d07ae3f94cf0bc351c0036245378 = $(`<div id="html_6404d07ae3f94cf0bc351c0036245378" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del Helipad T02A. Tomando la ruta Sur, a orilla de una trocha. <strong>Elevación:</strong> 143.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_47ddecd9602448b2a0e74d64ea5d76a2.setContent(html_6404d07ae3f94cf0bc351c0036245378);
+        
+
+        marker_db4cecc429794ca6a51f17bd24200787.bindPopup(popup_47ddecd9602448b2a0e74d64ea5d76a2)
+        ;
+
+        
+    
+    
+            var marker_f38624a884e94ee3869226a8dcadba00 = L.marker(
+                [8.926389, -80.66888900000001],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_623785f5ed664c1d9870d20a1dd24237 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9b5468f89d441a4a0c48e3cfb4ca3f0 = $(`<div id="html_a9b5468f89d441a4a0c48e3cfb4ca3f0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad Escorpio 02, bosque poco intervenido, cercano a un rio. <strong>Elevación:</strong> 38.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_623785f5ed664c1d9870d20a1dd24237.setContent(html_a9b5468f89d441a4a0c48e3cfb4ca3f0);
+        
+
+        marker_f38624a884e94ee3869226a8dcadba00.bindPopup(popup_623785f5ed664c1d9870d20a1dd24237)
+        ;
+
+        
+    
+    
+            var marker_a57763cb21b84308881afa8cc519224e = L.marker(
+                [8.9425, -80.689444],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_564a8a8598284aaa849a1fa99b852a5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_603ee81abf2241beacc9ba1d4ea72a25 = $(`<div id="html_603ee81abf2241beacc9ba1d4ea72a25" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, area del helipad CR10, tomando hacia el norte. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Jorge E. Aranda B. <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_564a8a8598284aaa849a1fa99b852a5a.setContent(html_603ee81abf2241beacc9ba1d4ea72a25);
+        
+
+        marker_a57763cb21b84308881afa8cc519224e.bindPopup(popup_564a8a8598284aaa849a1fa99b852a5a)
+        ;
+
+        
+    
+    
+            var marker_43779af0bf914e1a89fcde0d3adc054d = L.marker(
+                [8.845556, -80.825278],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_403114cd7baa4a0bae96fdd86a27a060 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b27283ab7a6e44d4b6c0b658b3370e70 = $(`<div id="html_b27283ab7a6e44d4b6c0b658b3370e70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Cerca al Rio Escribano, area del helipad BL03. Bosque humedo tropical. A orillas de una quebrada afluente del rio. Sobre una pequena pendiente. <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_403114cd7baa4a0bae96fdd86a27a060.setContent(html_b27283ab7a6e44d4b6c0b658b3370e70);
+        
+
+        marker_43779af0bf914e1a89fcde0d3adc054d.bindPopup(popup_403114cd7baa4a0bae96fdd86a27a060)
+        ;
+
+        
+    
+    
+            var marker_39c675482476497f9b6f93053915b011 = L.marker(
+                [8.719722, -80.63],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_d03f17af7c3d4e8b88b93739835a1691 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_499a6b6f73184ad8bd226b5129189c92 = $(`<div id="html_499a6b6f73184ad8bd226b5129189c92" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harina, Parque Nacional G.D. Omar Torrijos Herrera. Sendero hacia bajo Tife, saliendo de la comunidad de La Rica (rio Blanco). <strong>Elevación:</strong> 283.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Jorge E. Aranda B. <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_d03f17af7c3d4e8b88b93739835a1691.setContent(html_499a6b6f73184ad8bd226b5129189c92);
+        
+
+        marker_39c675482476497f9b6f93053915b011.bindPopup(popup_d03f17af7c3d4e8b88b93739835a1691)
+        ;
+
+        
+    
+    
+            var marker_d981c5607eac4e3dbdb555f50d8deef5 = L.marker(
+                [8.817778, -80.7875],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_5cf1a23af7e54c70b2c44dc057b5c082 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21354b0ed82f448d983cbb31957a5ea3 = $(`<div id="html_21354b0ed82f448d983cbb31957a5ea3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Orilla de quebrada. Area del Helipad C16, rumbo norte, curso superior del rio Boca Chica. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_5cf1a23af7e54c70b2c44dc057b5c082.setContent(html_21354b0ed82f448d983cbb31957a5ea3);
+        
+
+        marker_d981c5607eac4e3dbdb555f50d8deef5.bindPopup(popup_5cf1a23af7e54c70b2c44dc057b5c082)
+        ;
+
+        
+    
+    
+            var marker_5ed97c57a646487c82491d5f3f1dfcf0 = L.marker(
+                [8.816667, -80.78277800000001],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_a19dee68aba14651bb83f733653380de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5948450bb95e43089e2a0e37e36eb9a4 = $(`<div id="html_5948450bb95e43089e2a0e37e36eb9a4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Helipad C13, rumbo sur, cerca al rio Belencillo. Area boscosa. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Alvin Zapata <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_a19dee68aba14651bb83f733653380de.setContent(html_5948450bb95e43089e2a0e37e36eb9a4);
+        
+
+        marker_5ed97c57a646487c82491d5f3f1dfcf0.bindPopup(popup_a19dee68aba14651bb83f733653380de)
+        ;
+
+        
+    
+    
+            var marker_e8b7ce095e99409dacae45231a49e52b = L.marker(
+                [8.818056, -80.788611],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_a4275f3a48784fcc9dfcbe8e67d08b5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4310f84782c49a0bf207428f8cba1bf = $(`<div id="html_a4310f84782c49a0bf207428f8cba1bf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Orilla de quebrada. Area del Helipad C16, rumbo norte, curso superior del rio Boca Chica. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_a4275f3a48784fcc9dfcbe8e67d08b5a.setContent(html_a4310f84782c49a0bf207428f8cba1bf);
+        
+
+        marker_e8b7ce095e99409dacae45231a49e52b.bindPopup(popup_a4275f3a48784fcc9dfcbe8e67d08b5a)
+        ;
+
+        
+    
+    
+            var marker_05ccc23b912d4b24a3105a1c0fd57969 = L.marker(
+                [8.819167, -80.786389],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_38478780fe654ed4a74fbd6fe813e199 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_947dd6a52f44496e84e1e555a71f77cd = $(`<div id="html_947dd6a52f44496e84e1e555a71f77cd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Helipad C13, rumbo norte, cerca al rio Belencillo. Area semi-sombreada. Hay dos individuos muy cercanos. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Alvin Zapata <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_38478780fe654ed4a74fbd6fe813e199.setContent(html_947dd6a52f44496e84e1e555a71f77cd);
+        
+
+        marker_05ccc23b912d4b24a3105a1c0fd57969.bindPopup(popup_38478780fe654ed4a74fbd6fe813e199)
+        ;
+
+        
+    
+    
+            var marker_f95559ef3d73451ca86b4f38bd743808 = L.marker(
+                [8.713333, -80.59],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_086dd83c0e5a4822927d14341ab3c266 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45d4d44b0e6a4e37a9b394074fd149c7 = $(`<div id="html_45d4d44b0e6a4e37a9b394074fd149c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harino, Parque Nacional G.D. Omar Torrijos H. Area del rio Juan Julio. Orilla de quebrada, terreno en pendiente. <strong>Elevación:</strong> 269.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_086dd83c0e5a4822927d14341ab3c266.setContent(html_45d4d44b0e6a4e37a9b394074fd149c7);
+        
+
+        marker_f95559ef3d73451ca86b4f38bd743808.bindPopup(popup_086dd83c0e5a4822927d14341ab3c266)
+        ;
+
+        
+    
+    
+            var marker_a5a14021fafe44a1b9feba153e0dd34c = L.marker(
+                [8.715, -80.61416700000001],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_1a5f856743624ad5a12e082cb4368ba2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7617734fa4de4fe5a8fd074392f96db4 = $(`<div id="html_7617734fa4de4fe5a8fd074392f96db4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harino, Parque Nacional G.D. Omar Torrijos H. Comunidad de la Rica, area del Rio Blanco. Orilla de quebrada. <strong>Elevación:</strong> 233.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_1a5f856743624ad5a12e082cb4368ba2.setContent(html_7617734fa4de4fe5a8fd074392f96db4);
+        
+
+        marker_a5a14021fafe44a1b9feba153e0dd34c.bindPopup(popup_1a5f856743624ad5a12e082cb4368ba2)
+        ;
+
+        
+    
+    
+            var marker_0138a009c4384aaf8b4707536d628644 = L.marker(
+                [8.823889, -80.81694399999999],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_65155cd06acf4ecba6a7d27f2bc86303 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c432b6575f84ddb98b3b3512de75815 = $(`<div id="html_8c432b6575f84ddb98b3b3512de75815" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad BL05. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_65155cd06acf4ecba6a7d27f2bc86303.setContent(html_8c432b6575f84ddb98b3b3512de75815);
+        
+
+        marker_0138a009c4384aaf8b4707536d628644.bindPopup(popup_65155cd06acf4ecba6a7d27f2bc86303)
+        ;
+
+        
+    
+    
+            var marker_ab581e6d8f8646adb081a931493f397e = L.marker(
+                [8.821667, -80.81694399999999],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_aae9e19cf11d408ca2158e00e4b14079 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bd7e710a7ac4e84946a5137d39eba37 = $(`<div id="html_3bd7e710a7ac4e84946a5137d39eba37" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad BL05. <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Hilario Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_aae9e19cf11d408ca2158e00e4b14079.setContent(html_3bd7e710a7ac4e84946a5137d39eba37);
+        
+
+        marker_ab581e6d8f8646adb081a931493f397e.bindPopup(popup_aae9e19cf11d408ca2158e00e4b14079)
+        ;
+
+        
+    
+    
+            var marker_601aba168e3d410ebea7dcaffc45e61b = L.marker(
+                [8.848611, -80.82333299999999],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_594e33ff5ccf48b287511d61ac894f6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a07a351a274147d9914b2e0cf3e0e24f = $(`<div id="html_a07a351a274147d9914b2e0cf3e0e24f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Cerca a el Rio Escribano, area del helipad BL03. Bosque humedo tropical. A orillas de una quebrada afluente del rio. Sobre una pendiente. <strong>Elevación:</strong> 58.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_594e33ff5ccf48b287511d61ac894f6e.setContent(html_a07a351a274147d9914b2e0cf3e0e24f);
+        
+
+        marker_601aba168e3d410ebea7dcaffc45e61b.bindPopup(popup_594e33ff5ccf48b287511d61ac894f6e)
+        ;
+
+        
+    
+    
+            var marker_c88c3e557ae440a8bdb6f2b007a8005e = L.marker(
+                [8.716667, -80.591944],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_1ab2af79678a472ea284fb84bd3d2788 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aea05ed410b54114b0381abf6b7b8d9d = $(`<div id="html_aea05ed410b54114b0381abf6b7b8d9d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harino, Parque Nacional G.D. Omar Torrijos Herrera. Colectada a orillas del Rio Juan Julio. Terrenos de la Familia Nava. <strong>Elevación:</strong> 195.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_1ab2af79678a472ea284fb84bd3d2788.setContent(html_aea05ed410b54114b0381abf6b7b8d9d);
+        
+
+        marker_c88c3e557ae440a8bdb6f2b007a8005e.bindPopup(popup_1ab2af79678a472ea284fb84bd3d2788)
+        ;
+
+        
+    
+    
+            var marker_5fef4d10d023423eaaa69e11428b124d = L.marker(
+                [8.806111, -80.726111],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_a4859843750c4b47a597196032d121b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf45e6f8090943c7a0fd403c35994891 = $(`<div id="html_bf45e6f8090943c7a0fd403c35994891" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area fuera de la concesion de Minera Panama. Helipad C10. Area del Rio Belencillo. <strong>Elevación:</strong> 89.0 m  <strong>Fecha:</strong> 2012-08-27 00:00:00+00:00 <strong>Recolectores:</strong> Orlando Ortíz <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_a4859843750c4b47a597196032d121b6.setContent(html_bf45e6f8090943c7a0fd403c35994891);
+        
+
+        marker_5fef4d10d023423eaaa69e11428b124d.bindPopup(popup_a4859843750c4b47a597196032d121b6)
+        ;
+
+        
+    
+    
+            var marker_5510d1ec98c9490fb5d5f9c0089aff23 = L.marker(
+                [8.807222, -80.718889],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_304732f905b6428393147b8f337cfc84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f32837a63fd04aa6a01304e0c357736d = $(`<div id="html_f32837a63fd04aa6a01304e0c357736d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del helipad C10. Bosque humedo tropical maduro. Al borde de una quebrada afluente del Rio Belencillo, ubicado sobre una pequena pendiente. <strong>Elevación:</strong> 102.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_304732f905b6428393147b8f337cfc84.setContent(html_f32837a63fd04aa6a01304e0c357736d);
+        
+
+        marker_5510d1ec98c9490fb5d5f9c0089aff23.bindPopup(popup_304732f905b6428393147b8f337cfc84)
+        ;
+
+        
+    
+    
+            var marker_6a0cdbcded314e68ad024d431a7b5af0 = L.marker(
+                [8.807222, -80.718889],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_174c9190f76a4370ac02379b3f0836c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3b8733638b147d6b142498918d1e1df = $(`<div id="html_b3b8733638b147d6b142498918d1e1df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area fuera de la concesion de Minera Panama. Helipad C10. Area del Rio Belencillo. <strong>Elevación:</strong> 102.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Orlando Ortíz <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_174c9190f76a4370ac02379b3f0836c5.setContent(html_b3b8733638b147d6b142498918d1e1df);
+        
+
+        marker_6a0cdbcded314e68ad024d431a7b5af0.bindPopup(popup_174c9190f76a4370ac02379b3f0836c5)
+        ;
+
+        
+    
+    
+            var marker_ddbb40bc1a364c5a978d14681a57c19f = L.marker(
+                [8.716667, -80.591944],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_f15431f2985040c29e1ababd88ff8490 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_188d0d175eb44e32a42d02ce6194cc17 = $(`<div id="html_188d0d175eb44e32a42d02ce6194cc17" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harino, Parque Nacional G.D. Omar Torrijos Herrera. Sendero hacia el rio Juan Julio, pasando por el rio Guabal. <strong>Elevación:</strong> 195.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Jorge E. Aranda B. <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_f15431f2985040c29e1ababd88ff8490.setContent(html_188d0d175eb44e32a42d02ce6194cc17);
+        
+
+        marker_ddbb40bc1a364c5a978d14681a57c19f.bindPopup(popup_f15431f2985040c29e1ababd88ff8490)
+        ;
+
+        
+    
+    
+            var marker_67b7000971e84bc996d5b5ed24ff9ac8 = L.marker(
+                [8.8675, -80.6425],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_7603e0affd9b42e8be12e4a19f076bba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bda62448492b44b58f4ff62cb2a312d1 = $(`<div id="html_bda62448492b44b58f4ff62cb2a312d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de concesion Minera Panama. Camino Pionero. Km. 5. <strong>Elevación:</strong> 118.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Orlando Ortíz <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_7603e0affd9b42e8be12e4a19f076bba.setContent(html_bda62448492b44b58f4ff62cb2a312d1);
+        
+
+        marker_67b7000971e84bc996d5b5ed24ff9ac8.bindPopup(popup_7603e0affd9b42e8be12e4a19f076bba)
+        ;
+
+        
+    
+    
+            var marker_086afbfda3044717b6a8a8097bc023a8 = L.marker(
+                [8.4942, -80.3925],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_8d2f6bc699b24daca854880bbab90786 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b96a95f9cf54d9eaa103022b6e08b22 = $(`<div id="html_3b96a95f9cf54d9eaa103022b6e08b22" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Donoso, Botija, sendero datrás de vivero, Bosque secundario <strong>Elevación:</strong> 131.0 m  <strong>Fecha:</strong> 2015-09-05 00:00:00+00:00 <strong>Recolectores:</strong> J. Batista <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_8d2f6bc699b24daca854880bbab90786.setContent(html_3b96a95f9cf54d9eaa103022b6e08b22);
+        
+
+        marker_086afbfda3044717b6a8a8097bc023a8.bindPopup(popup_8d2f6bc699b24daca854880bbab90786)
+        ;
+
+        
+    
+    
+            var marker_0605a260c19e419a8efc2069ac0cdd56 = L.marker(
+                [8.8675, -80.6425],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_a567026ae3134585ad56bc4a3014311f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_beb5a283b43e4cbbb6a2ec822f90240e = $(`<div id="html_beb5a283b43e4cbbb6a2ec822f90240e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Donoso.  Area de concesion Minera Panama, Camino Pionero, Km. 5 <strong>Elevación:</strong> 118.0 m  <strong>Fecha:</strong> 2012-10-01 00:00:00+00:00 <strong>Recolectores:</strong> Ortiz, O. O.; Rodriguez, Argelis; Sanchez, Elmer <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a567026ae3134585ad56bc4a3014311f.setContent(html_beb5a283b43e4cbbb6a2ec822f90240e);
+        
+
+        marker_0605a260c19e419a8efc2069ac0cdd56.bindPopup(popup_a567026ae3134585ad56bc4a3014311f)
+        ;
+
+        
+    
+    
+            var marker_87500e8b41214e908416e95cb873a937 = L.marker(
+                [9.5, -79.516667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_eb7099223c794fc0aff42265c48ca829 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f39445119fdc44fe8cc1178ecce177c8 = $(`<div id="html_f39445119fdc44fe8cc1178ecce177c8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Head waters of Río Boquerón near fork with Río Nombre de Diosito (near area where abandoned trail road crosses the ridge). <strong>Elevación:</strong> 152.4 m  <strong>Fecha:</strong> 1978-07-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> Diana Gamba</div>`)[0];
+            popup_eb7099223c794fc0aff42265c48ca829.setContent(html_f39445119fdc44fe8cc1178ecce177c8);
+        
+
+        marker_87500e8b41214e908416e95cb873a937.bindPopup(popup_eb7099223c794fc0aff42265c48ca829)
+        ;
+
+        
+    
+    
+            var marker_0ef477cb41b84270a8366e26f195211b = L.marker(
+                [9.3, -79.266667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_b7b2d093f16f4bf98cbc80acf11df617 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9333c6be79034b098dbcab95b850bd58 = $(`<div id="html_9333c6be79034b098dbcab95b850bd58" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Trail from Alto Pacora to Cerro Brewster. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1985-11-18 00:00:00+00:00 <strong>Recolectores:</strong> Greg C. de Nevers|Andrew J. Henderson|Heraclio Herrera|Gordon McPherson|Lois Brako <strong>Identificadores:</strong> paratype, 2014</div>`)[0];
+            popup_b7b2d093f16f4bf98cbc80acf11df617.setContent(html_9333c6be79034b098dbcab95b850bd58);
+        
+
+        marker_0ef477cb41b84270a8366e26f195211b.bindPopup(popup_b7b2d093f16f4bf98cbc80acf11df617)
+        ;
+
+        
+    
+    
+            var marker_94aa6f4f4a734b72b9213aae86465a47 = L.marker(
+                [8.824444999999999, -80.658056],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_0b672855c89742ed9b3d306f37bc7d81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1db9a1b80e5473da62af322d845325a = $(`<div id="html_d1db9a1b80e5473da62af322d845325a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Teck Cominco Petaquilla mining concession. Collected in and near transect C006. <strong>Elevación:</strong> 155.0 m  <strong>Fecha:</strong> 2007-09-20 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> D. Gamba & F. Almeda</div>`)[0];
+            popup_0b672855c89742ed9b3d306f37bc7d81.setContent(html_d1db9a1b80e5473da62af322d845325a);
+        
+
+        marker_94aa6f4f4a734b72b9213aae86465a47.bindPopup(popup_0b672855c89742ed9b3d306f37bc7d81)
+        ;
+
+        
+    
+    
+            var marker_f092676f4f0a4f3c805b72ff42ef6b34 = L.marker(
+                [10.417222, -84.116667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_acbf3bf2375f474f943d70c5586c6914 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5371a74e46bb45259f7af13b84483b89 = $(`<div id="html_5371a74e46bb45259f7af13b84483b89" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Virgen, Estación Biológica La Tirimbina, Sendero Hunter. <strong>Elevación:</strong> 184.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> José Á. González R. <strong>Identificadores:</strong> paratype</div>`)[0];
+            popup_acbf3bf2375f474f943d70c5586c6914.setContent(html_5371a74e46bb45259f7af13b84483b89);
+        
+
+        marker_f092676f4f0a4f3c805b72ff42ef6b34.bindPopup(popup_acbf3bf2375f474f943d70c5586c6914)
+        ;
+
+        
+    
+    
+            var marker_cacd7936c47e464cb555bc3caf672ca4 = L.marker(
+                [10.417222, -84.116667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_b5ecd5c9c3c8402c8e219d391632c016 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3008f139f29b4e5587844b85484a8538 = $(`<div id="html_3008f139f29b4e5587844b85484a8538" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> La Virgen, Estación Biológica La Tirimbina, Sendero Hunter. <strong>Elevación:</strong> 184.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> José Á. González R. <strong>Identificadores:</strong> paratype</div>`)[0];
+            popup_b5ecd5c9c3c8402c8e219d391632c016.setContent(html_3008f139f29b4e5587844b85484a8538);
+        
+
+        marker_cacd7936c47e464cb555bc3caf672ca4.bindPopup(popup_b5ecd5c9c3c8402c8e219d391632c016)
+        ;
+
+        
+    
+    
+            var marker_020dfb1a7ecd4383ac02da23c90c344d = L.marker(
+                [8.719445, -80.755278],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_4880bf5c920d454bb3b322a94c5d29ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21f7add0590f4d28b4be6cba7005e985 = $(`<div id="html_21f7add0590f4d28b4be6cba7005e985" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Belen, Recodo Catalina al este del campamento. <strong>Elevación:</strong> 184.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Álex Espinosa <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_4880bf5c920d454bb3b322a94c5d29ab.setContent(html_21f7add0590f4d28b4be6cba7005e985);
+        
+
+        marker_020dfb1a7ecd4383ac02da23c90c344d.bindPopup(popup_4880bf5c920d454bb3b322a94c5d29ab)
+        ;
+
+        
+    
+    
+            var marker_cb57818eb5eb41869ec0f9909065e636 = L.marker(
+                [8.819167, -80.786389],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_ce8f747aa00d45c4b102613b7102fb6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dccd0f75588b450091efec3373430a99 = $(`<div id="html_dccd0f75588b450091efec3373430a99" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Donoso, Coclé del Norte, Helipad C13, rumbo norte, cerca al río Belencillo. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2012-08-01 00:00:00+00:00 <strong>Recolectores:</strong> Zapata, Alvin; Carrión, Juan; Ortiz, Orlando; Sánchez, Elmer D. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_ce8f747aa00d45c4b102613b7102fb6c.setContent(html_dccd0f75588b450091efec3373430a99);
+        
+
+        marker_cb57818eb5eb41869ec0f9909065e636.bindPopup(popup_ce8f747aa00d45c4b102613b7102fb6c)
+        ;
+
+        
+    
+    
+            var marker_f1c9eafa2bf74620b0bf3b8181a05c87 = L.marker(
+                [8.807222, -80.718889],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_f9f5e45051a04c37a8a7b4afe17cc1e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a2678cb9ebc4508a2311eb3e19d398b = $(`<div id="html_2a2678cb9ebc4508a2311eb3e19d398b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Donoso, Área fuera de la concesión de Minera Panamá. Helipad C10. Área del Río Belencillo <strong>Elevación:</strong> 102.0 m  <strong>Fecha:</strong> 2012-08-01 00:00:00+00:00 <strong>Recolectores:</strong> Ortiz, O. Orlando; Sánchez, E.; Martínez, L. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f9f5e45051a04c37a8a7b4afe17cc1e6.setContent(html_2a2678cb9ebc4508a2311eb3e19d398b);
+        
+
+        marker_f1c9eafa2bf74620b0bf3b8181a05c87.bindPopup(popup_f9f5e45051a04c37a8a7b4afe17cc1e6)
+        ;
+
+        
+    
+    
+            var marker_e3434187b6074881ad05cb70b2e74b90 = L.marker(
+                [9.3, -79.266667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_549bfb3332184d4abcc30c21f7fafdc4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ecc2806af05e4d5bbb255004bde319ea = $(`<div id="html_ecc2806af05e4d5bbb255004bde319ea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Trail from Alto Pacora to Cerro Brewster <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 2012-08-01 00:00:00+00:00 <strong>Recolectores:</strong> Laurencio, Martinez; Ortiz, Orlando; Carrión, Juan; Sánchez, Edgar <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_549bfb3332184d4abcc30c21f7fafdc4.setContent(html_ecc2806af05e4d5bbb255004bde319ea);
+        
+
+        marker_e3434187b6074881ad05cb70b2e74b90.bindPopup(popup_549bfb3332184d4abcc30c21f7fafdc4)
+        ;
+
+        
+    
+    
+            var marker_e14c7c1a9b5f40a1a23c1de812501a77 = L.marker(
+                [9.3, -79.266667],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_3d922070ecb347b789ac63edae524845 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2903c2459d34a119033a637b28c750b = $(`<div id="html_f2903c2459d34a119033a637b28c750b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Trail from Alto Pacora to Cerro Brewster <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1985-11-01 00:00:00+00:00 <strong>Recolectores:</strong> de Nevers, G.; Henderson, A.; Herrera, H.; McPherson, G.; Brako, L. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3d922070ecb347b789ac63edae524845.setContent(html_f2903c2459d34a119033a637b28c750b);
+        
+
+        marker_e14c7c1a9b5f40a1a23c1de812501a77.bindPopup(popup_3d922070ecb347b789ac63edae524845)
+        ;
+
+        
+    
+    
+            var marker_e6e7f5a7475543a99bb8b555617ac45b = L.marker(
+                [8.891111, -80.678333],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_c2d4ed1e6f7b474eaaffcaebd34d45a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b86066fc4e8d44c09f0740779571b73c = $(`<div id="html_b86066fc4e8d44c09f0740779571b73c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Area del Helipad T02A, Romando la ruta Sur, a orilla de una trocha <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 2012-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Martinez, Laurencio <strong>Identificadores:</strong> Gamba & Almeda</div>`)[0];
+            popup_c2d4ed1e6f7b474eaaffcaebd34d45a4.setContent(html_b86066fc4e8d44c09f0740779571b73c);
+        
+
+        marker_e6e7f5a7475543a99bb8b555617ac45b.bindPopup(popup_c2d4ed1e6f7b474eaaffcaebd34d45a4)
+        ;
+
+        
+    
+    
+            var marker_cc3e7fb437324a869337d5635de93236 = L.marker(
+                [8.905278, -80.688889],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_effa9025733040c6ad8b5626b91c80ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a96207d10b77470d96bf59f118ac57b1 = $(`<div id="html_a96207d10b77470d96bf59f118ac57b1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Coclé del Norte, Área del helipad T02A, caminando hacia la ruta norte <strong>Elevación:</strong> 77.0 m  <strong>Fecha:</strong> 2012-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Espinosa, Alex; Martínez, Laurencio; Sánchez, Edgar; De Gracia, José <strong>Identificadores:</strong> Gamba & Almeda</div>`)[0];
+            popup_effa9025733040c6ad8b5626b91c80ff.setContent(html_a96207d10b77470d96bf59f118ac57b1);
+        
+
+        marker_cc3e7fb437324a869337d5635de93236.bindPopup(popup_effa9025733040c6ad8b5626b91c80ff)
+        ;
+
+        
+    
+    
+            var marker_a1543b8e18204f0f8a7f8d5000d93be7 = L.marker(
+                [8.941667, -80.6925],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_26603e1367054ab6a93da5d70f0041a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3726392036c44d3f8499fe3446890bac = $(`<div id="html_3726392036c44d3f8499fe3446890bac" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Coclé del Norte, Área del helipad CR10, tomando hacia el sur <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2012-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Aranda, Jorge; Martínez, Peneli; De Gracia, José <strong>Identificadores:</strong> Gamba & Almeda</div>`)[0];
+            popup_26603e1367054ab6a93da5d70f0041a9.setContent(html_3726392036c44d3f8499fe3446890bac);
+        
+
+        marker_a1543b8e18204f0f8a7f8d5000d93be7.bindPopup(popup_26603e1367054ab6a93da5d70f0041a9)
+        ;
+
+        
+    
+    
+            var marker_3e955597b1a048e7bb33e22cd1c291cc = L.marker(
+                [8.965278, -80.699722],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_71b8cd6a692946aea5159fe2a70cbc11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eacf5272e5694793b4d90a887f686f68 = $(`<div id="html_eacf5272e5694793b4d90a887f686f68" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Site of proposed copper mine (MPSA) <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 2009-12-01 00:00:00+00:00 <strong>Recolectores:</strong> McPherson, Gordon; Merello, Mary <strong>Identificadores:</strong> Gamba & Almeda</div>`)[0];
+            popup_71b8cd6a692946aea5159fe2a70cbc11.setContent(html_eacf5272e5694793b4d90a887f686f68);
+        
+
+        marker_3e955597b1a048e7bb33e22cd1c291cc.bindPopup(popup_71b8cd6a692946aea5159fe2a70cbc11)
+        ;
+
+        
+    
+    
+            var marker_73a781c65b4847e5b4bbad7e7d995602 = L.marker(
+                [8.899444, -80.690556],
+                {}
+            ).addTo(marker_cluster_957ee712d43e442fbccd3a5f38bd5b42);
+        
+    
+        var popup_92bb63a09f704b84b3e91936619cb60a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce64d3c4722f4e5e8ed5a635bc921bdd = $(`<div id="html_ce64d3c4722f4e5e8ed5a635bc921bdd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Coclé del Norte, Área del helipad T02A, caminando hacia la ruta Oeste <strong>Elevación:</strong> 143.0 m  <strong>Fecha:</strong> 2012-07-01 00:00:00+00:00 <strong>Recolectores:</strong> Espinosa, Alex; Martínez, Laurencio; Sánchez, Edgar <strong>Identificadores:</strong> Gamba & Almeda</div>`)[0];
+            popup_92bb63a09f704b84b3e91936619cb60a.setContent(html_ce64d3c4722f4e5e8ed5a635bc921bdd);
+        
+
+        marker_73a781c65b4847e5b4bbad7e7d995602.bindPopup(popup_92bb63a09f704b84b3e91936619cb60a)
+        ;
+
+        
+    
+    
+            var layer_control_d04c2eb1791548ef8223e7abf28e215a = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_745ff643e9a84b5c898dd96d41ea4779,
+                    "ESRI World Imagery" : tile_layer_27ea7371026d42508569376932fdc898,
+                },
+                overlays :  {
+                    "macro_element_957ee712d43e442fbccd3a5f38bd5b42" : marker_cluster_957ee712d43e442fbccd3a5f38bd5b42,
+                },
+            };
+            L.control.layers(
+                layer_control_d04c2eb1791548ef8223e7abf28e215a.base_layers,
+                layer_control_d04c2eb1791548ef8223e7abf28e215a.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_41700959ce2a4255b1fead5c16487e3c);
+            tile_layer_27ea7371026d42508569376932fdc898.remove();
+        
+</script>

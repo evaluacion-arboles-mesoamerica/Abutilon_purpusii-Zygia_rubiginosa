@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7083331c231c4f9d9e1ff5d7a83f8fbe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_7083331c231c4f9d9e1ff5d7a83f8fbe" ></div>
+        
+</body>
+<script>    
+    
+            var map_7083331c231c4f9d9e1ff5d7a83f8fbe = L.map(
+                "map_7083331c231c4f9d9e1ff5d7a83f8fbe",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_7083331c231c4f9d9e1ff5d7a83f8fbe);
+
+            
+
+        
+    
+            var tile_layer_f4ad50183d5e4cbab26d21d1e6c9e2ec = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7083331c231c4f9d9e1ff5d7a83f8fbe);
+        
+    
+            var tile_layer_15f17906689e4c9cb822e3a702c1855e = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7083331c231c4f9d9e1ff5d7a83f8fbe);
+        
+    
+            var marker_cluster_0dfbd6d6e826462f932038b77a9393c7 = L.markerClusterGroup(
+                {}
+            );
+            map_7083331c231c4f9d9e1ff5d7a83f8fbe.addLayer(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+            var marker_afa9eb9b95c54a19bc930688d74d6c7c = L.marker(
+                [10.8, -84.783333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_2a93430df8fa473ab7964fd83357d8c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d401ff3c6de47fca73c99cf6962385f = $(`<div id="html_9d401ff3c6de47fca73c99cf6962385f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de San Carlos, El Concho de Poco Sol <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Zamora Nelson <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2a93430df8fa473ab7964fd83357d8c8.setContent(html_9d401ff3c6de47fca73c99cf6962385f);
+        
+
+        marker_afa9eb9b95c54a19bc930688d74d6c7c.bindPopup(popup_2a93430df8fa473ab7964fd83357d8c8)
+        ;
+
+        
+    
+    
+            var marker_0e6261d4f9f543a0a4e608a3c791056d = L.marker(
+                [10.21, -83.91],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_68c283d8ba6e4c5bb906fa33e1276ddb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c4d0f408b7844c89a093a43a4387c22 = $(`<div id="html_5c4d0f408b7844c89a093a43a4387c22" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo In forest on slopes along samll stream ca. 2 km E of lower park Station, Braulio Carrillo; Finca González; San José-Guápiles Highway. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1988-04-16 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_68c283d8ba6e4c5bb906fa33e1276ddb.setContent(html_5c4d0f408b7844c89a093a43a4387c22);
+        
+
+        marker_0e6261d4f9f543a0a4e608a3c791056d.bindPopup(popup_68c283d8ba6e4c5bb906fa33e1276ddb)
+        ;
+
+        
+    
+    
+            var marker_d74ed0f0faed4bccb41f92b55ad42186 = L.marker(
+                [10.99, -85.42],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_366c37694ff6406a93ce6ea385c5bbc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9162e5bf78ec4235b1b15aaf64654403 = $(`<div id="html_9162e5bf78ec4235b1b15aaf64654403" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste Estación Pitilla. Bosque primario y secundario en las márgenes del camino. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 1993-03-17 00:00:00+00:00 <strong>Recolectores:</strong> Morales, Juan Francisco <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_366c37694ff6406a93ce6ea385c5bbc7.setContent(html_9162e5bf78ec4235b1b15aaf64654403);
+        
+
+        marker_d74ed0f0faed4bccb41f92b55ad42186.bindPopup(popup_366c37694ff6406a93ce6ea385c5bbc7)
+        ;
+
+        
+    
+    
+            var marker_7fe2d8727b4d404ab437decb507d8f69 = L.marker(
+                [10.43, -84.03],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_3c84a070d2d149a98c91954b3f3cf858 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e97f25dd0d0c4938870768dc728e8109 = $(`<div id="html_e97f25dd0d0c4938870768dc728e8109" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E. B. La Selva Finca La Selva, the OTS Field Station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí.  SW trail about 1900, trail tag nº292. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-06-05 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Morales, Carlos O.</div>`)[0];
+            popup_3c84a070d2d149a98c91954b3f3cf858.setContent(html_e97f25dd0d0c4938870768dc728e8109);
+        
+
+        marker_7fe2d8727b4d404ab437decb507d8f69.bindPopup(popup_3c84a070d2d149a98c91954b3f3cf858)
+        ;
+
+        
+    
+    
+            var marker_a07ed7f64e8e44bcafae1f4f128fa338 = L.marker(
+                [10.43, -84.03],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_b2f373c643184077be54c8cb9a9df3ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e7e4e3d3816447d861bd30871203aef = $(`<div id="html_9e7e4e3d3816447d861bd30871203aef" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E. B. La Selva Finca La Selva, the OTS Field Station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-10-09 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Morales, Carlos O.</div>`)[0];
+            popup_b2f373c643184077be54c8cb9a9df3ba.setContent(html_9e7e4e3d3816447d861bd30871203aef);
+        
+
+        marker_a07ed7f64e8e44bcafae1f4f128fa338.bindPopup(popup_b2f373c643184077be54c8cb9a9df3ba)
+        ;
+
+        
+    
+    
+            var marker_0acb252a5b98434f9dac7a36bd0dfb3d = L.marker(
+                [10.8, -84.78],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_cdef10f38a0941cdb0e5294c36c03115 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48e00682ec8b4409b60d16f2b7638dab = $(`<div id="html_48e00682ec8b4409b60d16f2b7638dab" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Concho. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_cdef10f38a0941cdb0e5294c36c03115.setContent(html_48e00682ec8b4409b60d16f2b7638dab);
+        
+
+        marker_0acb252a5b98434f9dac7a36bd0dfb3d.bindPopup(popup_cdef10f38a0941cdb0e5294c36c03115)
+        ;
+
+        
+    
+    
+            var marker_bd568936a5304a55a815c41fe4589527 = L.marker(
+                [11.03, -85.4],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_8cb04fa0ba614d959de132ec7110303f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a79728e268ef4b3484b986f93af0a2c7 = $(`<div id="html_a79728e268ef4b3484b986f93af0a2c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste Estación Pitilla. Sendero El Mismo, Finca La Pasmompa. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Ríos, Petrona <strong>Identificadores:</strong> Morales, Juan Francisco</div>`)[0];
+            popup_8cb04fa0ba614d959de132ec7110303f.setContent(html_a79728e268ef4b3484b986f93af0a2c7);
+        
+
+        marker_bd568936a5304a55a815c41fe4589527.bindPopup(popup_8cb04fa0ba614d959de132ec7110303f)
+        ;
+
+        
+    
+    
+            var marker_28fa3fd395444b14becc003f1f307045 = L.marker(
+                [11.03, -85.42],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_83f843146ecd450289e9db0ce473973d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36eafb6b27104c0ab2627b6644076804 = $(`<div id="html_36eafb6b27104c0ab2627b6644076804" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Guanacaste Estación Pitilla; 5 km N de la Estación al lado del camino en remanente de bosque primario; La Pasmompa. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1989-06-15 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_83f843146ecd450289e9db0ce473973d.setContent(html_36eafb6b27104c0ab2627b6644076804);
+        
+
+        marker_28fa3fd395444b14becc003f1f307045.bindPopup(popup_83f843146ecd450289e9db0ce473973d)
+        ;
+
+        
+    
+    
+            var marker_d8823113d5494335bb73c72ece738a3e = L.marker(
+                [10.33, -84.03],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_1ef00a71de364a3f894891cdb2500928 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_226355ddd1834c48896bc310f4678285 = $(`<div id="html_226355ddd1834c48896bc310f4678285" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo 15 km SW of Horquetas, W of Rara Avis. Between Río Guácimo & Río Peje. <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-04-26 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_1ef00a71de364a3f894891cdb2500928.setContent(html_226355ddd1834c48896bc310f4678285);
+        
+
+        marker_d8823113d5494335bb73c72ece738a3e.bindPopup(popup_1ef00a71de364a3f894891cdb2500928)
+        ;
+
+        
+    
+    
+            var marker_919a97b8ce2a429cb31cc2e996ef71e0 = L.marker(
+                [10.33, -84.07],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_2a3b15305d4c4862944f71712ab51a71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3698236b5a624b2fb16519f781abd211 = $(`<div id="html_3698236b5a624b2fb16519f781abd211" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Braulio Carrillo Puesto El Ceibo. Gently sloping area just above the steep rim if the Río Peje gorge on the west side. Along side path that goes from guard house to water supply intake, about 15 minutes uphill. Primary Premontane Wet Forest. <strong>Elevación:</strong> 520.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Boyle, Brad <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_2a3b15305d4c4862944f71712ab51a71.setContent(html_3698236b5a624b2fb16519f781abd211);
+        
+
+        marker_919a97b8ce2a429cb31cc2e996ef71e0.bindPopup(popup_2a3b15305d4c4862944f71712ab51a71)
+        ;
+
+        
+    
+    
+            var marker_c64522ac1650417788ede648cbcb6cf6 = L.marker(
+                [10.8, -84.78],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_e47b92cc4f9c4f96a6614acfacac1e60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f6eed2b5ff74c329b1b5077036440e9 = $(`<div id="html_1f6eed2b5ff74c329b1b5077036440e9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Concho. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1990-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_e47b92cc4f9c4f96a6614acfacac1e60.setContent(html_1f6eed2b5ff74c329b1b5077036440e9);
+        
+
+        marker_c64522ac1650417788ede648cbcb6cf6.bindPopup(popup_e47b92cc4f9c4f96a6614acfacac1e60)
+        ;
+
+        
+    
+    
+            var marker_5dbc8d1b62a6425fbdc613f2e5329e12 = L.marker(
+                [10.99, -85.42],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_e0f204799b6d4f9799b7e53f95f7a873 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_916c1bac68ac45a3a288233fc3245ddb = $(`<div id="html_916c1bac68ac45a3a288233fc3245ddb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Guanacaste; Cordillera de Guanacaste. Estación Pitilla. Bosque primario y secundario en las márgenes del camino. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 1993-03-17 00:00:00+00:00 <strong>Recolectores:</strong> J. F. Morales|Nelson Zamora|Nora Martín|Ulises Chavarría <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_e0f204799b6d4f9799b7e53f95f7a873.setContent(html_916c1bac68ac45a3a288233fc3245ddb);
+        
+
+        marker_5dbc8d1b62a6425fbdc613f2e5329e12.bindPopup(popup_e0f204799b6d4f9799b7e53f95f7a873)
+        ;
+
+        
+    
+    
+            var marker_0a8845f9ac6144f09dfabc63afb8fbf0 = L.marker(
+                [10.5, -84.5],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_57173171ec6f4c4e860edd01694b9858 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e79a42f28f346de99393adb317509c7 = $(`<div id="html_8e79a42f28f346de99393adb317509c7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> N. Zamora V. & L. J. Poveda <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_57173171ec6f4c4e860edd01694b9858.setContent(html_8e79a42f28f346de99393adb317509c7);
+        
+
+        marker_0a8845f9ac6144f09dfabc63afb8fbf0.bindPopup(popup_57173171ec6f4c4e860edd01694b9858)
+        ;
+
+        
+    
+    
+            var marker_716fd2b6a47945cf95f23f8516b936b8 = L.marker(
+                [10.5, -84.5],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_6a79103f0e4246a3a3eb29f8fbab26e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9187e58625de4b8f99fa18ca7b57546b = $(`<div id="html_9187e58625de4b8f99fa18ca7b57546b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> N. Zamora V. & L. J. Poveda <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_6a79103f0e4246a3a3eb29f8fbab26e3.setContent(html_9187e58625de4b8f99fa18ca7b57546b);
+        
+
+        marker_716fd2b6a47945cf95f23f8516b936b8.bindPopup(popup_6a79103f0e4246a3a3eb29f8fbab26e3)
+        ;
+
+        
+    
+    
+            var marker_4d70377403614f9589cc6e203026bc6f = L.marker(
+                [8.928611, -80.68],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_2fcd572797e5482894e6ce8eb668fc5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ff7b03829084162aa08c323dd48c319 = $(`<div id="html_9ff7b03829084162aa08c323dd48c319" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Site of proposed copper mine (MPSA). Forested slopes. Collected with Mary Merello. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2009-12-04 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> H. van der Werff &McP</div>`)[0];
+            popup_2fcd572797e5482894e6ce8eb668fc5c.setContent(html_9ff7b03829084162aa08c323dd48c319);
+        
+
+        marker_4d70377403614f9589cc6e203026bc6f.bindPopup(popup_2fcd572797e5482894e6ce8eb668fc5c)
+        ;
+
+        
+    
+    
+            var marker_7fcfaf2cfa0344cbaa46d996bb90592b = L.marker(
+                [8.821945, -80.656111],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_5ca642fe98314f56b00cb526d302ffa1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e90440e3bdc144fb9b89438132f2cfc4 = $(`<div id="html_e90440e3bdc144fb9b89438132f2cfc4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> MPSA Concession. Botadero 600. Plants collected after area was cleared with chainsaws. (UTM 537799, 975194) Collected with: J. De Gracia, R. Flores, J. Martínez, M. Merello & H. Quiel. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2012-05-22 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_5ca642fe98314f56b00cb526d302ffa1.setContent(html_e90440e3bdc144fb9b89438132f2cfc4);
+        
+
+        marker_7fcfaf2cfa0344cbaa46d996bb90592b.bindPopup(popup_5ca642fe98314f56b00cb526d302ffa1)
+        ;
+
+        
+    
+    
+            var marker_1b05e9e4bf524c8b9acc02b96497942c = L.marker(
+                [8.7225, -80.623333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_d1159f905bcf477b8ec8fc0f7a6c4324 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9cd0a3499694db6b304ddfb1ed6d359 = $(`<div id="html_d9cd0a3499694db6b304ddfb1ed6d359" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Harino, Parque Nacional G.D. Omar Torrijos Herrera. Colectado camino al Rio Tife, area de Cano Sucio. A orillas del rio cano sucio, terrenos del senor Ife. <strong>Elevación:</strong> 231.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez <strong>Identificadores:</strong> van der Werff & McPherson</div>`)[0];
+            popup_d1159f905bcf477b8ec8fc0f7a6c4324.setContent(html_d9cd0a3499694db6b304ddfb1ed6d359);
+        
+
+        marker_1b05e9e4bf524c8b9acc02b96497942c.bindPopup(popup_d1159f905bcf477b8ec8fc0f7a6c4324)
+        ;
+
+        
+    
+    
+            var marker_a1a75f774a3c4cc4995f40120a2be909 = L.marker(
+                [8.7725, -80.737222],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_9c5da94507014623a0ef1c18ec01378a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fdb0484247f4a1db68503574730e254 = $(`<div id="html_7fdb0484247f4a1db68503574730e254" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cocle del Norte, Helipad C16, rumbo norte, curso superior del rio Boca Chica. Area boscosa cerca al rio. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Alvin Zapata <strong>Identificadores:</strong> McPherson [leaf only; ft-->Sterc]</div>`)[0];
+            popup_9c5da94507014623a0ef1c18ec01378a.setContent(html_7fdb0484247f4a1db68503574730e254);
+        
+
+        marker_a1a75f774a3c4cc4995f40120a2be909.bindPopup(popup_9c5da94507014623a0ef1c18ec01378a)
+        ;
+
+        
+    
+    
+            var marker_396a86598ed543cf916af7be5d6556a6 = L.marker(
+                [8.554722, -81.046667],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_ac84631796284d88bc48c49b6c2bf3ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebc6a11448c1494288cfcb9bbcdbf161 = $(`<div id="html_ebc6a11448c1494288cfcb9bbcdbf161" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Santa Fe. Area del rio Santa Maria (entrando por Piragual), bosque intervenido. <strong>Elevación:</strong> 404.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Laurencio Martínez|et al. <strong>Identificadores:</strong> McPherson</div>`)[0];
+            popup_ac84631796284d88bc48c49b6c2bf3ca.setContent(html_ebc6a11448c1494288cfcb9bbcdbf161);
+        
+
+        marker_396a86598ed543cf916af7be5d6556a6.bindPopup(popup_ac84631796284d88bc48c49b6c2bf3ca)
+        ;
+
+        
+    
+    
+            var marker_9c6480277bfc410d9bc50b08a2c6e924 = L.marker(
+                [8.554722, -81.046667],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_3b4e5901c49744938d81c830a070f271 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6de60bef22cf46aaaef33fb02a672f2e = $(`<div id="html_6de60bef22cf46aaaef33fb02a672f2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Santa Fe. Bosque cercano al Piragual, al borde del rio Santa Maria. <strong>Elevación:</strong> 404.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Orlando Ortíz <strong>Identificadores:</strong> mcp/13</div>`)[0];
+            popup_3b4e5901c49744938d81c830a070f271.setContent(html_6de60bef22cf46aaaef33fb02a672f2e);
+        
+
+        marker_9c6480277bfc410d9bc50b08a2c6e924.bindPopup(popup_3b4e5901c49744938d81c830a070f271)
+        ;
+
+        
+    
+    
+            var marker_8b11cdf1eede479c81de6501e8bcbb90 = L.marker(
+                [10.0, -83.8667],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_fca09a54eb4e4d1fbb81bfea3562ae8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75195790f954482fb4c559a653a56d8c = $(`<div id="html_75195790f954482fb4c559a653a56d8c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1988-04-16 00:00:00+00:00 <strong>Recolectores:</strong> B. E. Hammel <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_fca09a54eb4e4d1fbb81bfea3562ae8b.setContent(html_75195790f954482fb4c559a653a56d8c);
+        
+
+        marker_8b11cdf1eede479c81de6501e8bcbb90.bindPopup(popup_fca09a54eb4e4d1fbb81bfea3562ae8b)
+        ;
+
+        
+    
+    
+            var marker_b1b0ce5ddfb84884903e27f2a324a89b = L.marker(
+                [10.8, -84.78],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_284c51529d2b4f80b4230c1e27cd2224 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4766d386627c4d6ca04d877202a719b9 = $(`<div id="html_4766d386627c4d6ca04d877202a719b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela: Canton de San Carlos, El Concho de Poco Sol <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Poveda, L.J.; Zamora, N. <strong>Identificadores:</strong> Zamora, N.</div>`)[0];
+            popup_284c51529d2b4f80b4230c1e27cd2224.setContent(html_4766d386627c4d6ca04d877202a719b9);
+        
+
+        marker_b1b0ce5ddfb84884903e27f2a324a89b.bindPopup(popup_284c51529d2b4f80b4230c1e27cd2224)
+        ;
+
+        
+    
+    
+            var marker_d52e354005284feb8791f1ebf92dc5a0 = L.marker(
+                [10.8, -84.78],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_5138076ef1824c6ba724d9f4c7618bcc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e22aaaa3b4842b8871fbe6edb2873d6 = $(`<div id="html_8e22aaaa3b4842b8871fbe6edb2873d6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela: Canton de San Carlos, El Concho de Poco Sol <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Poveda, L.J.; Zamora, N. <strong>Identificadores:</strong> Zamora, N.</div>`)[0];
+            popup_5138076ef1824c6ba724d9f4c7618bcc.setContent(html_8e22aaaa3b4842b8871fbe6edb2873d6);
+        
+
+        marker_d52e354005284feb8791f1ebf92dc5a0.bindPopup(popup_5138076ef1824c6ba724d9f4c7618bcc)
+        ;
+
+        
+    
+    
+            var marker_6eb769739ddd48a691b1e86d44df7492 = L.marker(
+                [10.363242999999999, -84.103566],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_b5141cb880ba44209a1aa1e78f7f33cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_667f52ddab96467fadfddd5a541c8684 = $(`<div id="html_667f52ddab96467fadfddd5a541c8684" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2018-03-11 10:24:00+00:00 <strong>Recolectores:</strong> Lena Struwe <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_b5141cb880ba44209a1aa1e78f7f33cb.setContent(html_667f52ddab96467fadfddd5a541c8684);
+        
+
+        marker_6eb769739ddd48a691b1e86d44df7492.bindPopup(popup_b5141cb880ba44209a1aa1e78f7f33cb)
+        ;
+
+        
+    
+    
+            var marker_31272ad6bd2e405ab9aa1ef8c7f8eeda = L.marker(
+                [10.336111, -84.1],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_4080bd271e8a4ebbaa7a023d8ec71305 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_003ea7a6bd924bd1b3d4b8de5e95bb2c = $(`<div id="html_003ea7a6bd924bd1b3d4b8de5e95bb2c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre Estacion El Ceibo y San Ramon de La Virgen de Sarapiqui. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1989-10-28 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_4080bd271e8a4ebbaa7a023d8ec71305.setContent(html_003ea7a6bd924bd1b3d4b8de5e95bb2c);
+        
+
+        marker_31272ad6bd2e405ab9aa1ef8c7f8eeda.bindPopup(popup_4080bd271e8a4ebbaa7a023d8ec71305)
+        ;
+
+        
+    
+    
+            var marker_b77f73d82ddb494a98ab2136e1227d46 = L.marker(
+                [11.033333, -85.422223],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_8c9696875e2f40e1ac9db191cf9e371b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a24d5c818944d01a083ca2bf1ed4892 = $(`<div id="html_4a24d5c818944d01a083ca2bf1ed4892" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Pitilla; 5 km N de la Estacion al lado del camino en remanente de bosque primario; La Pasmompa. - J. Kallunki <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1989-06-15 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8c9696875e2f40e1ac9db191cf9e371b.setContent(html_4a24d5c818944d01a083ca2bf1ed4892);
+        
+
+        marker_b77f73d82ddb494a98ab2136e1227d46.bindPopup(popup_8c9696875e2f40e1ac9db191cf9e371b)
+        ;
+
+        
+    
+    
+            var marker_f4ee26ae717a4e10a6f30362b7c4295c = L.marker(
+                [10.333333, -84.033333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_6b8d28458e894870ac24c023689f65e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b86bb89b4b24ed1a7b63b212f4c8ab3 = $(`<div id="html_9b86bb89b4b24ed1a7b63b212f4c8ab3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 15 km SW of Horquetas, W of Rara Avis. Between Rio Guacimo & Rio Peje.     - T. Villalobos <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-04-26 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6b8d28458e894870ac24c023689f65e7.setContent(html_9b86bb89b4b24ed1a7b63b212f4c8ab3);
+        
+
+        marker_f4ee26ae717a4e10a6f30362b7c4295c.bindPopup(popup_6b8d28458e894870ac24c023689f65e7)
+        ;
+
+        
+    
+    
+            var marker_5e0465bf1a0b4d6791567695f8b736ff = L.marker(
+                [11.033333, -85.408334],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_cfbbe340cd43492b9a9e8f7cbd9408c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fbf06797af84dad91513083b281740a = $(`<div id="html_7fbf06797af84dad91513083b281740a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Pitilla. Sendero El Mismo, Finca La Pasmompa. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1990-12-09 00:00:00+00:00 <strong>Recolectores:</strong> Petrona Ríos Castro <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_cfbbe340cd43492b9a9e8f7cbd9408c0.setContent(html_7fbf06797af84dad91513083b281740a);
+        
+
+        marker_5e0465bf1a0b4d6791567695f8b736ff.bindPopup(popup_cfbbe340cd43492b9a9e8f7cbd9408c0)
+        ;
+
+        
+    
+    
+            var marker_e3e2f9e88d07447a8dfc946f179f6f38 = L.marker(
+                [10.883333, -84.486111],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_4aa2369775d84c80964a662eacb3a2e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9679f5131c5a419aa0afad7491dd71de = $(`<div id="html_9679f5131c5a419aa0afad7491dd71de" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Concho de Poco Sol. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_4aa2369775d84c80964a662eacb3a2e3.setContent(html_9679f5131c5a419aa0afad7491dd71de);
+        
+
+        marker_e3e2f9e88d07447a8dfc946f179f6f38.bindPopup(popup_4aa2369775d84c80964a662eacb3a2e3)
+        ;
+
+        
+    
+    
+            var marker_31f6300c28764b71b88b1509d72980a7 = L.marker(
+                [10.216667, -83.916667],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_2c75892e97d44aa4983a9f004bc6d9ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_671fdf3e3ce84d0b80a740c75faea955 = $(`<div id="html_671fdf3e3ce84d0b80a740c75faea955" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In forest on slopes along small stream ca. 2 km E of lower park Station, Braulio Carrillo; Finca Gonzalez; San Jose-Guapiles Highway. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1988-04-16 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_2c75892e97d44aa4983a9f004bc6d9ff.setContent(html_671fdf3e3ce84d0b80a740c75faea955);
+        
+
+        marker_31f6300c28764b71b88b1509d72980a7.bindPopup(popup_2c75892e97d44aa4983a9f004bc6d9ff)
+        ;
+
+        
+    
+    
+            var marker_d739f3f6f54641ef9165ad42df571f1b = L.marker(
+                [10.990556, -85.427779],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_a49a27245de8455bb2983a65c897ce66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd1175367d1643e09cd41c3a29308eb4 = $(`<div id="html_dd1175367d1643e09cd41c3a29308eb4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Pitilla. Bosque primario y secundario en las margenes del camino. <strong>Elevación:</strong> 750.0 m  <strong>Fecha:</strong> 1993-03-17 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a49a27245de8455bb2983a65c897ce66.setContent(html_dd1175367d1643e09cd41c3a29308eb4);
+        
+
+        marker_d739f3f6f54641ef9165ad42df571f1b.bindPopup(popup_a49a27245de8455bb2983a65c897ce66)
+        ;
+
+        
+    
+    
+            var marker_4a8ffb27bbc74ab6a37c87a2446990aa = L.marker(
+                [10.332778, -84.078889],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_b8a235213eb04e5182b9926c4eee8a4a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a1c9886736c4439aa3c53bbc597f423 = $(`<div id="html_0a1c9886736c4439aa3c53bbc597f423" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Puesto El Ceibo. Gently sloping area just above the steep rim of the Rio Peje gorge on the west side. Along side path that goes from guard house to water   -- <strong>Elevación:</strong> 520.0 m  <strong>Fecha:</strong> 1992-12-09 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b8a235213eb04e5182b9926c4eee8a4a.setContent(html_0a1c9886736c4439aa3c53bbc597f423);
+        
+
+        marker_4a8ffb27bbc74ab6a37c87a2446990aa.bindPopup(popup_b8a235213eb04e5182b9926c4eee8a4a)
+        ;
+
+        
+    
+    
+            var marker_fa4ac7c376c640c3b47cfe473a6193a7 = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_b01c340a0af54bde81e07fa17fd91dde = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ebae77cae5a4cb38225664c6e3ea14a = $(`<div id="html_6ebae77cae5a4cb38225664c6e3ea14a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2005-04-05 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Jose Luis Chaves ; Israel Mena <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b01c340a0af54bde81e07fa17fd91dde.setContent(html_6ebae77cae5a4cb38225664c6e3ea14a);
+        
+
+        marker_fa4ac7c376c640c3b47cfe473a6193a7.bindPopup(popup_b01c340a0af54bde81e07fa17fd91dde)
+        ;
+
+        
+    
+    
+            var marker_74e64759fd9f4ea6bf9ff2b3a65eb474 = L.marker(
+                [10.901778, -85.274917],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_0097ad0082d14c9c8e1f8605b3146fe3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05f0b255f25a4d4f8c168dcb100bd183 = $(`<div id="html_05f0b255f25a4d4f8c168dcb100bd183" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Aguas Claras. Área de Conservación Guanacaste, Sector Estación Caribe, 2 km después del río Francia. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 2012-03-27 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_0097ad0082d14c9c8e1f8605b3146fe3.setContent(html_05f0b255f25a4d4f8c168dcb100bd183);
+        
+
+        marker_74e64759fd9f4ea6bf9ff2b3a65eb474.bindPopup(popup_0097ad0082d14c9c8e1f8605b3146fe3)
+        ;
+
+        
+    
+    
+            var marker_9c54d867b2724a47b9255a73792bd922 = L.marker(
+                [10.901778, -85.274917],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_fb3f077081ca479daf43a9f2b2cf696e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d32e6dfecc24d43b8ddb99a986964a6 = $(`<div id="html_6d32e6dfecc24d43b8ddb99a986964a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Aguas Claras. Área de Conservación Guanacaste, Sector Estación Caribe, 2 km después del río Francia. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 2012-03-27 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_fb3f077081ca479daf43a9f2b2cf696e.setContent(html_6d32e6dfecc24d43b8ddb99a986964a6);
+        
+
+        marker_9c54d867b2724a47b9255a73792bd922.bindPopup(popup_fb3f077081ca479daf43a9f2b2cf696e)
+        ;
+
+        
+    
+    
+            var marker_bbc7c423dfdc4a56a82c6500983851fb = L.marker(
+                [10.901778, -85.274917],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_e8e158793cff48789cc51004419dbf65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91544ce425d3413d9245687b48c0b91e = $(`<div id="html_91544ce425d3413d9245687b48c0b91e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Aguas Claras. Área de Conservación Guanacaste, Sector Estación Caribe, 2 km después del río Francia. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 2012-03-27 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e8e158793cff48789cc51004419dbf65.setContent(html_91544ce425d3413d9245687b48c0b91e);
+        
+
+        marker_bbc7c423dfdc4a56a82c6500983851fb.bindPopup(popup_e8e158793cff48789cc51004419dbf65)
+        ;
+
+        
+    
+    
+            var marker_910ac6d9678a45588c7c474a859dbf80 = L.marker(
+                [10.901778, -85.274917],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_101cf832924d4c609e3b758b93a3a98a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af36308f65504f58abf05c5bb73cc3f5 = $(`<div id="html_af36308f65504f58abf05c5bb73cc3f5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Aguas Claras. Área de Conservación Guanacaste, Sector Estación Caribe, 2 km después del río Francia. <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 2012-03-27 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_101cf832924d4c609e3b758b93a3a98a.setContent(html_af36308f65504f58abf05c5bb73cc3f5);
+        
+
+        marker_910ac6d9678a45588c7c474a859dbf80.bindPopup(popup_101cf832924d4c609e3b758b93a3a98a)
+        ;
+
+        
+    
+    
+            var marker_fd0f38c5327f44baa734782af824fe17 = L.marker(
+                [10.846945, -85.326672],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_321a0db058b74c4093e195416c3cd923 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c40f8066272445391bcd2638b1cff91 = $(`<div id="html_8c40f8066272445391bcd2638b1cff91" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja, Upala, Send. Crater. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2014-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; M. Pengfei ; Roberto Espinoza ; Enia Navarro ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_321a0db058b74c4093e195416c3cd923.setContent(html_8c40f8066272445391bcd2638b1cff91);
+        
+
+        marker_fd0f38c5327f44baa734782af824fe17.bindPopup(popup_321a0db058b74c4093e195416c3cd923)
+        ;
+
+        
+    
+    
+            var marker_f96f581e247344aabe130ac9188994e2 = L.marker(
+                [10.846945, -85.326672],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_5ef338d036424d90910c73fe11c6d8c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_721f403f8d5b415c8f7ebdc2cb634697 = $(`<div id="html_721f403f8d5b415c8f7ebdc2cb634697" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja, Upala, Send. Crater. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2014-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; M. Pengfei ; Roberto Espinoza ; Enia Navarro ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_5ef338d036424d90910c73fe11c6d8c3.setContent(html_721f403f8d5b415c8f7ebdc2cb634697);
+        
+
+        marker_f96f581e247344aabe130ac9188994e2.bindPopup(popup_5ef338d036424d90910c73fe11c6d8c3)
+        ;
+
+        
+    
+    
+            var marker_7166a395df8143fabb5ea584a3c9d8db = L.marker(
+                [10.846945, -85.326672],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_02a27665ccbc46e3895dd73bf91ab15e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c87150f8e4744b978d6d5b0a40d310c9 = $(`<div id="html_c87150f8e4744b978d6d5b0a40d310c9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. Rincón de la Vieja, Upala, Send. Crater. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 2014-08-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Jie Cai ; Yu Min Shui ; M. Pengfei ; Roberto Espinoza ; Enia Navarro ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_02a27665ccbc46e3895dd73bf91ab15e.setContent(html_c87150f8e4744b978d6d5b0a40d310c9);
+        
+
+        marker_7166a395df8143fabb5ea584a3c9d8db.bindPopup(popup_02a27665ccbc46e3895dd73bf91ab15e)
+        ;
+
+        
+    
+    
+            var marker_735a1752858045318e360faabde8a4ed = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_64bae76160ad4604a73e2954df3de65a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ffd8e9bb27f4cb8b87a111c90fcb49b = $(`<div id="html_9ffd8e9bb27f4cb8b87a111c90fcb49b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2014-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jorge Hernández ; Alejandro Azofeifa Zúñiga ; Carlos Viquez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_64bae76160ad4604a73e2954df3de65a.setContent(html_9ffd8e9bb27f4cb8b87a111c90fcb49b);
+        
+
+        marker_735a1752858045318e360faabde8a4ed.bindPopup(popup_64bae76160ad4604a73e2954df3de65a)
+        ;
+
+        
+    
+    
+            var marker_b84ba58c8fe547868b270cee257174f0 = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_a131a6ca3b7e463ba34c41546c1e4be5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68f17974753a4034b2975b8ef1b90b76 = $(`<div id="html_68f17974753a4034b2975b8ef1b90b76" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2014-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jorge Hernández ; Alejandro Azofeifa Zúñiga ; Carlos Viquez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_a131a6ca3b7e463ba34c41546c1e4be5.setContent(html_68f17974753a4034b2975b8ef1b90b76);
+        
+
+        marker_b84ba58c8fe547868b270cee257174f0.bindPopup(popup_a131a6ca3b7e463ba34c41546c1e4be5)
+        ;
+
+        
+    
+    
+            var marker_e24829ca84c54f49a8ec01c2138b488a = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_d742e3618c694e588b07eeb7b237c45c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8cce9a4aab2418c8f266ed9171d058b = $(`<div id="html_b8cce9a4aab2418c8f266ed9171d058b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2014-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Jorge Hernández ; Alejandro Azofeifa Zúñiga ; Carlos Viquez <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_d742e3618c694e588b07eeb7b237c45c.setContent(html_b8cce9a4aab2418c8f266ed9171d058b);
+        
+
+        marker_e24829ca84c54f49a8ec01c2138b488a.bindPopup(popup_d742e3618c694e588b07eeb7b237c45c)
+        ;
+
+        
+    
+    
+            var marker_8e45d8d225c9482da07a3f056810a9ea = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_6497c540f45f4a6e8566ab00d9d663f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ab31ecbc7644c97a98539635b2dc936 = $(`<div id="html_7ab31ecbc7644c97a98539635b2dc936" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2015-09-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6497c540f45f4a6e8566ab00d9d663f9.setContent(html_7ab31ecbc7644c97a98539635b2dc936);
+        
+
+        marker_8e45d8d225c9482da07a3f056810a9ea.bindPopup(popup_6497c540f45f4a6e8566ab00d9d663f9)
+        ;
+
+        
+    
+    
+            var marker_d58e353ca93e41bdb4fd888aa7ae0e24 = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_bdfcf34a025549758b93d2863f876173 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ebb1327444a4346aff5ed386668ff75 = $(`<div id="html_0ebb1327444a4346aff5ed386668ff75" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2015-09-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_bdfcf34a025549758b93d2863f876173.setContent(html_0ebb1327444a4346aff5ed386668ff75);
+        
+
+        marker_d58e353ca93e41bdb4fd888aa7ae0e24.bindPopup(popup_bdfcf34a025549758b93d2863f876173)
+        ;
+
+        
+    
+    
+            var marker_0eda5405fea14e4a88c02b7aff4e64d6 = L.marker(
+                [10.965833, -85.321333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_70fd41b4714543539abd91c6c9884f4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cb75891817f46c79cffbfd8f8e97209 = $(`<div id="html_0cb75891817f46c79cffbfd8f8e97209" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela, Upala, Dos Ríos, La Jabalina. Área de Conservación Guanacaste, Sector Rincon Rain Forest, Estación Wege. <strong>Elevación:</strong> 415.0 m  <strong>Fecha:</strong> 2015-09-12 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_70fd41b4714543539abd91c6c9884f4d.setContent(html_0cb75891817f46c79cffbfd8f8e97209);
+        
+
+        marker_0eda5405fea14e4a88c02b7aff4e64d6.bindPopup(popup_70fd41b4714543539abd91c6c9884f4d)
+        ;
+
+        
+    
+    
+            var marker_b85a9b2801784195b5494ce727650839 = L.marker(
+                [10.943222, -85.317639],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_b23aef5a94f34ba78f656ed56ed53af6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0385e1885d184074a58cff207a6240fa = $(`<div id="html_0385e1885d184074a58cff207a6240fa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela. Upala, Dos Ríos, San Luis. Área de Conservación Guanacaste. Estación Leiva. <strong>Elevación:</strong> 452.0 m  <strong>Fecha:</strong> 2015-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b23aef5a94f34ba78f656ed56ed53af6.setContent(html_0385e1885d184074a58cff207a6240fa);
+        
+
+        marker_b85a9b2801784195b5494ce727650839.bindPopup(popup_b23aef5a94f34ba78f656ed56ed53af6)
+        ;
+
+        
+    
+    
+            var marker_024522e4f19b4dd8a7bd665d662b8781 = L.marker(
+                [10.943222, -85.317639],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_cbd4faf729d642559f1e4b297b57f2d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_839cfb1f888548deb428996c54a30ee3 = $(`<div id="html_839cfb1f888548deb428996c54a30ee3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela. Upala, Dos Ríos, San Luis. Área de Conservación Guanacaste. Estación Leiva. <strong>Elevación:</strong> 452.0 m  <strong>Fecha:</strong> 2015-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_cbd4faf729d642559f1e4b297b57f2d4.setContent(html_839cfb1f888548deb428996c54a30ee3);
+        
+
+        marker_024522e4f19b4dd8a7bd665d662b8781.bindPopup(popup_cbd4faf729d642559f1e4b297b57f2d4)
+        ;
+
+        
+    
+    
+            var marker_4bdc530353c840948ad1f74d4d3b0382 = L.marker(
+                [10.943222, -85.317639],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_332c92fdd7504a5aa27693d59bffc852 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e88918492a9949a5989a422889363d53 = $(`<div id="html_e88918492a9949a5989a422889363d53" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Alajuela. Upala, Dos Ríos, San Luis. Área de Conservación Guanacaste. Estación Leiva. <strong>Elevación:</strong> 452.0 m  <strong>Fecha:</strong> 2015-09-17 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Roberto Espinoza ; Enia Navarro ; Braulio Hernández ; Jorge Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_332c92fdd7504a5aa27693d59bffc852.setContent(html_e88918492a9949a5989a422889363d53);
+        
+
+        marker_4bdc530353c840948ad1f74d4d3b0382.bindPopup(popup_332c92fdd7504a5aa27693d59bffc852)
+        ;
+
+        
+    
+    
+            var marker_e13ea2c283064fa7a74f39c8c8e6ff7f = L.marker(
+                [11.041667, -84.466667],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_07f204afa6b2416789c35f1d9b545104 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_583990f9034344ab87dc35ead7cb8a87 = $(`<div id="html_583990f9034344ab87dc35ead7cb8a87" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Boca de Sábalo; bosque siempreverde <strong>Elevación:</strong> 85.0 m  <strong>Fecha:</strong> 1987-03-14 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_07f204afa6b2416789c35f1d9b545104.setContent(html_583990f9034344ab87dc35ead7cb8a87);
+        
+
+        marker_e13ea2c283064fa7a74f39c8c8e6ff7f.bindPopup(popup_07f204afa6b2416789c35f1d9b545104)
+        ;
+
+        
+    
+    
+            var marker_d2ead5c791724a02be7b5e144b6f9f5d = L.marker(
+                [10.21, -83.91],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_d76329c23421412ab141f4f9c51ca88e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd467fb4bc9c490384c5231855a7a6c6 = $(`<div id="html_fd467fb4bc9c490384c5231855a7a6c6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nac. Barulio Carrillo In forest on slopes along small stream ca. 2 km E of lower park Station, Braulio Carrillo; Finca González; San José-Guapiles Highway. <strong>Elevación:</strong> 500.0 m  <strong>Fecha:</strong> 1988-04-16 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Rafael Robles|María Marta Chavarría|P. Chavarría <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_d76329c23421412ab141f4f9c51ca88e.setContent(html_fd467fb4bc9c490384c5231855a7a6c6);
+        
+
+        marker_d2ead5c791724a02be7b5e144b6f9f5d.bindPopup(popup_d76329c23421412ab141f4f9c51ca88e)
+        ;
+
+        
+    
+    
+            var marker_1ed65f38f60e431a819460f4f3d323bd = L.marker(
+                [10.33, -84.03],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_da9ebd76c7704d899290784e6811ccf2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_647ff7d837ba4cf2a6b48654c549d5a2 = $(`<div id="html_647ff7d837ba4cf2a6b48654c549d5a2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nac. Braulio Carrillo 15 km SW of Horquetas, W of Rara Avis. Between Río Guácimo & Río Peje. * T. Villalobos <strong>Elevación:</strong> 600.0 m  <strong>Fecha:</strong> 1989-04-26 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Isidro A. Chacón G.|Carlos Gómez|Orlando Vargas <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_da9ebd76c7704d899290784e6811ccf2.setContent(html_647ff7d837ba4cf2a6b48654c549d5a2);
+        
+
+        marker_1ed65f38f60e431a819460f4f3d323bd.bindPopup(popup_da9ebd76c7704d899290784e6811ccf2)
+        ;
+
+        
+    
+    
+            var marker_302a477622534b36af1b14c6fa9e2308 = L.marker(
+                [11.03, -85.42],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_9e4ab9fc0ecb4b49888e02c59d6c51c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9617596baf774290b2421947190f8489 = $(`<div id="html_9617596baf774290b2421947190f8489" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste Estación Pitilla; 5 km N de la Estación al lado del camino en remanente de bosque primario; La Pasmompa. * J. Kallunki <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1989-06-15 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|María Marta Chavarría|Quírico Jiménez <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_9e4ab9fc0ecb4b49888e02c59d6c51c1.setContent(html_9617596baf774290b2421947190f8489);
+        
+
+        marker_302a477622534b36af1b14c6fa9e2308.bindPopup(popup_9e4ab9fc0ecb4b49888e02c59d6c51c1)
+        ;
+
+        
+    
+    
+            var marker_5a531307f84040fe9522f26aa06ea1b8 = L.marker(
+                [10.88, -84.48],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_0f03683853234c5ca1a02fa2f2598e11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fdcf5ea6818439e8b5e75d11bf3397c = $(`<div id="html_8fdcf5ea6818439e8b5e75d11bf3397c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos, El Concho de Poco Sol <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-07 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora|Luis J. Poveda Álvarez <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_0f03683853234c5ca1a02fa2f2598e11.setContent(html_8fdcf5ea6818439e8b5e75d11bf3397c);
+        
+
+        marker_5a531307f84040fe9522f26aa06ea1b8.bindPopup(popup_0f03683853234c5ca1a02fa2f2598e11)
+        ;
+
+        
+    
+    
+            var marker_2c178217532d45af98339c64265342d8 = L.marker(
+                [10.966660000000001, -84.33333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_a669c24ac55d43a2bac00bd9797405e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3eae9c074b949ad9db10085ff085fb7 = $(`<div id="html_f3eae9c074b949ad9db10085ff085fb7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de El Castillo, Refugio Bartola. <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 2005-02-15 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|L.D. Paguaga|H. Mendoza|Nelson Zamora|Daniel Solano <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a669c24ac55d43a2bac00bd9797405e2.setContent(html_f3eae9c074b949ad9db10085ff085fb7);
+        
+
+        marker_2c178217532d45af98339c64265342d8.bindPopup(popup_a669c24ac55d43a2bac00bd9797405e2)
+        ;
+
+        
+    
+    
+            var marker_5cb62beb4c8a4db2a49f52dbe8debf11 = L.marker(
+                [10.332778, -84.078889],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_2fc0bfab370c4cb2a777b417e9531a06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2032d01fcfc464eafdc2cf352e017ee = $(`<div id="html_a2032d01fcfc464eafdc2cf352e017ee" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo, Puesto El Ceibo, gently sloping area just above the steep rim of the Río Peje gorge on the west side, along side path that goes from guard house to water supply intake, about 15 minutes uphill. <strong>Elevación:</strong> 520.0 m  <strong>Fecha:</strong> 1992-12-09 00:00:00+00:00 <strong>Recolectores:</strong> Brad Boyle <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_2fc0bfab370c4cb2a777b417e9531a06.setContent(html_a2032d01fcfc464eafdc2cf352e017ee);
+        
+
+        marker_5cb62beb4c8a4db2a49f52dbe8debf11.bindPopup(popup_2fc0bfab370c4cb2a777b417e9531a06)
+        ;
+
+        
+    
+    
+            var marker_3d928bd0579449f1b233261441da751e = L.marker(
+                [11.033333, -85.408333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_346e402a15894e10bf7fa59d7bbf1f7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ab53cd0704a488bb46a01e8883c2e5a = $(`<div id="html_1ab53cd0704a488bb46a01e8883c2e5a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Guanacaste, Estación Pitilla, Sendero Evangelista <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1990-12-09 00:00:00+00:00 <strong>Recolectores:</strong> Petrona Ríos Castro <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_346e402a15894e10bf7fa59d7bbf1f7a.setContent(html_1ab53cd0704a488bb46a01e8883c2e5a);
+        
+
+        marker_3d928bd0579449f1b233261441da751e.bindPopup(popup_346e402a15894e10bf7fa59d7bbf1f7a)
+        ;
+
+        
+    
+    
+            var marker_bd5c6b600d144d96a3c1497874eac7c3 = L.marker(
+                [10.902000000000001, -85.303],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_d0380a45f89f4f8499dbdefc01f5362a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b4a8b1f7da34ff0bc74bfbd1e3a5cc5 = $(`<div id="html_9b4a8b1f7da34ff0bc74bfbd1e3a5cc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Rincon Rain Forest, Estacion Caribe <strong>Elevación:</strong> 372.0 m  <strong>Fecha:</strong> 2012-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Jorge Hernandez <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_d0380a45f89f4f8499dbdefc01f5362a.setContent(html_9b4a8b1f7da34ff0bc74bfbd1e3a5cc5);
+        
+
+        marker_bd5c6b600d144d96a3c1497874eac7c3.bindPopup(popup_d0380a45f89f4f8499dbdefc01f5362a)
+        ;
+
+        
+    
+    
+            var marker_a08d1393eac84b18b25c7de1b50aa903 = L.marker(
+                [10.902000000000001, -85.303],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_1bceb0a3a73342c39c19295bcb9439bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a228fbb93766431c9a38a6ecc6c1b227 = $(`<div id="html_a228fbb93766431c9a38a6ecc6c1b227" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Rincon Rain Forest, Estacion Caribe <strong>Elevación:</strong> 372.0 m  <strong>Fecha:</strong> 2012-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Jorge Hernandez <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_1bceb0a3a73342c39c19295bcb9439bf.setContent(html_a228fbb93766431c9a38a6ecc6c1b227);
+        
+
+        marker_a08d1393eac84b18b25c7de1b50aa903.bindPopup(popup_1bceb0a3a73342c39c19295bcb9439bf)
+        ;
+
+        
+    
+    
+            var marker_c983a6c1955a4ce58ffeab27dc0621f5 = L.marker(
+                [10.902000000000001, -85.303],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_6f809b21e1ff48229d39878b2e606295 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5955a87858c42b18daf5f57a2373fa5 = $(`<div id="html_a5955a87858c42b18daf5f57a2373fa5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Area de Conservacion Guanacaste, Sector Rincon Rain Forest, Estacion Caribe <strong>Elevación:</strong> 372.0 m  <strong>Fecha:</strong> 2012-04-20 00:00:00+00:00 <strong>Recolectores:</strong> Jorge Hernandez <strong>Identificadores:</strong> Daniel H. Janzen</div>`)[0];
+            popup_6f809b21e1ff48229d39878b2e606295.setContent(html_a5955a87858c42b18daf5f57a2373fa5);
+        
+
+        marker_c983a6c1955a4ce58ffeab27dc0621f5.bindPopup(popup_6f809b21e1ff48229d39878b2e606295)
+        ;
+
+        
+    
+    
+            var marker_9b8ff14d7fb446148db1d858c037be82 = L.marker(
+                [10.336111, -84.1],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_8ec047c07bd24ff6b806b2175d423977 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b774a4e20154e458cf3e77a801ae61d = $(`<div id="html_3b774a4e20154e458cf3e77a801ae61d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Braulio Carrillo, entre Estación El Ceibo y San Ramón de La Virgen de Sarapiquí <strong>Elevación:</strong> 400.0 m  <strong>Fecha:</strong> 1989-10-28 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar|Barry E. Hammel <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_8ec047c07bd24ff6b806b2175d423977.setContent(html_3b774a4e20154e458cf3e77a801ae61d);
+        
+
+        marker_9b8ff14d7fb446148db1d858c037be82.bindPopup(popup_8ec047c07bd24ff6b806b2175d423977)
+        ;
+
+        
+    
+    
+            var marker_d309b57d4dde44caa9abc34ff4e40c49 = L.marker(
+                [11.133333, -84.31666700000001],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_82dd4a13d9224581a7acf797ac28c518 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e7ba583dfbf4f4786c009b19320f0b9 = $(`<div id="html_4e7ba583dfbf4f4786c009b19320f0b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Filos, near Loma Los Filos, Río Santa Cruz; primary lowland moist forest on clay soils <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1991-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Jan Salick <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_82dd4a13d9224581a7acf797ac28c518.setContent(html_4e7ba583dfbf4f4786c009b19320f0b9);
+        
+
+        marker_d309b57d4dde44caa9abc34ff4e40c49.bindPopup(popup_82dd4a13d9224581a7acf797ac28c518)
+        ;
+
+        
+    
+    
+            var marker_fc09300687494bdfbd2eacdb2c5bb545 = L.marker(
+                [10.4, -84.05],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_28965fa06cac4466b1fd5a6dda37ab33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a00027316764891a76ed3ae98672524 = $(`<div id="html_9a00027316764891a76ed3ae98672524" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Magsasay, lowland wet forest, near La  Selva. Transect 3. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1990-07-16 00:00:00+00:00 <strong>Recolectores:</strong> Alwyn H. Gentry|Barry E. Hammel|Lindsay Woodruff <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_28965fa06cac4466b1fd5a6dda37ab33.setContent(html_9a00027316764891a76ed3ae98672524);
+        
+
+        marker_fc09300687494bdfbd2eacdb2c5bb545.bindPopup(popup_28965fa06cac4466b1fd5a6dda37ab33)
+        ;
+
+        
+    
+    
+            var marker_e02d3e4f3e334a74be1a5458ca8f58f9 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_24f43d08e91a4d019ea9283b4b203d5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6919a8236404de696381906c02e7b9a = $(`<div id="html_b6919a8236404de696381906c02e7b9a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1981-06-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Jill Trainer <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_24f43d08e91a4d019ea9283b4b203d5f.setContent(html_b6919a8236404de696381906c02e7b9a);
+        
+
+        marker_e02d3e4f3e334a74be1a5458ca8f58f9.bindPopup(popup_24f43d08e91a4d019ea9283b4b203d5f)
+        ;
+
+        
+    
+    
+            var marker_d2071993ce9d4d19a89c62252af94cb1 = L.marker(
+                [10.43138, -84.00361],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_a567c515833a4a9c84c4ac0bcafe5cb7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0988e705c32940099746c6ee4c4b98b5 = $(`<div id="html_0988e705c32940099746c6ee4c4b98b5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Selva, the OTS field station on the Río Puerto Viejo just E of its junction with the Río Sarapiquí. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1980-10-09 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_a567c515833a4a9c84c4ac0bcafe5cb7.setContent(html_0988e705c32940099746c6ee4c4b98b5);
+        
+
+        marker_d2071993ce9d4d19a89c62252af94cb1.bindPopup(popup_a567c515833a4a9c84c4ac0bcafe5cb7)
+        ;
+
+        
+    
+    
+            var marker_2a4a888b87d4404a8063446c7d287602 = L.marker(
+                [10.8, -84.783333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_daf3c3607b2d4a8e828f30eb78a8fd8f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94937a98d97e4533bcbc82ece2ab7e03 = $(`<div id="html_94937a98d97e4533bcbc82ece2ab7e03" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de San Carlos. El Concho de Poco Sol. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Zamora V., Nelson; Poveda A., Luis J., <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_daf3c3607b2d4a8e828f30eb78a8fd8f.setContent(html_94937a98d97e4533bcbc82ece2ab7e03);
+        
+
+        marker_2a4a888b87d4404a8063446c7d287602.bindPopup(popup_daf3c3607b2d4a8e828f30eb78a8fd8f)
+        ;
+
+        
+    
+    
+            var marker_ad764e5e9fb34200b22960a55f9481dc = L.marker(
+                [10.8, -84.783333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_8c0ecfd9ea534e888e6f1da76ebaf465 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45bd7d6a8a4541a7b3373600566947f8 = $(`<div id="html_45bd7d6a8a4541a7b3373600566947f8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de San Carlos. El Concho de Poco Sol. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Zamora V., Nelson; Poveda A., Luis J., <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_8c0ecfd9ea534e888e6f1da76ebaf465.setContent(html_45bd7d6a8a4541a7b3373600566947f8);
+        
+
+        marker_ad764e5e9fb34200b22960a55f9481dc.bindPopup(popup_8c0ecfd9ea534e888e6f1da76ebaf465)
+        ;
+
+        
+    
+    
+            var marker_b41b8826f979452194c9383745a4a551 = L.marker(
+                [10.8, -84.783333],
+                {}
+            ).addTo(marker_cluster_0dfbd6d6e826462f932038b77a9393c7);
+        
+    
+        var popup_51484637c89f4ed2be859c7fdcceb2eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ba91f3272f347f4a87c39cb2ac0c156 = $(`<div id="html_4ba91f3272f347f4a87c39cb2ac0c156" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de San Carlos. El Concho de Poco Sol. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1989-06-01 00:00:00+00:00 <strong>Recolectores:</strong> Zamora V., Nelson; Poveda A., Luis J., <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_51484637c89f4ed2be859c7fdcceb2eb.setContent(html_4ba91f3272f347f4a87c39cb2ac0c156);
+        
+
+        marker_b41b8826f979452194c9383745a4a551.bindPopup(popup_51484637c89f4ed2be859c7fdcceb2eb)
+        ;
+
+        
+    
+    
+            var layer_control_277d694600a2475aa5c90a721f8f8978 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f4ad50183d5e4cbab26d21d1e6c9e2ec,
+                    "ESRI World Imagery" : tile_layer_15f17906689e4c9cb822e3a702c1855e,
+                },
+                overlays :  {
+                    "macro_element_0dfbd6d6e826462f932038b77a9393c7" : marker_cluster_0dfbd6d6e826462f932038b77a9393c7,
+                },
+            };
+            L.control.layers(
+                layer_control_277d694600a2475aa5c90a721f8f8978.base_layers,
+                layer_control_277d694600a2475aa5c90a721f8f8978.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_7083331c231c4f9d9e1ff5d7a83f8fbe);
+            tile_layer_15f17906689e4c9cb822e3a702c1855e.remove();
+        
+</script>

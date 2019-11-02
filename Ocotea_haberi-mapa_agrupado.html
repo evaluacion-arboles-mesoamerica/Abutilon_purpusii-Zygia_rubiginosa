@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e0ff9a7cb1534dbb90639efa416b4ae2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e0ff9a7cb1534dbb90639efa416b4ae2" ></div>
+        
+</body>
+<script>    
+    
+            var map_e0ff9a7cb1534dbb90639efa416b4ae2 = L.map(
+                "map_e0ff9a7cb1534dbb90639efa416b4ae2",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e0ff9a7cb1534dbb90639efa416b4ae2);
+
+            
+
+        
+    
+            var tile_layer_58cfb41c8d6d44ecbfa7e6fd3a3bc016 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e0ff9a7cb1534dbb90639efa416b4ae2);
+        
+    
+            var tile_layer_e2b68e40aeab45a8976fb17239e70183 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e0ff9a7cb1534dbb90639efa416b4ae2);
+        
+    
+            var marker_cluster_57c979f6809d47bd8ac86ad810497546 = L.markerClusterGroup(
+                {}
+            );
+            map_e0ff9a7cb1534dbb90639efa416b4ae2.addLayer(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+            var marker_562871a9a3b94550bd84b60148e943ec = L.marker(
+                [8.79, -82.96],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_533ee71987754985bdedb96e0691d10c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8caacbb6a0704aa2b7fa6c73960d1d37 = $(`<div id="html_8caacbb6a0704aa2b7fa6c73960d1d37" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Cruces. Jardín Botánico Wilson. OET. Sendero este a Río Java. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Vargas, Gustavo <strong>Identificadores:</strong> Lobo, Silvia</div>`)[0];
+            popup_533ee71987754985bdedb96e0691d10c.setContent(html_8caacbb6a0704aa2b7fa6c73960d1d37);
+        
+
+        marker_562871a9a3b94550bd84b60148e943ec.bindPopup(popup_533ee71987754985bdedb96e0691d10c)
+        ;
+
+        
+    
+    
+            var marker_cc14ca2e5c9c4e54a2e13f6508cc0e6d = L.marker(
+                [10.35, -84.66],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_0bd43ede9a574ec8b960cf658bd2e7b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_515acd7c8ede4866bc31528258f37e5c = $(`<div id="html_515acd7c8ede4866bc31528258f37e5c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.B. Bosque Eterno De Los Niños Atlantic slope, Río Peñas Blancas valley Laguna Poco Sol. <strong>Elevación:</strong> 840.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> Haber, William <strong>Identificadores:</strong> Lobo, Silvia</div>`)[0];
+            popup_0bd43ede9a574ec8b960cf658bd2e7b3.setContent(html_515acd7c8ede4866bc31528258f37e5c);
+        
+
+        marker_cc14ca2e5c9c4e54a2e13f6508cc0e6d.bindPopup(popup_0bd43ede9a574ec8b960cf658bd2e7b3)
+        ;
+
+        
+    
+    
+            var marker_a752e851e0b1462699ead46ba718319d = L.marker(
+                [10.333333, -84.81666700000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_ab16197e54524e7581aafbab1c7f965e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bff6f03f9463475bad72dd70ba4febfd = $(`<div id="html_bff6f03f9463475bad72dd70ba4febfd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 4-5 km NW Monteverde, at and just below Continental Divide, 2-4 km West of Santa Elena between road to Canitas and upper road to Las Nubes. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 1992-04-11 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_ab16197e54524e7581aafbab1c7f965e.setContent(html_bff6f03f9463475bad72dd70ba4febfd);
+        
+
+        marker_a752e851e0b1462699ead46ba718319d.bindPopup(popup_ab16197e54524e7581aafbab1c7f965e)
+        ;
+
+        
+    
+    
+            var marker_9249c13ebec04b9c96111f6000c94604 = L.marker(
+                [10.383333, -84.7],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_16300dce3dfe4e3fa67b09aa3b64313a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cea70e1e48e40a29cba6d4ce2b53576 = $(`<div id="html_2cea70e1e48e40a29cba6d4ce2b53576" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Penas Blancas, Quebrada Gata, riachuelo de Fernando Villalobos. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-04-18 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_16300dce3dfe4e3fa67b09aa3b64313a.setContent(html_2cea70e1e48e40a29cba6d4ce2b53576);
+        
+
+        marker_9249c13ebec04b9c96111f6000c94604.bindPopup(popup_16300dce3dfe4e3fa67b09aa3b64313a)
+        ;
+
+        
+    
+    
+            var marker_f6b4234e46b9452284aa17e1756c9986 = L.marker(
+                [10.3, -84.750001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_d213627f09e143539657356d3f6442af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51b4ee7b4d6440f3b3a7d609655ea1df = $(`<div id="html_51b4ee7b4d6440f3b3a7d609655ea1df" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Aleman. Penas Blancas. Lado abajo del inicio del Sendero Zaino, ca. 400 m del camino. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1992-04-18 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Guindon <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_d213627f09e143539657356d3f6442af.setContent(html_51b4ee7b4d6440f3b3a7d609655ea1df);
+        
+
+        marker_f6b4234e46b9452284aa17e1756c9986.bindPopup(popup_d213627f09e143539657356d3f6442af)
+        ;
+
+        
+    
+    
+            var marker_f6b3bf8b78854266959523a12a11e555 = L.marker(
+                [10.333333, -84.833334],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_eb18c08f8cc94128b67f6479d8a5e79a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea94c30737684b04bbe5e00b0e6b95b0 = $(`<div id="html_ea94c30737684b04bbe5e00b0e6b95b0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> De Santa Elena hacia La Cruz, bosque de Jim Wolfe. Zona de Monteverde. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1992-01-10 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Guindon <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_eb18c08f8cc94128b67f6479d8a5e79a.setContent(html_ea94c30737684b04bbe5e00b0e6b95b0);
+        
+
+        marker_f6b3bf8b78854266959523a12a11e555.bindPopup(popup_eb18c08f8cc94128b67f6479d8a5e79a)
+        ;
+
+        
+    
+    
+            var marker_90a576d87a554e649d89569f02c4a935 = L.marker(
+                [10.3, -84.800007],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_f4ba7a3b5273449eb3a3677407349275 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f558934b1b8644e3bd91cb210bfd63a3 = $(`<div id="html_f558934b1b8644e3bd91cb210bfd63a3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rio Trail, Pacific slope. <strong>Elevación:</strong> 1520.0 m  <strong>Fecha:</strong> 1989-09-01 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_f4ba7a3b5273449eb3a3677407349275.setContent(html_f558934b1b8644e3bd91cb210bfd63a3);
+        
+
+        marker_90a576d87a554e649d89569f02c4a935.bindPopup(popup_f4ba7a3b5273449eb3a3677407349275)
+        ;
+
+        
+    
+    
+            var marker_b73afe2e3ed343b5be84ba884a8ec2cc = L.marker(
+                [10.766667, -85.31666700000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_3c82fc0768704facae4f42b1c948dc7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6872b8ff32df47688fc7906b09152d77 = $(`<div id="html_6872b8ff32df47688fc7906b09152d77" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Del Mirador siguiendo la Fila al Volcan Santa Maria. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1987-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> van der Werff, Henk</div>`)[0];
+            popup_3c82fc0768704facae4f42b1c948dc7f.setContent(html_6872b8ff32df47688fc7906b09152d77);
+        
+
+        marker_b73afe2e3ed343b5be84ba884a8ec2cc.bindPopup(popup_3c82fc0768704facae4f42b1c948dc7f)
+        ;
+
+        
+    
+    
+            var marker_b5fb45fbbd604b2e9d97587cc6dc7a46 = L.marker(
+                [10.880556, -85.401389],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_af0f2e4477e746388219243068547f98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f15cdff59b04fbc826cecee9bd3a68e = $(`<div id="html_4f15cdff59b04fbc826cecee9bd3a68e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion San Ramon. Dos Rios. Sendero La Tepescuintle. <strong>Elevación:</strong> 550.0 m  <strong>Fecha:</strong> 1993-04-21 00:00:00+00:00 <strong>Recolectores:</strong> Roberto Espinoza <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_af0f2e4477e746388219243068547f98.setContent(html_4f15cdff59b04fbc826cecee9bd3a68e);
+        
+
+        marker_b5fb45fbbd604b2e9d97587cc6dc7a46.bindPopup(popup_af0f2e4477e746388219243068547f98)
+        ;
+
+        
+    
+    
+            var marker_1948e5c72b82475091fbc8a5eceaacf6 = L.marker(
+                [10.35, -84.666667],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_9d74bf291fba4eedb267409837644ce4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7c3eb3a551c4a0da0ed2fb1dd084256 = $(`<div id="html_a7c3eb3a551c4a0da0ed2fb1dd084256" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Atlantic slope, Rio Penas Blancas valley Laguna Poco Sol. <strong>Elevación:</strong> 840.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> William Haber <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_9d74bf291fba4eedb267409837644ce4.setContent(html_a7c3eb3a551c4a0da0ed2fb1dd084256);
+        
+
+        marker_1948e5c72b82475091fbc8a5eceaacf6.bindPopup(popup_9d74bf291fba4eedb267409837644ce4)
+        ;
+
+        
+    
+    
+            var marker_343b32264efa46ea9760d1272d8d8531 = L.marker(
+                [10.366667, -84.8],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_fd75a60261df42d6988b871985efb7af = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d964a190a3b4a7b99d45696be38e93f = $(`<div id="html_4d964a190a3b4a7b99d45696be38e93f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde. San Gerardo Biological Station. Sendero Congo, 1 km W of Station. Semi-disturbed primary forest. Premontane rain forest. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1995-05-10 00:00:00+00:00 <strong>Recolectores:</strong> Darin Penneys <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_fd75a60261df42d6988b871985efb7af.setContent(html_4d964a190a3b4a7b99d45696be38e93f);
+        
+
+        marker_343b32264efa46ea9760d1272d8d8531.bindPopup(popup_fd75a60261df42d6988b871985efb7af)
+        ;
+
+        
+    
+    
+            var marker_1cdf4ae6f0624804887892424182410a = L.marker(
+                [9.438641, -83.545562],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_c62ee3db32484795bc800b69a205e1a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_625e2b3a3f144fce812bae62ab436d70 = $(`<div id="html_625e2b3a3f144fce812bae62ab436d70" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Río Talari <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 2000-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Mainor Elizondo ; William Chacón <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_c62ee3db32484795bc800b69a205e1a7.setContent(html_625e2b3a3f144fce812bae62ab436d70);
+        
+
+        marker_1cdf4ae6f0624804887892424182410a.bindPopup(popup_c62ee3db32484795bc800b69a205e1a7)
+        ;
+
+        
+    
+    
+            var marker_7567c6cb72f440fca21564fc0e6cf448 = L.marker(
+                [9.438641, -83.545562],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_8ac5c76ddd1740869d55a7feb7ddb930 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f30e99bf929d4976a5ed6daa25338598 = $(`<div id="html_f30e99bf929d4976a5ed6daa25338598" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Río Talari <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 2000-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Mainor Elizondo ; William Chacón <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_8ac5c76ddd1740869d55a7feb7ddb930.setContent(html_f30e99bf929d4976a5ed6daa25338598);
+        
+
+        marker_7567c6cb72f440fca21564fc0e6cf448.bindPopup(popup_8ac5c76ddd1740869d55a7feb7ddb930)
+        ;
+
+        
+    
+    
+            var marker_f84e27240081466caec5788806765926 = L.marker(
+                [9.438641, -83.545562],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_e59394cfcae447dfae1494d80fb29b69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc145e69461646e99506cef677f5d86c = $(`<div id="html_fc145e69461646e99506cef677f5d86c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Río Talari <strong>Elevación:</strong> 2400.0 m  <strong>Fecha:</strong> 2000-04-06 00:00:00+00:00 <strong>Recolectores:</strong> Evelio Alfaro; Mainor Elizondo ; William Chacón <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_e59394cfcae447dfae1494d80fb29b69.setContent(html_fc145e69461646e99506cef677f5d86c);
+        
+
+        marker_f84e27240081466caec5788806765926.bindPopup(popup_e59394cfcae447dfae1494d80fb29b69)
+        ;
+
+        
+    
+    
+            var marker_1b031ca0f003426aa1a98f626d18f897 = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_5c61f12f94324e918b8a851a617d998a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8f72d4c3e224bf0a21ff6286a656f31 = $(`<div id="html_e8f72d4c3e224bf0a21ff6286a656f31" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2002-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_5c61f12f94324e918b8a851a617d998a.setContent(html_e8f72d4c3e224bf0a21ff6286a656f31);
+        
+
+        marker_1b031ca0f003426aa1a98f626d18f897.bindPopup(popup_5c61f12f94324e918b8a851a617d998a)
+        ;
+
+        
+    
+    
+            var marker_15741f2a2fe24a1dade809b4f9bfb10d = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_b85732b94ec041e49498930e6ef0acc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_814d948ceca841adadc7fd4d5b5cda8d = $(`<div id="html_814d948ceca841adadc7fd4d5b5cda8d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2002-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_b85732b94ec041e49498930e6ef0acc1.setContent(html_814d948ceca841adadc7fd4d5b5cda8d);
+        
+
+        marker_15741f2a2fe24a1dade809b4f9bfb10d.bindPopup(popup_b85732b94ec041e49498930e6ef0acc1)
+        ;
+
+        
+    
+    
+            var marker_b4ca61b7c65644b8ab8636619f6b6834 = L.marker(
+                [10.671389, -84.990278],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_22dd2019bca04e7185bed6f70d2662aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d626256d0ea4e3288258d158f06775d = $(`<div id="html_6d626256d0ea4e3288258d158f06775d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Nacional Volcán Tenorio Alto Masis. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2002-05-17 00:00:00+00:00 <strong>Recolectores:</strong> Jose Luis Chaves <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_22dd2019bca04e7185bed6f70d2662aa.setContent(html_6d626256d0ea4e3288258d158f06775d);
+        
+
+        marker_b4ca61b7c65644b8ab8636619f6b6834.bindPopup(popup_22dd2019bca04e7185bed6f70d2662aa)
+        ;
+
+        
+    
+    
+            var marker_f30d069c7d5142848a2c67c0442b44f0 = L.marker(
+                [10.219444000000001, -84.6],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_bdce73f7496c488fbd1dc0fd7db73f54 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1293bc9d7b7c4987a472956876bd724d = $(`<div id="html_1293bc9d7b7c4987a472956876bd724d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biologica Manuel Brenes. Estacion San Ramon. <strong>Elevación:</strong> 940.0 m  <strong>Fecha:</strong> 2001-05-11 00:00:00+00:00 <strong>Recolectores:</strong> Jürgen Homeier <strong>Identificadores:</strong> González, Jose</div>`)[0];
+            popup_bdce73f7496c488fbd1dc0fd7db73f54.setContent(html_1293bc9d7b7c4987a472956876bd724d);
+        
+
+        marker_f30d069c7d5142848a2c67c0442b44f0.bindPopup(popup_bdce73f7496c488fbd1dc0fd7db73f54)
+        ;
+
+        
+    
+    
+            var marker_e65c009eb76544ceb7d8792863e799fb = L.marker(
+                [10.35, -84.66],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_a40acbcd479a43e0bf67a3f1f37f4ee0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2ef045431174dfe8d0c62ba0b26b2b2 = $(`<div id="html_a2ef045431174dfe8d0c62ba0b26b2b2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque Eterno De Los Niños, Cordillera de Tilarán, Atlantic slope, Río Peñas Blancas valley, Laguna Poco Sol <strong>Elevación:</strong> 840.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|Willow Zuchowski <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_a40acbcd479a43e0bf67a3f1f37f4ee0.setContent(html_a2ef045431174dfe8d0c62ba0b26b2b2);
+        
+
+        marker_e65c009eb76544ceb7d8792863e799fb.bindPopup(popup_a40acbcd479a43e0bf67a3f1f37f4ee0)
+        ;
+
+        
+    
+    
+            var marker_5aed246e19e746b6bddad3ca49227a78 = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_0f984f3c045f40f788aebce018ffd4b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72628472545d4a9aa0af60230a3123a6 = $(`<div id="html_72628472545d4a9aa0af60230a3123a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.B. Monteverde; Cordillera de Tilarán. Río Guacimal, Comunidad- Reserva. Vertiente Pacífica. En orilla de bosque. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1990-03-04 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C. <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_0f984f3c045f40f788aebce018ffd4b0.setContent(html_72628472545d4a9aa0af60230a3123a6);
+        
+
+        marker_5aed246e19e746b6bddad3ca49227a78.bindPopup(popup_0f984f3c045f40f788aebce018ffd4b0)
+        ;
+
+        
+    
+    
+            var marker_2cb893cc669141d1b2172ea785386daf = L.marker(
+                [10.38, -84.7],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_d268b1fbd6204077a8ce83b6b737cc86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c94c10284374df2aff0da7eda689be4 = $(`<div id="html_8c94c10284374df2aff0da7eda689be4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bosque Eterno De Los Niños; Cordillera de Tilarán. Río Peñas Blancas, Quebrada Gata, riachuelo de Fernando Villalobos. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1990-04-18 00:00:00+00:00 <strong>Recolectores:</strong> Erick Bello C.|William A. Haber|Willow Zuchowski <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_d268b1fbd6204077a8ce83b6b737cc86.setContent(html_8c94c10284374df2aff0da7eda689be4);
+        
+
+        marker_2cb893cc669141d1b2172ea785386daf.bindPopup(popup_d268b1fbd6204077a8ce83b6b737cc86)
+        ;
+
+        
+    
+    
+            var marker_5fa408dbcf39446d983e70d91ff96d6b = L.marker(
+                [9.429222, -82.84825],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_2e5e107d25d8411187bff5af5b2f26de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_787d879cc5dc4ffba3cbb61f3f56665d = $(`<div id="html_787d879cc5dc4ffba3cbb61f3f56665d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P.N. La Amistad. Cerro Frio. Cabeceras del Rio Tskui. Punto 14. <strong>Elevación:</strong> 1276.0 m  <strong>Fecha:</strong> 2008-10-25 00:00:00+00:00 <strong>Recolectores:</strong> Frank González|Daniel Solano|A. de Sedas M. <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_2e5e107d25d8411187bff5af5b2f26de.setContent(html_787d879cc5dc4ffba3cbb61f3f56665d);
+        
+
+        marker_5fa408dbcf39446d983e70d91ff96d6b.bindPopup(popup_2e5e107d25d8411187bff5af5b2f26de)
+        ;
+
+        
+    
+    
+            var marker_a4d6e728e65e454d975d6edc27034106 = L.marker(
+                [9.428661, -82.84528900000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_25dae18a161a4ee9bee55b2e07646cac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f85921debdc4446096dd63bfdfbf7573 = $(`<div id="html_f85921debdc4446096dd63bfdfbf7573" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Internacional La Amistad. Punto #16. <strong>Elevación:</strong> 1001.0 m  <strong>Fecha:</strong> 2008-11-27 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano|Frank González|A. de Sedas M. <strong>Identificadores:</strong> B. Hammel</div>`)[0];
+            popup_25dae18a161a4ee9bee55b2e07646cac.setContent(html_f85921debdc4446096dd63bfdfbf7573);
+        
+
+        marker_a4d6e728e65e454d975d6edc27034106.bindPopup(popup_25dae18a161a4ee9bee55b2e07646cac)
+        ;
+
+        
+    
+    
+            var marker_214756460b224824a4d936a2531ba589 = L.marker(
+                [9.254722000000001, -82.505833],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_fb6c9760709f41d5a7eccbd22a0cfaa6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_940e6353cf4f4cc4bb18acae0a5d0f2e = $(`<div id="html_940e6353cf4f4cc4bb18acae0a5d0f2e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Frío, headwaters of Río Tskui. Point 20. <strong>Elevación:</strong> 1300.0 m  <strong>Fecha:</strong> 2008-10-23 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría|Alex K. Monro|Laurencio Martínez <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_fb6c9760709f41d5a7eccbd22a0cfaa6.setContent(html_940e6353cf4f4cc4bb18acae0a5d0f2e);
+        
+
+        marker_214756460b224824a4d936a2531ba589.bindPopup(popup_fb6c9760709f41d5a7eccbd22a0cfaa6)
+        ;
+
+        
+    
+    
+            var marker_a2445d7c4fda47daa2d7d9bb18d36a7b = L.marker(
+                [9.257222, -82.50805600000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_1e766c38798a4a999242ec4caba05819 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8854802081074e408257a9a6a225e9d4 = $(`<div id="html_8854802081074e408257a9a6a225e9d4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Frío, headwaters of Río Tskui. Point 20. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 2008-10-24 00:00:00+00:00 <strong>Recolectores:</strong> Laurencio Martínez|Alex K. Monro|Daniel Santamaría <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_1e766c38798a4a999242ec4caba05819.setContent(html_8854802081074e408257a9a6a225e9d4);
+        
+
+        marker_a2445d7c4fda47daa2d7d9bb18d36a7b.bindPopup(popup_1e766c38798a4a999242ec4caba05819)
+        ;
+
+        
+    
+    
+            var marker_e7eaceb4308b41cda76e29f522f356f3 = L.marker(
+                [9.255556, -82.504722],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_fc1de4ddd29443bcad9c782926305bbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6dc08dae577449dbeb3bcbb0ed1dcb1 = $(`<div id="html_f6dc08dae577449dbeb3bcbb0ed1dcb1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Frío, headwaters of Río Tskui. Point 12.  Close to two land-slides of different ages, one very recent, the other ca. 10-20 years old. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2008-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría|Alex K. Monro|Laurencio Martínez <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_fc1de4ddd29443bcad9c782926305bbb.setContent(html_f6dc08dae577449dbeb3bcbb0ed1dcb1);
+        
+
+        marker_e7eaceb4308b41cda76e29f522f356f3.bindPopup(popup_fc1de4ddd29443bcad9c782926305bbb)
+        ;
+
+        
+    
+    
+            var marker_2cfa6d9a78bd48aebb4a7070b4ad3446 = L.marker(
+                [9.255556, -82.504722],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_8805a56f26764579b9912d166599ac9b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76307c6cfcd64299a65cf44effa43ba6 = $(`<div id="html_76307c6cfcd64299a65cf44effa43ba6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Frío, headwaters of Río Tskui. Point 12.  Close to two land-slides of different ages, one very recent, the other ca. 10-20 years old. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 2008-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Santamaría|Alex K. Monro|Laurencio Martínez <strong>Identificadores:</strong> D. Solano</div>`)[0];
+            popup_8805a56f26764579b9912d166599ac9b.setContent(html_76307c6cfcd64299a65cf44effa43ba6);
+        
+
+        marker_2cfa6d9a78bd48aebb4a7070b4ad3446.bindPopup(popup_8805a56f26764579b9912d166599ac9b)
+        ;
+
+        
+    
+    
+            var marker_334cd5b838e14bb7995d651cc7bf2484 = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_a36d1a446e5c49ce96c26b681493720b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05efefffdb1d49b3ab8fe75da5ae6547 = $(`<div id="html_05efefffdb1d49b3ab8fe75da5ae6547" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Monteverde Río Trail, Pacific slope.  Río Trail, Pacific slope.      10.18N 84.48W      1520 m 1 September 1989 William Haber ex Benito Guindon <strong>Elevación:</strong> 1520.0 m  <strong>Fecha:</strong> 1989-09-01 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|B. Guindon <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_a36d1a446e5c49ce96c26b681493720b.setContent(html_05efefffdb1d49b3ab8fe75da5ae6547);
+        
+
+        marker_334cd5b838e14bb7995d651cc7bf2484.bindPopup(popup_a36d1a446e5c49ce96c26b681493720b)
+        ;
+
+        
+    
+    
+            var marker_f2066884ac7a44de8d088b56132012c7 = L.marker(
+                [10.766667, -85.31666700000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_99cfe17cf7d04733b83256f3021adccf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_075c7f7f902f4a1ba2b2e1960d30fcc5 = $(`<div id="html_075c7f7f902f4a1ba2b2e1960d30fcc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Parque Rincón de La Vieja.  Del Mirador siguiendo la Fila al Volcán Santa María. <strong>Elevación:</strong> 1200.0 m  <strong>Fecha:</strong> 1987-11-26 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch. <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_99cfe17cf7d04733b83256f3021adccf.setContent(html_075c7f7f902f4a1ba2b2e1960d30fcc5);
+        
+
+        marker_f2066884ac7a44de8d088b56132012c7.bindPopup(popup_99cfe17cf7d04733b83256f3021adccf)
+        ;
+
+        
+    
+    
+            var marker_8564a7ce7305437a91d32231b34e1215 = L.marker(
+                [8.75, -82.25],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_5b223ce2ec55474087ea150345bd6c89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1024c1ff86a74472a2f3518bb5b858ff = $(`<div id="html_1024c1ff86a74472a2f3518bb5b858ff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Near Fortuna Dam, along Quebrada Arena towards reservoir from highway. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1988-05-29 00:00:00+00:00 <strong>Recolectores:</strong> Gordon McPherson <strong>Identificadores:</strong> H. van der Werff, Nov. 2001 (MO)</div>`)[0];
+            popup_5b223ce2ec55474087ea150345bd6c89.setContent(html_1024c1ff86a74472a2f3518bb5b858ff);
+        
+
+        marker_8564a7ce7305437a91d32231b34e1215.bindPopup(popup_5b223ce2ec55474087ea150345bd6c89)
+        ;
+
+        
+    
+    
+            var marker_918f54a7657749dbbde27ade75a63160 = L.marker(
+                [10.3, -84.8],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_69a0a57491964894b173ae66404c1a62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d402a8e9dc2d4c8ba065e479acaf74d1 = $(`<div id="html_d402a8e9dc2d4c8ba065e479acaf74d1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Monteverde, lower montane wet forest. <strong>Elevación:</strong> 1500.0 m  <strong>Fecha:</strong> 1981-05-18 00:00:00+00:00 <strong>Recolectores:</strong> N. T. Wheelwright <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_69a0a57491964894b173ae66404c1a62.setContent(html_d402a8e9dc2d4c8ba065e479acaf74d1);
+        
+
+        marker_918f54a7657749dbbde27ade75a63160.bindPopup(popup_69a0a57491964894b173ae66404c1a62)
+        ;
+
+        
+    
+    
+            var marker_0a3d803274444fa0b3c1c876638c6476 = L.marker(
+                [9.49, -82.95],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_a9985ef109c34a60a6d3b2fb838ccd74 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de8bf0b6806d45dcb288edf887fc5cff = $(`<div id="html_de8bf0b6806d45dcb288edf887fc5cff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino de Fila Dimat (casa de Hermógenes Pereira) hasta Soki [Tsaki], pasando por la quebrada Sha [Sheaub? - couldn't locate on map] <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1985-10-26 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Gómez P.|Gerardo Herrera Ch.|Dan Masterson <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_a9985ef109c34a60a6d3b2fb838ccd74.setContent(html_de8bf0b6806d45dcb288edf887fc5cff);
+        
+
+        marker_0a3d803274444fa0b3c1c876638c6476.bindPopup(popup_a9985ef109c34a60a6d3b2fb838ccd74)
+        ;
+
+        
+    
+    
+            var marker_470e5e55063a41e3ad80a988bc183e6f = L.marker(
+                [8.629167, -80.122222],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_b7d1d40d87754db59cb656c28cdeb6df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_556e45a90df745e3a6f308e062929113 = $(`<div id="html_556e45a90df745e3a6f308e062929113" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> North rim of El Vallen de Antón <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1939-07-09 00:00:00+00:00 <strong>Recolectores:</strong> Paul H. Allen <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_b7d1d40d87754db59cb656c28cdeb6df.setContent(html_556e45a90df745e3a6f308e062929113);
+        
+
+        marker_470e5e55063a41e3ad80a988bc183e6f.bindPopup(popup_b7d1d40d87754db59cb656c28cdeb6df)
+        ;
+
+        
+    
+    
+            var marker_12b673829b354fb7a707c4b9616ee732 = L.marker(
+                [10.36, -84.8],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_2d07bfffe51e49dea03c087b04f59e45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c7ca754fdee1409b8f8f0b09850e831f = $(`<div id="html_c7ca754fdee1409b8f8f0b09850e831f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Tilaran. Monteverde. San Gerardo Biological Station. Sendero Congo. <strong>Elevación:</strong> 1250.0 m  <strong>Fecha:</strong> 1995-05-10 00:00:00+00:00 <strong>Recolectores:</strong> Darin S. Penneys <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_2d07bfffe51e49dea03c087b04f59e45.setContent(html_c7ca754fdee1409b8f8f0b09850e831f);
+        
+
+        marker_12b673829b354fb7a707c4b9616ee732.bindPopup(popup_2d07bfffe51e49dea03c087b04f59e45)
+        ;
+
+        
+    
+    
+            var marker_e72bdf200f644beca593185fe46fb696 = L.marker(
+                [10.3, -84.75],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_ba5fcbc27f63499fb02770a218de82a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b42faabee2264ac1a73559ac5b81e4d9 = $(`<div id="html_b42faabee2264ac1a73559ac5b81e4d9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biologica Monteverde, Cordillera de Tilarán, Estación Aleman's <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1992-04-18 00:00:00+00:00 <strong>Recolectores:</strong> C. Guindon <strong>Identificadores:</strong> H. van der Werff</div>`)[0];
+            popup_ba5fcbc27f63499fb02770a218de82a4.setContent(html_b42faabee2264ac1a73559ac5b81e4d9);
+        
+
+        marker_e72bdf200f644beca593185fe46fb696.bindPopup(popup_ba5fcbc27f63499fb02770a218de82a4)
+        ;
+
+        
+    
+    
+            var marker_51a54d0b8935492e8d7edd13d177614d = L.marker(
+                [10.33, -84.81],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_9fea535e7bb44f89a202956f7ffa3e3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0dc00c4f970495bb7382426b8752323 = $(`<div id="html_a0dc00c4f970495bb7382426b8752323" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 4-5 km. NW Monteverde, at and just below Continental Divide. 2-4 km. West of Santa Elena between road to Cañitas and upper road to Las Nubes. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 1992-04-11 00:00:00+00:00 <strong>Recolectores:</strong> William A. Haber|C. Guindon|Danilo Brenes <strong>Identificadores:</strong> Henk van der Werff</div>`)[0];
+            popup_9fea535e7bb44f89a202956f7ffa3e3e.setContent(html_a0dc00c4f970495bb7382426b8752323);
+        
+
+        marker_51a54d0b8935492e8d7edd13d177614d.bindPopup(popup_9fea535e7bb44f89a202956f7ffa3e3e)
+        ;
+
+        
+    
+    
+            var marker_15cddb5e7e044f42927df628cd7bd09c = L.marker(
+                [10.33, -84.83],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_31c9081174d14bcdb7d2a5a1dcac639b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e0572ee592df4004980150a952e30ff7 = $(`<div id="html_e0572ee592df4004980150a952e30ff7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cordillera de Tilarán. De Santa Elena hacia La Cruz, bosque de Jim Wolfe. Zona de Monteverde. <strong>Elevación:</strong> 1400.0 m  <strong>Fecha:</strong> 1992-01-10 00:00:00+00:00 <strong>Recolectores:</strong> C. Guindon <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_31c9081174d14bcdb7d2a5a1dcac639b.setContent(html_e0572ee592df4004980150a952e30ff7);
+        
+
+        marker_15cddb5e7e044f42927df628cd7bd09c.bindPopup(popup_31c9081174d14bcdb7d2a5a1dcac639b)
+        ;
+
+        
+    
+    
+            var marker_ef576540d38c472f9ce704fbcb302306 = L.marker(
+                [8.738056, -82.925],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_1351854ea77f428db3e554e532486199 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15a067ee35324af0965edb8a46d3f7a6 = $(`<div id="html_15a067ee35324af0965edb8a46d3f7a6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca Loma Linda, 1 mile southwest of Cañas Gordas, primary forest and forest edge, premontane wet forest basal belt transition <strong>Elevación:</strong> 1150.0 m  <strong>Fecha:</strong> 1973-02-26 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_1351854ea77f428db3e554e532486199.setContent(html_15a067ee35324af0965edb8a46d3f7a6);
+        
+
+        marker_ef576540d38c472f9ce704fbcb302306.bindPopup(popup_1351854ea77f428db3e554e532486199)
+        ;
+
+        
+    
+    
+            var marker_354557039b9f44de902682145c757dca = L.marker(
+                [8.79, -82.96],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_75537e040aa94afb88f479d218c78531 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b9f3742365241ae9d82bd928b450a24 = $(`<div id="html_6b9f3742365241ae9d82bd928b450a24" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Las Cruces. Jardín Botánico Wilson. OET. Sendero este a Río Java. <strong>Elevación:</strong> 1100.0 m  <strong>Fecha:</strong> 1993-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Gustavo Vargas|Gerardo Herrera Ch.|Gerardo Rivera|Luis Diego Gómez P. <strong>Identificadores:</strong> H. van der Werff (MO)</div>`)[0];
+            popup_75537e040aa94afb88f479d218c78531.setContent(html_6b9f3742365241ae9d82bd928b450a24);
+        
+
+        marker_354557039b9f44de902682145c757dca.bindPopup(popup_75537e040aa94afb88f479d218c78531)
+        ;
+
+        
+    
+    
+            var marker_d9552e417e494be3be609f19307655c4 = L.marker(
+                [10.333333, -84.81666700000001],
+                {}
+            ).addTo(marker_cluster_57c979f6809d47bd8ac86ad810497546);
+        
+    
+        var popup_2bfd149f46c84bc792ab66ce9aff9fb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55b43465f97a498bb398f3f863fc734b = $(`<div id="html_55b43465f97a498bb398f3f863fc734b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Tilarán. 4--5 km NW Monteverde, at and just below Continental Divide 2--4 km W of Santa Elena between road to Cañitas and upper road to Las Nubes. <strong>Elevación:</strong> 1450.0 m  <strong>Fecha:</strong> 1992-04-01 00:00:00+00:00 <strong>Recolectores:</strong> Haber, William A.; Guindon, C.; Brenes <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2bfd149f46c84bc792ab66ce9aff9fb1.setContent(html_55b43465f97a498bb398f3f863fc734b);
+        
+
+        marker_d9552e417e494be3be609f19307655c4.bindPopup(popup_2bfd149f46c84bc792ab66ce9aff9fb1)
+        ;
+
+        
+    
+    
+            var layer_control_e8d9c73c47e84fcbb3786512a3c6cbe6 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_58cfb41c8d6d44ecbfa7e6fd3a3bc016,
+                    "ESRI World Imagery" : tile_layer_e2b68e40aeab45a8976fb17239e70183,
+                },
+                overlays :  {
+                    "macro_element_57c979f6809d47bd8ac86ad810497546" : marker_cluster_57c979f6809d47bd8ac86ad810497546,
+                },
+            };
+            L.control.layers(
+                layer_control_e8d9c73c47e84fcbb3786512a3c6cbe6.base_layers,
+                layer_control_e8d9c73c47e84fcbb3786512a3c6cbe6.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_e0ff9a7cb1534dbb90639efa416b4ae2);
+            tile_layer_e2b68e40aeab45a8976fb17239e70183.remove();
+        
+</script>

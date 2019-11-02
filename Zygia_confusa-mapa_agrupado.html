@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ff1d31d45b2b4f93bd5de1ff0041ee1c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ff1d31d45b2b4f93bd5de1ff0041ee1c" ></div>
+        
+</body>
+<script>    
+    
+            var map_ff1d31d45b2b4f93bd5de1ff0041ee1c = L.map(
+                "map_ff1d31d45b2b4f93bd5de1ff0041ee1c",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_ff1d31d45b2b4f93bd5de1ff0041ee1c);
+
+            
+
+        
+    
+            var tile_layer_76f8cc478ce54e9d8b68bba447e1ac7b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ff1d31d45b2b4f93bd5de1ff0041ee1c);
+        
+    
+            var tile_layer_a273ba2d86a44121862f0022b254831d = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ff1d31d45b2b4f93bd5de1ff0041ee1c);
+        
+    
+            var marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad = L.markerClusterGroup(
+                {}
+            );
+            map_ff1d31d45b2b4f93bd5de1ff0041ee1c.addLayer(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+            var marker_61e5eb40329c4098a3aee997757dd5a9 = L.marker(
+                [16.502222, -88.908056],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_90123dd916664941b19987dc968eea47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37bc5cf244824e1194b5f16e136ac272 = $(`<div id="html_37bc5cf244824e1194b5f16e136ac272" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In the western Bladen Nature Reserve in the limestone hills just south of  the Bladen River. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2002-04-28 00:00:00+00:00 <strong>Recolectores:</strong> Steven W Brewer <strong>Identificadores:</strong> det. by SW Brewer  2002</div>`)[0];
+            popup_90123dd916664941b19987dc968eea47.setContent(html_37bc5cf244824e1194b5f16e136ac272);
+        
+
+        marker_61e5eb40329c4098a3aee997757dd5a9.bindPopup(popup_90123dd916664941b19987dc968eea47)
+        ;
+
+        
+    
+    
+            var marker_da511333f9254c03a49c9adc8a393e3c = L.marker(
+                [16.5, -88.9],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_8c374c3ec846435f9abcc329d5d71e10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7832ce63bd5b40539d5f076bdc04329e = $(`<div id="html_7832ce63bd5b40539d5f076bdc04329e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In the western Bladen Nature Reserve in the limestone hills just south of  the Bladen River. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2002-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Steven W Brewer <strong>Identificadores:</strong> det. by SW Brewer  2002</div>`)[0];
+            popup_8c374c3ec846435f9abcc329d5d71e10.setContent(html_7832ce63bd5b40539d5f076bdc04329e);
+        
+
+        marker_da511333f9254c03a49c9adc8a393e3c.bindPopup(popup_8c374c3ec846435f9abcc329d5d71e10)
+        ;
+
+        
+    
+    
+            var marker_1ae4f61af27943fc80c91b8eebd65acc = L.marker(
+                [9.58, -82.89],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_e824244bf4744896a81a17a348fe2364 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab0de793ff5748858f4b09ab0539f957 = $(`<div id="html_ab0de793ff5748858f4b09ab0539f957" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Suretka. La Pera. Antiguo campo de exploración petrolera. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Gómez Laurito, Jorge <strong>Identificadores:</strong> Gómez Laurito, Jorge</div>`)[0];
+            popup_e824244bf4744896a81a17a348fe2364.setContent(html_ab0de793ff5748858f4b09ab0539f957);
+        
+
+        marker_1ae4f61af27943fc80c91b8eebd65acc.bindPopup(popup_e824244bf4744896a81a17a348fe2364)
+        ;
+
+        
+    
+    
+            var marker_96daaedec14f4155a5287a3e5ddefc2b = L.marker(
+                [9.64, -82.83],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_f13ee4d48bdc4e04bd00148122f24ace = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61051f846c4b470ca9c765b90c13ed62 = $(`<div id="html_61051f846c4b470ca9c765b90c13ed62" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca La Culebra. Carretera a Bribrí, después del puente sobre el río Sandbox, desvío por camino rural, ca. 1.5 km . <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1992-02-13 00:00:00+00:00 <strong>Recolectores:</strong> Gómez Laurito, Jorge <strong>Identificadores:</strong> Gómez Laurito, Jorge</div>`)[0];
+            popup_f13ee4d48bdc4e04bd00148122f24ace.setContent(html_61051f846c4b470ca9c765b90c13ed62);
+        
+
+        marker_96daaedec14f4155a5287a3e5ddefc2b.bindPopup(popup_f13ee4d48bdc4e04bd00148122f24ace)
+        ;
+
+        
+    
+    
+            var marker_2410a28a9dd14382b56ed55d6810c2da = L.marker(
+                [9.62, -82.85],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_69a2a4cd5362494bb08e2d46d43643c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23eb810303cf4e1ca29765b6cc0ba6c4 = $(`<div id="html_23eb810303cf4e1ca29765b6cc0ba6c4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bribrí, aprox 6 km al Oeste del pueblo en un parche de bosque remanente a lo largo de una pequeña cordillera. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1991-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_69a2a4cd5362494bb08e2d46d43643c0.setContent(html_23eb810303cf4e1ca29765b6cc0ba6c4);
+        
+
+        marker_2410a28a9dd14382b56ed55d6810c2da.bindPopup(popup_69a2a4cd5362494bb08e2d46d43643c0)
+        ;
+
+        
+    
+    
+            var marker_a5b3c4d24aeb4e23a115433d2b4a740c = L.marker(
+                [9.79, -83.1],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_09caa62691ea484a9310507d431abb0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7cdb5409f6f749f3bbafb04a531d21da = $(`<div id="html_7cdb5409f6f749f3bbafb04a531d21da" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Progreso, siguiendo el sendero entre Cerro Muchilla y Cerro Avioneta. Cabeceras del Río Suruy. Fila Matama, valle de la Estrella. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1989-04-15 00:00:00+00:00 <strong>Recolectores:</strong> Herrera, Gerardo <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_09caa62691ea484a9310507d431abb0e.setContent(html_7cdb5409f6f749f3bbafb04a531d21da);
+        
+
+        marker_a5b3c4d24aeb4e23a115433d2b4a740c.bindPopup(popup_09caa62691ea484a9310507d431abb0e)
+        ;
+
+        
+    
+    
+            var marker_71899ac901434e5cb53dd1b7e2695704 = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_5140fa54cd1845a7875e49b6946f2fd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2d4224ab37c4e579805cfde52d55fd4 = $(`<div id="html_a2d4224ab37c4e579805cfde52d55fd4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R. N. V. S. Barra del Colorado Llanura de Tortuguero. Sardinas. <strong>Elevación:</strong> 18.0 m  <strong>Fecha:</strong> 1995-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Araya, Flor <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_5140fa54cd1845a7875e49b6946f2fd8.setContent(html_a2d4224ab37c4e579805cfde52d55fd4);
+        
+
+        marker_71899ac901434e5cb53dd1b7e2695704.bindPopup(popup_5140fa54cd1845a7875e49b6946f2fd8)
+        ;
+
+        
+    
+    
+            var marker_3b9ea83caf934d4bb1c190346167e5b0 = L.marker(
+                [9.65, -82.86],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_d2bb8706128e4746ad463d82d8eb8042 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c3b6fead48d4833b7426914dfc6b6d5 = $(`<div id="html_8c3b6fead48d4833b7426914dfc6b6d5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila. Carbón. ACODEFO, Camino a buena vista <strong>Elevación:</strong> 1638.0 m  <strong>Fecha:</strong> 1999-11-03 00:00:00+00:00 <strong>Recolectores:</strong> Valverde, Oscar <strong>Identificadores:</strong> Valverde, Oscar</div>`)[0];
+            popup_d2bb8706128e4746ad463d82d8eb8042.setContent(html_8c3b6fead48d4833b7426914dfc6b6d5);
+        
+
+        marker_3b9ea83caf934d4bb1c190346167e5b0.bindPopup(popup_d2bb8706128e4746ad463d82d8eb8042)
+        ;
+
+        
+    
+    
+            var marker_0fb21073bb0a435f9c670f3cd12ac1ec = L.marker(
+                [9.79, -83.1],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_cc46a31d80004de4b19503b3d54a3b16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02ea51109b4a4ebbade83e82a2a8b9b5 = $(`<div id="html_02ea51109b4a4ebbade83e82a2a8b9b5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cantón de Limón El Progreso, siguiendo el sendero entre Cerro Muchilla y Cerro Avioneta. Cabeceras del Río Suruy. Fila Matama, Valle de la Estrella. <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1989-04-15 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera Ch.|Abelardo Chacón <strong>Identificadores:</strong> Nelson Zamora, January</div>`)[0];
+            popup_cc46a31d80004de4b19503b3d54a3b16.setContent(html_02ea51109b4a4ebbade83e82a2a8b9b5);
+        
+
+        marker_0fb21073bb0a435f9c670f3cd12ac1ec.bindPopup(popup_cc46a31d80004de4b19503b3d54a3b16)
+        ;
+
+        
+    
+    
+            var marker_47b37f51639c4829b3420aee0e104dfc = L.marker(
+                [9.59, -82.87],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_4d1486074c9a432390ec26ff8fd2081c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e450db711ce492f8db980f84201c998 = $(`<div id="html_1e450db711ce492f8db980f84201c998" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 7 km SW of Bribrí. <strong>Elevación:</strong> 175.0 m  <strong>Fecha:</strong> 1983-05-04 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Gómez P.|Ronald L. Liesner|Emmet J. Judziewicz <strong>Identificadores:</strong> N.  Zamora (MO)</div>`)[0];
+            popup_4d1486074c9a432390ec26ff8fd2081c.setContent(html_1e450db711ce492f8db980f84201c998);
+        
+
+        marker_47b37f51639c4829b3420aee0e104dfc.bindPopup(popup_4d1486074c9a432390ec26ff8fd2081c)
+        ;
+
+        
+    
+    
+            var marker_e461c5c29aa74e308a8ea65e776b3ee1 = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_dc64a084c0c34230a8f203c8f69a60e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04bf75253de744adbb822c469d3ba59f = $(`<div id="html_04bf75253de744adbb822c469d3ba59f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida.  Cuenca del San Carlos.  San Carlos, Boca Tapada, Laguna de Lagarto Lodge.  Proyecto Darwin. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2004-05-23 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano|B. Hernández <strong>Identificadores:</strong> N. Zamora</div>`)[0];
+            popup_dc64a084c0c34230a8f203c8f69a60e6.setContent(html_04bf75253de744adbb822c469d3ba59f);
+        
+
+        marker_e461c5c29aa74e308a8ea65e776b3ee1.bindPopup(popup_dc64a084c0c34230a8f203c8f69a60e6)
+        ;
+
+        
+    
+    
+            var marker_662d3bea4c0c427da8767c9a3efbb69d = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_c6d1c3c6f2864fa1b59690352e9d5456 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a8cb8b8f21c8421f8cc7fe3a03ad9f7f = $(`<div id="html_a8cb8b8f21c8421f8cc7fe3a03ad9f7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1996-07-27 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_c6d1c3c6f2864fa1b59690352e9d5456.setContent(html_a8cb8b8f21c8421f8cc7fe3a03ad9f7f);
+        
+
+        marker_662d3bea4c0c427da8767c9a3efbb69d.bindPopup(popup_c6d1c3c6f2864fa1b59690352e9d5456)
+        ;
+
+        
+    
+    
+            var marker_982632b1ad7f42bba1ceef7d3a76c0c6 = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_f8238a15297f4cac80b4211735b8eed7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f95ec60ca8c4b54aa316bdcc4876b18 = $(`<div id="html_7f95ec60ca8c4b54aa316bdcc4876b18" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1996-07-27 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_f8238a15297f4cac80b4211735b8eed7.setContent(html_7f95ec60ca8c4b54aa316bdcc4876b18);
+        
+
+        marker_982632b1ad7f42bba1ceef7d3a76c0c6.bindPopup(popup_f8238a15297f4cac80b4211735b8eed7)
+        ;
+
+        
+    
+    
+            var marker_4086e8498260453f8b0d294b4198c213 = L.marker(
+                [9.627778, -82.85],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_e17d44e714294e4e8d4b91ace4c72f3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5efce759ad046e5bf63a911da9780e4 = $(`<div id="html_c5efce759ad046e5bf63a911da9780e4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Bribri, aprox. 6 Km al Oeste del pueblo en un parche de bosque remanente a lo largo de una pequena cordillera. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1991-01-23 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_e17d44e714294e4e8d4b91ace4c72f3d.setContent(html_c5efce759ad046e5bf63a911da9780e4);
+        
+
+        marker_4086e8498260453f8b0d294b4198c213.bindPopup(popup_e17d44e714294e4e8d4b91ace4c72f3d)
+        ;
+
+        
+    
+    
+            var marker_9f252aadfcdc4c778df4911c82012b7b = L.marker(
+                [9.790278, -83.108333],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_8cb0c7edba094e6aa5b95b5e7bbe5741 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af381553b1a14e1093e12179c369c4cc = $(`<div id="html_af381553b1a14e1093e12179c369c4cc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> El Progreso, siguiendo el sendero entre Cerro Muchilla y Cerro Avioneta. Cabeceras del Rio Suruy. Fila Matama, <strong>Elevación:</strong> 700.0 m  <strong>Fecha:</strong> 1989-04-15 00:00:00+00:00 <strong>Recolectores:</strong> Gerardo Herrera <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8cb0c7edba094e6aa5b95b5e7bbe5741.setContent(html_af381553b1a14e1093e12179c369c4cc);
+        
+
+        marker_9f252aadfcdc4c778df4911c82012b7b.bindPopup(popup_8cb0c7edba094e6aa5b95b5e7bbe5741)
+        ;
+
+        
+    
+    
+            var marker_2a949eb2133145a7a972416c4a02a47f = L.marker(
+                [10.643889, -83.736112],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_697889355be944058dc54fa01390ba4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b4fc8b84c2f4795bdfe1c21bee1a668 = $(`<div id="html_0b4fc8b84c2f4795bdfe1c21bee1a668" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1995-03-01 00:00:00+00:00 <strong>Recolectores:</strong> F. Araya <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_697889355be944058dc54fa01390ba4b.setContent(html_0b4fc8b84c2f4795bdfe1c21bee1a668);
+        
+
+        marker_2a949eb2133145a7a972416c4a02a47f.bindPopup(popup_697889355be944058dc54fa01390ba4b)
+        ;
+
+        
+    
+    
+            var marker_fc0c6129529d495b8a0bf6e6221693cd = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_6f627492f2244935901f75fba9c9aa84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bd8ddd6c00d4e4599b1ae7b04973ca9 = $(`<div id="html_8bd8ddd6c00d4e4599b1ae7b04973ca9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2004-05-23 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Braulio Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_6f627492f2244935901f75fba9c9aa84.setContent(html_8bd8ddd6c00d4e4599b1ae7b04973ca9);
+        
+
+        marker_fc0c6129529d495b8a0bf6e6221693cd.bindPopup(popup_6f627492f2244935901f75fba9c9aa84)
+        ;
+
+        
+    
+    
+            var marker_338c88b46f944e37ac148891b53fcfeb = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_8f48244ff56941848f989bdca4ca0cb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb0525823d5141a2accf2f5991edf40e = $(`<div id="html_eb0525823d5141a2accf2f5991edf40e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2004-05-23 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Braulio Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8f48244ff56941848f989bdca4ca0cb3.setContent(html_eb0525823d5141a2accf2f5991edf40e);
+        
+
+        marker_338c88b46f944e37ac148891b53fcfeb.bindPopup(popup_8f48244ff56941848f989bdca4ca0cb3)
+        ;
+
+        
+    
+    
+            var marker_730d90f4342f4cfaa35cd9b3a8222ea2 = L.marker(
+                [10.686111, -84.18055600000001],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_40348cde9fdf499eb2dbbad5a9c8947f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b4a17e2af744ae9bdebcc4fb02fbc31 = $(`<div id="html_9b4a17e2af744ae9bdebcc4fb02fbc31" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> ca. 7 km NE de Boca Tapada, Laguna del Lagarto Lodge. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2004-05-23 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Braulio Hernández <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_40348cde9fdf499eb2dbbad5a9c8947f.setContent(html_9b4a17e2af744ae9bdebcc4fb02fbc31);
+        
+
+        marker_730d90f4342f4cfaa35cd9b3a8222ea2.bindPopup(popup_40348cde9fdf499eb2dbbad5a9c8947f)
+        ;
+
+        
+    
+    
+            var marker_c846417b83ef45898a9dde58d5609cbb = L.marker(
+                [10.709855000000001, -84.18669399999999],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_568ce3d236a44388af177da297ca3f51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_167f3418f468403dba52a5d1efdb41bd = $(`<div id="html_167f3418f468403dba52a5d1efdb41bd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Carlos, Boca Tapada, Bosque Ancianos. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2005-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_568ce3d236a44388af177da297ca3f51.setContent(html_167f3418f468403dba52a5d1efdb41bd);
+        
+
+        marker_c846417b83ef45898a9dde58d5609cbb.bindPopup(popup_568ce3d236a44388af177da297ca3f51)
+        ;
+
+        
+    
+    
+            var marker_73833632527949a2af76e83e506a2b6a = L.marker(
+                [10.709855000000001, -84.18669399999999],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_7bbaeb88257b4264978befb1fbb3c061 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c6bb10daee0f432eb40c959e95696746 = $(`<div id="html_c6bb10daee0f432eb40c959e95696746" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Carlos, Boca Tapada, Bosque Ancianos. <strong>Elevación:</strong> 75.0 m  <strong>Fecha:</strong> 2005-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Daniel Solano; Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Solano, Daniel</div>`)[0];
+            popup_7bbaeb88257b4264978befb1fbb3c061.setContent(html_c6bb10daee0f432eb40c959e95696746);
+        
+
+        marker_73833632527949a2af76e83e506a2b6a.bindPopup(popup_7bbaeb88257b4264978befb1fbb3c061)
+        ;
+
+        
+    
+    
+            var marker_4b620d388a6a4a649138365dd8f14bcd = L.marker(
+                [9.65833, -82.875],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_699d7ebb0ca34225b51827ca462c6525 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56b2fae7691a46edb9318ae45e0c529b = $(`<div id="html_56b2fae7691a46edb9318ae45e0c529b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila. Carbón. ACODEFO, camino a buena vista. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1999-11-03 00:00:00+00:00 <strong>Recolectores:</strong> Óscar Valverde <strong>Identificadores:</strong> O. Valverde</div>`)[0];
+            popup_699d7ebb0ca34225b51827ca462c6525.setContent(html_56b2fae7691a46edb9318ae45e0c529b);
+        
+
+        marker_4b620d388a6a4a649138365dd8f14bcd.bindPopup(popup_699d7ebb0ca34225b51827ca462c6525)
+        ;
+
+        
+    
+    
+            var marker_b0bcf8665d5e47bdad2634bd74358e74 = L.marker(
+                [16.502222, -88.908056],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_72f67ea91ee74fd88d4be4dead19845b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_28dbd91c587e4098b8ea4ec0f9a034c8 = $(`<div id="html_28dbd91c587e4098b8ea4ec0f9a034c8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In the western Bladen Nature Reserve in the limestone hills just south of the Bladen River. <strong>Elevación:</strong> 380.0 m  <strong>Fecha:</strong> 2002-04-28 00:00:00+00:00 <strong>Recolectores:</strong> Steven W. Brewer|Marcel Rejmánek <strong>Identificadores:</strong> S.W. Brewer</div>`)[0];
+            popup_72f67ea91ee74fd88d4be4dead19845b.setContent(html_28dbd91c587e4098b8ea4ec0f9a034c8);
+        
+
+        marker_b0bcf8665d5e47bdad2634bd74358e74.bindPopup(popup_72f67ea91ee74fd88d4be4dead19845b)
+        ;
+
+        
+    
+    
+            var marker_9b9250a066484fa68f7733bc5f98a727 = L.marker(
+                [16.5, -88.9],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_7a44df3c3294490cb5b6731b4e4346e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94e50c47fa18496ba0d3604cf341dadc = $(`<div id="html_94e50c47fa18496ba0d3604cf341dadc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> In the western Bladen Nature Reserve in the limestone hills just south of  the Bladen River. [some labels have only Steven W. Brewer as collector, in error] <strong>Elevación:</strong> 380.0 m  <strong>Fecha:</strong> 2002-04-29 00:00:00+00:00 <strong>Recolectores:</strong> Steven W. Brewer|Marcel Rejmánek <strong>Identificadores:</strong> S.W. Brewer</div>`)[0];
+            popup_7a44df3c3294490cb5b6731b4e4346e2.setContent(html_94e50c47fa18496ba0d3604cf341dadc);
+        
+
+        marker_9b9250a066484fa68f7733bc5f98a727.bindPopup(popup_7a44df3c3294490cb5b6731b4e4346e2)
+        ;
+
+        
+    
+    
+            var marker_51a4fb7395b2421f9754d453052ca12d = L.marker(
+                [10.68, -84.18],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_a526a1d81b4540d49aa24310bf72fcc5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01e235a3d8ae45a99d72281c1e95ac88 = $(`<div id="html_01e235a3d8ae45a99d72281c1e95ac88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanura de San Carlos, ca. 7 km NE de Boca Tapada, Lagarto Lodge <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1996-07-27 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel <strong>Identificadores:</strong> Nelson Zamora, January</div>`)[0];
+            popup_a526a1d81b4540d49aa24310bf72fcc5.setContent(html_01e235a3d8ae45a99d72281c1e95ac88);
+        
+
+        marker_51a4fb7395b2421f9754d453052ca12d.bindPopup(popup_a526a1d81b4540d49aa24310bf72fcc5)
+        ;
+
+        
+    
+    
+            var marker_c7b634849f5441f49f01b6e51acf7bfc = L.marker(
+                [10.766667, -83.883333],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_3942641ed4814d2599d5332018f0ef2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5c6d0a6b23d24fd4ac168f909b889693 = $(`<div id="html_5c6d0a6b23d24fd4ac168f909b889693" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Indio-Maiz, Municipio de San Juan del Norte, Cerro el Gigante, 5 km del Río San Juan. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1998-09-21 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|I. Coronado G.|Y. Rubi <strong>Identificadores:</strong> D.A. Neill</div>`)[0];
+            popup_3942641ed4814d2599d5332018f0ef2c.setContent(html_5c6d0a6b23d24fd4ac168f909b889693);
+        
+
+        marker_c7b634849f5441f49f01b6e51acf7bfc.bindPopup(popup_3942641ed4814d2599d5332018f0ef2c)
+        ;
+
+        
+    
+    
+            var marker_e47020296ddd4487b7ded732ad9ff04a = L.marker(
+                [9.64, -82.8],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_22b661f183f64c71a4c1c9e97c512990 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a73bb8d129e8424e8c97be3e4617b0f8 = $(`<div id="html_a73bb8d129e8424e8c97be3e4617b0f8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Approximately 4.5 km NE of Bribri and 15 km S of Cahuita along road to Bribri. Pastured slopes <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1978-03-12 00:00:00+00:00 <strong>Recolectores:</strong> K. Burt-Utley <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_22b661f183f64c71a4c1c9e97c512990.setContent(html_a73bb8d129e8424e8c97be3e4617b0f8);
+        
+
+        marker_e47020296ddd4487b7ded732ad9ff04a.bindPopup(popup_22b661f183f64c71a4c1c9e97c512990)
+        ;
+
+        
+    
+    
+            var marker_a879b51fc5ee47a4bb82ae334882d673 = L.marker(
+                [10.64, -83.73],
+                {}
+            ).addTo(marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad);
+        
+    
+        var popup_54c26bc465054afaafe407ca2ae54b2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e54c79f487824de5b56334fc77c3c09c = $(`<div id="html_e54c79f487824de5b56334fc77c3c09c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.N.F.S. Barra del Colorado. Llanura de Tortuguero. Sardinas. <strong>Elevación:</strong> 17.5 m  <strong>Fecha:</strong> 1995-03-01 00:00:00+00:00 <strong>Recolectores:</strong> Flor Araya <strong>Identificadores:</strong> N. Zamora, 1996 (INB)</div>`)[0];
+            popup_54c26bc465054afaafe407ca2ae54b2f.setContent(html_e54c79f487824de5b56334fc77c3c09c);
+        
+
+        marker_a879b51fc5ee47a4bb82ae334882d673.bindPopup(popup_54c26bc465054afaafe407ca2ae54b2f)
+        ;
+
+        
+    
+    
+            var layer_control_4b2be19d580c46f191664e93a33a61b7 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_76f8cc478ce54e9d8b68bba447e1ac7b,
+                    "ESRI World Imagery" : tile_layer_a273ba2d86a44121862f0022b254831d,
+                },
+                overlays :  {
+                    "macro_element_7392ec72b80e4dd5a4d3ea04731b18ad" : marker_cluster_7392ec72b80e4dd5a4d3ea04731b18ad,
+                },
+            };
+            L.control.layers(
+                layer_control_4b2be19d580c46f191664e93a33a61b7.base_layers,
+                layer_control_4b2be19d580c46f191664e93a33a61b7.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_ff1d31d45b2b4f93bd5de1ff0041ee1c);
+            tile_layer_a273ba2d86a44121862f0022b254831d.remove();
+        
+</script>

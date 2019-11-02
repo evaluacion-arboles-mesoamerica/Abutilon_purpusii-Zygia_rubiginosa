@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5bf8377487f04ddbb03d084a831bfb81 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5bf8377487f04ddbb03d084a831bfb81" ></div>
+        
+</body>
+<script>    
+    
+            var map_5bf8377487f04ddbb03d084a831bfb81 = L.map(
+                "map_5bf8377487f04ddbb03d084a831bfb81",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_5bf8377487f04ddbb03d084a831bfb81);
+
+            
+
+        
+    
+            var tile_layer_2d6cc81231504960b387a8b3da7d825e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5bf8377487f04ddbb03d084a831bfb81);
+        
+    
+            var tile_layer_6f653d8032c34453bc49606272370620 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5bf8377487f04ddbb03d084a831bfb81);
+        
+    
+            var marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51 = L.markerClusterGroup(
+                {}
+            );
+            map_5bf8377487f04ddbb03d084a831bfb81.addLayer(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+            var marker_22fd90100720434d97eacb0963564a1d = L.marker(
+                [10.4, -84.05],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_74b1b923c6684fb7873cd3dba1e427f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50c8669f94fc4631a6b440f0c82e0cb2 = $(`<div id="html_50c8669f94fc4631a6b440f0c82e0cb2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Braulio Carrillo Estación Penal Magsasay. Sendero Principal. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1990-10-20 00:00:00+00:00 <strong>Recolectores:</strong> Umaña, Gina <strong>Identificadores:</strong> Umaña, Gina</div>`)[0];
+            popup_74b1b923c6684fb7873cd3dba1e427f6.setContent(html_50c8669f94fc4631a6b440f0c82e0cb2);
+        
+
+        marker_22fd90100720434d97eacb0963564a1d.bindPopup(popup_74b1b923c6684fb7873cd3dba1e427f6)
+        ;
+
+        
+    
+    
+            var marker_2efa14b9ce5e4af0b1a96d9726944e5d = L.marker(
+                [13.758329999999999, -84.875],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_d699191127e247ae87a4505307286040 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9425ec3787f5474f845d0cc8365e83cd = $(`<div id="html_9425ec3787f5474f845d0cc8365e83cd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Siuna, El Toro <strong>Elevación:</strong> 110.0 m  <strong>Fecha:</strong> 1982-10-09 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> O. Tellez</div>`)[0];
+            popup_d699191127e247ae87a4505307286040.setContent(html_9425ec3787f5474f845d0cc8365e83cd);
+        
+
+        marker_2efa14b9ce5e4af0b1a96d9726944e5d.bindPopup(popup_d699191127e247ae87a4505307286040)
+        ;
+
+        
+    
+    
+            var marker_a3a6232495844250989717ab17faf30e = L.marker(
+                [13.76666, -84.76666],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_808931a2d52a4e24a16dc484896c9778 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a9850fc4b0847d6bcb5974a77e7ba11 = $(`<div id="html_6a9850fc4b0847d6bcb5974a77e7ba11" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Siuna, Calera <strong>Elevación:</strong> 322.5 m  <strong>Fecha:</strong> 1984-03-12 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_808931a2d52a4e24a16dc484896c9778.setContent(html_6a9850fc4b0847d6bcb5974a77e7ba11);
+        
+
+        marker_a3a6232495844250989717ab17faf30e.bindPopup(popup_808931a2d52a4e24a16dc484896c9778)
+        ;
+
+        
+    
+    
+            var marker_4109e3654e9444dc8ef70475c935a266 = L.marker(
+                [14.8364, -86.4556],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_f130c4b153d24819b8ad2a9590c0ad16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4adec468440a4951bb82f18950bfffc3 = $(`<div id="html_4adec468440a4951bb82f18950bfffc3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1938-03-01 00:00:00+00:00 <strong>Recolectores:</strong> C. von Hagen & W. von Hagen <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_f130c4b153d24819b8ad2a9590c0ad16.setContent(html_4adec468440a4951bb82f18950bfffc3);
+        
+
+        marker_4109e3654e9444dc8ef70475c935a266.bindPopup(popup_f130c4b153d24819b8ad2a9590c0ad16)
+        ;
+
+        
+    
+    
+            var marker_4f7d74ca576a4a51bb3ea06c357a798d = L.marker(
+                [13.0, -84.5],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_223cb5fb33d142119245685b22e3b2df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d0b870b1f6f4993b5be168e0c025f88 = $(`<div id="html_1d0b870b1f6f4993b5be168e0c025f88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1961-03-11 00:00:00+00:00 <strong>Recolectores:</strong> G. S. Bunting <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_223cb5fb33d142119245685b22e3b2df.setContent(html_1d0b870b1f6f4993b5be168e0c025f88);
+        
+
+        marker_4f7d74ca576a4a51bb3ea06c357a798d.bindPopup(popup_223cb5fb33d142119245685b22e3b2df)
+        ;
+
+        
+    
+    
+            var marker_ed889b1421cc4eacafa2c0fb75840c60 = L.marker(
+                [13.783332999999999, -84.7],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_486e4a46c3af4b2683b51f0723778106 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_599eca2902b2460fa83f6f833e0e5d8b = $(`<div id="html_599eca2902b2460fa83f6f833e0e5d8b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Siuna, Madriguera <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1984-03-15 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> B.Torke</div>`)[0];
+            popup_486e4a46c3af4b2683b51f0723778106.setContent(html_599eca2902b2460fa83f6f833e0e5d8b);
+        
+
+        marker_ed889b1421cc4eacafa2c0fb75840c60.bindPopup(popup_486e4a46c3af4b2683b51f0723778106)
+        ;
+
+        
+    
+    
+            var marker_4117cfa6c4e642ae8cc6a7b7581c572e = L.marker(
+                [13.75, -84.716667],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_e666e4ff49a54147bc13e747d7f4f410 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5250071fe679436ab64d649c8f70a263 = $(`<div id="html_5250071fe679436ab64d649c8f70a263" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Buenavista, 6 km NE de Siuna, camino a El Dos <strong>Elevación:</strong> 360.0 m  <strong>Fecha:</strong> 1983-02-26 00:00:00+00:00 <strong>Recolectores:</strong> P. P. Moreno|W. Robleto T. <strong>Identificadores:</strong> B.Torke</div>`)[0];
+            popup_e666e4ff49a54147bc13e747d7f4f410.setContent(html_5250071fe679436ab64d649c8f70a263);
+        
+
+        marker_4117cfa6c4e642ae8cc6a7b7581c572e.bindPopup(popup_e666e4ff49a54147bc13e747d7f4f410)
+        ;
+
+        
+    
+    
+            var marker_54f8c1e26922475685ed830bda0b257b = L.marker(
+                [8.866667, -83.283333],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_8d5d0c15727247ecb84125219cc8d5fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5ec8a6e98e44b869dcc82f5cac1f1ea = $(`<div id="html_b5ec8a6e98e44b869dcc82f5cac1f1ea" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Lower slopes of Fila Huacas, ca. 4 km NE (by road) from Carretera Interamericana at Las Huacas ('Venecia' on current maps) along rd. to Sinaí. <strong>Elevación:</strong> 450.0 m  <strong>Fecha:</strong> 1992-02-23 00:00:00+00:00 <strong>Recolectores:</strong> Michael H. Grayum|Randall J. Evans <strong>Identificadores:</strong> M. H. Grayum, II/</div>`)[0];
+            popup_8d5d0c15727247ecb84125219cc8d5fa.setContent(html_b5ec8a6e98e44b869dcc82f5cac1f1ea);
+        
+
+        marker_54f8c1e26922475685ed830bda0b257b.bindPopup(popup_8d5d0c15727247ecb84125219cc8d5fa)
+        ;
+
+        
+    
+    
+            var marker_a5e2903bb3f044be848ada1287e4a490 = L.marker(
+                [13.65, -84.8],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_d97e06b491634d0bb248730522463d34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8160ae00e6244521b71700f660450f6e = $(`<div id="html_8160ae00e6244521b71700f660450f6e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Waylawás (Peñas Blancas), ca 5 km al S de Wany, costado oeste del cerro. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1982-10-28 00:00:00+00:00 <strong>Recolectores:</strong> Alfredo Grijalva P.|F. Burgos <strong>Identificadores:</strong> B.Torke</div>`)[0];
+            popup_d97e06b491634d0bb248730522463d34.setContent(html_8160ae00e6244521b71700f660450f6e);
+        
+
+        marker_a5e2903bb3f044be848ada1287e4a490.bindPopup(popup_d97e06b491634d0bb248730522463d34)
+        ;
+
+        
+    
+    
+            var marker_7045dc8451954fc0a1f0117304d3809b = L.marker(
+                [14.32, -83.93],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_12e8f869067a4d2c9d805c2c3e49d6ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a36fe154ee764bbbbeba266ed93dbcd2 = $(`<div id="html_a36fe154ee764bbbbeba266ed93dbcd2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sur de Rio Wawa NW of Puerto Cabezas <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1971-03-11 00:00:00+00:00 <strong>Recolectores:</strong> E. L. Little Jr. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_12e8f869067a4d2c9d805c2c3e49d6ce.setContent(html_a36fe154ee764bbbbeba266ed93dbcd2);
+        
+
+        marker_7045dc8451954fc0a1f0117304d3809b.bindPopup(popup_12e8f869067a4d2c9d805c2c3e49d6ce)
+        ;
+
+        
+    
+    
+            var marker_20ed48f129a74555b7feef1a9c7bcafb = L.marker(
+                [13.590829999999999, -84.3425],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_adb226afa7114d5eb01c71902c438222 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_753c708096704a7d830c8b99d855ae3b = $(`<div id="html_753c708096704a7d830c8b99d855ae3b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Zelaya Norte. Alamikamba/Siuna road, 13 km NW of Alamikamba. Patch of secondary forest, very disturbed, clay soils <strong>Elevación:</strong> 53.0 m  <strong>Fecha:</strong> 2005-05-11 00:00:00+00:00 <strong>Recolectores:</strong> Benjamin M. Torke|B.S. Pérez <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_adb226afa7114d5eb01c71902c438222.setContent(html_753c708096704a7d830c8b99d855ae3b);
+        
+
+        marker_20ed48f129a74555b7feef1a9c7bcafb.bindPopup(popup_adb226afa7114d5eb01c71902c438222)
+        ;
+
+        
+    
+    
+            var marker_1f8ff6d77eba4f638d3200dc6c0c9186 = L.marker(
+                [13.725, -84.77916],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_098f7aa1d99b4587aeb05b3d0ef6d466 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a3bb20d8b7645d28385434b0b1c536b = $(`<div id="html_7a3bb20d8b7645d28385434b0b1c536b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Vicinity of La Luz-Siuna <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1961-03-11 00:00:00+00:00 <strong>Recolectores:</strong> George S. Bunting|L. Licht <strong>Identificadores:</strong> R.S. Cowan</div>`)[0];
+            popup_098f7aa1d99b4587aeb05b3d0ef6d466.setContent(html_7a3bb20d8b7645d28385434b0b1c536b);
+        
+
+        marker_1f8ff6d77eba4f638d3200dc6c0c9186.bindPopup(popup_098f7aa1d99b4587aeb05b3d0ef6d466)
+        ;
+
+        
+    
+    
+            var marker_76b77804c04b43b8be51310c7430956d = L.marker(
+                [13.7, -84.73333000000001],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_5b0685482bb04fc58e2049ae3cefb934 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a3c958ea5e4d4ebfd8f5556896f1c4 = $(`<div id="html_e8a3c958ea5e4d4ebfd8f5556896f1c4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Siuna, Finca El Corozo <strong>Elevación:</strong> 160.0 m  <strong>Fecha:</strong> 1983-08-17 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_5b0685482bb04fc58e2049ae3cefb934.setContent(html_e8a3c958ea5e4d4ebfd8f5556896f1c4);
+        
+
+        marker_76b77804c04b43b8be51310c7430956d.bindPopup(popup_5b0685482bb04fc58e2049ae3cefb934)
+        ;
+
+        
+    
+    
+            var marker_48a8fe4ac5c64d1fbc2685eb3a469b3f = L.marker(
+                [13.655270000000002, -84.99110999999999],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_c7230c766aa04ea5988f2e6096fd5c38 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10d2b292e430466ca9799f3d8162b729 = $(`<div id="html_10d2b292e430466ca9799f3d8162b729" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera Waslala-Siuna, Cerro El Bálsamo, aproximadamente a 30 km de Waní <strong>Elevación:</strong> 360.0 m  <strong>Fecha:</strong> 1983-04-01 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> O. Tellez</div>`)[0];
+            popup_c7230c766aa04ea5988f2e6096fd5c38.setContent(html_10d2b292e430466ca9799f3d8162b729);
+        
+
+        marker_48a8fe4ac5c64d1fbc2685eb3a469b3f.bindPopup(popup_c7230c766aa04ea5988f2e6096fd5c38)
+        ;
+
+        
+    
+    
+            var marker_a6cda93765094b06a9ce3f4567a257ac = L.marker(
+                [13.716667000000001, -84.8125],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_c681de259a804bb4b684c167aa3dbb67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8bbfaf79f6946c6ac9dbec67bd33735 = $(`<div id="html_f8bbfaf79f6946c6ac9dbec67bd33735" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Siuna, Río Matís <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1982-09-16 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> B.Torke</div>`)[0];
+            popup_c681de259a804bb4b684c167aa3dbb67.setContent(html_f8bbfaf79f6946c6ac9dbec67bd33735);
+        
+
+        marker_a6cda93765094b06a9ce3f4567a257ac.bindPopup(popup_c681de259a804bb4b684c167aa3dbb67)
+        ;
+
+        
+    
+    
+            var marker_3a37c2133e7f4e44b4bedb624cf96cfe = L.marker(
+                [13.666667000000002, -84.533333],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_96f6873ec1094507accbf253f4ffa19b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_060cf8e7c89a43a3a5e36e951e68d308 = $(`<div id="html_060cf8e7c89a43a3a5e36e951e68d308" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sector de Coperna <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1984-08-30 00:00:00+00:00 <strong>Recolectores:</strong> F. Ortíz <strong>Identificadores:</strong> B.Torke</div>`)[0];
+            popup_96f6873ec1094507accbf253f4ffa19b.setContent(html_060cf8e7c89a43a3a5e36e951e68d308);
+        
+
+        marker_3a37c2133e7f4e44b4bedb624cf96cfe.bindPopup(popup_96f6873ec1094507accbf253f4ffa19b)
+        ;
+
+        
+    
+    
+            var marker_5b29098bec8e49c7aacb9c4150edbdc6 = L.marker(
+                [13.65, -84.81666],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_5e97e1c437374c5e86c900ad4f92cefe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4d15bd246ee4bc1a0a9d9b8133495b6 = $(`<div id="html_f4d15bd246ee4bc1a0a9d9b8133495b6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Cerro Waylawás, east slope of northern range; limestone cliffs <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1979-03-11 00:00:00+00:00 <strong>Recolectores:</strong> John James Pipoly, III <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_5e97e1c437374c5e86c900ad4f92cefe.setContent(html_f4d15bd246ee4bc1a0a9d9b8133495b6);
+        
+
+        marker_5b29098bec8e49c7aacb9c4150edbdc6.bindPopup(popup_5e97e1c437374c5e86c900ad4f92cefe)
+        ;
+
+        
+    
+    
+            var marker_854e82a907474e9eadf0be76d48452a0 = L.marker(
+                [13.716667000000001, -84.81666700000001],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_78b36ea6f1094b3489215912081bf9d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d55478414fc3411693290ad02a5844b6 = $(`<div id="html_d55478414fc3411693290ad02a5844b6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Carretera btween Waní and Siuna, near Río Matís. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1979-03-14 00:00:00+00:00 <strong>Recolectores:</strong> John James Pipoly, III <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_78b36ea6f1094b3489215912081bf9d5.setContent(html_d55478414fc3411693290ad02a5844b6);
+        
+
+        marker_854e82a907474e9eadf0be76d48452a0.bindPopup(popup_78b36ea6f1094b3489215912081bf9d5)
+        ;
+
+        
+    
+    
+            var marker_9019a861fb9f45adb79b032854a3c3c2 = L.marker(
+                [14.316667, -83.93333299999999],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_a789c0cae97841b689537763a9d1a915 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c56e96435dc4d029f4ce18a2f4f8176 = $(`<div id="html_0c56e96435dc4d029f4ce18a2f4f8176" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sur de Río Wawa, 60 km NO de Puerto Cabezas; bosque hidrofitico <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1971-03-11 00:00:00+00:00 <strong>Recolectores:</strong> Elbert L. Little <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_a789c0cae97841b689537763a9d1a915.setContent(html_0c56e96435dc4d029f4ce18a2f4f8176);
+        
+
+        marker_9019a861fb9f45adb79b032854a3c3c2.bindPopup(popup_a789c0cae97841b689537763a9d1a915)
+        ;
+
+        
+    
+    
+            var marker_56dd365970084706a8e1c691601a82ca = L.marker(
+                [13.433329999999998, -84.16666],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_7131a67fc0aa463fbb4842a21e62ca41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9456b8d6bab48ea98b589d0fc194a0c = $(`<div id="html_a9456b8d6bab48ea98b589d0fc194a0c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Llanos de Makantaka, 10 km SW of  Alamikamba; pine savanna on seasonally flooded ground, burned annually in dry season <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1978-06-13 00:00:00+00:00 <strong>Recolectores:</strong> David A. Neill <strong>Identificadores:</strong> B.M. Torke (MO)</div>`)[0];
+            popup_7131a67fc0aa463fbb4842a21e62ca41.setContent(html_a9456b8d6bab48ea98b589d0fc194a0c);
+        
+
+        marker_56dd365970084706a8e1c691601a82ca.bindPopup(popup_7131a67fc0aa463fbb4842a21e62ca41)
+        ;
+
+        
+    
+    
+            var marker_dada3c88fc72410ba220998e3e795521 = L.marker(
+                [14.766667000000002, -84.75],
+                {}
+            ).addTo(marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51);
+        
+    
+        var popup_4646c3f8b3f54b26a3166df24bb44737 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f328e7967bf1450c9b017e37d1ff2c68 = $(`<div id="html_f328e7967bf1450c9b017e37d1ff2c68" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ahuas Bila [Auasbila], 200 km SO de Puerto Lempira, orilla del río Wankí, Coco o Segovia, La Mosquitia. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 1985-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Cirilo H. Nelson|Guadalupe Cruz R. <strong>Identificadores:</strong> B.M. Torke, 2001 (MO)</div>`)[0];
+            popup_4646c3f8b3f54b26a3166df24bb44737.setContent(html_f328e7967bf1450c9b017e37d1ff2c68);
+        
+
+        marker_dada3c88fc72410ba220998e3e795521.bindPopup(popup_4646c3f8b3f54b26a3166df24bb44737)
+        ;
+
+        
+    
+    
+            var layer_control_e3ed57ee69ec47878df3ae28c00f2ee0 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2d6cc81231504960b387a8b3da7d825e,
+                    "ESRI World Imagery" : tile_layer_6f653d8032c34453bc49606272370620,
+                },
+                overlays :  {
+                    "macro_element_ae01b04b2ae4467e96580a1e9a1fcb51" : marker_cluster_ae01b04b2ae4467e96580a1e9a1fcb51,
+                },
+            };
+            L.control.layers(
+                layer_control_e3ed57ee69ec47878df3ae28c00f2ee0.base_layers,
+                layer_control_e3ed57ee69ec47878df3ae28c00f2ee0.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_5bf8377487f04ddbb03d084a831bfb81);
+            tile_layer_6f653d8032c34453bc49606272370620.remove();
+        
+</script>

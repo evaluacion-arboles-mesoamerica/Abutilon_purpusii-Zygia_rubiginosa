@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_27a083ce81eb41e3976661a62d16c38d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_27a083ce81eb41e3976661a62d16c38d" ></div>
+        
+</body>
+<script>    
+    
+            var map_27a083ce81eb41e3976661a62d16c38d = L.map(
+                "map_27a083ce81eb41e3976661a62d16c38d",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_27a083ce81eb41e3976661a62d16c38d);
+
+            
+
+        
+    
+            var tile_layer_1cff614954dc439c880c465f79b4ff97 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_27a083ce81eb41e3976661a62d16c38d);
+        
+    
+            var tile_layer_5a275461b15f4d6681f9b9f063732385 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_27a083ce81eb41e3976661a62d16c38d);
+        
+    
+            var marker_cluster_34f9244d682c43b880612f69c9e49dc5 = L.markerClusterGroup(
+                {}
+            );
+            map_27a083ce81eb41e3976661a62d16c38d.addLayer(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+            var marker_57903a31493c490dbb437d8a56c49e60 = L.marker(
+                [8.7, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_992ca6270daa4d2e9737e977438d409b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91288c0b72b544598d0ff6629ad15605 = $(`<div id="html_91288c0b72b544598d0ff6629ad15605" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R. F. Golfo Dulce Rancho Quemado, en fila directamente al Oeste del centro del pueblo; bosque primario. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Hammel, Barry E. <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_992ca6270daa4d2e9737e977438d409b.setContent(html_91288c0b72b544598d0ff6629ad15605);
+        
+
+        marker_57903a31493c490dbb437d8a56c49e60.bindPopup(popup_992ca6270daa4d2e9737e977438d409b)
+        ;
+
+        
+    
+    
+            var marker_2e43723828794831a81cd4cd954893ac = L.marker(
+                [8.68, -83.57],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_a17fcad8d01d4de88d9202b9463ec135 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2269f737dba242bd801e9afcb9724747 = $(`<div id="html_2269f737dba242bd801e9afcb9724747" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Norte. <strong>Elevación:</strong> 240.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> Marín, Juan <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_a17fcad8d01d4de88d9202b9463ec135.setContent(html_2269f737dba242bd801e9afcb9724747);
+        
+
+        marker_2e43723828794831a81cd4cd954893ac.bindPopup(popup_a17fcad8d01d4de88d9202b9463ec135)
+        ;
+
+        
+    
+    
+            var marker_c0ab34c058c94538804d4c867638261c = L.marker(
+                [8.68, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_dd53b4036a654da7ba700de4a97597ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bc012b713cb469fb2e67dafd2d79b69 = $(`<div id="html_5bc012b713cb469fb2e67dafd2d79b69" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Oeste. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1992-08-15 00:00:00+00:00 <strong>Recolectores:</strong> Marín, Juan <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_dd53b4036a654da7ba700de4a97597ed.setContent(html_5bc012b713cb469fb2e67dafd2d79b69);
+        
+
+        marker_c0ab34c058c94538804d4c867638261c.bindPopup(popup_dd53b4036a654da7ba700de4a97597ed)
+        ;
+
+        
+    
+    
+            var marker_30983e3409de4dfdb53065ed1996656b = L.marker(
+                [8.69, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_f03e9fb3d79e444b875a3a727bebc7d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66bf0469a51e4b8db039eaae65fb6414 = $(`<div id="html_66bf0469a51e4b8db039eaae65fb6414" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, en la fila de la Tierra de Conservación. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-11-20 00:00:00+00:00 <strong>Recolectores:</strong> Zamora, Nelson <strong>Identificadores:</strong> Zamora, Nelson</div>`)[0];
+            popup_f03e9fb3d79e444b875a3a727bebc7d2.setContent(html_66bf0469a51e4b8db039eaae65fb6414);
+        
+
+        marker_30983e3409de4dfdb53065ed1996656b.bindPopup(popup_f03e9fb3d79e444b875a3a727bebc7d2)
+        ;
+
+        
+    
+    
+            var marker_16bd049ae4b8419389d5839d360b7814 = L.marker(
+                [8.73, -83.6],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_4497bb2ce381469ca4e4e7fe70115c67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1489628d74b44643ae7d85167570fbf0 = $(`<div id="html_1489628d74b44643ae7d85167570fbf0" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R. F. Golfo Dulce Fila al oeste de Rancho Quemado. Bosque primario. <strong>Elevación:</strong> 150.0 m  <strong>Fecha:</strong> 1991-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Carlos Saborío <strong>Identificadores:</strong> Hammel, Barry E.</div>`)[0];
+            popup_4497bb2ce381469ca4e4e7fe70115c67.setContent(html_1489628d74b44643ae7d85167570fbf0);
+        
+
+        marker_16bd049ae4b8419389d5839d360b7814.bindPopup(popup_4497bb2ce381469ca4e4e7fe70115c67)
+        ;
+
+        
+    
+    
+            var marker_89c65cfd9c604d5ead59a605a29fe165 = L.marker(
+                [8.691667, -83.591111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_2a92a1769eb449d0bee68aba33464081 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43e4b911973c463987a64c5f7e93e77a = $(`<div id="html_43e4b911973c463987a64c5f7e93e77a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Sierpe, entre Rancho Quemado y Drake.  Trocha al sur, sobre fila, antitos de la torre. <strong>Elevación:</strong> 375.0 m  <strong>Fecha:</strong> 2016-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Reinaldo Aguilar|Isabel Pérez|Daniel Santamaría <strong>Identificadores:</strong> B. Hammel 21/Mar./</div>`)[0];
+            popup_2a92a1769eb449d0bee68aba33464081.setContent(html_43e4b911973c463987a64c5f7e93e77a);
+        
+
+        marker_89c65cfd9c604d5ead59a605a29fe165.bindPopup(popup_2a92a1769eb449d0bee68aba33464081)
+        ;
+
+        
+    
+    
+            var marker_3f976bc262e14d3ba7a592550e8c522a = L.marker(
+                [15.6914, -88.8672],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_81ab0a15127b4f2486c6fa65f2704c3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19a14de875174311a1dce2967fed6ecb = $(`<div id="html_19a14de875174311a1dce2967fed6ecb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> along Río Bonita <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1941-12-21 00:00:00+00:00 <strong>Recolectores:</strong> J. A. Steyermark <strong>Identificadores:</strong> R. Duno de Stefano</div>`)[0];
+            popup_81ab0a15127b4f2486c6fa65f2704c3a.setContent(html_19a14de875174311a1dce2967fed6ecb);
+        
+
+        marker_3f976bc262e14d3ba7a592550e8c522a.bindPopup(popup_81ab0a15127b4f2486c6fa65f2704c3a)
+        ;
+
+        
+    
+    
+            var marker_fcaea5ceb02647ba962ef80eaaa018bc = L.marker(
+                [10.0, -84.8333],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_0874417a75cd40739b31606393caf98a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5babb47d22f6467692bde232f9740e90 = $(`<div id="html_5babb47d22f6467692bde232f9740e90" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> J. Marín <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_0874417a75cd40739b31606393caf98a.setContent(html_5babb47d22f6467692bde232f9740e90);
+        
+
+        marker_fcaea5ceb02647ba962ef80eaaa018bc.bindPopup(popup_0874417a75cd40739b31606393caf98a)
+        ;
+
+        
+    
+    
+            var marker_01873afec86c4fbe966a149d35719792 = L.marker(
+                [15.7817, -88.7758],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_377a3d2ea63446389801f5cf590d1009 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c9951e39ed064565adcf1dafcf97ed5a = $(`<div id="html_c9951e39ed064565adcf1dafcf97ed5a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Río Dulce, 2-4 mi. W of Livingston, on S side (left-hand side going up river) <strong>Elevación:</strong> 2.0 m  <strong>Fecha:</strong> 1940-04-16 00:00:00+00:00 <strong>Recolectores:</strong> J. A. Steyermark <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_377a3d2ea63446389801f5cf590d1009.setContent(html_c9951e39ed064565adcf1dafcf97ed5a);
+        
+
+        marker_01873afec86c4fbe966a149d35719792.bindPopup(popup_377a3d2ea63446389801f5cf590d1009)
+        ;
+
+        
+    
+    
+            var marker_4153c05c513148b4b5c332cb77f174c7 = L.marker(
+                [8.693056, -83.59277800000001],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_b657f346c84746239caafd17c8b69720 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebe93767f11344a28e6ff8820ca64e21 = $(`<div id="html_ebe93767f11344a28e6ff8820ca64e21" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, en la fila de la Tierra de Conservacion. - & F. Quesada. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-11-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b657f346c84746239caafd17c8b69720.setContent(html_ebe93767f11344a28e6ff8820ca64e21);
+        
+
+        marker_4153c05c513148b4b5c332cb77f174c7.bindPopup(popup_b657f346c84746239caafd17c8b69720)
+        ;
+
+        
+    
+    
+            var marker_398e9fe174774b18ba2d97c3fb56932f = L.marker(
+                [8.680556, -83.575],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_3e910cc70433466ebbb82ee45515c7f2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af0995aa0da645ca9470a590ae710e61 = $(`<div id="html_af0995aa0da645ca9470a590ae710e61" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Norte. <strong>Elevación:</strong> 240.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marin <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_3e910cc70433466ebbb82ee45515c7f2.setContent(html_af0995aa0da645ca9470a590ae710e61);
+        
+
+        marker_398e9fe174774b18ba2d97c3fb56932f.bindPopup(popup_3e910cc70433466ebbb82ee45515c7f2)
+        ;
+
+        
+    
+    
+            var marker_746dce76fa7a47f2bd597e877e141853 = L.marker(
+                [8.683333, -83.594444],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_bb490e2a3a14498a9c8c47569f6ecfb9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aaf6add277ec4b5eb874a0daff1c3228 = $(`<div id="html_aaf6add277ec4b5eb874a0daff1c3228" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Oeste. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1992-08-15 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marin <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_bb490e2a3a14498a9c8c47569f6ecfb9.setContent(html_aaf6add277ec4b5eb874a0daff1c3228);
+        
+
+        marker_746dce76fa7a47f2bd597e877e141853.bindPopup(popup_bb490e2a3a14498a9c8c47569f6ecfb9)
+        ;
+
+        
+    
+    
+            var marker_d8830383cc43494c8a6e40d43ddf6928 = L.marker(
+                [8.733333, -83.6],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_081eeace9dd64e9f9a2047af2ed51481 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f682280f53654fe8b2c868321de55ea6 = $(`<div id="html_f682280f53654fe8b2c868321de55ea6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Fila al oeste de Rancho Quemado. Bosque primario. <strong>Elevación:</strong> 150.5 m  <strong>Fecha:</strong> 1991-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Juan Carlos Saborio <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_081eeace9dd64e9f9a2047af2ed51481.setContent(html_f682280f53654fe8b2c868321de55ea6);
+        
+
+        marker_d8830383cc43494c8a6e40d43ddf6928.bindPopup(popup_081eeace9dd64e9f9a2047af2ed51481)
+        ;
+
+        
+    
+    
+            var marker_0dc9418f466c48c7a29a86e4f0cf26b1 = L.marker(
+                [8.7, -83.594445],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_2d991952d73f433aa86bc378d6140b5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e03763eabb149899f49b28a0436b574 = $(`<div id="html_7e03763eabb149899f49b28a0436b574" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, en fila directamente al Oeste del centro del pueblo; bosque primario. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_2d991952d73f433aa86bc378d6140b5e.setContent(html_7e03763eabb149899f49b28a0436b574);
+        
+
+        marker_0dc9418f466c48c7a29a86e4f0cf26b1.bindPopup(popup_2d991952d73f433aa86bc378d6140b5e)
+        ;
+
+        
+    
+    
+            var marker_9bf3ca1f30d2488ea8479b6d1468bef9 = L.marker(
+                [8.69, -83.55],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_f133773e6cc74a7cbef164c6ec32fa18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a32725769b2044b9aece43eec9faf32a = $(`<div id="html_a32725769b2044b9aece43eec9faf32a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce Fila al oeste de Rancho Quemado. Bosque primario. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1991-03-30 00:00:00+00:00 <strong>Recolectores:</strong> Juan C. Saborío|Barry E. Hammel|Reinaldo Aguilar <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_f133773e6cc74a7cbef164c6ec32fa18.setContent(html_a32725769b2044b9aece43eec9faf32a);
+        
+
+        marker_9bf3ca1f30d2488ea8479b6d1468bef9.bindPopup(popup_f133773e6cc74a7cbef164c6ec32fa18)
+        ;
+
+        
+    
+    
+            var marker_f07b76017d7146cdb57b97d12c5d9b28 = L.marker(
+                [8.68, -83.57],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_6d3818c800954e2bb49f11c5c7f36ecf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e21eb1b6f5d4a958da1533022d6382f = $(`<div id="html_1e21eb1b6f5d4a958da1533022d6382f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Norte. Sierpe. <strong>Elevación:</strong> 240.0 m  <strong>Fecha:</strong> 1992-04-27 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marín <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_6d3818c800954e2bb49f11c5c7f36ecf.setContent(html_1e21eb1b6f5d4a958da1533022d6382f);
+        
+
+        marker_f07b76017d7146cdb57b97d12c5d9b28.bindPopup(popup_6d3818c800954e2bb49f11c5c7f36ecf)
+        ;
+
+        
+    
+    
+            var marker_c0eb1cbce1bb4bbb842f6a6235168511 = L.marker(
+                [8.68, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_fc2754a6f31f439da04652967cbe05c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd6c66fa543a4adc9dd6ad8af2432fb5 = $(`<div id="html_fd6c66fa543a4adc9dd6ad8af2432fb5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rancho Quemado, Sector Oeste. Sierpe. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1992-08-15 00:00:00+00:00 <strong>Recolectores:</strong> Juan Marín <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_fc2754a6f31f439da04652967cbe05c3.setContent(html_fd6c66fa543a4adc9dd6ad8af2432fb5);
+        
+
+        marker_c0eb1cbce1bb4bbb842f6a6235168511.bindPopup(popup_fc2754a6f31f439da04652967cbe05c3)
+        ;
+
+        
+    
+    
+            var marker_aad3ba5309674494a6027e33261ad301 = L.marker(
+                [8.7, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_4fead492f1244338b10130ac78006cb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e51596f4bea4a1ba31d2170a7dc8021 = $(`<div id="html_2e51596f4bea4a1ba31d2170a7dc8021" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce; Península de Osa. Rancho Quemado, en fila directamente al Oeste del centro del pueblo; bosque primario. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Ifigenia Quintanilla <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_4fead492f1244338b10130ac78006cb6.setContent(html_2e51596f4bea4a1ba31d2170a7dc8021);
+        
+
+        marker_aad3ba5309674494a6027e33261ad301.bindPopup(popup_4fead492f1244338b10130ac78006cb6)
+        ;
+
+        
+    
+    
+            var marker_939cb8b8b9d34d2c897983f1c9ef5db2 = L.marker(
+                [8.69, -83.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_efd2a8b1ba4c48599f87499db9c03d56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd964014798141f095fbcca19614eb3f = $(`<div id="html_fd964014798141f095fbcca19614eb3f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> R.F. Golfo Dulce; Península de Osa. Rancho Quemado, en la fila de la Tierra de Conservación. * & F. Quesada <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1992-11-20 00:00:00+00:00 <strong>Recolectores:</strong> Nelson Zamora|Reinaldo Aguilar|Víctor H. Ramírez|Nora Martín|et al. <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_efd2a8b1ba4c48599f87499db9c03d56.setContent(html_fd964014798141f095fbcca19614eb3f);
+        
+
+        marker_939cb8b8b9d34d2c897983f1c9ef5db2.bindPopup(popup_efd2a8b1ba4c48599f87499db9c03d56)
+        ;
+
+        
+    
+    
+            var marker_8b55e786bd1349ecb73fa561c35aa83e = L.marker(
+                [11.239444, -84.237778],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_808028b4912d4c9faff7cf055fdf8fb2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_38a3387d86fa4002a4ecb6faa9137898 = $(`<div id="html_38a3387d86fa4002a4ecb6faa9137898" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio El Castillo, Comunidad Aguas Zarcas, 5 km al sur del puesto de guardaparques sobre el carril. <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 2005-03-13 00:00:00+00:00 <strong>Recolectores:</strong> A. Urbina <strong>Identificadores:</strong> W.D. Stevens</div>`)[0];
+            popup_808028b4912d4c9faff7cf055fdf8fb2.setContent(html_38a3387d86fa4002a4ecb6faa9137898);
+        
+
+        marker_8b55e786bd1349ecb73fa561c35aa83e.bindPopup(popup_808028b4912d4c9faff7cf055fdf8fb2)
+        ;
+
+        
+    
+    
+            var marker_cb49c53821384cffa52ee04e55d0c2fb = L.marker(
+                [16.14, -92.7779],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_0cf3c10d69344f7782d192932d6a211c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_790836ad2ada442bacb3021cf23de4f5 = $(`<div id="html_790836ad2ada442bacb3021cf23de4f5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Chiapas. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Dennis E. Breedlove <strong>Identificadores:</strong> R. Duno de Stefano</div>`)[0];
+            popup_0cf3c10d69344f7782d192932d6a211c.setContent(html_790836ad2ada442bacb3021cf23de4f5);
+        
+
+        marker_cb49c53821384cffa52ee04e55d0c2fb.bindPopup(popup_0cf3c10d69344f7782d192932d6a211c)
+        ;
+
+        
+    
+    
+            var marker_81a7600d8063496fafb076d3efe60548 = L.marker(
+                [17.425, -93.05833299999999],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_a45ed3985c684ae5a64c36322d34c7f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29c0735ee7254297a5437b1e4d670b07 = $(`<div id="html_29c0735ee7254297a5437b1e4d670b07" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Flora del norte de Chiapas y zonas adyacentes <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1965-06-01 00:00:00+00:00 <strong>Recolectores:</strong> J. Chavelas P.; L. A. González L.; L. A. Pérez J. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_a45ed3985c684ae5a64c36322d34c7f0.setContent(html_29c0735ee7254297a5437b1e4d670b07);
+        
+
+        marker_81a7600d8063496fafb076d3efe60548.bindPopup(popup_a45ed3985c684ae5a64c36322d34c7f0)
+        ;
+
+        
+    
+    
+            var marker_46e2ca32fbae4e57b55c639573343116 = L.marker(
+                [17.208333, -91.791667],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_4f5c8372a8724c4581945e3d2e154668 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60f7ad3b3c0c4c4398833354901aee88 = $(`<div id="html_60f7ad3b3c0c4c4398833354901aee88" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Jerónimo Tulijá, Selva Lacandona, Mpio. Palenque <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1968-06-15 00:00:00+00:00 <strong>Recolectores:</strong> J. Chavelas P.; G. Alanís; M. Martínez A. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_4f5c8372a8724c4581945e3d2e154668.setContent(html_60f7ad3b3c0c4c4398833354901aee88);
+        
+
+        marker_46e2ca32fbae4e57b55c639573343116.bindPopup(popup_4f5c8372a8724c4581945e3d2e154668)
+        ;
+
+        
+    
+    
+            var marker_779cb9f02f9e420d9a62e9c6457bf656 = L.marker(
+                [17.508333, -93.508333],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_8c9a284f5b1645dfa95ccbbdde04297f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5cd8c58e19764f87a2700d574fcc3952 = $(`<div id="html_5cd8c58e19764f87a2700d574fcc3952" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Km 65.2 Carretera Huimanguillo a Malpaso <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1965-06-14 00:00:00+00:00 <strong>Recolectores:</strong> L. A. González L.; V. Garza G.; J. M. León C. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_8c9a284f5b1645dfa95ccbbdde04297f.setContent(html_5cd8c58e19764f87a2700d574fcc3952);
+        
+
+        marker_779cb9f02f9e420d9a62e9c6457bf656.bindPopup(popup_8c9a284f5b1645dfa95ccbbdde04297f)
+        ;
+
+        
+    
+    
+            var marker_8a74cbdf39b34cd6999fae47a82482f2 = L.marker(
+                [17.208333, -91.791667],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_b79a56f6ced34949b2868062a72e7f41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c676d2040644a0e80e61500631b5ac8 = $(`<div id="html_2c676d2040644a0e80e61500631b5ac8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> San Jerónimo Tulijá, Selva Lacandona, Mpio. Palenque <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1968-06-15 00:00:00+00:00 <strong>Recolectores:</strong> J. Chavelas P.; G. Alanís; M. Martínez A. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_b79a56f6ced34949b2868062a72e7f41.setContent(html_2c676d2040644a0e80e61500631b5ac8);
+        
+
+        marker_8a74cbdf39b34cd6999fae47a82482f2.bindPopup(popup_b79a56f6ced34949b2868062a72e7f41)
+        ;
+
+        
+    
+    
+            var marker_141012bfcc524dd78a5fee6063ed64bc = L.marker(
+                [17.375, -93.041667],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_0b6f0a9b43e447ac9335369d54f05e1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c05ae31b1527434d95023b038bdebecc = $(`<div id="html_c05ae31b1527434d95023b038bdebecc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Flora del norte de Chiapas y zonas adyacentes <strong>Elevación:</strong> 0.0 m  <strong>Fecha:</strong> 1965-07-01 00:00:00+00:00 <strong>Recolectores:</strong> J. Chavelas P.; L. A. González L.; L. A. Pérez J. <strong>Identificadores:</strong> NO DISPONIBLE</div>`)[0];
+            popup_0b6f0a9b43e447ac9335369d54f05e1c.setContent(html_c05ae31b1527434d95023b038bdebecc);
+        
+
+        marker_141012bfcc524dd78a5fee6063ed64bc.bindPopup(popup_0b6f0a9b43e447ac9335369d54f05e1c)
+        ;
+
+        
+    
+    
+            var marker_aea784eae7104092a9e6e69fac622391 = L.marker(
+                [8.691667, -83.591111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_1b98ac360e604562b1a1f12dd25afd61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a6f2905cbf6f443baa7c9cb1f78e285c = $(`<div id="html_a6f2905cbf6f443baa7c9cb1f78e285c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Sierpe, entre Rancho Quemado y Drake. Trocha al sur, sobre fila, antitos de la torre. <strong>Elevación:</strong> 387.5 m  <strong>Fecha:</strong> 2016-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar ; Isabel Pérez ; Daniel Santamaría <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_1b98ac360e604562b1a1f12dd25afd61.setContent(html_a6f2905cbf6f443baa7c9cb1f78e285c);
+        
+
+        marker_aea784eae7104092a9e6e69fac622391.bindPopup(popup_1b98ac360e604562b1a1f12dd25afd61)
+        ;
+
+        
+    
+    
+            var marker_6cd56fc3460b4f418774ced9f56eb3d2 = L.marker(
+                [8.691667, -83.591111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_1a4e71d7965a4baa925944c6566b5b93 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_506769c2596e4eb38d9c27e22fea87c6 = $(`<div id="html_506769c2596e4eb38d9c27e22fea87c6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Sierpe, entre Rancho Quemado y Drake. Trocha al sur, sobre fila, antitos de la torre. <strong>Elevación:</strong> 387.5 m  <strong>Fecha:</strong> 2016-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar ; Isabel Pérez ; Daniel Santamaría <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_1a4e71d7965a4baa925944c6566b5b93.setContent(html_506769c2596e4eb38d9c27e22fea87c6);
+        
+
+        marker_6cd56fc3460b4f418774ced9f56eb3d2.bindPopup(popup_1a4e71d7965a4baa925944c6566b5b93)
+        ;
+
+        
+    
+    
+            var marker_2a9456a2993c44b1b1a34cb712be0099 = L.marker(
+                [8.691667, -83.591111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_e1a9876c014440fea893ff1fd2815470 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e3526ecbfb27408fbda9caced2972983 = $(`<div id="html_e3526ecbfb27408fbda9caced2972983" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Sierpe, entre Rancho Quemado y Drake. Trocha al sur, sobre fila, antitos de la torre. <strong>Elevación:</strong> 387.5 m  <strong>Fecha:</strong> 2016-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar ; Isabel Pérez ; Daniel Santamaría <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_e1a9876c014440fea893ff1fd2815470.setContent(html_e3526ecbfb27408fbda9caced2972983);
+        
+
+        marker_2a9456a2993c44b1b1a34cb712be0099.bindPopup(popup_e1a9876c014440fea893ff1fd2815470)
+        ;
+
+        
+    
+    
+            var marker_518d37d786e94dd8b8b9ebf05225b9fc = L.marker(
+                [8.691667, -83.591111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_93548aac8fc3430aaa0b08e177989341 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_becb33c6ad2e42ca9095e4eb317c02b4 = $(`<div id="html_becb33c6ad2e42ca9095e4eb317c02b4" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Distrito de Sierpe, entre Rancho Quemado y Drake. Trocha al sur, sobre fila, antitos de la torre. <strong>Elevación:</strong> 387.5 m  <strong>Fecha:</strong> 2016-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar ; Isabel Pérez ; Daniel Santamaría <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_93548aac8fc3430aaa0b08e177989341.setContent(html_becb33c6ad2e42ca9095e4eb317c02b4);
+        
+
+        marker_518d37d786e94dd8b8b9ebf05225b9fc.bindPopup(popup_93548aac8fc3430aaa0b08e177989341)
+        ;
+
+        
+    
+    
+            var marker_1b943ff57c7c4e9f99f9696d037edb57 = L.marker(
+                [13.283332999999999, -85.666667],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_f36d7c43d2d14542a0f17487cdf8cf0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e03d1b12e7854fd591fc8cf18f99c268 = $(`<div id="html_e03d1b12e7854fd591fc8cf18f99c268" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio del Cua, Macizos del Cerro Peñas Blanca, Cerro El Tabaco <strong>Elevación:</strong> 1300.0 m  <strong>Fecha:</strong> 1997-07-24 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|I. Coronado G. <strong>Identificadores:</strong> A. Pool</div>`)[0];
+            popup_f36d7c43d2d14542a0f17487cdf8cf0e.setContent(html_e03d1b12e7854fd591fc8cf18f99c268);
+        
+
+        marker_1b943ff57c7c4e9f99f9696d037edb57.bindPopup(popup_f36d7c43d2d14542a0f17487cdf8cf0e)
+        ;
+
+        
+    
+    
+            var marker_7d172d19fbfe4729b8b0db7e86195d7c = L.marker(
+                [11.366660000000001, -84.01666],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_d3e338efdc6a4aefa2bf9ce21ef6310e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67ec9c7905d9467889361ed3a3b2ddc5 = $(`<div id="html_67ec9c7905d9467889361ed3a3b2ddc5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Nueva Guinea, Reserva Indio-Maiz, Río Pijibaye entre el  Caño Bijagua y el Cerro Chiripa <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1999-01-13 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|I. Coronado G.|O. Caballero|L. Ruíz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_d3e338efdc6a4aefa2bf9ce21ef6310e.setContent(html_67ec9c7905d9467889361ed3a3b2ddc5);
+        
+
+        marker_7d172d19fbfe4729b8b0db7e86195d7c.bindPopup(popup_d3e338efdc6a4aefa2bf9ce21ef6310e)
+        ;
+
+        
+    
+    
+            var marker_6ba058bca4f241a19b919c4c738cbaee = L.marker(
+                [11.366667, -84.016667],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_65a48d9cd28349778d04733402246697 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e548589e33d4e7abe9ff96a49328adb = $(`<div id="html_4e548589e33d4e7abe9ff96a49328adb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Municipio de Nueva Guinea, Reserva Indio-Maiz, Río Pijibaye entre el Caño Bijagua y el Cerro Chiripa. <strong>Elevación:</strong> 125.0 m  <strong>Fecha:</strong> 1999-01-14 00:00:00+00:00 <strong>Recolectores:</strong> R.M. Rueda|I. Coronado G.|O. Caballero|L. Ruíz <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_65a48d9cd28349778d04733402246697.setContent(html_4e548589e33d4e7abe9ff96a49328adb);
+        
+
+        marker_6ba058bca4f241a19b919c4c738cbaee.bindPopup(popup_65a48d9cd28349778d04733402246697)
+        ;
+
+        
+    
+    
+            var marker_3cd47b23a29b4d8cbacd33c573015396 = L.marker(
+                [17.211944, -92.9675],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_aa111ef6eac24f348621dc4dd41c5393 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac35f402cea34b96b0f4676353587c54 = $(`<div id="html_ac35f402cea34b96b0f4676353587c54" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Slope, above Rayón along road to Pantepec and Tapalapa. <strong>Elevación:</strong> 1770.0 m  <strong>Fecha:</strong> 1981-09-22 00:00:00+00:00 <strong>Recolectores:</strong> Dennis E. Breedlove <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_aa111ef6eac24f348621dc4dd41c5393.setContent(html_ac35f402cea34b96b0f4676353587c54);
+        
+
+        marker_3cd47b23a29b4d8cbacd33c573015396.bindPopup(popup_aa111ef6eac24f348621dc4dd41c5393)
+        ;
+
+        
+    
+    
+            var marker_006f3dad7b2d4e1fb8e8c463e32c66f5 = L.marker(
+                [15.789444, -88.866111],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_52e2f32c3f6b4f398485754d7c1a742d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88bc3501fd1f41f994226af7c63faa44 = $(`<div id="html_88bc3501fd1f41f994226af7c63faa44" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Creek Jute, Biotopo Chocón Machacas. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1988-07-28 00:00:00+00:00 <strong>Recolectores:</strong> Pedro Tenorio L.|Esteban M. Martínez S.|Herbert Droege|Ava Nury Díaz <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_52e2f32c3f6b4f398485754d7c1a742d.setContent(html_88bc3501fd1f41f994226af7c63faa44);
+        
+
+        marker_006f3dad7b2d4e1fb8e8c463e32c66f5.bindPopup(popup_52e2f32c3f6b4f398485754d7c1a742d)
+        ;
+
+        
+    
+    
+            var marker_b03787f46e1e4a74a007924171ebd5ed = L.marker(
+                [15.681667000000001, -88.678333],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_ec9192e511d74f2395c6c43d43dbf90e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d79da79725343c5bccc40e9c46cdd52 = $(`<div id="html_0d79da79725343c5bccc40e9c46cdd52" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Montañas del Mico, 7-8 km W of Santo Tomás de Castilla on road to microwave tower. <strong>Elevación:</strong> 625.0 m  <strong>Fecha:</strong> 1988-08-19 00:00:00+00:00 <strong>Recolectores:</strong> W. D. Stevens|Esteban M. Martínez S.|Herbert Droege|Ava Nury Díaz <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_ec9192e511d74f2395c6c43d43dbf90e.setContent(html_0d79da79725343c5bccc40e9c46cdd52);
+        
+
+        marker_b03787f46e1e4a74a007924171ebd5ed.bindPopup(popup_ec9192e511d74f2395c6c43d43dbf90e)
+        ;
+
+        
+    
+    
+            var marker_125e82f2f47d4890be3058bf0692799d = L.marker(
+                [17.28, -92.48],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_2a7a6c32beb8411899262a014f32d324 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73015b43c1b54d7eb8ffaf62839788ae = $(`<div id="html_73015b43c1b54d7eb8ffaf62839788ae" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Kokijaz. <strong>Elevación:</strong> 1300.0 m  <strong>Fecha:</strong> 1982-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Alush Shilom Ton <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_2a7a6c32beb8411899262a014f32d324.setContent(html_73015b43c1b54d7eb8ffaf62839788ae);
+        
+
+        marker_125e82f2f47d4890be3058bf0692799d.bindPopup(popup_2a7a6c32beb8411899262a014f32d324)
+        ;
+
+        
+    
+    
+            var marker_40bc9ffe2e4f4836a825d7def06b3b13 = L.marker(
+                [15.691389000000001, -88.867222],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_ce5322512a634c6c9d638a243171491f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_318dd707ccf84f03beea3e00e4ddd22d = $(`<div id="html_318dd707ccf84f03beea3e00e4ddd22d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along Río Bonita <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1941-12-21 00:00:00+00:00 <strong>Recolectores:</strong> Julian A. Steyermark <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_ce5322512a634c6c9d638a243171491f.setContent(html_318dd707ccf84f03beea3e00e4ddd22d);
+        
+
+        marker_40bc9ffe2e4f4836a825d7def06b3b13.bindPopup(popup_ce5322512a634c6c9d638a243171491f)
+        ;
+
+        
+    
+    
+            var marker_cddd53c006e34bad830bd4a3a7973756 = L.marker(
+                [17.28, -92.48],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_7226b1634be34ff488860c0946ea2681 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c1467e6c2be74753942eb5d617d3e64c = $(`<div id="html_c1467e6c2be74753942eb5d617d3e64c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Colonia Kokijaz. <strong>Elevación:</strong> 1000.0 m  <strong>Fecha:</strong> 1983-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Alush Shilom Ton <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_7226b1634be34ff488860c0946ea2681.setContent(html_c1467e6c2be74753942eb5d617d3e64c);
+        
+
+        marker_cddd53c006e34bad830bd4a3a7973756.bindPopup(popup_7226b1634be34ff488860c0946ea2681)
+        ;
+
+        
+    
+    
+            var marker_8923d996024d4fe5af0045d49e6891c6 = L.marker(
+                [15.166667000000002, -92.333333],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_5c74bee565c7494297ab954b99bfd8a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7d0d9f56a0942a383b3aa6df979d808 = $(`<div id="html_e7d0d9f56a0942a383b3aa6df979d808" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca Irlanda. <strong>Elevación:</strong> 950.0 m  <strong>Fecha:</strong> 1914-06-01 00:00:00+00:00 <strong>Recolectores:</strong> C.A. Purpus <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_5c74bee565c7494297ab954b99bfd8a8.setContent(html_e7d0d9f56a0942a383b3aa6df979d808);
+        
+
+        marker_8923d996024d4fe5af0045d49e6891c6.bindPopup(popup_5c74bee565c7494297ab954b99bfd8a8)
+        ;
+
+        
+    
+    
+            var marker_ce78ebef5ca1454f978a0ef311c4ab65 = L.marker(
+                [14.91, -91.895278],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_d68935574e6c4820a90cd36c97807e31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0819f697ce44a09865469b19f5e83a3 = $(`<div id="html_f0819f697ce44a09865469b19f5e83a3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Finca Armenia, vicinity of Rafael de Cuesta. <strong>Elevación:</strong> 1524.0 m  <strong>Fecha:</strong> 1977-07-06 00:00:00+00:00 <strong>Recolectores:</strong> John D. Dwyer <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_d68935574e6c4820a90cd36c97807e31.setContent(html_f0819f697ce44a09865469b19f5e83a3);
+        
+
+        marker_ce78ebef5ca1454f978a0ef311c4ab65.bindPopup(popup_d68935574e6c4820a90cd36c97807e31)
+        ;
+
+        
+    
+    
+            var marker_9424af373061487f8e759447bb334d5d = L.marker(
+                [16.98, -91.59],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_013587e943db4ab5a8ebe594692447c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_995d913007394d38a9749f531c2869c1 = $(`<div id="html_995d913007394d38a9749f531c2869c1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> En Naha a 15 km al N de Monte Líbano camino a Chancala. <strong>Elevación:</strong> 860.0 m  <strong>Fecha:</strong> 1986-04-13 00:00:00+00:00 <strong>Recolectores:</strong> Esteban M. Martínez S. <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_013587e943db4ab5a8ebe594692447c5.setContent(html_995d913007394d38a9749f531c2869c1);
+        
+
+        marker_9424af373061487f8e759447bb334d5d.bindPopup(popup_013587e943db4ab5a8ebe594692447c5)
+        ;
+
+        
+    
+    
+            var marker_5e10a3bd75cd4f6c87cf84bd0efd43cf = L.marker(
+                [17.04, -92.75],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_cb8cd8d601824b4eaff425308eebd73b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_453ad00482184313bc84b1061a91878e = $(`<div id="html_453ad00482184313bc84b1061a91878e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Entre Bochil y Simojovel. <strong>Elevación:</strong> 1260.0 m  <strong>Fecha:</strong> 1967-08-12 00:00:00+00:00 <strong>Recolectores:</strong> Arturo Gómez Pompa <strong>Identificadores:</strong> R. Duno de Stefano (CICY)</div>`)[0];
+            popup_cb8cd8d601824b4eaff425308eebd73b.setContent(html_453ad00482184313bc84b1061a91878e);
+        
+
+        marker_5e10a3bd75cd4f6c87cf84bd0efd43cf.bindPopup(popup_cb8cd8d601824b4eaff425308eebd73b)
+        ;
+
+        
+    
+    
+            var marker_0cc8aa0fd9bf4369b95852fed00e2bfb = L.marker(
+                [15.78166, -88.77583],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_1911cd3478964956a8e23395932028ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f2466b7eccd47f4b03ae30da5a8d97c = $(`<div id="html_5f2466b7eccd47f4b03ae30da5a8d97c" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Río Dulce, 2-4 miles west of Livingston, on south side (left-hand side going up river) <strong>Elevación:</strong> 2.0 m  <strong>Fecha:</strong> 1940-04-16 00:00:00+00:00 <strong>Recolectores:</strong> Julian A. Steyermark <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_1911cd3478964956a8e23395932028ff.setContent(html_5f2466b7eccd47f4b03ae30da5a8d97c);
+        
+
+        marker_0cc8aa0fd9bf4369b95852fed00e2bfb.bindPopup(popup_1911cd3478964956a8e23395932028ff)
+        ;
+
+        
+    
+    
+            var marker_c55c7a2463224b38a9eea9108cfbf05c = L.marker(
+                [8.7, -83.594444],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_e561bb46ce414320b5923556a883789e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb2094bbce4045ee910280a9456ac55d = $(`<div id="html_cb2094bbce4045ee910280a9456ac55d" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce Canton de Osa; Rancho Quemado, en fila directamente al Oeste del centro del pueblo <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1991-05-05 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Ifigenia Quintanilla <strong>Identificadores:</strong> B. Hammel</div>`)[0];
+            popup_e561bb46ce414320b5923556a883789e.setContent(html_cb2094bbce4045ee910280a9456ac55d);
+        
+
+        marker_c55c7a2463224b38a9eea9108cfbf05c.bindPopup(popup_e561bb46ce414320b5923556a883789e)
+        ;
+
+        
+    
+    
+            var marker_1a4ce8155fe4444082e3da3a8656cb62 = L.marker(
+                [17.525, -93.125],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_c0bab1850280470b89b28f906c21d6b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66e60d7050fc442fa984c56d07999c7f = $(`<div id="html_66e60d7050fc442fa984c56d07999c7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> AL NO de Pichucalco <strong>Elevación:</strong> 30.0 m  <strong>Fecha:</strong> 1950-08-20 00:00:00+00:00 <strong>Recolectores:</strong> F. Miranda G. <strong>Identificadores:</strong> F. Miranda G.</div>`)[0];
+            popup_c0bab1850280470b89b28f906c21d6b4.setContent(html_66e60d7050fc442fa984c56d07999c7f);
+        
+
+        marker_1a4ce8155fe4444082e3da3a8656cb62.bindPopup(popup_c0bab1850280470b89b28f906c21d6b4)
+        ;
+
+        
+    
+    
+            var marker_81065243e7cb4958a5e46e7959b6745a = L.marker(
+                [17.28, -92.483333],
+                {}
+            ).addTo(marker_cluster_34f9244d682c43b880612f69c9e49dc5);
+        
+    
+        var popup_d7f68f7e873547979a56776941e6ed8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_956b47b60ed14620a6a787f5822f1db8 = $(`<div id="html_956b47b60ed14620a6a787f5822f1db8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Coquiljá <strong>Elevación:</strong> 650.0 m  <strong>Fecha:</strong> 1982-09-30 00:00:00+00:00 <strong>Recolectores:</strong> A. Méndez G. (Alush Shilom Ton) <strong>Identificadores:</strong> E. Martínez S.</div>`)[0];
+            popup_d7f68f7e873547979a56776941e6ed8e.setContent(html_956b47b60ed14620a6a787f5822f1db8);
+        
+
+        marker_81065243e7cb4958a5e46e7959b6745a.bindPopup(popup_d7f68f7e873547979a56776941e6ed8e)
+        ;
+
+        
+    
+    
+            var layer_control_3538f60338104ad3931c2992bd690d12 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1cff614954dc439c880c465f79b4ff97,
+                    "ESRI World Imagery" : tile_layer_5a275461b15f4d6681f9b9f063732385,
+                },
+                overlays :  {
+                    "macro_element_34f9244d682c43b880612f69c9e49dc5" : marker_cluster_34f9244d682c43b880612f69c9e49dc5,
+                },
+            };
+            L.control.layers(
+                layer_control_3538f60338104ad3931c2992bd690d12.base_layers,
+                layer_control_3538f60338104ad3931c2992bd690d12.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_27a083ce81eb41e3976661a62d16c38d);
+            tile_layer_5a275461b15f4d6681f9b9f063732385.remove();
+        
+</script>

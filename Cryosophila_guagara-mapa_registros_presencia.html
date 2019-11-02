@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8b81910b27c94c4199bbfff0d6f835c1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_8b81910b27c94c4199bbfff0d6f835c1" ></div>
+        
+</body>
+<script>    
+    
+            var map_8b81910b27c94c4199bbfff0d6f835c1 = L.map(
+                "map_8b81910b27c94c4199bbfff0d6f835c1",
+                {
+                    center: [9.63, -84.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+
+            
+
+        
+    
+            var tile_layer_ee95ace6122249e8ba86bcabd5b9cd23 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+            var tile_layer_daad84867e894d96b548cadfa80b06d9 = L.tileLayer(
+                "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ESRI World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+            var circle_marker_b440c6762b404d7ab2834d66c58eb228 = L.circleMarker(
+                [8.71, -83.51],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_88952b1497b94b27812eed50d4476ea2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35b5025b16384617b35887c3f2bcdb28 = $(`<div id="html_35b5025b16384617b35887c3f2bcdb28" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Aguabuena, 3-5 km W of Rincón. Four - hectare permanent sample plot 1 km N of Boscosa station in well - drained undulating terrain with slope of 15 - 35º. Tall primary forest with mary palms and large lianas. Characteristic species: Symphonia, Carapa, B <strong>Elevación:</strong> 350.0 m  <strong>Fecha:</strong> 1993-06-17 00:00:00+00:00 <strong>Recolectores:</strong> Thomsen, Karsten <strong>Identificadores:</strong> Thomsen, Karsten</div>`)[0];
+            popup_88952b1497b94b27812eed50d4476ea2.setContent(html_35b5025b16384617b35887c3f2bcdb28);
+        
+
+        circle_marker_b440c6762b404d7ab2834d66c58eb228.bindPopup(popup_88952b1497b94b27812eed50d4476ea2)
+        ;
+
+        
+    
+    
+            var circle_marker_93184f9cdc144e6fb455a494e5341955 = L.circleMarker(
+                [10.0, -84.8333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_b919a412b1ac4b578c6d5d544825450a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc5e6898dc234dbaba5d2f7c9f3bcccc = $(`<div id="html_bc5e6898dc234dbaba5d2f7c9f3bcccc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 1990-01-01 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> RRC ID Flag</div>`)[0];
+            popup_b919a412b1ac4b578c6d5d544825450a.setContent(html_bc5e6898dc234dbaba5d2f7c9f3bcccc);
+        
+
+        circle_marker_93184f9cdc144e6fb455a494e5341955.bindPopup(popup_b919a412b1ac4b578c6d5d544825450a)
+        ;
+
+        
+    
+    
+            var circle_marker_3e17b67ff1cd4ec8b56839881977c5a3 = L.circleMarker(
+                [8.70668, -83.59142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_9f4307e1641847af8532a8cb1daf7af9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_284f147c8e8548a8b601a6cf4f74d559 = $(`<div id="html_284f147c8e8548a8b601a6cf4f74d559" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Eastern Osa peninsula. Edge of tropical moist forest. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2001-07-25 00:00:00+00:00 <strong>Recolectores:</strong> Margaret M. Mayfield <strong>Identificadores:</strong> Randy Evans (MO)</div>`)[0];
+            popup_9f4307e1641847af8532a8cb1daf7af9.setContent(html_284f147c8e8548a8b601a6cf4f74d559);
+        
+
+        circle_marker_3e17b67ff1cd4ec8b56839881977c5a3.bindPopup(popup_9f4307e1641847af8532a8cb1daf7af9)
+        ;
+
+        
+    
+    
+            var circle_marker_48ea951b340b4fc4a996c14714c8ed84 = L.circleMarker(
+                [8.70682, -83.59142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_a8ddc427eb704b3e879fd5185add9199 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a28053a60fe146089f66a408b66ca327 = $(`<div id="html_a28053a60fe146089f66a408b66ca327" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Eastern Osa peninsula. Understory vegetation on the edge of forest bordering cattle pasture on the east coast of the Osa peninsula. Within 1 km of coordinates. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-01-25 00:00:00+00:00 <strong>Recolectores:</strong> Margaret M. Mayfield <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a8ddc427eb704b3e879fd5185add9199.setContent(html_a28053a60fe146089f66a408b66ca327);
+        
+
+        circle_marker_48ea951b340b4fc4a996c14714c8ed84.bindPopup(popup_a8ddc427eb704b3e879fd5185add9199)
+        ;
+
+        
+    
+    
+            var circle_marker_919247454d254a20b04959b4e8ea3f24 = L.circleMarker(
+                [8.70693, -83.59142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_535b93b3f18c4a55bbc25b7839337f61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3842fbbaa6db4e209d6956766af2ab2b = $(`<div id="html_3842fbbaa6db4e209d6956766af2ab2b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Eastern Osa peninsula. Understory vegetation on the edge of forest bordering cattle pasture on the east coast of the Osa peninsula. Within 1 km of coordinates. <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2003-01-25 00:00:00+00:00 <strong>Recolectores:</strong> Margaret M. Mayfield <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_535b93b3f18c4a55bbc25b7839337f61.setContent(html_3842fbbaa6db4e209d6956766af2ab2b);
+        
+
+        circle_marker_919247454d254a20b04959b4e8ea3f24.bindPopup(popup_535b93b3f18c4a55bbc25b7839337f61)
+        ;
+
+        
+    
+    
+            var circle_marker_d04a0f0af9a14f94bd8280e0b8ba5234 = L.circleMarker(
+                [8.5083, -82.82],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_3e0633855cac4724a0235281f56d46fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d285b56869841aa9c742db072e7c975 = $(`<div id="html_7d285b56869841aa9c742db072e7c975" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E of Panama Hwy. 1 (Interamerican Hwy., David Paso de Canoa on Costa Rica border) NW of bridge over Rio Jacu (SE of Paso de Canoa) <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_3e0633855cac4724a0235281f56d46fa.setContent(html_7d285b56869841aa9c742db072e7c975);
+        
+
+        circle_marker_d04a0f0af9a14f94bd8280e0b8ba5234.bindPopup(popup_3e0633855cac4724a0235281f56d46fa)
+        ;
+
+        
+    
+    
+            var circle_marker_37bae0a445ac42ccb527e48ed1ec42e9 = L.circleMarker(
+                [8.67, -83.17],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_2f79c50925e8471b9b9fc44958d0b383 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8902cc36c4004e8585d5f50235e02fcf = $(`<div id="html_8902cc36c4004e8585d5f50235e02fcf" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rfugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceno, N of Rio Canaza, N of Golfito. <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2f79c50925e8471b9b9fc44958d0b383.setContent(html_8902cc36c4004e8585d5f50235e02fcf);
+        
+
+        circle_marker_37bae0a445ac42ccb527e48ed1ec42e9.bindPopup(popup_2f79c50925e8471b9b9fc44958d0b383)
+        ;
+
+        
+    
+    
+            var circle_marker_5045be3af0c447e485f5a9bc8b454ea2 = L.circleMarker(
+                [9.680556, -84.395278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_d9d5640541ce4bc7918e27f5520d764e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce39527396164728bdc5db17914368c3 = $(`<div id="html_ce39527396164728bdc5db17914368c3" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal de Puriscal, bosque primario cerca del puente sobre el Rio Negro. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1997-03-21 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_d9d5640541ce4bc7918e27f5520d764e.setContent(html_ce39527396164728bdc5db17914368c3);
+        
+
+        circle_marker_5045be3af0c447e485f5a9bc8b454ea2.bindPopup(popup_d9d5640541ce4bc7918e27f5520d764e)
+        ;
+
+        
+    
+    
+            var circle_marker_1603f5a5d9484159a8d5704b14de43d5 = L.circleMarker(
+                [8.702778, -83.638889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_b323fb1847624e9b92a531dbe04d016b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37ff8c2275d340a08228214b87842779 = $(`<div id="html_37ff8c2275d340a08228214b87842779" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Angeles de Drake. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1997-02-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_b323fb1847624e9b92a531dbe04d016b.setContent(html_37ff8c2275d340a08228214b87842779);
+        
+
+        circle_marker_1603f5a5d9484159a8d5704b14de43d5.bindPopup(popup_b323fb1847624e9b92a531dbe04d016b)
+        ;
+
+        
+    
+    
+            var circle_marker_3e3bc89364d54bd98b4277df9d2adbef = L.circleMarker(
+                [8.702778, -83.638889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_af7d79d61ce54f55a19fc7441548bb49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad3b97c8e7424aa6a09b95ff85619262 = $(`<div id="html_ad3b97c8e7424aa6a09b95ff85619262" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Angeles de Drake. <strong>Elevación:</strong> 50.0 m  <strong>Fecha:</strong> 1997-02-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry Hammel; Reinaldo Aguilar <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_af7d79d61ce54f55a19fc7441548bb49.setContent(html_ad3b97c8e7424aa6a09b95ff85619262);
+        
+
+        circle_marker_3e3bc89364d54bd98b4277df9d2adbef.bindPopup(popup_af7d79d61ce54f55a19fc7441548bb49)
+        ;
+
+        
+    
+    
+            var circle_marker_454814396fa24291a495d41f2d08c57f = L.circleMarker(
+                [8.666667, -83.166667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_3a94c3e5f35a422a8f8e57bdc2223ace = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50b3a294ffbb4004803cd8bb71df932f = $(`<div id="html_50b3a294ffbb4004803cd8bb71df932f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Golfito, from Gamba to Villa Briceno, (km 37) road, ca. 1.7 Km N of rio Canaza <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Randy Evans <strong>Identificadores:</strong> Evans, Randy</div>`)[0];
+            popup_3a94c3e5f35a422a8f8e57bdc2223ace.setContent(html_50b3a294ffbb4004803cd8bb71df932f);
+        
+
+        circle_marker_454814396fa24291a495d41f2d08c57f.bindPopup(popup_3a94c3e5f35a422a8f8e57bdc2223ace)
+        ;
+
+        
+    
+    
+            var circle_marker_4409802c530a486ba181cafbc0bad7e6 = L.circleMarker(
+                [9.690278, -84.397778],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_9a82dc5278ac49289f22647d461f3689 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cbbbc1c175d446ffb6e56c86188858ff = $(`<div id="html_cbbbc1c175d446ffb6e56c86188858ff" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Mastatal de Puriscal. Bosque primario en la cuenca del Rio Negro, por La Ceiba. <strong>Elevación:</strong> 300.0 m  <strong>Fecha:</strong> 1994-11-25 00:00:00+00:00 <strong>Recolectores:</strong> Juan Francisco Morales Quirós <strong>Identificadores:</strong> Morales Quirós, Juan Francisco</div>`)[0];
+            popup_9a82dc5278ac49289f22647d461f3689.setContent(html_cbbbc1c175d446ffb6e56c86188858ff);
+        
+
+        circle_marker_4409802c530a486ba181cafbc0bad7e6.bindPopup(popup_9a82dc5278ac49289f22647d461f3689)
+        ;
+
+        
+    
+    
+            var circle_marker_b1ab9658c5c64e63b6553822259bbc02 = L.circleMarker(
+                [8.566667, -83.516667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_8dfc92049c1d402ea2d7a13f844df5d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7369ddcb668f463dbdfd21931b8f4cf7 = $(`<div id="html_7369ddcb668f463dbdfd21931b8f4cf7" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estacion Los Patos. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1993-09-04 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Hammel, Barry</div>`)[0];
+            popup_8dfc92049c1d402ea2d7a13f844df5d8.setContent(html_7369ddcb668f463dbdfd21931b8f4cf7);
+        
+
+        circle_marker_b1ab9658c5c64e63b6553822259bbc02.bindPopup(popup_8dfc92049c1d402ea2d7a13f844df5d8)
+        ;
+
+        
+    
+    
+            var circle_marker_51e0875abeb341bf869a242f34e0f5c7 = L.circleMarker(
+                [8.466667, -83.583336],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_17dece6accc84b8baa8ecb4d7e43eeeb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_777c674ea0574ec693b9c756016a14fc = $(`<div id="html_777c674ea0574ec693b9c756016a14fc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Sendero Ollas, parte baja <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1993-10-10 00:00:00+00:00 <strong>Recolectores:</strong> Reinaldo Aguilar <strong>Identificadores:</strong> Aguilar, Reinaldo</div>`)[0];
+            popup_17dece6accc84b8baa8ecb4d7e43eeeb.setContent(html_777c674ea0574ec693b9c756016a14fc);
+        
+
+        circle_marker_51e0875abeb341bf869a242f34e0f5c7.bindPopup(popup_17dece6accc84b8baa8ecb4d7e43eeeb)
+        ;
+
+        
+    
+    
+            var circle_marker_45f668901ba14e3eae33eec168f19053 = L.circleMarker(
+                [8.678611, -83.678611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_7b855510f90a4495956b9b3a136ab02a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f23122078c949af9366b2c72ebc2c7f = $(`<div id="html_4f23122078c949af9366b2c72ebc2c7f" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Rancho Quemado. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1999-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_7b855510f90a4495956b9b3a136ab02a.setContent(html_4f23122078c949af9366b2c72ebc2c7f);
+        
+
+        circle_marker_45f668901ba14e3eae33eec168f19053.bindPopup(popup_7b855510f90a4495956b9b3a136ab02a)
+        ;
+
+        
+    
+    
+            var circle_marker_2e38a6cf10e746bb9c9fc61ad81dbc8f = L.circleMarker(
+                [8.678611, -83.678611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_33fd48ddbc504b4faa3b6deaf0105ab1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb0e9c2085eb45238b07b85894f6a4b6 = $(`<div id="html_fb0e9c2085eb45238b07b85894f6a4b6" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Camino a Rancho Quemado. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1999-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Priscila Hurtado <strong>Identificadores:</strong> Grayum, Michael H.</div>`)[0];
+            popup_33fd48ddbc504b4faa3b6deaf0105ab1.setContent(html_fb0e9c2085eb45238b07b85894f6a4b6);
+        
+
+        circle_marker_2e38a6cf10e746bb9c9fc61ad81dbc8f.bindPopup(popup_33fd48ddbc504b4faa3b6deaf0105ab1)
+        ;
+
+        
+    
+    
+            var circle_marker_d382ba2c3823456ca7254c88aaa33531 = L.circleMarker(
+                [8.691517999999999, -83.238897],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_5c8de8515ceb48178af1e8873d67589d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4140f2bf44f44a2950a8563c59aff19 = $(`<div id="html_c4140f2bf44f44a2950a8563c59aff19" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Estación Río Bonito, Sendero al tanque del agua <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 2000-06-07 00:00:00+00:00 <strong>Recolectores:</strong> L. Acosta; Victor Ramírez ; Gerardo Soto ; Geovanny Sancho ; Edgar Mora <strong>Identificadores:</strong> Acosta, L.</div>`)[0];
+            popup_5c8de8515ceb48178af1e8873d67589d.setContent(html_c4140f2bf44f44a2950a8563c59aff19);
+        
+
+        circle_marker_d382ba2c3823456ca7254c88aaa33531.bindPopup(popup_5c8de8515ceb48178af1e8873d67589d)
+        ;
+
+        
+    
+    
+            var circle_marker_c11a0f45fa79446aa118c76de5811d2b = L.circleMarker(
+                [9.772861, -84.607528],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_1d0a2266ce68415e9a34aa932c35a38f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d8ed766774f4d0f94e7dc1491b6c7bc = $(`<div id="html_2d8ed766774f4d0f94e7dc1491b6c7bc" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Carara. Entrada a la subestación. <strong>Elevación:</strong> 48.0 m  <strong>Fecha:</strong> 2006-11-02 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Vargas, Luis Diego</div>`)[0];
+            popup_1d0a2266ce68415e9a34aa932c35a38f.setContent(html_2d8ed766774f4d0f94e7dc1491b6c7bc);
+        
+
+        circle_marker_c11a0f45fa79446aa118c76de5811d2b.bindPopup(popup_1d0a2266ce68415e9a34aa932c35a38f)
+        ;
+
+        
+    
+    
+            var circle_marker_fb3f500f58984b89b8f574221f0f88f4 = L.circleMarker(
+                [9.772861, -84.607528],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_e09f9d1ff25c423c916423be5d1c459a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0646e252231e46dc9461c8f70e616dfe = $(`<div id="html_0646e252231e46dc9461c8f70e616dfe" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> P. N. Carara. Entrada a la subestación. <strong>Elevación:</strong> 48.0 m  <strong>Fecha:</strong> 2006-11-02 00:00:00+00:00 <strong>Recolectores:</strong> Luis Diego Vargas; Guillermo Villalobos <strong>Identificadores:</strong> Vargas, Luis Diego</div>`)[0];
+            popup_e09f9d1ff25c423c916423be5d1c459a.setContent(html_0646e252231e46dc9461c8f70e616dfe);
+        
+
+        circle_marker_fb3f500f58984b89b8f574221f0f88f4.bindPopup(popup_e09f9d1ff25c423c916423be5d1c459a)
+        ;
+
+        
+    
+    
+            var circle_marker_076bf34064f84f95ac9117ca2263f905 = L.circleMarker(
+                [8.678333, -83.528611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_8b9c1d1b93f24c4bb560c258c7589481 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16e8e593f3d54a9f86d54829538382c2 = $(`<div id="html_16e8e593f3d54a9f86d54829538382c2" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce. Rincón, camino a Rancho Quemado, cruce a Baneguitas bosques alrededor. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Reinaldo Aguilar ; Guillermo Villalobos ; Soo-Yong Kim ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_8b9c1d1b93f24c4bb560c258c7589481.setContent(html_16e8e593f3d54a9f86d54829538382c2);
+        
+
+        circle_marker_076bf34064f84f95ac9117ca2263f905.bindPopup(popup_8b9c1d1b93f24c4bb560c258c7589481)
+        ;
+
+        
+    
+    
+            var circle_marker_7f2edfe3a30149d9a5249ae9d405a6f5 = L.circleMarker(
+                [8.678333, -83.528611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_ebad72158d4540d5a73b8ec4086063ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcaa9a5d99424ea89ef5687ad69c8030 = $(`<div id="html_bcaa9a5d99424ea89ef5687ad69c8030" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce. Rincón, camino a Rancho Quemado, cruce a Baneguitas bosques alrededor. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Reinaldo Aguilar ; Guillermo Villalobos ; Soo-Yong Kim ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_ebad72158d4540d5a73b8ec4086063ea.setContent(html_bcaa9a5d99424ea89ef5687ad69c8030);
+        
+
+        circle_marker_7f2edfe3a30149d9a5249ae9d405a6f5.bindPopup(popup_ebad72158d4540d5a73b8ec4086063ea)
+        ;
+
+        
+    
+    
+            var circle_marker_d7086444585a4a9c9ad444c1ea38bb10 = L.circleMarker(
+                [8.678333, -83.528611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_b8f372a812da4948829461fb597e99ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21ddb0c313154495896236dfcf738892 = $(`<div id="html_21ddb0c313154495896236dfcf738892" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Forestal Golfo Dulce. Rincón, camino a Rancho Quemado, cruce a Baneguitas bosques alrededor. <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> 2013-07-18 00:00:00+00:00 <strong>Recolectores:</strong> Nelson A. Zamora Villalobos; Reinaldo Aguilar ; Guillermo Villalobos ; Soo-Yong Kim ; D. Solorzano <strong>Identificadores:</strong> Zamora Villalobos, Nelson A.</div>`)[0];
+            popup_b8f372a812da4948829461fb597e99ef.setContent(html_21ddb0c313154495896236dfcf738892);
+        
+
+        circle_marker_d7086444585a4a9c9ad444c1ea38bb10.bindPopup(popup_b8f372a812da4948829461fb597e99ef)
+        ;
+
+        
+    
+    
+            var circle_marker_0b7009ae8b934f9fa5114a5bf887081d = L.circleMarker(
+                [8.5083, -82.82],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_5d30656e00374459ac3381d901e92e06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6406c610c2c24925a8d57f27f677278b = $(`<div id="html_6406c610c2c24925a8d57f27f677278b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E of Panama Hwy. 1 (Interamerican Hwy., David Paso de Canoa on Costa Rica border) NW of bridge over Rio Jacu (SE of Paso de Canoa) <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_5d30656e00374459ac3381d901e92e06.setContent(html_6406c610c2c24925a8d57f27f677278b);
+        
+
+        circle_marker_0b7009ae8b934f9fa5114a5bf887081d.bindPopup(popup_5d30656e00374459ac3381d901e92e06)
+        ;
+
+        
+    
+    
+            var circle_marker_e38bd2f513e1408e82609097eff9b832 = L.circleMarker(
+                [9.224641, -84.15227],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_38a9b6a70bef4a83bddb3245ddf203ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_429b8e5f1f814d8c8f5cea69180d2754 = $(`<div id="html_429b8e5f1f814d8c8f5cea69180d2754" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2015-03-20 00:00:00+00:00 <strong>Recolectores:</strong> Lena Struwe <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_38a9b6a70bef4a83bddb3245ddf203ba.setContent(html_429b8e5f1f814d8c8f5cea69180d2754);
+        
+
+        circle_marker_e38bd2f513e1408e82609097eff9b832.bindPopup(popup_38a9b6a70bef4a83bddb3245ddf203ba)
+        ;
+
+        
+    
+    
+            var circle_marker_0690192012f84fb2823f4982a9d39186 = L.circleMarker(
+                [8.67, -83.17],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_66824b4611644edda0b7d9e326f7c98b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_236ede1155334e7ba181e973bed17cd5 = $(`<div id="html_236ede1155334e7ba181e973bed17cd5" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rfugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceno, N of Rio Canaza, N of Golfito. <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_66824b4611644edda0b7d9e326f7c98b.setContent(html_236ede1155334e7ba181e973bed17cd5);
+        
+
+        circle_marker_0690192012f84fb2823f4982a9d39186.bindPopup(popup_66824b4611644edda0b7d9e326f7c98b)
+        ;
+
+        
+    
+    
+            var circle_marker_6c5cb1d88405460db967e2e12d12db2a = L.circleMarker(
+                [9.63, -84.4583],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_2af4fe39ae774a90b09b7dac721c554a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75e3585f04b74ab687bf389103d483cd = $(`<div id="html_75e3585f04b74ab687bf389103d483cd" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Along rod (Gloria-Gamalotillo), N of Rio Gamalotillo. <strong>Elevación:</strong> 120.0 m  <strong>Fecha:</strong> 1988-09-29 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans & G. Herrera Ch. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_2af4fe39ae774a90b09b7dac721c554a.setContent(html_75e3585f04b74ab687bf389103d483cd);
+        
+
+        circle_marker_6c5cb1d88405460db967e2e12d12db2a.bindPopup(popup_2af4fe39ae774a90b09b7dac721c554a)
+        ;
+
+        
+    
+    
+            var circle_marker_218ce48404c745979d271c0689ba4768 = L.circleMarker(
+                [8.67, -83.17],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_548b090636c3478b9abac1161b566d0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b807488b96dd485e9f4768bf05ef8e1e = $(`<div id="html_b807488b96dd485e9f4768bf05ef8e1e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rfugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceno, N of Rio Canaza, N of Golfito. <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_548b090636c3478b9abac1161b566d0e.setContent(html_b807488b96dd485e9f4768bf05ef8e1e);
+        
+
+        circle_marker_218ce48404c745979d271c0689ba4768.bindPopup(popup_548b090636c3478b9abac1161b566d0e)
+        ;
+
+        
+    
+    
+            var circle_marker_6812f37c520446a9b43c989c793654c2 = L.circleMarker(
+                [8.966660000000001, -83.46666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_e28af826ec634771bbd4bb635e9aa85d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3279cc05f124e76b92dc520530fc28b = $(`<div id="html_f3279cc05f124e76b92dc520530fc28b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> S slope of Fila Retinto, ca. 1.5 km NNW of Palmar Norte. Disturbed primary forest, on slope among limestone boulders and outcrops. <strong>Elevación:</strong> 250.0 m  <strong>Fecha:</strong> 1991-11-24 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Gerardo Herrera Ch.|Heidi H. Schmidt <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_e28af826ec634771bbd4bb635e9aa85d.setContent(html_f3279cc05f124e76b92dc520530fc28b);
+        
+
+        circle_marker_6812f37c520446a9b43c989c793654c2.bindPopup(popup_e28af826ec634771bbd4bb635e9aa85d)
+        ;
+
+        
+    
+    
+            var circle_marker_6f3e59cd85e24b0a94ad1dc4c02a0204 = L.circleMarker(
+                [9.78333, -84.53333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_a9d6ea9b442f437f8cbd479493cf6316 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7f495cd273f4994ac7498613e062442 = $(`<div id="html_a7f495cd273f4994ac7498613e062442" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Reserva Biológica Carara, just S of guard station at Costa Rica Hwy. 34 (Orotina-Jacó), ca 1 km S of bridge over Río Grande de Tárcoles. Primary forest. <strong>Elevación:</strong> 20.0 m  <strong>Fecha:</strong> 1989-12-28 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Michael H. Grayum|Barry E. Hammel|Gerardo Herrera Ch. <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_a9d6ea9b442f437f8cbd479493cf6316.setContent(html_a7f495cd273f4994ac7498613e062442);
+        
+
+        circle_marker_6f3e59cd85e24b0a94ad1dc4c02a0204.bindPopup(popup_a9d6ea9b442f437f8cbd479493cf6316)
+        ;
+
+        
+    
+    
+            var circle_marker_9118f3e4421f497480d9ae4f9a11d15d = L.circleMarker(
+                [8.66666, -83.16666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_8c97a39369a04a2a9ad1f203faec4de0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a0946bd5784ba1b2b1aa33f2c26311 = $(`<div id="html_e8a0946bd5784ba1b2b1aa33f2c26311" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rufugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceño (Kilómeter 37) road, ca 1.7 km N of Río Cañaza, N of Golfito. Primary forest, on steep slope. Asterogyne martiana, Bactris sp., Geonoma cuneata, Iriartia deltoidea, Neonicholsonia watsonii, and Welfia georgii in proximity. <strong>Elevación:</strong> 180.0 m  <strong>Fecha:</strong> 1990-01-01 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Robert F.C. Naczi|Barry O'Connor <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_8c97a39369a04a2a9ad1f203faec4de0.setContent(html_e8a0946bd5784ba1b2b1aa33f2c26311);
+        
+
+        circle_marker_9118f3e4421f497480d9ae4f9a11d15d.bindPopup(popup_8c97a39369a04a2a9ad1f203faec4de0)
+        ;
+
+        
+    
+    
+            var circle_marker_4887b09803564031a4200c8fe8d4cf76 = L.circleMarker(
+                [9.63333, -84.45],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_b4f12a54367b46e989023df1e39d1e9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14a14739b0934e71aa8af5b271bda681 = $(`<div id="html_14a14739b0934e71aa8af5b271bda681" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 1/2 km west of road (Gloria-Gamalotillo), 0.3 km north of Río Gamalotillo, disturbed primary forest, on slope above small stream (Quebrada Los Pericos), many Cryosophila stumps encountered, presumably topped for their hearts <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1988-09-30 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Gerardo Herrera Ch. <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_b4f12a54367b46e989023df1e39d1e9a.setContent(html_14a14739b0934e71aa8af5b271bda681);
+        
+
+        circle_marker_4887b09803564031a4200c8fe8d4cf76.bindPopup(popup_b4f12a54367b46e989023df1e39d1e9a)
+        ;
+
+        
+    
+    
+            var circle_marker_ba27303413884bf6b93c3c6ef6134cab = L.circleMarker(
+                [8.5, -82.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_ec9a5504c6ec41d198ce131dba736701 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4f08f6a129d4b408bb63db40f7effc8 = $(`<div id="html_b4f08f6a129d4b408bb63db40f7effc8" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 30 m NW of road to Portón from Panamá Hwy. 1 (Interamerican Hwy.), 0.9 km NE of intersection with Interamerican Hwy. (David-Paso de Canoa on Costa Rican border), ca. 100 m NW of bridge over Río Jacú (ca. 5 km SE of Paso de Canoa). <strong>Elevación:</strong> 70.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_ec9a5504c6ec41d198ce131dba736701.setContent(html_b4f08f6a129d4b408bb63db40f7effc8);
+        
+
+        circle_marker_ba27303413884bf6b93c3c6ef6134cab.bindPopup(popup_ec9a5504c6ec41d198ce131dba736701)
+        ;
+
+        
+    
+    
+            var circle_marker_6bb734723755409e96d75234a290e71d = L.circleMarker(
+                [8.666667, -83.166667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_2192f80a4acc42b1a8f9d7d0d1adbf25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9e8ae1d04574d65b793799a34423939 = $(`<div id="html_b9e8ae1d04574d65b793799a34423939" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rufugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceño (Kilómeter 37) road, ca. 1.7 km N of Río Cañaza, N of Golfito. Primary forest, on steep slope. Asterogyne martiana, Bactris sp., Geonoma cuneata, Iriartia deltoidea, Neonicholsonia watsonii, and Welfia georgii in proximity. <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Michael H. Grayum|Gerardo Herrera Ch. <strong>Identificadores:</strong> M.H. Grayum (MO)</div>`)[0];
+            popup_2192f80a4acc42b1a8f9d7d0d1adbf25.setContent(html_b9e8ae1d04574d65b793799a34423939);
+        
+
+        circle_marker_6bb734723755409e96d75234a290e71d.bindPopup(popup_2192f80a4acc42b1a8f9d7d0d1adbf25)
+        ;
+
+        
+    
+    
+            var circle_marker_c00d0e1a8d264654819e9beb3e8376b4 = L.circleMarker(
+                [8.516667, -82.81666700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_3434c745d7734071802f8a442805b46b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d51bae5e2ebd4ca781fdca47bd31b13a = $(`<div id="html_d51bae5e2ebd4ca781fdca47bd31b13a" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 200 m E of Panamá Hwy. 1 (Interamerican Hwy., David-Paso de Canoa on Costa Rican border), 1.7 km NW of bridge over Río Jacú (ca. 3 km SE of Paso de Canoa). Secondary shrubby regrowth. <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_3434c745d7734071802f8a442805b46b.setContent(html_d51bae5e2ebd4ca781fdca47bd31b13a);
+        
+
+        circle_marker_c00d0e1a8d264654819e9beb3e8376b4.bindPopup(popup_3434c745d7734071802f8a442805b46b)
+        ;
+
+        
+    
+    
+            var circle_marker_e2a4b18ed8cb4b52b3148d1744844248 = L.circleMarker(
+                [8.68333, -83.51666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_e883022268fd415880bf614254f486ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e1bbfd8917546a68e11e3232ace2be9 = $(`<div id="html_1e1bbfd8917546a68e11e3232ace2be9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa Peninsula, along road ca. 1/2 km S of abandoned Banegitas gold mine, near intersection with Ríncon-Rancho Quemado road at Quebrada Banegas, ca. 12.5 km SW of Ríncon. Left standing, in pasture along road. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1991-01-14 00:00:00+00:00 <strong>Recolectores:</strong> Randall J. Evans|Gerardo Herrera Ch. <strong>Identificadores:</strong> R. Evans</div>`)[0];
+            popup_e883022268fd415880bf614254f486ee.setContent(html_1e1bbfd8917546a68e11e3232ace2be9);
+        
+
+        circle_marker_e2a4b18ed8cb4b52b3148d1744844248.bindPopup(popup_e883022268fd415880bf614254f486ee)
+        ;
+
+        
+    
+    
+            var circle_marker_e674db2aa0684c10a035189cb41a8b26 = L.circleMarker(
+                [8.68, -83.525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_a605eabc2f4e4e93b6ac7d797def4032 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6734ebcb430642358b9691eb992a2f0b = $(`<div id="html_6734ebcb430642358b9691eb992a2f0b" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa Peninsula, along road S of abandoned Banegitas gold moine, near intersection with Rincon-Rancho Quemado road at Quebrada Banegas, SW of Rincon. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1991-01-14 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_a605eabc2f4e4e93b6ac7d797def4032.setContent(html_6734ebcb430642358b9691eb992a2f0b);
+        
+
+        circle_marker_e674db2aa0684c10a035189cb41a8b26.bindPopup(popup_a605eabc2f4e4e93b6ac7d797def4032)
+        ;
+
+        
+    
+    
+            var circle_marker_d32da526f398447983e0187c6419de28 = L.circleMarker(
+                [8.68, -83.525],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_69efb0be85924c31b2ce3cb492ab0be1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_819eb020b3974dfe8d8348540def8d37 = $(`<div id="html_819eb020b3974dfe8d8348540def8d37" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Osa Peninsula, along road S of abandoned Banegitas gold moine, near intersection with Rincon-Rancho Quemado road at Quebrada Banegas, SW of Rincon. <strong>Elevación:</strong> 40.0 m  <strong>Fecha:</strong> 1991-01-14 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_69efb0be85924c31b2ce3cb492ab0be1.setContent(html_819eb020b3974dfe8d8348540def8d37);
+        
+
+        circle_marker_d32da526f398447983e0187c6419de28.bindPopup(popup_69efb0be85924c31b2ce3cb492ab0be1)
+        ;
+
+        
+    
+    
+            var circle_marker_796c5f64c4ba4092ab3b7ecdb84e0335 = L.circleMarker(
+                [8.678611, -83.678611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_e3cf0645ee3a4456b9d84217de0bef1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e9785abc1eb4f62bf8acf4a1b9c9957 = $(`<div id="html_3e9785abc1eb4f62bf8acf4a1b9c9957" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> No protegida.  Cuenca Térraba-Sierpe.  Camino a Rancho Quemado, del cruce 1 km. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1999-04-14 00:00:00+00:00 <strong>Recolectores:</strong> Priscilla Hurtado <strong>Identificadores:</strong> M. H. Grayum (MO)</div>`)[0];
+            popup_e3cf0645ee3a4456b9d84217de0bef1e.setContent(html_3e9785abc1eb4f62bf8acf4a1b9c9957);
+        
+
+        circle_marker_796c5f64c4ba4092ab3b7ecdb84e0335.bindPopup(popup_e3cf0645ee3a4456b9d84217de0bef1e)
+        ;
+
+        
+    
+    
+            var circle_marker_8a68128529b54fd69be71d6e9814aa02 = L.circleMarker(
+                [8.67, -83.17],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_e1d4a4facca14f20b9fb10ae874296c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7aefa753645c447aadf4289132aa1f47 = $(`<div id="html_7aefa753645c447aadf4289132aa1f47" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Rfugio Nacional de Fauna Silvestre Golfito, down from Golfito-Gamba/Villa Briceno, N of Rio Canaza, N of Golfito. <strong>Elevación:</strong> 170.0 m  <strong>Fecha:</strong> 1988-12-11 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_e1d4a4facca14f20b9fb10ae874296c2.setContent(html_7aefa753645c447aadf4289132aa1f47);
+        
+
+        circle_marker_8a68128529b54fd69be71d6e9814aa02.bindPopup(popup_e1d4a4facca14f20b9fb10ae874296c2)
+        ;
+
+        
+    
+    
+            var circle_marker_026dd772ea274e3d9fca61b3e70bb17f = L.circleMarker(
+                [9.63, -84.4583],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_0f9fb86089ac4d03b40c16c3b4c0ccb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcbb13c7d45f449e9fc7dabd7951114e = $(`<div id="html_bcbb13c7d45f449e9fc7dabd7951114e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> W of road (Gloria-Gamaloitilo), N of Rio Gamalotillo. <strong>Elevación:</strong> 90.0 m  <strong>Fecha:</strong> 1988-09-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans & G. Herrera Ch. <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_0f9fb86089ac4d03b40c16c3b4c0ccb1.setContent(html_bcbb13c7d45f449e9fc7dabd7951114e);
+        
+
+        circle_marker_026dd772ea274e3d9fca61b3e70bb17f.bindPopup(popup_0f9fb86089ac4d03b40c16c3b4c0ccb1)
+        ;
+
+        
+    
+    
+            var circle_marker_150f44b8a1e3471cb99317eae2448a49 = L.circleMarker(
+                [8.5, -82.82],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_eb5e991c4a8c40239ef93a9021c62b3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f085ce03edd3414b823446390ae5455e = $(`<div id="html_f085ce03edd3414b823446390ae5455e" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E of Panama Hwy 1 Interamarican Hwy, David-Paso de Canoa on Costa Rican bourder, NW of bridge over Rio Jacu, SE of Paso de Canoa <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_eb5e991c4a8c40239ef93a9021c62b3e.setContent(html_f085ce03edd3414b823446390ae5455e);
+        
+
+        circle_marker_150f44b8a1e3471cb99317eae2448a49.bindPopup(popup_eb5e991c4a8c40239ef93a9021c62b3e)
+        ;
+
+        
+    
+    
+            var circle_marker_4b507939eff04a67847434de9c5e326a = L.circleMarker(
+                [8.5, -82.82],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_525fb126c0a641bbb5a037dc8d4538ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e435e4ca75be441c9205869613a677eb = $(`<div id="html_e435e4ca75be441c9205869613a677eb" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> E of Panama Hwy 1 Interamarican Hwy, David-Paso de Canoa on Costa Rican bourder, NW of bridge over Rio Jacu, SE of Paso de Canoa <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_525fb126c0a641bbb5a037dc8d4538ce.setContent(html_e435e4ca75be441c9205869613a677eb);
+        
+
+        circle_marker_4b507939eff04a67847434de9c5e326a.bindPopup(popup_525fb126c0a641bbb5a037dc8d4538ce)
+        ;
+
+        
+    
+    
+            var circle_marker_125c3b4990a340c79da39dc0d87c9a4e = L.circleMarker(
+                [8.672189, -82.919593],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_01d6fdc71ebe43b78d9c70cf09c8d92f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f9a2b00886049e5b1b00323de19f8aa = $(`<div id="html_5f9a2b00886049e5b1b00323de19f8aa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> nan <strong>Elevación:</strong> nan m  <strong>Fecha:</strong> 2017-01-09 11:56:00+00:00 <strong>Recolectores:</strong> Sonia <strong>Identificadores:</strong> nan</div>`)[0];
+            popup_01d6fdc71ebe43b78d9c70cf09c8d92f.setContent(html_5f9a2b00886049e5b1b00323de19f8aa);
+        
+
+        circle_marker_125c3b4990a340c79da39dc0d87c9a4e.bindPopup(popup_01d6fdc71ebe43b78d9c70cf09c8d92f)
+        ;
+
+        
+    
+    
+            var circle_marker_bf2152a7735e4e3287176ac957aa3e0f = L.circleMarker(
+                [8.5, -82.81666700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_57b7be16577a4d25abd2d04ced464bdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f847c72d7d3346c387b47c34f4a1b1b9 = $(`<div id="html_f847c72d7d3346c387b47c34f4a1b1b9" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> 200 metros al oriente de la autopista Panamá, 1 vía interamericana, David - Paso de Canoa en frontera con Costa Rica, 1,7 kilómetros al nor oriente del puente sobre el río Jacúca, 3 kilómetros al sur oriente del paso de Canoa. <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> R. J. Evans</div>`)[0];
+            popup_57b7be16577a4d25abd2d04ced464bdb.setContent(html_f847c72d7d3346c387b47c34f4a1b1b9);
+        
+
+        circle_marker_bf2152a7735e4e3287176ac957aa3e0f.bindPopup(popup_57b7be16577a4d25abd2d04ced464bdb)
+        ;
+
+        
+    
+    
+            var circle_marker_c44b3aeac7a14bbe8d7c9e865543da1d = L.circleMarker(
+                [8.5, -82.81666700000001],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_266443974c0243c8aafdcb6faeeb1cd0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_567bc9a41928433fae8ce60ca1eee5da = $(`<div id="html_567bc9a41928433fae8ce60ca1eee5da" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Ca. 200 m E of Panama Hwy. 1 (Interamerican Hwy., David-Paso de Canoa on Costa rican Border), 1.7 km NW of Bridge over Río Jacú (ca. 3 km SE of Paso de Canoa). <strong>Elevación:</strong> 60.0 m  <strong>Fecha:</strong> 1989-07-30 00:00:00+00:00 <strong>Recolectores:</strong> R. J. Evans <strong>Identificadores:</strong> R. J. Evans</div>`)[0];
+            popup_266443974c0243c8aafdcb6faeeb1cd0.setContent(html_567bc9a41928433fae8ce60ca1eee5da);
+        
+
+        circle_marker_c44b3aeac7a14bbe8d7c9e865543da1d.bindPopup(popup_266443974c0243c8aafdcb6faeeb1cd0)
+        ;
+
+        
+    
+    
+            var circle_marker_896d33e6504b422d91d57ec629036f7d = L.circleMarker(
+                [8.7, -83.63],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_96056979e41c483186d6fd872591f1a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6267dbda9a594094a23bbfc0e0e7fec1 = $(`<div id="html_6267dbda9a594094a23bbfc0e0e7fec1" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Los Angeles de Drake. <strong>Elevación:</strong> 10.0 m  <strong>Fecha:</strong> 1997-02-23 00:00:00+00:00 <strong>Recolectores:</strong> Barry E. Hammel|Reinaldo Aguilar <strong>Identificadores:</strong> Hammel, 15 DIC</div>`)[0];
+            popup_96056979e41c483186d6fd872591f1a9.setContent(html_6267dbda9a594094a23bbfc0e0e7fec1);
+        
+
+        circle_marker_896d33e6504b422d91d57ec629036f7d.bindPopup(popup_96056979e41c483186d6fd872591f1a9)
+        ;
+
+        
+    
+    
+            var circle_marker_96d17190a40240d4a2d9ba0b606c9889 = L.circleMarker(
+                [8.64, -83.45],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_ac1e51357b4846b1b4e316be525b4a82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0726936a369245d98314225caa98fc92 = $(`<div id="html_0726936a369245d98314225caa98fc92" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Road to Puerto Jimenez, 40 km west of Interamerica Route 2 <strong>Elevación:</strong> 100.0 m  <strong>Fecha:</strong> NaT <strong>Recolectores:</strong> Luis Diego Gómez P. <strong>Identificadores:</strong> R.J. Evans, 1993 (MICH)</div>`)[0];
+            popup_ac1e51357b4846b1b4e316be525b4a82.setContent(html_0726936a369245d98314225caa98fc92);
+        
+
+        circle_marker_96d17190a40240d4a2d9ba0b606c9889.bindPopup(popup_ac1e51357b4846b1b4e316be525b4a82)
+        ;
+
+        
+    
+    
+            var circle_marker_dcbf1236a6304e8fa7556913de713208 = L.circleMarker(
+                [8.283333, -82.93333299999999],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+        
+    
+        var popup_78d0b203284645d192d3e770d7a35708 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b292d8177f4c4a789bd78532de0fffaa = $(`<div id="html_b292d8177f4c4a789bd78532de0fffaa" style="width: 100.0%; height: 100.0%;"><strong>Localidad:</strong> Burica Peninsula, 8 mi west of Puerto Armuelles. <strong>Elevación:</strong> 200.0 m  <strong>Fecha:</strong> 1973-03-02 00:00:00+00:00 <strong>Recolectores:</strong> Thomas B. Croat <strong>Identificadores:</strong> R.J. Evans, 1993 (MICH)</div>`)[0];
+            popup_78d0b203284645d192d3e770d7a35708.setContent(html_b292d8177f4c4a789bd78532de0fffaa);
+        
+
+        circle_marker_dcbf1236a6304e8fa7556913de713208.bindPopup(popup_78d0b203284645d192d3e770d7a35708)
+        ;
+
+        
+    
+    
+            var layer_control_9e93dfeb625f470baff9fdf6f7fae72f = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_ee95ace6122249e8ba86bcabd5b9cd23,
+                    "ESRI World Imagery" : tile_layer_daad84867e894d96b548cadfa80b06d9,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_9e93dfeb625f470baff9fdf6f7fae72f.base_layers,
+                layer_control_9e93dfeb625f470baff9fdf6f7fae72f.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_8b81910b27c94c4199bbfff0d6f835c1);
+            tile_layer_daad84867e894d96b548cadfa80b06d9.remove();
+        
+</script>
